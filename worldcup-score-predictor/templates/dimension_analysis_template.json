@@ -1,0 +1,302 @@
+{
+  "schema_version": "1.0.0",
+  "catalog_version": "2026-06-20",
+  "match": {
+    "match_id": "",
+    "team_a": "",
+    "team_b": "",
+    "match_date": ""
+  },
+  "sources": [],
+  "player_assessments": {
+    "team_a": [],
+    "team_b": []
+  },
+  "dimension_analyses": [
+    {
+      "dimension_key": "base_strength",
+      "score": null,
+      "confidence": "unknown",
+      "conclusion": "",
+      "check_results": {},
+      "evidence": [],
+      "source_ids": [],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "player_status",
+      "score": null,
+      "confidence": "unknown",
+      "conclusion": "",
+      "check_results": {},
+      "evidence": [],
+      "source_ids": [],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "player_type_structure",
+      "score": null,
+      "confidence": "unknown",
+      "conclusion": "",
+      "check_results": {},
+      "evidence": [],
+      "source_ids": [],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "key_matchups",
+      "score": null,
+      "confidence": "unknown",
+      "conclusion": "",
+      "check_results": {},
+      "evidence": [],
+      "source_ids": [],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "historical_style",
+      "score": null,
+      "confidence": "unknown",
+      "conclusion": "",
+      "check_results": {},
+      "evidence": [],
+      "source_ids": [],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "style_counter",
+      "score": null,
+      "confidence": "unknown",
+      "conclusion": "",
+      "check_results": {},
+      "evidence": [],
+      "source_ids": [],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "recent_form",
+      "score": null,
+      "confidence": "unknown",
+      "conclusion": "",
+      "check_results": {},
+      "evidence": [],
+      "source_ids": [],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "goal_distribution",
+      "score": null,
+      "confidence": "unknown",
+      "conclusion": "",
+      "check_results": {},
+      "evidence": [],
+      "source_ids": [],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "strong_second_goal",
+      "score": null,
+      "confidence": "unknown",
+      "conclusion": "",
+      "check_results": {},
+      "evidence": [],
+      "source_ids": [],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "strong_third_goal",
+      "score": null,
+      "confidence": "unknown",
+      "conclusion": "",
+      "check_results": {},
+      "evidence": [],
+      "source_ids": [],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "weak_first_goal",
+      "score": null,
+      "confidence": "unknown",
+      "conclusion": "",
+      "check_results": {},
+      "evidence": [],
+      "source_ids": [],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "weak_second_goal",
+      "score": null,
+      "confidence": "unknown",
+      "conclusion": "",
+      "check_results": {},
+      "evidence": [],
+      "source_ids": [],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "favorite_defense",
+      "score": null,
+      "confidence": "unknown",
+      "conclusion": "",
+      "check_results": {},
+      "evidence": [],
+      "source_ids": [],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "clean_sheet",
+      "score": null,
+      "confidence": "unknown",
+      "conclusion": "",
+      "check_results": {},
+      "evidence": [],
+      "source_ids": [],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "tactical_matchup",
+      "score": null,
+      "confidence": "unknown",
+      "conclusion": "",
+      "check_results": {},
+      "evidence": [],
+      "source_ids": [],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "stage_psychology",
+      "score": null,
+      "confidence": "unknown",
+      "conclusion": "",
+      "check_results": {},
+      "evidence": [],
+      "source_ids": [],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "draw_risk",
+      "score": null,
+      "confidence": "unknown",
+      "conclusion": "",
+      "check_results": {},
+      "evidence": [],
+      "source_ids": [],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "lineup_injuries",
+      "score": null,
+      "confidence": "unknown",
+      "conclusion": "",
+      "check_results": {},
+      "evidence": [],
+      "source_ids": [],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "team_harmony_social",
+      "score": null,
+      "confidence": "unknown",
+      "conclusion": "",
+      "check_results": {},
+      "evidence": [],
+      "source_ids": [],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "environment_schedule",
+      "score": null,
+      "confidence": "unknown",
+      "conclusion": "",
+      "check_results": {},
+      "evidence": [],
+      "source_ids": [],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "referee_events",
+      "score": null,
+      "confidence": "unknown",
+      "conclusion": "",
+      "check_results": {},
+      "evidence": [],
+      "source_ids": [],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "market_odds",
+      "score": null,
+      "confidence": "unknown",
+      "conclusion": "",
+      "check_results": {},
+      "evidence": [],
+      "source_ids": [],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "dynamic_triggers",
+      "score": null,
+      "confidence": "unknown",
+      "conclusion": "",
+      "check_results": {},
+      "evidence": [],
+      "source_ids": [],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "star_overperformance",
+      "score": null,
+      "confidence": "unknown",
+      "conclusion": "",
+      "check_results": {},
+      "evidence": [],
+      "source_ids": [],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "set_piece_aerial",
+      "score": null,
+      "confidence": "unknown",
+      "conclusion": "",
+      "check_results": {},
+      "evidence": [],
+      "source_ids": [],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "pressing_error_path",
+      "score": null,
+      "confidence": "unknown",
+      "conclusion": "",
+      "check_results": {},
+      "evidence": [],
+      "source_ids": [],
+      "unknown_items": []
+    }
+  ],
+  "historical_sample_adjustments": [],
+  "final_prediction": {
+    "win_tendency": "",
+    "main_score_range": [],
+    "primary_score": "",
+    "alternative_scores": [],
+    "total_goals_min": null,
+    "total_goals_max": null,
+    "both_teams_to_score": "unknown",
+    "strong_second_goal": "unknown",
+    "strong_third_goal": "unknown",
+    "weak_first_goal": "unknown",
+    "weak_second_goal": "unknown",
+    "clean_sheet": "unknown",
+    "draw_type": "",
+    "trigger_conditions": [],
+    "confidence": "unknown",
+    "tail_scores": [],
+    "event_scenarios": {
+      "favorite_red_card": "",
+      "underdog_red_card": "",
+      "underdog_two_red_cards": "",
+      "penalty_or_goalkeeper_error": ""
+    }
+  }
+}

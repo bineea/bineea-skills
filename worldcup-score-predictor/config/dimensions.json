@@ -1,0 +1,430 @@
+{
+  "schema_version": "1.0.0",
+  "catalog_version": "2026-06-20",
+  "methodology_reference": "../references/world-cup-score-prediction-dimensions.md",
+  "score_scale": {
+    "1": "明显短板",
+    "2": "有隐患",
+    "3": "中性或不确定",
+    "4": "有优势",
+    "5": "明显优势"
+  },
+  "confidence_values": [
+    "high",
+    "medium",
+    "low",
+    "unknown"
+  ],
+  "check_status_values": [
+    "supported",
+    "contradicted",
+    "neutral",
+    "unknown",
+    "not_applicable"
+  ],
+  "minimum_scored_dimensions": 20,
+  "critical_dimension_keys": [
+    "base_strength",
+    "player_status",
+    "key_matchups",
+    "style_counter",
+    "recent_form",
+    "goal_distribution",
+    "strong_second_goal",
+    "strong_third_goal",
+    "weak_first_goal",
+    "weak_second_goal",
+    "favorite_defense",
+    "clean_sheet",
+    "tactical_matchup",
+    "lineup_injuries"
+  ],
+  "required_player_fields": [
+    "player_name",
+    "position",
+    "player_type",
+    "status",
+    "expected_starter",
+    "expected_minutes",
+    "conclusion",
+    "evidence",
+    "source_ids"
+  ],
+  "required_analysis_fields": [
+    "dimension_key",
+    "score",
+    "confidence",
+    "conclusion",
+    "check_results",
+    "evidence",
+    "source_ids",
+    "unknown_items"
+  ],
+  "dimensions": [
+    {
+      "key": "base_strength",
+      "name": "赛前基础层",
+      "required": true,
+      "description": "评估长期实力差距，但不得直接据此决定比分。",
+      "required_checks": {
+        "ranking_elo": "FIFA排名与Elo差距",
+        "squad_quality": "阵容质量与球员级别",
+        "tournament_experience": "大赛经验",
+        "bench_depth": "替补深度",
+        "coach_and_age_structure": "教练稳定性与年龄结构"
+      }
+    },
+    {
+      "key": "player_status",
+      "name": "球员个体状态与实力层",
+      "required": true,
+      "description": "逐人评估双方关键球员，而不是只使用球队整体等级。",
+      "required_checks": {
+        "expected_starters": "核心球员是否预计首发",
+        "expected_minutes": "预计出场时间",
+        "recent_minutes_and_form": "近期出场时间与状态",
+        "injury_recovery": "伤病、停赛与恢复阶段",
+        "position_quality": "门将、中卫、后腰、组织者和攻击手质量",
+        "big_match_and_mental_state": "大赛表现与心理状态"
+      },
+      "special_requirement": "每队至少评估3名关键球员"
+    },
+    {
+      "key": "player_type_structure",
+      "name": "球员类型结构层",
+      "required": true,
+      "description": "判断速度、支点、终结、压迫、组织和防守类型是否互补。",
+      "required_checks": {
+        "attacking_types": "攻击球员类型组合",
+        "midfield_types": "中场组织与破坏类型",
+        "defensive_types": "后卫与门将类型",
+        "type_complementarity": "类型互补性",
+        "type_gaps": "阵容类型缺口"
+      }
+    },
+    {
+      "key": "key_matchups",
+      "name": "关键对位层",
+      "required": true,
+      "description": "识别可能直接打开比赛的个人和局部对位。",
+      "required_checks": {
+        "wing_matchup": "边锋对边后卫",
+        "striker_center_back": "中锋对中卫",
+        "creator_defensive_midfield": "组织核心对后腰",
+        "pressing_build_up": "前场压迫对后场出球",
+        "aerial_matchup": "定位球高点对防空",
+        "transition_space": "反击速度对防线高度"
+      },
+      "special_requirement": "至少记录3组具体对位"
+    },
+    {
+      "key": "historical_style",
+      "name": "历史球队风格层",
+      "required": true,
+      "description": "评估球队长期风格及其在不同比分状态下的惯性。",
+      "required_checks": {
+        "team_a_style": "A队长期风格",
+        "team_b_style": "B队长期风格",
+        "leading_behavior": "领先后的行为",
+        "trailing_behavior": "落后后的行为",
+        "draw_and_set_piece_tendency": "平局与定位球倾向"
+      }
+    },
+    {
+      "key": "style_counter",
+      "name": "风格克制矩阵",
+      "required": true,
+      "description": "双向判断一队强项是否正好击中另一队弱点。",
+      "required_checks": {
+        "team_a_attacks_team_b": "A队强项攻击B队弱点",
+        "team_b_attacks_team_a": "B队强项攻击A队弱点",
+        "team_a_resistance": "A队对B队主要武器的抵抗能力",
+        "team_b_resistance": "B队对A队主要武器的抵抗能力",
+        "net_counter_effect": "风格克制净影响"
+      }
+    },
+    {
+      "key": "recent_form",
+      "name": "近期状态层",
+      "required": true,
+      "description": "结合对手质量评估近期状态，避免只看胜负。",
+      "required_checks": {
+        "recent_results": "近5至10场结果及对手质量",
+        "scoring_trend": "近期进球与射正趋势",
+        "conceding_trend": "近期失球与被创造机会趋势",
+        "strong_weak_opponent_split": "面对强队和弱队的表现差异",
+        "second_half_trend": "下半场提速或崩盘趋势"
+      }
+    },
+    {
+      "key": "goal_distribution",
+      "name": "进球分布层",
+      "required": true,
+      "description": "分析机会数量、质量和进球路径。",
+      "required_checks": {
+        "xg_xga": "xG与xGA",
+        "shots_on_target": "射门与射正",
+        "big_chances": "重大机会与禁区触球",
+        "set_piece_output": "定位球输出",
+        "nonstandard_goals": "点球、乌龙、压迫抢断等非常规路径"
+      }
+    },
+    {
+      "key": "strong_second_goal",
+      "name": "强队第二球能力",
+      "required": true,
+      "description": "判断优势方是否能稳定把一球优势扩大为两球。",
+      "required_checks": {
+        "finisher_status": "终结者状态",
+        "creator_quality": "持续创造机会能力",
+        "shot_quality": "射正率与禁区射门比例",
+        "low_block_solution": "破密集防守手段",
+        "bench_impact": "替补冲击时间与质量",
+        "intent_after_leading": "领先后的继续进攻意愿"
+      }
+    },
+    {
+      "key": "strong_third_goal",
+      "name": "强队第三球与大胜能力",
+      "required": true,
+      "description": "判断3球及以上比分是否应进入主预测区间。",
+      "required_checks": {
+        "star_ceiling": "巨星突破团队均值的能力",
+        "bench_attack": "替补攻击质量",
+        "second_half_adjustment": "下半场战术调整",
+        "opponent_fatigue": "对手后程体能",
+        "defensive_error_risk": "门将或后卫失误风险",
+        "late_goal_path": "补时和尾段进球路径"
+      }
+    },
+    {
+      "key": "weak_first_goal",
+      "name": "弱队第一球能力",
+      "required": true,
+      "description": "验证弱势方是否存在真实的一球路径。",
+      "required_checks": {
+        "core_attacker_start": "核心攻击手是否首发",
+        "transition_path": "反击路径",
+        "set_piece_path": "定位球路径",
+        "open_play_path": "运动战路径",
+        "opponent_defensive_gap": "对手可利用的防守漏洞"
+      }
+    },
+    {
+      "key": "weak_second_goal",
+      "name": "弱队第二球能力",
+      "required": true,
+      "description": "判断弱势方是否具备第二条独立进球路径。",
+      "required_checks": {
+        "multiple_attack_sources": "多点进攻",
+        "repeatable_chance_creation": "可重复创造机会能力",
+        "bench_impact": "替补冲击",
+        "response_after_conceding": "丢球后的反弹能力",
+        "favorite_control_risk": "强队控场失效风险"
+      }
+    },
+    {
+      "key": "favorite_defense",
+      "name": "热门球队防守脆弱度",
+      "required": true,
+      "description": "单独分析热门球队可能丢球的方式。",
+      "required_checks": {
+        "center_back_speed": "中卫转身与回追",
+        "fullback_space": "边后卫身后空间",
+        "midfield_protection": "后腰保护",
+        "goalkeeper_stability": "门将稳定性",
+        "set_piece_defense": "定位球防守",
+        "control_after_leading": "领先后的控场纪律"
+      }
+    },
+    {
+      "key": "clean_sheet",
+      "name": "零封能力",
+      "required": true,
+      "description": "判断强势方能否切断弱势方全部进球路径。",
+      "required_checks": {
+        "possession_control": "控球与节奏压制",
+        "counterpress": "丢球后反抢",
+        "box_protection": "禁区保护",
+        "goalkeeper": "门将表现",
+        "weak_attack_availability": "弱队攻击核心可用性",
+        "weak_attack_depth": "弱队进攻路径数量"
+      }
+    },
+    {
+      "key": "tactical_matchup",
+      "name": "战术匹配层",
+      "required": true,
+      "description": "评估双方主要战术体系的直接碰撞。",
+      "required_checks": {
+        "possession_transition": "控球对反击",
+        "press_build_up": "高压对出球",
+        "midfield_control": "中场控制与二点球",
+        "defensive_line": "防线高度与身后风险",
+        "set_piece_shape": "定位球攻防",
+        "formation_flexibility": "变阵与换人弹性"
+      }
+    },
+    {
+      "key": "stage_psychology",
+      "name": "比赛阶段与心理层",
+      "required": true,
+      "description": "判断比赛阶段、积分需求和压力如何改变开放程度。",
+      "required_checks": {
+        "stage_context": "小组或淘汰赛阶段",
+        "caution_index": "谨慎指数",
+        "chaos_index": "混乱指数",
+        "goal_difference_need": "净胜球与积分需求",
+        "pressure_response": "领先落后时的心理反应",
+        "star_pressure": "核心球员舆论或里程碑压力"
+      }
+    },
+    {
+      "key": "draw_risk",
+      "name": "平局风险指数",
+      "required": true,
+      "description": "区分0-0、1-1和2-2等不同平局路径。",
+      "required_checks": {
+        "zero_zero_path": "0-0路径",
+        "one_one_path": "1-1路径",
+        "two_two_path": "2-2路径",
+        "favorite_second_goal_failure": "强队第二球失败风险",
+        "weak_second_goal_path": "弱队第二球路径",
+        "game_opening_trigger": "比赛被打开的触发器"
+      }
+    },
+    {
+      "key": "lineup_injuries",
+      "name": "阵容与伤停层",
+      "required": true,
+      "description": "核实首发、伤停、停赛和出场时间限制。",
+      "required_checks": {
+        "attack_absences": "攻击线缺席",
+        "defense_absences": "中卫、后腰与门将缺席",
+        "minutes_restrictions": "出场时间限制",
+        "lineup_cohesion": "首发组合默契",
+        "late_lineup_changes": "临场变阵或名单变化"
+      }
+    },
+    {
+      "key": "team_harmony_social",
+      "name": "队内关系与社媒层",
+      "required": true,
+      "description": "把更衣室和社媒作为低权重修正项。",
+      "required_checks": {
+        "on_field_behavior": "场上配合、抱怨和回防行为",
+        "reliable_reporting": "权威媒体更衣室报道",
+        "public_interviews": "公开采访",
+        "training_interaction": "训练和赛后互动",
+        "social_media_signals": "社媒异常信号",
+        "signal_reliability": "信号可靠性分级"
+      }
+    },
+    {
+      "key": "environment_schedule",
+      "name": "环境与赛程层",
+      "required": true,
+      "description": "评估天气、场地、旅行与恢复差异。",
+      "required_checks": {
+        "weather": "温度、湿度与风雨",
+        "kickoff_time": "开球时间",
+        "pitch": "草皮与场地质量",
+        "travel": "旅行与时差",
+        "rest_days": "休息天数",
+        "preparation_disruption": "备战干扰"
+      }
+    },
+    {
+      "key": "referee_events",
+      "name": "裁判与事件触发层",
+      "required": true,
+      "description": "评估裁判尺度和高波动比赛事件。",
+      "required_checks": {
+        "referee_style": "裁判判罚与出牌尺度",
+        "penalty_var": "点球与VAR倾向",
+        "red_card_risk": "红牌风险",
+        "stoppage_time": "补时长度",
+        "early_goal": "早球触发",
+        "goalkeeper_or_backline_error": "门将或后场失误"
+      }
+    },
+    {
+      "key": "market_odds",
+      "name": "赔率与市场层",
+      "required": true,
+      "description": "使用市场信息验证判断，不以赔率替代分析。",
+      "required_checks": {
+        "moneyline": "胜平负赔率",
+        "handicap": "亚洲让球",
+        "goal_line": "大小球",
+        "btts_market": "双方进球赔率",
+        "market_movement": "赔率变化",
+        "overheating_or_mispricing": "热门过热或比分区间低估"
+      }
+    },
+    {
+      "key": "dynamic_triggers",
+      "name": "动态比分触发器",
+      "required": true,
+      "description": "预先定义比赛事件发生后如何修正比分。",
+      "required_checks": {
+        "weak_team_scores_first": "弱队先进球",
+        "favorite_scores_early": "强队早早领先",
+        "early_chance_exchange": "早段互有高质量机会",
+        "set_piece_pressure": "连续定位球压力",
+        "favorite_shot_quality": "强队射正质量变化",
+        "substitute_or_error_trigger": "替补冲击或后场失误",
+        "event_score_adjustment": "红牌、点球和门将失误后的量化比分修正"
+      }
+    },
+    {
+      "key": "star_overperformance",
+      "name": "巨星超额进球能力",
+      "required": true,
+      "description": "判断顶级球员能否突破团队均值和常规模型上限。",
+      "required_checks": {
+        "health_and_minutes": "健康与预计时间",
+        "recent_output": "近期进球与机会质量",
+        "individual_matchup": "个人对位优势",
+        "shot_volume_role": "射门权和战术角色",
+        "late_game_ceiling": "尾段继续扩大比分能力"
+      }
+    },
+    {
+      "key": "set_piece_aerial",
+      "name": "高空与定位球错位",
+      "required": true,
+      "description": "判断身高、力量、传中与二点球是否形成明确错位。",
+      "required_checks": {
+        "height_strength": "身高与力量差",
+        "delivery_quality": "定位球和传中质量",
+        "aerial_targets": "高空接应点数量",
+        "defensive_marking": "对手盯人与防空",
+        "second_ball": "二点球控制"
+      }
+    },
+    {
+      "key": "pressing_error_path",
+      "name": "前锋压迫与门将后场失误",
+      "required": true,
+      "description": "判断高压是否能直接制造抢断、脱手、乌龙或补射。",
+      "required_checks": {
+        "pressing_intensity": "前场压迫强度",
+        "goalkeeper_distribution": "门将脚下与出球",
+        "center_back_composure": "中卫抗压",
+        "turnover_history": "近期后场失误记录",
+        "follow_up_finishing": "抢断后的终结与补射"
+      }
+    }
+  ],
+  "evidence_quality_rules": {
+    "minimum_unique_check_findings_per_dimension": 3,
+    "maximum_identical_dimension_evidence_signatures": 3
+  },
+  "required_event_scenarios": [
+    "favorite_red_card",
+    "underdog_red_card",
+    "underdog_two_red_cards",
+    "penalty_or_goalkeeper_error"
+  ]
+}

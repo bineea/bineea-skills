@@ -1,0 +1,61 @@
+{
+  "match": {
+    "match_id": "2026-06-18_TEAM_A_TEAM_B",
+    "competition": "FIFA World Cup 2026",
+    "match_date": "2026-06-18",
+    "stage": "Group stage",
+    "venue": "",
+    "team_a": "",
+    "team_b": ""
+  },
+  "teams": {
+    "team_a": {
+      "fifa_rank": null,
+      "elo_rating": null,
+      "historical_style": "",
+      "strengths": [],
+      "weaknesses": [],
+      "notes": ""
+    },
+    "team_b": {
+      "fifa_rank": null,
+      "elo_rating": null,
+      "historical_style": "",
+      "strengths": [],
+      "weaknesses": [],
+      "notes": ""
+    }
+  },
+  "key_players": {
+    "team_a": [
+      {
+        "player_name": "",
+        "position": "",
+        "player_type": "",
+        "current_status": "healthy / doubtful / injured / suspended / unknown",
+        "is_expected_starter": true,
+        "expected_minutes": 90,
+        "form_score": 3,
+        "ability_tags": [],
+        "risk_tags": [],
+        "evidence": ""
+      }
+    ],
+    "team_b": []
+  },
+  "sources": [
+    {
+      "source_title": "",
+      "source_url": "",
+      "source_type": "fixture / ranking / injury / lineup / odds / match_report / social_media / manual",
+      "summary": "",
+      "reliability": "high / medium / low"
+    }
+  ],
+  "manual_notes": {
+    "lineup_uncertainties": [],
+    "team_harmony_or_social_signals": [],
+    "weather_or_schedule_factors": [],
+    "market_or_odds_notes": []
+  }
+}
