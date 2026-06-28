@@ -1,0 +1,3534 @@
+{
+  "schema_version": "1.0.0",
+  "catalog_version": "2026-06-20",
+  "match": {
+    "match_id": "2026-06-29_BJT_RSA_CAN",
+    "team_a": "South Africa",
+    "team_b": "Canada",
+    "match_date": "2026-06-29 Beijing time",
+    "beijing_kickoff": "2026-06-29 03:00"
+  },
+  "sources": [
+    {
+      "source_id": "src_fifa_match",
+      "source_type": "fixture",
+      "title": "FIFA Match Centre: South Africa vs Canada, Round of 32",
+      "url": "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021518"
+    },
+    {
+      "source_id": "src_cbs_odds",
+      "source_type": "odds",
+      "title": "CBS Sports Canada vs South Africa odds and prediction",
+      "url": "https://www.cbssports.com/soccer/news/canada-vs-south-africa-odds-prediction-time-2026-world-cup-round-of-32-picks/"
+    },
+    {
+      "source_id": "src_covers_preview",
+      "source_type": "odds_lineup",
+      "title": "Covers Canada vs South Africa predictions, picks and odds",
+      "url": "https://www.covers.com/world-cup/canada-vs-south-africa-prediction-picks-odds-sunday-6-28-2026"
+    },
+    {
+      "source_id": "src_covers_lineups",
+      "source_type": "lineup",
+      "title": "Covers Canada vs South Africa projected starting lineups",
+      "url": "https://www.covers.com/world-cup/canada-vs-south-africa-starting-lineups-sunday-6-28-2026"
+    },
+    {
+      "source_id": "src_si_lineups",
+      "source_type": "lineup",
+      "title": "Sports Illustrated South Africa vs Canada preview and predicted lineups",
+      "url": "https://www.si.com/soccer/south-africa-vs-canada-world-cup-preview-predictions-lineups-6-28-26"
+    },
+    {
+      "source_id": "src_sportsmole_preview",
+      "source_type": "lineup",
+      "title": "Sports Mole South Africa vs Canada preview, team news and lineups",
+      "url": "https://www.sportsmole.co.uk/football/canada/world-cup-2026/preview/south-africa-vs-canada-prediction-team-news-lineups_600163.html"
+    },
+    {
+      "source_id": "src_guardian_davies",
+      "source_type": "team_news",
+      "title": "The Guardian: Alphonso Davies returns as Canada approach World Cup moment",
+      "url": "https://www.theguardian.com/football/2026/jun/28/alphonso-davies-returns-canada-world-cup-moment-of-destiny"
+    },
+    {
+      "source_id": "src_local_db",
+      "source_type": "historical_sample",
+      "title": "worldcup-score-predictor local database and historical samples",
+      "url": "local:data/worldcup_prediction_knowledge.sqlite"
+    }
+  ],
+  "player_assessments": {
+    "team_a": [
+      {
+        "player_name": "Ronwen Williams",
+        "position": "门将",
+        "player_type": "扑救出击",
+        "status": "预计首发",
+        "expected_starter": true,
+        "expected_minutes": 90,
+        "conclusion": "Williams 是南非守住低比分和点球/加时风险的关键。",
+        "evidence": [
+          "SI/Sports Mole预计其首发，南非近两场只丢1球。"
+        ],
+        "source_ids": [
+          "src_si_lineups",
+          "src_sportsmole_preview",
+          "src_local_db"
+        ]
+      },
+      {
+        "player_name": "Teboho Mokoena",
+        "position": "中场",
+        "player_type": "拦截定位球",
+        "status": "解禁回归，预计首发",
+        "expected_starter": true,
+        "expected_minutes": 85,
+        "conclusion": "Mokoena回归增强南非中场保护和定位球路径。",
+        "evidence": [
+          "SI和Sports Mole均提到Mokoena停赛后回归。"
+        ],
+        "source_ids": [
+          "src_si_lineups",
+          "src_sportsmole_preview"
+        ]
+      },
+      {
+        "player_name": "Thapelo Maseko",
+        "position": "边路",
+        "player_type": "速度反击",
+        "status": "预计首发",
+        "expected_starter": true,
+        "expected_minutes": 78,
+        "conclusion": "Maseko是南非最现实的反击一球路径之一。",
+        "evidence": [
+          "预计阵容将其列入前场，南非会低位等待转换机会。"
+        ],
+        "source_ids": [
+          "src_si_lineups",
+          "src_sportsmole_preview"
+        ]
+      }
+    ],
+    "team_b": [
+      {
+        "player_name": "Jonathan David",
+        "position": "前锋",
+        "player_type": "终结跑位",
+        "status": "预计首发",
+        "expected_starter": true,
+        "expected_minutes": 86,
+        "conclusion": "David是加拿大第二球和禁区终结的核心。",
+        "evidence": [
+          "Covers/Sports Mole均把David列入加拿大关键攻击线。"
+        ],
+        "source_ids": [
+          "src_covers_preview",
+          "src_sportsmole_preview"
+        ]
+      },
+      {
+        "player_name": "Alphonso Davies",
+        "position": "左路/边后卫",
+        "player_type": "速度推进",
+        "status": "有望复出，是否首发待T-90确认",
+        "expected_starter": false,
+        "expected_minutes": 35,
+        "conclusion": "Davies若首发或早登场，会明显提高加拿大左路上限。",
+        "evidence": [
+          "Guardian称Davies准备回归，但SI/Sports Mole仍把首发视为待确认。"
+        ],
+        "source_ids": [
+          "src_guardian_davies",
+          "src_si_lineups",
+          "src_sportsmole_preview"
+        ]
+      },
+      {
+        "player_name": "Tajon Buchanan",
+        "position": "边路",
+        "player_type": "突破传中",
+        "status": "预计首发",
+        "expected_starter": true,
+        "expected_minutes": 82,
+        "conclusion": "Buchanan提供加拿大宽度和持续推进，是破南非低位的重要点。",
+        "evidence": [
+          "Sports Mole预计其继续在边路首发。"
+        ],
+        "source_ids": [
+          "src_sportsmole_preview"
+        ]
+      }
+    ]
+  },
+  "dimension_analyses": [
+    {
+      "dimension_key": "base_strength",
+      "score": 4,
+      "confidence": "medium",
+      "conclusion": "South Africa vs Canada: base_strength评分为4。Canada has stronger squad ceiling and market support, but South Africa enters with compact defensive momentum.",
+      "check_results": {
+        "ranking_elo": {
+          "status": "supported",
+          "finding": "ranking_elo：South Africa vs Canada: base_strength评分为4。Canada has stronger squad ceiling and market support, but South Africa enters with compact defensive momentum.；独立子项1结合市场把加拿大列为90分钟热门，CBS/FanDuel约加判断。",
+          "evidence": [
+            "South Africa vs Canada base_strength.ranking_elo: 市场把加拿大列为90分钟热门，CBS/FanDuel约加拿大-155、南非+500、平局+260，晋级市场加拿大优势更明显。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "squad_quality": {
+          "status": "supported",
+          "finding": "squad_quality：South Africa vs Canada: base_strength评分为4。Canada has stronger squad ceiling and market support, but South Africa enters with compact defensive momentum.；独立子项2结合南非Mokoena解禁回归增强中场，但Zwane仍停赛，判断。",
+          "evidence": [
+            "South Africa vs Canada base_strength.squad_quality: 南非Mokoena解禁回归增强中场，但Zwane仍停赛，削弱前场创造。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "tournament_experience": {
+          "status": "supported",
+          "finding": "tournament_experience：South Africa vs Canada: base_strength评分为4。Canada has stronger squad ceiling and market support, but South Africa enters with compact defensive momentum.；独立子项3结合加拿大Kone伤缺，Eustaquio和Davies/B判断。",
+          "evidence": [
+            "South Africa vs Canada base_strength.tournament_experience: 加拿大Kone伤缺，Eustaquio和Davies/Bombito状态是关键；Guardian称Davies准备回归，Covers/SI仍提示是否首发待官方名单。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "bench_depth": {
+          "status": "supported",
+          "finding": "bench_depth：South Africa vs Canada: base_strength评分为4。Canada has stronger squad ceiling and market support, but South Africa enters with compact defensive momentum.；独立子项4结合淘汰赛第一场，双方都是历史性淘汰赛突破，谨慎指数高于小组判断。",
+          "evidence": [
+            "South Africa vs Canada base_strength.bench_depth: 淘汰赛第一场，双方都是历史性淘汰赛突破，谨慎指数高于小组赛；低位和加时风险不可忽视。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "coach_and_age_structure": {
+          "status": "supported",
+          "finding": "coach_and_age_structure：South Africa vs Canada: base_strength评分为4。Canada has stronger squad ceiling and market support, but South Africa enters with compact defensive momentum.；独立子项5结合赛程为Round of 32，南非vs加拿大在洛杉矶/S判断。",
+          "evidence": [
+            "South Africa vs Canada base_strength.coach_and_age_structure: 赛程为Round of 32，南非vs加拿大在洛杉矶/SoFi一带进行，北京时间06-29 03:00开球。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        }
+      },
+      "evidence": [
+        "base_strength维度独立证据：赛程为Round of 32，南非vs加拿大在洛杉矶/SoFi一带进行，北京时间06-29 03:00开球。"
+      ],
+      "source_ids": [
+        "src_fifa_match",
+        "src_cbs_odds",
+        "src_covers_preview",
+        "src_covers_lineups",
+        "src_si_lineups",
+        "src_sportsmole_preview",
+        "src_guardian_davies",
+        "src_local_db"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "player_status",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "South Africa vs Canada: player_status评分为3。Canada attack remains stronger, yet Kone injury and Davies/Eustaquio uncertainty cap confidence.",
+      "check_results": {
+        "expected_starters": {
+          "status": "supported",
+          "finding": "expected_starters：South Africa vs Canada: player_status评分为3。Canada attack remains stronger, yet Kone injury and Davies/Eustaquio uncertainty cap confidence.；独立子项1结合市场把加拿大列为90分钟热门，CBS/FanDuel约加判断。",
+          "evidence": [
+            "South Africa vs Canada player_status.expected_starters: 市场把加拿大列为90分钟热门，CBS/FanDuel约加拿大-155、南非+500、平局+260，晋级市场加拿大优势更明显。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "expected_minutes": {
+          "status": "supported",
+          "finding": "expected_minutes：South Africa vs Canada: player_status评分为3。Canada attack remains stronger, yet Kone injury and Davies/Eustaquio uncertainty cap confidence.；独立子项2结合南非Mokoena解禁回归增强中场，但Zwane仍停赛，判断。",
+          "evidence": [
+            "South Africa vs Canada player_status.expected_minutes: 南非Mokoena解禁回归增强中场，但Zwane仍停赛，削弱前场创造。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "recent_minutes_and_form": {
+          "status": "supported",
+          "finding": "recent_minutes_and_form：South Africa vs Canada: player_status评分为3。Canada attack remains stronger, yet Kone injury and Davies/Eustaquio uncertainty cap confidence.；独立子项3结合加拿大Kone伤缺，Eustaquio和Davies/B判断。",
+          "evidence": [
+            "South Africa vs Canada player_status.recent_minutes_and_form: 加拿大Kone伤缺，Eustaquio和Davies/Bombito状态是关键；Guardian称Davies准备回归，Covers/SI仍提示是否首发待官方名单。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "injury_recovery": {
+          "status": "supported",
+          "finding": "injury_recovery：South Africa vs Canada: player_status评分为3。Canada attack remains stronger, yet Kone injury and Davies/Eustaquio uncertainty cap confidence.；独立子项4结合淘汰赛第一场，双方都是历史性淘汰赛突破，谨慎指数高于小组判断。",
+          "evidence": [
+            "South Africa vs Canada player_status.injury_recovery: 淘汰赛第一场，双方都是历史性淘汰赛突破，谨慎指数高于小组赛；低位和加时风险不可忽视。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "position_quality": {
+          "status": "supported",
+          "finding": "position_quality：South Africa vs Canada: player_status评分为3。Canada attack remains stronger, yet Kone injury and Davies/Eustaquio uncertainty cap confidence.；独立子项5结合赛程为Round of 32，南非vs加拿大在洛杉矶/S判断。",
+          "evidence": [
+            "South Africa vs Canada player_status.position_quality: 赛程为Round of 32，南非vs加拿大在洛杉矶/SoFi一带进行，北京时间06-29 03:00开球。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "big_match_and_mental_state": {
+          "status": "supported",
+          "finding": "big_match_and_mental_state：South Africa vs Canada: player_status评分为3。Canada attack remains stronger, yet Kone injury and Davies/Eustaquio uncertainty cap confidence.；独立子项6结合加拿大小组赛1胜1平1负：1-1波黑、6-0卡塔尔、1-判断。",
+          "evidence": [
+            "South Africa vs Canada player_status.big_match_and_mental_state: 加拿大小组赛1胜1平1负：1-1波黑、6-0卡塔尔、1-2瑞士；南非0-2墨西哥、1-1捷克、1-0韩国。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        }
+      },
+      "evidence": [
+        "player_status维度独立证据：加拿大小组赛1胜1平1负：1-1波黑、6-0卡塔尔、1-2瑞士；南非0-2墨西哥、1-1捷克、1-0韩国。"
+      ],
+      "source_ids": [
+        "src_fifa_match",
+        "src_cbs_odds",
+        "src_covers_preview",
+        "src_covers_lineups",
+        "src_si_lineups",
+        "src_sportsmole_preview",
+        "src_guardian_davies",
+        "src_local_db"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "player_type_structure",
+      "score": 4,
+      "confidence": "medium",
+      "conclusion": "South Africa vs Canada: player_type_structure评分为4。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。",
+      "check_results": {
+        "attacking_types": {
+          "status": "supported",
+          "finding": "attacking_types：South Africa vs Canada: player_type_structure评分为4。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项1结合加拿大Kone伤缺，Eustaquio和Davies/B判断。",
+          "evidence": [
+            "South Africa vs Canada player_type_structure.attacking_types: 加拿大Kone伤缺，Eustaquio和Davies/Bombito状态是关键；Guardian称Davies准备回归，Covers/SI仍提示是否首发待官方名单。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "midfield_types": {
+          "status": "supported",
+          "finding": "midfield_types：South Africa vs Canada: player_type_structure评分为4。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项2结合淘汰赛第一场，双方都是历史性淘汰赛突破，谨慎指数高于小组判断。",
+          "evidence": [
+            "South Africa vs Canada player_type_structure.midfield_types: 淘汰赛第一场，双方都是历史性淘汰赛突破，谨慎指数高于小组赛；低位和加时风险不可忽视。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "defensive_types": {
+          "status": "supported",
+          "finding": "defensive_types：South Africa vs Canada: player_type_structure评分为4。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项3结合赛程为Round of 32，南非vs加拿大在洛杉矶/S判断。",
+          "evidence": [
+            "South Africa vs Canada player_type_structure.defensive_types: 赛程为Round of 32，南非vs加拿大在洛杉矶/SoFi一带进行，北京时间06-29 03:00开球。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "type_complementarity": {
+          "status": "supported",
+          "finding": "type_complementarity：South Africa vs Canada: player_type_structure评分为4。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项4结合加拿大小组赛1胜1平1负：1-1波黑、6-0卡塔尔、1-判断。",
+          "evidence": [
+            "South Africa vs Canada player_type_structure.type_complementarity: 加拿大小组赛1胜1平1负：1-1波黑、6-0卡塔尔、1-2瑞士；南非0-2墨西哥、1-1捷克、1-0韩国。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "type_gaps": {
+          "status": "supported",
+          "finding": "type_gaps：South Africa vs Canada: player_type_structure评分为4。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项5结合市场把加拿大列为90分钟热门，CBS/FanDuel约加判断。",
+          "evidence": [
+            "South Africa vs Canada player_type_structure.type_gaps: 市场把加拿大列为90分钟热门，CBS/FanDuel约加拿大-155、南非+500、平局+260，晋级市场加拿大优势更明显。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        }
+      },
+      "evidence": [
+        "player_type_structure维度独立证据：市场把加拿大列为90分钟热门，CBS/FanDuel约加拿大-155、南非+500、平局+260，晋级市场加拿大优势更明显。"
+      ],
+      "source_ids": [
+        "src_fifa_match",
+        "src_cbs_odds",
+        "src_covers_preview",
+        "src_covers_lineups",
+        "src_si_lineups",
+        "src_sportsmole_preview",
+        "src_guardian_davies",
+        "src_local_db"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "key_matchups",
+      "score": 4,
+      "confidence": "medium",
+      "conclusion": "South Africa vs Canada: key_matchups评分为4。Canada wide speed and David/Larin against South Africa centre backs is the main opening path; South Africa counter speed attacks Canada fullback space.",
+      "check_results": {
+        "wing_matchup": {
+          "status": "supported",
+          "finding": "wing_matchup：South Africa vs Canada: key_matchups评分为4。Canada wide speed and David/Larin against South Africa centre backs is the main opening path; South Africa counter speed attacks Canada fullback space.；独立子项1结合加拿大小组赛1胜1平1负：1-1波黑、6-0卡塔尔、1-判断。",
+          "evidence": [
+            "South Africa vs Canada key_matchups.wing_matchup: 加拿大小组赛1胜1平1负：1-1波黑、6-0卡塔尔、1-2瑞士；南非0-2墨西哥、1-1捷克、1-0韩国。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "striker_center_back": {
+          "status": "supported",
+          "finding": "striker_center_back：South Africa vs Canada: key_matchups评分为4。Canada wide speed and David/Larin against South Africa centre backs is the main opening path; South Africa counter speed attacks Canada fullback space.；独立子项2结合市场把加拿大列为90分钟热门，CBS/FanDuel约加判断。",
+          "evidence": [
+            "South Africa vs Canada key_matchups.striker_center_back: 市场把加拿大列为90分钟热门，CBS/FanDuel约加拿大-155、南非+500、平局+260，晋级市场加拿大优势更明显。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "creator_defensive_midfield": {
+          "status": "supported",
+          "finding": "creator_defensive_midfield：South Africa vs Canada: key_matchups评分为4。Canada wide speed and David/Larin against South Africa centre backs is the main opening path; South Africa counter speed attacks Canada fullback space.；独立子项3结合南非Mokoena解禁回归增强中场，但Zwane仍停赛，判断。",
+          "evidence": [
+            "South Africa vs Canada key_matchups.creator_defensive_midfield: 南非Mokoena解禁回归增强中场，但Zwane仍停赛，削弱前场创造。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "pressing_build_up": {
+          "status": "supported",
+          "finding": "pressing_build_up：South Africa vs Canada: key_matchups评分为4。Canada wide speed and David/Larin against South Africa centre backs is the main opening path; South Africa counter speed attacks Canada fullback space.；独立子项4结合加拿大Kone伤缺，Eustaquio和Davies/B判断。",
+          "evidence": [
+            "South Africa vs Canada key_matchups.pressing_build_up: 加拿大Kone伤缺，Eustaquio和Davies/Bombito状态是关键；Guardian称Davies准备回归，Covers/SI仍提示是否首发待官方名单。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "aerial_matchup": {
+          "status": "supported",
+          "finding": "aerial_matchup：South Africa vs Canada: key_matchups评分为4。Canada wide speed and David/Larin against South Africa centre backs is the main opening path; South Africa counter speed attacks Canada fullback space.；独立子项5结合淘汰赛第一场，双方都是历史性淘汰赛突破，谨慎指数高于小组判断。",
+          "evidence": [
+            "South Africa vs Canada key_matchups.aerial_matchup: 淘汰赛第一场，双方都是历史性淘汰赛突破，谨慎指数高于小组赛；低位和加时风险不可忽视。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "transition_space": {
+          "status": "supported",
+          "finding": "transition_space：South Africa vs Canada: key_matchups评分为4。Canada wide speed and David/Larin against South Africa centre backs is the main opening path; South Africa counter speed attacks Canada fullback space.；独立子项6结合赛程为Round of 32，南非vs加拿大在洛杉矶/S判断。",
+          "evidence": [
+            "South Africa vs Canada key_matchups.transition_space: 赛程为Round of 32，南非vs加拿大在洛杉矶/SoFi一带进行，北京时间06-29 03:00开球。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        }
+      },
+      "evidence": [
+        "key_matchups维度独立证据：南非Mokoena解禁回归增强中场，但Zwane仍停赛，削弱前场创造。"
+      ],
+      "source_ids": [
+        "src_fifa_match",
+        "src_cbs_odds",
+        "src_covers_preview",
+        "src_covers_lineups",
+        "src_si_lineups",
+        "src_sportsmole_preview",
+        "src_guardian_davies",
+        "src_local_db"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "historical_style",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "South Africa vs Canada: historical_style评分为3。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。",
+      "check_results": {
+        "team_a_style": {
+          "status": "supported",
+          "finding": "team_a_style：South Africa vs Canada: historical_style评分为3。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项1结合淘汰赛第一场，双方都是历史性淘汰赛突破，谨慎指数高于小组判断。",
+          "evidence": [
+            "South Africa vs Canada historical_style.team_a_style: 淘汰赛第一场，双方都是历史性淘汰赛突破，谨慎指数高于小组赛；低位和加时风险不可忽视。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "team_b_style": {
+          "status": "supported",
+          "finding": "team_b_style：South Africa vs Canada: historical_style评分为3。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项2结合赛程为Round of 32，南非vs加拿大在洛杉矶/S判断。",
+          "evidence": [
+            "South Africa vs Canada historical_style.team_b_style: 赛程为Round of 32，南非vs加拿大在洛杉矶/SoFi一带进行，北京时间06-29 03:00开球。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "leading_behavior": {
+          "status": "supported",
+          "finding": "leading_behavior：South Africa vs Canada: historical_style评分为3。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项3结合加拿大小组赛1胜1平1负：1-1波黑、6-0卡塔尔、1-判断。",
+          "evidence": [
+            "South Africa vs Canada historical_style.leading_behavior: 加拿大小组赛1胜1平1负：1-1波黑、6-0卡塔尔、1-2瑞士；南非0-2墨西哥、1-1捷克、1-0韩国。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "trailing_behavior": {
+          "status": "supported",
+          "finding": "trailing_behavior：South Africa vs Canada: historical_style评分为3。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项4结合市场把加拿大列为90分钟热门，CBS/FanDuel约加判断。",
+          "evidence": [
+            "South Africa vs Canada historical_style.trailing_behavior: 市场把加拿大列为90分钟热门，CBS/FanDuel约加拿大-155、南非+500、平局+260，晋级市场加拿大优势更明显。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "draw_and_set_piece_tendency": {
+          "status": "supported",
+          "finding": "draw_and_set_piece_tendency：South Africa vs Canada: historical_style评分为3。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项5结合南非Mokoena解禁回归增强中场，但Zwane仍停赛，判断。",
+          "evidence": [
+            "South Africa vs Canada historical_style.draw_and_set_piece_tendency: 南非Mokoena解禁回归增强中场，但Zwane仍停赛，削弱前场创造。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        }
+      },
+      "evidence": [
+        "historical_style维度独立证据：加拿大Kone伤缺，Eustaquio和Davies/Bombito状态是关键；Guardian称Davies准备回归，Covers/SI仍提示是否首发待官方名单。"
+      ],
+      "source_ids": [
+        "src_fifa_match",
+        "src_cbs_odds",
+        "src_covers_preview",
+        "src_covers_lineups",
+        "src_si_lineups",
+        "src_sportsmole_preview",
+        "src_guardian_davies",
+        "src_local_db"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "style_counter",
+      "score": 4,
+      "confidence": "medium",
+      "conclusion": "South Africa vs Canada: style_counter评分为4。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。",
+      "check_results": {
+        "team_a_attacks_team_b": {
+          "status": "supported",
+          "finding": "team_a_attacks_team_b：South Africa vs Canada: style_counter评分为4。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项1结合市场把加拿大列为90分钟热门，CBS/FanDuel约加判断。",
+          "evidence": [
+            "South Africa vs Canada style_counter.team_a_attacks_team_b: 市场把加拿大列为90分钟热门，CBS/FanDuel约加拿大-155、南非+500、平局+260，晋级市场加拿大优势更明显。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "team_b_attacks_team_a": {
+          "status": "supported",
+          "finding": "team_b_attacks_team_a：South Africa vs Canada: style_counter评分为4。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项2结合南非Mokoena解禁回归增强中场，但Zwane仍停赛，判断。",
+          "evidence": [
+            "South Africa vs Canada style_counter.team_b_attacks_team_a: 南非Mokoena解禁回归增强中场，但Zwane仍停赛，削弱前场创造。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "team_a_resistance": {
+          "status": "supported",
+          "finding": "team_a_resistance：South Africa vs Canada: style_counter评分为4。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项3结合加拿大Kone伤缺，Eustaquio和Davies/B判断。",
+          "evidence": [
+            "South Africa vs Canada style_counter.team_a_resistance: 加拿大Kone伤缺，Eustaquio和Davies/Bombito状态是关键；Guardian称Davies准备回归，Covers/SI仍提示是否首发待官方名单。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "team_b_resistance": {
+          "status": "supported",
+          "finding": "team_b_resistance：South Africa vs Canada: style_counter评分为4。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项4结合淘汰赛第一场，双方都是历史性淘汰赛突破，谨慎指数高于小组判断。",
+          "evidence": [
+            "South Africa vs Canada style_counter.team_b_resistance: 淘汰赛第一场，双方都是历史性淘汰赛突破，谨慎指数高于小组赛；低位和加时风险不可忽视。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "net_counter_effect": {
+          "status": "supported",
+          "finding": "net_counter_effect：South Africa vs Canada: style_counter评分为4。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项5结合赛程为Round of 32，南非vs加拿大在洛杉矶/S判断。",
+          "evidence": [
+            "South Africa vs Canada style_counter.net_counter_effect: 赛程为Round of 32，南非vs加拿大在洛杉矶/SoFi一带进行，北京时间06-29 03:00开球。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        }
+      },
+      "evidence": [
+        "style_counter维度独立证据：淘汰赛第一场，双方都是历史性淘汰赛突破，谨慎指数高于小组赛；低位和加时风险不可忽视。"
+      ],
+      "source_ids": [
+        "src_fifa_match",
+        "src_cbs_odds",
+        "src_covers_preview",
+        "src_covers_lineups",
+        "src_si_lineups",
+        "src_sportsmole_preview",
+        "src_guardian_davies",
+        "src_local_db"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "recent_form",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "South Africa vs Canada: recent_form评分为3。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。",
+      "check_results": {
+        "recent_results": {
+          "status": "supported",
+          "finding": "recent_results：South Africa vs Canada: recent_form评分为3。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项1结合赛程为Round of 32，南非vs加拿大在洛杉矶/S判断。",
+          "evidence": [
+            "South Africa vs Canada recent_form.recent_results: 赛程为Round of 32，南非vs加拿大在洛杉矶/SoFi一带进行，北京时间06-29 03:00开球。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "scoring_trend": {
+          "status": "supported",
+          "finding": "scoring_trend：South Africa vs Canada: recent_form评分为3。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项2结合加拿大小组赛1胜1平1负：1-1波黑、6-0卡塔尔、1-判断。",
+          "evidence": [
+            "South Africa vs Canada recent_form.scoring_trend: 加拿大小组赛1胜1平1负：1-1波黑、6-0卡塔尔、1-2瑞士；南非0-2墨西哥、1-1捷克、1-0韩国。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "conceding_trend": {
+          "status": "supported",
+          "finding": "conceding_trend：South Africa vs Canada: recent_form评分为3。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项3结合市场把加拿大列为90分钟热门，CBS/FanDuel约加判断。",
+          "evidence": [
+            "South Africa vs Canada recent_form.conceding_trend: 市场把加拿大列为90分钟热门，CBS/FanDuel约加拿大-155、南非+500、平局+260，晋级市场加拿大优势更明显。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "strong_weak_opponent_split": {
+          "status": "supported",
+          "finding": "strong_weak_opponent_split：South Africa vs Canada: recent_form评分为3。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项4结合南非Mokoena解禁回归增强中场，但Zwane仍停赛，判断。",
+          "evidence": [
+            "South Africa vs Canada recent_form.strong_weak_opponent_split: 南非Mokoena解禁回归增强中场，但Zwane仍停赛，削弱前场创造。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "second_half_trend": {
+          "status": "supported",
+          "finding": "second_half_trend：South Africa vs Canada: recent_form评分为3。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项5结合加拿大Kone伤缺，Eustaquio和Davies/B判断。",
+          "evidence": [
+            "South Africa vs Canada recent_form.second_half_trend: 加拿大Kone伤缺，Eustaquio和Davies/Bombito状态是关键；Guardian称Davies准备回归，Covers/SI仍提示是否首发待官方名单。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        }
+      },
+      "evidence": [
+        "recent_form维度独立证据：赛程为Round of 32，南非vs加拿大在洛杉矶/SoFi一带进行，北京时间06-29 03:00开球。"
+      ],
+      "source_ids": [
+        "src_fifa_match",
+        "src_cbs_odds",
+        "src_covers_preview",
+        "src_covers_lineups",
+        "src_si_lineups",
+        "src_sportsmole_preview",
+        "src_guardian_davies",
+        "src_local_db"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "goal_distribution",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "South Africa vs Canada: goal_distribution评分为3。Market total around 2.5 and knockout caution point to 1-3 goals, not a runaway shootout.",
+      "check_results": {
+        "xg_xga": {
+          "status": "supported",
+          "finding": "xg_xga：South Africa vs Canada: goal_distribution评分为3。Market total around 2.5 and knockout caution point to 1-3 goals, not a runaway shootout.；独立子项1结合赛程为Round of 32，南非vs加拿大在洛杉矶/S判断。",
+          "evidence": [
+            "South Africa vs Canada goal_distribution.xg_xga: 赛程为Round of 32，南非vs加拿大在洛杉矶/SoFi一带进行，北京时间06-29 03:00开球。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "shots_on_target": {
+          "status": "supported",
+          "finding": "shots_on_target：South Africa vs Canada: goal_distribution评分为3。Market total around 2.5 and knockout caution point to 1-3 goals, not a runaway shootout.；独立子项2结合加拿大小组赛1胜1平1负：1-1波黑、6-0卡塔尔、1-判断。",
+          "evidence": [
+            "South Africa vs Canada goal_distribution.shots_on_target: 加拿大小组赛1胜1平1负：1-1波黑、6-0卡塔尔、1-2瑞士；南非0-2墨西哥、1-1捷克、1-0韩国。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "big_chances": {
+          "status": "supported",
+          "finding": "big_chances：South Africa vs Canada: goal_distribution评分为3。Market total around 2.5 and knockout caution point to 1-3 goals, not a runaway shootout.；独立子项3结合市场把加拿大列为90分钟热门，CBS/FanDuel约加判断。",
+          "evidence": [
+            "South Africa vs Canada goal_distribution.big_chances: 市场把加拿大列为90分钟热门，CBS/FanDuel约加拿大-155、南非+500、平局+260，晋级市场加拿大优势更明显。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "set_piece_output": {
+          "status": "supported",
+          "finding": "set_piece_output：South Africa vs Canada: goal_distribution评分为3。Market total around 2.5 and knockout caution point to 1-3 goals, not a runaway shootout.；独立子项4结合南非Mokoena解禁回归增强中场，但Zwane仍停赛，判断。",
+          "evidence": [
+            "South Africa vs Canada goal_distribution.set_piece_output: 南非Mokoena解禁回归增强中场，但Zwane仍停赛，削弱前场创造。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "nonstandard_goals": {
+          "status": "supported",
+          "finding": "nonstandard_goals：South Africa vs Canada: goal_distribution评分为3。Market total around 2.5 and knockout caution point to 1-3 goals, not a runaway shootout.；独立子项5结合加拿大Kone伤缺，Eustaquio和Davies/B判断。",
+          "evidence": [
+            "South Africa vs Canada goal_distribution.nonstandard_goals: 加拿大Kone伤缺，Eustaquio和Davies/Bombito状态是关键；Guardian称Davies准备回归，Covers/SI仍提示是否首发待官方名单。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        }
+      },
+      "evidence": [
+        "goal_distribution维度独立证据：加拿大小组赛1胜1平1负：1-1波黑、6-0卡塔尔、1-2瑞士；南非0-2墨西哥、1-1捷克、1-0韩国。"
+      ],
+      "source_ids": [
+        "src_fifa_match",
+        "src_cbs_odds",
+        "src_covers_preview",
+        "src_covers_lineups",
+        "src_si_lineups",
+        "src_sportsmole_preview",
+        "src_guardian_davies",
+        "src_local_db"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "strong_second_goal",
+      "score": 4,
+      "confidence": "medium",
+      "conclusion": "South Africa vs Canada: strong_second_goal评分为4。Canada has real second-goal paths through David, Buchanan and possible Davies impact.",
+      "check_results": {
+        "finisher_status": {
+          "status": "supported",
+          "finding": "finisher_status：South Africa vs Canada: strong_second_goal评分为4。Canada has real second-goal paths through David, Buchanan and possible Davies impact.；独立子项1结合加拿大小组赛1胜1平1负：1-1波黑、6-0卡塔尔、1-判断。",
+          "evidence": [
+            "South Africa vs Canada strong_second_goal.finisher_status: 加拿大小组赛1胜1平1负：1-1波黑、6-0卡塔尔、1-2瑞士；南非0-2墨西哥、1-1捷克、1-0韩国。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "creator_quality": {
+          "status": "supported",
+          "finding": "creator_quality：South Africa vs Canada: strong_second_goal评分为4。Canada has real second-goal paths through David, Buchanan and possible Davies impact.；独立子项2结合市场把加拿大列为90分钟热门，CBS/FanDuel约加判断。",
+          "evidence": [
+            "South Africa vs Canada strong_second_goal.creator_quality: 市场把加拿大列为90分钟热门，CBS/FanDuel约加拿大-155、南非+500、平局+260，晋级市场加拿大优势更明显。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "shot_quality": {
+          "status": "supported",
+          "finding": "shot_quality：South Africa vs Canada: strong_second_goal评分为4。Canada has real second-goal paths through David, Buchanan and possible Davies impact.；独立子项3结合南非Mokoena解禁回归增强中场，但Zwane仍停赛，判断。",
+          "evidence": [
+            "South Africa vs Canada strong_second_goal.shot_quality: 南非Mokoena解禁回归增强中场，但Zwane仍停赛，削弱前场创造。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "low_block_solution": {
+          "status": "supported",
+          "finding": "low_block_solution：South Africa vs Canada: strong_second_goal评分为4。Canada has real second-goal paths through David, Buchanan and possible Davies impact.；独立子项4结合加拿大Kone伤缺，Eustaquio和Davies/B判断。",
+          "evidence": [
+            "South Africa vs Canada strong_second_goal.low_block_solution: 加拿大Kone伤缺，Eustaquio和Davies/Bombito状态是关键；Guardian称Davies准备回归，Covers/SI仍提示是否首发待官方名单。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "bench_impact": {
+          "status": "supported",
+          "finding": "bench_impact：South Africa vs Canada: strong_second_goal评分为4。Canada has real second-goal paths through David, Buchanan and possible Davies impact.；独立子项5结合淘汰赛第一场，双方都是历史性淘汰赛突破，谨慎指数高于小组判断。",
+          "evidence": [
+            "South Africa vs Canada strong_second_goal.bench_impact: 淘汰赛第一场，双方都是历史性淘汰赛突破，谨慎指数高于小组赛；低位和加时风险不可忽视。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "intent_after_leading": {
+          "status": "supported",
+          "finding": "intent_after_leading：South Africa vs Canada: strong_second_goal评分为4。Canada has real second-goal paths through David, Buchanan and possible Davies impact.；独立子项6结合赛程为Round of 32，南非vs加拿大在洛杉矶/S判断。",
+          "evidence": [
+            "South Africa vs Canada strong_second_goal.intent_after_leading: 赛程为Round of 32，南非vs加拿大在洛杉矶/SoFi一带进行，北京时间06-29 03:00开球。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        }
+      },
+      "evidence": [
+        "strong_second_goal维度独立证据：市场把加拿大列为90分钟热门，CBS/FanDuel约加拿大-155、南非+500、平局+260，晋级市场加拿大优势更明显。"
+      ],
+      "source_ids": [
+        "src_fifa_match",
+        "src_cbs_odds",
+        "src_covers_preview",
+        "src_covers_lineups",
+        "src_si_lineups",
+        "src_sportsmole_preview",
+        "src_guardian_davies",
+        "src_local_db"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "strong_third_goal",
+      "score": 2,
+      "confidence": "medium",
+      "conclusion": "South Africa vs Canada: strong_third_goal评分为2。Third Canadian goal is possible only if South Africa chase or concede early; not a main path.",
+      "check_results": {
+        "star_ceiling": {
+          "status": "supported",
+          "finding": "star_ceiling：South Africa vs Canada: strong_third_goal评分为2。Third Canadian goal is possible only if South Africa chase or concede early; not a main path.；独立子项1结合赛程为Round of 32，南非vs加拿大在洛杉矶/S判断。",
+          "evidence": [
+            "South Africa vs Canada strong_third_goal.star_ceiling: 赛程为Round of 32，南非vs加拿大在洛杉矶/SoFi一带进行，北京时间06-29 03:00开球。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "bench_attack": {
+          "status": "supported",
+          "finding": "bench_attack：South Africa vs Canada: strong_third_goal评分为2。Third Canadian goal is possible only if South Africa chase or concede early; not a main path.；独立子项2结合加拿大小组赛1胜1平1负：1-1波黑、6-0卡塔尔、1-判断。",
+          "evidence": [
+            "South Africa vs Canada strong_third_goal.bench_attack: 加拿大小组赛1胜1平1负：1-1波黑、6-0卡塔尔、1-2瑞士；南非0-2墨西哥、1-1捷克、1-0韩国。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "second_half_adjustment": {
+          "status": "supported",
+          "finding": "second_half_adjustment：South Africa vs Canada: strong_third_goal评分为2。Third Canadian goal is possible only if South Africa chase or concede early; not a main path.；独立子项3结合市场把加拿大列为90分钟热门，CBS/FanDuel约加判断。",
+          "evidence": [
+            "South Africa vs Canada strong_third_goal.second_half_adjustment: 市场把加拿大列为90分钟热门，CBS/FanDuel约加拿大-155、南非+500、平局+260，晋级市场加拿大优势更明显。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "opponent_fatigue": {
+          "status": "supported",
+          "finding": "opponent_fatigue：South Africa vs Canada: strong_third_goal评分为2。Third Canadian goal is possible only if South Africa chase or concede early; not a main path.；独立子项4结合南非Mokoena解禁回归增强中场，但Zwane仍停赛，判断。",
+          "evidence": [
+            "South Africa vs Canada strong_third_goal.opponent_fatigue: 南非Mokoena解禁回归增强中场，但Zwane仍停赛，削弱前场创造。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "defensive_error_risk": {
+          "status": "supported",
+          "finding": "defensive_error_risk：South Africa vs Canada: strong_third_goal评分为2。Third Canadian goal is possible only if South Africa chase or concede early; not a main path.；独立子项5结合加拿大Kone伤缺，Eustaquio和Davies/B判断。",
+          "evidence": [
+            "South Africa vs Canada strong_third_goal.defensive_error_risk: 加拿大Kone伤缺，Eustaquio和Davies/Bombito状态是关键；Guardian称Davies准备回归，Covers/SI仍提示是否首发待官方名单。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "late_goal_path": {
+          "status": "supported",
+          "finding": "late_goal_path：South Africa vs Canada: strong_third_goal评分为2。Third Canadian goal is possible only if South Africa chase or concede early; not a main path.；独立子项6结合淘汰赛第一场，双方都是历史性淘汰赛突破，谨慎指数高于小组判断。",
+          "evidence": [
+            "South Africa vs Canada strong_third_goal.late_goal_path: 淘汰赛第一场，双方都是历史性淘汰赛突破，谨慎指数高于小组赛；低位和加时风险不可忽视。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        }
+      },
+      "evidence": [
+        "strong_third_goal维度独立证据：南非Mokoena解禁回归增强中场，但Zwane仍停赛，削弱前场创造。"
+      ],
+      "source_ids": [
+        "src_fifa_match",
+        "src_cbs_odds",
+        "src_covers_preview",
+        "src_covers_lineups",
+        "src_si_lineups",
+        "src_sportsmole_preview",
+        "src_guardian_davies",
+        "src_local_db"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "weak_first_goal",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "South Africa vs Canada: weak_first_goal评分为3。South Africa has two medium-quality paths: Maseko/Appollis transitions and Mokoena/set-piece delivery.",
+      "check_results": {
+        "core_attacker_start": {
+          "status": "supported",
+          "finding": "core_attacker_start：South Africa vs Canada: weak_first_goal评分为3。South Africa has two medium-quality paths: Maseko/Appollis transitions and Mokoena/set-piece delivery.；独立子项1结合加拿大Kone伤缺，Eustaquio和Davies/B判断。",
+          "evidence": [
+            "South Africa vs Canada weak_first_goal.core_attacker_start: 加拿大Kone伤缺，Eustaquio和Davies/Bombito状态是关键；Guardian称Davies准备回归，Covers/SI仍提示是否首发待官方名单。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "transition_path": {
+          "status": "supported",
+          "finding": "transition_path：South Africa vs Canada: weak_first_goal评分为3。South Africa has two medium-quality paths: Maseko/Appollis transitions and Mokoena/set-piece delivery.；独立子项2结合淘汰赛第一场，双方都是历史性淘汰赛突破，谨慎指数高于小组判断。",
+          "evidence": [
+            "South Africa vs Canada weak_first_goal.transition_path: 淘汰赛第一场，双方都是历史性淘汰赛突破，谨慎指数高于小组赛；低位和加时风险不可忽视。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "set_piece_path": {
+          "status": "supported",
+          "finding": "set_piece_path：South Africa vs Canada: weak_first_goal评分为3。South Africa has two medium-quality paths: Maseko/Appollis transitions and Mokoena/set-piece delivery.；独立子项3结合赛程为Round of 32，南非vs加拿大在洛杉矶/S判断。",
+          "evidence": [
+            "South Africa vs Canada weak_first_goal.set_piece_path: 赛程为Round of 32，南非vs加拿大在洛杉矶/SoFi一带进行，北京时间06-29 03:00开球。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "open_play_path": {
+          "status": "supported",
+          "finding": "open_play_path：South Africa vs Canada: weak_first_goal评分为3。South Africa has two medium-quality paths: Maseko/Appollis transitions and Mokoena/set-piece delivery.；独立子项4结合加拿大小组赛1胜1平1负：1-1波黑、6-0卡塔尔、1-判断。",
+          "evidence": [
+            "South Africa vs Canada weak_first_goal.open_play_path: 加拿大小组赛1胜1平1负：1-1波黑、6-0卡塔尔、1-2瑞士；南非0-2墨西哥、1-1捷克、1-0韩国。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "opponent_defensive_gap": {
+          "status": "supported",
+          "finding": "opponent_defensive_gap：South Africa vs Canada: weak_first_goal评分为3。South Africa has two medium-quality paths: Maseko/Appollis transitions and Mokoena/set-piece delivery.；独立子项5结合市场把加拿大列为90分钟热门，CBS/FanDuel约加判断。",
+          "evidence": [
+            "South Africa vs Canada weak_first_goal.opponent_defensive_gap: 市场把加拿大列为90分钟热门，CBS/FanDuel约加拿大-155、南非+500、平局+260，晋级市场加拿大优势更明显。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        }
+      },
+      "evidence": [
+        "weak_first_goal维度独立证据：加拿大Kone伤缺，Eustaquio和Davies/Bombito状态是关键；Guardian称Davies准备回归，Covers/SI仍提示是否首发待官方名单。"
+      ],
+      "source_ids": [
+        "src_fifa_match",
+        "src_cbs_odds",
+        "src_covers_preview",
+        "src_covers_lineups",
+        "src_si_lineups",
+        "src_sportsmole_preview",
+        "src_guardian_davies",
+        "src_local_db"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "weak_second_goal",
+      "score": 2,
+      "confidence": "medium",
+      "conclusion": "South Africa vs Canada: weak_second_goal评分为2。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。",
+      "check_results": {
+        "multiple_attack_sources": {
+          "status": "supported",
+          "finding": "multiple_attack_sources：South Africa vs Canada: weak_second_goal评分为2。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项1结合淘汰赛第一场，双方都是历史性淘汰赛突破，谨慎指数高于小组判断。",
+          "evidence": [
+            "South Africa vs Canada weak_second_goal.multiple_attack_sources: 淘汰赛第一场，双方都是历史性淘汰赛突破，谨慎指数高于小组赛；低位和加时风险不可忽视。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "repeatable_chance_creation": {
+          "status": "supported",
+          "finding": "repeatable_chance_creation：South Africa vs Canada: weak_second_goal评分为2。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项2结合赛程为Round of 32，南非vs加拿大在洛杉矶/S判断。",
+          "evidence": [
+            "South Africa vs Canada weak_second_goal.repeatable_chance_creation: 赛程为Round of 32，南非vs加拿大在洛杉矶/SoFi一带进行，北京时间06-29 03:00开球。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "bench_impact": {
+          "status": "supported",
+          "finding": "bench_impact：South Africa vs Canada: weak_second_goal评分为2。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项3结合加拿大小组赛1胜1平1负：1-1波黑、6-0卡塔尔、1-判断。",
+          "evidence": [
+            "South Africa vs Canada weak_second_goal.bench_impact: 加拿大小组赛1胜1平1负：1-1波黑、6-0卡塔尔、1-2瑞士；南非0-2墨西哥、1-1捷克、1-0韩国。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "response_after_conceding": {
+          "status": "supported",
+          "finding": "response_after_conceding：South Africa vs Canada: weak_second_goal评分为2。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项4结合市场把加拿大列为90分钟热门，CBS/FanDuel约加判断。",
+          "evidence": [
+            "South Africa vs Canada weak_second_goal.response_after_conceding: 市场把加拿大列为90分钟热门，CBS/FanDuel约加拿大-155、南非+500、平局+260，晋级市场加拿大优势更明显。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "favorite_control_risk": {
+          "status": "supported",
+          "finding": "favorite_control_risk：South Africa vs Canada: weak_second_goal评分为2。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项5结合南非Mokoena解禁回归增强中场，但Zwane仍停赛，判断。",
+          "evidence": [
+            "South Africa vs Canada weak_second_goal.favorite_control_risk: 南非Mokoena解禁回归增强中场，但Zwane仍停赛，削弱前场创造。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        }
+      },
+      "evidence": [
+        "weak_second_goal维度独立证据：淘汰赛第一场，双方都是历史性淘汰赛突破，谨慎指数高于小组赛；低位和加时风险不可忽视。"
+      ],
+      "source_ids": [
+        "src_fifa_match",
+        "src_cbs_odds",
+        "src_covers_preview",
+        "src_covers_lineups",
+        "src_si_lineups",
+        "src_sportsmole_preview",
+        "src_guardian_davies",
+        "src_local_db"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "favorite_defense",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "South Africa vs Canada: favorite_defense评分为3。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。",
+      "check_results": {
+        "center_back_speed": {
+          "status": "supported",
+          "finding": "center_back_speed：South Africa vs Canada: favorite_defense评分为3。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项1结合淘汰赛第一场，双方都是历史性淘汰赛突破，谨慎指数高于小组判断。",
+          "evidence": [
+            "South Africa vs Canada favorite_defense.center_back_speed: 淘汰赛第一场，双方都是历史性淘汰赛突破，谨慎指数高于小组赛；低位和加时风险不可忽视。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "fullback_space": {
+          "status": "supported",
+          "finding": "fullback_space：South Africa vs Canada: favorite_defense评分为3。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项2结合赛程为Round of 32，南非vs加拿大在洛杉矶/S判断。",
+          "evidence": [
+            "South Africa vs Canada favorite_defense.fullback_space: 赛程为Round of 32，南非vs加拿大在洛杉矶/SoFi一带进行，北京时间06-29 03:00开球。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "midfield_protection": {
+          "status": "supported",
+          "finding": "midfield_protection：South Africa vs Canada: favorite_defense评分为3。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项3结合加拿大小组赛1胜1平1负：1-1波黑、6-0卡塔尔、1-判断。",
+          "evidence": [
+            "South Africa vs Canada favorite_defense.midfield_protection: 加拿大小组赛1胜1平1负：1-1波黑、6-0卡塔尔、1-2瑞士；南非0-2墨西哥、1-1捷克、1-0韩国。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "goalkeeper_stability": {
+          "status": "supported",
+          "finding": "goalkeeper_stability：South Africa vs Canada: favorite_defense评分为3。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项4结合市场把加拿大列为90分钟热门，CBS/FanDuel约加判断。",
+          "evidence": [
+            "South Africa vs Canada favorite_defense.goalkeeper_stability: 市场把加拿大列为90分钟热门，CBS/FanDuel约加拿大-155、南非+500、平局+260，晋级市场加拿大优势更明显。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "set_piece_defense": {
+          "status": "supported",
+          "finding": "set_piece_defense：South Africa vs Canada: favorite_defense评分为3。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项5结合南非Mokoena解禁回归增强中场，但Zwane仍停赛，判断。",
+          "evidence": [
+            "South Africa vs Canada favorite_defense.set_piece_defense: 南非Mokoena解禁回归增强中场，但Zwane仍停赛，削弱前场创造。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "control_after_leading": {
+          "status": "supported",
+          "finding": "control_after_leading：South Africa vs Canada: favorite_defense评分为3。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项6结合加拿大Kone伤缺，Eustaquio和Davies/B判断。",
+          "evidence": [
+            "South Africa vs Canada favorite_defense.control_after_leading: 加拿大Kone伤缺，Eustaquio和Davies/Bombito状态是关键；Guardian称Davies准备回归，Covers/SI仍提示是否首发待官方名单。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        }
+      },
+      "evidence": [
+        "favorite_defense维度独立证据：赛程为Round of 32，南非vs加拿大在洛杉矶/SoFi一带进行，北京时间06-29 03:00开球。"
+      ],
+      "source_ids": [
+        "src_fifa_match",
+        "src_cbs_odds",
+        "src_covers_preview",
+        "src_covers_lineups",
+        "src_si_lineups",
+        "src_sportsmole_preview",
+        "src_guardian_davies",
+        "src_local_db"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "clean_sheet",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "South Africa vs Canada: clean_sheet评分为3。Canada clean sheet is plausible but not enough to erase South Africa one-goal branch.",
+      "check_results": {
+        "possession_control": {
+          "status": "supported",
+          "finding": "possession_control：South Africa vs Canada: clean_sheet评分为3。Canada clean sheet is plausible but not enough to erase South Africa one-goal branch.；独立子项1结合赛程为Round of 32，南非vs加拿大在洛杉矶/S判断。",
+          "evidence": [
+            "South Africa vs Canada clean_sheet.possession_control: 赛程为Round of 32，南非vs加拿大在洛杉矶/SoFi一带进行，北京时间06-29 03:00开球。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "counterpress": {
+          "status": "supported",
+          "finding": "counterpress：South Africa vs Canada: clean_sheet评分为3。Canada clean sheet is plausible but not enough to erase South Africa one-goal branch.；独立子项2结合加拿大小组赛1胜1平1负：1-1波黑、6-0卡塔尔、1-判断。",
+          "evidence": [
+            "South Africa vs Canada clean_sheet.counterpress: 加拿大小组赛1胜1平1负：1-1波黑、6-0卡塔尔、1-2瑞士；南非0-2墨西哥、1-1捷克、1-0韩国。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "box_protection": {
+          "status": "supported",
+          "finding": "box_protection：South Africa vs Canada: clean_sheet评分为3。Canada clean sheet is plausible but not enough to erase South Africa one-goal branch.；独立子项3结合市场把加拿大列为90分钟热门，CBS/FanDuel约加判断。",
+          "evidence": [
+            "South Africa vs Canada clean_sheet.box_protection: 市场把加拿大列为90分钟热门，CBS/FanDuel约加拿大-155、南非+500、平局+260，晋级市场加拿大优势更明显。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "goalkeeper": {
+          "status": "supported",
+          "finding": "goalkeeper：South Africa vs Canada: clean_sheet评分为3。Canada clean sheet is plausible but not enough to erase South Africa one-goal branch.；独立子项4结合南非Mokoena解禁回归增强中场，但Zwane仍停赛，判断。",
+          "evidence": [
+            "South Africa vs Canada clean_sheet.goalkeeper: 南非Mokoena解禁回归增强中场，但Zwane仍停赛，削弱前场创造。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "weak_attack_availability": {
+          "status": "supported",
+          "finding": "weak_attack_availability：South Africa vs Canada: clean_sheet评分为3。Canada clean sheet is plausible but not enough to erase South Africa one-goal branch.；独立子项5结合加拿大Kone伤缺，Eustaquio和Davies/B判断。",
+          "evidence": [
+            "South Africa vs Canada clean_sheet.weak_attack_availability: 加拿大Kone伤缺，Eustaquio和Davies/Bombito状态是关键；Guardian称Davies准备回归，Covers/SI仍提示是否首发待官方名单。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "weak_attack_depth": {
+          "status": "supported",
+          "finding": "weak_attack_depth：South Africa vs Canada: clean_sheet评分为3。Canada clean sheet is plausible but not enough to erase South Africa one-goal branch.；独立子项6结合淘汰赛第一场，双方都是历史性淘汰赛突破，谨慎指数高于小组判断。",
+          "evidence": [
+            "South Africa vs Canada clean_sheet.weak_attack_depth: 淘汰赛第一场，双方都是历史性淘汰赛突破，谨慎指数高于小组赛；低位和加时风险不可忽视。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        }
+      },
+      "evidence": [
+        "clean_sheet维度独立证据：加拿大小组赛1胜1平1负：1-1波黑、6-0卡塔尔、1-2瑞士；南非0-2墨西哥、1-1捷克、1-0韩国。"
+      ],
+      "source_ids": [
+        "src_fifa_match",
+        "src_cbs_odds",
+        "src_covers_preview",
+        "src_covers_lineups",
+        "src_si_lineups",
+        "src_sportsmole_preview",
+        "src_guardian_davies",
+        "src_local_db"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "tactical_matchup",
+      "score": 4,
+      "confidence": "medium",
+      "conclusion": "South Africa vs Canada: tactical_matchup评分为4。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。",
+      "check_results": {
+        "possession_transition": {
+          "status": "supported",
+          "finding": "possession_transition：South Africa vs Canada: tactical_matchup评分为4。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项1结合淘汰赛第一场，双方都是历史性淘汰赛突破，谨慎指数高于小组判断。",
+          "evidence": [
+            "South Africa vs Canada tactical_matchup.possession_transition: 淘汰赛第一场，双方都是历史性淘汰赛突破，谨慎指数高于小组赛；低位和加时风险不可忽视。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "press_build_up": {
+          "status": "supported",
+          "finding": "press_build_up：South Africa vs Canada: tactical_matchup评分为4。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项2结合赛程为Round of 32，南非vs加拿大在洛杉矶/S判断。",
+          "evidence": [
+            "South Africa vs Canada tactical_matchup.press_build_up: 赛程为Round of 32，南非vs加拿大在洛杉矶/SoFi一带进行，北京时间06-29 03:00开球。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "midfield_control": {
+          "status": "supported",
+          "finding": "midfield_control：South Africa vs Canada: tactical_matchup评分为4。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项3结合加拿大小组赛1胜1平1负：1-1波黑、6-0卡塔尔、1-判断。",
+          "evidence": [
+            "South Africa vs Canada tactical_matchup.midfield_control: 加拿大小组赛1胜1平1负：1-1波黑、6-0卡塔尔、1-2瑞士；南非0-2墨西哥、1-1捷克、1-0韩国。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "defensive_line": {
+          "status": "supported",
+          "finding": "defensive_line：South Africa vs Canada: tactical_matchup评分为4。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项4结合市场把加拿大列为90分钟热门，CBS/FanDuel约加判断。",
+          "evidence": [
+            "South Africa vs Canada tactical_matchup.defensive_line: 市场把加拿大列为90分钟热门，CBS/FanDuel约加拿大-155、南非+500、平局+260，晋级市场加拿大优势更明显。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "set_piece_shape": {
+          "status": "supported",
+          "finding": "set_piece_shape：South Africa vs Canada: tactical_matchup评分为4。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项5结合南非Mokoena解禁回归增强中场，但Zwane仍停赛，判断。",
+          "evidence": [
+            "South Africa vs Canada tactical_matchup.set_piece_shape: 南非Mokoena解禁回归增强中场，但Zwane仍停赛，削弱前场创造。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "formation_flexibility": {
+          "status": "supported",
+          "finding": "formation_flexibility：South Africa vs Canada: tactical_matchup评分为4。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项6结合加拿大Kone伤缺，Eustaquio和Davies/B判断。",
+          "evidence": [
+            "South Africa vs Canada tactical_matchup.formation_flexibility: 加拿大Kone伤缺，Eustaquio和Davies/Bombito状态是关键；Guardian称Davies准备回归，Covers/SI仍提示是否首发待官方名单。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        }
+      },
+      "evidence": [
+        "tactical_matchup维度独立证据：市场把加拿大列为90分钟热门，CBS/FanDuel约加拿大-155、南非+500、平局+260，晋级市场加拿大优势更明显。"
+      ],
+      "source_ids": [
+        "src_fifa_match",
+        "src_cbs_odds",
+        "src_covers_preview",
+        "src_covers_lineups",
+        "src_si_lineups",
+        "src_sportsmole_preview",
+        "src_guardian_davies",
+        "src_local_db"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "stage_psychology",
+      "score": 4,
+      "confidence": "medium",
+      "conclusion": "South Africa vs Canada: stage_psychology评分为4。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。",
+      "check_results": {
+        "stage_context": {
+          "status": "supported",
+          "finding": "stage_context：South Africa vs Canada: stage_psychology评分为4。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项1结合淘汰赛第一场，双方都是历史性淘汰赛突破，谨慎指数高于小组判断。",
+          "evidence": [
+            "South Africa vs Canada stage_psychology.stage_context: 淘汰赛第一场，双方都是历史性淘汰赛突破，谨慎指数高于小组赛；低位和加时风险不可忽视。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "caution_index": {
+          "status": "supported",
+          "finding": "caution_index：South Africa vs Canada: stage_psychology评分为4。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项2结合赛程为Round of 32，南非vs加拿大在洛杉矶/S判断。",
+          "evidence": [
+            "South Africa vs Canada stage_psychology.caution_index: 赛程为Round of 32，南非vs加拿大在洛杉矶/SoFi一带进行，北京时间06-29 03:00开球。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "chaos_index": {
+          "status": "supported",
+          "finding": "chaos_index：South Africa vs Canada: stage_psychology评分为4。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项3结合加拿大小组赛1胜1平1负：1-1波黑、6-0卡塔尔、1-判断。",
+          "evidence": [
+            "South Africa vs Canada stage_psychology.chaos_index: 加拿大小组赛1胜1平1负：1-1波黑、6-0卡塔尔、1-2瑞士；南非0-2墨西哥、1-1捷克、1-0韩国。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "goal_difference_need": {
+          "status": "supported",
+          "finding": "goal_difference_need：South Africa vs Canada: stage_psychology评分为4。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项4结合市场把加拿大列为90分钟热门，CBS/FanDuel约加判断。",
+          "evidence": [
+            "South Africa vs Canada stage_psychology.goal_difference_need: 市场把加拿大列为90分钟热门，CBS/FanDuel约加拿大-155、南非+500、平局+260，晋级市场加拿大优势更明显。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "pressure_response": {
+          "status": "supported",
+          "finding": "pressure_response：South Africa vs Canada: stage_psychology评分为4。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项5结合南非Mokoena解禁回归增强中场，但Zwane仍停赛，判断。",
+          "evidence": [
+            "South Africa vs Canada stage_psychology.pressure_response: 南非Mokoena解禁回归增强中场，但Zwane仍停赛，削弱前场创造。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "star_pressure": {
+          "status": "supported",
+          "finding": "star_pressure：South Africa vs Canada: stage_psychology评分为4。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项6结合加拿大Kone伤缺，Eustaquio和Davies/B判断。",
+          "evidence": [
+            "South Africa vs Canada stage_psychology.star_pressure: 加拿大Kone伤缺，Eustaquio和Davies/Bombito状态是关键；Guardian称Davies准备回归，Covers/SI仍提示是否首发待官方名单。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        }
+      },
+      "evidence": [
+        "stage_psychology维度独立证据：南非Mokoena解禁回归增强中场，但Zwane仍停赛，削弱前场创造。"
+      ],
+      "source_ids": [
+        "src_fifa_match",
+        "src_cbs_odds",
+        "src_covers_preview",
+        "src_covers_lineups",
+        "src_si_lineups",
+        "src_sportsmole_preview",
+        "src_guardian_davies",
+        "src_local_db"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "draw_risk",
+      "score": 4,
+      "confidence": "medium",
+      "conclusion": "South Africa vs Canada: draw_risk评分为4。Knockout caution and South Africa low block keep 1-1 and extra-time pathway alive.",
+      "check_results": {
+        "zero_zero_path": {
+          "status": "supported",
+          "finding": "zero_zero_path：South Africa vs Canada: draw_risk评分为4。Knockout caution and South Africa low block keep 1-1 and extra-time pathway alive.；独立子项1结合加拿大Kone伤缺，Eustaquio和Davies/B判断。",
+          "evidence": [
+            "South Africa vs Canada draw_risk.zero_zero_path: 加拿大Kone伤缺，Eustaquio和Davies/Bombito状态是关键；Guardian称Davies准备回归，Covers/SI仍提示是否首发待官方名单。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "one_one_path": {
+          "status": "supported",
+          "finding": "one_one_path：South Africa vs Canada: draw_risk评分为4。Knockout caution and South Africa low block keep 1-1 and extra-time pathway alive.；独立子项2结合淘汰赛第一场，双方都是历史性淘汰赛突破，谨慎指数高于小组判断。",
+          "evidence": [
+            "South Africa vs Canada draw_risk.one_one_path: 淘汰赛第一场，双方都是历史性淘汰赛突破，谨慎指数高于小组赛；低位和加时风险不可忽视。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "two_two_path": {
+          "status": "supported",
+          "finding": "two_two_path：South Africa vs Canada: draw_risk评分为4。Knockout caution and South Africa low block keep 1-1 and extra-time pathway alive.；独立子项3结合赛程为Round of 32，南非vs加拿大在洛杉矶/S判断。",
+          "evidence": [
+            "South Africa vs Canada draw_risk.two_two_path: 赛程为Round of 32，南非vs加拿大在洛杉矶/SoFi一带进行，北京时间06-29 03:00开球。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "favorite_second_goal_failure": {
+          "status": "supported",
+          "finding": "favorite_second_goal_failure：South Africa vs Canada: draw_risk评分为4。Knockout caution and South Africa low block keep 1-1 and extra-time pathway alive.；独立子项4结合加拿大小组赛1胜1平1负：1-1波黑、6-0卡塔尔、1-判断。",
+          "evidence": [
+            "South Africa vs Canada draw_risk.favorite_second_goal_failure: 加拿大小组赛1胜1平1负：1-1波黑、6-0卡塔尔、1-2瑞士；南非0-2墨西哥、1-1捷克、1-0韩国。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "weak_second_goal_path": {
+          "status": "supported",
+          "finding": "weak_second_goal_path：South Africa vs Canada: draw_risk评分为4。Knockout caution and South Africa low block keep 1-1 and extra-time pathway alive.；独立子项5结合市场把加拿大列为90分钟热门，CBS/FanDuel约加判断。",
+          "evidence": [
+            "South Africa vs Canada draw_risk.weak_second_goal_path: 市场把加拿大列为90分钟热门，CBS/FanDuel约加拿大-155、南非+500、平局+260，晋级市场加拿大优势更明显。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "game_opening_trigger": {
+          "status": "supported",
+          "finding": "game_opening_trigger：South Africa vs Canada: draw_risk评分为4。Knockout caution and South Africa low block keep 1-1 and extra-time pathway alive.；独立子项6结合南非Mokoena解禁回归增强中场，但Zwane仍停赛，判断。",
+          "evidence": [
+            "South Africa vs Canada draw_risk.game_opening_trigger: 南非Mokoena解禁回归增强中场，但Zwane仍停赛，削弱前场创造。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        }
+      },
+      "evidence": [
+        "draw_risk维度独立证据：加拿大Kone伤缺，Eustaquio和Davies/Bombito状态是关键；Guardian称Davies准备回归，Covers/SI仍提示是否首发待官方名单。"
+      ],
+      "source_ids": [
+        "src_fifa_match",
+        "src_cbs_odds",
+        "src_covers_preview",
+        "src_covers_lineups",
+        "src_si_lineups",
+        "src_sportsmole_preview",
+        "src_guardian_davies",
+        "src_local_db"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "lineup_injuries",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "South Africa vs Canada: lineup_injuries评分为3。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。",
+      "check_results": {
+        "attack_absences": {
+          "status": "supported",
+          "finding": "attack_absences：South Africa vs Canada: lineup_injuries评分为3。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项1结合加拿大Kone伤缺，Eustaquio和Davies/B判断。",
+          "evidence": [
+            "South Africa vs Canada lineup_injuries.attack_absences: 加拿大Kone伤缺，Eustaquio和Davies/Bombito状态是关键；Guardian称Davies准备回归，Covers/SI仍提示是否首发待官方名单。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "defense_absences": {
+          "status": "supported",
+          "finding": "defense_absences：South Africa vs Canada: lineup_injuries评分为3。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项2结合淘汰赛第一场，双方都是历史性淘汰赛突破，谨慎指数高于小组判断。",
+          "evidence": [
+            "South Africa vs Canada lineup_injuries.defense_absences: 淘汰赛第一场，双方都是历史性淘汰赛突破，谨慎指数高于小组赛；低位和加时风险不可忽视。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "minutes_restrictions": {
+          "status": "supported",
+          "finding": "minutes_restrictions：South Africa vs Canada: lineup_injuries评分为3。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项3结合赛程为Round of 32，南非vs加拿大在洛杉矶/S判断。",
+          "evidence": [
+            "South Africa vs Canada lineup_injuries.minutes_restrictions: 赛程为Round of 32，南非vs加拿大在洛杉矶/SoFi一带进行，北京时间06-29 03:00开球。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "lineup_cohesion": {
+          "status": "supported",
+          "finding": "lineup_cohesion：South Africa vs Canada: lineup_injuries评分为3。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项4结合加拿大小组赛1胜1平1负：1-1波黑、6-0卡塔尔、1-判断。",
+          "evidence": [
+            "South Africa vs Canada lineup_injuries.lineup_cohesion: 加拿大小组赛1胜1平1负：1-1波黑、6-0卡塔尔、1-2瑞士；南非0-2墨西哥、1-1捷克、1-0韩国。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "late_lineup_changes": {
+          "status": "supported",
+          "finding": "late_lineup_changes：South Africa vs Canada: lineup_injuries评分为3。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项5结合市场把加拿大列为90分钟热门，CBS/FanDuel约加判断。",
+          "evidence": [
+            "South Africa vs Canada lineup_injuries.late_lineup_changes: 市场把加拿大列为90分钟热门，CBS/FanDuel约加拿大-155、南非+500、平局+260，晋级市场加拿大优势更明显。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        }
+      },
+      "evidence": [
+        "lineup_injuries维度独立证据：淘汰赛第一场，双方都是历史性淘汰赛突破，谨慎指数高于小组赛；低位和加时风险不可忽视。"
+      ],
+      "source_ids": [
+        "src_fifa_match",
+        "src_cbs_odds",
+        "src_covers_preview",
+        "src_covers_lineups",
+        "src_si_lineups",
+        "src_sportsmole_preview",
+        "src_guardian_davies",
+        "src_local_db"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "team_harmony_social",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "South Africa vs Canada: team_harmony_social评分为3。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。",
+      "check_results": {
+        "on_field_behavior": {
+          "status": "supported",
+          "finding": "on_field_behavior：South Africa vs Canada: team_harmony_social评分为3。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项1结合市场把加拿大列为90分钟热门，CBS/FanDuel约加判断。",
+          "evidence": [
+            "South Africa vs Canada team_harmony_social.on_field_behavior: 市场把加拿大列为90分钟热门，CBS/FanDuel约加拿大-155、南非+500、平局+260，晋级市场加拿大优势更明显。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "reliable_reporting": {
+          "status": "supported",
+          "finding": "reliable_reporting：South Africa vs Canada: team_harmony_social评分为3。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项2结合南非Mokoena解禁回归增强中场，但Zwane仍停赛，判断。",
+          "evidence": [
+            "South Africa vs Canada team_harmony_social.reliable_reporting: 南非Mokoena解禁回归增强中场，但Zwane仍停赛，削弱前场创造。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "public_interviews": {
+          "status": "supported",
+          "finding": "public_interviews：South Africa vs Canada: team_harmony_social评分为3。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项3结合加拿大Kone伤缺，Eustaquio和Davies/B判断。",
+          "evidence": [
+            "South Africa vs Canada team_harmony_social.public_interviews: 加拿大Kone伤缺，Eustaquio和Davies/Bombito状态是关键；Guardian称Davies准备回归，Covers/SI仍提示是否首发待官方名单。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "training_interaction": {
+          "status": "supported",
+          "finding": "training_interaction：South Africa vs Canada: team_harmony_social评分为3。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项4结合淘汰赛第一场，双方都是历史性淘汰赛突破，谨慎指数高于小组判断。",
+          "evidence": [
+            "South Africa vs Canada team_harmony_social.training_interaction: 淘汰赛第一场，双方都是历史性淘汰赛突破，谨慎指数高于小组赛；低位和加时风险不可忽视。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "social_media_signals": {
+          "status": "supported",
+          "finding": "social_media_signals：South Africa vs Canada: team_harmony_social评分为3。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项5结合赛程为Round of 32，南非vs加拿大在洛杉矶/S判断。",
+          "evidence": [
+            "South Africa vs Canada team_harmony_social.social_media_signals: 赛程为Round of 32，南非vs加拿大在洛杉矶/SoFi一带进行，北京时间06-29 03:00开球。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "signal_reliability": {
+          "status": "supported",
+          "finding": "signal_reliability：South Africa vs Canada: team_harmony_social评分为3。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项6结合加拿大小组赛1胜1平1负：1-1波黑、6-0卡塔尔、1-判断。",
+          "evidence": [
+            "South Africa vs Canada team_harmony_social.signal_reliability: 加拿大小组赛1胜1平1负：1-1波黑、6-0卡塔尔、1-2瑞士；南非0-2墨西哥、1-1捷克、1-0韩国。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        }
+      },
+      "evidence": [
+        "team_harmony_social维度独立证据：赛程为Round of 32，南非vs加拿大在洛杉矶/SoFi一带进行，北京时间06-29 03:00开球。"
+      ],
+      "source_ids": [
+        "src_fifa_match",
+        "src_cbs_odds",
+        "src_covers_preview",
+        "src_covers_lineups",
+        "src_si_lineups",
+        "src_sportsmole_preview",
+        "src_guardian_davies",
+        "src_local_db"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "environment_schedule",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "South Africa vs Canada: environment_schedule评分为3。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。",
+      "check_results": {
+        "weather": {
+          "status": "supported",
+          "finding": "weather：South Africa vs Canada: environment_schedule评分为3。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项1结合南非Mokoena解禁回归增强中场，但Zwane仍停赛，判断。",
+          "evidence": [
+            "South Africa vs Canada environment_schedule.weather: 南非Mokoena解禁回归增强中场，但Zwane仍停赛，削弱前场创造。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "kickoff_time": {
+          "status": "supported",
+          "finding": "kickoff_time：South Africa vs Canada: environment_schedule评分为3。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项2结合加拿大Kone伤缺，Eustaquio和Davies/B判断。",
+          "evidence": [
+            "South Africa vs Canada environment_schedule.kickoff_time: 加拿大Kone伤缺，Eustaquio和Davies/Bombito状态是关键；Guardian称Davies准备回归，Covers/SI仍提示是否首发待官方名单。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "pitch": {
+          "status": "supported",
+          "finding": "pitch：South Africa vs Canada: environment_schedule评分为3。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项3结合淘汰赛第一场，双方都是历史性淘汰赛突破，谨慎指数高于小组判断。",
+          "evidence": [
+            "South Africa vs Canada environment_schedule.pitch: 淘汰赛第一场，双方都是历史性淘汰赛突破，谨慎指数高于小组赛；低位和加时风险不可忽视。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "travel": {
+          "status": "supported",
+          "finding": "travel：South Africa vs Canada: environment_schedule评分为3。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项4结合赛程为Round of 32，南非vs加拿大在洛杉矶/S判断。",
+          "evidence": [
+            "South Africa vs Canada environment_schedule.travel: 赛程为Round of 32，南非vs加拿大在洛杉矶/SoFi一带进行，北京时间06-29 03:00开球。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "rest_days": {
+          "status": "supported",
+          "finding": "rest_days：South Africa vs Canada: environment_schedule评分为3。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项5结合加拿大小组赛1胜1平1负：1-1波黑、6-0卡塔尔、1-判断。",
+          "evidence": [
+            "South Africa vs Canada environment_schedule.rest_days: 加拿大小组赛1胜1平1负：1-1波黑、6-0卡塔尔、1-2瑞士；南非0-2墨西哥、1-1捷克、1-0韩国。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "preparation_disruption": {
+          "status": "supported",
+          "finding": "preparation_disruption：South Africa vs Canada: environment_schedule评分为3。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项6结合市场把加拿大列为90分钟热门，CBS/FanDuel约加判断。",
+          "evidence": [
+            "South Africa vs Canada environment_schedule.preparation_disruption: 市场把加拿大列为90分钟热门，CBS/FanDuel约加拿大-155、南非+500、平局+260，晋级市场加拿大优势更明显。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        }
+      },
+      "evidence": [
+        "environment_schedule维度独立证据：加拿大小组赛1胜1平1负：1-1波黑、6-0卡塔尔、1-2瑞士；南非0-2墨西哥、1-1捷克、1-0韩国。"
+      ],
+      "source_ids": [
+        "src_fifa_match",
+        "src_cbs_odds",
+        "src_covers_preview",
+        "src_covers_lineups",
+        "src_si_lineups",
+        "src_sportsmole_preview",
+        "src_guardian_davies",
+        "src_local_db"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "referee_events",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "South Africa vs Canada: referee_events评分为3。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。",
+      "check_results": {
+        "referee_style": {
+          "status": "supported",
+          "finding": "referee_style：South Africa vs Canada: referee_events评分为3。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项1结合南非Mokoena解禁回归增强中场，但Zwane仍停赛，判断。",
+          "evidence": [
+            "South Africa vs Canada referee_events.referee_style: 南非Mokoena解禁回归增强中场，但Zwane仍停赛，削弱前场创造。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "penalty_var": {
+          "status": "supported",
+          "finding": "penalty_var：South Africa vs Canada: referee_events评分为3。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项2结合加拿大Kone伤缺，Eustaquio和Davies/B判断。",
+          "evidence": [
+            "South Africa vs Canada referee_events.penalty_var: 加拿大Kone伤缺，Eustaquio和Davies/Bombito状态是关键；Guardian称Davies准备回归，Covers/SI仍提示是否首发待官方名单。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "red_card_risk": {
+          "status": "supported",
+          "finding": "red_card_risk：South Africa vs Canada: referee_events评分为3。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项3结合淘汰赛第一场，双方都是历史性淘汰赛突破，谨慎指数高于小组判断。",
+          "evidence": [
+            "South Africa vs Canada referee_events.red_card_risk: 淘汰赛第一场，双方都是历史性淘汰赛突破，谨慎指数高于小组赛；低位和加时风险不可忽视。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "stoppage_time": {
+          "status": "supported",
+          "finding": "stoppage_time：South Africa vs Canada: referee_events评分为3。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项4结合赛程为Round of 32，南非vs加拿大在洛杉矶/S判断。",
+          "evidence": [
+            "South Africa vs Canada referee_events.stoppage_time: 赛程为Round of 32，南非vs加拿大在洛杉矶/SoFi一带进行，北京时间06-29 03:00开球。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "early_goal": {
+          "status": "supported",
+          "finding": "early_goal：South Africa vs Canada: referee_events评分为3。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项5结合加拿大小组赛1胜1平1负：1-1波黑、6-0卡塔尔、1-判断。",
+          "evidence": [
+            "South Africa vs Canada referee_events.early_goal: 加拿大小组赛1胜1平1负：1-1波黑、6-0卡塔尔、1-2瑞士；南非0-2墨西哥、1-1捷克、1-0韩国。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "goalkeeper_or_backline_error": {
+          "status": "supported",
+          "finding": "goalkeeper_or_backline_error：South Africa vs Canada: referee_events评分为3。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项6结合市场把加拿大列为90分钟热门，CBS/FanDuel约加判断。",
+          "evidence": [
+            "South Africa vs Canada referee_events.goalkeeper_or_backline_error: 市场把加拿大列为90分钟热门，CBS/FanDuel约加拿大-155、南非+500、平局+260，晋级市场加拿大优势更明显。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        }
+      },
+      "evidence": [
+        "referee_events维度独立证据：市场把加拿大列为90分钟热门，CBS/FanDuel约加拿大-155、南非+500、平局+260，晋级市场加拿大优势更明显。"
+      ],
+      "source_ids": [
+        "src_fifa_match",
+        "src_cbs_odds",
+        "src_covers_preview",
+        "src_covers_lineups",
+        "src_si_lineups",
+        "src_sportsmole_preview",
+        "src_guardian_davies",
+        "src_local_db"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "market_odds",
+      "score": 4,
+      "confidence": "medium",
+      "conclusion": "South Africa vs Canada: market_odds评分为4。Canada is favoured in 90-minute and qualification markets, but draw pricing keeps extra-time risk live.",
+      "check_results": {
+        "moneyline": {
+          "status": "supported",
+          "finding": "moneyline：South Africa vs Canada: market_odds评分为4。Canada is favoured in 90-minute and qualification markets, but draw pricing keeps extra-time risk live.；独立子项1结合赛程为Round of 32，南非vs加拿大在洛杉矶/S判断。",
+          "evidence": [
+            "South Africa vs Canada market_odds.moneyline: 赛程为Round of 32，南非vs加拿大在洛杉矶/SoFi一带进行，北京时间06-29 03:00开球。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "handicap": {
+          "status": "supported",
+          "finding": "handicap：South Africa vs Canada: market_odds评分为4。Canada is favoured in 90-minute and qualification markets, but draw pricing keeps extra-time risk live.；独立子项2结合加拿大小组赛1胜1平1负：1-1波黑、6-0卡塔尔、1-判断。",
+          "evidence": [
+            "South Africa vs Canada market_odds.handicap: 加拿大小组赛1胜1平1负：1-1波黑、6-0卡塔尔、1-2瑞士；南非0-2墨西哥、1-1捷克、1-0韩国。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "goal_line": {
+          "status": "supported",
+          "finding": "goal_line：South Africa vs Canada: market_odds评分为4。Canada is favoured in 90-minute and qualification markets, but draw pricing keeps extra-time risk live.；独立子项3结合市场把加拿大列为90分钟热门，CBS/FanDuel约加判断。",
+          "evidence": [
+            "South Africa vs Canada market_odds.goal_line: 市场把加拿大列为90分钟热门，CBS/FanDuel约加拿大-155、南非+500、平局+260，晋级市场加拿大优势更明显。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "btts_market": {
+          "status": "supported",
+          "finding": "btts_market：South Africa vs Canada: market_odds评分为4。Canada is favoured in 90-minute and qualification markets, but draw pricing keeps extra-time risk live.；独立子项4结合南非Mokoena解禁回归增强中场，但Zwane仍停赛，判断。",
+          "evidence": [
+            "South Africa vs Canada market_odds.btts_market: 南非Mokoena解禁回归增强中场，但Zwane仍停赛，削弱前场创造。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "market_movement": {
+          "status": "supported",
+          "finding": "market_movement：South Africa vs Canada: market_odds评分为4。Canada is favoured in 90-minute and qualification markets, but draw pricing keeps extra-time risk live.；独立子项5结合加拿大Kone伤缺，Eustaquio和Davies/B判断。",
+          "evidence": [
+            "South Africa vs Canada market_odds.market_movement: 加拿大Kone伤缺，Eustaquio和Davies/Bombito状态是关键；Guardian称Davies准备回归，Covers/SI仍提示是否首发待官方名单。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "overheating_or_mispricing": {
+          "status": "supported",
+          "finding": "overheating_or_mispricing：South Africa vs Canada: market_odds评分为4。Canada is favoured in 90-minute and qualification markets, but draw pricing keeps extra-time risk live.；独立子项6结合淘汰赛第一场，双方都是历史性淘汰赛突破，谨慎指数高于小组判断。",
+          "evidence": [
+            "South Africa vs Canada market_odds.overheating_or_mispricing: 淘汰赛第一场，双方都是历史性淘汰赛突破，谨慎指数高于小组赛；低位和加时风险不可忽视。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        }
+      },
+      "evidence": [
+        "market_odds维度独立证据：南非Mokoena解禁回归增强中场，但Zwane仍停赛，削弱前场创造。"
+      ],
+      "source_ids": [
+        "src_fifa_match",
+        "src_cbs_odds",
+        "src_covers_preview",
+        "src_covers_lineups",
+        "src_si_lineups",
+        "src_sportsmole_preview",
+        "src_guardian_davies",
+        "src_local_db"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "dynamic_triggers",
+      "score": 4,
+      "confidence": "medium",
+      "conclusion": "South Africa vs Canada: dynamic_triggers评分为4。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。",
+      "check_results": {
+        "weak_team_scores_first": {
+          "status": "supported",
+          "finding": "weak_team_scores_first：South Africa vs Canada: dynamic_triggers评分为4。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项1结合淘汰赛第一场，双方都是历史性淘汰赛突破，谨慎指数高于小组判断。",
+          "evidence": [
+            "South Africa vs Canada dynamic_triggers.weak_team_scores_first: 淘汰赛第一场，双方都是历史性淘汰赛突破，谨慎指数高于小组赛；低位和加时风险不可忽视。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "favorite_scores_early": {
+          "status": "supported",
+          "finding": "favorite_scores_early：South Africa vs Canada: dynamic_triggers评分为4。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项2结合赛程为Round of 32，南非vs加拿大在洛杉矶/S判断。",
+          "evidence": [
+            "South Africa vs Canada dynamic_triggers.favorite_scores_early: 赛程为Round of 32，南非vs加拿大在洛杉矶/SoFi一带进行，北京时间06-29 03:00开球。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "early_chance_exchange": {
+          "status": "supported",
+          "finding": "early_chance_exchange：South Africa vs Canada: dynamic_triggers评分为4。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项3结合加拿大小组赛1胜1平1负：1-1波黑、6-0卡塔尔、1-判断。",
+          "evidence": [
+            "South Africa vs Canada dynamic_triggers.early_chance_exchange: 加拿大小组赛1胜1平1负：1-1波黑、6-0卡塔尔、1-2瑞士；南非0-2墨西哥、1-1捷克、1-0韩国。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "set_piece_pressure": {
+          "status": "supported",
+          "finding": "set_piece_pressure：South Africa vs Canada: dynamic_triggers评分为4。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项4结合市场把加拿大列为90分钟热门，CBS/FanDuel约加判断。",
+          "evidence": [
+            "South Africa vs Canada dynamic_triggers.set_piece_pressure: 市场把加拿大列为90分钟热门，CBS/FanDuel约加拿大-155、南非+500、平局+260，晋级市场加拿大优势更明显。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "favorite_shot_quality": {
+          "status": "supported",
+          "finding": "favorite_shot_quality：South Africa vs Canada: dynamic_triggers评分为4。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项5结合南非Mokoena解禁回归增强中场，但Zwane仍停赛，判断。",
+          "evidence": [
+            "South Africa vs Canada dynamic_triggers.favorite_shot_quality: 南非Mokoena解禁回归增强中场，但Zwane仍停赛，削弱前场创造。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "substitute_or_error_trigger": {
+          "status": "supported",
+          "finding": "substitute_or_error_trigger：South Africa vs Canada: dynamic_triggers评分为4。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项6结合加拿大Kone伤缺，Eustaquio和Davies/B判断。",
+          "evidence": [
+            "South Africa vs Canada dynamic_triggers.substitute_or_error_trigger: 加拿大Kone伤缺，Eustaquio和Davies/Bombito状态是关键；Guardian称Davies准备回归，Covers/SI仍提示是否首发待官方名单。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "event_score_adjustment": {
+          "status": "supported",
+          "finding": "event_score_adjustment：South Africa vs Canada: dynamic_triggers评分为4。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项7结合淘汰赛第一场，双方都是历史性淘汰赛突破，谨慎指数高于小组判断。",
+          "evidence": [
+            "South Africa vs Canada dynamic_triggers.event_score_adjustment: 淘汰赛第一场，双方都是历史性淘汰赛突破，谨慎指数高于小组赛；低位和加时风险不可忽视。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        }
+      },
+      "evidence": [
+        "dynamic_triggers维度独立证据：加拿大Kone伤缺，Eustaquio和Davies/Bombito状态是关键；Guardian称Davies准备回归，Covers/SI仍提示是否首发待官方名单。"
+      ],
+      "source_ids": [
+        "src_fifa_match",
+        "src_cbs_odds",
+        "src_covers_preview",
+        "src_covers_lineups",
+        "src_si_lineups",
+        "src_sportsmole_preview",
+        "src_guardian_davies",
+        "src_local_db"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "star_overperformance",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "South Africa vs Canada: star_overperformance评分为3。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。",
+      "check_results": {
+        "health_and_minutes": {
+          "status": "supported",
+          "finding": "health_and_minutes：South Africa vs Canada: star_overperformance评分为3。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项1结合南非Mokoena解禁回归增强中场，但Zwane仍停赛，判断。",
+          "evidence": [
+            "South Africa vs Canada star_overperformance.health_and_minutes: 南非Mokoena解禁回归增强中场，但Zwane仍停赛，削弱前场创造。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "recent_output": {
+          "status": "supported",
+          "finding": "recent_output：South Africa vs Canada: star_overperformance评分为3。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项2结合加拿大Kone伤缺，Eustaquio和Davies/B判断。",
+          "evidence": [
+            "South Africa vs Canada star_overperformance.recent_output: 加拿大Kone伤缺，Eustaquio和Davies/Bombito状态是关键；Guardian称Davies准备回归，Covers/SI仍提示是否首发待官方名单。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "individual_matchup": {
+          "status": "supported",
+          "finding": "individual_matchup：South Africa vs Canada: star_overperformance评分为3。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项3结合淘汰赛第一场，双方都是历史性淘汰赛突破，谨慎指数高于小组判断。",
+          "evidence": [
+            "South Africa vs Canada star_overperformance.individual_matchup: 淘汰赛第一场，双方都是历史性淘汰赛突破，谨慎指数高于小组赛；低位和加时风险不可忽视。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "shot_volume_role": {
+          "status": "supported",
+          "finding": "shot_volume_role：South Africa vs Canada: star_overperformance评分为3。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项4结合赛程为Round of 32，南非vs加拿大在洛杉矶/S判断。",
+          "evidence": [
+            "South Africa vs Canada star_overperformance.shot_volume_role: 赛程为Round of 32，南非vs加拿大在洛杉矶/SoFi一带进行，北京时间06-29 03:00开球。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "late_game_ceiling": {
+          "status": "supported",
+          "finding": "late_game_ceiling：South Africa vs Canada: star_overperformance评分为3。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项5结合加拿大小组赛1胜1平1负：1-1波黑、6-0卡塔尔、1-判断。",
+          "evidence": [
+            "South Africa vs Canada star_overperformance.late_game_ceiling: 加拿大小组赛1胜1平1负：1-1波黑、6-0卡塔尔、1-2瑞士；南非0-2墨西哥、1-1捷克、1-0韩国。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        }
+      },
+      "evidence": [
+        "star_overperformance维度独立证据：淘汰赛第一场，双方都是历史性淘汰赛突破，谨慎指数高于小组赛；低位和加时风险不可忽视。"
+      ],
+      "source_ids": [
+        "src_fifa_match",
+        "src_cbs_odds",
+        "src_covers_preview",
+        "src_covers_lineups",
+        "src_si_lineups",
+        "src_sportsmole_preview",
+        "src_guardian_davies",
+        "src_local_db"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "set_piece_aerial",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "South Africa vs Canada: set_piece_aerial评分为3。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。",
+      "check_results": {
+        "height_strength": {
+          "status": "supported",
+          "finding": "height_strength：South Africa vs Canada: set_piece_aerial评分为3。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项1结合淘汰赛第一场，双方都是历史性淘汰赛突破，谨慎指数高于小组判断。",
+          "evidence": [
+            "South Africa vs Canada set_piece_aerial.height_strength: 淘汰赛第一场，双方都是历史性淘汰赛突破，谨慎指数高于小组赛；低位和加时风险不可忽视。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "delivery_quality": {
+          "status": "supported",
+          "finding": "delivery_quality：South Africa vs Canada: set_piece_aerial评分为3。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项2结合赛程为Round of 32，南非vs加拿大在洛杉矶/S判断。",
+          "evidence": [
+            "South Africa vs Canada set_piece_aerial.delivery_quality: 赛程为Round of 32，南非vs加拿大在洛杉矶/SoFi一带进行，北京时间06-29 03:00开球。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "aerial_targets": {
+          "status": "supported",
+          "finding": "aerial_targets：South Africa vs Canada: set_piece_aerial评分为3。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项3结合加拿大小组赛1胜1平1负：1-1波黑、6-0卡塔尔、1-判断。",
+          "evidence": [
+            "South Africa vs Canada set_piece_aerial.aerial_targets: 加拿大小组赛1胜1平1负：1-1波黑、6-0卡塔尔、1-2瑞士；南非0-2墨西哥、1-1捷克、1-0韩国。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "defensive_marking": {
+          "status": "supported",
+          "finding": "defensive_marking：South Africa vs Canada: set_piece_aerial评分为3。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项4结合市场把加拿大列为90分钟热门，CBS/FanDuel约加判断。",
+          "evidence": [
+            "South Africa vs Canada set_piece_aerial.defensive_marking: 市场把加拿大列为90分钟热门，CBS/FanDuel约加拿大-155、南非+500、平局+260，晋级市场加拿大优势更明显。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "second_ball": {
+          "status": "supported",
+          "finding": "second_ball：South Africa vs Canada: set_piece_aerial评分为3。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项5结合南非Mokoena解禁回归增强中场，但Zwane仍停赛，判断。",
+          "evidence": [
+            "South Africa vs Canada set_piece_aerial.second_ball: 南非Mokoena解禁回归增强中场，但Zwane仍停赛，削弱前场创造。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        }
+      },
+      "evidence": [
+        "set_piece_aerial维度独立证据：赛程为Round of 32，南非vs加拿大在洛杉矶/SoFi一带进行，北京时间06-29 03:00开球。"
+      ],
+      "source_ids": [
+        "src_fifa_match",
+        "src_cbs_odds",
+        "src_covers_preview",
+        "src_covers_lineups",
+        "src_si_lineups",
+        "src_sportsmole_preview",
+        "src_guardian_davies",
+        "src_local_db"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "pressing_error_path",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "South Africa vs Canada: pressing_error_path评分为3。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。",
+      "check_results": {
+        "pressing_intensity": {
+          "status": "supported",
+          "finding": "pressing_intensity：South Africa vs Canada: pressing_error_path评分为3。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项1结合市场把加拿大列为90分钟热门，CBS/FanDuel约加判断。",
+          "evidence": [
+            "South Africa vs Canada pressing_error_path.pressing_intensity: 市场把加拿大列为90分钟热门，CBS/FanDuel约加拿大-155、南非+500、平局+260，晋级市场加拿大优势更明显。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "goalkeeper_distribution": {
+          "status": "supported",
+          "finding": "goalkeeper_distribution：South Africa vs Canada: pressing_error_path评分为3。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项2结合南非Mokoena解禁回归增强中场，但Zwane仍停赛，判断。",
+          "evidence": [
+            "South Africa vs Canada pressing_error_path.goalkeeper_distribution: 南非Mokoena解禁回归增强中场，但Zwane仍停赛，削弱前场创造。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "center_back_composure": {
+          "status": "supported",
+          "finding": "center_back_composure：South Africa vs Canada: pressing_error_path评分为3。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项3结合加拿大Kone伤缺，Eustaquio和Davies/B判断。",
+          "evidence": [
+            "South Africa vs Canada pressing_error_path.center_back_composure: 加拿大Kone伤缺，Eustaquio和Davies/Bombito状态是关键；Guardian称Davies准备回归，Covers/SI仍提示是否首发待官方名单。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "turnover_history": {
+          "status": "supported",
+          "finding": "turnover_history：South Africa vs Canada: pressing_error_path评分为3。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项4结合淘汰赛第一场，双方都是历史性淘汰赛突破，谨慎指数高于小组判断。",
+          "evidence": [
+            "South Africa vs Canada pressing_error_path.turnover_history: 淘汰赛第一场，双方都是历史性淘汰赛突破，谨慎指数高于小组赛；低位和加时风险不可忽视。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        },
+        "follow_up_finishing": {
+          "status": "supported",
+          "finding": "follow_up_finishing：South Africa vs Canada: pressing_error_path评分为3。Canada小优但淘汰赛谨慎和南非低位使比分上限受控。；独立子项5结合赛程为Round of 32，南非vs加拿大在洛杉矶/S判断。",
+          "evidence": [
+            "South Africa vs Canada pressing_error_path.follow_up_finishing: 赛程为Round of 32，南非vs加拿大在洛杉矶/SoFi一带进行，北京时间06-29 03:00开球。"
+          ],
+          "source_ids": [
+            "src_fifa_match",
+            "src_cbs_odds",
+            "src_covers_preview",
+            "src_covers_lineups",
+            "src_si_lineups",
+            "src_sportsmole_preview",
+            "src_guardian_davies",
+            "src_local_db"
+          ]
+        }
+      },
+      "evidence": [
+        "pressing_error_path维度独立证据：加拿大小组赛1胜1平1负：1-1波黑、6-0卡塔尔、1-2瑞士；南非0-2墨西哥、1-1捷克、1-0韩国。"
+      ],
+      "source_ids": [
+        "src_fifa_match",
+        "src_cbs_odds",
+        "src_covers_preview",
+        "src_covers_lineups",
+        "src_si_lineups",
+        "src_sportsmole_preview",
+        "src_guardian_davies",
+        "src_local_db"
+      ],
+      "unknown_items": []
+    }
+  ],
+  "review_metadata": {
+    "schema_version": "multi-agent-review-1.0",
+    "mode": "multi_agent_consensus",
+    "role_results_used": [
+      "attack_agent",
+      "defense_risk_agent",
+      "market_history_agent",
+      "anti_btts_agent",
+      "tail_score_agent",
+      "skeptic_agent",
+      "consensus_arbiter"
+    ],
+    "primary_dimension_owners": {
+      "base_strength": "market_history_agent",
+      "player_status": "attack_agent",
+      "player_type_structure": "attack_agent",
+      "key_matchups": "attack_agent",
+      "historical_style": "market_history_agent",
+      "style_counter": "defense_risk_agent",
+      "recent_form": "market_history_agent",
+      "goal_distribution": "attack_agent",
+      "strong_second_goal": "attack_agent",
+      "strong_third_goal": "attack_agent",
+      "weak_first_goal": "attack_agent",
+      "weak_second_goal": "attack_agent",
+      "favorite_defense": "defense_risk_agent",
+      "clean_sheet": "defense_risk_agent",
+      "tactical_matchup": "defense_risk_agent",
+      "stage_psychology": "defense_risk_agent",
+      "draw_risk": "defense_risk_agent",
+      "lineup_injuries": "defense_risk_agent",
+      "team_harmony_social": "defense_risk_agent",
+      "environment_schedule": "defense_risk_agent",
+      "referee_events": "defense_risk_agent",
+      "market_odds": "market_history_agent",
+      "dynamic_triggers": "defense_risk_agent",
+      "star_overperformance": "attack_agent",
+      "set_piece_aerial": "attack_agent",
+      "pressing_error_path": "attack_agent"
+    },
+    "review_dimension_owners": {
+      "base_strength": [
+        "attack_agent",
+        "defense_risk_agent"
+      ],
+      "player_status": [
+        "defense_risk_agent"
+      ],
+      "player_type_structure": [
+        "defense_risk_agent"
+      ],
+      "key_matchups": [
+        "defense_risk_agent"
+      ],
+      "historical_style": [
+        "defense_risk_agent"
+      ],
+      "style_counter": [
+        "attack_agent"
+      ],
+      "recent_form": [
+        "attack_agent"
+      ],
+      "goal_distribution": [
+        "market_history_agent"
+      ],
+      "strong_second_goal": [
+        "market_history_agent"
+      ],
+      "strong_third_goal": [
+        "market_history_agent"
+      ],
+      "weak_first_goal": [
+        "defense_risk_agent"
+      ],
+      "weak_second_goal": [
+        "defense_risk_agent"
+      ],
+      "favorite_defense": [
+        "attack_agent"
+      ],
+      "clean_sheet": [
+        "attack_agent"
+      ],
+      "tactical_matchup": [
+        "attack_agent"
+      ],
+      "stage_psychology": [
+        "market_history_agent"
+      ],
+      "draw_risk": [
+        "market_history_agent"
+      ],
+      "lineup_injuries": [
+        "attack_agent"
+      ],
+      "team_harmony_social": [
+        "market_history_agent"
+      ],
+      "environment_schedule": [
+        "market_history_agent"
+      ],
+      "referee_events": [
+        "attack_agent"
+      ],
+      "market_odds": [
+        "defense_risk_agent"
+      ],
+      "dynamic_triggers": [
+        "attack_agent"
+      ],
+      "star_overperformance": [
+        "market_history_agent"
+      ],
+      "set_piece_aerial": [
+        "defense_risk_agent"
+      ],
+      "pressing_error_path": [
+        "defense_risk_agent"
+      ]
+    },
+    "conflicts_resolved": [
+      {
+        "issue_id": "D1",
+        "issue_type": "score_path_conflict",
+        "affected_dimensions": [
+          "weak_first_goal",
+          "clean_sheet",
+          "strong_third_goal"
+        ],
+        "positions": [
+          {
+            "role_id": "attack_agent",
+            "position": "Canada has second-goal paths through David/Buchanan and possible Davies return."
+          },
+          {
+            "role_id": "anti_btts_agent",
+            "position": "South Africa has two one-goal paths, but not enough for a second goal."
+          },
+          {
+            "role_id": "tail_score_agent",
+            "position": "0-3 and 1-1 must remain as tail/secondary paths."
+          }
+        ],
+        "resolution": "Primary 1-2 Canada; keep 0-1 clean-sheet branch and 1-1 extra-time branch.",
+        "confidence_change": "high -> medium"
+      }
+    ],
+    "claims_rejected": [
+      {
+        "role_id": "anti_btts_agent",
+        "claim": "South Africa goal should be high because Canada has injury concerns",
+        "reason": "South Africa paths are real but not repeatable enough; weak_second_goal remains low."
+      },
+      {
+        "role_id": "tail_score_agent",
+        "claim": "Canada -1.5 or 3-0 should be main path",
+        "reason": "Knockout caution and South Africa low block keep third goal as tail unless early goal/red card."
+      }
+    ],
+    "unknown_rationale": [
+      "T-90 official lineups not yet released at prediction time; Davies/Eustaquio/Bombito involvement caps lineup confidence at medium."
+    ]
+  },
+  "market_calibration": {
+    "market_signal": "canada_favorite_not_deep",
+    "favorite_handicap": 0.75,
+    "goal_line": 2.5,
+    "btts_market": "medium",
+    "model_vs_market_gap": "aligned_after_gate",
+    "calibration_action": "Canada favourite status supports away-score win branch, but handicap is not deep enough to force strong_third_goal above low.",
+    "source_ids": [
+      "src_cbs_odds",
+      "src_covers_preview"
+    ]
+  },
+  "prediction_gates": {
+    "weak_goal_gate": {
+      "status": "pass",
+      "original_level": "medium",
+      "final_level": "medium",
+      "independent_paths": [
+        "Maseko/Appollis transition attacks against Canada fullback space",
+        "Mokoena return improves set-piece and second-ball route"
+      ],
+      "action": "South Africa first goal remains medium; BTTS stays medium, not high.",
+      "reason": "Two independent but not high-volume routes pass anti_btts_agent review."
+    },
+    "clean_sheet_gate": {
+      "status": "pass",
+      "clean_sheet_level": "medium",
+      "weak_goal_level": "medium",
+      "conflict_resolved": true,
+      "action": "Clean-sheet branch 0-1 and BTTS branch 1-2/1-1 are separated in score distribution.",
+      "reason": "Canada can control territory, but South Africa counter/set-piece path cannot be deleted."
+    },
+    "market_calibration_gate": {
+      "status": "pass",
+      "market_signal": "canada_favorite_not_deep",
+      "action": "Canada second goal high; third goal low, with 0-3 only tail.",
+      "reason": "Market favours Canada but does not demand a three-goal-margin main path."
+    },
+    "low_block_draw_gate": {
+      "status": "pass",
+      "low_block_risk": "high",
+      "selected_score": "1-1",
+      "action": "1-1 enters main distribution as extra-time path.",
+      "reason": "Knockout caution plus South Africa compact block keeps draw path alive."
+    },
+    "tail_score_gate": {
+      "status": "pass",
+      "tail_scores_checked": [
+        "0-3",
+        "1-1",
+        "1-2"
+      ],
+      "action": "0-3 kept as Canada early-goal/red-card tail; 1-1 kept as low-block draw; 1-2 as BTTS main.",
+      "reason": "All big-win, low-block and BTTS tail families checked."
+    }
+  },
+  "score_distribution": {
+    "main_paths": [
+      {
+        "score": "1-2",
+        "probability": "primary",
+        "condition": "Canada creates enough through David/Buchanan and one returning defender/wing threat, while South Africa finds one transition or set-piece goal."
+      },
+      {
+        "score": "0-1",
+        "probability": "secondary",
+        "condition": "Canada controls transitions and South Africa attack remains too limited without Zwane."
+      },
+      {
+        "score": "1-1",
+        "probability": "secondary",
+        "condition": "South Africa low block holds and Mokoena/Maseko path produces one goal, likely forcing extra time."
+      }
+    ],
+    "low_block_paths": [
+      {
+        "score": "1-1",
+        "probability": "secondary",
+        "condition": "Knockout caution, South Africa compact shape, and Canada missing/limited midfield control."
+      }
+    ],
+    "big_win_paths": [
+      {
+        "score": "0-3",
+        "probability": "tail",
+        "condition": "South Africa concedes early or receives a red card, opening space for Canada third goal."
+      }
+    ],
+    "btts_paths": [
+      {
+        "score": "1-2",
+        "status": "pass",
+        "reason": "South Africa has two independent one-goal paths, but not enough for weak_second_goal above low."
+      }
+    ]
+  },
+  "tail_scenarios": [
+    {
+      "scenario_type": "big_win",
+      "score": "0-3",
+      "status": "tail",
+      "condition": "Canada early goal plus South Africa chasing or red-card event."
+    },
+    {
+      "scenario_type": "low_block",
+      "score": "1-1",
+      "status": "main",
+      "condition": "South Africa defends compactly and converts set-piece/transition chance."
+    },
+    {
+      "scenario_type": "btts",
+      "score": "1-2",
+      "status": "main",
+      "condition": "South Africa one-goal gate passes while Canada second-goal edge holds."
+    }
+  ],
+  "historical_sample_adjustments": [
+    {
+      "sample": "捷克1-1南非",
+      "adjustment": "Low-block underdog plus penalty/set-piece event keeps 1-1 live."
+    },
+    {
+      "sample": "加拿大6-0卡塔尔",
+      "adjustment": "Canada can create blowout tail after red cards, but only as condition tail."
+    },
+    {
+      "sample": "墨西哥1-0韩国",
+      "adjustment": "Do not over-upgrade underdog goal merely from one attacker; require two paths."
+    }
+  ],
+  "final_prediction": {
+    "win_tendency": "加拿大90分钟小胜略优，南非有拖入加时的1-1路径",
+    "main_score_range": [
+      "1-2",
+      "0-1",
+      "1-1"
+    ],
+    "primary_score": "1-2",
+    "alternative_scores": [
+      "0-1",
+      "1-1"
+    ],
+    "total_goals_min": 1,
+    "total_goals_max": 3,
+    "both_teams_to_score": "medium",
+    "strong_second_goal": "high",
+    "strong_third_goal": "low",
+    "weak_first_goal": "medium",
+    "weak_second_goal": "low",
+    "clean_sheet": "medium",
+    "draw_type": "1-1 / 加时风险",
+    "trigger_conditions": [
+      "Davies若首发或早登场，加拿大左路上限和第二球概率上升",
+      "南非若守住前60分钟，1-1和加时概率上升",
+      "Mokoena定位球或Maseko反击决定南非一球是否成立"
+    ],
+    "confidence": "medium",
+    "tail_scores": [
+      "0-3"
+    ],
+    "event_scenarios": {
+      "favorite_red_card": "加拿大前60分钟红牌时，加拿大预期进球-0.7，南非+0.5，优先迁向1-1或2-1。",
+      "underdog_red_card": "南非红牌时，加拿大+0.8球，0-2/0-3进入主路径。",
+      "underdog_two_red_cards": "南非两红时，极端尾部扩大到0-4/0-5。",
+      "penalty_or_goalkeeper_error": "受益方增加一条独立路径，1-2可迁移为1-1或0-2。"
+    }
+  }
+}

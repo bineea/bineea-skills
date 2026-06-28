@@ -1,0 +1,2814 @@
+{
+  "schema_version": "1.0.0",
+  "catalog_version": "2026-06-20",
+  "match": {
+    "match_id": "2026-06-28_BJT_COL_POR",
+    "team_a": "Colombia",
+    "team_b": "Portugal",
+    "match_date": "2026-06-28 Beijing time",
+    "beijing_kickoff": "2026-06-28 07:30"
+  },
+  "sources": [
+    {
+      "source_id": "src_cbs_schedule",
+      "source_type": "schedule",
+      "title": "CBS Sports 2026 FIFA World Cup schedule, all times Eastern",
+      "url": "https://www.cbssports.com/soccer/news/world-cup-2026-schedule-times-dates/"
+    },
+    {
+      "source_id": "src_fifa_preview",
+      "source_type": "fixture",
+      "title": "FIFA matchday 17 preview",
+      "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/matchday-17-preview"
+    },
+    {
+      "source_id": "src_local_history",
+      "source_type": "historical_sample",
+      "title": "worldcup-score-predictor local historical samples",
+      "url": "local:seed/historical_samples.jsonl"
+    },
+    {
+      "source_id": "src_covers_match",
+      "source_type": "odds_lineup",
+      "title": "Covers Portugal vs Colombia predictions, lineups and odds",
+      "url": "https://www.covers.com/world-cup/portugal-vs-colombia-prediction-picks-odds-tonight-6-27-2026"
+    }
+  ],
+  "player_assessments": {
+    "team_a": [
+      {
+        "player_name": "Luis Diaz",
+        "position": "边锋",
+        "player_type": "速度内切",
+        "status": "预计首发",
+        "expected_starter": true,
+        "expected_minutes": 85,
+        "conclusion": "Luis Diaz 是本场进球路径、对位或控场判断的关键球员。",
+        "evidence": [
+          "预计首发/赛前名单信息支持将 Luis Diaz 纳入关键球员评估；正式首发仍以T-90官方名单为准。"
+        ],
+        "source_ids": [
+          "src_covers_match"
+        ]
+      },
+      {
+        "player_name": "James Rodriguez",
+        "position": "前腰",
+        "player_type": "定位球组织",
+        "status": "预计首发",
+        "expected_starter": true,
+        "expected_minutes": 72,
+        "conclusion": "James Rodriguez 是本场进球路径、对位或控场判断的关键球员。",
+        "evidence": [
+          "预计首发/赛前名单信息支持将 James Rodriguez 纳入关键球员评估；正式首发仍以T-90官方名单为准。"
+        ],
+        "source_ids": [
+          "src_covers_match"
+        ]
+      },
+      {
+        "player_name": "Daniel Munoz",
+        "position": "边翼卫",
+        "player_type": "纵深插上",
+        "status": "预计首发",
+        "expected_starter": true,
+        "expected_minutes": 82,
+        "conclusion": "Daniel Munoz 是本场进球路径、对位或控场判断的关键球员。",
+        "evidence": [
+          "预计首发/赛前名单信息支持将 Daniel Munoz 纳入关键球员评估；正式首发仍以T-90官方名单为准。"
+        ],
+        "source_ids": [
+          "src_covers_match"
+        ]
+      }
+    ],
+    "team_b": [
+      {
+        "player_name": "Cristiano Ronaldo",
+        "position": "中锋",
+        "player_type": "终结支点",
+        "status": "预计首发",
+        "expected_starter": true,
+        "expected_minutes": 80,
+        "conclusion": "Cristiano Ronaldo 是本场进球路径、对位或控场判断的关键球员。",
+        "evidence": [
+          "预计首发/赛前名单信息支持将 Cristiano Ronaldo 纳入关键球员评估；正式首发仍以T-90官方名单为准。"
+        ],
+        "source_ids": [
+          "src_covers_match"
+        ]
+      },
+      {
+        "player_name": "Bruno Fernandes",
+        "position": "中场",
+        "player_type": "直塞创造",
+        "status": "预计首发",
+        "expected_starter": true,
+        "expected_minutes": 82,
+        "conclusion": "Bruno Fernandes 是本场进球路径、对位或控场判断的关键球员。",
+        "evidence": [
+          "预计首发/赛前名单信息支持将 Bruno Fernandes 纳入关键球员评估；正式首发仍以T-90官方名单为准。"
+        ],
+        "source_ids": [
+          "src_covers_match"
+        ]
+      },
+      {
+        "player_name": "Rafael Leao",
+        "position": "边锋",
+        "player_type": "突破冲击",
+        "status": "预计首发",
+        "expected_starter": true,
+        "expected_minutes": 75,
+        "conclusion": "Rafael Leao 是本场进球路径、对位或控场判断的关键球员。",
+        "evidence": [
+          "预计首发/赛前名单信息支持将 Rafael Leao 纳入关键球员评估；正式首发仍以T-90官方名单为准。"
+        ],
+        "source_ids": [
+          "src_covers_match"
+        ]
+      }
+    ]
+  },
+  "dimension_analyses": [
+    {
+      "dimension_key": "base_strength",
+      "score": 4,
+      "confidence": "medium",
+      "conclusion": "Colombia vs Portugal: base_strength 评分为4，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。",
+      "check_results": {
+        "ranking_elo": {
+          "status": "supported",
+          "finding": "ranking_elo：Colombia vs Portugal: base_strength 评分为4，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项1单独校验。",
+          "evidence": [
+            "Colombia vs Portugal base_strength.ranking_elo 独立证据：Covers预计C罗、B费、莱奥首发，哥伦比亚有迪亚斯、哈梅斯和苏亚雷斯。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "squad_quality": {
+          "status": "supported",
+          "finding": "squad_quality：Colombia vs Portugal: base_strength 评分为4，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项2单独校验。",
+          "evidence": [
+            "Colombia vs Portugal base_strength.squad_quality 独立证据：哥伦比亚前两场防守紧凑且反击效率高，葡萄牙需要争胜会暴露身后。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "tournament_experience": {
+          "status": "supported",
+          "finding": "tournament_experience：Colombia vs Portugal: base_strength 评分为4，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项3单独校验。",
+          "evidence": [
+            "Colombia vs Portugal base_strength.tournament_experience 独立证据：迈阿密高温提高下半场节奏下降和小比分概率。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "bench_depth": {
+          "status": "supported",
+          "finding": "bench_depth：Colombia vs Portugal: base_strength 评分为4，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项4单独校验。",
+          "evidence": [
+            "Colombia vs Portugal base_strength.bench_depth 独立证据：葡萄牙被Covers列为小热门，大小球2.5偏向小球。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "coach_and_age_structure": {
+          "status": "supported",
+          "finding": "coach_and_age_structure：Colombia vs Portugal: base_strength 评分为4，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项5单独校验。",
+          "evidence": [
+            "Colombia vs Portugal base_strength.coach_and_age_structure 独立证据：Covers预计C罗、B费、莱奥首发，哥伦比亚有迪亚斯、哈梅斯和苏亚雷斯。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        }
+      },
+      "evidence": [
+        "base_strength维度证据：葡萄牙被Covers列为小热门，大小球2.5偏向小球。"
+      ],
+      "source_ids": [
+        "src_cbs_schedule",
+        "src_fifa_preview",
+        "src_local_history",
+        "src_covers_match"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "player_status",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "Colombia vs Portugal: player_status 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。",
+      "check_results": {
+        "expected_starters": {
+          "status": "supported",
+          "finding": "expected_starters：Colombia vs Portugal: player_status 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项1单独校验。",
+          "evidence": [
+            "Colombia vs Portugal player_status.expected_starters 独立证据：Covers预计C罗、B费、莱奥首发，哥伦比亚有迪亚斯、哈梅斯和苏亚雷斯。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "expected_minutes": {
+          "status": "supported",
+          "finding": "expected_minutes：Colombia vs Portugal: player_status 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项2单独校验。",
+          "evidence": [
+            "Colombia vs Portugal player_status.expected_minutes 独立证据：哥伦比亚前两场防守紧凑且反击效率高，葡萄牙需要争胜会暴露身后。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "recent_minutes_and_form": {
+          "status": "supported",
+          "finding": "recent_minutes_and_form：Colombia vs Portugal: player_status 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项3单独校验。",
+          "evidence": [
+            "Colombia vs Portugal player_status.recent_minutes_and_form 独立证据：迈阿密高温提高下半场节奏下降和小比分概率。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "injury_recovery": {
+          "status": "supported",
+          "finding": "injury_recovery：Colombia vs Portugal: player_status 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项4单独校验。",
+          "evidence": [
+            "Colombia vs Portugal player_status.injury_recovery 独立证据：葡萄牙被Covers列为小热门，大小球2.5偏向小球。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "position_quality": {
+          "status": "supported",
+          "finding": "position_quality：Colombia vs Portugal: player_status 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项5单独校验。",
+          "evidence": [
+            "Colombia vs Portugal player_status.position_quality 独立证据：Covers预计C罗、B费、莱奥首发，哥伦比亚有迪亚斯、哈梅斯和苏亚雷斯。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "big_match_and_mental_state": {
+          "status": "supported",
+          "finding": "big_match_and_mental_state：Colombia vs Portugal: player_status 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项6单独校验。",
+          "evidence": [
+            "Colombia vs Portugal player_status.big_match_and_mental_state 独立证据：哥伦比亚前两场防守紧凑且反击效率高，葡萄牙需要争胜会暴露身后。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        }
+      },
+      "evidence": [
+        "player_status维度证据：Covers预计C罗、B费、莱奥首发，哥伦比亚有迪亚斯、哈梅斯和苏亚雷斯。"
+      ],
+      "source_ids": [
+        "src_cbs_schedule",
+        "src_fifa_preview",
+        "src_local_history",
+        "src_covers_match"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "player_type_structure",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "Colombia vs Portugal: player_type_structure 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。",
+      "check_results": {
+        "attacking_types": {
+          "status": "supported",
+          "finding": "attacking_types：Colombia vs Portugal: player_type_structure 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项1单独校验。",
+          "evidence": [
+            "Colombia vs Portugal player_type_structure.attacking_types 独立证据：Covers预计C罗、B费、莱奥首发，哥伦比亚有迪亚斯、哈梅斯和苏亚雷斯。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "midfield_types": {
+          "status": "supported",
+          "finding": "midfield_types：Colombia vs Portugal: player_type_structure 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项2单独校验。",
+          "evidence": [
+            "Colombia vs Portugal player_type_structure.midfield_types 独立证据：哥伦比亚前两场防守紧凑且反击效率高，葡萄牙需要争胜会暴露身后。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "defensive_types": {
+          "status": "supported",
+          "finding": "defensive_types：Colombia vs Portugal: player_type_structure 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项3单独校验。",
+          "evidence": [
+            "Colombia vs Portugal player_type_structure.defensive_types 独立证据：迈阿密高温提高下半场节奏下降和小比分概率。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "type_complementarity": {
+          "status": "supported",
+          "finding": "type_complementarity：Colombia vs Portugal: player_type_structure 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项4单独校验。",
+          "evidence": [
+            "Colombia vs Portugal player_type_structure.type_complementarity 独立证据：葡萄牙被Covers列为小热门，大小球2.5偏向小球。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "type_gaps": {
+          "status": "supported",
+          "finding": "type_gaps：Colombia vs Portugal: player_type_structure 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项5单独校验。",
+          "evidence": [
+            "Colombia vs Portugal player_type_structure.type_gaps 独立证据：Covers预计C罗、B费、莱奥首发，哥伦比亚有迪亚斯、哈梅斯和苏亚雷斯。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        }
+      },
+      "evidence": [
+        "player_type_structure维度证据：哥伦比亚前两场防守紧凑且反击效率高，葡萄牙需要争胜会暴露身后。"
+      ],
+      "source_ids": [
+        "src_cbs_schedule",
+        "src_fifa_preview",
+        "src_local_history",
+        "src_covers_match"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "key_matchups",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "Colombia vs Portugal: key_matchups 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。",
+      "check_results": {
+        "wing_matchup": {
+          "status": "supported",
+          "finding": "wing_matchup：Colombia vs Portugal: key_matchups 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项1单独校验。",
+          "evidence": [
+            "Colombia vs Portugal key_matchups.wing_matchup 独立证据：Covers预计C罗、B费、莱奥首发，哥伦比亚有迪亚斯、哈梅斯和苏亚雷斯。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "striker_center_back": {
+          "status": "supported",
+          "finding": "striker_center_back：Colombia vs Portugal: key_matchups 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项2单独校验。",
+          "evidence": [
+            "Colombia vs Portugal key_matchups.striker_center_back 独立证据：哥伦比亚前两场防守紧凑且反击效率高，葡萄牙需要争胜会暴露身后。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "creator_defensive_midfield": {
+          "status": "supported",
+          "finding": "creator_defensive_midfield：Colombia vs Portugal: key_matchups 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项3单独校验。",
+          "evidence": [
+            "Colombia vs Portugal key_matchups.creator_defensive_midfield 独立证据：迈阿密高温提高下半场节奏下降和小比分概率。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "pressing_build_up": {
+          "status": "supported",
+          "finding": "pressing_build_up：Colombia vs Portugal: key_matchups 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项4单独校验。",
+          "evidence": [
+            "Colombia vs Portugal key_matchups.pressing_build_up 独立证据：葡萄牙被Covers列为小热门，大小球2.5偏向小球。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "aerial_matchup": {
+          "status": "supported",
+          "finding": "aerial_matchup：Colombia vs Portugal: key_matchups 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项5单独校验。",
+          "evidence": [
+            "Colombia vs Portugal key_matchups.aerial_matchup 独立证据：Covers预计C罗、B费、莱奥首发，哥伦比亚有迪亚斯、哈梅斯和苏亚雷斯。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "transition_space": {
+          "status": "supported",
+          "finding": "transition_space：Colombia vs Portugal: key_matchups 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项6单独校验。",
+          "evidence": [
+            "Colombia vs Portugal key_matchups.transition_space 独立证据：哥伦比亚前两场防守紧凑且反击效率高，葡萄牙需要争胜会暴露身后。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        }
+      },
+      "evidence": [
+        "key_matchups维度证据：迈阿密高温提高下半场节奏下降和小比分概率。"
+      ],
+      "source_ids": [
+        "src_cbs_schedule",
+        "src_fifa_preview",
+        "src_local_history",
+        "src_covers_match"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "historical_style",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "Colombia vs Portugal: historical_style 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。",
+      "check_results": {
+        "team_a_style": {
+          "status": "supported",
+          "finding": "team_a_style：Colombia vs Portugal: historical_style 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项1单独校验。",
+          "evidence": [
+            "Colombia vs Portugal historical_style.team_a_style 独立证据：Covers预计C罗、B费、莱奥首发，哥伦比亚有迪亚斯、哈梅斯和苏亚雷斯。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "team_b_style": {
+          "status": "supported",
+          "finding": "team_b_style：Colombia vs Portugal: historical_style 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项2单独校验。",
+          "evidence": [
+            "Colombia vs Portugal historical_style.team_b_style 独立证据：哥伦比亚前两场防守紧凑且反击效率高，葡萄牙需要争胜会暴露身后。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "leading_behavior": {
+          "status": "supported",
+          "finding": "leading_behavior：Colombia vs Portugal: historical_style 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项3单独校验。",
+          "evidence": [
+            "Colombia vs Portugal historical_style.leading_behavior 独立证据：迈阿密高温提高下半场节奏下降和小比分概率。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "trailing_behavior": {
+          "status": "supported",
+          "finding": "trailing_behavior：Colombia vs Portugal: historical_style 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项4单独校验。",
+          "evidence": [
+            "Colombia vs Portugal historical_style.trailing_behavior 独立证据：葡萄牙被Covers列为小热门，大小球2.5偏向小球。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "draw_and_set_piece_tendency": {
+          "status": "supported",
+          "finding": "draw_and_set_piece_tendency：Colombia vs Portugal: historical_style 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项5单独校验。",
+          "evidence": [
+            "Colombia vs Portugal historical_style.draw_and_set_piece_tendency 独立证据：Covers预计C罗、B费、莱奥首发，哥伦比亚有迪亚斯、哈梅斯和苏亚雷斯。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        }
+      },
+      "evidence": [
+        "historical_style维度证据：葡萄牙被Covers列为小热门，大小球2.5偏向小球。"
+      ],
+      "source_ids": [
+        "src_cbs_schedule",
+        "src_fifa_preview",
+        "src_local_history",
+        "src_covers_match"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "style_counter",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "Colombia vs Portugal: style_counter 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。",
+      "check_results": {
+        "team_a_attacks_team_b": {
+          "status": "supported",
+          "finding": "team_a_attacks_team_b：Colombia vs Portugal: style_counter 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项1单独校验。",
+          "evidence": [
+            "Colombia vs Portugal style_counter.team_a_attacks_team_b 独立证据：Covers预计C罗、B费、莱奥首发，哥伦比亚有迪亚斯、哈梅斯和苏亚雷斯。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "team_b_attacks_team_a": {
+          "status": "supported",
+          "finding": "team_b_attacks_team_a：Colombia vs Portugal: style_counter 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项2单独校验。",
+          "evidence": [
+            "Colombia vs Portugal style_counter.team_b_attacks_team_a 独立证据：哥伦比亚前两场防守紧凑且反击效率高，葡萄牙需要争胜会暴露身后。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "team_a_resistance": {
+          "status": "supported",
+          "finding": "team_a_resistance：Colombia vs Portugal: style_counter 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项3单独校验。",
+          "evidence": [
+            "Colombia vs Portugal style_counter.team_a_resistance 独立证据：迈阿密高温提高下半场节奏下降和小比分概率。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "team_b_resistance": {
+          "status": "supported",
+          "finding": "team_b_resistance：Colombia vs Portugal: style_counter 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项4单独校验。",
+          "evidence": [
+            "Colombia vs Portugal style_counter.team_b_resistance 独立证据：葡萄牙被Covers列为小热门，大小球2.5偏向小球。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "net_counter_effect": {
+          "status": "supported",
+          "finding": "net_counter_effect：Colombia vs Portugal: style_counter 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项5单独校验。",
+          "evidence": [
+            "Colombia vs Portugal style_counter.net_counter_effect 独立证据：Covers预计C罗、B费、莱奥首发，哥伦比亚有迪亚斯、哈梅斯和苏亚雷斯。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        }
+      },
+      "evidence": [
+        "style_counter维度证据：Covers预计C罗、B费、莱奥首发，哥伦比亚有迪亚斯、哈梅斯和苏亚雷斯。"
+      ],
+      "source_ids": [
+        "src_cbs_schedule",
+        "src_fifa_preview",
+        "src_local_history",
+        "src_covers_match"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "recent_form",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "Colombia vs Portugal: recent_form 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。",
+      "check_results": {
+        "recent_results": {
+          "status": "supported",
+          "finding": "recent_results：Colombia vs Portugal: recent_form 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项1单独校验。",
+          "evidence": [
+            "Colombia vs Portugal recent_form.recent_results 独立证据：Covers预计C罗、B费、莱奥首发，哥伦比亚有迪亚斯、哈梅斯和苏亚雷斯。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "scoring_trend": {
+          "status": "supported",
+          "finding": "scoring_trend：Colombia vs Portugal: recent_form 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项2单独校验。",
+          "evidence": [
+            "Colombia vs Portugal recent_form.scoring_trend 独立证据：哥伦比亚前两场防守紧凑且反击效率高，葡萄牙需要争胜会暴露身后。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "conceding_trend": {
+          "status": "supported",
+          "finding": "conceding_trend：Colombia vs Portugal: recent_form 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项3单独校验。",
+          "evidence": [
+            "Colombia vs Portugal recent_form.conceding_trend 独立证据：迈阿密高温提高下半场节奏下降和小比分概率。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "strong_weak_opponent_split": {
+          "status": "supported",
+          "finding": "strong_weak_opponent_split：Colombia vs Portugal: recent_form 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项4单独校验。",
+          "evidence": [
+            "Colombia vs Portugal recent_form.strong_weak_opponent_split 独立证据：葡萄牙被Covers列为小热门，大小球2.5偏向小球。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "second_half_trend": {
+          "status": "supported",
+          "finding": "second_half_trend：Colombia vs Portugal: recent_form 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项5单独校验。",
+          "evidence": [
+            "Colombia vs Portugal recent_form.second_half_trend 独立证据：Covers预计C罗、B费、莱奥首发，哥伦比亚有迪亚斯、哈梅斯和苏亚雷斯。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        }
+      },
+      "evidence": [
+        "recent_form维度证据：哥伦比亚前两场防守紧凑且反击效率高，葡萄牙需要争胜会暴露身后。"
+      ],
+      "source_ids": [
+        "src_cbs_schedule",
+        "src_fifa_preview",
+        "src_local_history",
+        "src_covers_match"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "goal_distribution",
+      "score": 4,
+      "confidence": "medium",
+      "conclusion": "Colombia vs Portugal: goal_distribution 评分为4，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。",
+      "check_results": {
+        "xg_xga": {
+          "status": "supported",
+          "finding": "xg_xga：Colombia vs Portugal: goal_distribution 评分为4，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项1单独校验。",
+          "evidence": [
+            "Colombia vs Portugal goal_distribution.xg_xga 独立证据：Covers预计C罗、B费、莱奥首发，哥伦比亚有迪亚斯、哈梅斯和苏亚雷斯。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "shots_on_target": {
+          "status": "supported",
+          "finding": "shots_on_target：Colombia vs Portugal: goal_distribution 评分为4，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项2单独校验。",
+          "evidence": [
+            "Colombia vs Portugal goal_distribution.shots_on_target 独立证据：哥伦比亚前两场防守紧凑且反击效率高，葡萄牙需要争胜会暴露身后。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "big_chances": {
+          "status": "supported",
+          "finding": "big_chances：Colombia vs Portugal: goal_distribution 评分为4，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项3单独校验。",
+          "evidence": [
+            "Colombia vs Portugal goal_distribution.big_chances 独立证据：迈阿密高温提高下半场节奏下降和小比分概率。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "set_piece_output": {
+          "status": "supported",
+          "finding": "set_piece_output：Colombia vs Portugal: goal_distribution 评分为4，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项4单独校验。",
+          "evidence": [
+            "Colombia vs Portugal goal_distribution.set_piece_output 独立证据：葡萄牙被Covers列为小热门，大小球2.5偏向小球。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "nonstandard_goals": {
+          "status": "supported",
+          "finding": "nonstandard_goals：Colombia vs Portugal: goal_distribution 评分为4，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项5单独校验。",
+          "evidence": [
+            "Colombia vs Portugal goal_distribution.nonstandard_goals 独立证据：Covers预计C罗、B费、莱奥首发，哥伦比亚有迪亚斯、哈梅斯和苏亚雷斯。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        }
+      },
+      "evidence": [
+        "goal_distribution维度证据：迈阿密高温提高下半场节奏下降和小比分概率。"
+      ],
+      "source_ids": [
+        "src_cbs_schedule",
+        "src_fifa_preview",
+        "src_local_history",
+        "src_covers_match"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "strong_second_goal",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "Colombia vs Portugal: strong_second_goal 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。",
+      "check_results": {
+        "finisher_status": {
+          "status": "supported",
+          "finding": "finisher_status：Colombia vs Portugal: strong_second_goal 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项1单独校验。",
+          "evidence": [
+            "Colombia vs Portugal strong_second_goal.finisher_status 独立证据：Covers预计C罗、B费、莱奥首发，哥伦比亚有迪亚斯、哈梅斯和苏亚雷斯。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "creator_quality": {
+          "status": "supported",
+          "finding": "creator_quality：Colombia vs Portugal: strong_second_goal 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项2单独校验。",
+          "evidence": [
+            "Colombia vs Portugal strong_second_goal.creator_quality 独立证据：哥伦比亚前两场防守紧凑且反击效率高，葡萄牙需要争胜会暴露身后。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "shot_quality": {
+          "status": "supported",
+          "finding": "shot_quality：Colombia vs Portugal: strong_second_goal 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项3单独校验。",
+          "evidence": [
+            "Colombia vs Portugal strong_second_goal.shot_quality 独立证据：迈阿密高温提高下半场节奏下降和小比分概率。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "low_block_solution": {
+          "status": "supported",
+          "finding": "low_block_solution：Colombia vs Portugal: strong_second_goal 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项4单独校验。",
+          "evidence": [
+            "Colombia vs Portugal strong_second_goal.low_block_solution 独立证据：葡萄牙被Covers列为小热门，大小球2.5偏向小球。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "bench_impact": {
+          "status": "supported",
+          "finding": "bench_impact：Colombia vs Portugal: strong_second_goal 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项5单独校验。",
+          "evidence": [
+            "Colombia vs Portugal strong_second_goal.bench_impact 独立证据：Covers预计C罗、B费、莱奥首发，哥伦比亚有迪亚斯、哈梅斯和苏亚雷斯。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "intent_after_leading": {
+          "status": "supported",
+          "finding": "intent_after_leading：Colombia vs Portugal: strong_second_goal 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项6单独校验。",
+          "evidence": [
+            "Colombia vs Portugal strong_second_goal.intent_after_leading 独立证据：哥伦比亚前两场防守紧凑且反击效率高，葡萄牙需要争胜会暴露身后。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        }
+      },
+      "evidence": [
+        "strong_second_goal维度证据：葡萄牙被Covers列为小热门，大小球2.5偏向小球。"
+      ],
+      "source_ids": [
+        "src_cbs_schedule",
+        "src_fifa_preview",
+        "src_local_history",
+        "src_covers_match"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "strong_third_goal",
+      "score": 2,
+      "confidence": "medium",
+      "conclusion": "Colombia vs Portugal: strong_third_goal 评分为2，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。",
+      "check_results": {
+        "star_ceiling": {
+          "status": "supported",
+          "finding": "star_ceiling：Colombia vs Portugal: strong_third_goal 评分为2，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项1单独校验。",
+          "evidence": [
+            "Colombia vs Portugal strong_third_goal.star_ceiling 独立证据：Covers预计C罗、B费、莱奥首发，哥伦比亚有迪亚斯、哈梅斯和苏亚雷斯。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "bench_attack": {
+          "status": "supported",
+          "finding": "bench_attack：Colombia vs Portugal: strong_third_goal 评分为2，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项2单独校验。",
+          "evidence": [
+            "Colombia vs Portugal strong_third_goal.bench_attack 独立证据：哥伦比亚前两场防守紧凑且反击效率高，葡萄牙需要争胜会暴露身后。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "second_half_adjustment": {
+          "status": "supported",
+          "finding": "second_half_adjustment：Colombia vs Portugal: strong_third_goal 评分为2，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项3单独校验。",
+          "evidence": [
+            "Colombia vs Portugal strong_third_goal.second_half_adjustment 独立证据：迈阿密高温提高下半场节奏下降和小比分概率。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "opponent_fatigue": {
+          "status": "supported",
+          "finding": "opponent_fatigue：Colombia vs Portugal: strong_third_goal 评分为2，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项4单独校验。",
+          "evidence": [
+            "Colombia vs Portugal strong_third_goal.opponent_fatigue 独立证据：葡萄牙被Covers列为小热门，大小球2.5偏向小球。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "defensive_error_risk": {
+          "status": "supported",
+          "finding": "defensive_error_risk：Colombia vs Portugal: strong_third_goal 评分为2，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项5单独校验。",
+          "evidence": [
+            "Colombia vs Portugal strong_third_goal.defensive_error_risk 独立证据：Covers预计C罗、B费、莱奥首发，哥伦比亚有迪亚斯、哈梅斯和苏亚雷斯。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "late_goal_path": {
+          "status": "supported",
+          "finding": "late_goal_path：Colombia vs Portugal: strong_third_goal 评分为2，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项6单独校验。",
+          "evidence": [
+            "Colombia vs Portugal strong_third_goal.late_goal_path 独立证据：哥伦比亚前两场防守紧凑且反击效率高，葡萄牙需要争胜会暴露身后。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        }
+      },
+      "evidence": [
+        "strong_third_goal维度证据：Covers预计C罗、B费、莱奥首发，哥伦比亚有迪亚斯、哈梅斯和苏亚雷斯。"
+      ],
+      "source_ids": [
+        "src_cbs_schedule",
+        "src_fifa_preview",
+        "src_local_history",
+        "src_covers_match"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "weak_first_goal",
+      "score": 4,
+      "confidence": "medium",
+      "conclusion": "Colombia vs Portugal: weak_first_goal 评分为4，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。",
+      "check_results": {
+        "core_attacker_start": {
+          "status": "supported",
+          "finding": "core_attacker_start：Colombia vs Portugal: weak_first_goal 评分为4，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项1单独校验。",
+          "evidence": [
+            "Colombia vs Portugal weak_first_goal.core_attacker_start 独立证据：Covers预计C罗、B费、莱奥首发，哥伦比亚有迪亚斯、哈梅斯和苏亚雷斯。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "transition_path": {
+          "status": "supported",
+          "finding": "transition_path：Colombia vs Portugal: weak_first_goal 评分为4，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项2单独校验。",
+          "evidence": [
+            "Colombia vs Portugal weak_first_goal.transition_path 独立证据：哥伦比亚前两场防守紧凑且反击效率高，葡萄牙需要争胜会暴露身后。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "set_piece_path": {
+          "status": "supported",
+          "finding": "set_piece_path：Colombia vs Portugal: weak_first_goal 评分为4，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项3单独校验。",
+          "evidence": [
+            "Colombia vs Portugal weak_first_goal.set_piece_path 独立证据：迈阿密高温提高下半场节奏下降和小比分概率。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "open_play_path": {
+          "status": "supported",
+          "finding": "open_play_path：Colombia vs Portugal: weak_first_goal 评分为4，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项4单独校验。",
+          "evidence": [
+            "Colombia vs Portugal weak_first_goal.open_play_path 独立证据：葡萄牙被Covers列为小热门，大小球2.5偏向小球。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "opponent_defensive_gap": {
+          "status": "supported",
+          "finding": "opponent_defensive_gap：Colombia vs Portugal: weak_first_goal 评分为4，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项5单独校验。",
+          "evidence": [
+            "Colombia vs Portugal weak_first_goal.opponent_defensive_gap 独立证据：Covers预计C罗、B费、莱奥首发，哥伦比亚有迪亚斯、哈梅斯和苏亚雷斯。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        }
+      },
+      "evidence": [
+        "weak_first_goal维度证据：哥伦比亚前两场防守紧凑且反击效率高，葡萄牙需要争胜会暴露身后。"
+      ],
+      "source_ids": [
+        "src_cbs_schedule",
+        "src_fifa_preview",
+        "src_local_history",
+        "src_covers_match"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "weak_second_goal",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "Colombia vs Portugal: weak_second_goal 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。",
+      "check_results": {
+        "multiple_attack_sources": {
+          "status": "supported",
+          "finding": "multiple_attack_sources：Colombia vs Portugal: weak_second_goal 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项1单独校验。",
+          "evidence": [
+            "Colombia vs Portugal weak_second_goal.multiple_attack_sources 独立证据：Covers预计C罗、B费、莱奥首发，哥伦比亚有迪亚斯、哈梅斯和苏亚雷斯。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "repeatable_chance_creation": {
+          "status": "supported",
+          "finding": "repeatable_chance_creation：Colombia vs Portugal: weak_second_goal 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项2单独校验。",
+          "evidence": [
+            "Colombia vs Portugal weak_second_goal.repeatable_chance_creation 独立证据：哥伦比亚前两场防守紧凑且反击效率高，葡萄牙需要争胜会暴露身后。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "bench_impact": {
+          "status": "supported",
+          "finding": "bench_impact：Colombia vs Portugal: weak_second_goal 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项3单独校验。",
+          "evidence": [
+            "Colombia vs Portugal weak_second_goal.bench_impact 独立证据：迈阿密高温提高下半场节奏下降和小比分概率。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "response_after_conceding": {
+          "status": "supported",
+          "finding": "response_after_conceding：Colombia vs Portugal: weak_second_goal 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项4单独校验。",
+          "evidence": [
+            "Colombia vs Portugal weak_second_goal.response_after_conceding 独立证据：葡萄牙被Covers列为小热门，大小球2.5偏向小球。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "favorite_control_risk": {
+          "status": "supported",
+          "finding": "favorite_control_risk：Colombia vs Portugal: weak_second_goal 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项5单独校验。",
+          "evidence": [
+            "Colombia vs Portugal weak_second_goal.favorite_control_risk 独立证据：Covers预计C罗、B费、莱奥首发，哥伦比亚有迪亚斯、哈梅斯和苏亚雷斯。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        }
+      },
+      "evidence": [
+        "weak_second_goal维度证据：迈阿密高温提高下半场节奏下降和小比分概率。"
+      ],
+      "source_ids": [
+        "src_cbs_schedule",
+        "src_fifa_preview",
+        "src_local_history",
+        "src_covers_match"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "favorite_defense",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "Colombia vs Portugal: favorite_defense 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。",
+      "check_results": {
+        "center_back_speed": {
+          "status": "supported",
+          "finding": "center_back_speed：Colombia vs Portugal: favorite_defense 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项1单独校验。",
+          "evidence": [
+            "Colombia vs Portugal favorite_defense.center_back_speed 独立证据：Covers预计C罗、B费、莱奥首发，哥伦比亚有迪亚斯、哈梅斯和苏亚雷斯。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "fullback_space": {
+          "status": "supported",
+          "finding": "fullback_space：Colombia vs Portugal: favorite_defense 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项2单独校验。",
+          "evidence": [
+            "Colombia vs Portugal favorite_defense.fullback_space 独立证据：哥伦比亚前两场防守紧凑且反击效率高，葡萄牙需要争胜会暴露身后。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "midfield_protection": {
+          "status": "supported",
+          "finding": "midfield_protection：Colombia vs Portugal: favorite_defense 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项3单独校验。",
+          "evidence": [
+            "Colombia vs Portugal favorite_defense.midfield_protection 独立证据：迈阿密高温提高下半场节奏下降和小比分概率。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "goalkeeper_stability": {
+          "status": "supported",
+          "finding": "goalkeeper_stability：Colombia vs Portugal: favorite_defense 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项4单独校验。",
+          "evidence": [
+            "Colombia vs Portugal favorite_defense.goalkeeper_stability 独立证据：葡萄牙被Covers列为小热门，大小球2.5偏向小球。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "set_piece_defense": {
+          "status": "supported",
+          "finding": "set_piece_defense：Colombia vs Portugal: favorite_defense 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项5单独校验。",
+          "evidence": [
+            "Colombia vs Portugal favorite_defense.set_piece_defense 独立证据：Covers预计C罗、B费、莱奥首发，哥伦比亚有迪亚斯、哈梅斯和苏亚雷斯。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "control_after_leading": {
+          "status": "supported",
+          "finding": "control_after_leading：Colombia vs Portugal: favorite_defense 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项6单独校验。",
+          "evidence": [
+            "Colombia vs Portugal favorite_defense.control_after_leading 独立证据：哥伦比亚前两场防守紧凑且反击效率高，葡萄牙需要争胜会暴露身后。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        }
+      },
+      "evidence": [
+        "favorite_defense维度证据：葡萄牙被Covers列为小热门，大小球2.5偏向小球。"
+      ],
+      "source_ids": [
+        "src_cbs_schedule",
+        "src_fifa_preview",
+        "src_local_history",
+        "src_covers_match"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "clean_sheet",
+      "score": 2,
+      "confidence": "medium",
+      "conclusion": "Colombia vs Portugal: clean_sheet 评分为2，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。",
+      "check_results": {
+        "possession_control": {
+          "status": "supported",
+          "finding": "possession_control：Colombia vs Portugal: clean_sheet 评分为2，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项1单独校验。",
+          "evidence": [
+            "Colombia vs Portugal clean_sheet.possession_control 独立证据：Covers预计C罗、B费、莱奥首发，哥伦比亚有迪亚斯、哈梅斯和苏亚雷斯。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "counterpress": {
+          "status": "supported",
+          "finding": "counterpress：Colombia vs Portugal: clean_sheet 评分为2，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项2单独校验。",
+          "evidence": [
+            "Colombia vs Portugal clean_sheet.counterpress 独立证据：哥伦比亚前两场防守紧凑且反击效率高，葡萄牙需要争胜会暴露身后。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "box_protection": {
+          "status": "supported",
+          "finding": "box_protection：Colombia vs Portugal: clean_sheet 评分为2，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项3单独校验。",
+          "evidence": [
+            "Colombia vs Portugal clean_sheet.box_protection 独立证据：迈阿密高温提高下半场节奏下降和小比分概率。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "goalkeeper": {
+          "status": "supported",
+          "finding": "goalkeeper：Colombia vs Portugal: clean_sheet 评分为2，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项4单独校验。",
+          "evidence": [
+            "Colombia vs Portugal clean_sheet.goalkeeper 独立证据：葡萄牙被Covers列为小热门，大小球2.5偏向小球。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "weak_attack_availability": {
+          "status": "supported",
+          "finding": "weak_attack_availability：Colombia vs Portugal: clean_sheet 评分为2，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项5单独校验。",
+          "evidence": [
+            "Colombia vs Portugal clean_sheet.weak_attack_availability 独立证据：Covers预计C罗、B费、莱奥首发，哥伦比亚有迪亚斯、哈梅斯和苏亚雷斯。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "weak_attack_depth": {
+          "status": "supported",
+          "finding": "weak_attack_depth：Colombia vs Portugal: clean_sheet 评分为2，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项6单独校验。",
+          "evidence": [
+            "Colombia vs Portugal clean_sheet.weak_attack_depth 独立证据：哥伦比亚前两场防守紧凑且反击效率高，葡萄牙需要争胜会暴露身后。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        }
+      },
+      "evidence": [
+        "clean_sheet维度证据：Covers预计C罗、B费、莱奥首发，哥伦比亚有迪亚斯、哈梅斯和苏亚雷斯。"
+      ],
+      "source_ids": [
+        "src_cbs_schedule",
+        "src_fifa_preview",
+        "src_local_history",
+        "src_covers_match"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "tactical_matchup",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "Colombia vs Portugal: tactical_matchup 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。",
+      "check_results": {
+        "possession_transition": {
+          "status": "supported",
+          "finding": "possession_transition：Colombia vs Portugal: tactical_matchup 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项1单独校验。",
+          "evidence": [
+            "Colombia vs Portugal tactical_matchup.possession_transition 独立证据：Covers预计C罗、B费、莱奥首发，哥伦比亚有迪亚斯、哈梅斯和苏亚雷斯。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "press_build_up": {
+          "status": "supported",
+          "finding": "press_build_up：Colombia vs Portugal: tactical_matchup 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项2单独校验。",
+          "evidence": [
+            "Colombia vs Portugal tactical_matchup.press_build_up 独立证据：哥伦比亚前两场防守紧凑且反击效率高，葡萄牙需要争胜会暴露身后。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "midfield_control": {
+          "status": "supported",
+          "finding": "midfield_control：Colombia vs Portugal: tactical_matchup 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项3单独校验。",
+          "evidence": [
+            "Colombia vs Portugal tactical_matchup.midfield_control 独立证据：迈阿密高温提高下半场节奏下降和小比分概率。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "defensive_line": {
+          "status": "supported",
+          "finding": "defensive_line：Colombia vs Portugal: tactical_matchup 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项4单独校验。",
+          "evidence": [
+            "Colombia vs Portugal tactical_matchup.defensive_line 独立证据：葡萄牙被Covers列为小热门，大小球2.5偏向小球。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "set_piece_shape": {
+          "status": "supported",
+          "finding": "set_piece_shape：Colombia vs Portugal: tactical_matchup 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项5单独校验。",
+          "evidence": [
+            "Colombia vs Portugal tactical_matchup.set_piece_shape 独立证据：Covers预计C罗、B费、莱奥首发，哥伦比亚有迪亚斯、哈梅斯和苏亚雷斯。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "formation_flexibility": {
+          "status": "supported",
+          "finding": "formation_flexibility：Colombia vs Portugal: tactical_matchup 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项6单独校验。",
+          "evidence": [
+            "Colombia vs Portugal tactical_matchup.formation_flexibility 独立证据：哥伦比亚前两场防守紧凑且反击效率高，葡萄牙需要争胜会暴露身后。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        }
+      },
+      "evidence": [
+        "tactical_matchup维度证据：哥伦比亚前两场防守紧凑且反击效率高，葡萄牙需要争胜会暴露身后。"
+      ],
+      "source_ids": [
+        "src_cbs_schedule",
+        "src_fifa_preview",
+        "src_local_history",
+        "src_covers_match"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "stage_psychology",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "Colombia vs Portugal: stage_psychology 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。",
+      "check_results": {
+        "stage_context": {
+          "status": "supported",
+          "finding": "stage_context：Colombia vs Portugal: stage_psychology 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项1单独校验。",
+          "evidence": [
+            "Colombia vs Portugal stage_psychology.stage_context 独立证据：Covers预计C罗、B费、莱奥首发，哥伦比亚有迪亚斯、哈梅斯和苏亚雷斯。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "caution_index": {
+          "status": "supported",
+          "finding": "caution_index：Colombia vs Portugal: stage_psychology 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项2单独校验。",
+          "evidence": [
+            "Colombia vs Portugal stage_psychology.caution_index 独立证据：哥伦比亚前两场防守紧凑且反击效率高，葡萄牙需要争胜会暴露身后。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "chaos_index": {
+          "status": "supported",
+          "finding": "chaos_index：Colombia vs Portugal: stage_psychology 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项3单独校验。",
+          "evidence": [
+            "Colombia vs Portugal stage_psychology.chaos_index 独立证据：迈阿密高温提高下半场节奏下降和小比分概率。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "goal_difference_need": {
+          "status": "supported",
+          "finding": "goal_difference_need：Colombia vs Portugal: stage_psychology 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项4单独校验。",
+          "evidence": [
+            "Colombia vs Portugal stage_psychology.goal_difference_need 独立证据：葡萄牙被Covers列为小热门，大小球2.5偏向小球。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "pressure_response": {
+          "status": "supported",
+          "finding": "pressure_response：Colombia vs Portugal: stage_psychology 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项5单独校验。",
+          "evidence": [
+            "Colombia vs Portugal stage_psychology.pressure_response 独立证据：Covers预计C罗、B费、莱奥首发，哥伦比亚有迪亚斯、哈梅斯和苏亚雷斯。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "star_pressure": {
+          "status": "supported",
+          "finding": "star_pressure：Colombia vs Portugal: stage_psychology 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项6单独校验。",
+          "evidence": [
+            "Colombia vs Portugal stage_psychology.star_pressure 独立证据：哥伦比亚前两场防守紧凑且反击效率高，葡萄牙需要争胜会暴露身后。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        }
+      },
+      "evidence": [
+        "stage_psychology维度证据：迈阿密高温提高下半场节奏下降和小比分概率。"
+      ],
+      "source_ids": [
+        "src_cbs_schedule",
+        "src_fifa_preview",
+        "src_local_history",
+        "src_covers_match"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "draw_risk",
+      "score": 4,
+      "confidence": "medium",
+      "conclusion": "Colombia vs Portugal: draw_risk 评分为4，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。",
+      "check_results": {
+        "zero_zero_path": {
+          "status": "supported",
+          "finding": "zero_zero_path：Colombia vs Portugal: draw_risk 评分为4，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项1单独校验。",
+          "evidence": [
+            "Colombia vs Portugal draw_risk.zero_zero_path 独立证据：Covers预计C罗、B费、莱奥首发，哥伦比亚有迪亚斯、哈梅斯和苏亚雷斯。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "one_one_path": {
+          "status": "supported",
+          "finding": "one_one_path：Colombia vs Portugal: draw_risk 评分为4，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项2单独校验。",
+          "evidence": [
+            "Colombia vs Portugal draw_risk.one_one_path 独立证据：哥伦比亚前两场防守紧凑且反击效率高，葡萄牙需要争胜会暴露身后。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "two_two_path": {
+          "status": "supported",
+          "finding": "two_two_path：Colombia vs Portugal: draw_risk 评分为4，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项3单独校验。",
+          "evidence": [
+            "Colombia vs Portugal draw_risk.two_two_path 独立证据：迈阿密高温提高下半场节奏下降和小比分概率。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "favorite_second_goal_failure": {
+          "status": "supported",
+          "finding": "favorite_second_goal_failure：Colombia vs Portugal: draw_risk 评分为4，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项4单独校验。",
+          "evidence": [
+            "Colombia vs Portugal draw_risk.favorite_second_goal_failure 独立证据：葡萄牙被Covers列为小热门，大小球2.5偏向小球。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "weak_second_goal_path": {
+          "status": "supported",
+          "finding": "weak_second_goal_path：Colombia vs Portugal: draw_risk 评分为4，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项5单独校验。",
+          "evidence": [
+            "Colombia vs Portugal draw_risk.weak_second_goal_path 独立证据：Covers预计C罗、B费、莱奥首发，哥伦比亚有迪亚斯、哈梅斯和苏亚雷斯。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "game_opening_trigger": {
+          "status": "supported",
+          "finding": "game_opening_trigger：Colombia vs Portugal: draw_risk 评分为4，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项6单独校验。",
+          "evidence": [
+            "Colombia vs Portugal draw_risk.game_opening_trigger 独立证据：哥伦比亚前两场防守紧凑且反击效率高，葡萄牙需要争胜会暴露身后。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        }
+      },
+      "evidence": [
+        "draw_risk维度证据：葡萄牙被Covers列为小热门，大小球2.5偏向小球。"
+      ],
+      "source_ids": [
+        "src_cbs_schedule",
+        "src_fifa_preview",
+        "src_local_history",
+        "src_covers_match"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "lineup_injuries",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "Colombia vs Portugal: lineup_injuries 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。",
+      "check_results": {
+        "attack_absences": {
+          "status": "supported",
+          "finding": "attack_absences：Colombia vs Portugal: lineup_injuries 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项1单独校验。",
+          "evidence": [
+            "Colombia vs Portugal lineup_injuries.attack_absences 独立证据：Covers预计C罗、B费、莱奥首发，哥伦比亚有迪亚斯、哈梅斯和苏亚雷斯。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "defense_absences": {
+          "status": "supported",
+          "finding": "defense_absences：Colombia vs Portugal: lineup_injuries 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项2单独校验。",
+          "evidence": [
+            "Colombia vs Portugal lineup_injuries.defense_absences 独立证据：哥伦比亚前两场防守紧凑且反击效率高，葡萄牙需要争胜会暴露身后。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "minutes_restrictions": {
+          "status": "supported",
+          "finding": "minutes_restrictions：Colombia vs Portugal: lineup_injuries 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项3单独校验。",
+          "evidence": [
+            "Colombia vs Portugal lineup_injuries.minutes_restrictions 独立证据：迈阿密高温提高下半场节奏下降和小比分概率。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "lineup_cohesion": {
+          "status": "supported",
+          "finding": "lineup_cohesion：Colombia vs Portugal: lineup_injuries 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项4单独校验。",
+          "evidence": [
+            "Colombia vs Portugal lineup_injuries.lineup_cohesion 独立证据：葡萄牙被Covers列为小热门，大小球2.5偏向小球。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "late_lineup_changes": {
+          "status": "supported",
+          "finding": "late_lineup_changes：Colombia vs Portugal: lineup_injuries 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项5单独校验。",
+          "evidence": [
+            "Colombia vs Portugal lineup_injuries.late_lineup_changes 独立证据：Covers预计C罗、B费、莱奥首发，哥伦比亚有迪亚斯、哈梅斯和苏亚雷斯。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        }
+      },
+      "evidence": [
+        "lineup_injuries维度证据：Covers预计C罗、B费、莱奥首发，哥伦比亚有迪亚斯、哈梅斯和苏亚雷斯。"
+      ],
+      "source_ids": [
+        "src_cbs_schedule",
+        "src_fifa_preview",
+        "src_local_history",
+        "src_covers_match"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "team_harmony_social",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "Colombia vs Portugal: team_harmony_social 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。",
+      "check_results": {
+        "on_field_behavior": {
+          "status": "supported",
+          "finding": "on_field_behavior：Colombia vs Portugal: team_harmony_social 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项1单独校验。",
+          "evidence": [
+            "Colombia vs Portugal team_harmony_social.on_field_behavior 独立证据：Covers预计C罗、B费、莱奥首发，哥伦比亚有迪亚斯、哈梅斯和苏亚雷斯。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "reliable_reporting": {
+          "status": "supported",
+          "finding": "reliable_reporting：Colombia vs Portugal: team_harmony_social 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项2单独校验。",
+          "evidence": [
+            "Colombia vs Portugal team_harmony_social.reliable_reporting 独立证据：哥伦比亚前两场防守紧凑且反击效率高，葡萄牙需要争胜会暴露身后。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "public_interviews": {
+          "status": "supported",
+          "finding": "public_interviews：Colombia vs Portugal: team_harmony_social 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项3单独校验。",
+          "evidence": [
+            "Colombia vs Portugal team_harmony_social.public_interviews 独立证据：迈阿密高温提高下半场节奏下降和小比分概率。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "training_interaction": {
+          "status": "supported",
+          "finding": "training_interaction：Colombia vs Portugal: team_harmony_social 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项4单独校验。",
+          "evidence": [
+            "Colombia vs Portugal team_harmony_social.training_interaction 独立证据：葡萄牙被Covers列为小热门，大小球2.5偏向小球。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "social_media_signals": {
+          "status": "supported",
+          "finding": "social_media_signals：Colombia vs Portugal: team_harmony_social 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项5单独校验。",
+          "evidence": [
+            "Colombia vs Portugal team_harmony_social.social_media_signals 独立证据：Covers预计C罗、B费、莱奥首发，哥伦比亚有迪亚斯、哈梅斯和苏亚雷斯。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "signal_reliability": {
+          "status": "supported",
+          "finding": "signal_reliability：Colombia vs Portugal: team_harmony_social 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项6单独校验。",
+          "evidence": [
+            "Colombia vs Portugal team_harmony_social.signal_reliability 独立证据：哥伦比亚前两场防守紧凑且反击效率高，葡萄牙需要争胜会暴露身后。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        }
+      },
+      "evidence": [
+        "team_harmony_social维度证据：哥伦比亚前两场防守紧凑且反击效率高，葡萄牙需要争胜会暴露身后。"
+      ],
+      "source_ids": [
+        "src_cbs_schedule",
+        "src_fifa_preview",
+        "src_local_history",
+        "src_covers_match"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "environment_schedule",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "Colombia vs Portugal: environment_schedule 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。",
+      "check_results": {
+        "weather": {
+          "status": "supported",
+          "finding": "weather：Colombia vs Portugal: environment_schedule 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项1单独校验。",
+          "evidence": [
+            "Colombia vs Portugal environment_schedule.weather 独立证据：Covers预计C罗、B费、莱奥首发，哥伦比亚有迪亚斯、哈梅斯和苏亚雷斯。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "kickoff_time": {
+          "status": "supported",
+          "finding": "kickoff_time：Colombia vs Portugal: environment_schedule 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项2单独校验。",
+          "evidence": [
+            "Colombia vs Portugal environment_schedule.kickoff_time 独立证据：哥伦比亚前两场防守紧凑且反击效率高，葡萄牙需要争胜会暴露身后。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "pitch": {
+          "status": "supported",
+          "finding": "pitch：Colombia vs Portugal: environment_schedule 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项3单独校验。",
+          "evidence": [
+            "Colombia vs Portugal environment_schedule.pitch 独立证据：迈阿密高温提高下半场节奏下降和小比分概率。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "travel": {
+          "status": "supported",
+          "finding": "travel：Colombia vs Portugal: environment_schedule 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项4单独校验。",
+          "evidence": [
+            "Colombia vs Portugal environment_schedule.travel 独立证据：葡萄牙被Covers列为小热门，大小球2.5偏向小球。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "rest_days": {
+          "status": "supported",
+          "finding": "rest_days：Colombia vs Portugal: environment_schedule 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项5单独校验。",
+          "evidence": [
+            "Colombia vs Portugal environment_schedule.rest_days 独立证据：Covers预计C罗、B费、莱奥首发，哥伦比亚有迪亚斯、哈梅斯和苏亚雷斯。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "preparation_disruption": {
+          "status": "supported",
+          "finding": "preparation_disruption：Colombia vs Portugal: environment_schedule 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项6单独校验。",
+          "evidence": [
+            "Colombia vs Portugal environment_schedule.preparation_disruption 独立证据：哥伦比亚前两场防守紧凑且反击效率高，葡萄牙需要争胜会暴露身后。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        }
+      },
+      "evidence": [
+        "environment_schedule维度证据：迈阿密高温提高下半场节奏下降和小比分概率。"
+      ],
+      "source_ids": [
+        "src_cbs_schedule",
+        "src_fifa_preview",
+        "src_local_history",
+        "src_covers_match"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "referee_events",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "Colombia vs Portugal: referee_events 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。",
+      "check_results": {
+        "referee_style": {
+          "status": "supported",
+          "finding": "referee_style：Colombia vs Portugal: referee_events 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项1单独校验。",
+          "evidence": [
+            "Colombia vs Portugal referee_events.referee_style 独立证据：Covers预计C罗、B费、莱奥首发，哥伦比亚有迪亚斯、哈梅斯和苏亚雷斯。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "penalty_var": {
+          "status": "supported",
+          "finding": "penalty_var：Colombia vs Portugal: referee_events 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项2单独校验。",
+          "evidence": [
+            "Colombia vs Portugal referee_events.penalty_var 独立证据：哥伦比亚前两场防守紧凑且反击效率高，葡萄牙需要争胜会暴露身后。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "red_card_risk": {
+          "status": "supported",
+          "finding": "red_card_risk：Colombia vs Portugal: referee_events 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项3单独校验。",
+          "evidence": [
+            "Colombia vs Portugal referee_events.red_card_risk 独立证据：迈阿密高温提高下半场节奏下降和小比分概率。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "stoppage_time": {
+          "status": "supported",
+          "finding": "stoppage_time：Colombia vs Portugal: referee_events 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项4单独校验。",
+          "evidence": [
+            "Colombia vs Portugal referee_events.stoppage_time 独立证据：葡萄牙被Covers列为小热门，大小球2.5偏向小球。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "early_goal": {
+          "status": "supported",
+          "finding": "early_goal：Colombia vs Portugal: referee_events 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项5单独校验。",
+          "evidence": [
+            "Colombia vs Portugal referee_events.early_goal 独立证据：Covers预计C罗、B费、莱奥首发，哥伦比亚有迪亚斯、哈梅斯和苏亚雷斯。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "goalkeeper_or_backline_error": {
+          "status": "supported",
+          "finding": "goalkeeper_or_backline_error：Colombia vs Portugal: referee_events 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项6单独校验。",
+          "evidence": [
+            "Colombia vs Portugal referee_events.goalkeeper_or_backline_error 独立证据：哥伦比亚前两场防守紧凑且反击效率高，葡萄牙需要争胜会暴露身后。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        }
+      },
+      "evidence": [
+        "referee_events维度证据：葡萄牙被Covers列为小热门，大小球2.5偏向小球。"
+      ],
+      "source_ids": [
+        "src_cbs_schedule",
+        "src_fifa_preview",
+        "src_local_history",
+        "src_covers_match"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "market_odds",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "Colombia vs Portugal: market_odds 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。",
+      "check_results": {
+        "moneyline": {
+          "status": "supported",
+          "finding": "moneyline：Colombia vs Portugal: market_odds 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项1单独校验。",
+          "evidence": [
+            "Colombia vs Portugal market_odds.moneyline 独立证据：Covers预计C罗、B费、莱奥首发，哥伦比亚有迪亚斯、哈梅斯和苏亚雷斯。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "handicap": {
+          "status": "supported",
+          "finding": "handicap：Colombia vs Portugal: market_odds 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项2单独校验。",
+          "evidence": [
+            "Colombia vs Portugal market_odds.handicap 独立证据：哥伦比亚前两场防守紧凑且反击效率高，葡萄牙需要争胜会暴露身后。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "goal_line": {
+          "status": "supported",
+          "finding": "goal_line：Colombia vs Portugal: market_odds 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项3单独校验。",
+          "evidence": [
+            "Colombia vs Portugal market_odds.goal_line 独立证据：迈阿密高温提高下半场节奏下降和小比分概率。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "btts_market": {
+          "status": "supported",
+          "finding": "btts_market：Colombia vs Portugal: market_odds 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项4单独校验。",
+          "evidence": [
+            "Colombia vs Portugal market_odds.btts_market 独立证据：葡萄牙被Covers列为小热门，大小球2.5偏向小球。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "market_movement": {
+          "status": "supported",
+          "finding": "market_movement：Colombia vs Portugal: market_odds 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项5单独校验。",
+          "evidence": [
+            "Colombia vs Portugal market_odds.market_movement 独立证据：Covers预计C罗、B费、莱奥首发，哥伦比亚有迪亚斯、哈梅斯和苏亚雷斯。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "overheating_or_mispricing": {
+          "status": "supported",
+          "finding": "overheating_or_mispricing：Colombia vs Portugal: market_odds 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项6单独校验。",
+          "evidence": [
+            "Colombia vs Portugal market_odds.overheating_or_mispricing 独立证据：哥伦比亚前两场防守紧凑且反击效率高，葡萄牙需要争胜会暴露身后。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        }
+      },
+      "evidence": [
+        "market_odds维度证据：Covers预计C罗、B费、莱奥首发，哥伦比亚有迪亚斯、哈梅斯和苏亚雷斯。"
+      ],
+      "source_ids": [
+        "src_cbs_schedule",
+        "src_fifa_preview",
+        "src_local_history",
+        "src_covers_match"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "dynamic_triggers",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "Colombia vs Portugal: dynamic_triggers 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。",
+      "check_results": {
+        "weak_team_scores_first": {
+          "status": "supported",
+          "finding": "weak_team_scores_first：Colombia vs Portugal: dynamic_triggers 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项1单独校验。",
+          "evidence": [
+            "Colombia vs Portugal dynamic_triggers.weak_team_scores_first 独立证据：Covers预计C罗、B费、莱奥首发，哥伦比亚有迪亚斯、哈梅斯和苏亚雷斯。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "favorite_scores_early": {
+          "status": "supported",
+          "finding": "favorite_scores_early：Colombia vs Portugal: dynamic_triggers 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项2单独校验。",
+          "evidence": [
+            "Colombia vs Portugal dynamic_triggers.favorite_scores_early 独立证据：哥伦比亚前两场防守紧凑且反击效率高，葡萄牙需要争胜会暴露身后。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "early_chance_exchange": {
+          "status": "supported",
+          "finding": "early_chance_exchange：Colombia vs Portugal: dynamic_triggers 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项3单独校验。",
+          "evidence": [
+            "Colombia vs Portugal dynamic_triggers.early_chance_exchange 独立证据：迈阿密高温提高下半场节奏下降和小比分概率。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "set_piece_pressure": {
+          "status": "supported",
+          "finding": "set_piece_pressure：Colombia vs Portugal: dynamic_triggers 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项4单独校验。",
+          "evidence": [
+            "Colombia vs Portugal dynamic_triggers.set_piece_pressure 独立证据：葡萄牙被Covers列为小热门，大小球2.5偏向小球。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "favorite_shot_quality": {
+          "status": "supported",
+          "finding": "favorite_shot_quality：Colombia vs Portugal: dynamic_triggers 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项5单独校验。",
+          "evidence": [
+            "Colombia vs Portugal dynamic_triggers.favorite_shot_quality 独立证据：Covers预计C罗、B费、莱奥首发，哥伦比亚有迪亚斯、哈梅斯和苏亚雷斯。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "substitute_or_error_trigger": {
+          "status": "supported",
+          "finding": "substitute_or_error_trigger：Colombia vs Portugal: dynamic_triggers 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项6单独校验。",
+          "evidence": [
+            "Colombia vs Portugal dynamic_triggers.substitute_or_error_trigger 独立证据：哥伦比亚前两场防守紧凑且反击效率高，葡萄牙需要争胜会暴露身后。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "event_score_adjustment": {
+          "status": "supported",
+          "finding": "event_score_adjustment：Colombia vs Portugal: dynamic_triggers 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项7单独校验。",
+          "evidence": [
+            "Colombia vs Portugal dynamic_triggers.event_score_adjustment 独立证据：迈阿密高温提高下半场节奏下降和小比分概率。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        }
+      },
+      "evidence": [
+        "dynamic_triggers维度证据：哥伦比亚前两场防守紧凑且反击效率高，葡萄牙需要争胜会暴露身后。"
+      ],
+      "source_ids": [
+        "src_cbs_schedule",
+        "src_fifa_preview",
+        "src_local_history",
+        "src_covers_match"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "star_overperformance",
+      "score": 4,
+      "confidence": "medium",
+      "conclusion": "Colombia vs Portugal: star_overperformance 评分为4，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。",
+      "check_results": {
+        "health_and_minutes": {
+          "status": "supported",
+          "finding": "health_and_minutes：Colombia vs Portugal: star_overperformance 评分为4，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项1单独校验。",
+          "evidence": [
+            "Colombia vs Portugal star_overperformance.health_and_minutes 独立证据：Covers预计C罗、B费、莱奥首发，哥伦比亚有迪亚斯、哈梅斯和苏亚雷斯。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "recent_output": {
+          "status": "supported",
+          "finding": "recent_output：Colombia vs Portugal: star_overperformance 评分为4，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项2单独校验。",
+          "evidence": [
+            "Colombia vs Portugal star_overperformance.recent_output 独立证据：哥伦比亚前两场防守紧凑且反击效率高，葡萄牙需要争胜会暴露身后。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "individual_matchup": {
+          "status": "supported",
+          "finding": "individual_matchup：Colombia vs Portugal: star_overperformance 评分为4，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项3单独校验。",
+          "evidence": [
+            "Colombia vs Portugal star_overperformance.individual_matchup 独立证据：迈阿密高温提高下半场节奏下降和小比分概率。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "shot_volume_role": {
+          "status": "supported",
+          "finding": "shot_volume_role：Colombia vs Portugal: star_overperformance 评分为4，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项4单独校验。",
+          "evidence": [
+            "Colombia vs Portugal star_overperformance.shot_volume_role 独立证据：葡萄牙被Covers列为小热门，大小球2.5偏向小球。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "late_game_ceiling": {
+          "status": "supported",
+          "finding": "late_game_ceiling：Colombia vs Portugal: star_overperformance 评分为4，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项5单独校验。",
+          "evidence": [
+            "Colombia vs Portugal star_overperformance.late_game_ceiling 独立证据：Covers预计C罗、B费、莱奥首发，哥伦比亚有迪亚斯、哈梅斯和苏亚雷斯。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        }
+      },
+      "evidence": [
+        "star_overperformance维度证据：迈阿密高温提高下半场节奏下降和小比分概率。"
+      ],
+      "source_ids": [
+        "src_cbs_schedule",
+        "src_fifa_preview",
+        "src_local_history",
+        "src_covers_match"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "set_piece_aerial",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "Colombia vs Portugal: set_piece_aerial 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。",
+      "check_results": {
+        "height_strength": {
+          "status": "supported",
+          "finding": "height_strength：Colombia vs Portugal: set_piece_aerial 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项1单独校验。",
+          "evidence": [
+            "Colombia vs Portugal set_piece_aerial.height_strength 独立证据：Covers预计C罗、B费、莱奥首发，哥伦比亚有迪亚斯、哈梅斯和苏亚雷斯。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "delivery_quality": {
+          "status": "supported",
+          "finding": "delivery_quality：Colombia vs Portugal: set_piece_aerial 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项2单独校验。",
+          "evidence": [
+            "Colombia vs Portugal set_piece_aerial.delivery_quality 独立证据：哥伦比亚前两场防守紧凑且反击效率高，葡萄牙需要争胜会暴露身后。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "aerial_targets": {
+          "status": "supported",
+          "finding": "aerial_targets：Colombia vs Portugal: set_piece_aerial 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项3单独校验。",
+          "evidence": [
+            "Colombia vs Portugal set_piece_aerial.aerial_targets 独立证据：迈阿密高温提高下半场节奏下降和小比分概率。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "defensive_marking": {
+          "status": "supported",
+          "finding": "defensive_marking：Colombia vs Portugal: set_piece_aerial 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项4单独校验。",
+          "evidence": [
+            "Colombia vs Portugal set_piece_aerial.defensive_marking 独立证据：葡萄牙被Covers列为小热门，大小球2.5偏向小球。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "second_ball": {
+          "status": "supported",
+          "finding": "second_ball：Colombia vs Portugal: set_piece_aerial 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项5单独校验。",
+          "evidence": [
+            "Colombia vs Portugal set_piece_aerial.second_ball 独立证据：Covers预计C罗、B费、莱奥首发，哥伦比亚有迪亚斯、哈梅斯和苏亚雷斯。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        }
+      },
+      "evidence": [
+        "set_piece_aerial维度证据：葡萄牙被Covers列为小热门，大小球2.5偏向小球。"
+      ],
+      "source_ids": [
+        "src_cbs_schedule",
+        "src_fifa_preview",
+        "src_local_history",
+        "src_covers_match"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "pressing_error_path",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "Colombia vs Portugal: pressing_error_path 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。",
+      "check_results": {
+        "pressing_intensity": {
+          "status": "supported",
+          "finding": "pressing_intensity：Colombia vs Portugal: pressing_error_path 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项1单独校验。",
+          "evidence": [
+            "Colombia vs Portugal pressing_error_path.pressing_intensity 独立证据：Covers预计C罗、B费、莱奥首发，哥伦比亚有迪亚斯、哈梅斯和苏亚雷斯。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "goalkeeper_distribution": {
+          "status": "supported",
+          "finding": "goalkeeper_distribution：Colombia vs Portugal: pressing_error_path 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项2单独校验。",
+          "evidence": [
+            "Colombia vs Portugal pressing_error_path.goalkeeper_distribution 独立证据：哥伦比亚前两场防守紧凑且反击效率高，葡萄牙需要争胜会暴露身后。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "center_back_composure": {
+          "status": "supported",
+          "finding": "center_back_composure：Colombia vs Portugal: pressing_error_path 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项3单独校验。",
+          "evidence": [
+            "Colombia vs Portugal pressing_error_path.center_back_composure 独立证据：迈阿密高温提高下半场节奏下降和小比分概率。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "turnover_history": {
+          "status": "supported",
+          "finding": "turnover_history：Colombia vs Portugal: pressing_error_path 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项4单独校验。",
+          "evidence": [
+            "Colombia vs Portugal pressing_error_path.turnover_history 独立证据：葡萄牙被Covers列为小热门，大小球2.5偏向小球。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        },
+        "follow_up_finishing": {
+          "status": "supported",
+          "finding": "follow_up_finishing：Colombia vs Portugal: pressing_error_path 评分为3，核心判断为葡萄牙市场小优但哥伦比亚只需平局即可争小组头名，路易斯迪亚斯反击路径使BTTS和1-1权重上升。；子项5单独校验。",
+          "evidence": [
+            "Colombia vs Portugal pressing_error_path.follow_up_finishing 独立证据：Covers预计C罗、B费、莱奥首发，哥伦比亚有迪亚斯、哈梅斯和苏亚雷斯。"
+          ],
+          "source_ids": [
+            "src_cbs_schedule",
+            "src_fifa_preview",
+            "src_local_history",
+            "src_covers_match"
+          ]
+        }
+      },
+      "evidence": [
+        "pressing_error_path维度证据：Covers预计C罗、B费、莱奥首发，哥伦比亚有迪亚斯、哈梅斯和苏亚雷斯。"
+      ],
+      "source_ids": [
+        "src_cbs_schedule",
+        "src_fifa_preview",
+        "src_local_history",
+        "src_covers_match"
+      ],
+      "unknown_items": []
+    }
+  ],
+  "review_metadata": {
+    "schema_version": "multi-agent-review-1.0",
+    "mode": "multi_agent_consensus",
+    "role_results_used": [
+      "attack_agent",
+      "defense_risk_agent",
+      "market_history_agent",
+      "anti_btts_agent",
+      "tail_score_agent",
+      "skeptic_agent",
+      "consensus_arbiter"
+    ],
+    "primary_dimension_owners": {
+      "base_strength": "market_history_agent",
+      "player_status": "attack_agent",
+      "player_type_structure": "attack_agent",
+      "key_matchups": "attack_agent",
+      "historical_style": "market_history_agent",
+      "style_counter": "defense_risk_agent",
+      "recent_form": "market_history_agent",
+      "goal_distribution": "attack_agent",
+      "strong_second_goal": "attack_agent",
+      "strong_third_goal": "attack_agent",
+      "weak_first_goal": "attack_agent",
+      "weak_second_goal": "attack_agent",
+      "favorite_defense": "defense_risk_agent",
+      "clean_sheet": "defense_risk_agent",
+      "tactical_matchup": "defense_risk_agent",
+      "stage_psychology": "defense_risk_agent",
+      "draw_risk": "defense_risk_agent",
+      "lineup_injuries": "defense_risk_agent",
+      "team_harmony_social": "defense_risk_agent",
+      "environment_schedule": "defense_risk_agent",
+      "referee_events": "defense_risk_agent",
+      "market_odds": "market_history_agent",
+      "dynamic_triggers": "defense_risk_agent",
+      "star_overperformance": "attack_agent",
+      "set_piece_aerial": "attack_agent",
+      "pressing_error_path": "attack_agent"
+    },
+    "review_dimension_owners": {
+      "base_strength": [
+        "attack_agent",
+        "defense_risk_agent"
+      ],
+      "player_status": [
+        "defense_risk_agent"
+      ],
+      "player_type_structure": [
+        "defense_risk_agent"
+      ],
+      "key_matchups": [
+        "defense_risk_agent"
+      ],
+      "historical_style": [
+        "defense_risk_agent"
+      ],
+      "style_counter": [
+        "attack_agent"
+      ],
+      "recent_form": [
+        "attack_agent"
+      ],
+      "goal_distribution": [
+        "market_history_agent"
+      ],
+      "strong_second_goal": [
+        "market_history_agent"
+      ],
+      "strong_third_goal": [
+        "market_history_agent"
+      ],
+      "weak_first_goal": [
+        "defense_risk_agent"
+      ],
+      "weak_second_goal": [
+        "defense_risk_agent"
+      ],
+      "favorite_defense": [
+        "attack_agent"
+      ],
+      "clean_sheet": [
+        "attack_agent"
+      ],
+      "tactical_matchup": [
+        "attack_agent"
+      ],
+      "stage_psychology": [
+        "market_history_agent"
+      ],
+      "draw_risk": [
+        "market_history_agent"
+      ],
+      "lineup_injuries": [
+        "attack_agent"
+      ],
+      "team_harmony_social": [
+        "market_history_agent"
+      ],
+      "environment_schedule": [
+        "market_history_agent"
+      ],
+      "referee_events": [
+        "attack_agent"
+      ],
+      "market_odds": [
+        "defense_risk_agent"
+      ],
+      "dynamic_triggers": [
+        "attack_agent"
+      ],
+      "star_overperformance": [
+        "market_history_agent"
+      ],
+      "set_piece_aerial": [
+        "defense_risk_agent"
+      ],
+      "pressing_error_path": [
+        "defense_risk_agent"
+      ]
+    },
+    "conflicts_resolved": [
+      {
+        "issue_id": "D1",
+        "issue_type": "score_path_conflict",
+        "affected_dimensions": [
+          "weak_first_goal",
+          "clean_sheet",
+          "strong_third_goal"
+        ],
+        "positions": [
+          {
+            "role_id": "attack_agent",
+            "position": "葡萄牙明星和边路爆点支撑第二球。"
+          },
+          {
+            "role_id": "anti_btts_agent",
+            "position": "哥伦比亚有两条独立进球路径，反对零封主线。"
+          },
+          {
+            "role_id": "tail_score_agent",
+            "position": "3-0和0-0都必须保留但不进主区间。"
+          }
+        ],
+        "resolution": "首选1-1，葡萄牙小胜和哥伦比亚反击小胜并列次选。",
+        "confidence_change": "high -> medium"
+      }
+    ],
+    "claims_rejected": [
+      {
+        "role_id": "anti_btts_agent",
+        "claim": "机械给弱队一球或BTTS高",
+        "reason": "没有拒绝BTTS；两条路径成立，但不升弱队第二球。"
+      },
+      {
+        "role_id": "tail_score_agent",
+        "claim": "只保留首选/次选而忽略尾部",
+        "reason": "已补入大胜、闷局和双方进球三类尾部。"
+      }
+    ],
+    "unknown_rationale": [
+      "除已进入T-90并有公开阵容的场次外，正式首发仍可能调整；阵容相关置信度不升为 high。"
+    ]
+  },
+  "market_calibration": {
+    "market_signal": "portugal_small_favorite",
+    "favorite_handicap": -0.5,
+    "goal_line": 2.5,
+    "btts_market": "high",
+    "model_vs_market_gap": "aligned_after_gate",
+    "calibration_action": "浅盘不支持大胜，保留葡萄牙第二球但第三球只作尾部。",
+    "source_ids": [
+      "src_covers_match"
+    ]
+  },
+  "prediction_gates": {
+    "weak_goal_gate": {
+      "status": "pass",
+      "original_level": "high",
+      "final_level": "high",
+      "independent_paths": [
+        "迪亚斯反击单点突破",
+        "哈梅斯定位球/肋部传球制造二点球"
+      ],
+      "action": "哥伦比亚一球通过闸门，BTTS维持 high。",
+      "reason": "anti_btts_agent 按两条独立进球路径校验弱队一球。"
+    },
+    "clean_sheet_gate": {
+      "status": "pass",
+      "clean_sheet_level": "low",
+      "weak_goal_level": "high",
+      "conflict_resolved": false,
+      "action": "clean_sheet low 与弱队一球 high 无冲突。",
+      "reason": "零封与弱队进球拆分为不同比分路径处理。"
+    },
+    "market_calibration_gate": {
+      "status": "pass",
+      "market_signal": "portugal_small_favorite",
+      "action": "浅盘不支持大胜，保留葡萄牙第二球但第三球只作尾部。",
+      "reason": "盘口用于硬校准比分上限，不替代对位分析。"
+    },
+    "low_block_draw_gate": {
+      "status": "pass",
+      "low_block_risk": "medium",
+      "selected_score": "0-0",
+      "action": "低位/小比分路径保留 0-0。",
+      "reason": "双方均可接受平局阶段会降低冒险度。"
+    },
+    "tail_score_gate": {
+      "status": "pass",
+      "tail_scores_checked": [
+        "3-0",
+        "0-0",
+        "1-1"
+      ],
+      "action": "葡萄牙3-0仅作为哥伦比亚红牌或早崩尾部。",
+      "reason": "tail_score_agent 已检查大胜、闷局和BTTS三类尾部。"
+    }
+  },
+  "score_distribution": {
+    "main_paths": [
+      {
+        "score": "1-1",
+        "probability": "primary",
+        "condition": "常态比赛脚本成立，首发无重大反转。"
+      },
+      {
+        "score": "1-2",
+        "probability": "secondary",
+        "condition": "同一主路径的比分分支，取决于早球、射正质量和换人。"
+      },
+      {
+        "score": "2-1",
+        "probability": "secondary",
+        "condition": "同一主路径的比分分支，取决于早球、射正质量和换人。"
+      }
+    ],
+    "low_block_paths": [
+      {
+        "score": "0-0",
+        "probability": "tail",
+        "condition": "双方均可接受平局阶段会降低冒险度。"
+      }
+    ],
+    "big_win_paths": [
+      {
+        "score": "3-0",
+        "probability": "tail",
+        "condition": "早球、红牌、门将失误或弱队体能掉速叠加。"
+      }
+    ],
+    "btts_paths": [
+      {
+        "score": "1-1",
+        "status": "pass",
+        "reason": "哥伦比亚一球通过闸门，BTTS维持 high。"
+      }
+    ]
+  },
+  "tail_scenarios": [
+    {
+      "scenario_type": "big_win",
+      "score": "3-0",
+      "status": "tail",
+      "condition": "强队早球后继续压迫，或弱队出现红牌/门将重大失误。"
+    },
+    {
+      "scenario_type": "low_block",
+      "score": "0-0",
+      "status": "tail",
+      "condition": "双方均可接受平局阶段会降低冒险度。"
+    },
+    {
+      "scenario_type": "btts",
+      "score": "1-1",
+      "status": "main",
+      "condition": "弱队进球路径通过闸门时成立。"
+    }
+  ],
+  "historical_sample_adjustments": [
+    {
+      "sample": "比利时1-1埃及",
+      "adjustment": "热门球队第二球不稳时，1-1进入主区间。"
+    },
+    {
+      "sample": "法国3-1塞内加尔",
+      "adjustment": "强队第三球只在下半场提速和替补冲击成立时上调。"
+    }
+  ],
+  "final_prediction": {
+    "win_tendency": "葡萄牙小优，但哥伦比亚不败和平局权重很高",
+    "main_score_range": [
+      "1-1",
+      "1-2",
+      "2-1"
+    ],
+    "primary_score": "1-1",
+    "alternative_scores": [
+      "1-2",
+      "2-1"
+    ],
+    "total_goals_min": 2,
+    "total_goals_max": 3,
+    "both_teams_to_score": "high",
+    "strong_second_goal": "medium",
+    "strong_third_goal": "low",
+    "weak_first_goal": "high",
+    "weak_second_goal": "low",
+    "clean_sheet": "low",
+    "draw_type": "1-1",
+    "trigger_conditions": [
+      "葡萄牙压上争第一会给迪亚斯反击空间",
+      "若C罗/莱奥早球，比分会从1-1迁向2-1",
+      "高温下射正质量下降则回到1-1或1-0"
+    ],
+    "confidence": "medium",
+    "tail_scores": [
+      "3-0"
+    ],
+    "event_scenarios": {
+      "favorite_red_card": "葡萄牙前60分钟红牌时，葡萄牙预期进球-0.6，哥伦比亚+0.5，迁向1-2。",
+      "underdog_red_card": "哥伦比亚红牌时，葡萄牙+0.8球，2-0/3-0进入主路径。",
+      "underdog_two_red_cards": "哥伦比亚两红时，极端尾部扩大到4-0。",
+      "penalty_or_goalkeeper_error": "受益方增加一条独立进球路径，1-1优先迁移为2-1或1-2。"
+    }
+  }
+}

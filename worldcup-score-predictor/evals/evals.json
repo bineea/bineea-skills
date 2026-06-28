@@ -48,6 +48,30 @@
       "prompt": "复盘加拿大6-0卡塔尔、瑞士4-1波黑、捷克1-1南非、墨西哥1-0韩国对比分模型有什么共同修正。",
       "expected_output": "应识别红牌非线性崩盘、持续机会压力的第三/第四球、领先后收缩与点球平局、明星攻击线不等于必进球，并给出可执行权重修正。",
       "files": []
+    },
+    {
+      "id": 9,
+      "prompt": "请使用 worldcup-score-predictor 预测一场世界杯比赛，并让多个 agent 互相质疑后达成一致；另外说明是否还能更新已结束比赛数据。",
+      "expected_output": "赛前预测应默认建立 Match Evidence Pack，使用 attack、defense_risk、market_history、skeptic 和 consensus_arbiter 的结构化合议流程，最终 JSON 应包含 review_metadata 并通过 validate_analysis.py；同时应说明赛后历史数据更新仍按 post-match-data-update-workflow.md 和 update_post_match_data.py 保留。",
+      "files": []
+    },
+    {
+      "id": 10,
+      "prompt": "复盘葡萄牙5-0乌兹别克斯坦对预测模型的修正，并说明下一次赛前如何避免低估强队大胜和零封。",
+      "expected_output": "应识别强队反弹、大胜深盘、弱队单一路径不足、强队第三球和第四/第五球尾部；后续预测必须触发 market_calibration_gate、weak_goal_gate、tail_score_gate，并在比分分布中保留3球以上大胜路径。",
+      "files": []
+    },
+    {
+      "id": 11,
+      "prompt": "复盘英格兰0-0加纳对预测模型的修正，并说明下一次赛前如何避免高估强队阵地战。",
+      "expected_output": "应识别低位防守闷局、强队阵地战失效、双方进球门槛不足；后续预测必须触发 low_block_draw_gate 和 anti_btts_agent，并在比分分布中保留0-0/1-0/1-1闷局路径。",
+      "files": []
+    },
+    {
+      "id": 12,
+      "prompt": "复盘巴拿马0-1克罗地亚对预测模型的修正，并说明如何区分强队小胜和双方进球。",
+      "expected_output": "应识别强队小胜、总进球下修、弱队射门不等于真实进球路径；后续预测必须通过 weak_goal_gate 才能把 both_teams_to_score 设为 medium/high，并在 score_distribution 中说明小胜与双方进球路径。",
+      "files": []
     }
   ]
 }

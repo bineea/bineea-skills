@@ -421,6 +421,181 @@
     "minimum_unique_check_findings_per_dimension": 3,
     "maximum_identical_dimension_evidence_signatures": 3
   },
+  "discussion_quality_rules": {
+    "required_mode": "multi_agent_consensus",
+    "required_roles": [
+      "attack_agent",
+      "defense_risk_agent",
+      "market_history_agent",
+      "anti_btts_agent",
+      "tail_score_agent",
+      "skeptic_agent",
+      "consensus_arbiter"
+    ],
+    "minimum_agents": 7,
+    "minimum_resolved_conflicts": 1,
+    "score_disagreement_threshold": 2,
+    "required_conflict_fields": [
+      "issue_id",
+      "issue_type",
+      "affected_dimensions",
+      "positions",
+      "resolution",
+      "confidence_change"
+    ],
+    "required_rejected_claim_fields": [
+      "role_id",
+      "claim",
+      "reason"
+    ]
+  },
+  "dimension_review_assignments": {
+    "primary": {
+      "base_strength": "market_history_agent",
+      "player_status": "attack_agent",
+      "player_type_structure": "attack_agent",
+      "key_matchups": "attack_agent",
+      "historical_style": "market_history_agent",
+      "style_counter": "defense_risk_agent",
+      "recent_form": "market_history_agent",
+      "goal_distribution": "attack_agent",
+      "strong_second_goal": "attack_agent",
+      "strong_third_goal": "attack_agent",
+      "weak_first_goal": "attack_agent",
+      "weak_second_goal": "attack_agent",
+      "favorite_defense": "defense_risk_agent",
+      "clean_sheet": "defense_risk_agent",
+      "tactical_matchup": "defense_risk_agent",
+      "stage_psychology": "defense_risk_agent",
+      "draw_risk": "defense_risk_agent",
+      "lineup_injuries": "defense_risk_agent",
+      "team_harmony_social": "defense_risk_agent",
+      "environment_schedule": "defense_risk_agent",
+      "referee_events": "defense_risk_agent",
+      "market_odds": "market_history_agent",
+      "dynamic_triggers": "defense_risk_agent",
+      "star_overperformance": "attack_agent",
+      "set_piece_aerial": "attack_agent",
+      "pressing_error_path": "attack_agent"
+    },
+    "review": {
+      "base_strength": [
+        "attack_agent",
+        "defense_risk_agent"
+      ],
+      "player_status": [
+        "defense_risk_agent"
+      ],
+      "player_type_structure": [
+        "defense_risk_agent"
+      ],
+      "key_matchups": [
+        "defense_risk_agent"
+      ],
+      "historical_style": [
+        "defense_risk_agent"
+      ],
+      "style_counter": [
+        "attack_agent"
+      ],
+      "recent_form": [
+        "attack_agent"
+      ],
+      "goal_distribution": [
+        "market_history_agent"
+      ],
+      "strong_second_goal": [
+        "market_history_agent"
+      ],
+      "strong_third_goal": [
+        "market_history_agent"
+      ],
+      "weak_first_goal": [
+        "defense_risk_agent"
+      ],
+      "weak_second_goal": [
+        "defense_risk_agent"
+      ],
+      "favorite_defense": [
+        "attack_agent"
+      ],
+      "clean_sheet": [
+        "attack_agent"
+      ],
+      "tactical_matchup": [
+        "attack_agent"
+      ],
+      "stage_psychology": [
+        "market_history_agent"
+      ],
+      "draw_risk": [
+        "market_history_agent"
+      ],
+      "lineup_injuries": [
+        "attack_agent"
+      ],
+      "team_harmony_social": [
+        "market_history_agent"
+      ],
+      "environment_schedule": [
+        "market_history_agent"
+      ],
+      "referee_events": [
+        "attack_agent"
+      ],
+      "market_odds": [
+        "defense_risk_agent"
+      ],
+      "dynamic_triggers": [
+        "attack_agent"
+      ],
+      "star_overperformance": [
+        "market_history_agent"
+      ],
+      "set_piece_aerial": [
+        "defense_risk_agent"
+      ],
+      "pressing_error_path": [
+        "defense_risk_agent"
+      ]
+    }
+  },
+  "source_quality_rules": {
+    "high_confidence_requires_multiple_sources": true,
+    "minimum_sources_for_high_confidence": 2,
+    "social_media_source_types": [
+      "social_media"
+    ],
+    "lineup_sensitive_source_types": [
+      "lineup",
+      "injury",
+      "team_official"
+    ]
+  },
+  "prediction_gate_rules": {
+    "required_gates": [
+      "weak_goal_gate",
+      "clean_sheet_gate",
+      "market_calibration_gate",
+      "low_block_draw_gate",
+      "tail_score_gate"
+    ],
+    "minimum_weak_goal_paths_for_medium": 2,
+    "deep_market_handicap_threshold": 1.5,
+    "minimum_main_path_scores": 2,
+    "maximum_main_path_scores": 3,
+    "required_score_distribution_fields": [
+      "main_paths",
+      "low_block_paths",
+      "big_win_paths",
+      "btts_paths"
+    ],
+    "required_tail_scenario_types": [
+      "big_win",
+      "low_block",
+      "btts"
+    ]
+  },
   "required_event_scenarios": [
     "favorite_red_card",
     "underdog_red_card",

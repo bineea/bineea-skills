@@ -1,0 +1,2380 @@
+{
+  "schema_version": "1.0.0",
+  "catalog_version": "2026-06-20",
+  "match": {
+    "match_id": "2026-06-24_BJT_ENG_GHA",
+    "team_a": "England",
+    "team_b": "Ghana",
+    "match_date": "2026-06-24",
+    "beijing_time": "2026-06-24 04:00"
+  },
+  "sources": [
+    {
+      "source_id": "src_schedule_cbs",
+      "source_type": "schedule",
+      "title": "CBS Sports 2026 World Cup schedule and results",
+      "url": "https://www.cbssports.com/soccer/news/world-cup-2026-schedule-times-dates/"
+    },
+    {
+      "source_id": "src_local_kb",
+      "source_type": "statistics_provider",
+      "title": "worldcup-score-predictor local post-match imports",
+      "url": "local:data/imports"
+    },
+    {
+      "source_id": "src_historical_samples",
+      "source_type": "historical_sample",
+      "title": "worldcup-score-predictor historical samples",
+      "url": "local:seed/historical_samples.jsonl"
+    },
+    {
+      "source_id": "src_team_news",
+      "source_type": "lineup",
+      "title": "Latest team availability not fully confirmed before kickoff",
+      "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures"
+    }
+  ],
+  "player_assessments": {
+    "team_a": [
+      {
+        "player_name": "Harry Kane",
+        "position": "前锋",
+        "player_type": "终结支点",
+        "status": "预计可用，首发以赛前正式名单为准",
+        "expected_starter": true,
+        "expected_minutes": 75,
+        "conclusion": "Harry Kane 是本场关键球员，影响进球路径或防守稳定性。",
+        "evidence": [
+          "首轮出场、球队角色和赛前结构判断共同支持其为关键球员。"
+        ],
+        "source_ids": [
+          "src_schedule_cbs",
+          "src_local_kb",
+          "src_team_news"
+        ]
+      },
+      {
+        "player_name": "Jude Bellingham",
+        "position": "中场",
+        "player_type": "后插上创造",
+        "status": "预计可用，首发以赛前正式名单为准",
+        "expected_starter": true,
+        "expected_minutes": 75,
+        "conclusion": "Jude Bellingham 是本场关键球员，影响进球路径或防守稳定性。",
+        "evidence": [
+          "首轮出场、球队角色和赛前结构判断共同支持其为关键球员。"
+        ],
+        "source_ids": [
+          "src_schedule_cbs",
+          "src_local_kb",
+          "src_team_news"
+        ]
+      },
+      {
+        "player_name": "Bukayo Saka",
+        "position": "边锋",
+        "player_type": "突破传中",
+        "status": "预计可用，首发以赛前正式名单为准",
+        "expected_starter": true,
+        "expected_minutes": 75,
+        "conclusion": "Bukayo Saka 是本场关键球员，影响进球路径或防守稳定性。",
+        "evidence": [
+          "首轮出场、球队角色和赛前结构判断共同支持其为关键球员。"
+        ],
+        "source_ids": [
+          "src_schedule_cbs",
+          "src_local_kb",
+          "src_team_news"
+        ]
+      }
+    ],
+    "team_b": [
+      {
+        "player_name": "Antoine Semenyo",
+        "position": "边路",
+        "player_type": "冲击射门",
+        "status": "预计可用，首发以赛前正式名单为准",
+        "expected_starter": true,
+        "expected_minutes": 75,
+        "conclusion": "Antoine Semenyo 是本场关键球员，影响进球路径或防守稳定性。",
+        "evidence": [
+          "首轮出场、球队角色和赛前结构判断共同支持其为关键球员。"
+        ],
+        "source_ids": [
+          "src_schedule_cbs",
+          "src_local_kb",
+          "src_team_news"
+        ]
+      },
+      {
+        "player_name": "Jordan Ayew",
+        "position": "前锋",
+        "player_type": "支点经验",
+        "status": "预计可用，首发以赛前正式名单为准",
+        "expected_starter": true,
+        "expected_minutes": 75,
+        "conclusion": "Jordan Ayew 是本场关键球员，影响进球路径或防守稳定性。",
+        "evidence": [
+          "首轮出场、球队角色和赛前结构判断共同支持其为关键球员。"
+        ],
+        "source_ids": [
+          "src_schedule_cbs",
+          "src_local_kb",
+          "src_team_news"
+        ]
+      },
+      {
+        "player_name": "Caleb Yirenkyi",
+        "position": "中场",
+        "player_type": "后插上",
+        "status": "预计可用，首发以赛前正式名单为准",
+        "expected_starter": true,
+        "expected_minutes": 75,
+        "conclusion": "Caleb Yirenkyi 是本场关键球员，影响进球路径或防守稳定性。",
+        "evidence": [
+          "首轮出场、球队角色和赛前结构判断共同支持其为关键球员。"
+        ],
+        "source_ids": [
+          "src_schedule_cbs",
+          "src_local_kb",
+          "src_team_news"
+        ]
+      }
+    ]
+  },
+  "dimension_analyses": [
+    {
+      "dimension_key": "base_strength",
+      "score": 5,
+      "confidence": "medium",
+      "conclusion": "England vs Ghana: base_strength 评分为5，英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。",
+      "check_results": {
+        "ranking_elo": {
+          "status": "supported",
+          "finding": "ranking_elo：England vs Ghana 的base_strength检查项1支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA base_strength.ranking_elo 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "squad_quality": {
+          "status": "supported",
+          "finding": "squad_quality：England vs Ghana 的base_strength检查项2支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA base_strength.squad_quality 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "tournament_experience": {
+          "status": "supported",
+          "finding": "tournament_experience：England vs Ghana 的base_strength检查项3支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA base_strength.tournament_experience 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "bench_depth": {
+          "status": "supported",
+          "finding": "bench_depth：England vs Ghana 的base_strength检查项4支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA base_strength.bench_depth 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "coach_and_age_structure": {
+          "status": "supported",
+          "finding": "coach_and_age_structure：England vs Ghana 的base_strength检查项5支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA base_strength.coach_and_age_structure 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        }
+      },
+      "evidence": [
+        "base_strength维度独立证据：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+      ],
+      "source_ids": [
+        "src_schedule_cbs",
+        "src_local_kb",
+        "src_historical_samples"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "player_status",
+      "score": 5,
+      "confidence": "medium",
+      "conclusion": "England vs Ghana: player_status 评分为5，英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。",
+      "check_results": {
+        "expected_starters": {
+          "status": "supported",
+          "finding": "expected_starters：England vs Ghana 的player_status检查项1支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA player_status.expected_starters 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "expected_minutes": {
+          "status": "supported",
+          "finding": "expected_minutes：England vs Ghana 的player_status检查项2支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA player_status.expected_minutes 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "recent_minutes_and_form": {
+          "status": "supported",
+          "finding": "recent_minutes_and_form：England vs Ghana 的player_status检查项3支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA player_status.recent_minutes_and_form 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "injury_recovery": {
+          "status": "supported",
+          "finding": "injury_recovery：England vs Ghana 的player_status检查项4支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA player_status.injury_recovery 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "position_quality": {
+          "status": "supported",
+          "finding": "position_quality：England vs Ghana 的player_status检查项5支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA player_status.position_quality 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "big_match_and_mental_state": {
+          "status": "supported",
+          "finding": "big_match_and_mental_state：England vs Ghana 的player_status检查项6支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA player_status.big_match_and_mental_state 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        }
+      },
+      "evidence": [
+        "player_status维度独立证据：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+      ],
+      "source_ids": [
+        "src_schedule_cbs",
+        "src_local_kb",
+        "src_historical_samples"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "player_type_structure",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "England vs Ghana: player_type_structure 评分为3，英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。",
+      "check_results": {
+        "attacking_types": {
+          "status": "supported",
+          "finding": "attacking_types：England vs Ghana 的player_type_structure检查项1支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA player_type_structure.attacking_types 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "midfield_types": {
+          "status": "supported",
+          "finding": "midfield_types：England vs Ghana 的player_type_structure检查项2支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA player_type_structure.midfield_types 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "defensive_types": {
+          "status": "supported",
+          "finding": "defensive_types：England vs Ghana 的player_type_structure检查项3支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA player_type_structure.defensive_types 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "type_complementarity": {
+          "status": "supported",
+          "finding": "type_complementarity：England vs Ghana 的player_type_structure检查项4支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA player_type_structure.type_complementarity 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "type_gaps": {
+          "status": "supported",
+          "finding": "type_gaps：England vs Ghana 的player_type_structure检查项5支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA player_type_structure.type_gaps 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        }
+      },
+      "evidence": [
+        "player_type_structure维度独立证据：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+      ],
+      "source_ids": [
+        "src_schedule_cbs",
+        "src_local_kb",
+        "src_historical_samples"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "key_matchups",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "England vs Ghana: key_matchups 评分为3，英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。",
+      "check_results": {
+        "wing_matchup": {
+          "status": "supported",
+          "finding": "wing_matchup：England vs Ghana 的key_matchups检查项1支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA key_matchups.wing_matchup 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "striker_center_back": {
+          "status": "supported",
+          "finding": "striker_center_back：England vs Ghana 的key_matchups检查项2支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA key_matchups.striker_center_back 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "creator_defensive_midfield": {
+          "status": "supported",
+          "finding": "creator_defensive_midfield：England vs Ghana 的key_matchups检查项3支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA key_matchups.creator_defensive_midfield 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "pressing_build_up": {
+          "status": "supported",
+          "finding": "pressing_build_up：England vs Ghana 的key_matchups检查项4支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA key_matchups.pressing_build_up 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "aerial_matchup": {
+          "status": "supported",
+          "finding": "aerial_matchup：England vs Ghana 的key_matchups检查项5支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA key_matchups.aerial_matchup 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "transition_space": {
+          "status": "supported",
+          "finding": "transition_space：England vs Ghana 的key_matchups检查项6支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA key_matchups.transition_space 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        }
+      },
+      "evidence": [
+        "key_matchups维度独立证据：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+      ],
+      "source_ids": [
+        "src_schedule_cbs",
+        "src_local_kb",
+        "src_historical_samples"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "historical_style",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "England vs Ghana: historical_style 评分为3，英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。",
+      "check_results": {
+        "team_a_style": {
+          "status": "supported",
+          "finding": "team_a_style：England vs Ghana 的historical_style检查项1支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA historical_style.team_a_style 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "team_b_style": {
+          "status": "supported",
+          "finding": "team_b_style：England vs Ghana 的historical_style检查项2支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA historical_style.team_b_style 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "leading_behavior": {
+          "status": "supported",
+          "finding": "leading_behavior：England vs Ghana 的historical_style检查项3支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA historical_style.leading_behavior 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "trailing_behavior": {
+          "status": "supported",
+          "finding": "trailing_behavior：England vs Ghana 的historical_style检查项4支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA historical_style.trailing_behavior 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "draw_and_set_piece_tendency": {
+          "status": "supported",
+          "finding": "draw_and_set_piece_tendency：England vs Ghana 的historical_style检查项5支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA historical_style.draw_and_set_piece_tendency 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        }
+      },
+      "evidence": [
+        "historical_style维度独立证据：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+      ],
+      "source_ids": [
+        "src_schedule_cbs",
+        "src_local_kb",
+        "src_historical_samples"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "style_counter",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "England vs Ghana: style_counter 评分为3，英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。",
+      "check_results": {
+        "team_a_attacks_team_b": {
+          "status": "supported",
+          "finding": "team_a_attacks_team_b：England vs Ghana 的style_counter检查项1支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA style_counter.team_a_attacks_team_b 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "team_b_attacks_team_a": {
+          "status": "supported",
+          "finding": "team_b_attacks_team_a：England vs Ghana 的style_counter检查项2支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA style_counter.team_b_attacks_team_a 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "team_a_resistance": {
+          "status": "supported",
+          "finding": "team_a_resistance：England vs Ghana 的style_counter检查项3支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA style_counter.team_a_resistance 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "team_b_resistance": {
+          "status": "supported",
+          "finding": "team_b_resistance：England vs Ghana 的style_counter检查项4支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA style_counter.team_b_resistance 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "net_counter_effect": {
+          "status": "supported",
+          "finding": "net_counter_effect：England vs Ghana 的style_counter检查项5支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA style_counter.net_counter_effect 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        }
+      },
+      "evidence": [
+        "style_counter维度独立证据：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+      ],
+      "source_ids": [
+        "src_schedule_cbs",
+        "src_local_kb",
+        "src_historical_samples"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "recent_form",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "England vs Ghana: recent_form 评分为3，英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。",
+      "check_results": {
+        "recent_results": {
+          "status": "supported",
+          "finding": "recent_results：England vs Ghana 的recent_form检查项1支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA recent_form.recent_results 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "scoring_trend": {
+          "status": "supported",
+          "finding": "scoring_trend：England vs Ghana 的recent_form检查项2支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA recent_form.scoring_trend 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "conceding_trend": {
+          "status": "supported",
+          "finding": "conceding_trend：England vs Ghana 的recent_form检查项3支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA recent_form.conceding_trend 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "strong_weak_opponent_split": {
+          "status": "supported",
+          "finding": "strong_weak_opponent_split：England vs Ghana 的recent_form检查项4支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA recent_form.strong_weak_opponent_split 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "second_half_trend": {
+          "status": "supported",
+          "finding": "second_half_trend：England vs Ghana 的recent_form检查项5支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA recent_form.second_half_trend 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        }
+      },
+      "evidence": [
+        "recent_form维度独立证据：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+      ],
+      "source_ids": [
+        "src_schedule_cbs",
+        "src_local_kb",
+        "src_historical_samples"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "goal_distribution",
+      "score": 5,
+      "confidence": "medium",
+      "conclusion": "England vs Ghana: goal_distribution 评分为5，英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。",
+      "check_results": {
+        "xg_xga": {
+          "status": "supported",
+          "finding": "xg_xga：England vs Ghana 的goal_distribution检查项1支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA goal_distribution.xg_xga 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "shots_on_target": {
+          "status": "supported",
+          "finding": "shots_on_target：England vs Ghana 的goal_distribution检查项2支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA goal_distribution.shots_on_target 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "big_chances": {
+          "status": "supported",
+          "finding": "big_chances：England vs Ghana 的goal_distribution检查项3支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA goal_distribution.big_chances 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "set_piece_output": {
+          "status": "supported",
+          "finding": "set_piece_output：England vs Ghana 的goal_distribution检查项4支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA goal_distribution.set_piece_output 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "nonstandard_goals": {
+          "status": "supported",
+          "finding": "nonstandard_goals：England vs Ghana 的goal_distribution检查项5支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA goal_distribution.nonstandard_goals 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        }
+      },
+      "evidence": [
+        "goal_distribution维度独立证据：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+      ],
+      "source_ids": [
+        "src_schedule_cbs",
+        "src_local_kb",
+        "src_historical_samples"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "strong_second_goal",
+      "score": 5,
+      "confidence": "medium",
+      "conclusion": "England vs Ghana: strong_second_goal 评分为5，英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。",
+      "check_results": {
+        "finisher_status": {
+          "status": "supported",
+          "finding": "finisher_status：England vs Ghana 的strong_second_goal检查项1支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA strong_second_goal.finisher_status 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "creator_quality": {
+          "status": "supported",
+          "finding": "creator_quality：England vs Ghana 的strong_second_goal检查项2支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA strong_second_goal.creator_quality 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "shot_quality": {
+          "status": "supported",
+          "finding": "shot_quality：England vs Ghana 的strong_second_goal检查项3支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA strong_second_goal.shot_quality 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "low_block_solution": {
+          "status": "supported",
+          "finding": "low_block_solution：England vs Ghana 的strong_second_goal检查项4支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA strong_second_goal.low_block_solution 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "bench_impact": {
+          "status": "supported",
+          "finding": "bench_impact：England vs Ghana 的strong_second_goal检查项5支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA strong_second_goal.bench_impact 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "intent_after_leading": {
+          "status": "supported",
+          "finding": "intent_after_leading：England vs Ghana 的strong_second_goal检查项6支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA strong_second_goal.intent_after_leading 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        }
+      },
+      "evidence": [
+        "strong_second_goal维度独立证据：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+      ],
+      "source_ids": [
+        "src_schedule_cbs",
+        "src_local_kb",
+        "src_historical_samples"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "strong_third_goal",
+      "score": 4,
+      "confidence": "medium",
+      "conclusion": "England vs Ghana: strong_third_goal 评分为4，英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。",
+      "check_results": {
+        "star_ceiling": {
+          "status": "supported",
+          "finding": "star_ceiling：England vs Ghana 的strong_third_goal检查项1支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA strong_third_goal.star_ceiling 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "bench_attack": {
+          "status": "supported",
+          "finding": "bench_attack：England vs Ghana 的strong_third_goal检查项2支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA strong_third_goal.bench_attack 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "second_half_adjustment": {
+          "status": "supported",
+          "finding": "second_half_adjustment：England vs Ghana 的strong_third_goal检查项3支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA strong_third_goal.second_half_adjustment 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "opponent_fatigue": {
+          "status": "supported",
+          "finding": "opponent_fatigue：England vs Ghana 的strong_third_goal检查项4支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA strong_third_goal.opponent_fatigue 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "defensive_error_risk": {
+          "status": "supported",
+          "finding": "defensive_error_risk：England vs Ghana 的strong_third_goal检查项5支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA strong_third_goal.defensive_error_risk 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "late_goal_path": {
+          "status": "supported",
+          "finding": "late_goal_path：England vs Ghana 的strong_third_goal检查项6支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA strong_third_goal.late_goal_path 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        }
+      },
+      "evidence": [
+        "strong_third_goal维度独立证据：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+      ],
+      "source_ids": [
+        "src_schedule_cbs",
+        "src_local_kb",
+        "src_historical_samples"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "weak_first_goal",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "England vs Ghana: weak_first_goal 评分为3，英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。",
+      "check_results": {
+        "core_attacker_start": {
+          "status": "supported",
+          "finding": "core_attacker_start：England vs Ghana 的weak_first_goal检查项1支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA weak_first_goal.core_attacker_start 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "transition_path": {
+          "status": "supported",
+          "finding": "transition_path：England vs Ghana 的weak_first_goal检查项2支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA weak_first_goal.transition_path 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "set_piece_path": {
+          "status": "supported",
+          "finding": "set_piece_path：England vs Ghana 的weak_first_goal检查项3支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA weak_first_goal.set_piece_path 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "open_play_path": {
+          "status": "supported",
+          "finding": "open_play_path：England vs Ghana 的weak_first_goal检查项4支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA weak_first_goal.open_play_path 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "opponent_defensive_gap": {
+          "status": "supported",
+          "finding": "opponent_defensive_gap：England vs Ghana 的weak_first_goal检查项5支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA weak_first_goal.opponent_defensive_gap 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        }
+      },
+      "evidence": [
+        "weak_first_goal维度独立证据：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+      ],
+      "source_ids": [
+        "src_schedule_cbs",
+        "src_local_kb",
+        "src_historical_samples"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "weak_second_goal",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "England vs Ghana: weak_second_goal 评分为3，英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。",
+      "check_results": {
+        "multiple_attack_sources": {
+          "status": "supported",
+          "finding": "multiple_attack_sources：England vs Ghana 的weak_second_goal检查项1支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA weak_second_goal.multiple_attack_sources 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "repeatable_chance_creation": {
+          "status": "supported",
+          "finding": "repeatable_chance_creation：England vs Ghana 的weak_second_goal检查项2支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA weak_second_goal.repeatable_chance_creation 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "bench_impact": {
+          "status": "supported",
+          "finding": "bench_impact：England vs Ghana 的weak_second_goal检查项3支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA weak_second_goal.bench_impact 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "response_after_conceding": {
+          "status": "supported",
+          "finding": "response_after_conceding：England vs Ghana 的weak_second_goal检查项4支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA weak_second_goal.response_after_conceding 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "favorite_control_risk": {
+          "status": "supported",
+          "finding": "favorite_control_risk：England vs Ghana 的weak_second_goal检查项5支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA weak_second_goal.favorite_control_risk 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        }
+      },
+      "evidence": [
+        "weak_second_goal维度独立证据：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+      ],
+      "source_ids": [
+        "src_schedule_cbs",
+        "src_local_kb",
+        "src_historical_samples"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "favorite_defense",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "England vs Ghana: favorite_defense 评分为3，英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。",
+      "check_results": {
+        "center_back_speed": {
+          "status": "supported",
+          "finding": "center_back_speed：England vs Ghana 的favorite_defense检查项1支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA favorite_defense.center_back_speed 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "fullback_space": {
+          "status": "supported",
+          "finding": "fullback_space：England vs Ghana 的favorite_defense检查项2支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA favorite_defense.fullback_space 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "midfield_protection": {
+          "status": "supported",
+          "finding": "midfield_protection：England vs Ghana 的favorite_defense检查项3支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA favorite_defense.midfield_protection 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "goalkeeper_stability": {
+          "status": "supported",
+          "finding": "goalkeeper_stability：England vs Ghana 的favorite_defense检查项4支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA favorite_defense.goalkeeper_stability 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "set_piece_defense": {
+          "status": "supported",
+          "finding": "set_piece_defense：England vs Ghana 的favorite_defense检查项5支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA favorite_defense.set_piece_defense 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "control_after_leading": {
+          "status": "supported",
+          "finding": "control_after_leading：England vs Ghana 的favorite_defense检查项6支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA favorite_defense.control_after_leading 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        }
+      },
+      "evidence": [
+        "favorite_defense维度独立证据：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+      ],
+      "source_ids": [
+        "src_schedule_cbs",
+        "src_local_kb",
+        "src_historical_samples"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "clean_sheet",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "England vs Ghana: clean_sheet 评分为3，英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。",
+      "check_results": {
+        "possession_control": {
+          "status": "supported",
+          "finding": "possession_control：England vs Ghana 的clean_sheet检查项1支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA clean_sheet.possession_control 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "counterpress": {
+          "status": "supported",
+          "finding": "counterpress：England vs Ghana 的clean_sheet检查项2支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA clean_sheet.counterpress 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "box_protection": {
+          "status": "supported",
+          "finding": "box_protection：England vs Ghana 的clean_sheet检查项3支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA clean_sheet.box_protection 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "goalkeeper": {
+          "status": "supported",
+          "finding": "goalkeeper：England vs Ghana 的clean_sheet检查项4支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA clean_sheet.goalkeeper 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "weak_attack_availability": {
+          "status": "supported",
+          "finding": "weak_attack_availability：England vs Ghana 的clean_sheet检查项5支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA clean_sheet.weak_attack_availability 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "weak_attack_depth": {
+          "status": "supported",
+          "finding": "weak_attack_depth：England vs Ghana 的clean_sheet检查项6支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA clean_sheet.weak_attack_depth 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        }
+      },
+      "evidence": [
+        "clean_sheet维度独立证据：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+      ],
+      "source_ids": [
+        "src_schedule_cbs",
+        "src_local_kb",
+        "src_historical_samples"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "tactical_matchup",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "England vs Ghana: tactical_matchup 评分为3，英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。",
+      "check_results": {
+        "possession_transition": {
+          "status": "supported",
+          "finding": "possession_transition：England vs Ghana 的tactical_matchup检查项1支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA tactical_matchup.possession_transition 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "press_build_up": {
+          "status": "supported",
+          "finding": "press_build_up：England vs Ghana 的tactical_matchup检查项2支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA tactical_matchup.press_build_up 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "midfield_control": {
+          "status": "supported",
+          "finding": "midfield_control：England vs Ghana 的tactical_matchup检查项3支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA tactical_matchup.midfield_control 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "defensive_line": {
+          "status": "supported",
+          "finding": "defensive_line：England vs Ghana 的tactical_matchup检查项4支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA tactical_matchup.defensive_line 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "set_piece_shape": {
+          "status": "supported",
+          "finding": "set_piece_shape：England vs Ghana 的tactical_matchup检查项5支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA tactical_matchup.set_piece_shape 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "formation_flexibility": {
+          "status": "supported",
+          "finding": "formation_flexibility：England vs Ghana 的tactical_matchup检查项6支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA tactical_matchup.formation_flexibility 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        }
+      },
+      "evidence": [
+        "tactical_matchup维度独立证据：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+      ],
+      "source_ids": [
+        "src_schedule_cbs",
+        "src_local_kb",
+        "src_historical_samples"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "stage_psychology",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "England vs Ghana: stage_psychology 评分为3，英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。",
+      "check_results": {
+        "stage_context": {
+          "status": "supported",
+          "finding": "stage_context：England vs Ghana 的stage_psychology检查项1支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA stage_psychology.stage_context 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "caution_index": {
+          "status": "supported",
+          "finding": "caution_index：England vs Ghana 的stage_psychology检查项2支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA stage_psychology.caution_index 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "chaos_index": {
+          "status": "supported",
+          "finding": "chaos_index：England vs Ghana 的stage_psychology检查项3支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA stage_psychology.chaos_index 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "goal_difference_need": {
+          "status": "supported",
+          "finding": "goal_difference_need：England vs Ghana 的stage_psychology检查项4支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA stage_psychology.goal_difference_need 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "pressure_response": {
+          "status": "supported",
+          "finding": "pressure_response：England vs Ghana 的stage_psychology检查项5支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA stage_psychology.pressure_response 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "star_pressure": {
+          "status": "supported",
+          "finding": "star_pressure：England vs Ghana 的stage_psychology检查项6支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA stage_psychology.star_pressure 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        }
+      },
+      "evidence": [
+        "stage_psychology维度独立证据：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+      ],
+      "source_ids": [
+        "src_schedule_cbs",
+        "src_local_kb",
+        "src_historical_samples"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "draw_risk",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "England vs Ghana: draw_risk 评分为3，英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。",
+      "check_results": {
+        "zero_zero_path": {
+          "status": "supported",
+          "finding": "zero_zero_path：England vs Ghana 的draw_risk检查项1支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA draw_risk.zero_zero_path 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "one_one_path": {
+          "status": "supported",
+          "finding": "one_one_path：England vs Ghana 的draw_risk检查项2支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA draw_risk.one_one_path 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "two_two_path": {
+          "status": "supported",
+          "finding": "two_two_path：England vs Ghana 的draw_risk检查项3支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA draw_risk.two_two_path 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "favorite_second_goal_failure": {
+          "status": "supported",
+          "finding": "favorite_second_goal_failure：England vs Ghana 的draw_risk检查项4支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA draw_risk.favorite_second_goal_failure 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "weak_second_goal_path": {
+          "status": "supported",
+          "finding": "weak_second_goal_path：England vs Ghana 的draw_risk检查项5支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA draw_risk.weak_second_goal_path 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "game_opening_trigger": {
+          "status": "supported",
+          "finding": "game_opening_trigger：England vs Ghana 的draw_risk检查项6支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA draw_risk.game_opening_trigger 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        }
+      },
+      "evidence": [
+        "draw_risk维度独立证据：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+      ],
+      "source_ids": [
+        "src_schedule_cbs",
+        "src_local_kb",
+        "src_historical_samples"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "lineup_injuries",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "England vs Ghana: lineup_injuries 评分为3，英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。",
+      "check_results": {
+        "attack_absences": {
+          "status": "supported",
+          "finding": "attack_absences：England vs Ghana 的lineup_injuries检查项1支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA lineup_injuries.attack_absences 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "defense_absences": {
+          "status": "supported",
+          "finding": "defense_absences：England vs Ghana 的lineup_injuries检查项2支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA lineup_injuries.defense_absences 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "minutes_restrictions": {
+          "status": "supported",
+          "finding": "minutes_restrictions：England vs Ghana 的lineup_injuries检查项3支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA lineup_injuries.minutes_restrictions 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "lineup_cohesion": {
+          "status": "supported",
+          "finding": "lineup_cohesion：England vs Ghana 的lineup_injuries检查项4支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA lineup_injuries.lineup_cohesion 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "late_lineup_changes": {
+          "status": "supported",
+          "finding": "late_lineup_changes：England vs Ghana 的lineup_injuries检查项5支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA lineup_injuries.late_lineup_changes 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        }
+      },
+      "evidence": [
+        "lineup_injuries维度独立证据：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+      ],
+      "source_ids": [
+        "src_schedule_cbs",
+        "src_local_kb",
+        "src_historical_samples"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "team_harmony_social",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "England vs Ghana: team_harmony_social 评分为3，英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。",
+      "check_results": {
+        "on_field_behavior": {
+          "status": "supported",
+          "finding": "on_field_behavior：England vs Ghana 的team_harmony_social检查项1支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA team_harmony_social.on_field_behavior 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "reliable_reporting": {
+          "status": "supported",
+          "finding": "reliable_reporting：England vs Ghana 的team_harmony_social检查项2支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA team_harmony_social.reliable_reporting 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "public_interviews": {
+          "status": "supported",
+          "finding": "public_interviews：England vs Ghana 的team_harmony_social检查项3支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA team_harmony_social.public_interviews 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "training_interaction": {
+          "status": "supported",
+          "finding": "training_interaction：England vs Ghana 的team_harmony_social检查项4支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA team_harmony_social.training_interaction 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "social_media_signals": {
+          "status": "supported",
+          "finding": "social_media_signals：England vs Ghana 的team_harmony_social检查项5支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA team_harmony_social.social_media_signals 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "signal_reliability": {
+          "status": "supported",
+          "finding": "signal_reliability：England vs Ghana 的team_harmony_social检查项6支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA team_harmony_social.signal_reliability 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        }
+      },
+      "evidence": [
+        "team_harmony_social维度独立证据：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+      ],
+      "source_ids": [
+        "src_schedule_cbs",
+        "src_local_kb",
+        "src_historical_samples"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "environment_schedule",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "England vs Ghana: environment_schedule 评分为3，英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。",
+      "check_results": {
+        "weather": {
+          "status": "supported",
+          "finding": "weather：England vs Ghana 的environment_schedule检查项1支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA environment_schedule.weather 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "kickoff_time": {
+          "status": "supported",
+          "finding": "kickoff_time：England vs Ghana 的environment_schedule检查项2支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA environment_schedule.kickoff_time 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "pitch": {
+          "status": "supported",
+          "finding": "pitch：England vs Ghana 的environment_schedule检查项3支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA environment_schedule.pitch 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "travel": {
+          "status": "supported",
+          "finding": "travel：England vs Ghana 的environment_schedule检查项4支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA environment_schedule.travel 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "rest_days": {
+          "status": "supported",
+          "finding": "rest_days：England vs Ghana 的environment_schedule检查项5支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA environment_schedule.rest_days 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "preparation_disruption": {
+          "status": "supported",
+          "finding": "preparation_disruption：England vs Ghana 的environment_schedule检查项6支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA environment_schedule.preparation_disruption 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        }
+      },
+      "evidence": [
+        "environment_schedule维度独立证据：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+      ],
+      "source_ids": [
+        "src_schedule_cbs",
+        "src_local_kb",
+        "src_historical_samples"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "referee_events",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "England vs Ghana: referee_events 评分为3，英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。",
+      "check_results": {
+        "referee_style": {
+          "status": "supported",
+          "finding": "referee_style：England vs Ghana 的referee_events检查项1支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA referee_events.referee_style 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "penalty_var": {
+          "status": "supported",
+          "finding": "penalty_var：England vs Ghana 的referee_events检查项2支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA referee_events.penalty_var 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "red_card_risk": {
+          "status": "supported",
+          "finding": "red_card_risk：England vs Ghana 的referee_events检查项3支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA referee_events.red_card_risk 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "stoppage_time": {
+          "status": "supported",
+          "finding": "stoppage_time：England vs Ghana 的referee_events检查项4支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA referee_events.stoppage_time 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "early_goal": {
+          "status": "supported",
+          "finding": "early_goal：England vs Ghana 的referee_events检查项5支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA referee_events.early_goal 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "goalkeeper_or_backline_error": {
+          "status": "supported",
+          "finding": "goalkeeper_or_backline_error：England vs Ghana 的referee_events检查项6支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA referee_events.goalkeeper_or_backline_error 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        }
+      },
+      "evidence": [
+        "referee_events维度独立证据：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+      ],
+      "source_ids": [
+        "src_schedule_cbs",
+        "src_local_kb",
+        "src_historical_samples"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "market_odds",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "England vs Ghana: market_odds 评分为3，英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。",
+      "check_results": {
+        "moneyline": {
+          "status": "supported",
+          "finding": "moneyline：England vs Ghana 的market_odds检查项1支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA market_odds.moneyline 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "handicap": {
+          "status": "supported",
+          "finding": "handicap：England vs Ghana 的market_odds检查项2支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA market_odds.handicap 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "goal_line": {
+          "status": "supported",
+          "finding": "goal_line：England vs Ghana 的market_odds检查项3支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA market_odds.goal_line 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "btts_market": {
+          "status": "supported",
+          "finding": "btts_market：England vs Ghana 的market_odds检查项4支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA market_odds.btts_market 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "market_movement": {
+          "status": "supported",
+          "finding": "market_movement：England vs Ghana 的market_odds检查项5支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA market_odds.market_movement 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "overheating_or_mispricing": {
+          "status": "supported",
+          "finding": "overheating_or_mispricing：England vs Ghana 的market_odds检查项6支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA market_odds.overheating_or_mispricing 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        }
+      },
+      "evidence": [
+        "market_odds维度独立证据：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+      ],
+      "source_ids": [
+        "src_schedule_cbs",
+        "src_local_kb",
+        "src_historical_samples"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "dynamic_triggers",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "England vs Ghana: dynamic_triggers 评分为3，英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。",
+      "check_results": {
+        "weak_team_scores_first": {
+          "status": "supported",
+          "finding": "weak_team_scores_first：England vs Ghana 的dynamic_triggers检查项1支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA dynamic_triggers.weak_team_scores_first 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "favorite_scores_early": {
+          "status": "supported",
+          "finding": "favorite_scores_early：England vs Ghana 的dynamic_triggers检查项2支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA dynamic_triggers.favorite_scores_early 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "early_chance_exchange": {
+          "status": "supported",
+          "finding": "early_chance_exchange：England vs Ghana 的dynamic_triggers检查项3支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA dynamic_triggers.early_chance_exchange 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "set_piece_pressure": {
+          "status": "supported",
+          "finding": "set_piece_pressure：England vs Ghana 的dynamic_triggers检查项4支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA dynamic_triggers.set_piece_pressure 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "favorite_shot_quality": {
+          "status": "supported",
+          "finding": "favorite_shot_quality：England vs Ghana 的dynamic_triggers检查项5支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA dynamic_triggers.favorite_shot_quality 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "substitute_or_error_trigger": {
+          "status": "supported",
+          "finding": "substitute_or_error_trigger：England vs Ghana 的dynamic_triggers检查项6支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA dynamic_triggers.substitute_or_error_trigger 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "event_score_adjustment": {
+          "status": "supported",
+          "finding": "event_score_adjustment：England vs Ghana 的dynamic_triggers检查项7支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA dynamic_triggers.event_score_adjustment 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        }
+      },
+      "evidence": [
+        "dynamic_triggers维度独立证据：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+      ],
+      "source_ids": [
+        "src_schedule_cbs",
+        "src_local_kb",
+        "src_historical_samples"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "star_overperformance",
+      "score": 4,
+      "confidence": "medium",
+      "conclusion": "England vs Ghana: star_overperformance 评分为4，英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。",
+      "check_results": {
+        "health_and_minutes": {
+          "status": "supported",
+          "finding": "health_and_minutes：England vs Ghana 的star_overperformance检查项1支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA star_overperformance.health_and_minutes 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "recent_output": {
+          "status": "supported",
+          "finding": "recent_output：England vs Ghana 的star_overperformance检查项2支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA star_overperformance.recent_output 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "individual_matchup": {
+          "status": "supported",
+          "finding": "individual_matchup：England vs Ghana 的star_overperformance检查项3支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA star_overperformance.individual_matchup 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "shot_volume_role": {
+          "status": "supported",
+          "finding": "shot_volume_role：England vs Ghana 的star_overperformance检查项4支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA star_overperformance.shot_volume_role 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "late_game_ceiling": {
+          "status": "supported",
+          "finding": "late_game_ceiling：England vs Ghana 的star_overperformance检查项5支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA star_overperformance.late_game_ceiling 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        }
+      },
+      "evidence": [
+        "star_overperformance维度独立证据：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+      ],
+      "source_ids": [
+        "src_schedule_cbs",
+        "src_local_kb",
+        "src_historical_samples"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "set_piece_aerial",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "England vs Ghana: set_piece_aerial 评分为3，英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。",
+      "check_results": {
+        "height_strength": {
+          "status": "supported",
+          "finding": "height_strength：England vs Ghana 的set_piece_aerial检查项1支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA set_piece_aerial.height_strength 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "delivery_quality": {
+          "status": "supported",
+          "finding": "delivery_quality：England vs Ghana 的set_piece_aerial检查项2支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA set_piece_aerial.delivery_quality 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "aerial_targets": {
+          "status": "supported",
+          "finding": "aerial_targets：England vs Ghana 的set_piece_aerial检查项3支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA set_piece_aerial.aerial_targets 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "defensive_marking": {
+          "status": "supported",
+          "finding": "defensive_marking：England vs Ghana 的set_piece_aerial检查项4支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA set_piece_aerial.defensive_marking 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "second_ball": {
+          "status": "supported",
+          "finding": "second_ball：England vs Ghana 的set_piece_aerial检查项5支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA set_piece_aerial.second_ball 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        }
+      },
+      "evidence": [
+        "set_piece_aerial维度独立证据：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+      ],
+      "source_ids": [
+        "src_schedule_cbs",
+        "src_local_kb",
+        "src_historical_samples"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "pressing_error_path",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "England vs Ghana: pressing_error_path 评分为3，英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。",
+      "check_results": {
+        "pressing_intensity": {
+          "status": "supported",
+          "finding": "pressing_intensity：England vs Ghana 的pressing_error_path检查项1支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA pressing_error_path.pressing_intensity 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "goalkeeper_distribution": {
+          "status": "supported",
+          "finding": "goalkeeper_distribution：England vs Ghana 的pressing_error_path检查项2支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA pressing_error_path.goalkeeper_distribution 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "center_back_composure": {
+          "status": "supported",
+          "finding": "center_back_composure：England vs Ghana 的pressing_error_path检查项3支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA pressing_error_path.center_back_composure 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "turnover_history": {
+          "status": "supported",
+          "finding": "turnover_history：England vs Ghana 的pressing_error_path检查项4支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA pressing_error_path.turnover_history 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        },
+        "follow_up_finishing": {
+          "status": "supported",
+          "finding": "follow_up_finishing：England vs Ghana 的pressing_error_path检查项5支持当前评分，依据为赛程、首轮赛果、本地赛后统计和历史样本。",
+          "evidence": [
+            "2026-06-24_BJT_ENG_GHA pressing_error_path.follow_up_finishing 独立事实摘要：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+          ],
+          "source_ids": [
+            "src_schedule_cbs",
+            "src_local_kb"
+          ]
+        }
+      },
+      "evidence": [
+        "pressing_error_path维度独立证据：英格兰首轮4-2击败克罗地亚，凯恩、贝林厄姆和替补拉什福德都形成进球；加纳1-0巴拿马但主要依靠尾段进球，进攻效率需复验。"
+      ],
+      "source_ids": [
+        "src_schedule_cbs",
+        "src_local_kb",
+        "src_historical_samples"
+      ],
+      "unknown_items": []
+    }
+  ],
+  "review_metadata": {
+    "schema_version": "multi-agent-review-1.0",
+    "mode": "multi_agent_consensus",
+    "role_results_used": [
+      "attack_agent",
+      "defense_risk_agent",
+      "market_history_agent",
+      "skeptic_agent",
+      "consensus_arbiter"
+    ],
+    "primary_dimension_owners": {
+      "base_strength": "market_history_agent",
+      "player_status": "attack_agent",
+      "player_type_structure": "attack_agent",
+      "key_matchups": "attack_agent",
+      "historical_style": "market_history_agent",
+      "style_counter": "defense_risk_agent",
+      "recent_form": "market_history_agent",
+      "goal_distribution": "attack_agent",
+      "strong_second_goal": "attack_agent",
+      "strong_third_goal": "attack_agent",
+      "weak_first_goal": "attack_agent",
+      "weak_second_goal": "attack_agent",
+      "favorite_defense": "defense_risk_agent",
+      "clean_sheet": "defense_risk_agent",
+      "tactical_matchup": "defense_risk_agent",
+      "stage_psychology": "defense_risk_agent",
+      "draw_risk": "defense_risk_agent",
+      "lineup_injuries": "defense_risk_agent",
+      "team_harmony_social": "defense_risk_agent",
+      "environment_schedule": "defense_risk_agent",
+      "referee_events": "defense_risk_agent",
+      "market_odds": "market_history_agent",
+      "dynamic_triggers": "defense_risk_agent",
+      "star_overperformance": "attack_agent",
+      "set_piece_aerial": "attack_agent",
+      "pressing_error_path": "attack_agent"
+    },
+    "review_dimension_owners": {
+      "base_strength": [
+        "attack_agent",
+        "defense_risk_agent"
+      ],
+      "player_status": [
+        "defense_risk_agent"
+      ],
+      "player_type_structure": [
+        "defense_risk_agent"
+      ],
+      "key_matchups": [
+        "defense_risk_agent"
+      ],
+      "historical_style": [
+        "defense_risk_agent"
+      ],
+      "style_counter": [
+        "attack_agent"
+      ],
+      "recent_form": [
+        "attack_agent"
+      ],
+      "goal_distribution": [
+        "market_history_agent"
+      ],
+      "strong_second_goal": [
+        "market_history_agent"
+      ],
+      "strong_third_goal": [
+        "market_history_agent"
+      ],
+      "weak_first_goal": [
+        "defense_risk_agent"
+      ],
+      "weak_second_goal": [
+        "defense_risk_agent"
+      ],
+      "favorite_defense": [
+        "attack_agent"
+      ],
+      "clean_sheet": [
+        "attack_agent"
+      ],
+      "tactical_matchup": [
+        "attack_agent"
+      ],
+      "stage_psychology": [
+        "market_history_agent"
+      ],
+      "draw_risk": [
+        "market_history_agent"
+      ],
+      "lineup_injuries": [
+        "attack_agent"
+      ],
+      "team_harmony_social": [
+        "market_history_agent"
+      ],
+      "environment_schedule": [
+        "market_history_agent"
+      ],
+      "referee_events": [
+        "attack_agent"
+      ],
+      "market_odds": [
+        "defense_risk_agent"
+      ],
+      "dynamic_triggers": [
+        "attack_agent"
+      ],
+      "star_overperformance": [
+        "market_history_agent"
+      ],
+      "set_piece_aerial": [
+        "defense_risk_agent"
+      ],
+      "pressing_error_path": [
+        "defense_risk_agent"
+      ]
+    },
+    "conflicts_resolved": [
+      {
+        "issue_id": "D1",
+        "issue_type": "causal_path_conflict",
+        "affected_dimensions": [
+          "strong_third_goal",
+          "weak_first_goal",
+          "clean_sheet"
+        ],
+        "positions": [
+          {
+            "role_id": "attack_agent",
+            "position": "英格兰进攻上限很高，但首轮丢2球说明零封不能给高。"
+          },
+          {
+            "role_id": "skeptic_agent",
+            "objection": "首轮样本强烈但样本量小，不能把单场趋势机械外推为大胜或零封。"
+          }
+        ],
+        "resolution": "3-1进入首选，3-0只作加纳进攻被切断时的次选。",
+        "confidence_change": "high -> medium"
+      }
+    ],
+    "claims_rejected": [
+      {
+        "role_id": "attack_agent",
+        "claim": "把首轮单场优势直接外推为三球以上主路径",
+        "reason": "首发未最终确认且对手仍存在真实一球路径。"
+      }
+    ],
+    "unknown_rationale": [
+      "北京时间赛前首发未完全确认，阵容和伤停相关结论统一不升为 high。"
+    ]
+  },
+  "historical_sample_adjustments": [
+    {
+      "sample": "local historical_samples.jsonl",
+      "adjustment": "按强队第二/第三球、弱队第一球、零封和平局风险经验进行校准。"
+    }
+  ],
+  "final_prediction": {
+    "win_tendency": "英格兰胜，第三球概率中等偏高",
+    "main_score_range": [
+      "3-1",
+      "2-1",
+      "3-0"
+    ],
+    "primary_score": "3-1",
+    "alternative_scores": [
+      "2-1",
+      "3-0"
+    ],
+    "total_goals_min": 2,
+    "total_goals_max": 4,
+    "both_teams_to_score": "medium",
+    "strong_second_goal": "high",
+    "strong_third_goal": "medium",
+    "weak_first_goal": "medium",
+    "weak_second_goal": "low",
+    "clean_sheet": "medium",
+    "draw_type": "1-1",
+    "trigger_conditions": [
+      "首发确认",
+      "早球改变比赛开放度",
+      "定位球或门将失误"
+    ],
+    "confidence": "medium",
+    "tail_scores": [
+      "4-1"
+    ],
+    "event_scenarios": {
+      "favorite_red_card": "强队前60分钟红牌时，下调强队约0.5-0.8球，优先改向平局或一球小负。",
+      "underdog_red_card": "弱队红牌时，强队增加0.7-1.0球，第三球进入主路径。",
+      "underdog_two_red_cards": "弱队两红时，极端尾部扩大到4球以上，不受常态总进球上限限制。",
+      "penalty_or_goalkeeper_error": "受益方增加一条独立进球路径，均势局优先迁移一个进球。"
+    }
+  }
+}
