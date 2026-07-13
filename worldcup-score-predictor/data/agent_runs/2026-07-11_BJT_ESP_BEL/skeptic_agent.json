@@ -1,0 +1,8 @@
+{
+  "schema_version": "role-result-1.0",
+  "job_id": "2026-07-11_BJT_ESP_BEL",
+  "role_id": "skeptic_agent",
+  "status": "completed",
+  "agent_run_id": "019f49c1-d6b5-72e0-8b96-3c50d150407f",
+  "summary": "审稿侧推荐primary 2-0，整体confidence medium；late market unavailable降置信。"
+}

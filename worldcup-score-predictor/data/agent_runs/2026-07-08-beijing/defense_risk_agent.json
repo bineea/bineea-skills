@@ -1,0 +1,41 @@
+{
+  "schema_version": "agent-artifact-1.0",
+  "role_id": "defense_risk_agent",
+  "agent_run_id": "019f3ad1-dcaa-7250-942c-44f6656bb984",
+  "execution_mode": "independent_subagent",
+  "created_at": "2026-07-07T12:30:58+08:00",
+  "tooling": "multi_agent_v1.spawn_agent",
+  "summary": "防守风险侧把阿根廷-埃及压向1-1/1-0低比分，瑞士-哥伦比亚强烈支持0-1与0-0。",
+  "match_summaries": {
+    "2026-07-08_BJT_ARG_EGY": {
+      "primary_score": "1-1",
+      "alternatives": [
+        "1-0",
+        "2-1"
+      ],
+      "btts_level": "medium",
+      "strong_second_goal": "medium",
+      "strong_third_goal": "low",
+      "weak_first_goal": "medium",
+      "weak_second_goal": "low",
+      "clean_sheet": "medium"
+    },
+    "2026-07-08_BJT_SUI_COL": {
+      "primary_score": "0-1",
+      "alternatives": [
+        "0-0",
+        "1-1"
+      ],
+      "btts_level": "low",
+      "strong_second_goal": "low",
+      "strong_third_goal": "low",
+      "weak_first_goal": "low_medium",
+      "weak_second_goal": "low",
+      "clean_sheet": "high"
+    }
+  },
+  "conflicts_to_raise": [
+    "ARG-EGY 高温短休导致1-1上升",
+    "SUI-COL 低BTTS与哥伦比亚零封优先"
+  ]
+}

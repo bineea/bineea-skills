@@ -1,0 +1,8 @@
+{
+  "schema_version": "agent-artifact-1.0",
+  "role_id": "attack_agent",
+  "agent_run_id": "019f36d0-9a52-7d73-8b8e-e8169ffcb398",
+  "execution_mode": "independent_subagent",
+  "created_at": "2026-07-06T23:58:00+08:00",
+  "summary": "真实独立子Agent结果整理；用于07-07北京时间两场预测的合议校验。"
+}

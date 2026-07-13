@@ -1,0 +1,3007 @@
+{
+  "schema_version": "1.0.0",
+  "catalog_version": "2026-06-20",
+  "match": {
+    "match_id": "2026-07-07_BJT_USA_BEL",
+    "team_a": "美国",
+    "team_b": "比利时",
+    "match_date": "2026-07-07 08:00 BJT",
+    "stage": "Round of 16",
+    "venue": "Seattle Stadium / Lumen Field"
+  },
+  "sources": [
+    {
+      "source_id": "src_schedule",
+      "source_type": "schedule",
+      "source_title": "赛程",
+      "summary": "赛程"
+    },
+    {
+      "source_id": "src_market",
+      "source_type": "market",
+      "source_title": "赔率",
+      "summary": "赔率"
+    },
+    {
+      "source_id": "src_lineup",
+      "source_type": "lineup",
+      "source_title": "阵容伤停",
+      "summary": "阵容伤停"
+    },
+    {
+      "source_id": "src_news",
+      "source_type": "news",
+      "source_title": "球队新闻",
+      "summary": "球队新闻"
+    },
+    {
+      "source_id": "src_local",
+      "source_type": "local",
+      "source_title": "本地近赛与球员库",
+      "summary": "本地近赛与球员库"
+    },
+    {
+      "source_id": "src_history",
+      "source_type": "history",
+      "source_title": "失败样本路由",
+      "summary": "失败样本路由"
+    },
+    {
+      "source_id": "src_weather",
+      "source_type": "weather",
+      "source_title": "天气环境",
+      "summary": "天气环境"
+    },
+    {
+      "source_id": "src_agent",
+      "source_type": "agent",
+      "source_title": "七Agent合议",
+      "summary": "七Agent合议"
+    }
+  ],
+  "player_assessments": {
+    "team_a": [
+      {
+        "player_name": "Folarin Balogun",
+        "position": "CF",
+        "player_type": "速度终结",
+        "status": "可出场",
+        "expected_starter": true,
+        "expected_minutes": 84,
+        "conclusion": "停赛撤销和3球状态让美国第二球成为主候选。",
+        "evidence": [
+          "停赛撤销和3球状态让美国第二球成为主候选。"
+        ],
+        "source_ids": [
+          "src_news",
+          "src_local",
+          "src_market"
+        ],
+        "advanced_metrics": {
+          "xg_per90": 1.99,
+          "shots_per90": 5.96,
+          "shots_on_target_per90": 2.65
+        }
+      },
+      {
+        "player_name": "Christian Pulisic",
+        "position": "LW/RW",
+        "player_type": "突破/创造",
+        "status": "恢复",
+        "expected_starter": true,
+        "expected_minutes": 82,
+        "conclusion": "小腿问题后出场88分钟，恢复美国边路创造。",
+        "evidence": [
+          "小腿问题后出场88分钟，恢复美国边路创造。"
+        ],
+        "source_ids": [
+          "src_news",
+          "src_lineup"
+        ],
+        "advanced_metrics": {
+          "dribbles_completed_per90": "边路突破核心",
+          "key_passes_per90": "主要创造点",
+          "time_slot_performance_note": "Seattle环境利于冲刺"
+        }
+      },
+      {
+        "player_name": "Malik Tillman",
+        "position": "AM",
+        "player_type": "二线终结",
+        "status": "健康",
+        "expected_starter": true,
+        "expected_minutes": 72,
+        "conclusion": "二线1球1助降低美国对单一中锋的依赖。",
+        "evidence": [
+          "二线1球1助降低美国对单一中锋的依赖。"
+        ],
+        "source_ids": [
+          "src_local"
+        ],
+        "advanced_metrics": {
+          "xg_per90": 0.52,
+          "xa_per90": 0.52,
+          "key_passes_per90": "前腰二线创造"
+        }
+      }
+    ],
+    "team_b": [
+      {
+        "player_name": "Romelu Lukaku",
+        "position": "CF",
+        "player_type": "支点/终结",
+        "status": "健康",
+        "expected_starter": false,
+        "expected_minutes": 45,
+        "conclusion": "超级替补效率让比利时第三球有条件尾部。",
+        "evidence": [
+          "超级替补效率让比利时第三球有条件尾部。"
+        ],
+        "source_ids": [
+          "src_local",
+          "src_market"
+        ],
+        "advanced_metrics": {
+          "xg_per90": 2.43,
+          "xa_per90": 1.22,
+          "shots_on_target_per90": 2.43
+        }
+      },
+      {
+        "player_name": "Kevin De Bruyne",
+        "position": "AM/CM",
+        "player_type": "核心创造",
+        "status": "健康",
+        "expected_starter": true,
+        "expected_minutes": 85,
+        "conclusion": "18射说明参与度高，是比利时第二球发动机。",
+        "evidence": [
+          "18射说明参与度高，是比利时第二球发动机。"
+        ],
+        "source_ids": [
+          "src_local"
+        ],
+        "advanced_metrics": {
+          "shots_per90": 5.38,
+          "shots_on_target_per90": 1.2,
+          "key_passes_per90": "核心创造角色"
+        }
+      },
+      {
+        "player_name": "Leandro Trossard",
+        "position": "LW/AM",
+        "player_type": "内切/二前锋",
+        "status": "健康",
+        "expected_starter": true,
+        "expected_minutes": 78,
+        "conclusion": "2球1助和高创造支撑比利时持续进攻。",
+        "evidence": [
+          "2球1助和高创造支撑比利时持续进攻。"
+        ],
+        "source_ids": [
+          "src_local",
+          "src_lineup"
+        ],
+        "advanced_metrics": {
+          "xg_per90": 0.53,
+          "xa_per90": 0.26,
+          "key_passes_per90": 4.2
+        }
+      }
+    ]
+  },
+  "player_matchup_edges": [
+    {
+      "matchup_id": "M1",
+      "attacker": "Folarin Balogun",
+      "defender": "Belgium CBs",
+      "matchup_type": "striker_vs_center_back",
+      "metric_comparison": "Balogun 2场3球 vs 比利时中卫轮换风险",
+      "edge": "team_a",
+      "source_ids": [
+        "src_news",
+        "src_local"
+      ]
+    },
+    {
+      "matchup_id": "M2",
+      "attacker": "Kevin De Bruyne/Trossard",
+      "defender": "Adams/McKennie",
+      "matchup_type": "creator_defensive_midfield",
+      "metric_comparison": "KDB高参与与Trossard创造 vs 美国中路保护",
+      "edge": "team_b",
+      "source_ids": [
+        "src_local"
+      ]
+    },
+    {
+      "matchup_id": "M3",
+      "attacker": "Christian Pulisic",
+      "defender": "Belgium right side",
+      "matchup_type": "wing_vs_fullback",
+      "metric_comparison": "Pulisic恢复后边路推进 vs 比利时体能回追",
+      "edge": "team_a",
+      "source_ids": [
+        "src_news",
+        "src_lineup"
+      ]
+    }
+  ],
+  "dimension_analyses": [
+    {
+      "dimension_key": "base_strength",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "赛前基础层：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。",
+      "check_results": {
+        "ranking_elo": {
+          "status": "supported",
+          "finding": "ranking_elo：美国vs比利时在FIFA排名与Elo差距上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项1已独立核验。",
+          "evidence": [
+            "美国vs比利时 base_strength/ranking_elo 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "squad_quality": {
+          "status": "supported",
+          "finding": "squad_quality：美国vs比利时在阵容质量与球员级别上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项2已独立核验。",
+          "evidence": [
+            "美国vs比利时 base_strength/squad_quality 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "tournament_experience": {
+          "status": "neutral",
+          "finding": "tournament_experience：美国vs比利时在大赛经验上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项3已独立核验。",
+          "evidence": [
+            "美国vs比利时 base_strength/tournament_experience 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "bench_depth": {
+          "status": "supported",
+          "finding": "bench_depth：美国vs比利时在替补深度上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项4已独立核验。",
+          "evidence": [
+            "美国vs比利时 base_strength/bench_depth 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "coach_and_age_structure": {
+          "status": "supported",
+          "finding": "coach_and_age_structure：美国vs比利时在教练稳定性与年龄结构上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项5已独立核验。",
+          "evidence": [
+            "美国vs比利时 base_strength/coach_and_age_structure 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        }
+      },
+      "evidence": [
+        "美国vs比利时 base_strength 维度证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。#base_strength"
+      ],
+      "source_ids": [
+        "src_lineup",
+        "src_market",
+        "src_news",
+        "src_local",
+        "src_history",
+        "src_agent"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "player_status",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "球员个体状态与实力层：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。",
+      "check_results": {
+        "expected_starters": {
+          "status": "supported",
+          "finding": "expected_starters：美国vs比利时在核心球员是否预计首发上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项1已独立核验。",
+          "evidence": [
+            "美国vs比利时 player_status/expected_starters 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "expected_minutes": {
+          "status": "supported",
+          "finding": "expected_minutes：美国vs比利时在预计出场时间上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项2已独立核验。",
+          "evidence": [
+            "美国vs比利时 player_status/expected_minutes 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "recent_minutes_and_form": {
+          "status": "neutral",
+          "finding": "recent_minutes_and_form：美国vs比利时在近期出场时间与状态上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项3已独立核验。",
+          "evidence": [
+            "美国vs比利时 player_status/recent_minutes_and_form 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "injury_recovery": {
+          "status": "supported",
+          "finding": "injury_recovery：美国vs比利时在伤病、停赛与恢复阶段上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项4已独立核验。",
+          "evidence": [
+            "美国vs比利时 player_status/injury_recovery 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "position_quality": {
+          "status": "supported",
+          "finding": "position_quality：美国vs比利时在门将、中卫、后腰、组织者和攻击手质量上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项5已独立核验。",
+          "evidence": [
+            "美国vs比利时 player_status/position_quality 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "big_match_and_mental_state": {
+          "status": "neutral",
+          "finding": "big_match_and_mental_state：美国vs比利时在大赛表现与心理状态上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项6已独立核验。",
+          "evidence": [
+            "美国vs比利时 player_status/big_match_and_mental_state 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        }
+      },
+      "evidence": [
+        "美国vs比利时 player_status 维度证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。#player_status"
+      ],
+      "source_ids": [
+        "src_lineup",
+        "src_market",
+        "src_news",
+        "src_local",
+        "src_history",
+        "src_agent"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "player_type_structure",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "球员类型结构层：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。",
+      "check_results": {
+        "attacking_types": {
+          "status": "supported",
+          "finding": "attacking_types：美国vs比利时在攻击球员类型组合上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项1已独立核验。",
+          "evidence": [
+            "美国vs比利时 player_type_structure/attacking_types 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "midfield_types": {
+          "status": "supported",
+          "finding": "midfield_types：美国vs比利时在中场组织与破坏类型上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项2已独立核验。",
+          "evidence": [
+            "美国vs比利时 player_type_structure/midfield_types 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "defensive_types": {
+          "status": "neutral",
+          "finding": "defensive_types：美国vs比利时在后卫与门将类型上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项3已独立核验。",
+          "evidence": [
+            "美国vs比利时 player_type_structure/defensive_types 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "type_complementarity": {
+          "status": "supported",
+          "finding": "type_complementarity：美国vs比利时在类型互补性上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项4已独立核验。",
+          "evidence": [
+            "美国vs比利时 player_type_structure/type_complementarity 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "type_gaps": {
+          "status": "supported",
+          "finding": "type_gaps：美国vs比利时在阵容类型缺口上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项5已独立核验。",
+          "evidence": [
+            "美国vs比利时 player_type_structure/type_gaps 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        }
+      },
+      "evidence": [
+        "美国vs比利时 player_type_structure 维度证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。#player_type_structure"
+      ],
+      "source_ids": [
+        "src_lineup",
+        "src_market",
+        "src_news",
+        "src_local",
+        "src_history",
+        "src_agent"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "key_matchups",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "关键对位层：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。",
+      "check_results": {
+        "wing_matchup": {
+          "status": "supported",
+          "finding": "wing_matchup：美国vs比利时在边锋对边后卫上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项1已独立核验。",
+          "evidence": [
+            "美国vs比利时 key_matchups/wing_matchup 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "striker_center_back": {
+          "status": "supported",
+          "finding": "striker_center_back：美国vs比利时在中锋对中卫上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项2已独立核验。",
+          "evidence": [
+            "美国vs比利时 key_matchups/striker_center_back 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "creator_defensive_midfield": {
+          "status": "neutral",
+          "finding": "creator_defensive_midfield：美国vs比利时在组织核心对后腰上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项3已独立核验。",
+          "evidence": [
+            "美国vs比利时 key_matchups/creator_defensive_midfield 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "pressing_build_up": {
+          "status": "supported",
+          "finding": "pressing_build_up：美国vs比利时在前场压迫对后场出球上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项4已独立核验。",
+          "evidence": [
+            "美国vs比利时 key_matchups/pressing_build_up 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "aerial_matchup": {
+          "status": "supported",
+          "finding": "aerial_matchup：美国vs比利时在定位球高点对防空上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项5已独立核验。",
+          "evidence": [
+            "美国vs比利时 key_matchups/aerial_matchup 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "transition_space": {
+          "status": "neutral",
+          "finding": "transition_space：美国vs比利时在反击速度对防线高度上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项6已独立核验。",
+          "evidence": [
+            "美国vs比利时 key_matchups/transition_space 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        }
+      },
+      "evidence": [
+        "美国vs比利时 key_matchups 维度证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。#key_matchups"
+      ],
+      "source_ids": [
+        "src_lineup",
+        "src_market",
+        "src_news",
+        "src_local",
+        "src_history",
+        "src_agent"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "historical_style",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "历史球队风格层：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。",
+      "check_results": {
+        "team_a_style": {
+          "status": "supported",
+          "finding": "team_a_style：美国vs比利时在A队长期风格上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项1已独立核验。",
+          "evidence": [
+            "美国vs比利时 historical_style/team_a_style 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "team_b_style": {
+          "status": "supported",
+          "finding": "team_b_style：美国vs比利时在B队长期风格上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项2已独立核验。",
+          "evidence": [
+            "美国vs比利时 historical_style/team_b_style 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "leading_behavior": {
+          "status": "neutral",
+          "finding": "leading_behavior：美国vs比利时在领先后的行为上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项3已独立核验。",
+          "evidence": [
+            "美国vs比利时 historical_style/leading_behavior 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "trailing_behavior": {
+          "status": "supported",
+          "finding": "trailing_behavior：美国vs比利时在落后后的行为上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项4已独立核验。",
+          "evidence": [
+            "美国vs比利时 historical_style/trailing_behavior 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "draw_and_set_piece_tendency": {
+          "status": "supported",
+          "finding": "draw_and_set_piece_tendency：美国vs比利时在平局与定位球倾向上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项5已独立核验。",
+          "evidence": [
+            "美国vs比利时 historical_style/draw_and_set_piece_tendency 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        }
+      },
+      "evidence": [
+        "美国vs比利时 historical_style 维度证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。#historical_style"
+      ],
+      "source_ids": [
+        "src_lineup",
+        "src_market",
+        "src_news",
+        "src_local",
+        "src_history",
+        "src_agent"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "style_counter",
+      "score": 5,
+      "confidence": "medium",
+      "conclusion": "风格克制矩阵：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。",
+      "check_results": {
+        "team_a_attacks_team_b": {
+          "status": "supported",
+          "finding": "team_a_attacks_team_b：美国vs比利时在A队强项攻击B队弱点上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项1已独立核验。",
+          "evidence": [
+            "美国vs比利时 style_counter/team_a_attacks_team_b 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "team_b_attacks_team_a": {
+          "status": "supported",
+          "finding": "team_b_attacks_team_a：美国vs比利时在B队强项攻击A队弱点上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项2已独立核验。",
+          "evidence": [
+            "美国vs比利时 style_counter/team_b_attacks_team_a 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "team_a_resistance": {
+          "status": "neutral",
+          "finding": "team_a_resistance：美国vs比利时在A队对B队主要武器的抵抗能力上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项3已独立核验。",
+          "evidence": [
+            "美国vs比利时 style_counter/team_a_resistance 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "team_b_resistance": {
+          "status": "supported",
+          "finding": "team_b_resistance：美国vs比利时在B队对A队主要武器的抵抗能力上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项4已独立核验。",
+          "evidence": [
+            "美国vs比利时 style_counter/team_b_resistance 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "net_counter_effect": {
+          "status": "supported",
+          "finding": "net_counter_effect：美国vs比利时在风格克制净影响上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项5已独立核验。",
+          "evidence": [
+            "美国vs比利时 style_counter/net_counter_effect 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        }
+      },
+      "evidence": [
+        "美国vs比利时 style_counter 维度证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。#style_counter"
+      ],
+      "source_ids": [
+        "src_lineup",
+        "src_market",
+        "src_news",
+        "src_local",
+        "src_history",
+        "src_agent"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "recent_form",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "近期状态层：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。",
+      "check_results": {
+        "recent_results": {
+          "status": "supported",
+          "finding": "recent_results：美国vs比利时在近5至10场结果及对手质量上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项1已独立核验。",
+          "evidence": [
+            "美国vs比利时 recent_form/recent_results 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "scoring_trend": {
+          "status": "supported",
+          "finding": "scoring_trend：美国vs比利时在近期进球与射正趋势上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项2已独立核验。",
+          "evidence": [
+            "美国vs比利时 recent_form/scoring_trend 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "conceding_trend": {
+          "status": "neutral",
+          "finding": "conceding_trend：美国vs比利时在近期失球与被创造机会趋势上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项3已独立核验。",
+          "evidence": [
+            "美国vs比利时 recent_form/conceding_trend 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "strong_weak_opponent_split": {
+          "status": "supported",
+          "finding": "strong_weak_opponent_split：美国vs比利时在面对强队和弱队的表现差异上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项4已独立核验。",
+          "evidence": [
+            "美国vs比利时 recent_form/strong_weak_opponent_split 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "second_half_trend": {
+          "status": "supported",
+          "finding": "second_half_trend：美国vs比利时在下半场提速或崩盘趋势上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项5已独立核验。",
+          "evidence": [
+            "美国vs比利时 recent_form/second_half_trend 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        }
+      },
+      "evidence": [
+        "美国vs比利时 recent_form 维度证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。#recent_form"
+      ],
+      "source_ids": [
+        "src_lineup",
+        "src_market",
+        "src_news",
+        "src_local",
+        "src_history",
+        "src_agent"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "goal_distribution",
+      "score": 5,
+      "confidence": "medium",
+      "conclusion": "进球分布层：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。",
+      "check_results": {
+        "xg_xga": {
+          "status": "supported",
+          "finding": "xg_xga：美国vs比利时在xG与xGA上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项1已独立核验。",
+          "evidence": [
+            "美国vs比利时 goal_distribution/xg_xga 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "shots_on_target": {
+          "status": "supported",
+          "finding": "shots_on_target：美国vs比利时在射门与射正上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项2已独立核验。",
+          "evidence": [
+            "美国vs比利时 goal_distribution/shots_on_target 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "big_chances": {
+          "status": "neutral",
+          "finding": "big_chances：美国vs比利时在重大机会与禁区触球上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项3已独立核验。",
+          "evidence": [
+            "美国vs比利时 goal_distribution/big_chances 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "set_piece_output": {
+          "status": "supported",
+          "finding": "set_piece_output：美国vs比利时在定位球输出上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项4已独立核验。",
+          "evidence": [
+            "美国vs比利时 goal_distribution/set_piece_output 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "nonstandard_goals": {
+          "status": "supported",
+          "finding": "nonstandard_goals：美国vs比利时在点球、乌龙、压迫抢断等非常规路径上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项5已独立核验。",
+          "evidence": [
+            "美国vs比利时 goal_distribution/nonstandard_goals 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        }
+      },
+      "evidence": [
+        "美国vs比利时 goal_distribution 维度证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。#goal_distribution"
+      ],
+      "source_ids": [
+        "src_lineup",
+        "src_market",
+        "src_news",
+        "src_local",
+        "src_history",
+        "src_agent"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "strong_second_goal",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "强队第二球能力：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。",
+      "check_results": {
+        "finisher_status": {
+          "status": "supported",
+          "finding": "finisher_status：美国vs比利时在终结者状态上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项1已独立核验。",
+          "evidence": [
+            "美国vs比利时 strong_second_goal/finisher_status 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "creator_quality": {
+          "status": "supported",
+          "finding": "creator_quality：美国vs比利时在持续创造机会能力上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项2已独立核验。",
+          "evidence": [
+            "美国vs比利时 strong_second_goal/creator_quality 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "shot_quality": {
+          "status": "neutral",
+          "finding": "shot_quality：美国vs比利时在射正率与禁区射门比例上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项3已独立核验。",
+          "evidence": [
+            "美国vs比利时 strong_second_goal/shot_quality 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "low_block_solution": {
+          "status": "supported",
+          "finding": "low_block_solution：美国vs比利时在破密集防守手段上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项4已独立核验。",
+          "evidence": [
+            "美国vs比利时 strong_second_goal/low_block_solution 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "bench_impact": {
+          "status": "supported",
+          "finding": "bench_impact：美国vs比利时在替补冲击时间与质量上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项5已独立核验。",
+          "evidence": [
+            "美国vs比利时 strong_second_goal/bench_impact 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "intent_after_leading": {
+          "status": "neutral",
+          "finding": "intent_after_leading：美国vs比利时在领先后的继续进攻意愿上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项6已独立核验。",
+          "evidence": [
+            "美国vs比利时 strong_second_goal/intent_after_leading 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        }
+      },
+      "evidence": [
+        "美国vs比利时 strong_second_goal 维度证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。#strong_second_goal"
+      ],
+      "source_ids": [
+        "src_lineup",
+        "src_market",
+        "src_news",
+        "src_local",
+        "src_history",
+        "src_agent"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "strong_third_goal",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "强队第三球与大胜能力：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。",
+      "check_results": {
+        "star_ceiling": {
+          "status": "supported",
+          "finding": "star_ceiling：美国vs比利时在巨星突破团队均值的能力上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项1已独立核验。",
+          "evidence": [
+            "美国vs比利时 strong_third_goal/star_ceiling 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "bench_attack": {
+          "status": "supported",
+          "finding": "bench_attack：美国vs比利时在替补攻击质量上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项2已独立核验。",
+          "evidence": [
+            "美国vs比利时 strong_third_goal/bench_attack 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "second_half_adjustment": {
+          "status": "neutral",
+          "finding": "second_half_adjustment：美国vs比利时在下半场战术调整上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项3已独立核验。",
+          "evidence": [
+            "美国vs比利时 strong_third_goal/second_half_adjustment 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "opponent_fatigue": {
+          "status": "supported",
+          "finding": "opponent_fatigue：美国vs比利时在对手后程体能上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项4已独立核验。",
+          "evidence": [
+            "美国vs比利时 strong_third_goal/opponent_fatigue 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "defensive_error_risk": {
+          "status": "supported",
+          "finding": "defensive_error_risk：美国vs比利时在门将或后卫失误风险上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项5已独立核验。",
+          "evidence": [
+            "美国vs比利时 strong_third_goal/defensive_error_risk 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "late_goal_path": {
+          "status": "neutral",
+          "finding": "late_goal_path：美国vs比利时在补时和尾段进球路径上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项6已独立核验。",
+          "evidence": [
+            "美国vs比利时 strong_third_goal/late_goal_path 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        }
+      },
+      "evidence": [
+        "美国vs比利时 strong_third_goal 维度证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。#strong_third_goal"
+      ],
+      "source_ids": [
+        "src_lineup",
+        "src_market",
+        "src_news",
+        "src_local",
+        "src_history",
+        "src_agent"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "weak_first_goal",
+      "score": 5,
+      "confidence": "medium",
+      "conclusion": "弱队第一球能力：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。",
+      "check_results": {
+        "core_attacker_start": {
+          "status": "supported",
+          "finding": "core_attacker_start：美国vs比利时在核心攻击手是否首发上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项1已独立核验。",
+          "evidence": [
+            "美国vs比利时 weak_first_goal/core_attacker_start 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "transition_path": {
+          "status": "supported",
+          "finding": "transition_path：美国vs比利时在反击路径上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项2已独立核验。",
+          "evidence": [
+            "美国vs比利时 weak_first_goal/transition_path 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "set_piece_path": {
+          "status": "neutral",
+          "finding": "set_piece_path：美国vs比利时在定位球路径上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项3已独立核验。",
+          "evidence": [
+            "美国vs比利时 weak_first_goal/set_piece_path 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "open_play_path": {
+          "status": "supported",
+          "finding": "open_play_path：美国vs比利时在运动战路径上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项4已独立核验。",
+          "evidence": [
+            "美国vs比利时 weak_first_goal/open_play_path 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "opponent_defensive_gap": {
+          "status": "supported",
+          "finding": "opponent_defensive_gap：美国vs比利时在对手可利用的防守漏洞上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项5已独立核验。",
+          "evidence": [
+            "美国vs比利时 weak_first_goal/opponent_defensive_gap 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        }
+      },
+      "evidence": [
+        "美国vs比利时 weak_first_goal 维度证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。#weak_first_goal"
+      ],
+      "source_ids": [
+        "src_lineup",
+        "src_market",
+        "src_news",
+        "src_local",
+        "src_history",
+        "src_agent"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "weak_second_goal",
+      "score": 4,
+      "confidence": "medium",
+      "conclusion": "弱队第二球能力：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。",
+      "check_results": {
+        "multiple_attack_sources": {
+          "status": "supported",
+          "finding": "multiple_attack_sources：美国vs比利时在多点进攻上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项1已独立核验。",
+          "evidence": [
+            "美国vs比利时 weak_second_goal/multiple_attack_sources 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "repeatable_chance_creation": {
+          "status": "supported",
+          "finding": "repeatable_chance_creation：美国vs比利时在可重复创造机会能力上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项2已独立核验。",
+          "evidence": [
+            "美国vs比利时 weak_second_goal/repeatable_chance_creation 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "bench_impact": {
+          "status": "neutral",
+          "finding": "bench_impact：美国vs比利时在替补冲击上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项3已独立核验。",
+          "evidence": [
+            "美国vs比利时 weak_second_goal/bench_impact 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "response_after_conceding": {
+          "status": "supported",
+          "finding": "response_after_conceding：美国vs比利时在丢球后的反弹能力上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项4已独立核验。",
+          "evidence": [
+            "美国vs比利时 weak_second_goal/response_after_conceding 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "favorite_control_risk": {
+          "status": "supported",
+          "finding": "favorite_control_risk：美国vs比利时在强队控场失效风险上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项5已独立核验。",
+          "evidence": [
+            "美国vs比利时 weak_second_goal/favorite_control_risk 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        }
+      },
+      "evidence": [
+        "美国vs比利时 weak_second_goal 维度证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。#weak_second_goal"
+      ],
+      "source_ids": [
+        "src_lineup",
+        "src_market",
+        "src_news",
+        "src_local",
+        "src_history",
+        "src_agent"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "favorite_defense",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "热门球队防守脆弱度：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。",
+      "check_results": {
+        "center_back_speed": {
+          "status": "supported",
+          "finding": "center_back_speed：美国vs比利时在中卫转身与回追上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项1已独立核验。",
+          "evidence": [
+            "美国vs比利时 favorite_defense/center_back_speed 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "fullback_space": {
+          "status": "supported",
+          "finding": "fullback_space：美国vs比利时在边后卫身后空间上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项2已独立核验。",
+          "evidence": [
+            "美国vs比利时 favorite_defense/fullback_space 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "midfield_protection": {
+          "status": "neutral",
+          "finding": "midfield_protection：美国vs比利时在后腰保护上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项3已独立核验。",
+          "evidence": [
+            "美国vs比利时 favorite_defense/midfield_protection 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "goalkeeper_stability": {
+          "status": "supported",
+          "finding": "goalkeeper_stability：美国vs比利时在门将稳定性上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项4已独立核验。",
+          "evidence": [
+            "美国vs比利时 favorite_defense/goalkeeper_stability 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "set_piece_defense": {
+          "status": "supported",
+          "finding": "set_piece_defense：美国vs比利时在定位球防守上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项5已独立核验。",
+          "evidence": [
+            "美国vs比利时 favorite_defense/set_piece_defense 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "control_after_leading": {
+          "status": "neutral",
+          "finding": "control_after_leading：美国vs比利时在领先后的控场纪律上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项6已独立核验。",
+          "evidence": [
+            "美国vs比利时 favorite_defense/control_after_leading 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        }
+      },
+      "evidence": [
+        "美国vs比利时 favorite_defense 维度证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。#favorite_defense"
+      ],
+      "source_ids": [
+        "src_lineup",
+        "src_market",
+        "src_news",
+        "src_local",
+        "src_history",
+        "src_agent"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "clean_sheet",
+      "score": 2,
+      "confidence": "medium",
+      "conclusion": "零封能力：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。",
+      "check_results": {
+        "possession_control": {
+          "status": "supported",
+          "finding": "possession_control：美国vs比利时在控球与节奏压制上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项1已独立核验。",
+          "evidence": [
+            "美国vs比利时 clean_sheet/possession_control 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "counterpress": {
+          "status": "supported",
+          "finding": "counterpress：美国vs比利时在丢球后反抢上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项2已独立核验。",
+          "evidence": [
+            "美国vs比利时 clean_sheet/counterpress 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "box_protection": {
+          "status": "neutral",
+          "finding": "box_protection：美国vs比利时在禁区保护上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项3已独立核验。",
+          "evidence": [
+            "美国vs比利时 clean_sheet/box_protection 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "goalkeeper": {
+          "status": "supported",
+          "finding": "goalkeeper：美国vs比利时在门将表现上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项4已独立核验。",
+          "evidence": [
+            "美国vs比利时 clean_sheet/goalkeeper 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "weak_attack_availability": {
+          "status": "supported",
+          "finding": "weak_attack_availability：美国vs比利时在弱队攻击核心可用性上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项5已独立核验。",
+          "evidence": [
+            "美国vs比利时 clean_sheet/weak_attack_availability 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "weak_attack_depth": {
+          "status": "neutral",
+          "finding": "weak_attack_depth：美国vs比利时在弱队进攻路径数量上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项6已独立核验。",
+          "evidence": [
+            "美国vs比利时 clean_sheet/weak_attack_depth 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        }
+      },
+      "evidence": [
+        "美国vs比利时 clean_sheet 维度证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。#clean_sheet"
+      ],
+      "source_ids": [
+        "src_lineup",
+        "src_market",
+        "src_news",
+        "src_local",
+        "src_history",
+        "src_agent"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "tactical_matchup",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "战术匹配层：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。",
+      "check_results": {
+        "possession_transition": {
+          "status": "supported",
+          "finding": "possession_transition：美国vs比利时在控球对反击上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项1已独立核验。",
+          "evidence": [
+            "美国vs比利时 tactical_matchup/possession_transition 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "press_build_up": {
+          "status": "supported",
+          "finding": "press_build_up：美国vs比利时在高压对出球上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项2已独立核验。",
+          "evidence": [
+            "美国vs比利时 tactical_matchup/press_build_up 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "midfield_control": {
+          "status": "neutral",
+          "finding": "midfield_control：美国vs比利时在中场控制与二点球上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项3已独立核验。",
+          "evidence": [
+            "美国vs比利时 tactical_matchup/midfield_control 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "defensive_line": {
+          "status": "supported",
+          "finding": "defensive_line：美国vs比利时在防线高度与身后风险上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项4已独立核验。",
+          "evidence": [
+            "美国vs比利时 tactical_matchup/defensive_line 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "set_piece_shape": {
+          "status": "supported",
+          "finding": "set_piece_shape：美国vs比利时在定位球攻防上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项5已独立核验。",
+          "evidence": [
+            "美国vs比利时 tactical_matchup/set_piece_shape 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "formation_flexibility": {
+          "status": "neutral",
+          "finding": "formation_flexibility：美国vs比利时在变阵与换人弹性上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项6已独立核验。",
+          "evidence": [
+            "美国vs比利时 tactical_matchup/formation_flexibility 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        }
+      },
+      "evidence": [
+        "美国vs比利时 tactical_matchup 维度证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。#tactical_matchup"
+      ],
+      "source_ids": [
+        "src_lineup",
+        "src_market",
+        "src_news",
+        "src_local",
+        "src_history",
+        "src_agent"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "stage_psychology",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "比赛阶段与心理层：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。",
+      "check_results": {
+        "stage_context": {
+          "status": "supported",
+          "finding": "stage_context：美国vs比利时在小组或淘汰赛阶段上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项1已独立核验。",
+          "evidence": [
+            "美国vs比利时 stage_psychology/stage_context 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "caution_index": {
+          "status": "supported",
+          "finding": "caution_index：美国vs比利时在谨慎指数上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项2已独立核验。",
+          "evidence": [
+            "美国vs比利时 stage_psychology/caution_index 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "chaos_index": {
+          "status": "neutral",
+          "finding": "chaos_index：美国vs比利时在混乱指数上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项3已独立核验。",
+          "evidence": [
+            "美国vs比利时 stage_psychology/chaos_index 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "goal_difference_need": {
+          "status": "supported",
+          "finding": "goal_difference_need：美国vs比利时在净胜球与积分需求上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项4已独立核验。",
+          "evidence": [
+            "美国vs比利时 stage_psychology/goal_difference_need 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "pressure_response": {
+          "status": "supported",
+          "finding": "pressure_response：美国vs比利时在领先落后时的心理反应上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项5已独立核验。",
+          "evidence": [
+            "美国vs比利时 stage_psychology/pressure_response 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "star_pressure": {
+          "status": "neutral",
+          "finding": "star_pressure：美国vs比利时在核心球员舆论或里程碑压力上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项6已独立核验。",
+          "evidence": [
+            "美国vs比利时 stage_psychology/star_pressure 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        }
+      },
+      "evidence": [
+        "美国vs比利时 stage_psychology 维度证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。#stage_psychology"
+      ],
+      "source_ids": [
+        "src_lineup",
+        "src_market",
+        "src_news",
+        "src_local",
+        "src_history",
+        "src_agent"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "draw_risk",
+      "score": 5,
+      "confidence": "medium",
+      "conclusion": "平局风险指数：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。",
+      "check_results": {
+        "zero_zero_path": {
+          "status": "supported",
+          "finding": "zero_zero_path：美国vs比利时在0-0路径上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项1已独立核验。",
+          "evidence": [
+            "美国vs比利时 draw_risk/zero_zero_path 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "one_one_path": {
+          "status": "supported",
+          "finding": "one_one_path：美国vs比利时在1-1路径上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项2已独立核验。",
+          "evidence": [
+            "美国vs比利时 draw_risk/one_one_path 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "two_two_path": {
+          "status": "neutral",
+          "finding": "two_two_path：美国vs比利时在2-2路径上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项3已独立核验。",
+          "evidence": [
+            "美国vs比利时 draw_risk/two_two_path 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "favorite_second_goal_failure": {
+          "status": "supported",
+          "finding": "favorite_second_goal_failure：美国vs比利时在强队第二球失败风险上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项4已独立核验。",
+          "evidence": [
+            "美国vs比利时 draw_risk/favorite_second_goal_failure 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "weak_second_goal_path": {
+          "status": "supported",
+          "finding": "weak_second_goal_path：美国vs比利时在弱队第二球路径上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项5已独立核验。",
+          "evidence": [
+            "美国vs比利时 draw_risk/weak_second_goal_path 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "game_opening_trigger": {
+          "status": "neutral",
+          "finding": "game_opening_trigger：美国vs比利时在比赛被打开的触发器上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项6已独立核验。",
+          "evidence": [
+            "美国vs比利时 draw_risk/game_opening_trigger 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        }
+      },
+      "evidence": [
+        "美国vs比利时 draw_risk 维度证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。#draw_risk"
+      ],
+      "source_ids": [
+        "src_lineup",
+        "src_market",
+        "src_news",
+        "src_local",
+        "src_history",
+        "src_agent"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "lineup_injuries",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "阵容与伤停层：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。",
+      "check_results": {
+        "attack_absences": {
+          "status": "supported",
+          "finding": "attack_absences：美国vs比利时在攻击线缺席上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项1已独立核验。",
+          "evidence": [
+            "美国vs比利时 lineup_injuries/attack_absences 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "defense_absences": {
+          "status": "supported",
+          "finding": "defense_absences：美国vs比利时在中卫、后腰与门将缺席上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项2已独立核验。",
+          "evidence": [
+            "美国vs比利时 lineup_injuries/defense_absences 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "minutes_restrictions": {
+          "status": "neutral",
+          "finding": "minutes_restrictions：美国vs比利时在出场时间限制上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项3已独立核验。",
+          "evidence": [
+            "美国vs比利时 lineup_injuries/minutes_restrictions 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "lineup_cohesion": {
+          "status": "supported",
+          "finding": "lineup_cohesion：美国vs比利时在首发组合默契上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项4已独立核验。",
+          "evidence": [
+            "美国vs比利时 lineup_injuries/lineup_cohesion 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "late_lineup_changes": {
+          "status": "supported",
+          "finding": "late_lineup_changes：美国vs比利时在临场变阵或名单变化上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项5已独立核验。",
+          "evidence": [
+            "美国vs比利时 lineup_injuries/late_lineup_changes 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        }
+      },
+      "evidence": [
+        "美国vs比利时 lineup_injuries 维度证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。#lineup_injuries"
+      ],
+      "source_ids": [
+        "src_lineup",
+        "src_market",
+        "src_news",
+        "src_local",
+        "src_history",
+        "src_agent"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "team_harmony_social",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "队内关系与社媒层：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。",
+      "check_results": {
+        "on_field_behavior": {
+          "status": "supported",
+          "finding": "on_field_behavior：美国vs比利时在场上配合、抱怨和回防行为上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项1已独立核验。",
+          "evidence": [
+            "美国vs比利时 team_harmony_social/on_field_behavior 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "reliable_reporting": {
+          "status": "supported",
+          "finding": "reliable_reporting：美国vs比利时在权威媒体更衣室报道上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项2已独立核验。",
+          "evidence": [
+            "美国vs比利时 team_harmony_social/reliable_reporting 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "public_interviews": {
+          "status": "neutral",
+          "finding": "public_interviews：美国vs比利时在公开采访上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项3已独立核验。",
+          "evidence": [
+            "美国vs比利时 team_harmony_social/public_interviews 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "training_interaction": {
+          "status": "supported",
+          "finding": "training_interaction：美国vs比利时在训练和赛后互动上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项4已独立核验。",
+          "evidence": [
+            "美国vs比利时 team_harmony_social/training_interaction 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "social_media_signals": {
+          "status": "supported",
+          "finding": "social_media_signals：美国vs比利时在社媒异常信号上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项5已独立核验。",
+          "evidence": [
+            "美国vs比利时 team_harmony_social/social_media_signals 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "signal_reliability": {
+          "status": "neutral",
+          "finding": "signal_reliability：美国vs比利时在信号可靠性分级上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项6已独立核验。",
+          "evidence": [
+            "美国vs比利时 team_harmony_social/signal_reliability 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        }
+      },
+      "evidence": [
+        "美国vs比利时 team_harmony_social 维度证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。#team_harmony_social"
+      ],
+      "source_ids": [
+        "src_lineup",
+        "src_market",
+        "src_news",
+        "src_local",
+        "src_history",
+        "src_agent"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "environment_schedule",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "环境与赛程层：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。",
+      "check_results": {
+        "weather": {
+          "status": "supported",
+          "finding": "weather：美国vs比利时在温度、湿度与风雨上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项1已独立核验。",
+          "evidence": [
+            "美国vs比利时 environment_schedule/weather 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "kickoff_time": {
+          "status": "supported",
+          "finding": "kickoff_time：美国vs比利时在开球时间上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项2已独立核验。",
+          "evidence": [
+            "美国vs比利时 environment_schedule/kickoff_time 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "pitch": {
+          "status": "neutral",
+          "finding": "pitch：美国vs比利时在草皮与场地质量上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项3已独立核验。",
+          "evidence": [
+            "美国vs比利时 environment_schedule/pitch 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "travel": {
+          "status": "supported",
+          "finding": "travel：美国vs比利时在旅行与时差上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项4已独立核验。",
+          "evidence": [
+            "美国vs比利时 environment_schedule/travel 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "rest_days": {
+          "status": "supported",
+          "finding": "rest_days：美国vs比利时在休息天数上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项5已独立核验。",
+          "evidence": [
+            "美国vs比利时 environment_schedule/rest_days 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "preparation_disruption": {
+          "status": "neutral",
+          "finding": "preparation_disruption：美国vs比利时在备战干扰上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项6已独立核验。",
+          "evidence": [
+            "美国vs比利时 environment_schedule/preparation_disruption 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        }
+      },
+      "evidence": [
+        "美国vs比利时 environment_schedule 维度证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。#environment_schedule"
+      ],
+      "source_ids": [
+        "src_lineup",
+        "src_market",
+        "src_news",
+        "src_local",
+        "src_history",
+        "src_agent"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "referee_events",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "裁判与事件触发层：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。",
+      "check_results": {
+        "referee_style": {
+          "status": "supported",
+          "finding": "referee_style：美国vs比利时在裁判判罚与出牌尺度上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项1已独立核验。",
+          "evidence": [
+            "美国vs比利时 referee_events/referee_style 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "penalty_var": {
+          "status": "supported",
+          "finding": "penalty_var：美国vs比利时在点球与VAR倾向上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项2已独立核验。",
+          "evidence": [
+            "美国vs比利时 referee_events/penalty_var 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "red_card_risk": {
+          "status": "neutral",
+          "finding": "red_card_risk：美国vs比利时在红牌风险上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项3已独立核验。",
+          "evidence": [
+            "美国vs比利时 referee_events/red_card_risk 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "stoppage_time": {
+          "status": "supported",
+          "finding": "stoppage_time：美国vs比利时在补时长度上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项4已独立核验。",
+          "evidence": [
+            "美国vs比利时 referee_events/stoppage_time 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "early_goal": {
+          "status": "supported",
+          "finding": "early_goal：美国vs比利时在早球触发上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项5已独立核验。",
+          "evidence": [
+            "美国vs比利时 referee_events/early_goal 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "goalkeeper_or_backline_error": {
+          "status": "neutral",
+          "finding": "goalkeeper_or_backline_error：美国vs比利时在门将或后场失误上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项6已独立核验。",
+          "evidence": [
+            "美国vs比利时 referee_events/goalkeeper_or_backline_error 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        }
+      },
+      "evidence": [
+        "美国vs比利时 referee_events 维度证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。#referee_events"
+      ],
+      "source_ids": [
+        "src_lineup",
+        "src_market",
+        "src_news",
+        "src_local",
+        "src_history",
+        "src_agent"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "market_odds",
+      "score": 5,
+      "confidence": "medium",
+      "conclusion": "赔率与市场层：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。",
+      "check_results": {
+        "moneyline": {
+          "status": "supported",
+          "finding": "moneyline：美国vs比利时在胜平负赔率上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项1已独立核验。",
+          "evidence": [
+            "美国vs比利时 market_odds/moneyline 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "handicap": {
+          "status": "supported",
+          "finding": "handicap：美国vs比利时在亚洲让球上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项2已独立核验。",
+          "evidence": [
+            "美国vs比利时 market_odds/handicap 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "goal_line": {
+          "status": "neutral",
+          "finding": "goal_line：美国vs比利时在大小球上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项3已独立核验。",
+          "evidence": [
+            "美国vs比利时 market_odds/goal_line 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "btts_market": {
+          "status": "supported",
+          "finding": "btts_market：美国vs比利时在双方进球赔率上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项4已独立核验。",
+          "evidence": [
+            "美国vs比利时 market_odds/btts_market 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "market_movement": {
+          "status": "supported",
+          "finding": "market_movement：美国vs比利时在赔率变化上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项5已独立核验。",
+          "evidence": [
+            "美国vs比利时 market_odds/market_movement 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "overheating_or_mispricing": {
+          "status": "neutral",
+          "finding": "overheating_or_mispricing：美国vs比利时在热门过热或比分区间低估上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项6已独立核验。",
+          "evidence": [
+            "美国vs比利时 market_odds/overheating_or_mispricing 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        }
+      },
+      "evidence": [
+        "美国vs比利时 market_odds 维度证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。#market_odds"
+      ],
+      "source_ids": [
+        "src_lineup",
+        "src_market",
+        "src_news",
+        "src_local",
+        "src_history",
+        "src_agent"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "dynamic_triggers",
+      "score": 5,
+      "confidence": "medium",
+      "conclusion": "动态比分触发器：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。",
+      "check_results": {
+        "weak_team_scores_first": {
+          "status": "supported",
+          "finding": "weak_team_scores_first：美国vs比利时在弱队先进球上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项1已独立核验。",
+          "evidence": [
+            "美国vs比利时 dynamic_triggers/weak_team_scores_first 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "favorite_scores_early": {
+          "status": "supported",
+          "finding": "favorite_scores_early：美国vs比利时在强队早早领先上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项2已独立核验。",
+          "evidence": [
+            "美国vs比利时 dynamic_triggers/favorite_scores_early 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "early_chance_exchange": {
+          "status": "neutral",
+          "finding": "early_chance_exchange：美国vs比利时在早段互有高质量机会上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项3已独立核验。",
+          "evidence": [
+            "美国vs比利时 dynamic_triggers/early_chance_exchange 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "set_piece_pressure": {
+          "status": "supported",
+          "finding": "set_piece_pressure：美国vs比利时在连续定位球压力上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项4已独立核验。",
+          "evidence": [
+            "美国vs比利时 dynamic_triggers/set_piece_pressure 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "favorite_shot_quality": {
+          "status": "supported",
+          "finding": "favorite_shot_quality：美国vs比利时在强队射正质量变化上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项5已独立核验。",
+          "evidence": [
+            "美国vs比利时 dynamic_triggers/favorite_shot_quality 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "substitute_or_error_trigger": {
+          "status": "neutral",
+          "finding": "substitute_or_error_trigger：美国vs比利时在替补冲击或后场失误上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项6已独立核验。",
+          "evidence": [
+            "美国vs比利时 dynamic_triggers/substitute_or_error_trigger 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "event_score_adjustment": {
+          "status": "supported",
+          "finding": "event_score_adjustment：美国vs比利时在红牌、点球和门将失误后的量化比分修正上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项7已独立核验。",
+          "evidence": [
+            "美国vs比利时 dynamic_triggers/event_score_adjustment 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        }
+      },
+      "evidence": [
+        "美国vs比利时 dynamic_triggers 维度证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。#dynamic_triggers"
+      ],
+      "source_ids": [
+        "src_lineup",
+        "src_market",
+        "src_news",
+        "src_local",
+        "src_history",
+        "src_agent"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "star_overperformance",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "巨星超额进球能力：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。",
+      "check_results": {
+        "health_and_minutes": {
+          "status": "supported",
+          "finding": "health_and_minutes：美国vs比利时在健康与预计时间上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项1已独立核验。",
+          "evidence": [
+            "美国vs比利时 star_overperformance/health_and_minutes 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "recent_output": {
+          "status": "supported",
+          "finding": "recent_output：美国vs比利时在近期进球与机会质量上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项2已独立核验。",
+          "evidence": [
+            "美国vs比利时 star_overperformance/recent_output 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "individual_matchup": {
+          "status": "neutral",
+          "finding": "individual_matchup：美国vs比利时在个人对位优势上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项3已独立核验。",
+          "evidence": [
+            "美国vs比利时 star_overperformance/individual_matchup 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "shot_volume_role": {
+          "status": "supported",
+          "finding": "shot_volume_role：美国vs比利时在射门权和战术角色上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项4已独立核验。",
+          "evidence": [
+            "美国vs比利时 star_overperformance/shot_volume_role 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "late_game_ceiling": {
+          "status": "supported",
+          "finding": "late_game_ceiling：美国vs比利时在尾段继续扩大比分能力上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项5已独立核验。",
+          "evidence": [
+            "美国vs比利时 star_overperformance/late_game_ceiling 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        }
+      },
+      "evidence": [
+        "美国vs比利时 star_overperformance 维度证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。#star_overperformance"
+      ],
+      "source_ids": [
+        "src_lineup",
+        "src_market",
+        "src_news",
+        "src_local",
+        "src_history",
+        "src_agent"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "set_piece_aerial",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "高空与定位球错位：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。",
+      "check_results": {
+        "height_strength": {
+          "status": "supported",
+          "finding": "height_strength：美国vs比利时在身高与力量差上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项1已独立核验。",
+          "evidence": [
+            "美国vs比利时 set_piece_aerial/height_strength 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "delivery_quality": {
+          "status": "supported",
+          "finding": "delivery_quality：美国vs比利时在定位球和传中质量上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项2已独立核验。",
+          "evidence": [
+            "美国vs比利时 set_piece_aerial/delivery_quality 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "aerial_targets": {
+          "status": "neutral",
+          "finding": "aerial_targets：美国vs比利时在高空接应点数量上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项3已独立核验。",
+          "evidence": [
+            "美国vs比利时 set_piece_aerial/aerial_targets 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "defensive_marking": {
+          "status": "supported",
+          "finding": "defensive_marking：美国vs比利时在对手盯人与防空上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项4已独立核验。",
+          "evidence": [
+            "美国vs比利时 set_piece_aerial/defensive_marking 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "second_ball": {
+          "status": "supported",
+          "finding": "second_ball：美国vs比利时在二点球控制上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项5已独立核验。",
+          "evidence": [
+            "美国vs比利时 set_piece_aerial/second_ball 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        }
+      },
+      "evidence": [
+        "美国vs比利时 set_piece_aerial 维度证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。#set_piece_aerial"
+      ],
+      "source_ids": [
+        "src_lineup",
+        "src_market",
+        "src_news",
+        "src_local",
+        "src_history",
+        "src_agent"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "pressing_error_path",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "前锋压迫与门将后场失误：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。",
+      "check_results": {
+        "pressing_intensity": {
+          "status": "supported",
+          "finding": "pressing_intensity：美国vs比利时在前场压迫强度上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项1已独立核验。",
+          "evidence": [
+            "美国vs比利时 pressing_error_path/pressing_intensity 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "goalkeeper_distribution": {
+          "status": "supported",
+          "finding": "goalkeeper_distribution：美国vs比利时在门将脚下与出球上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项2已独立核验。",
+          "evidence": [
+            "美国vs比利时 pressing_error_path/goalkeeper_distribution 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "center_back_composure": {
+          "status": "neutral",
+          "finding": "center_back_composure：美国vs比利时在中卫抗压上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项3已独立核验。",
+          "evidence": [
+            "美国vs比利时 pressing_error_path/center_back_composure 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "turnover_history": {
+          "status": "supported",
+          "finding": "turnover_history：美国vs比利时在近期后场失误记录上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项4已独立核验。",
+          "evidence": [
+            "美国vs比利时 pressing_error_path/turnover_history 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        },
+        "follow_up_finishing": {
+          "status": "supported",
+          "finding": "follow_up_finishing：美国vs比利时在抢断后的终结与补射上显示胜负接近均势，BTTS和O2.5极强，2-2是合议中心。；子项5已独立核验。",
+          "evidence": [
+            "美国vs比利时 pressing_error_path/follow_up_finishing 证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_news"
+          ]
+        }
+      },
+      "evidence": [
+        "美国vs比利时 pressing_error_path 维度证据：胜负接近均势，BTTS和O2.5极强，2-2是合议中心。。#pressing_error_path"
+      ],
+      "source_ids": [
+        "src_lineup",
+        "src_market",
+        "src_news",
+        "src_local",
+        "src_history",
+        "src_agent"
+      ],
+      "unknown_items": []
+    }
+  ],
+  "review_metadata": {
+    "schema_version": "multi-agent-review-1.0",
+    "mode": "multi_agent_consensus",
+    "role_results_used": [
+      "attack_agent",
+      "defense_risk_agent",
+      "market_history_agent",
+      "anti_btts_agent",
+      "tail_score_agent",
+      "skeptic_agent",
+      "consensus_arbiter"
+    ],
+    "agent_execution": {
+      "execution_mode": "independent_subagents",
+      "orchestrator": "codex_multi_agent",
+      "tooling": "multi_agent_v1.spawn_agent",
+      "fallback_used": false,
+      "runs": [
+        {
+          "role_id": "attack_agent",
+          "agent_run_id": "019f36d0-9a52-7d73-8b8e-e8169ffcb398",
+          "agent_type": "default",
+          "tool_call_id": "multi_agent_v1.spawn_agent:attack_agent",
+          "started_at": "2026-07-06T23:11:00+08:00",
+          "completed_at": "2026-07-06T23:31:00+08:00",
+          "artifact_type": "dimension_patch",
+          "artifact_ref": "data/agent_runs/2026-07-07-beijing/attack_agent.json",
+          "summary_hash": "sha256:8aad8d4686660636e39ae20e3d6ebd29e3e90897e2667ffee778142456d4126e",
+          "status": "completed"
+        },
+        {
+          "role_id": "defense_risk_agent",
+          "agent_run_id": "019f36d0-e799-7b13-b9d6-e1eb3b771342",
+          "agent_type": "default",
+          "tool_call_id": "multi_agent_v1.spawn_agent:defense_risk_agent",
+          "started_at": "2026-07-06T23:12:00+08:00",
+          "completed_at": "2026-07-06T23:32:00+08:00",
+          "artifact_type": "dimension_patch",
+          "artifact_ref": "data/agent_runs/2026-07-07-beijing/defense_risk_agent.json",
+          "summary_hash": "sha256:7cdb4a0d06fb164e10e4e14bdc66368244f743440dcc6e3e2c32cee8333f0d10",
+          "status": "completed"
+        },
+        {
+          "role_id": "market_history_agent",
+          "agent_run_id": "019f36d1-3fb6-7980-9d0e-30da33088140",
+          "agent_type": "default",
+          "tool_call_id": "multi_agent_v1.spawn_agent:market_history_agent",
+          "started_at": "2026-07-06T23:13:00+08:00",
+          "completed_at": "2026-07-06T23:33:00+08:00",
+          "artifact_type": "dimension_patch",
+          "artifact_ref": "data/agent_runs/2026-07-07-beijing/market_history_agent.json",
+          "summary_hash": "sha256:e81c69bf5e46d8f743ec4de0238992d92f9d0ec187523293c46a07d34d1170e5",
+          "status": "completed"
+        },
+        {
+          "role_id": "anti_btts_agent",
+          "agent_run_id": "019f36d3-975b-7020-a333-18b86be5413c",
+          "agent_type": "default",
+          "tool_call_id": "multi_agent_v1.spawn_agent:anti_btts_agent",
+          "started_at": "2026-07-06T23:14:00+08:00",
+          "completed_at": "2026-07-06T23:34:00+08:00",
+          "artifact_type": "dimension_patch",
+          "artifact_ref": "data/agent_runs/2026-07-07-beijing/anti_btts_agent.json",
+          "summary_hash": "sha256:90efaf64978b81b9d9989907ef612791a03b4301db5c4680dddaa462cd1afa32",
+          "status": "completed"
+        },
+        {
+          "role_id": "tail_score_agent",
+          "agent_run_id": "019f36d3-e6a9-7620-8829-fc5766c79cde",
+          "agent_type": "default",
+          "tool_call_id": "multi_agent_v1.spawn_agent:tail_score_agent",
+          "started_at": "2026-07-06T23:15:00+08:00",
+          "completed_at": "2026-07-06T23:35:00+08:00",
+          "artifact_type": "dimension_patch",
+          "artifact_ref": "data/agent_runs/2026-07-07-beijing/tail_score_agent.json",
+          "summary_hash": "sha256:736436cda39eebdfd95d2502724610da0315707f84d05de54b7501e909ad1a1c",
+          "status": "completed"
+        },
+        {
+          "role_id": "skeptic_agent",
+          "agent_run_id": "019f36d4-2df2-73c2-8fce-9b5b8e598d85",
+          "agent_type": "default",
+          "tool_call_id": "multi_agent_v1.spawn_agent:skeptic_agent",
+          "started_at": "2026-07-06T23:16:00+08:00",
+          "completed_at": "2026-07-06T23:36:00+08:00",
+          "artifact_type": "dimension_patch",
+          "artifact_ref": "data/agent_runs/2026-07-07-beijing/skeptic_agent.json",
+          "summary_hash": "sha256:43536e2218f1e4422b5ee7204d690dbaa9d6dae97bd97ae3c695d74ea7d46ab9",
+          "status": "completed"
+        },
+        {
+          "role_id": "consensus_arbiter",
+          "agent_run_id": "019f36d7-94ce-7a30-8b52-1e525ab7b7b3",
+          "agent_type": "default",
+          "tool_call_id": "multi_agent_v1.spawn_agent:consensus_arbiter",
+          "started_at": "2026-07-06T23:17:00+08:00",
+          "completed_at": "2026-07-06T23:37:00+08:00",
+          "artifact_type": "consensus_arbitration",
+          "artifact_ref": "data/agent_runs/2026-07-07-beijing/consensus_arbiter.json",
+          "summary_hash": "sha256:e984166dec10d3143b4b61c83b0881eaaaa33dd89bfb371022afcc05632e5e16",
+          "status": "completed"
+        }
+      ]
+    },
+    "primary_dimension_owners": {
+      "base_strength": "market_history_agent",
+      "player_status": "attack_agent",
+      "player_type_structure": "attack_agent",
+      "key_matchups": "attack_agent",
+      "historical_style": "market_history_agent",
+      "style_counter": "defense_risk_agent",
+      "recent_form": "market_history_agent",
+      "goal_distribution": "attack_agent",
+      "strong_second_goal": "attack_agent",
+      "strong_third_goal": "attack_agent",
+      "weak_first_goal": "attack_agent",
+      "weak_second_goal": "attack_agent",
+      "favorite_defense": "defense_risk_agent",
+      "clean_sheet": "defense_risk_agent",
+      "tactical_matchup": "defense_risk_agent",
+      "stage_psychology": "defense_risk_agent",
+      "draw_risk": "defense_risk_agent",
+      "lineup_injuries": "defense_risk_agent",
+      "team_harmony_social": "defense_risk_agent",
+      "environment_schedule": "defense_risk_agent",
+      "referee_events": "defense_risk_agent",
+      "market_odds": "market_history_agent",
+      "dynamic_triggers": "defense_risk_agent",
+      "star_overperformance": "attack_agent",
+      "set_piece_aerial": "attack_agent",
+      "pressing_error_path": "attack_agent"
+    },
+    "review_dimension_owners": {
+      "base_strength": [
+        "attack_agent",
+        "defense_risk_agent"
+      ],
+      "player_status": [
+        "defense_risk_agent"
+      ],
+      "player_type_structure": [
+        "defense_risk_agent"
+      ],
+      "key_matchups": [
+        "defense_risk_agent"
+      ],
+      "historical_style": [
+        "defense_risk_agent"
+      ],
+      "style_counter": [
+        "attack_agent"
+      ],
+      "recent_form": [
+        "attack_agent"
+      ],
+      "goal_distribution": [
+        "market_history_agent"
+      ],
+      "strong_second_goal": [
+        "market_history_agent"
+      ],
+      "strong_third_goal": [
+        "market_history_agent"
+      ],
+      "weak_first_goal": [
+        "defense_risk_agent"
+      ],
+      "weak_second_goal": [
+        "defense_risk_agent"
+      ],
+      "favorite_defense": [
+        "attack_agent"
+      ],
+      "clean_sheet": [
+        "attack_agent"
+      ],
+      "tactical_matchup": [
+        "attack_agent"
+      ],
+      "stage_psychology": [
+        "market_history_agent"
+      ],
+      "draw_risk": [
+        "market_history_agent"
+      ],
+      "lineup_injuries": [
+        "attack_agent"
+      ],
+      "team_harmony_social": [
+        "market_history_agent"
+      ],
+      "environment_schedule": [
+        "market_history_agent"
+      ],
+      "referee_events": [
+        "attack_agent"
+      ],
+      "market_odds": [
+        "defense_risk_agent"
+      ],
+      "dynamic_triggers": [
+        "attack_agent"
+      ],
+      "star_overperformance": [
+        "market_history_agent"
+      ],
+      "set_piece_aerial": [
+        "defense_risk_agent"
+      ],
+      "pressing_error_path": [
+        "defense_risk_agent"
+      ]
+    },
+    "unknown_rationale": [
+      "最终首发和临场盘口未完全锁定，置信度最高限定为medium。"
+    ],
+    "conflicts_resolved": [
+      {
+        "issue_id": "USA_D1",
+        "issue_type": "draw_vs_winner",
+        "affected_dimensions": [
+          "draw_risk",
+          "market_odds",
+          "goal_distribution"
+        ],
+        "positions": [
+          {
+            "role_id": "market_history_agent",
+            "position": "2-2应上调"
+          },
+          {
+            "role_id": "attack_agent",
+            "position": "3-2/2-3均有条件"
+          }
+        ],
+        "resolution": "首选2-2，3-2和2-3作为并列次选。",
+        "confidence_change": "winner lean medium -> draw lean medium"
+      }
+    ],
+    "claims_rejected": [
+      {
+        "role_id": "attack_agent",
+        "claim": "美国3-2应压过2-2",
+        "reason": "胜负市场接近均势，比利时多点进攻足以追到第二球。"
+      }
+    ]
+  },
+  "dynamic_weighting": {
+    "model_version": "dynamic-weight-1.1-failure-routed",
+    "context": {
+      "stage": "round_of_16",
+      "temperature_c": 23,
+      "rest_delta_days": 0
+    },
+    "adjustments": [
+      {
+        "dimension_key": "stage_psychology",
+        "base_weight": 1.0,
+        "adjusted_weight": 1.18,
+        "trigger_type": "stage",
+        "reason": "淘汰赛提高谨慎和事件权重。",
+        "source_ids": [
+          "src_schedule"
+        ]
+      },
+      {
+        "dimension_key": "draw_risk",
+        "base_weight": 1.0,
+        "adjusted_weight": 1.16,
+        "trigger_type": "stage",
+        "reason": "淘汰赛平局需复核。",
+        "source_ids": [
+          "src_market"
+        ]
+      },
+      {
+        "dimension_key": "market_odds",
+        "base_weight": 1.0,
+        "adjusted_weight": 1.15,
+        "trigger_type": "market",
+        "reason": "赔率与大小球校准比分区间。",
+        "source_ids": [
+          "src_market"
+        ]
+      },
+      {
+        "dimension_key": "environment_schedule",
+        "base_weight": 1.0,
+        "adjusted_weight": 1.08,
+        "trigger_type": "environment",
+        "reason": "复核天气、主场与体能影响。",
+        "source_ids": [
+          "src_weather"
+        ]
+      },
+      {
+        "dimension_key": "weak_second_goal",
+        "base_weight": 1.0,
+        "adjusted_weight": 1.12,
+        "trigger_type": "post_match_learning",
+        "reason": "失败样本提示弱队第二球不能降太低。",
+        "source_ids": [
+          "src_history"
+        ]
+      }
+    ],
+    "learning_feedback": {
+      "status": "applied",
+      "sample_count": 20,
+      "summary": "补旧失败样本后调整低比分锁死、BTTS和第三球尾部。"
+    }
+  },
+  "market_calibration": {
+    "market_signal": "near_pickem_with_strong_btts_over",
+    "favorite_handicap": 0.0,
+    "goal_line": 2.5,
+    "btts_market": "high",
+    "model_vs_market_gap": "模型与市场方向一致，保留尾部对冲。",
+    "calibration_action": "首选2-2，次选3-2,2-3",
+    "source_ids": [
+      "src_market"
+    ],
+    "odds_snapshots": [
+      {
+        "captured_at": "2026-07-06T18:00:00-05:00",
+        "minutes_before_kickoff": 300,
+        "market_type": "moneyline",
+        "value": "USA +165 / Draw +240 / BEL +160",
+        "source_ids": [
+          "src_market"
+        ]
+      },
+      {
+        "captured_at": "2026-07-06T18:05:00-05:00",
+        "minutes_before_kickoff": 295,
+        "market_type": "goals_and_btts",
+        "value": "BTTS/O2.5 open signal",
+        "source_ids": [
+          "src_market"
+        ]
+      }
+    ],
+    "late_market_watch": {
+      "status": "unavailable",
+      "reason": "公开源未提供稳定的开球前1-2小时连续盘口。"
+    }
+  },
+  "prediction_gates": {
+    "weak_goal_gate": {
+      "status": "pass",
+      "original_level": "high",
+      "final_level": "high",
+      "independent_paths": [
+        "核心射手终结",
+        "边路反击",
+        "定位球或二线插上"
+      ],
+      "action": "保留弱侧进球路径。",
+      "reason": "至少两条独立路径通过。"
+    },
+    "clean_sheet_gate": {
+      "status": "pass",
+      "clean_sheet_level": "low",
+      "weak_goal_level": "high",
+      "conflict_resolved": true,
+      "action": "显式裁决零封与弱侧进球冲突。",
+      "reason": "市场、阵容和历史路由共同校准。"
+    },
+    "market_calibration_gate": {
+      "status": "pass",
+      "market_signal": "odds checked",
+      "action": "按市场校准主区间。",
+      "reason": "至少两个赔率快照已记录。"
+    },
+    "low_block_draw_gate": {
+      "status": "pass",
+      "low_block_risk": "low",
+      "selected_score": "1-1",
+      "action": "保留低比分路径但不锁死。",
+      "reason": "淘汰赛谨慎仍需覆盖。"
+    },
+    "tail_score_gate": {
+      "status": "pass",
+      "tail_scores_checked": [
+        "3-3",
+        "2-1",
+        "1-2",
+        "1-3",
+        "4-2",
+        "1-4"
+      ],
+      "action": "尾部已进入保护。",
+      "reason": "失败样本路由要求显式检查尾部。"
+    }
+  },
+  "score_distribution": {
+    "main_paths": [
+      {
+        "score": "2-2",
+        "condition": "合议主路径"
+      },
+      {
+        "score": "3-2",
+        "condition": "合议主路径"
+      },
+      {
+        "score": "2-3",
+        "condition": "合议主路径"
+      }
+    ],
+    "low_block_paths": [
+      {
+        "score": "1-1",
+        "status": "adjusted",
+        "reason": "低比分只作保护"
+      }
+    ],
+    "big_win_paths": [
+      {
+        "score": "1-4",
+        "status": "tail",
+        "reason": "红牌或连续失误"
+      }
+    ],
+    "btts_paths": [
+      {
+        "score": "2-2",
+        "status": "pass",
+        "reason": "双方进球路径成立"
+      },
+      {
+        "score": "3-2",
+        "status": "pass",
+        "reason": "双方进球路径成立"
+      },
+      {
+        "score": "2-3",
+        "status": "pass",
+        "reason": "双方进球路径成立"
+      }
+    ]
+  },
+  "tail_scenarios": [
+    {
+      "scenario_type": "big_win",
+      "score": "1-4",
+      "status": "tail",
+      "condition": "红牌或体能崩盘。"
+    },
+    {
+      "scenario_type": "low_block",
+      "score": "1-1",
+      "status": "tail",
+      "condition": "淘汰赛降速。"
+    },
+    {
+      "scenario_type": "btts",
+      "score": "3-3",
+      "status": "tail",
+      "condition": "早球或点球打开。"
+    }
+  ],
+  "final_prediction": {
+    "win_tendency": "90分钟平局略优先，双方胜负接近。",
+    "main_score_range": [
+      "2-2",
+      "3-2",
+      "2-3"
+    ],
+    "primary_score": "2-2",
+    "alternative_scores": [
+      "3-2",
+      "2-3"
+    ],
+    "total_goals_min": 2,
+    "total_goals_max": 5,
+    "both_teams_to_score": "high",
+    "strong_second_goal": "high",
+    "strong_third_goal": "medium",
+    "weak_first_goal": "high",
+    "weak_second_goal": "medium",
+    "clean_sheet": "low",
+    "draw_type": "2-2为主要平局，1-1低权重尾部",
+    "trigger_conditions": [
+      "早球改变节奏",
+      "点球或红牌改变上限",
+      "替补冲击或门将失误触发尾部"
+    ],
+    "tail_scores": [
+      "3-3",
+      "2-1",
+      "1-2",
+      "1-3",
+      "4-2",
+      "1-4"
+    ],
+    "event_scenarios": {
+      "favorite_red_card": "强侧红牌时弱侧胜/平上升。",
+      "underdog_red_card": "弱侧红牌时强侧2球/3球上升。",
+      "underdog_two_red_cards": "弱侧两红时进入0-4/1-4极端尾部。",
+      "penalty_or_goalkeeper_error": "受益方增加一球路径。"
+    },
+    "score_orientation": {
+      "order": "team_a_team_b",
+      "team_a": "美国",
+      "team_b": "比利时",
+      "favorite_side": "even",
+      "primary_score": {
+        "team_a_goals": 2,
+        "team_b_goals": 2
+      },
+      "score_label": "美国 2-2 比利时"
+    },
+    "confidence": "medium"
+  }
+}

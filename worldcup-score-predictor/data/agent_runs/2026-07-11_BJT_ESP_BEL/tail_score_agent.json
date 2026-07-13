@@ -1,0 +1,8 @@
+{
+  "schema_version": "role-result-1.0",
+  "job_id": "2026-07-11_BJT_ESP_BEL",
+  "role_id": "tail_score_agent",
+  "status": "completed",
+  "agent_run_id": "019f49c1-c508-7fc2-86e0-ec6d7c6242d4",
+  "summary": "尾部分布要求3-0进入主次结构；2-1为条件BTTS尾，0-0保留低位闷局。"
+}

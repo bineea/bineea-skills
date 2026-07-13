@@ -1,0 +1,139 @@
+{
+  "quant_baseline": {
+    "schema_version": "quant-baseline-1.0",
+    "status": "partial",
+    "source_ids": [
+      "src_local",
+      "src_quant"
+    ],
+    "missing_inputs": [
+      "缺少 direct xG/xGA，使用进球率回退基线"
+    ],
+    "xg": {
+      "status": "unavailable",
+      "team_a_xg_for": null,
+      "team_a_xg_against": null,
+      "team_b_xg_for": null,
+      "team_b_xg_against": null,
+      "source_ids": [],
+      "reason": "未提供双方 direct xG/xGA"
+    },
+    "expected_goals": {
+      "team_a_lambda": 1.632993,
+      "team_b_lambda": 1.0,
+      "total_lambda": 2.632994,
+      "lambda_components": {
+        "team_a": {
+          "xg_component": null,
+          "goal_rate_component": 1.632993,
+          "sanger_delta": 0,
+          "final_lambda": 1.632993
+        },
+        "team_b": {
+          "xg_component": null,
+          "goal_rate_component": 1.0,
+          "sanger_delta": 0,
+          "final_lambda": 1.0
+        }
+      }
+    },
+    "poisson": {
+      "max_goals": 7,
+      "top_scores": [
+        {
+          "score": "1-1",
+          "probability": 0.117352,
+          "rank": 1
+        },
+        {
+          "score": "1-0",
+          "probability": 0.117352,
+          "rank": 2
+        },
+        {
+          "score": "2-1",
+          "probability": 0.095817,
+          "rank": 3
+        },
+        {
+          "score": "2-0",
+          "probability": 0.095817,
+          "rank": 4
+        },
+        {
+          "score": "0-1",
+          "probability": 0.071863,
+          "rank": 5
+        },
+        {
+          "score": "0-0",
+          "probability": 0.071863,
+          "rank": 6
+        },
+        {
+          "score": "1-2",
+          "probability": 0.058676,
+          "rank": 7
+        },
+        {
+          "score": "3-1",
+          "probability": 0.052156,
+          "rank": 8
+        },
+        {
+          "score": "3-0",
+          "probability": 0.052156,
+          "rank": 9
+        },
+        {
+          "score": "2-2",
+          "probability": 0.047909,
+          "rank": 10
+        }
+      ],
+      "outcome_probabilities": {
+        "team_a_win": 0.521334,
+        "draw": 0.246764,
+        "team_b_win": 0.231593
+      },
+      "btts_probability": 0.508443,
+      "over_2_5_probability": 0.489513,
+      "team_goal_probabilities": {
+        "team_a": {
+          "ge_1": 0.804656,
+          "ge_2": 0.485661,
+          "ge_3": 0.225202
+        },
+        "team_b": {
+          "ge_1": 0.632121,
+          "ge_2": 0.264241,
+          "ge_3": 0.080301
+        }
+      },
+      "clean_sheet_probabilities": {
+        "team_a_clean_sheet": 0.367879,
+        "team_b_clean_sheet": 0.195344
+      },
+      "overflow_probability": 0.000308
+    },
+    "sanger": {
+      "status": "unavailable",
+      "model_id": "",
+      "formula_ref": "",
+      "team_a_lambda_delta": 0,
+      "team_b_lambda_delta": 0,
+      "confidence": "unknown",
+      "source_ids": [],
+      "reason": "未配置桑格公式或来源"
+    },
+    "calibration_flags": {
+      "top_score_gate_n": 10,
+      "primary_score_outside_top_n": false,
+      "btts_conflict": false,
+      "over_2_5_conflict": false,
+      "strong_third_goal_conflict": false,
+      "clean_sheet_conflict": false,
+      "lambda_delta_flag": false
+    }
+  }
+}

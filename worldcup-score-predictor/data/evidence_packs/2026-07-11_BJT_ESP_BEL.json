@@ -1,0 +1,194 @@
+{
+  "job_id": "2026-07-11_BJT_ESP_BEL",
+  "schema_version": "match-evidence-pack-1.0",
+  "match": {
+    "match_id": "2026-07-11_BJT_ESP_BEL",
+    "competition": "FIFA World Cup 2026",
+    "match_date_bjt": "2026-07-11",
+    "kickoff_bjt": "2026-07-11 03:00",
+    "stage": "Quarter-final",
+    "venue": "Los Angeles Stadium, Los Angeles",
+    "team_a": "西班牙",
+    "team_b": "比利时",
+    "score_orientation": "team_a-team_b"
+  },
+  "sources": [
+    {
+      "source_id": "src_fixture_fox",
+      "source_title": "FOX One Spain vs Belgium live listing",
+      "source_url": "https://www.fox.com/soccer/fifa-world-cup/spain-vs-belgium-jul-10-2026",
+      "source_type": "fixture",
+      "summary": "Confirms Spain vs Belgium on Friday July 10, 2026, 3:00 p.m. ET / 12:00 p.m. PT at Los Angeles Stadium.",
+      "reliability": "high"
+    },
+    {
+      "source_id": "src_match_fox",
+      "source_title": "FOX Sports Spain vs Belgium boxscore, team stats, odds and weather",
+      "source_url": "https://www.foxsports.com/soccer/fifa-world-cup-men-spain-vs-belgium-jul-10-2026-game-boxscore-607928?tab=boxscore",
+      "source_type": "statistics_provider",
+      "summary": "Lists recent results, team stats, leaders, odds and Inglewood weather.",
+      "reliability": "high"
+    },
+    {
+      "source_id": "src_lineup_rotowire",
+      "source_title": "RotoWire Spain vs Belgium predicted lineups and team news",
+      "source_url": "https://www.rotowire.com/soccer/article/spain-vs-belgium-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-quarterfinal-121774",
+      "source_type": "lineup",
+      "summary": "Provides predicted XIs and team-news notes including Onana ruled out and Belgium midfield uncertainty.",
+      "reliability": "medium"
+    },
+    {
+      "source_id": "src_market_vsin",
+      "source_title": "VSiN Spain vs Belgium odds, team news and betting preview",
+      "source_url": "https://vsin.com/soccer/spain-vs-belgium-prediction-2026-fifa-world-cup-picks/",
+      "source_type": "odds",
+      "summary": "Lists Spain -155, draw +290, Belgium +425, O/U 2.5, projected lineups and key tactical notes.",
+      "reliability": "medium"
+    },
+    {
+      "source_id": "src_spain_guardian_defense",
+      "source_title": "The Guardian: how Spain built a record-breaking defence",
+      "source_url": "https://www.theguardian.com/football/2026/jul/09/there-is-a-magnificent-balance-how-spain-built-a-record-breaking-defence",
+      "source_type": "match_report",
+      "summary": "Details Spain's five clean sheets, Simón's record, shots and xG allowed, and the Rodri-Cubarsi-Laporte-Cucurella defensive structure.",
+      "reliability": "high"
+    },
+    {
+      "source_id": "src_db_local",
+      "source_title": "Local SQLite match, team and player records",
+      "source_url": "data/worldcup_prediction_knowledge.sqlite",
+      "source_type": "local_database",
+      "summary": "Local worldcup-score-predictor database with 2026 tournament results, post-match stats, player match stats and events.",
+      "reliability": "high"
+    },
+    {
+      "source_id": "src_history_local",
+      "source_title": "Local historical failure samples and post-match reviews",
+      "source_url": "seed/historical_samples.jsonl",
+      "source_type": "local_database",
+      "summary": "Historical failure samples used for BTTS, strong third goal, weak second goal, tail-score and popular-direction corrections.",
+      "reliability": "high"
+    }
+  ],
+  "facts": {
+    "schedule": [
+      "北京时间 2026-07-11 03:00；洛杉矶当地 2026-07-10 12:00；四分之一决赛，胜者进半决赛对法国。"
+    ],
+    "recent_form": [
+      "西班牙本届 5 场：0-0 佛得角、4-0 沙特、1-0 乌拉圭、3-0 奥地利、1-0 葡萄牙；9进0失。",
+      "比利时本届 5 场：1-1 埃及、0-0 伊朗、5-1 新西兰、3-2 塞内加尔、4-1 美国；13进5失。",
+      "FOX team stats: Spain 1.8 goals per game, 1.7 xG per game, 0.0 goals against, 17.2 shots, 73% possession; Belgium 2.6 goals per game, 2.0 xG, 1.0 goals against, 21.2 shots, 60% possession."
+    ],
+    "lineups_injuries": [
+      "RotoWire predicted Spain XI: Unai Simon; Cucurella, Cubarsi, Laporte, Pedro Porro; Pedri, Dani Olmo, Rodri; Alex Baena, Oyarzabal, Lamine Yamal.",
+      "RotoWire predicted Belgium XI: Courtois; Castagne, Mechele, Ngoy, De Cuyper; Vanaken, Tielemans; Trossard, De Bruyne, Doku; De Ketelaere.",
+      "VSiN predicted Belgium shape differs: Raskin and Vanaken in midfield, Tielemans advanced, Lukebakio/Trossard wide, De Ketelaere up front; De Bruyne/Doku roles uncertain.",
+      "Amadou Onana is ruled out with ACL injury; this weakens Belgium's midfield ball-winning and aerial/transition protection."
+    ],
+    "player_form": [
+      "Mikel Oyarzabal: local last five 391 minutes, 4 goals, 1 assist, 17 shots, 8 SOT; FOX lists him as Spain goal leader and 2.8 xG.",
+      "Lamine Yamal: local last five 315 minutes, 1 goal, 14 shots, 6 SOT; VSiN says he completed 90 minutes vs Portugal and is nearing full fitness.",
+      "Unai Simon: five tournament clean sheets; Guardian reports six saves total and low xG allowed before Belgium.",
+      "Charles De Ketelaere: local last five 262 minutes, 2 goals, 1 assist; FOX headline says fresh off 2G/1A vs USA and lists 1.5 xG.",
+      "Leandro Trossard: local last five 430 minutes, 2 goals, 2 assists, 15 shots; FOX leaders list Belgium assist lead.",
+      "Romelu Lukaku: local last five 170 minutes, 3 goals, 1 assist; VSiN notes he scored in three straight World Cup appearances off the bench."
+    ],
+    "player_advanced_metrics": [
+      "Oyarzabal approximate per90 from local data: 3.91 shots/90, 1.84 SOT/90, 0.64 xG/90 from FOX 2.8 total xG over 391 minutes.",
+      "Yamal approximate per90 from local data: 4.00 shots/90, 1.71 SOT/90, plus full-match fitness note vs Portugal.",
+      "Simon advanced defensive note: Spain xGA allowed sequence reported by Guardian 0.30, 0.14, 0.20, 0.32, 0.58; total 1.54 xGA with no goals conceded.",
+      "De Ketelaere approximate per90: 0.69 goals/90, 0.34 assists/90, 0.52 xG/90 from FOX 1.5 total xG over 262 minutes.",
+      "Trossard approximate per90: 0.42 goals/90, 0.42 assists/90, 3.14 shots/90 from local data.",
+      "Lukaku approximate per90: 1.59 goals/90, 0.53 assists/90, 2.65 shots/90 from local data, but mostly substitute minutes."
+    ],
+    "player_matchup_edges": [
+      "Yamal vs De Cuyper/Castagne side: Yamal shot volume and one-v-one threat attacks Belgium fullback channel; Belgium can double with Vanaken/Raskin if selected.",
+      "Oyarzabal vs Mechele/Ngoy: Spain central forward has finishing form, Belgium centre-backs have size but may be stressed by Spain's cutbacks.",
+      "Lukaku/De Ketelaere vs Laporte/Cubarsi: Belgium's best route is a physical/substitute striker plus De Ketelaere movement, but Spain's CB pair and Rodri screen have handled high-quality opponents.",
+      "Belgium midfield without Onana vs Rodri-Pedri-Olmo: Onana absence reduces ball-winning and second-ball security against Spain's possession."
+    ],
+    "odds_market": [
+      "FOX odds: Spain -159 to win, Belgium +432; O/U 2.5 with Over -128 and Under +103.",
+      "VSiN odds: Spain -155, draw +290, Belgium +425; Over 2.5 -125, Under +100; Spain -0.5 -160."
+    ],
+    "late_odds_snapshots": [
+      {
+        "captured_at": "2026-07-10T09:56:03+08:00",
+        "minutes_before_kickoff": 1024,
+        "market_type": "moneyline",
+        "value": "FOX: Spain -159, Belgium +432",
+        "source_ids": ["src_match_fox"]
+      },
+      {
+        "captured_at": "2026-07-10T09:56:03+08:00",
+        "minutes_before_kickoff": 1024,
+        "market_type": "moneyline_total",
+        "value": "VSiN: Spain -155, Draw +290, Belgium +425; Over 2.5 -125",
+        "source_ids": ["src_market_vsin"]
+      }
+    ],
+    "quant_baseline_inputs": {
+      "team_a": {
+        "xg_for": 1.7,
+        "xg_against": null,
+        "goals_for_rate": 1.8,
+        "goals_against_rate": 0.0
+      },
+      "team_b": {
+        "xg_for": 2.0,
+        "xg_against": null,
+        "goals_for_rate": 2.6,
+        "goals_against_rate": 1.0
+      },
+      "sources": ["src_match_fox", "src_spain_guardian_defense", "src_db_local"],
+      "sanger": {
+        "status": "unavailable",
+        "model_id": "",
+        "formula_ref": "",
+        "team_a_lambda_delta": 0,
+        "team_b_lambda_delta": 0,
+        "confidence": "unknown",
+        "source_ids": [],
+        "reason": "未配置桑格公式或可审计来源；本场不硬编码不明模型。"
+      }
+    },
+    "weather_pitch": [
+      "FOX Weather on match page: Inglewood sunny around 75°F, wind 9 mph W, hourly 74-77°F; no high-heat trigger."
+    ],
+    "referee": [
+      "Referee not confirmed in retained sources before prediction run; event scenarios keep card/penalty uncertainty."
+    ],
+    "team_context": [
+      "Spain: possession and prevention-first defensive structure; five clean sheets and low opponent xG.",
+      "Belgium: high recent scoring, stronger substitution scoring tail, but midfield protection weakened by Onana injury and lineup uncertainty around De Bruyne/Doku/Lukaku."
+    ]
+  },
+  "historical_samples": [
+    {
+      "match_id": "2026-07-07_BJT_POR_ESP",
+      "lesson": "When quant BTTS is low and Spain are on consecutive clean sheets, zero-score path should be promoted over BTTS if weak team paths are not independent.",
+      "tags": ["BTTS误判", "高估弱队进球", "低估零封能力", "首选次选排序错误"]
+    },
+    {
+      "match_id": "2026-07-07_BJT_USA_BEL",
+      "lesson": "Belgium's strong third/fourth goal and backline-error chain must not be hidden only in thin tail when game state opens.",
+      "tags": ["低估强队第三球", "低估强队第四球", "尾部未进入主次", "高波动淘汰赛"]
+    },
+    {
+      "match_id": "2026-07-02_ESP_AUT",
+      "lesson": "Spain 3-0 Austria showed third-goal tail can become main when Spain control territory and opponent tires.",
+      "tags": ["低估强队第三球", "尾部未进入主次"]
+    },
+    {
+      "match_id": "2026-07-08_BJT_SUI_COL",
+      "lesson": "Do not push popular side direction if knockout match becomes low-block and finishing quality is suppressed.",
+      "tags": ["热门方向错误", "尾部未进入主次", "BTTS误判"]
+    }
+  ],
+  "uncertainties": [
+    "Final confirmed XI not yet available.",
+    "No complete direct xG/xGA pair for both teams; quant baseline must remain partial.",
+    "Late market window is not available yet because the run is about 17 hours before kickoff.",
+    "Belgium attacking shape differs between previews: De Bruyne/Doku may start or be managed; Lukaku is likely an impact substitute rather than guaranteed starter."
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": "role-artifact-1.0",
+  "role_id": "defense_risk_agent",
+  "agent_run_id": "019f32df-b5ea-7bd1-afc6-b1b7ab909e3d",
+  "source_tooling": "multi_agent_v1.spawn_agent",
+  "status": "completed",
+  "job_id": "2026-07-06-beijing",
+  "matches": [
+    "2026-07-06_BJT_BRA_NOR",
+    "2026-07-06_BJT_MEX_ENG"
+  ],
+  "summary": "防守/环境视角：巴西不能高零封挪威；墨英受Azteca海拔、防守和淘汰赛谨慎影响，0-0/1-0/1-1进池。",
+  "key_findings": [
+    "巴挪零封与弱队进球冲突已识别",
+    "墨英环境与低比分权重上调",
+    "红牌/点球/门将事件需独立尾部"
+  ]
+}

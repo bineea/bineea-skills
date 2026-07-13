@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import hashlib
 import json
 import re
 import sqlite3
@@ -18,6 +19,11 @@ DEFAULT_CATALOG = SKILL_ROOT / "config" / "dimensions.json"
 DEFAULT_CSV = SKILL_ROOT / "seed" / "dimensions.csv"
 DEFAULT_DB = SKILL_ROOT / "data" / "worldcup_prediction_knowledge.sqlite"
 SCORE_RE = re.compile(r"^(\d+)-(\d+)$")
+AGENT_RUN_ID_RE = re.compile(
+    r"^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+    re.IGNORECASE,
+)
+SHA256_RE = re.compile(r"^sha256:[0-9a-f]{64}$", re.IGNORECASE)
 
 
 def load_json(path: Path) -> dict[str, Any]:
@@ -30,6 +36,37 @@ def load_json(path: Path) -> dict[str, Any]:
 
 def nonempty_text(value: Any) -> bool:
     return isinstance(value, str) and bool(value.strip())
+
+
+def finite_number(value: Any) -> bool:
+    return isinstance(value, (int, float)) and not isinstance(value, bool)
+
+
+def probability_value(value: Any) -> bool:
+    return finite_number(value) and 0 <= value <= 1
+
+
+def resolve_skill_path(ref: str) -> Path | None:
+    if not nonempty_text(ref):
+        return None
+    path = Path(ref)
+    if path.is_absolute():
+        resolved = path.resolve()
+    else:
+        resolved = (SKILL_ROOT / path).resolve()
+    try:
+        resolved.relative_to(SKILL_ROOT)
+    except ValueError:
+        return None
+    return resolved
+
+
+def sha256_file(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as handle:
+        for chunk in iter(lambda: handle.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return "sha256:" + digest.hexdigest()
 
 
 def validate_catalog(catalog: dict[str, Any]) -> list[str]:
@@ -331,8 +368,12 @@ def validate_analysis(catalog: dict[str, Any], analysis: dict[str, Any]) -> tupl
                         errors.append(
                             f"{prefix} 引用了不存在的来源 {invalid_player_sources}"
                         )
+                errors.extend(validate_player_advanced_metrics(catalog, prefix, player.get("advanced_metrics")))
 
     errors.extend(validate_review_metadata(catalog, analysis.get("review_metadata")))
+    errors.extend(validate_player_matchup_edges(catalog, analysis, known_source_ids))
+    errors.extend(validate_dynamic_weighting(catalog, analysis, known_source_ids))
+    errors.extend(validate_quant_baseline(catalog, analysis, known_source_ids))
     errors.extend(validate_prediction_gates(catalog, analysis))
     errors.extend(validate_weak_goal_gate(catalog, analysis))
     errors.extend(validate_market_calibration(catalog, analysis))
@@ -342,6 +383,257 @@ def validate_analysis(catalog: dict[str, Any], analysis: dict[str, Any]) -> tupl
     errors.extend(validate_high_confidence_sources(catalog, analysis, known_source_ids))
     errors.extend(validate_final_prediction(catalog, analysis.get("final_prediction")))
     return errors, warnings
+
+
+def validate_player_advanced_metrics(
+    catalog: dict[str, Any],
+    prefix: str,
+    metrics: Any,
+) -> list[str]:
+    errors: list[str] = []
+    rules = catalog.get("advanced_player_rules", {})
+    allowed = set(rules.get("allowed_metric_keys", []))
+    minimum = rules.get("minimum_metrics_per_player", 3)
+    if not isinstance(metrics, dict):
+        return [f"{prefix}.advanced_metrics 必须是对象"]
+
+    usable_keys: list[str] = []
+    for key, value in metrics.items():
+        if allowed and key not in allowed:
+            errors.append(f"{prefix}.advanced_metrics.{key} 不是允许的高阶指标")
+            continue
+        if finite_number(value) or nonempty_text(value):
+            usable_keys.append(key)
+        else:
+            errors.append(f"{prefix}.advanced_metrics.{key} 必须是数字或非空说明")
+    if len(set(usable_keys)) < minimum:
+        errors.append(f"{prefix}.advanced_metrics 至少需要{minimum}个有效高阶指标")
+    return errors
+
+
+def validate_player_matchup_edges(
+    catalog: dict[str, Any],
+    analysis: dict[str, Any],
+    known_source_ids: set[str],
+) -> list[str]:
+    errors: list[str] = []
+    rules = catalog.get("advanced_player_rules", {})
+    minimum = rules.get("minimum_matchup_edges", 3)
+    matchups = analysis.get("player_matchup_edges")
+    if not isinstance(matchups, list) or len(matchups) < minimum:
+        return [f"player_matchup_edges 至少需要{minimum}组高阶球员对位"]
+
+    required_fields = {
+        "matchup_id",
+        "attacker",
+        "defender",
+        "matchup_type",
+        "metric_comparison",
+        "edge",
+        "source_ids",
+    }
+    allowed_edges = {"team_a", "team_b", "neutral", "unknown"}
+    for index, matchup in enumerate(matchups):
+        prefix = f"player_matchup_edges[{index}]"
+        if not isinstance(matchup, dict):
+            errors.append(f"{prefix} 必须是对象")
+            continue
+        missing = sorted(required_fields - set(matchup))
+        if missing:
+            errors.append(f"{prefix} 缺少字段 {missing}")
+            continue
+        for field in required_fields - {"source_ids"}:
+            if not nonempty_text(matchup.get(field)):
+                errors.append(f"{prefix}.{field} 不能为空")
+        if matchup.get("edge") not in allowed_edges:
+            errors.append(f"{prefix}.edge 必须是 {sorted(allowed_edges)} 之一")
+        source_ids = matchup.get("source_ids")
+        if not isinstance(source_ids, list) or not source_ids:
+            errors.append(f"{prefix}.source_ids 至少需要一个来源")
+        else:
+            invalid_ids = sorted(source_id for source_id in source_ids if source_id not in known_source_ids)
+            if invalid_ids:
+                errors.append(f"{prefix} 引用了不存在的来源 {invalid_ids}")
+    return errors
+
+
+def validate_dynamic_weighting(
+    catalog: dict[str, Any],
+    analysis: dict[str, Any],
+    known_source_ids: set[str],
+) -> list[str]:
+    errors: list[str] = []
+    rules = catalog.get("dynamic_weight_rules", {})
+    weighting = analysis.get("dynamic_weighting")
+    if not isinstance(weighting, dict):
+        return ["dynamic_weighting 必须是对象"]
+
+    if not nonempty_text(weighting.get("model_version")):
+        errors.append("dynamic_weighting.model_version 不能为空")
+    context = weighting.get("context")
+    if not isinstance(context, dict):
+        errors.append("dynamic_weighting.context 必须是对象")
+        context = {}
+
+    adjustments = weighting.get("adjustments")
+    if not isinstance(adjustments, list) or not adjustments:
+        errors.append("dynamic_weighting.adjustments 必须是非空数组")
+        adjustments = []
+
+    known_dimensions = {item["key"] for item in catalog.get("dimensions", [])}
+    allowed_triggers = set(
+        rules.get(
+            "allowed_trigger_types",
+            ["stage", "environment", "market", "player", "post_match_learning"],
+        )
+    )
+    adjusted_dimensions: set[str] = set()
+    for index, adjustment in enumerate(adjustments):
+        prefix = f"dynamic_weighting.adjustments[{index}]"
+        if not isinstance(adjustment, dict):
+            errors.append(f"{prefix} 必须是对象")
+            continue
+        dimension_key = adjustment.get("dimension_key")
+        if dimension_key not in known_dimensions:
+            errors.append(f"{prefix}.dimension_key 必须引用已知维度")
+        else:
+            adjusted_dimensions.add(dimension_key)
+        for field in ("base_weight", "adjusted_weight"):
+            if not finite_number(adjustment.get(field)) or not 0 <= adjustment[field] <= 3:
+                errors.append(f"{prefix}.{field} 必须是0至3之间的数字")
+        if adjustment.get("trigger_type") not in allowed_triggers:
+            errors.append(f"{prefix}.trigger_type 必须是 {sorted(allowed_triggers)} 之一")
+        if not nonempty_text(adjustment.get("reason")):
+            errors.append(f"{prefix}.reason 不能为空")
+        source_ids = adjustment.get("source_ids")
+        if not isinstance(source_ids, list) or not source_ids:
+            errors.append(f"{prefix}.source_ids 至少需要一个来源")
+        else:
+            invalid_ids = sorted(source_id for source_id in source_ids if source_id not in known_source_ids)
+            if invalid_ids:
+                errors.append(f"{prefix} 引用了不存在的来源 {invalid_ids}")
+
+    high_heat_threshold = rules.get("high_heat_temperature_c", 32)
+    temperature = context.get("temperature_c")
+    if finite_number(temperature) and temperature >= high_heat_threshold:
+        heat_required = set(rules.get("high_heat_required_dimensions", ["environment_schedule"]))
+        missing_heat = sorted(heat_required - adjusted_dimensions)
+        if missing_heat:
+            errors.append("dynamic_weighting: 高温场景必须上调或复核权重维度 " + ", ".join(missing_heat))
+
+    stage = context.get("stage")
+    knockout_markers = tuple(rules.get("knockout_stage_markers", ["knockout", "round", "quarter", "semi", "final"]))
+    if isinstance(stage, str) and any(marker in stage.lower() for marker in knockout_markers):
+        knockout_required = set(rules.get("knockout_required_dimensions", ["stage_psychology", "draw_risk"]))
+        missing_stage = sorted(knockout_required - adjusted_dimensions)
+        if missing_stage:
+            errors.append("dynamic_weighting: 淘汰赛场景必须上调或复核权重维度 " + ", ".join(missing_stage))
+
+    feedback = weighting.get("learning_feedback")
+    if not isinstance(feedback, dict):
+        errors.append("dynamic_weighting.learning_feedback 必须是对象")
+    else:
+        if feedback.get("status") not in {"applied", "not_enough_samples", "not_applicable"}:
+            errors.append("dynamic_weighting.learning_feedback.status 值无效")
+        sample_count = feedback.get("sample_count")
+        if not isinstance(sample_count, int) or isinstance(sample_count, bool) or sample_count < 0:
+            errors.append("dynamic_weighting.learning_feedback.sample_count 必须是非负整数")
+        if not nonempty_text(feedback.get("summary")):
+            errors.append("dynamic_weighting.learning_feedback.summary 不能为空")
+    return errors
+
+
+def validate_agent_execution(
+    catalog: dict[str, Any],
+    metadata: dict[str, Any],
+    required_roles: set[str],
+    role_set: set[str],
+) -> list[str]:
+    errors: list[str] = []
+    execution = metadata.get("agent_execution")
+    if not isinstance(execution, dict):
+        return ["review_metadata.agent_execution 必须记录真实独立子 Agent 运行"]
+
+    if execution.get("execution_mode") != "independent_subagents":
+        errors.append("review_metadata.agent_execution.execution_mode 必须是 independent_subagents")
+    if execution.get("fallback_used") is not False:
+        errors.append("review_metadata.agent_execution.fallback_used 必须为 false，禁止单 Agent 模拟合议")
+    if not nonempty_text(execution.get("orchestrator")):
+        errors.append("review_metadata.agent_execution.orchestrator 不能为空")
+    tooling = execution.get("tooling")
+    allowed_tooling = set(catalog.get("discussion_quality_rules", {}).get("allowed_agent_tooling", []))
+    if not nonempty_text(tooling):
+        errors.append("review_metadata.agent_execution.tooling 不能为空")
+    elif allowed_tooling and tooling not in allowed_tooling:
+        errors.append("review_metadata.agent_execution.tooling 必须是白名单工具: " + ", ".join(sorted(allowed_tooling)))
+
+    runs = execution.get("runs")
+    if not isinstance(runs, list) or not runs:
+        return errors + ["review_metadata.agent_execution.runs 必须是非空数组"]
+
+    required_run_fields = {
+        "role_id",
+        "agent_run_id",
+        "agent_type",
+        "tool_call_id",
+        "started_at",
+        "completed_at",
+        "artifact_type",
+        "artifact_ref",
+        "summary_hash",
+        "status",
+    }
+    run_ids: list[str] = []
+    run_roles: list[str] = []
+    for index, run in enumerate(runs):
+        prefix = f"review_metadata.agent_execution.runs[{index}]"
+        if not isinstance(run, dict):
+            errors.append(f"{prefix} 必须是对象")
+            continue
+        missing = sorted(required_run_fields - set(run))
+        if missing:
+            errors.append(f"{prefix} 缺少字段 {missing}")
+            continue
+        for field in required_run_fields:
+            if not nonempty_text(run.get(field)):
+                errors.append(f"{prefix}.{field} 不能为空")
+        role_id = run.get("role_id")
+        if nonempty_text(role_id):
+            run_roles.append(role_id)
+            if role_id not in role_set:
+                errors.append(f"{prefix}.role_id 引用了未参与角色 {role_id}")
+        run_id = run.get("agent_run_id")
+        if nonempty_text(run_id):
+            run_ids.append(run_id)
+            if not AGENT_RUN_ID_RE.fullmatch(run_id):
+                errors.append(f"{prefix}.agent_run_id 格式不像真实子 Agent ID")
+        if run.get("status") != "completed":
+            errors.append(f"{prefix}.status 必须是 completed")
+        artifact_ref = run.get("artifact_ref")
+        artifact_path = resolve_skill_path(artifact_ref) if isinstance(artifact_ref, str) else None
+        if artifact_path is None:
+            errors.append(f"{prefix}.artifact_ref 必须是技能目录内的相对路径或绝对路径")
+        elif not artifact_path.is_file():
+            errors.append(f"{prefix}.artifact_ref 文件不存在")
+        summary_hash = run.get("summary_hash")
+        if nonempty_text(summary_hash):
+            if not SHA256_RE.fullmatch(summary_hash):
+                errors.append(f"{prefix}.summary_hash 必须采用 sha256:<64位十六进制> 格式")
+            elif artifact_path is not None and artifact_path.is_file():
+                actual_hash = sha256_file(artifact_path)
+                if summary_hash.lower() != actual_hash.lower():
+                    errors.append(f"{prefix}.summary_hash 与 artifact_ref 内容不一致")
+
+    duplicate_run_ids = sorted({run_id for run_id in run_ids if run_ids.count(run_id) > 1})
+    if duplicate_run_ids:
+        errors.append("review_metadata.agent_execution.agent_run_id 必须彼此独立，重复: " + ", ".join(duplicate_run_ids))
+    missing_run_roles = sorted(required_roles - set(run_roles))
+    if missing_run_roles:
+        errors.append("review_metadata.agent_execution.runs 缺少必需角色运行记录: " + ", ".join(missing_run_roles))
+    duplicate_roles = sorted({role_id for role_id in run_roles if run_roles.count(role_id) > 1})
+    if duplicate_roles:
+        errors.append("review_metadata.agent_execution.runs 每个角色只能有一个最终运行记录，重复: " + ", ".join(duplicate_roles))
+    return errors
 
 
 def validate_review_metadata(catalog: dict[str, Any], metadata: Any) -> list[str]:
@@ -370,6 +662,7 @@ def validate_review_metadata(catalog: dict[str, Any], metadata: Any) -> list[str
     missing_roles = sorted(required_roles - role_set)
     if missing_roles:
         errors.append("review_metadata.role_results_used 缺少必需角色: " + ", ".join(missing_roles))
+    errors.extend(validate_agent_execution(catalog, metadata, required_roles, role_set))
 
     primary = metadata.get("primary_dimension_owners")
     expected_primary = assignments.get("primary", {})
@@ -572,6 +865,271 @@ def score_from_item(item: Any) -> str | None:
     return None
 
 
+def validate_quant_source_ids(
+    prefix: str,
+    source_ids: Any,
+    known_source_ids: set[str],
+    require_nonempty: bool = False,
+) -> list[str]:
+    errors: list[str] = []
+    if not isinstance(source_ids, list):
+        return [f"{prefix}.source_ids 必须是数组"]
+    if require_nonempty and not source_ids:
+        errors.append(f"{prefix}.source_ids 至少需要一个来源")
+    invalid_ids = sorted(source_id for source_id in source_ids if source_id not in known_source_ids)
+    if invalid_ids:
+        errors.append(f"{prefix} 引用了不存在的来源 {invalid_ids}")
+    return errors
+
+
+def validate_quant_baseline(
+    catalog: dict[str, Any],
+    analysis: dict[str, Any],
+    known_source_ids: set[str],
+) -> list[str]:
+    errors: list[str] = []
+    rules = catalog.get("quant_baseline_rules", {})
+    baseline = analysis.get("quant_baseline")
+    if not isinstance(baseline, dict):
+        return ["quant_baseline 必须是对象"]
+
+    if baseline.get("schema_version") != "quant-baseline-1.0":
+        errors.append("quant_baseline.schema_version 必须是 quant-baseline-1.0")
+    if baseline.get("status") not in {"computed", "partial", "unavailable"}:
+        errors.append("quant_baseline.status 必须是 computed、partial 或 unavailable")
+    source_ids = baseline.get("source_ids")
+    errors.extend(validate_quant_source_ids("quant_baseline", source_ids, known_source_ids))
+    if not isinstance(baseline.get("missing_inputs"), list):
+        errors.append("quant_baseline.missing_inputs 必须是数组")
+
+    xg = baseline.get("xg")
+    if not isinstance(xg, dict):
+        errors.append("quant_baseline.xg 必须是对象")
+    else:
+        xg_status = xg.get("status")
+        if xg_status not in {"direct", "unavailable"}:
+            errors.append("quant_baseline.xg.status 必须是 direct 或 unavailable")
+        if xg_status == "direct":
+            for field in ("team_a_xg_for", "team_a_xg_against", "team_b_xg_for", "team_b_xg_against"):
+                if not finite_number(xg.get(field)) or xg[field] < 0:
+                    errors.append(f"quant_baseline.xg.{field} 必须是非负数字")
+            errors.extend(validate_quant_source_ids("quant_baseline.xg", xg.get("source_ids"), known_source_ids, True))
+        elif not nonempty_text(xg.get("reason")):
+            errors.append("quant_baseline.xg.reason 在 xG 不可用时不能为空")
+
+    expected = baseline.get("expected_goals")
+    min_lambda = rules.get("min_lambda", 0.15)
+    max_lambda = rules.get("max_lambda", 4.0)
+    team_a_lambda = team_b_lambda = None
+    if not isinstance(expected, dict):
+        errors.append("quant_baseline.expected_goals 必须是对象")
+    else:
+        for field in ("team_a_lambda", "team_b_lambda", "total_lambda"):
+            value = expected.get(field)
+            if not finite_number(value) or not min_lambda <= value <= max_lambda * 2:
+                errors.append(f"quant_baseline.expected_goals.{field} 必须是有效 lambda 数字")
+        if finite_number(expected.get("team_a_lambda")):
+            team_a_lambda = expected["team_a_lambda"]
+            if not min_lambda <= team_a_lambda <= max_lambda:
+                errors.append(f"quant_baseline.expected_goals.team_a_lambda 必须在 {min_lambda} 至 {max_lambda} 之间")
+        if finite_number(expected.get("team_b_lambda")):
+            team_b_lambda = expected["team_b_lambda"]
+            if not min_lambda <= team_b_lambda <= max_lambda:
+                errors.append(f"quant_baseline.expected_goals.team_b_lambda 必须在 {min_lambda} 至 {max_lambda} 之间")
+        if finite_number(team_a_lambda) and finite_number(team_b_lambda) and finite_number(expected.get("total_lambda")):
+            if abs(expected["total_lambda"] - (team_a_lambda + team_b_lambda)) > 0.02:
+                errors.append("quant_baseline.expected_goals.total_lambda 必须接近两队 lambda 之和")
+        components = expected.get("lambda_components")
+        if not isinstance(components, dict):
+            errors.append("quant_baseline.expected_goals.lambda_components 必须是对象")
+        else:
+            for team in ("team_a", "team_b"):
+                component = components.get(team)
+                if not isinstance(component, dict):
+                    errors.append(f"quant_baseline.expected_goals.lambda_components.{team} 必须是对象")
+                    continue
+                for field in ("sanger_delta", "final_lambda"):
+                    if not finite_number(component.get(field)):
+                        errors.append(f"quant_baseline.expected_goals.lambda_components.{team}.{field} 必须是数字")
+                for field in ("xg_component", "goal_rate_component"):
+                    value = component.get(field)
+                    if value is not None and (not finite_number(value) or value < 0):
+                        errors.append(f"quant_baseline.expected_goals.lambda_components.{team}.{field} 必须是非负数字或 null")
+
+    poisson = baseline.get("poisson")
+    top_scores: list[str] = []
+    btts_probability = None
+    over25_probability = None
+    ge3_values: list[float] = []
+    if not isinstance(poisson, dict):
+        errors.append("quant_baseline.poisson 必须是对象")
+    else:
+        max_goals = poisson.get("max_goals")
+        if not isinstance(max_goals, int) or isinstance(max_goals, bool) or not 1 <= max_goals <= 12:
+            errors.append("quant_baseline.poisson.max_goals 必须是1至12的整数")
+        raw_top_scores = poisson.get("top_scores")
+        if not isinstance(raw_top_scores, list) or not raw_top_scores:
+            errors.append("quant_baseline.poisson.top_scores 必须是非空数组")
+        else:
+            previous_probability: float | None = None
+            for index, item in enumerate(raw_top_scores):
+                prefix = f"quant_baseline.poisson.top_scores[{index}]"
+                if not isinstance(item, dict):
+                    errors.append(f"{prefix} 必须是对象")
+                    continue
+                score = item.get("score")
+                if not isinstance(score, str) or not SCORE_RE.fullmatch(score):
+                    errors.append(f"{prefix}.score 必须采用 N-N 格式")
+                else:
+                    top_scores.append(score)
+                probability = item.get("probability")
+                if not probability_value(probability):
+                    errors.append(f"{prefix}.probability 必须是0至1之间的数字")
+                elif previous_probability is not None and probability > previous_probability + 0.000001:
+                    errors.append("quant_baseline.poisson.top_scores 必须按概率降序排列")
+                else:
+                    previous_probability = probability
+                rank = item.get("rank")
+                if not isinstance(rank, int) or isinstance(rank, bool) or rank < 1:
+                    errors.append(f"{prefix}.rank 必须是正整数")
+        outcome = poisson.get("outcome_probabilities")
+        if not isinstance(outcome, dict):
+            errors.append("quant_baseline.poisson.outcome_probabilities 必须是对象")
+        else:
+            for field in ("team_a_win", "draw", "team_b_win"):
+                if not probability_value(outcome.get(field)):
+                    errors.append(f"quant_baseline.poisson.outcome_probabilities.{field} 必须是0至1之间的数字")
+        for field in ("btts_probability", "over_2_5_probability", "overflow_probability"):
+            if not probability_value(poisson.get(field)):
+                errors.append(f"quant_baseline.poisson.{field} 必须是0至1之间的数字")
+        if probability_value(poisson.get("btts_probability")):
+            btts_probability = poisson["btts_probability"]
+        if probability_value(poisson.get("over_2_5_probability")):
+            over25_probability = poisson["over_2_5_probability"]
+        team_goal_probabilities = poisson.get("team_goal_probabilities")
+        if not isinstance(team_goal_probabilities, dict):
+            errors.append("quant_baseline.poisson.team_goal_probabilities 必须是对象")
+        else:
+            for team in ("team_a", "team_b"):
+                values = team_goal_probabilities.get(team)
+                if not isinstance(values, dict):
+                    errors.append(f"quant_baseline.poisson.team_goal_probabilities.{team} 必须是对象")
+                    continue
+                for field in ("ge_1", "ge_2", "ge_3"):
+                    if not probability_value(values.get(field)):
+                        errors.append(f"quant_baseline.poisson.team_goal_probabilities.{team}.{field} 必须是0至1之间的数字")
+                if probability_value(values.get("ge_3")):
+                    ge3_values.append(values["ge_3"])
+        clean_sheet = poisson.get("clean_sheet_probabilities")
+        if not isinstance(clean_sheet, dict):
+            errors.append("quant_baseline.poisson.clean_sheet_probabilities 必须是对象")
+        else:
+            for field in ("team_a_clean_sheet", "team_b_clean_sheet"):
+                if not probability_value(clean_sheet.get(field)):
+                    errors.append(f"quant_baseline.poisson.clean_sheet_probabilities.{field} 必须是0至1之间的数字")
+
+    sanger = baseline.get("sanger")
+    if not isinstance(sanger, dict):
+        errors.append("quant_baseline.sanger 必须是对象")
+    else:
+        sanger_status = sanger.get("status")
+        if sanger_status not in {"computed", "unavailable"}:
+            errors.append("quant_baseline.sanger.status 必须是 computed 或 unavailable")
+        max_sanger_delta = rules.get("max_sanger_delta_abs", 0.35)
+        for field in ("team_a_lambda_delta", "team_b_lambda_delta"):
+            value = sanger.get(field)
+            if not finite_number(value):
+                errors.append(f"quant_baseline.sanger.{field} 必须是数字")
+            elif abs(value) > max_sanger_delta:
+                errors.append(f"quant_baseline.sanger.{field}: 桑格 lambda delta 单队绝对值不得超过 {max_sanger_delta}")
+        if sanger_status == "computed":
+            for field in ("model_id", "formula_ref"):
+                if not nonempty_text(sanger.get(field)):
+                    errors.append(f"quant_baseline.sanger.{field} 在 computed 时不能为空")
+            if sanger.get("confidence") not in catalog.get("confidence_values", []):
+                errors.append("quant_baseline.sanger.confidence 值无效")
+            errors.extend(validate_quant_source_ids("quant_baseline.sanger", sanger.get("source_ids"), known_source_ids, True))
+
+    flags = baseline.get("calibration_flags")
+    if not isinstance(flags, dict):
+        errors.append("quant_baseline.calibration_flags 必须是对象")
+        flags = {}
+    else:
+        if not isinstance(flags.get("top_score_gate_n"), int) or isinstance(flags.get("top_score_gate_n"), bool):
+            errors.append("quant_baseline.calibration_flags.top_score_gate_n 必须是整数")
+        for field in (
+            "primary_score_outside_top_n",
+            "btts_conflict",
+            "over_2_5_conflict",
+            "strong_third_goal_conflict",
+            "clean_sheet_conflict",
+            "lambda_delta_flag",
+        ):
+            if not isinstance(flags.get(field), bool):
+                errors.append(f"quant_baseline.calibration_flags.{field} 必须是布尔值")
+
+    prediction = analysis.get("final_prediction", {})
+    gates = analysis.get("prediction_gates", {})
+    gate = gates.get("quant_baseline_gate") if isinstance(gates, dict) else None
+    gate_resolves_conflict = (
+        isinstance(gate, dict)
+        and gate.get("status") in {"adjusted", "rejected"}
+        and nonempty_text(gate.get("action"))
+        and nonempty_text(gate.get("reason"))
+    )
+    if isinstance(prediction, dict):
+        top_n = flags.get("top_score_gate_n", rules.get("top_score_gate_n", 10)) if isinstance(flags, dict) else rules.get("top_score_gate_n", 10)
+        primary = prediction.get("primary_score")
+        primary_outside = isinstance(primary, str) and top_scores and primary not in set(top_scores[:top_n])
+        btts_conflict = False
+        if probability_value(btts_probability):
+            final_btts = prediction.get("both_teams_to_score")
+            btts_conflict = (
+                (final_btts == "high" and btts_probability <= rules.get("btts_low_threshold", 0.42))
+                or (final_btts == "low" and btts_probability >= rules.get("btts_high_threshold", 0.58))
+            )
+        over_conflict = False
+        if probability_value(over25_probability):
+            over_conflict = (
+                prediction.get("total_goals_max") == 2 and over25_probability >= rules.get("over25_high_threshold", 0.56)
+            ) or (
+                isinstance(prediction.get("total_goals_min"), int)
+                and prediction.get("total_goals_min") >= 3
+                and over25_probability <= rules.get("over25_low_threshold", 0.44)
+            )
+        third_goal_conflict = (
+            prediction.get("strong_third_goal") == "low"
+            and bool(ge3_values)
+            and max(ge3_values) >= rules.get("team_ge3_high_threshold", 0.25)
+        )
+        clean_sheet_conflict = (
+            prediction.get("clean_sheet") == "high"
+            and probability_value(btts_probability)
+            and btts_probability >= rules.get("btts_high_threshold", 0.58)
+        )
+
+        flag_primary = flags.get("primary_score_outside_top_n") is True if isinstance(flags, dict) else False
+        flag_btts = flags.get("btts_conflict") is True if isinstance(flags, dict) else False
+        flag_over = flags.get("over_2_5_conflict") is True if isinstance(flags, dict) else False
+        flag_third = flags.get("strong_third_goal_conflict") is True if isinstance(flags, dict) else False
+        flag_clean = flags.get("clean_sheet_conflict") is True if isinstance(flags, dict) else False
+        flag_lambda = flags.get("lambda_delta_flag") is True if isinstance(flags, dict) else False
+
+        if (primary_outside or flag_primary) and not gate_resolves_conflict:
+            errors.append("quant_baseline_gate: 首选比分偏离量化 Top-N 时必须 adjusted 或 rejected 并说明原因")
+        if (btts_conflict or flag_btts) and not gate_resolves_conflict:
+            errors.append("quant_baseline_gate: BTTS 判断与量化基线冲突时必须 adjusted 或 rejected 并说明原因")
+        if (over_conflict or flag_over) and not gate_resolves_conflict:
+            errors.append("quant_baseline_gate: 大小球判断与量化基线冲突时必须 adjusted 或 rejected 并说明原因")
+        if (third_goal_conflict or flag_third) and not gate_resolves_conflict:
+            errors.append("quant_baseline_gate: 强队第三球判断与量化基线冲突时必须 adjusted 或 rejected 并说明原因")
+        if (clean_sheet_conflict or flag_clean) and not gate_resolves_conflict:
+            errors.append("quant_baseline_gate: 零封判断与量化基线冲突时必须 adjusted 或 rejected 并说明原因")
+        if flag_lambda and not gate_resolves_conflict:
+            errors.append("quant_baseline_gate: lambda 大幅偏移时必须 adjusted 或 rejected 并说明原因")
+    return errors
+
+
 def validate_prediction_gates(catalog: dict[str, Any], analysis: dict[str, Any]) -> list[str]:
     errors: list[str] = []
     rules = catalog.get("prediction_gate_rules", {})
@@ -651,6 +1209,47 @@ def validate_market_calibration(catalog: dict[str, Any], analysis: dict[str, Any
     source_ids = market.get("source_ids")
     if not isinstance(source_ids, list):
         errors.append("market_calibration.source_ids 必须是数组")
+
+    odds_snapshots = market.get("odds_snapshots")
+    if not isinstance(odds_snapshots, list) or len(odds_snapshots) < rules.get("minimum_odds_snapshots", 2):
+        errors.append("market_calibration.odds_snapshots 至少需要2个赛前赔率快照")
+        odds_snapshots = []
+    for index, snapshot in enumerate(odds_snapshots):
+        prefix = f"market_calibration.odds_snapshots[{index}]"
+        if not isinstance(snapshot, dict):
+            errors.append(f"{prefix} 必须是对象")
+            continue
+        for field in ("captured_at", "market_type", "value"):
+            if not nonempty_text(snapshot.get(field)):
+                errors.append(f"{prefix}.{field} 不能为空")
+        minutes = snapshot.get("minutes_before_kickoff")
+        if not isinstance(minutes, int) or isinstance(minutes, bool) or not 0 <= minutes <= 1440:
+            errors.append(f"{prefix}.minutes_before_kickoff 必须是0至1440的整数")
+        snapshot_sources = snapshot.get("source_ids")
+        if not isinstance(snapshot_sources, list) or not snapshot_sources:
+            errors.append(f"{prefix}.source_ids 至少需要一个来源")
+
+    late_watch = market.get("late_market_watch")
+    if not isinstance(late_watch, dict):
+        errors.append("market_calibration.late_market_watch 必须是对象")
+    else:
+        status = late_watch.get("status")
+        if status not in {"pass", "adjusted", "unavailable"}:
+            errors.append("market_calibration.late_market_watch.status 必须是 pass、adjusted 或 unavailable")
+        if status in {"pass", "adjusted"}:
+            window = late_watch.get("checked_window_minutes")
+            maximum_window = rules.get("late_market_window_minutes", 120)
+            if not isinstance(window, int) or isinstance(window, bool) or not 1 <= window <= maximum_window:
+                errors.append(
+                    f"market_calibration.late_market_watch.checked_window_minutes 必须是1至{maximum_window}的整数"
+                )
+            if not isinstance(late_watch.get("abnormal_movement"), bool):
+                errors.append("market_calibration.late_market_watch.abnormal_movement 必须是布尔值")
+            for field in ("movement_summary", "action"):
+                if not nonempty_text(late_watch.get(field)):
+                    errors.append(f"market_calibration.late_market_watch.{field} 不能为空")
+        elif status == "unavailable" and not nonempty_text(late_watch.get("reason")):
+            errors.append("market_calibration.late_market_watch.reason 不能为空")
 
     handicap = market.get("favorite_handicap")
     prediction = analysis.get("final_prediction", {})
@@ -813,6 +1412,7 @@ def validate_final_prediction(catalog: dict[str, Any], prediction: Any) -> list[
         "trigger_conditions",
         "tail_scores",
         "event_scenarios",
+        "score_orientation",
         "confidence",
     }
     missing = sorted(required - set(prediction))
@@ -870,6 +1470,31 @@ def validate_final_prediction(catalog: dict[str, Any], prediction: Any) -> list[
         for scenario in required_scenarios & set(scenarios):
             if not nonempty_text(scenarios[scenario]):
                 errors.append(f"event_scenarios.{scenario} 不能为空")
+
+    orientation = prediction.get("score_orientation")
+    if not isinstance(orientation, dict):
+        errors.append("final_prediction.score_orientation 必须是对象")
+    else:
+        if orientation.get("order") != "team_a_team_b":
+            errors.append("final_prediction.score_orientation.order 必须是 team_a_team_b")
+        for field in ("team_a", "team_b", "score_label"):
+            if not nonempty_text(orientation.get(field)):
+                errors.append(f"final_prediction.score_orientation.{field} 不能为空")
+        if orientation.get("favorite_side") not in {"team_a", "team_b", "even", "unknown"}:
+            errors.append("final_prediction.score_orientation.favorite_side 值无效")
+        primary_score = orientation.get("primary_score")
+        if not isinstance(primary_score, dict):
+            errors.append("final_prediction.score_orientation.primary_score 必须是对象")
+        elif match:
+            team_a_goals = primary_score.get("team_a_goals")
+            team_b_goals = primary_score.get("team_b_goals")
+            if not isinstance(team_a_goals, int) or isinstance(team_a_goals, bool):
+                errors.append("final_prediction.score_orientation.primary_score.team_a_goals 必须是整数")
+            if not isinstance(team_b_goals, int) or isinstance(team_b_goals, bool):
+                errors.append("final_prediction.score_orientation.primary_score.team_b_goals 必须是整数")
+            if isinstance(team_a_goals, int) and isinstance(team_b_goals, int):
+                if (team_a_goals, team_b_goals) != (int(match.group(1)), int(match.group(2))):
+                    errors.append("final_prediction.score_orientation 与 primary_score 的主客进球不一致")
     return errors
 
 

@@ -1,0 +1,18 @@
+{
+  "schema_version": "role-artifact-1.0",
+  "role_id": "attack_agent",
+  "agent_run_id": "019f32df-70cc-7453-9eb1-b16408b586fd",
+  "source_tooling": "multi_agent_v1.spawn_agent",
+  "status": "completed",
+  "job_id": "2026-07-06-beijing",
+  "matches": [
+    "2026-07-06_BJT_BRA_NOR",
+    "2026-07-06_BJT_MEX_ENG"
+  ],
+  "summary": "攻击视角：巴西-挪威首选2-1，3-1为强队第三球分支；墨西哥-英格兰攻击视角偏1-1，但承认低比分市场压制。",
+  "key_findings": [
+    "巴西第二球high，第三球medium",
+    "挪威第一球medium_high，第二球条件化",
+    "Kane一球路径强，Reece James缺席压低英格兰第二球"
+  ]
+}

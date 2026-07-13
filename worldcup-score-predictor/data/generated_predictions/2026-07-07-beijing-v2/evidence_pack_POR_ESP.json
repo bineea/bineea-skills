@@ -1,0 +1,9 @@
+{
+  "match": {"match_id":"2026-07-07_BJT_POR_ESP", "team_a":"葡萄牙", "team_b":"西班牙", "match_date":"2026-07-07 03:00 BJT"},
+  "quant_baseline_inputs": {
+    "team_a": {"xg_for": null, "xg_against": null, "goals_for_rate": 2.667, "goals_against_rate": 0.667},
+    "team_b": {"xg_for": null, "xg_against": null, "goals_for_rate": 2.000, "goals_against_rate": 0.250},
+    "sources": ["src_local", "src_quant"],
+    "sanger": {"status":"unavailable", "model_id":"", "formula_ref":"", "team_a_lambda_delta":0, "team_b_lambda_delta":0, "confidence":"unknown", "source_ids":[], "reason":"未配置桑格公式或来源"}
+  }
+}

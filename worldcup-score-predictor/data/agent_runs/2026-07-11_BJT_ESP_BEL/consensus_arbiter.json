@@ -1,0 +1,8 @@
+{
+  "schema_version": "role-result-1.0",
+  "job_id": "2026-07-11_BJT_ESP_BEL",
+  "role_id": "consensus_arbiter",
+  "status": "completed",
+  "agent_run_id": "019f49ca-39e2-7c00-9225-546bfba14518",
+  "summary": "仲裁裁决首选2-0，次选1-0、3-0；quant_baseline_gate adjusted；BTTS low，Belgium第二球常态拒绝。"
+}

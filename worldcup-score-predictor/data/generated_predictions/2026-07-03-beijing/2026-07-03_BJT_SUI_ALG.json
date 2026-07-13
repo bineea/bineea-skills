@@ -1,0 +1,2919 @@
+{
+  "schema_version": "1.0.0",
+  "catalog_version": "2026-06-20",
+  "match": {
+    "match_id": "2026-07-03_BJT_SUI_ALG",
+    "team_a": "Switzerland",
+    "team_b": "Algeria",
+    "match_date": "2026-07-03 Beijing time",
+    "beijing_kickoff": "2026-07-03 11:00",
+    "stage": "Round of 32",
+    "venue": "BC Place Vancouver"
+  },
+  "sources": [
+    {
+      "source_id": "src_schedule_sbn",
+      "source_type": "schedule",
+      "title": "SB Nation Round of 32 schedule and scores",
+      "url": "https://www.sbnation.com/soccer/1120771/world-cup-schedule-scores-round-32"
+    },
+    {
+      "source_id": "src_rotowire_lineups",
+      "source_type": "lineup",
+      "title": "RotoWire World Cup predicted and confirmed lineups",
+      "url": "https://www.rotowire.com/soccer/lineups.php?league=WOC"
+    },
+    {
+      "source_id": "src_local_kb",
+      "source_type": "statistics_provider",
+      "title": "worldcup-score-predictor local match database and imports",
+      "url": "local:data/worldcup_prediction_knowledge.sqlite"
+    },
+    {
+      "source_id": "src_historical_samples",
+      "source_type": "historical_sample",
+      "title": "worldcup-score-predictor historical calibration samples",
+      "url": "local:seed/historical_samples.jsonl"
+    },
+    {
+      "source_id": "src_sui_fifa",
+      "source_type": "fixture",
+      "title": "FIFA Switzerland vs Algeria match centre",
+      "url": "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021527?date=2026-07-03&gender=2"
+    },
+    {
+      "source_id": "src_sui_rotowire_preview",
+      "source_type": "lineup",
+      "title": "RotoWire Switzerland vs Algeria preview, lineups and tactical notes",
+      "url": "https://www.rotowire.com/soccer/article/switzerland-vs-algeria-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-round-of-32-120535"
+    },
+    {
+      "source_id": "src_sui_covers",
+      "source_type": "odds",
+      "title": "Covers Switzerland vs Algeria predictions and odds",
+      "url": "https://www.covers.com/world-cup/switzerland-vs-algeria-prediction-picks-odds-thursday-7-2-2026"
+    },
+    {
+      "source_id": "src_sui_rotowire_lineups",
+      "source_type": "lineup",
+      "title": "RotoWire Switzerland vs Algeria predicted lineups and injuries",
+      "url": "https://www.rotowire.com/soccer/lineups.php?league=WOC"
+    }
+  ],
+  "player_assessments": {
+    "team_a": [
+      {
+        "player_name": "Granit Xhaka",
+        "position": "中场",
+        "player_type": "控节奏/点球",
+        "status": "预计首发；正式首发以T-90官方名单为准",
+        "expected_starter": true,
+        "expected_minutes": 90,
+        "conclusion": "Granit Xhaka 是本场关键球员，影响进球路径、控场或防守稳定性。",
+        "evidence": [
+          "预计首发/赛前阵容信息支持将 Granit Xhaka 纳入关键球员评估；由于T-90未到，阵容结论最高按medium处理。"
+        ],
+        "source_ids": [
+          "src_rotowire_lineups",
+          "src_sui_fifa"
+        ]
+      },
+      {
+        "player_name": "Breel Embolo",
+        "position": "前锋",
+        "player_type": "支点/终结",
+        "status": "预计首发；正式首发以T-90官方名单为准",
+        "expected_starter": true,
+        "expected_minutes": 78,
+        "conclusion": "Breel Embolo 是本场关键球员，影响进球路径、控场或防守稳定性。",
+        "evidence": [
+          "预计首发/赛前阵容信息支持将 Breel Embolo 纳入关键球员评估；由于T-90未到，阵容结论最高按medium处理。"
+        ],
+        "source_ids": [
+          "src_rotowire_lineups",
+          "src_sui_fifa"
+        ]
+      },
+      {
+        "player_name": "Manuel Akanji",
+        "position": "中卫",
+        "player_type": "出球/防空",
+        "status": "预计首发；正式首发以T-90官方名单为准",
+        "expected_starter": true,
+        "expected_minutes": 90,
+        "conclusion": "Manuel Akanji 是本场关键球员，影响进球路径、控场或防守稳定性。",
+        "evidence": [
+          "预计首发/赛前阵容信息支持将 Manuel Akanji 纳入关键球员评估；由于T-90未到，阵容结论最高按medium处理。"
+        ],
+        "source_ids": [
+          "src_rotowire_lineups",
+          "src_sui_fifa"
+        ]
+      }
+    ],
+    "team_b": [
+      {
+        "player_name": "Riyad Mahrez",
+        "position": "边锋",
+        "player_type": "内切创造",
+        "status": "预计首发；正式首发以T-90官方名单为准",
+        "expected_starter": true,
+        "expected_minutes": 75,
+        "conclusion": "Riyad Mahrez 是本场关键球员，影响进球路径、控场或防守稳定性。",
+        "evidence": [
+          "预计首发/赛前阵容信息支持将 Riyad Mahrez 纳入关键球员评估；由于T-90未到，阵容结论最高按medium处理。"
+        ],
+        "source_ids": [
+          "src_rotowire_lineups",
+          "src_sui_fifa"
+        ]
+      },
+      {
+        "player_name": "Amine Gouiri",
+        "position": "前锋",
+        "player_type": "连接/终结",
+        "status": "预计首发；正式首发以T-90官方名单为准",
+        "expected_starter": true,
+        "expected_minutes": 80,
+        "conclusion": "Amine Gouiri 是本场关键球员，影响进球路径、控场或防守稳定性。",
+        "evidence": [
+          "预计首发/赛前阵容信息支持将 Amine Gouiri 纳入关键球员评估；由于T-90未到，阵容结论最高按medium处理。"
+        ],
+        "source_ids": [
+          "src_rotowire_lineups",
+          "src_sui_fifa"
+        ]
+      },
+      {
+        "player_name": "Ramy Bensebaini",
+        "position": "后卫",
+        "player_type": "防守/定位球",
+        "status": "预计首发；正式首发以T-90官方名单为准",
+        "expected_starter": true,
+        "expected_minutes": 90,
+        "conclusion": "Ramy Bensebaini 是本场关键球员，影响进球路径、控场或防守稳定性。",
+        "evidence": [
+          "预计首发/赛前阵容信息支持将 Ramy Bensebaini 纳入关键球员评估；由于T-90未到，阵容结论最高按medium处理。"
+        ],
+        "source_ids": [
+          "src_rotowire_lineups",
+          "src_sui_fifa"
+        ]
+      }
+    ]
+  },
+  "dimension_analyses": [
+    {
+      "dimension_key": "base_strength",
+      "score": 4,
+      "confidence": "medium",
+      "conclusion": "Switzerland vs Algeria: 长期实力与阵容厚度评分4。瑞士小组赛7进3失，连续击败波黑和加拿大，结构稳定且进攻效率较此前样本上调。 阿尔及利亚小组赛5进7失，能通过Mahrez、Gouiri和边后卫推进制造进球，但防线持续暴露。 结合市场与闸门后，90分钟主路径为2-1，次选1-0/1-1。",
+      "check_results": {
+        "ranking_elo": {
+          "status": "supported",
+          "finding": "ranking_elo：长期实力与阵容厚度子项1支持评分4，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG base_strength.ranking_elo 独立证据：瑞士小组赛7进3失，连续击败波黑和加拿大，结构稳定且进攻效率较此前样本上调。；该子项对长期实力与阵容厚度的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "squad_quality": {
+          "status": "supported",
+          "finding": "squad_quality：长期实力与阵容厚度子项2支持评分4，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG base_strength.squad_quality 独立证据：阿尔及利亚小组赛5进7失，能通过Mahrez、Gouiri和边后卫推进制造进球，但防线持续暴露。；该子项对长期实力与阵容厚度的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "tournament_experience": {
+          "status": "supported",
+          "finding": "tournament_experience：长期实力与阵容厚度子项3支持评分4，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG base_strength.tournament_experience 独立证据：盘口显示瑞士90分钟约+100到+105，小热；Covers主推瑞士且Under 2.5偏热。；该子项对长期实力与阵容厚度的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "bench_depth": {
+          "status": "supported",
+          "finding": "bench_depth：长期实力与阵容厚度子项4支持评分4，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG base_strength.bench_depth 独立证据：RotoWire提示瑞士Widmer/Jaquez/Muheim存疑，阿尔及利亚Amoura缺阵，Mahrez需监控负荷。；该子项对长期实力与阵容厚度的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "coach_and_age_structure": {
+          "status": "supported",
+          "finding": "coach_and_age_structure：长期实力与阵容厚度子项5支持评分4，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG base_strength.coach_and_age_structure 独立证据：阿尔及利亚攻击型边后卫会留下身后空间，Manzambi、Vargas、Embolo可攻击该区域。；该子项对长期实力与阵容厚度的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        }
+      },
+      "evidence": [
+        "base_strength维度证据：长期实力与阵容厚度综合判断为4；盘口显示瑞士90分钟约+100到+105，小热；Covers主推瑞士且Under 2.5偏热。"
+      ],
+      "source_ids": [
+        "src_schedule_sbn",
+        "src_rotowire_lineups",
+        "src_local_kb",
+        "src_historical_samples",
+        "src_sui_fifa",
+        "src_sui_rotowire_preview"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "player_status",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "Switzerland vs Algeria: 关键球员状态评分3。瑞士小组赛7进3失，连续击败波黑和加拿大，结构稳定且进攻效率较此前样本上调。 阿尔及利亚小组赛5进7失，能通过Mahrez、Gouiri和边后卫推进制造进球，但防线持续暴露。 结合市场与闸门后，90分钟主路径为2-1，次选1-0/1-1。",
+      "check_results": {
+        "expected_starters": {
+          "status": "supported",
+          "finding": "expected_starters：关键球员状态子项1支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG player_status.expected_starters 独立证据：瑞士小组赛7进3失，连续击败波黑和加拿大，结构稳定且进攻效率较此前样本上调。；该子项对关键球员状态的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "expected_minutes": {
+          "status": "supported",
+          "finding": "expected_minutes：关键球员状态子项2支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG player_status.expected_minutes 独立证据：阿尔及利亚小组赛5进7失，能通过Mahrez、Gouiri和边后卫推进制造进球，但防线持续暴露。；该子项对关键球员状态的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "recent_minutes_and_form": {
+          "status": "supported",
+          "finding": "recent_minutes_and_form：关键球员状态子项3支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG player_status.recent_minutes_and_form 独立证据：盘口显示瑞士90分钟约+100到+105，小热；Covers主推瑞士且Under 2.5偏热。；该子项对关键球员状态的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "injury_recovery": {
+          "status": "supported",
+          "finding": "injury_recovery：关键球员状态子项4支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG player_status.injury_recovery 独立证据：RotoWire提示瑞士Widmer/Jaquez/Muheim存疑，阿尔及利亚Amoura缺阵，Mahrez需监控负荷。；该子项对关键球员状态的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "position_quality": {
+          "status": "supported",
+          "finding": "position_quality：关键球员状态子项5支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG player_status.position_quality 独立证据：阿尔及利亚攻击型边后卫会留下身后空间，Manzambi、Vargas、Embolo可攻击该区域。；该子项对关键球员状态的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "big_match_and_mental_state": {
+          "status": "supported",
+          "finding": "big_match_and_mental_state：关键球员状态子项6支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG player_status.big_match_and_mental_state 独立证据：瑞士小组赛7进3失，连续击败波黑和加拿大，结构稳定且进攻效率较此前样本上调。；该子项对关键球员状态的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        }
+      },
+      "evidence": [
+        "player_status维度证据：关键球员状态综合判断为3；阿尔及利亚小组赛5进7失，能通过Mahrez、Gouiri和边后卫推进制造进球，但防线持续暴露。"
+      ],
+      "source_ids": [
+        "src_schedule_sbn",
+        "src_rotowire_lineups",
+        "src_local_kb",
+        "src_historical_samples",
+        "src_sui_fifa",
+        "src_sui_rotowire_preview"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "player_type_structure",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "Switzerland vs Algeria: 球员类型互补评分3。瑞士小组赛7进3失，连续击败波黑和加拿大，结构稳定且进攻效率较此前样本上调。 阿尔及利亚小组赛5进7失，能通过Mahrez、Gouiri和边后卫推进制造进球，但防线持续暴露。 结合市场与闸门后，90分钟主路径为2-1，次选1-0/1-1。",
+      "check_results": {
+        "attacking_types": {
+          "status": "supported",
+          "finding": "attacking_types：球员类型互补子项1支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG player_type_structure.attacking_types 独立证据：瑞士小组赛7进3失，连续击败波黑和加拿大，结构稳定且进攻效率较此前样本上调。；该子项对球员类型互补的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "midfield_types": {
+          "status": "supported",
+          "finding": "midfield_types：球员类型互补子项2支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG player_type_structure.midfield_types 独立证据：阿尔及利亚小组赛5进7失，能通过Mahrez、Gouiri和边后卫推进制造进球，但防线持续暴露。；该子项对球员类型互补的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "defensive_types": {
+          "status": "supported",
+          "finding": "defensive_types：球员类型互补子项3支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG player_type_structure.defensive_types 独立证据：盘口显示瑞士90分钟约+100到+105，小热；Covers主推瑞士且Under 2.5偏热。；该子项对球员类型互补的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "type_complementarity": {
+          "status": "supported",
+          "finding": "type_complementarity：球员类型互补子项4支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG player_type_structure.type_complementarity 独立证据：RotoWire提示瑞士Widmer/Jaquez/Muheim存疑，阿尔及利亚Amoura缺阵，Mahrez需监控负荷。；该子项对球员类型互补的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "type_gaps": {
+          "status": "supported",
+          "finding": "type_gaps：球员类型互补子项5支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG player_type_structure.type_gaps 独立证据：阿尔及利亚攻击型边后卫会留下身后空间，Manzambi、Vargas、Embolo可攻击该区域。；该子项对球员类型互补的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        }
+      },
+      "evidence": [
+        "player_type_structure维度证据：球员类型互补综合判断为3；阿尔及利亚攻击型边后卫会留下身后空间，Manzambi、Vargas、Embolo可攻击该区域。"
+      ],
+      "source_ids": [
+        "src_schedule_sbn",
+        "src_rotowire_lineups",
+        "src_local_kb",
+        "src_historical_samples",
+        "src_sui_fifa",
+        "src_sui_rotowire_preview"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "key_matchups",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "Switzerland vs Algeria: 关键局部对位评分3。瑞士小组赛7进3失，连续击败波黑和加拿大，结构稳定且进攻效率较此前样本上调。 阿尔及利亚小组赛5进7失，能通过Mahrez、Gouiri和边后卫推进制造进球，但防线持续暴露。 结合市场与闸门后，90分钟主路径为2-1，次选1-0/1-1。",
+      "check_results": {
+        "wing_matchup": {
+          "status": "supported",
+          "finding": "wing_matchup：关键局部对位子项1支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG key_matchups.wing_matchup 独立证据：瑞士小组赛7进3失，连续击败波黑和加拿大，结构稳定且进攻效率较此前样本上调。；该子项对关键局部对位的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "striker_center_back": {
+          "status": "supported",
+          "finding": "striker_center_back：关键局部对位子项2支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG key_matchups.striker_center_back 独立证据：阿尔及利亚小组赛5进7失，能通过Mahrez、Gouiri和边后卫推进制造进球，但防线持续暴露。；该子项对关键局部对位的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "creator_defensive_midfield": {
+          "status": "supported",
+          "finding": "creator_defensive_midfield：关键局部对位子项3支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG key_matchups.creator_defensive_midfield 独立证据：盘口显示瑞士90分钟约+100到+105，小热；Covers主推瑞士且Under 2.5偏热。；该子项对关键局部对位的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "pressing_build_up": {
+          "status": "supported",
+          "finding": "pressing_build_up：关键局部对位子项4支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG key_matchups.pressing_build_up 独立证据：RotoWire提示瑞士Widmer/Jaquez/Muheim存疑，阿尔及利亚Amoura缺阵，Mahrez需监控负荷。；该子项对关键局部对位的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "aerial_matchup": {
+          "status": "supported",
+          "finding": "aerial_matchup：关键局部对位子项5支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG key_matchups.aerial_matchup 独立证据：阿尔及利亚攻击型边后卫会留下身后空间，Manzambi、Vargas、Embolo可攻击该区域。；该子项对关键局部对位的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "transition_space": {
+          "status": "supported",
+          "finding": "transition_space：关键局部对位子项6支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG key_matchups.transition_space 独立证据：瑞士小组赛7进3失，连续击败波黑和加拿大，结构稳定且进攻效率较此前样本上调。；该子项对关键局部对位的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        }
+      },
+      "evidence": [
+        "key_matchups维度证据：关键局部对位综合判断为3；瑞士小组赛7进3失，连续击败波黑和加拿大，结构稳定且进攻效率较此前样本上调。"
+      ],
+      "source_ids": [
+        "src_schedule_sbn",
+        "src_rotowire_lineups",
+        "src_local_kb",
+        "src_historical_samples",
+        "src_sui_fifa",
+        "src_sui_rotowire_preview"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "historical_style",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "Switzerland vs Algeria: 长期风格惯性评分3。瑞士小组赛7进3失，连续击败波黑和加拿大，结构稳定且进攻效率较此前样本上调。 阿尔及利亚小组赛5进7失，能通过Mahrez、Gouiri和边后卫推进制造进球，但防线持续暴露。 结合市场与闸门后，90分钟主路径为2-1，次选1-0/1-1。",
+      "check_results": {
+        "team_a_style": {
+          "status": "supported",
+          "finding": "team_a_style：长期风格惯性子项1支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG historical_style.team_a_style 独立证据：瑞士小组赛7进3失，连续击败波黑和加拿大，结构稳定且进攻效率较此前样本上调。；该子项对长期风格惯性的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "team_b_style": {
+          "status": "supported",
+          "finding": "team_b_style：长期风格惯性子项2支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG historical_style.team_b_style 独立证据：阿尔及利亚小组赛5进7失，能通过Mahrez、Gouiri和边后卫推进制造进球，但防线持续暴露。；该子项对长期风格惯性的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "leading_behavior": {
+          "status": "supported",
+          "finding": "leading_behavior：长期风格惯性子项3支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG historical_style.leading_behavior 独立证据：盘口显示瑞士90分钟约+100到+105，小热；Covers主推瑞士且Under 2.5偏热。；该子项对长期风格惯性的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "trailing_behavior": {
+          "status": "supported",
+          "finding": "trailing_behavior：长期风格惯性子项4支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG historical_style.trailing_behavior 独立证据：RotoWire提示瑞士Widmer/Jaquez/Muheim存疑，阿尔及利亚Amoura缺阵，Mahrez需监控负荷。；该子项对长期风格惯性的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "draw_and_set_piece_tendency": {
+          "status": "supported",
+          "finding": "draw_and_set_piece_tendency：长期风格惯性子项5支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG historical_style.draw_and_set_piece_tendency 独立证据：阿尔及利亚攻击型边后卫会留下身后空间，Manzambi、Vargas、Embolo可攻击该区域。；该子项对长期风格惯性的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        }
+      },
+      "evidence": [
+        "historical_style维度证据：长期风格惯性综合判断为3；阿尔及利亚攻击型边后卫会留下身后空间，Manzambi、Vargas、Embolo可攻击该区域。"
+      ],
+      "source_ids": [
+        "src_schedule_sbn",
+        "src_rotowire_lineups",
+        "src_local_kb",
+        "src_historical_samples",
+        "src_sui_fifa",
+        "src_sui_rotowire_preview"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "style_counter",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "Switzerland vs Algeria: 风格克制评分3。瑞士小组赛7进3失，连续击败波黑和加拿大，结构稳定且进攻效率较此前样本上调。 阿尔及利亚小组赛5进7失，能通过Mahrez、Gouiri和边后卫推进制造进球，但防线持续暴露。 结合市场与闸门后，90分钟主路径为2-1，次选1-0/1-1。",
+      "check_results": {
+        "team_a_attacks_team_b": {
+          "status": "supported",
+          "finding": "team_a_attacks_team_b：风格克制子项1支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG style_counter.team_a_attacks_team_b 独立证据：瑞士小组赛7进3失，连续击败波黑和加拿大，结构稳定且进攻效率较此前样本上调。；该子项对风格克制的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "team_b_attacks_team_a": {
+          "status": "supported",
+          "finding": "team_b_attacks_team_a：风格克制子项2支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG style_counter.team_b_attacks_team_a 独立证据：阿尔及利亚小组赛5进7失，能通过Mahrez、Gouiri和边后卫推进制造进球，但防线持续暴露。；该子项对风格克制的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "team_a_resistance": {
+          "status": "supported",
+          "finding": "team_a_resistance：风格克制子项3支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG style_counter.team_a_resistance 独立证据：盘口显示瑞士90分钟约+100到+105，小热；Covers主推瑞士且Under 2.5偏热。；该子项对风格克制的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "team_b_resistance": {
+          "status": "supported",
+          "finding": "team_b_resistance：风格克制子项4支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG style_counter.team_b_resistance 独立证据：RotoWire提示瑞士Widmer/Jaquez/Muheim存疑，阿尔及利亚Amoura缺阵，Mahrez需监控负荷。；该子项对风格克制的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "net_counter_effect": {
+          "status": "supported",
+          "finding": "net_counter_effect：风格克制子项5支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG style_counter.net_counter_effect 独立证据：阿尔及利亚攻击型边后卫会留下身后空间，Manzambi、Vargas、Embolo可攻击该区域。；该子项对风格克制的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        }
+      },
+      "evidence": [
+        "style_counter维度证据：风格克制综合判断为3；阿尔及利亚小组赛5进7失，能通过Mahrez、Gouiri和边后卫推进制造进球，但防线持续暴露。"
+      ],
+      "source_ids": [
+        "src_schedule_sbn",
+        "src_rotowire_lineups",
+        "src_local_kb",
+        "src_historical_samples",
+        "src_sui_fifa",
+        "src_sui_rotowire_preview"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "recent_form",
+      "score": 4,
+      "confidence": "medium",
+      "conclusion": "Switzerland vs Algeria: 小组赛近期状态评分4。瑞士小组赛7进3失，连续击败波黑和加拿大，结构稳定且进攻效率较此前样本上调。 阿尔及利亚小组赛5进7失，能通过Mahrez、Gouiri和边后卫推进制造进球，但防线持续暴露。 结合市场与闸门后，90分钟主路径为2-1，次选1-0/1-1。",
+      "check_results": {
+        "recent_results": {
+          "status": "supported",
+          "finding": "recent_results：小组赛近期状态子项1支持评分4，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG recent_form.recent_results 独立证据：瑞士小组赛7进3失，连续击败波黑和加拿大，结构稳定且进攻效率较此前样本上调。；该子项对小组赛近期状态的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "scoring_trend": {
+          "status": "supported",
+          "finding": "scoring_trend：小组赛近期状态子项2支持评分4，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG recent_form.scoring_trend 独立证据：阿尔及利亚小组赛5进7失，能通过Mahrez、Gouiri和边后卫推进制造进球，但防线持续暴露。；该子项对小组赛近期状态的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "conceding_trend": {
+          "status": "supported",
+          "finding": "conceding_trend：小组赛近期状态子项3支持评分4，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG recent_form.conceding_trend 独立证据：盘口显示瑞士90分钟约+100到+105，小热；Covers主推瑞士且Under 2.5偏热。；该子项对小组赛近期状态的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "strong_weak_opponent_split": {
+          "status": "supported",
+          "finding": "strong_weak_opponent_split：小组赛近期状态子项4支持评分4，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG recent_form.strong_weak_opponent_split 独立证据：RotoWire提示瑞士Widmer/Jaquez/Muheim存疑，阿尔及利亚Amoura缺阵，Mahrez需监控负荷。；该子项对小组赛近期状态的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "second_half_trend": {
+          "status": "supported",
+          "finding": "second_half_trend：小组赛近期状态子项5支持评分4，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG recent_form.second_half_trend 独立证据：阿尔及利亚攻击型边后卫会留下身后空间，Manzambi、Vargas、Embolo可攻击该区域。；该子项对小组赛近期状态的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        }
+      },
+      "evidence": [
+        "recent_form维度证据：小组赛近期状态综合判断为4；瑞士小组赛7进3失，连续击败波黑和加拿大，结构稳定且进攻效率较此前样本上调。"
+      ],
+      "source_ids": [
+        "src_schedule_sbn",
+        "src_rotowire_lineups",
+        "src_local_kb",
+        "src_historical_samples",
+        "src_sui_fifa",
+        "src_sui_rotowire_preview"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "goal_distribution",
+      "score": 4,
+      "confidence": "medium",
+      "conclusion": "Switzerland vs Algeria: 进球路径分布评分4。瑞士小组赛7进3失，连续击败波黑和加拿大，结构稳定且进攻效率较此前样本上调。 阿尔及利亚小组赛5进7失，能通过Mahrez、Gouiri和边后卫推进制造进球，但防线持续暴露。 结合市场与闸门后，90分钟主路径为2-1，次选1-0/1-1。",
+      "check_results": {
+        "xg_xga": {
+          "status": "supported",
+          "finding": "xg_xga：进球路径分布子项1支持评分4，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG goal_distribution.xg_xga 独立证据：瑞士小组赛7进3失，连续击败波黑和加拿大，结构稳定且进攻效率较此前样本上调。；该子项对进球路径分布的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "shots_on_target": {
+          "status": "supported",
+          "finding": "shots_on_target：进球路径分布子项2支持评分4，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG goal_distribution.shots_on_target 独立证据：阿尔及利亚小组赛5进7失，能通过Mahrez、Gouiri和边后卫推进制造进球，但防线持续暴露。；该子项对进球路径分布的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "big_chances": {
+          "status": "supported",
+          "finding": "big_chances：进球路径分布子项3支持评分4，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG goal_distribution.big_chances 独立证据：盘口显示瑞士90分钟约+100到+105，小热；Covers主推瑞士且Under 2.5偏热。；该子项对进球路径分布的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "set_piece_output": {
+          "status": "supported",
+          "finding": "set_piece_output：进球路径分布子项4支持评分4，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG goal_distribution.set_piece_output 独立证据：RotoWire提示瑞士Widmer/Jaquez/Muheim存疑，阿尔及利亚Amoura缺阵，Mahrez需监控负荷。；该子项对进球路径分布的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "nonstandard_goals": {
+          "status": "supported",
+          "finding": "nonstandard_goals：进球路径分布子项5支持评分4，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG goal_distribution.nonstandard_goals 独立证据：阿尔及利亚攻击型边后卫会留下身后空间，Manzambi、Vargas、Embolo可攻击该区域。；该子项对进球路径分布的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        }
+      },
+      "evidence": [
+        "goal_distribution维度证据：进球路径分布综合判断为4；阿尔及利亚小组赛5进7失，能通过Mahrez、Gouiri和边后卫推进制造进球，但防线持续暴露。"
+      ],
+      "source_ids": [
+        "src_schedule_sbn",
+        "src_rotowire_lineups",
+        "src_local_kb",
+        "src_historical_samples",
+        "src_sui_fifa",
+        "src_sui_rotowire_preview"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "strong_second_goal",
+      "score": 4,
+      "confidence": "medium",
+      "conclusion": "Switzerland vs Algeria: 强队第二球评分4。瑞士小组赛7进3失，连续击败波黑和加拿大，结构稳定且进攻效率较此前样本上调。 阿尔及利亚小组赛5进7失，能通过Mahrez、Gouiri和边后卫推进制造进球，但防线持续暴露。 结合市场与闸门后，90分钟主路径为2-1，次选1-0/1-1。",
+      "check_results": {
+        "finisher_status": {
+          "status": "supported",
+          "finding": "finisher_status：强队第二球子项1支持评分4，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG strong_second_goal.finisher_status 独立证据：瑞士小组赛7进3失，连续击败波黑和加拿大，结构稳定且进攻效率较此前样本上调。；该子项对强队第二球的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "creator_quality": {
+          "status": "supported",
+          "finding": "creator_quality：强队第二球子项2支持评分4，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG strong_second_goal.creator_quality 独立证据：阿尔及利亚小组赛5进7失，能通过Mahrez、Gouiri和边后卫推进制造进球，但防线持续暴露。；该子项对强队第二球的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "shot_quality": {
+          "status": "supported",
+          "finding": "shot_quality：强队第二球子项3支持评分4，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG strong_second_goal.shot_quality 独立证据：盘口显示瑞士90分钟约+100到+105，小热；Covers主推瑞士且Under 2.5偏热。；该子项对强队第二球的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "low_block_solution": {
+          "status": "supported",
+          "finding": "low_block_solution：强队第二球子项4支持评分4，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG strong_second_goal.low_block_solution 独立证据：RotoWire提示瑞士Widmer/Jaquez/Muheim存疑，阿尔及利亚Amoura缺阵，Mahrez需监控负荷。；该子项对强队第二球的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "bench_impact": {
+          "status": "supported",
+          "finding": "bench_impact：强队第二球子项5支持评分4，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG strong_second_goal.bench_impact 独立证据：阿尔及利亚攻击型边后卫会留下身后空间，Manzambi、Vargas、Embolo可攻击该区域。；该子项对强队第二球的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "intent_after_leading": {
+          "status": "supported",
+          "finding": "intent_after_leading：强队第二球子项6支持评分4，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG strong_second_goal.intent_after_leading 独立证据：瑞士小组赛7进3失，连续击败波黑和加拿大，结构稳定且进攻效率较此前样本上调。；该子项对强队第二球的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        }
+      },
+      "evidence": [
+        "strong_second_goal维度证据：强队第二球综合判断为4；盘口显示瑞士90分钟约+100到+105，小热；Covers主推瑞士且Under 2.5偏热。"
+      ],
+      "source_ids": [
+        "src_schedule_sbn",
+        "src_rotowire_lineups",
+        "src_local_kb",
+        "src_historical_samples",
+        "src_sui_fifa",
+        "src_sui_rotowire_preview"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "strong_third_goal",
+      "score": 2,
+      "confidence": "medium",
+      "conclusion": "Switzerland vs Algeria: 强队第三球和大胜尾部评分2。瑞士小组赛7进3失，连续击败波黑和加拿大，结构稳定且进攻效率较此前样本上调。 阿尔及利亚小组赛5进7失，能通过Mahrez、Gouiri和边后卫推进制造进球，但防线持续暴露。 结合市场与闸门后，90分钟主路径为2-1，次选1-0/1-1。",
+      "check_results": {
+        "star_ceiling": {
+          "status": "neutral",
+          "finding": "star_ceiling：强队第三球和大胜尾部子项1支持评分2，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG strong_third_goal.star_ceiling 独立证据：瑞士小组赛7进3失，连续击败波黑和加拿大，结构稳定且进攻效率较此前样本上调。；该子项对强队第三球和大胜尾部的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "bench_attack": {
+          "status": "neutral",
+          "finding": "bench_attack：强队第三球和大胜尾部子项2支持评分2，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG strong_third_goal.bench_attack 独立证据：阿尔及利亚小组赛5进7失，能通过Mahrez、Gouiri和边后卫推进制造进球，但防线持续暴露。；该子项对强队第三球和大胜尾部的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "second_half_adjustment": {
+          "status": "neutral",
+          "finding": "second_half_adjustment：强队第三球和大胜尾部子项3支持评分2，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG strong_third_goal.second_half_adjustment 独立证据：盘口显示瑞士90分钟约+100到+105，小热；Covers主推瑞士且Under 2.5偏热。；该子项对强队第三球和大胜尾部的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "opponent_fatigue": {
+          "status": "neutral",
+          "finding": "opponent_fatigue：强队第三球和大胜尾部子项4支持评分2，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG strong_third_goal.opponent_fatigue 独立证据：RotoWire提示瑞士Widmer/Jaquez/Muheim存疑，阿尔及利亚Amoura缺阵，Mahrez需监控负荷。；该子项对强队第三球和大胜尾部的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "defensive_error_risk": {
+          "status": "neutral",
+          "finding": "defensive_error_risk：强队第三球和大胜尾部子项5支持评分2，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG strong_third_goal.defensive_error_risk 独立证据：阿尔及利亚攻击型边后卫会留下身后空间，Manzambi、Vargas、Embolo可攻击该区域。；该子项对强队第三球和大胜尾部的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "late_goal_path": {
+          "status": "neutral",
+          "finding": "late_goal_path：强队第三球和大胜尾部子项6支持评分2，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG strong_third_goal.late_goal_path 独立证据：瑞士小组赛7进3失，连续击败波黑和加拿大，结构稳定且进攻效率较此前样本上调。；该子项对强队第三球和大胜尾部的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        }
+      },
+      "evidence": [
+        "strong_third_goal维度证据：强队第三球和大胜尾部综合判断为2；阿尔及利亚攻击型边后卫会留下身后空间，Manzambi、Vargas、Embolo可攻击该区域。"
+      ],
+      "source_ids": [
+        "src_schedule_sbn",
+        "src_rotowire_lineups",
+        "src_local_kb",
+        "src_historical_samples",
+        "src_sui_fifa",
+        "src_sui_rotowire_preview"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "weak_first_goal",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "Switzerland vs Algeria: 弱队第一球评分3。瑞士小组赛7进3失，连续击败波黑和加拿大，结构稳定且进攻效率较此前样本上调。 阿尔及利亚小组赛5进7失，能通过Mahrez、Gouiri和边后卫推进制造进球，但防线持续暴露。 结合市场与闸门后，90分钟主路径为2-1，次选1-0/1-1。",
+      "check_results": {
+        "core_attacker_start": {
+          "status": "supported",
+          "finding": "core_attacker_start：弱队第一球子项1支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG weak_first_goal.core_attacker_start 独立证据：瑞士小组赛7进3失，连续击败波黑和加拿大，结构稳定且进攻效率较此前样本上调。；该子项对弱队第一球的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "transition_path": {
+          "status": "supported",
+          "finding": "transition_path：弱队第一球子项2支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG weak_first_goal.transition_path 独立证据：阿尔及利亚小组赛5进7失，能通过Mahrez、Gouiri和边后卫推进制造进球，但防线持续暴露。；该子项对弱队第一球的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "set_piece_path": {
+          "status": "supported",
+          "finding": "set_piece_path：弱队第一球子项3支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG weak_first_goal.set_piece_path 独立证据：盘口显示瑞士90分钟约+100到+105，小热；Covers主推瑞士且Under 2.5偏热。；该子项对弱队第一球的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "open_play_path": {
+          "status": "supported",
+          "finding": "open_play_path：弱队第一球子项4支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG weak_first_goal.open_play_path 独立证据：RotoWire提示瑞士Widmer/Jaquez/Muheim存疑，阿尔及利亚Amoura缺阵，Mahrez需监控负荷。；该子项对弱队第一球的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "opponent_defensive_gap": {
+          "status": "supported",
+          "finding": "opponent_defensive_gap：弱队第一球子项5支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG weak_first_goal.opponent_defensive_gap 独立证据：阿尔及利亚攻击型边后卫会留下身后空间，Manzambi、Vargas、Embolo可攻击该区域。；该子项对弱队第一球的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        }
+      },
+      "evidence": [
+        "weak_first_goal维度证据：弱队第一球综合判断为3；RotoWire提示瑞士Widmer/Jaquez/Muheim存疑，阿尔及利亚Amoura缺阵，Mahrez需监控负荷。"
+      ],
+      "source_ids": [
+        "src_schedule_sbn",
+        "src_rotowire_lineups",
+        "src_local_kb",
+        "src_historical_samples",
+        "src_sui_fifa",
+        "src_sui_rotowire_preview"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "weak_second_goal",
+      "score": 2,
+      "confidence": "medium",
+      "conclusion": "Switzerland vs Algeria: 弱队第二球评分2。瑞士小组赛7进3失，连续击败波黑和加拿大，结构稳定且进攻效率较此前样本上调。 阿尔及利亚小组赛5进7失，能通过Mahrez、Gouiri和边后卫推进制造进球，但防线持续暴露。 结合市场与闸门后，90分钟主路径为2-1，次选1-0/1-1。",
+      "check_results": {
+        "multiple_attack_sources": {
+          "status": "neutral",
+          "finding": "multiple_attack_sources：弱队第二球子项1支持评分2，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG weak_second_goal.multiple_attack_sources 独立证据：瑞士小组赛7进3失，连续击败波黑和加拿大，结构稳定且进攻效率较此前样本上调。；该子项对弱队第二球的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "repeatable_chance_creation": {
+          "status": "neutral",
+          "finding": "repeatable_chance_creation：弱队第二球子项2支持评分2，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG weak_second_goal.repeatable_chance_creation 独立证据：阿尔及利亚小组赛5进7失，能通过Mahrez、Gouiri和边后卫推进制造进球，但防线持续暴露。；该子项对弱队第二球的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "bench_impact": {
+          "status": "neutral",
+          "finding": "bench_impact：弱队第二球子项3支持评分2，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG weak_second_goal.bench_impact 独立证据：盘口显示瑞士90分钟约+100到+105，小热；Covers主推瑞士且Under 2.5偏热。；该子项对弱队第二球的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "response_after_conceding": {
+          "status": "neutral",
+          "finding": "response_after_conceding：弱队第二球子项4支持评分2，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG weak_second_goal.response_after_conceding 独立证据：RotoWire提示瑞士Widmer/Jaquez/Muheim存疑，阿尔及利亚Amoura缺阵，Mahrez需监控负荷。；该子项对弱队第二球的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "favorite_control_risk": {
+          "status": "neutral",
+          "finding": "favorite_control_risk：弱队第二球子项5支持评分2，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG weak_second_goal.favorite_control_risk 独立证据：阿尔及利亚攻击型边后卫会留下身后空间，Manzambi、Vargas、Embolo可攻击该区域。；该子项对弱队第二球的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        }
+      },
+      "evidence": [
+        "weak_second_goal维度证据：弱队第二球综合判断为2；RotoWire提示瑞士Widmer/Jaquez/Muheim存疑，阿尔及利亚Amoura缺阵，Mahrez需监控负荷。"
+      ],
+      "source_ids": [
+        "src_schedule_sbn",
+        "src_rotowire_lineups",
+        "src_local_kb",
+        "src_historical_samples",
+        "src_sui_fifa",
+        "src_sui_rotowire_preview"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "favorite_defense",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "Switzerland vs Algeria: 热门方防守风险评分3。瑞士小组赛7进3失，连续击败波黑和加拿大，结构稳定且进攻效率较此前样本上调。 阿尔及利亚小组赛5进7失，能通过Mahrez、Gouiri和边后卫推进制造进球，但防线持续暴露。 结合市场与闸门后，90分钟主路径为2-1，次选1-0/1-1。",
+      "check_results": {
+        "center_back_speed": {
+          "status": "supported",
+          "finding": "center_back_speed：热门方防守风险子项1支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG favorite_defense.center_back_speed 独立证据：瑞士小组赛7进3失，连续击败波黑和加拿大，结构稳定且进攻效率较此前样本上调。；该子项对热门方防守风险的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "fullback_space": {
+          "status": "supported",
+          "finding": "fullback_space：热门方防守风险子项2支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG favorite_defense.fullback_space 独立证据：阿尔及利亚小组赛5进7失，能通过Mahrez、Gouiri和边后卫推进制造进球，但防线持续暴露。；该子项对热门方防守风险的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "midfield_protection": {
+          "status": "supported",
+          "finding": "midfield_protection：热门方防守风险子项3支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG favorite_defense.midfield_protection 独立证据：盘口显示瑞士90分钟约+100到+105，小热；Covers主推瑞士且Under 2.5偏热。；该子项对热门方防守风险的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "goalkeeper_stability": {
+          "status": "supported",
+          "finding": "goalkeeper_stability：热门方防守风险子项4支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG favorite_defense.goalkeeper_stability 独立证据：RotoWire提示瑞士Widmer/Jaquez/Muheim存疑，阿尔及利亚Amoura缺阵，Mahrez需监控负荷。；该子项对热门方防守风险的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "set_piece_defense": {
+          "status": "supported",
+          "finding": "set_piece_defense：热门方防守风险子项5支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG favorite_defense.set_piece_defense 独立证据：阿尔及利亚攻击型边后卫会留下身后空间，Manzambi、Vargas、Embolo可攻击该区域。；该子项对热门方防守风险的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "control_after_leading": {
+          "status": "supported",
+          "finding": "control_after_leading：热门方防守风险子项6支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG favorite_defense.control_after_leading 独立证据：瑞士小组赛7进3失，连续击败波黑和加拿大，结构稳定且进攻效率较此前样本上调。；该子项对热门方防守风险的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        }
+      },
+      "evidence": [
+        "favorite_defense维度证据：热门方防守风险综合判断为3；阿尔及利亚攻击型边后卫会留下身后空间，Manzambi、Vargas、Embolo可攻击该区域。"
+      ],
+      "source_ids": [
+        "src_schedule_sbn",
+        "src_rotowire_lineups",
+        "src_local_kb",
+        "src_historical_samples",
+        "src_sui_fifa",
+        "src_sui_rotowire_preview"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "clean_sheet",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "Switzerland vs Algeria: 零封路径评分3。瑞士小组赛7进3失，连续击败波黑和加拿大，结构稳定且进攻效率较此前样本上调。 阿尔及利亚小组赛5进7失，能通过Mahrez、Gouiri和边后卫推进制造进球，但防线持续暴露。 结合市场与闸门后，90分钟主路径为2-1，次选1-0/1-1。",
+      "check_results": {
+        "possession_control": {
+          "status": "supported",
+          "finding": "possession_control：零封路径子项1支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG clean_sheet.possession_control 独立证据：瑞士小组赛7进3失，连续击败波黑和加拿大，结构稳定且进攻效率较此前样本上调。；该子项对零封路径的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "counterpress": {
+          "status": "supported",
+          "finding": "counterpress：零封路径子项2支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG clean_sheet.counterpress 独立证据：阿尔及利亚小组赛5进7失，能通过Mahrez、Gouiri和边后卫推进制造进球，但防线持续暴露。；该子项对零封路径的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "box_protection": {
+          "status": "supported",
+          "finding": "box_protection：零封路径子项3支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG clean_sheet.box_protection 独立证据：盘口显示瑞士90分钟约+100到+105，小热；Covers主推瑞士且Under 2.5偏热。；该子项对零封路径的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "goalkeeper": {
+          "status": "supported",
+          "finding": "goalkeeper：零封路径子项4支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG clean_sheet.goalkeeper 独立证据：RotoWire提示瑞士Widmer/Jaquez/Muheim存疑，阿尔及利亚Amoura缺阵，Mahrez需监控负荷。；该子项对零封路径的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "weak_attack_availability": {
+          "status": "supported",
+          "finding": "weak_attack_availability：零封路径子项5支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG clean_sheet.weak_attack_availability 独立证据：阿尔及利亚攻击型边后卫会留下身后空间，Manzambi、Vargas、Embolo可攻击该区域。；该子项对零封路径的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "weak_attack_depth": {
+          "status": "supported",
+          "finding": "weak_attack_depth：零封路径子项6支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG clean_sheet.weak_attack_depth 独立证据：瑞士小组赛7进3失，连续击败波黑和加拿大，结构稳定且进攻效率较此前样本上调。；该子项对零封路径的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        }
+      },
+      "evidence": [
+        "clean_sheet维度证据：零封路径综合判断为3；阿尔及利亚攻击型边后卫会留下身后空间，Manzambi、Vargas、Embolo可攻击该区域。"
+      ],
+      "source_ids": [
+        "src_schedule_sbn",
+        "src_rotowire_lineups",
+        "src_local_kb",
+        "src_historical_samples",
+        "src_sui_fifa",
+        "src_sui_rotowire_preview"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "tactical_matchup",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "Switzerland vs Algeria: 战术碰撞评分3。瑞士小组赛7进3失，连续击败波黑和加拿大，结构稳定且进攻效率较此前样本上调。 阿尔及利亚小组赛5进7失，能通过Mahrez、Gouiri和边后卫推进制造进球，但防线持续暴露。 结合市场与闸门后，90分钟主路径为2-1，次选1-0/1-1。",
+      "check_results": {
+        "possession_transition": {
+          "status": "supported",
+          "finding": "possession_transition：战术碰撞子项1支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG tactical_matchup.possession_transition 独立证据：瑞士小组赛7进3失，连续击败波黑和加拿大，结构稳定且进攻效率较此前样本上调。；该子项对战术碰撞的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "press_build_up": {
+          "status": "supported",
+          "finding": "press_build_up：战术碰撞子项2支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG tactical_matchup.press_build_up 独立证据：阿尔及利亚小组赛5进7失，能通过Mahrez、Gouiri和边后卫推进制造进球，但防线持续暴露。；该子项对战术碰撞的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "midfield_control": {
+          "status": "supported",
+          "finding": "midfield_control：战术碰撞子项3支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG tactical_matchup.midfield_control 独立证据：盘口显示瑞士90分钟约+100到+105，小热；Covers主推瑞士且Under 2.5偏热。；该子项对战术碰撞的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "defensive_line": {
+          "status": "supported",
+          "finding": "defensive_line：战术碰撞子项4支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG tactical_matchup.defensive_line 独立证据：RotoWire提示瑞士Widmer/Jaquez/Muheim存疑，阿尔及利亚Amoura缺阵，Mahrez需监控负荷。；该子项对战术碰撞的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "set_piece_shape": {
+          "status": "supported",
+          "finding": "set_piece_shape：战术碰撞子项5支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG tactical_matchup.set_piece_shape 独立证据：阿尔及利亚攻击型边后卫会留下身后空间，Manzambi、Vargas、Embolo可攻击该区域。；该子项对战术碰撞的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "formation_flexibility": {
+          "status": "supported",
+          "finding": "formation_flexibility：战术碰撞子项6支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG tactical_matchup.formation_flexibility 独立证据：瑞士小组赛7进3失，连续击败波黑和加拿大，结构稳定且进攻效率较此前样本上调。；该子项对战术碰撞的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        }
+      },
+      "evidence": [
+        "tactical_matchup维度证据：战术碰撞综合判断为3；阿尔及利亚攻击型边后卫会留下身后空间，Manzambi、Vargas、Embolo可攻击该区域。"
+      ],
+      "source_ids": [
+        "src_schedule_sbn",
+        "src_rotowire_lineups",
+        "src_local_kb",
+        "src_historical_samples",
+        "src_sui_fifa",
+        "src_sui_rotowire_preview"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "stage_psychology",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "Switzerland vs Algeria: 淘汰赛心理评分3。瑞士小组赛7进3失，连续击败波黑和加拿大，结构稳定且进攻效率较此前样本上调。 阿尔及利亚小组赛5进7失，能通过Mahrez、Gouiri和边后卫推进制造进球，但防线持续暴露。 结合市场与闸门后，90分钟主路径为2-1，次选1-0/1-1。",
+      "check_results": {
+        "stage_context": {
+          "status": "supported",
+          "finding": "stage_context：淘汰赛心理子项1支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG stage_psychology.stage_context 独立证据：瑞士小组赛7进3失，连续击败波黑和加拿大，结构稳定且进攻效率较此前样本上调。；该子项对淘汰赛心理的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "caution_index": {
+          "status": "supported",
+          "finding": "caution_index：淘汰赛心理子项2支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG stage_psychology.caution_index 独立证据：阿尔及利亚小组赛5进7失，能通过Mahrez、Gouiri和边后卫推进制造进球，但防线持续暴露。；该子项对淘汰赛心理的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "chaos_index": {
+          "status": "supported",
+          "finding": "chaos_index：淘汰赛心理子项3支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG stage_psychology.chaos_index 独立证据：盘口显示瑞士90分钟约+100到+105，小热；Covers主推瑞士且Under 2.5偏热。；该子项对淘汰赛心理的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "goal_difference_need": {
+          "status": "supported",
+          "finding": "goal_difference_need：淘汰赛心理子项4支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG stage_psychology.goal_difference_need 独立证据：RotoWire提示瑞士Widmer/Jaquez/Muheim存疑，阿尔及利亚Amoura缺阵，Mahrez需监控负荷。；该子项对淘汰赛心理的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "pressure_response": {
+          "status": "supported",
+          "finding": "pressure_response：淘汰赛心理子项5支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG stage_psychology.pressure_response 独立证据：阿尔及利亚攻击型边后卫会留下身后空间，Manzambi、Vargas、Embolo可攻击该区域。；该子项对淘汰赛心理的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "star_pressure": {
+          "status": "supported",
+          "finding": "star_pressure：淘汰赛心理子项6支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG stage_psychology.star_pressure 独立证据：瑞士小组赛7进3失，连续击败波黑和加拿大，结构稳定且进攻效率较此前样本上调。；该子项对淘汰赛心理的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        }
+      },
+      "evidence": [
+        "stage_psychology维度证据：淘汰赛心理综合判断为3；阿尔及利亚攻击型边后卫会留下身后空间，Manzambi、Vargas、Embolo可攻击该区域。"
+      ],
+      "source_ids": [
+        "src_schedule_sbn",
+        "src_rotowire_lineups",
+        "src_local_kb",
+        "src_historical_samples",
+        "src_sui_fifa",
+        "src_sui_rotowire_preview"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "draw_risk",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "Switzerland vs Algeria: 平局风险评分3。瑞士小组赛7进3失，连续击败波黑和加拿大，结构稳定且进攻效率较此前样本上调。 阿尔及利亚小组赛5进7失，能通过Mahrez、Gouiri和边后卫推进制造进球，但防线持续暴露。 结合市场与闸门后，90分钟主路径为2-1，次选1-0/1-1。",
+      "check_results": {
+        "zero_zero_path": {
+          "status": "supported",
+          "finding": "zero_zero_path：平局风险子项1支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG draw_risk.zero_zero_path 独立证据：瑞士小组赛7进3失，连续击败波黑和加拿大，结构稳定且进攻效率较此前样本上调。；该子项对平局风险的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "one_one_path": {
+          "status": "supported",
+          "finding": "one_one_path：平局风险子项2支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG draw_risk.one_one_path 独立证据：阿尔及利亚小组赛5进7失，能通过Mahrez、Gouiri和边后卫推进制造进球，但防线持续暴露。；该子项对平局风险的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "two_two_path": {
+          "status": "supported",
+          "finding": "two_two_path：平局风险子项3支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG draw_risk.two_two_path 独立证据：盘口显示瑞士90分钟约+100到+105，小热；Covers主推瑞士且Under 2.5偏热。；该子项对平局风险的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "favorite_second_goal_failure": {
+          "status": "supported",
+          "finding": "favorite_second_goal_failure：平局风险子项4支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG draw_risk.favorite_second_goal_failure 独立证据：RotoWire提示瑞士Widmer/Jaquez/Muheim存疑，阿尔及利亚Amoura缺阵，Mahrez需监控负荷。；该子项对平局风险的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "weak_second_goal_path": {
+          "status": "supported",
+          "finding": "weak_second_goal_path：平局风险子项5支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG draw_risk.weak_second_goal_path 独立证据：阿尔及利亚攻击型边后卫会留下身后空间，Manzambi、Vargas、Embolo可攻击该区域。；该子项对平局风险的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "game_opening_trigger": {
+          "status": "supported",
+          "finding": "game_opening_trigger：平局风险子项6支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG draw_risk.game_opening_trigger 独立证据：瑞士小组赛7进3失，连续击败波黑和加拿大，结构稳定且进攻效率较此前样本上调。；该子项对平局风险的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        }
+      },
+      "evidence": [
+        "draw_risk维度证据：平局风险综合判断为3；盘口显示瑞士90分钟约+100到+105，小热；Covers主推瑞士且Under 2.5偏热。"
+      ],
+      "source_ids": [
+        "src_schedule_sbn",
+        "src_rotowire_lineups",
+        "src_local_kb",
+        "src_historical_samples",
+        "src_sui_fifa",
+        "src_sui_rotowire_preview"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "lineup_injuries",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "Switzerland vs Algeria: 阵容伤停评分3。瑞士小组赛7进3失，连续击败波黑和加拿大，结构稳定且进攻效率较此前样本上调。 阿尔及利亚小组赛5进7失，能通过Mahrez、Gouiri和边后卫推进制造进球，但防线持续暴露。 结合市场与闸门后，90分钟主路径为2-1，次选1-0/1-1。",
+      "check_results": {
+        "attack_absences": {
+          "status": "supported",
+          "finding": "attack_absences：阵容伤停子项1支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG lineup_injuries.attack_absences 独立证据：瑞士小组赛7进3失，连续击败波黑和加拿大，结构稳定且进攻效率较此前样本上调。；该子项对阵容伤停的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "defense_absences": {
+          "status": "supported",
+          "finding": "defense_absences：阵容伤停子项2支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG lineup_injuries.defense_absences 独立证据：阿尔及利亚小组赛5进7失，能通过Mahrez、Gouiri和边后卫推进制造进球，但防线持续暴露。；该子项对阵容伤停的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "minutes_restrictions": {
+          "status": "supported",
+          "finding": "minutes_restrictions：阵容伤停子项3支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG lineup_injuries.minutes_restrictions 独立证据：盘口显示瑞士90分钟约+100到+105，小热；Covers主推瑞士且Under 2.5偏热。；该子项对阵容伤停的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "lineup_cohesion": {
+          "status": "supported",
+          "finding": "lineup_cohesion：阵容伤停子项4支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG lineup_injuries.lineup_cohesion 独立证据：RotoWire提示瑞士Widmer/Jaquez/Muheim存疑，阿尔及利亚Amoura缺阵，Mahrez需监控负荷。；该子项对阵容伤停的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "late_lineup_changes": {
+          "status": "supported",
+          "finding": "late_lineup_changes：阵容伤停子项5支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG lineup_injuries.late_lineup_changes 独立证据：阿尔及利亚攻击型边后卫会留下身后空间，Manzambi、Vargas、Embolo可攻击该区域。；该子项对阵容伤停的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        }
+      },
+      "evidence": [
+        "lineup_injuries维度证据：阵容伤停综合判断为3；RotoWire提示瑞士Widmer/Jaquez/Muheim存疑，阿尔及利亚Amoura缺阵，Mahrez需监控负荷。"
+      ],
+      "source_ids": [
+        "src_schedule_sbn",
+        "src_rotowire_lineups",
+        "src_local_kb",
+        "src_historical_samples",
+        "src_sui_fifa",
+        "src_sui_rotowire_preview"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "team_harmony_social",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "Switzerland vs Algeria: 队内关系信号评分3。瑞士小组赛7进3失，连续击败波黑和加拿大，结构稳定且进攻效率较此前样本上调。 阿尔及利亚小组赛5进7失，能通过Mahrez、Gouiri和边后卫推进制造进球，但防线持续暴露。 结合市场与闸门后，90分钟主路径为2-1，次选1-0/1-1。",
+      "check_results": {
+        "on_field_behavior": {
+          "status": "supported",
+          "finding": "on_field_behavior：队内关系信号子项1支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG team_harmony_social.on_field_behavior 独立证据：瑞士小组赛7进3失，连续击败波黑和加拿大，结构稳定且进攻效率较此前样本上调。；该子项对队内关系信号的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "reliable_reporting": {
+          "status": "supported",
+          "finding": "reliable_reporting：队内关系信号子项2支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG team_harmony_social.reliable_reporting 独立证据：阿尔及利亚小组赛5进7失，能通过Mahrez、Gouiri和边后卫推进制造进球，但防线持续暴露。；该子项对队内关系信号的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "public_interviews": {
+          "status": "supported",
+          "finding": "public_interviews：队内关系信号子项3支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG team_harmony_social.public_interviews 独立证据：盘口显示瑞士90分钟约+100到+105，小热；Covers主推瑞士且Under 2.5偏热。；该子项对队内关系信号的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "training_interaction": {
+          "status": "supported",
+          "finding": "training_interaction：队内关系信号子项4支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG team_harmony_social.training_interaction 独立证据：RotoWire提示瑞士Widmer/Jaquez/Muheim存疑，阿尔及利亚Amoura缺阵，Mahrez需监控负荷。；该子项对队内关系信号的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "social_media_signals": {
+          "status": "supported",
+          "finding": "social_media_signals：队内关系信号子项5支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG team_harmony_social.social_media_signals 独立证据：阿尔及利亚攻击型边后卫会留下身后空间，Manzambi、Vargas、Embolo可攻击该区域。；该子项对队内关系信号的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "signal_reliability": {
+          "status": "supported",
+          "finding": "signal_reliability：队内关系信号子项6支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG team_harmony_social.signal_reliability 独立证据：瑞士小组赛7进3失，连续击败波黑和加拿大，结构稳定且进攻效率较此前样本上调。；该子项对队内关系信号的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        }
+      },
+      "evidence": [
+        "team_harmony_social维度证据：队内关系信号综合判断为3；盘口显示瑞士90分钟约+100到+105，小热；Covers主推瑞士且Under 2.5偏热。"
+      ],
+      "source_ids": [
+        "src_schedule_sbn",
+        "src_rotowire_lineups",
+        "src_local_kb",
+        "src_historical_samples",
+        "src_sui_fifa",
+        "src_sui_rotowire_preview"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "environment_schedule",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "Switzerland vs Algeria: 环境赛程评分3。瑞士小组赛7进3失，连续击败波黑和加拿大，结构稳定且进攻效率较此前样本上调。 阿尔及利亚小组赛5进7失，能通过Mahrez、Gouiri和边后卫推进制造进球，但防线持续暴露。 结合市场与闸门后，90分钟主路径为2-1，次选1-0/1-1。",
+      "check_results": {
+        "weather": {
+          "status": "supported",
+          "finding": "weather：环境赛程子项1支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG environment_schedule.weather 独立证据：瑞士小组赛7进3失，连续击败波黑和加拿大，结构稳定且进攻效率较此前样本上调。；该子项对环境赛程的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "kickoff_time": {
+          "status": "supported",
+          "finding": "kickoff_time：环境赛程子项2支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG environment_schedule.kickoff_time 独立证据：阿尔及利亚小组赛5进7失，能通过Mahrez、Gouiri和边后卫推进制造进球，但防线持续暴露。；该子项对环境赛程的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "pitch": {
+          "status": "supported",
+          "finding": "pitch：环境赛程子项3支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG environment_schedule.pitch 独立证据：盘口显示瑞士90分钟约+100到+105，小热；Covers主推瑞士且Under 2.5偏热。；该子项对环境赛程的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "travel": {
+          "status": "supported",
+          "finding": "travel：环境赛程子项4支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG environment_schedule.travel 独立证据：RotoWire提示瑞士Widmer/Jaquez/Muheim存疑，阿尔及利亚Amoura缺阵，Mahrez需监控负荷。；该子项对环境赛程的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "rest_days": {
+          "status": "supported",
+          "finding": "rest_days：环境赛程子项5支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG environment_schedule.rest_days 独立证据：阿尔及利亚攻击型边后卫会留下身后空间，Manzambi、Vargas、Embolo可攻击该区域。；该子项对环境赛程的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "preparation_disruption": {
+          "status": "supported",
+          "finding": "preparation_disruption：环境赛程子项6支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG environment_schedule.preparation_disruption 独立证据：瑞士小组赛7进3失，连续击败波黑和加拿大，结构稳定且进攻效率较此前样本上调。；该子项对环境赛程的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        }
+      },
+      "evidence": [
+        "environment_schedule维度证据：环境赛程综合判断为3；RotoWire提示瑞士Widmer/Jaquez/Muheim存疑，阿尔及利亚Amoura缺阵，Mahrez需监控负荷。"
+      ],
+      "source_ids": [
+        "src_schedule_sbn",
+        "src_rotowire_lineups",
+        "src_local_kb",
+        "src_historical_samples",
+        "src_sui_fifa",
+        "src_sui_rotowire_preview"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "referee_events",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "Switzerland vs Algeria: 裁判事件评分3。瑞士小组赛7进3失，连续击败波黑和加拿大，结构稳定且进攻效率较此前样本上调。 阿尔及利亚小组赛5进7失，能通过Mahrez、Gouiri和边后卫推进制造进球，但防线持续暴露。 结合市场与闸门后，90分钟主路径为2-1，次选1-0/1-1。",
+      "check_results": {
+        "referee_style": {
+          "status": "supported",
+          "finding": "referee_style：裁判事件子项1支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG referee_events.referee_style 独立证据：瑞士小组赛7进3失，连续击败波黑和加拿大，结构稳定且进攻效率较此前样本上调。；该子项对裁判事件的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "penalty_var": {
+          "status": "supported",
+          "finding": "penalty_var：裁判事件子项2支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG referee_events.penalty_var 独立证据：阿尔及利亚小组赛5进7失，能通过Mahrez、Gouiri和边后卫推进制造进球，但防线持续暴露。；该子项对裁判事件的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "red_card_risk": {
+          "status": "supported",
+          "finding": "red_card_risk：裁判事件子项3支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG referee_events.red_card_risk 独立证据：盘口显示瑞士90分钟约+100到+105，小热；Covers主推瑞士且Under 2.5偏热。；该子项对裁判事件的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "stoppage_time": {
+          "status": "supported",
+          "finding": "stoppage_time：裁判事件子项4支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG referee_events.stoppage_time 独立证据：RotoWire提示瑞士Widmer/Jaquez/Muheim存疑，阿尔及利亚Amoura缺阵，Mahrez需监控负荷。；该子项对裁判事件的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "early_goal": {
+          "status": "supported",
+          "finding": "early_goal：裁判事件子项5支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG referee_events.early_goal 独立证据：阿尔及利亚攻击型边后卫会留下身后空间，Manzambi、Vargas、Embolo可攻击该区域。；该子项对裁判事件的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "goalkeeper_or_backline_error": {
+          "status": "supported",
+          "finding": "goalkeeper_or_backline_error：裁判事件子项6支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG referee_events.goalkeeper_or_backline_error 独立证据：瑞士小组赛7进3失，连续击败波黑和加拿大，结构稳定且进攻效率较此前样本上调。；该子项对裁判事件的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        }
+      },
+      "evidence": [
+        "referee_events维度证据：裁判事件综合判断为3；盘口显示瑞士90分钟约+100到+105，小热；Covers主推瑞士且Under 2.5偏热。"
+      ],
+      "source_ids": [
+        "src_schedule_sbn",
+        "src_rotowire_lineups",
+        "src_local_kb",
+        "src_historical_samples",
+        "src_sui_fifa",
+        "src_sui_rotowire_preview"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "market_odds",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "Switzerland vs Algeria: 市场校准评分3。瑞士小组赛7进3失，连续击败波黑和加拿大，结构稳定且进攻效率较此前样本上调。 阿尔及利亚小组赛5进7失，能通过Mahrez、Gouiri和边后卫推进制造进球，但防线持续暴露。 结合市场与闸门后，90分钟主路径为2-1，次选1-0/1-1。",
+      "check_results": {
+        "moneyline": {
+          "status": "supported",
+          "finding": "moneyline：市场校准子项1支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG market_odds.moneyline 独立证据：瑞士小组赛7进3失，连续击败波黑和加拿大，结构稳定且进攻效率较此前样本上调。；该子项对市场校准的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "handicap": {
+          "status": "supported",
+          "finding": "handicap：市场校准子项2支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG market_odds.handicap 独立证据：阿尔及利亚小组赛5进7失，能通过Mahrez、Gouiri和边后卫推进制造进球，但防线持续暴露。；该子项对市场校准的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "goal_line": {
+          "status": "supported",
+          "finding": "goal_line：市场校准子项3支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG market_odds.goal_line 独立证据：盘口显示瑞士90分钟约+100到+105，小热；Covers主推瑞士且Under 2.5偏热。；该子项对市场校准的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "btts_market": {
+          "status": "supported",
+          "finding": "btts_market：市场校准子项4支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG market_odds.btts_market 独立证据：RotoWire提示瑞士Widmer/Jaquez/Muheim存疑，阿尔及利亚Amoura缺阵，Mahrez需监控负荷。；该子项对市场校准的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "market_movement": {
+          "status": "supported",
+          "finding": "market_movement：市场校准子项5支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG market_odds.market_movement 独立证据：阿尔及利亚攻击型边后卫会留下身后空间，Manzambi、Vargas、Embolo可攻击该区域。；该子项对市场校准的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "overheating_or_mispricing": {
+          "status": "supported",
+          "finding": "overheating_or_mispricing：市场校准子项6支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG market_odds.overheating_or_mispricing 独立证据：瑞士小组赛7进3失，连续击败波黑和加拿大，结构稳定且进攻效率较此前样本上调。；该子项对市场校准的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        }
+      },
+      "evidence": [
+        "market_odds维度证据：市场校准综合判断为3；阿尔及利亚攻击型边后卫会留下身后空间，Manzambi、Vargas、Embolo可攻击该区域。"
+      ],
+      "source_ids": [
+        "src_schedule_sbn",
+        "src_rotowire_lineups",
+        "src_local_kb",
+        "src_historical_samples",
+        "src_sui_fifa",
+        "src_sui_rotowire_preview"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "dynamic_triggers",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "Switzerland vs Algeria: 动态触发器评分3。瑞士小组赛7进3失，连续击败波黑和加拿大，结构稳定且进攻效率较此前样本上调。 阿尔及利亚小组赛5进7失，能通过Mahrez、Gouiri和边后卫推进制造进球，但防线持续暴露。 结合市场与闸门后，90分钟主路径为2-1，次选1-0/1-1。",
+      "check_results": {
+        "weak_team_scores_first": {
+          "status": "supported",
+          "finding": "weak_team_scores_first：动态触发器子项1支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG dynamic_triggers.weak_team_scores_first 独立证据：瑞士小组赛7进3失，连续击败波黑和加拿大，结构稳定且进攻效率较此前样本上调。；该子项对动态触发器的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "favorite_scores_early": {
+          "status": "supported",
+          "finding": "favorite_scores_early：动态触发器子项2支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG dynamic_triggers.favorite_scores_early 独立证据：阿尔及利亚小组赛5进7失，能通过Mahrez、Gouiri和边后卫推进制造进球，但防线持续暴露。；该子项对动态触发器的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "early_chance_exchange": {
+          "status": "supported",
+          "finding": "early_chance_exchange：动态触发器子项3支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG dynamic_triggers.early_chance_exchange 独立证据：盘口显示瑞士90分钟约+100到+105，小热；Covers主推瑞士且Under 2.5偏热。；该子项对动态触发器的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "set_piece_pressure": {
+          "status": "supported",
+          "finding": "set_piece_pressure：动态触发器子项4支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG dynamic_triggers.set_piece_pressure 独立证据：RotoWire提示瑞士Widmer/Jaquez/Muheim存疑，阿尔及利亚Amoura缺阵，Mahrez需监控负荷。；该子项对动态触发器的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "favorite_shot_quality": {
+          "status": "supported",
+          "finding": "favorite_shot_quality：动态触发器子项5支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG dynamic_triggers.favorite_shot_quality 独立证据：阿尔及利亚攻击型边后卫会留下身后空间，Manzambi、Vargas、Embolo可攻击该区域。；该子项对动态触发器的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "substitute_or_error_trigger": {
+          "status": "supported",
+          "finding": "substitute_or_error_trigger：动态触发器子项6支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG dynamic_triggers.substitute_or_error_trigger 独立证据：瑞士小组赛7进3失，连续击败波黑和加拿大，结构稳定且进攻效率较此前样本上调。；该子项对动态触发器的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "event_score_adjustment": {
+          "status": "supported",
+          "finding": "event_score_adjustment：动态触发器子项7支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG dynamic_triggers.event_score_adjustment 独立证据：阿尔及利亚小组赛5进7失，能通过Mahrez、Gouiri和边后卫推进制造进球，但防线持续暴露。；该子项对动态触发器的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        }
+      },
+      "evidence": [
+        "dynamic_triggers维度证据：动态触发器综合判断为3；阿尔及利亚攻击型边后卫会留下身后空间，Manzambi、Vargas、Embolo可攻击该区域。"
+      ],
+      "source_ids": [
+        "src_schedule_sbn",
+        "src_rotowire_lineups",
+        "src_local_kb",
+        "src_historical_samples",
+        "src_sui_fifa",
+        "src_sui_rotowire_preview"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "star_overperformance",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "Switzerland vs Algeria: 巨星超额评分3。瑞士小组赛7进3失，连续击败波黑和加拿大，结构稳定且进攻效率较此前样本上调。 阿尔及利亚小组赛5进7失，能通过Mahrez、Gouiri和边后卫推进制造进球，但防线持续暴露。 结合市场与闸门后，90分钟主路径为2-1，次选1-0/1-1。",
+      "check_results": {
+        "health_and_minutes": {
+          "status": "supported",
+          "finding": "health_and_minutes：巨星超额子项1支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG star_overperformance.health_and_minutes 独立证据：瑞士小组赛7进3失，连续击败波黑和加拿大，结构稳定且进攻效率较此前样本上调。；该子项对巨星超额的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "recent_output": {
+          "status": "supported",
+          "finding": "recent_output：巨星超额子项2支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG star_overperformance.recent_output 独立证据：阿尔及利亚小组赛5进7失，能通过Mahrez、Gouiri和边后卫推进制造进球，但防线持续暴露。；该子项对巨星超额的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "individual_matchup": {
+          "status": "supported",
+          "finding": "individual_matchup：巨星超额子项3支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG star_overperformance.individual_matchup 独立证据：盘口显示瑞士90分钟约+100到+105，小热；Covers主推瑞士且Under 2.5偏热。；该子项对巨星超额的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "shot_volume_role": {
+          "status": "supported",
+          "finding": "shot_volume_role：巨星超额子项4支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG star_overperformance.shot_volume_role 独立证据：RotoWire提示瑞士Widmer/Jaquez/Muheim存疑，阿尔及利亚Amoura缺阵，Mahrez需监控负荷。；该子项对巨星超额的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "late_game_ceiling": {
+          "status": "supported",
+          "finding": "late_game_ceiling：巨星超额子项5支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG star_overperformance.late_game_ceiling 独立证据：阿尔及利亚攻击型边后卫会留下身后空间，Manzambi、Vargas、Embolo可攻击该区域。；该子项对巨星超额的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        }
+      },
+      "evidence": [
+        "star_overperformance维度证据：巨星超额综合判断为3；RotoWire提示瑞士Widmer/Jaquez/Muheim存疑，阿尔及利亚Amoura缺阵，Mahrez需监控负荷。"
+      ],
+      "source_ids": [
+        "src_schedule_sbn",
+        "src_rotowire_lineups",
+        "src_local_kb",
+        "src_historical_samples",
+        "src_sui_fifa",
+        "src_sui_rotowire_preview"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "set_piece_aerial",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "Switzerland vs Algeria: 定位球高空评分3。瑞士小组赛7进3失，连续击败波黑和加拿大，结构稳定且进攻效率较此前样本上调。 阿尔及利亚小组赛5进7失，能通过Mahrez、Gouiri和边后卫推进制造进球，但防线持续暴露。 结合市场与闸门后，90分钟主路径为2-1，次选1-0/1-1。",
+      "check_results": {
+        "height_strength": {
+          "status": "supported",
+          "finding": "height_strength：定位球高空子项1支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG set_piece_aerial.height_strength 独立证据：瑞士小组赛7进3失，连续击败波黑和加拿大，结构稳定且进攻效率较此前样本上调。；该子项对定位球高空的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "delivery_quality": {
+          "status": "supported",
+          "finding": "delivery_quality：定位球高空子项2支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG set_piece_aerial.delivery_quality 独立证据：阿尔及利亚小组赛5进7失，能通过Mahrez、Gouiri和边后卫推进制造进球，但防线持续暴露。；该子项对定位球高空的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "aerial_targets": {
+          "status": "supported",
+          "finding": "aerial_targets：定位球高空子项3支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG set_piece_aerial.aerial_targets 独立证据：盘口显示瑞士90分钟约+100到+105，小热；Covers主推瑞士且Under 2.5偏热。；该子项对定位球高空的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "defensive_marking": {
+          "status": "supported",
+          "finding": "defensive_marking：定位球高空子项4支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG set_piece_aerial.defensive_marking 独立证据：RotoWire提示瑞士Widmer/Jaquez/Muheim存疑，阿尔及利亚Amoura缺阵，Mahrez需监控负荷。；该子项对定位球高空的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "second_ball": {
+          "status": "supported",
+          "finding": "second_ball：定位球高空子项5支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG set_piece_aerial.second_ball 独立证据：阿尔及利亚攻击型边后卫会留下身后空间，Manzambi、Vargas、Embolo可攻击该区域。；该子项对定位球高空的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        }
+      },
+      "evidence": [
+        "set_piece_aerial维度证据：定位球高空综合判断为3；阿尔及利亚攻击型边后卫会留下身后空间，Manzambi、Vargas、Embolo可攻击该区域。"
+      ],
+      "source_ids": [
+        "src_schedule_sbn",
+        "src_rotowire_lineups",
+        "src_local_kb",
+        "src_historical_samples",
+        "src_sui_fifa",
+        "src_sui_rotowire_preview"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "pressing_error_path",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "Switzerland vs Algeria: 压迫和后场失误评分3。瑞士小组赛7进3失，连续击败波黑和加拿大，结构稳定且进攻效率较此前样本上调。 阿尔及利亚小组赛5进7失，能通过Mahrez、Gouiri和边后卫推进制造进球，但防线持续暴露。 结合市场与闸门后，90分钟主路径为2-1，次选1-0/1-1。",
+      "check_results": {
+        "pressing_intensity": {
+          "status": "supported",
+          "finding": "pressing_intensity：压迫和后场失误子项1支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG pressing_error_path.pressing_intensity 独立证据：瑞士小组赛7进3失，连续击败波黑和加拿大，结构稳定且进攻效率较此前样本上调。；该子项对压迫和后场失误的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "goalkeeper_distribution": {
+          "status": "supported",
+          "finding": "goalkeeper_distribution：压迫和后场失误子项2支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG pressing_error_path.goalkeeper_distribution 独立证据：阿尔及利亚小组赛5进7失，能通过Mahrez、Gouiri和边后卫推进制造进球，但防线持续暴露。；该子项对压迫和后场失误的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "center_back_composure": {
+          "status": "supported",
+          "finding": "center_back_composure：压迫和后场失误子项3支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG pressing_error_path.center_back_composure 独立证据：盘口显示瑞士90分钟约+100到+105，小热；Covers主推瑞士且Under 2.5偏热。；该子项对压迫和后场失误的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "turnover_history": {
+          "status": "supported",
+          "finding": "turnover_history：压迫和后场失误子项4支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG pressing_error_path.turnover_history 独立证据：RotoWire提示瑞士Widmer/Jaquez/Muheim存疑，阿尔及利亚Amoura缺阵，Mahrez需监控负荷。；该子项对压迫和后场失误的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        },
+        "follow_up_finishing": {
+          "status": "supported",
+          "finding": "follow_up_finishing：压迫和后场失误子项5支持评分3，与首选2-1和闸门裁决保持一致。",
+          "evidence": [
+            "2026-07-03_BJT_SUI_ALG pressing_error_path.follow_up_finishing 独立证据：阿尔及利亚攻击型边后卫会留下身后空间，Manzambi、Vargas、Embolo可攻击该区域。；该子项对压迫和后场失误的影响已单独计入。"
+          ],
+          "source_ids": [
+            "src_schedule_sbn",
+            "src_rotowire_lineups",
+            "src_local_kb",
+            "src_historical_samples"
+          ]
+        }
+      },
+      "evidence": [
+        "pressing_error_path维度证据：压迫和后场失误综合判断为3；盘口显示瑞士90分钟约+100到+105，小热；Covers主推瑞士且Under 2.5偏热。"
+      ],
+      "source_ids": [
+        "src_schedule_sbn",
+        "src_rotowire_lineups",
+        "src_local_kb",
+        "src_historical_samples",
+        "src_sui_fifa",
+        "src_sui_rotowire_preview"
+      ],
+      "unknown_items": []
+    }
+  ],
+  "review_metadata": {
+    "schema_version": "multi-agent-review-1.0",
+    "mode": "multi_agent_consensus",
+    "role_results_used": [
+      "attack_agent",
+      "defense_risk_agent",
+      "market_history_agent",
+      "anti_btts_agent",
+      "tail_score_agent",
+      "skeptic_agent",
+      "consensus_arbiter"
+    ],
+    "primary_dimension_owners": {
+      "base_strength": "market_history_agent",
+      "player_status": "attack_agent",
+      "player_type_structure": "attack_agent",
+      "key_matchups": "attack_agent",
+      "historical_style": "market_history_agent",
+      "style_counter": "defense_risk_agent",
+      "recent_form": "market_history_agent",
+      "goal_distribution": "attack_agent",
+      "strong_second_goal": "attack_agent",
+      "strong_third_goal": "attack_agent",
+      "weak_first_goal": "attack_agent",
+      "weak_second_goal": "attack_agent",
+      "favorite_defense": "defense_risk_agent",
+      "clean_sheet": "defense_risk_agent",
+      "tactical_matchup": "defense_risk_agent",
+      "stage_psychology": "defense_risk_agent",
+      "draw_risk": "defense_risk_agent",
+      "lineup_injuries": "defense_risk_agent",
+      "team_harmony_social": "defense_risk_agent",
+      "environment_schedule": "defense_risk_agent",
+      "referee_events": "defense_risk_agent",
+      "market_odds": "market_history_agent",
+      "dynamic_triggers": "defense_risk_agent",
+      "star_overperformance": "attack_agent",
+      "set_piece_aerial": "attack_agent",
+      "pressing_error_path": "attack_agent"
+    },
+    "review_dimension_owners": {
+      "base_strength": [
+        "attack_agent",
+        "defense_risk_agent"
+      ],
+      "player_status": [
+        "defense_risk_agent"
+      ],
+      "player_type_structure": [
+        "defense_risk_agent"
+      ],
+      "key_matchups": [
+        "defense_risk_agent"
+      ],
+      "historical_style": [
+        "defense_risk_agent"
+      ],
+      "style_counter": [
+        "attack_agent"
+      ],
+      "recent_form": [
+        "attack_agent"
+      ],
+      "goal_distribution": [
+        "market_history_agent"
+      ],
+      "strong_second_goal": [
+        "market_history_agent"
+      ],
+      "strong_third_goal": [
+        "market_history_agent"
+      ],
+      "weak_first_goal": [
+        "defense_risk_agent"
+      ],
+      "weak_second_goal": [
+        "defense_risk_agent"
+      ],
+      "favorite_defense": [
+        "attack_agent"
+      ],
+      "clean_sheet": [
+        "attack_agent"
+      ],
+      "tactical_matchup": [
+        "attack_agent"
+      ],
+      "stage_psychology": [
+        "market_history_agent"
+      ],
+      "draw_risk": [
+        "market_history_agent"
+      ],
+      "lineup_injuries": [
+        "attack_agent"
+      ],
+      "team_harmony_social": [
+        "market_history_agent"
+      ],
+      "environment_schedule": [
+        "market_history_agent"
+      ],
+      "referee_events": [
+        "attack_agent"
+      ],
+      "market_odds": [
+        "defense_risk_agent"
+      ],
+      "dynamic_triggers": [
+        "attack_agent"
+      ],
+      "star_overperformance": [
+        "market_history_agent"
+      ],
+      "set_piece_aerial": [
+        "defense_risk_agent"
+      ],
+      "pressing_error_path": [
+        "defense_risk_agent"
+      ]
+    },
+    "conflicts_resolved": [
+      {
+        "issue_id": "2026-07-03_BJT_SUI_ALG_gate_conflict",
+        "issue_type": "score_distribution_conflict",
+        "affected_dimensions": [
+          "weak_first_goal",
+          "clean_sheet",
+          "draw_risk",
+          "strong_third_goal"
+        ],
+        "positions": [
+          {
+            "role_id": "attack_agent",
+            "position": "进攻路径需要保留双方进球或第三球尾部"
+          },
+          {
+            "role_id": "defense_risk_agent",
+            "position": "淘汰赛降速和零封路径不能删除"
+          },
+          {
+            "role_id": "anti_btts_agent",
+            "objection": "弱队一球必须有两条独立路径"
+          },
+          {
+            "role_id": "tail_score_agent",
+            "position": "必须保留闷局和大胜尾部"
+          }
+        ],
+        "resolution": "market_history_agent偏1-0，attack_agent偏2-1；裁决参考阿尔及利亚5进7失，2-1主线、1-0次选。",
+        "confidence_change": "维持medium，阵容相关不升high"
+      }
+    ],
+    "claims_rejected": [
+      {
+        "role_id": "skeptic_agent",
+        "claim": "只输出单一首选比分即可",
+        "reason": "新版模板要求主路径、闷局、大胜、BTTS分布。"
+      },
+      {
+        "role_id": "tail_score_agent",
+        "claim": "拒绝把阿尔及利亚5个小组进球直接推成BTTS high，Amoura缺阵和瑞士纪律性要下修。",
+        "reason": "市场、历史样本和T-90阵容不确定性共同限制主区间。"
+      }
+    ],
+    "unknown_rationale": [
+      "T-90官方首发尚未到达，阵容、健康和分钟数只按预计首发处理。"
+    ]
+  },
+  "market_calibration": {
+    "market_signal": "slight_favorite_under",
+    "favorite_handicap": -0.25,
+    "goal_line": 2.5,
+    "btts_market": "balanced",
+    "model_vs_market_gap": "模型比Under市场略高，因阿尔及利亚攻守都偏开放",
+    "calibration_action": "瑞士胜倾向保留，但2-1与1-0并列主区间，不强行大胜。",
+    "source_ids": [
+      "src_rotowire_lineups",
+      "src_sui_rotowire_preview",
+      "src_sui_covers",
+      "src_sui_rotowire_lineups"
+    ]
+  },
+  "prediction_gates": {
+    "weak_goal_gate": {
+      "status": "pass",
+      "original_level": "medium",
+      "final_level": "medium",
+      "independent_paths": [
+        "Mahrez右路内切和定位球创造",
+        "Gouiri连接终结与边后卫推进形成二线机会"
+      ],
+      "action": "阿尔及利亚一球通过闸门，第二球降为low",
+      "reason": "anti_btts_agent确认至少两条独立路径后才保留弱队一球。"
+    },
+    "clean_sheet_gate": {
+      "status": "adjusted",
+      "clean_sheet_level": "medium",
+      "weak_goal_level": "medium",
+      "conflict_resolved": true,
+      "action": "零封中等与弱队一球冲突，裁决为1-0次选、2-1首选",
+      "reason": "零封主线与弱队一球尾部同时存在，已通过比分分布显式拆分。"
+    },
+    "market_calibration_gate": {
+      "status": "adjusted",
+      "market_signal": "slight_favorite_under",
+      "action": "小热盘口和Under信号阻止瑞士第三球进主区间",
+      "reason": "瑞士胜倾向保留，但2-1与1-0并列主区间，不强行大胜。"
+    },
+    "low_block_draw_gate": {
+      "status": "pass",
+      "low_block_risk": "medium",
+      "selected_score": "1-0",
+      "action": "1-0进入闷局路径",
+      "reason": "淘汰赛阶段和市场总进球信号要求保留低比分。"
+    },
+    "tail_score_gate": {
+      "status": "pass",
+      "tail_scores_checked": [
+        "3-0",
+        "2-2",
+        "0-0"
+      ],
+      "action": "保留大胜、闷局和BTTS尾部，不让主比分压掉分布尾巴",
+      "reason": "tail_score_agent逐项检查3球净胜、0-0/1-0/1-1以及双方进球路径。"
+    }
+  },
+  "score_distribution": {
+    "main_paths": [
+      {
+        "score": "2-1",
+        "probability_level": "main",
+        "condition": "瑞士利用阿尔及利亚边后卫身后空间，阿尔及利亚靠Mahrez/Gouiri追回一球"
+      },
+      {
+        "score": "1-0",
+        "probability_level": "secondary",
+        "condition": "瑞士控节奏且Under市场成立"
+      },
+      {
+        "score": "1-1",
+        "probability_level": "secondary",
+        "condition": "阿尔及利亚早段转换进球后瑞士只能扳平"
+      }
+    ],
+    "low_block_paths": [
+      {
+        "score": "1-0",
+        "probability_level": "secondary",
+        "condition": "瑞士领先后降速，阿尔及利亚Amoura缺阵削弱冲击"
+      },
+      {
+        "score": "1-1",
+        "probability_level": "secondary",
+        "condition": "Mahrez单点创造兑现但瑞士第三球不足"
+      }
+    ],
+    "big_win_paths": [
+      {
+        "score": "3-0",
+        "probability_level": "tail",
+        "condition": "阿尔及利亚边后卫压上被连续反击，且Mahrez负荷下降"
+      }
+    ],
+    "btts_paths": [
+      {
+        "score": "2-1",
+        "status": "pass",
+        "reason": "阿尔及利亚有Mahrez内切创造和Gouiri/定位球两条路径，但Amoura缺阵压低第二球。"
+      }
+    ]
+  },
+  "tail_scenarios": [
+    {
+      "scenario_type": "big_win",
+      "score": "3-0",
+      "status": "tail",
+      "condition": "阿尔及利亚边后卫压上被连续反击，且Mahrez负荷下降"
+    },
+    {
+      "scenario_type": "low_block",
+      "score": "1-0",
+      "status": "main",
+      "condition": "瑞士领先后降速，阿尔及利亚Amoura缺阵削弱冲击"
+    },
+    {
+      "scenario_type": "btts",
+      "score": "2-1",
+      "status": "main",
+      "condition": "阿尔及利亚有Mahrez内切创造和Gouiri/定位球两条路径，但Amoura缺阵压低第二球。"
+    }
+  ],
+  "historical_sample_adjustments": [
+    {
+      "sample": "葡萄牙5-0乌兹别克斯坦",
+      "lesson": "强队第三球不能机械压低",
+      "adjustment": "本场保留3球以上尾部。"
+    },
+    {
+      "sample": "英格兰0-0加纳",
+      "lesson": "强队阵地战失效时闷局必须入表",
+      "adjustment": "每场均保留0-0/1-0/1-1闷局判断。"
+    },
+    {
+      "sample": "巴拿马0-1克罗地亚",
+      "lesson": "强队小胜和总进球下修不能忽略",
+      "adjustment": "非深盘场不把热门推成大胜主线。"
+    }
+  ],
+  "final_prediction": {
+    "win_tendency": "瑞士90分钟小胜倾向",
+    "main_score_range": [
+      "2-1",
+      "1-0",
+      "1-1"
+    ],
+    "primary_score": "2-1",
+    "alternative_scores": [
+      "1-0",
+      "1-1"
+    ],
+    "total_goals_min": 1,
+    "total_goals_max": 4,
+    "both_teams_to_score": "medium",
+    "strong_second_goal": "medium",
+    "strong_third_goal": "low",
+    "weak_first_goal": "medium",
+    "weak_second_goal": "low",
+    "clean_sheet": "medium",
+    "draw_type": "1-1低速拉扯型平局",
+    "trigger_conditions": [
+      "若Switzerland前25分钟进球，3-0尾部上升",
+      "若Algeria先通过定位球/转换得分，1-1权重上升",
+      "若60分钟仍0-0，闷局路径1-0权重上升"
+    ],
+    "confidence": "medium",
+    "tail_scores": [
+      "3-0",
+      "2-2"
+    ],
+    "event_scenarios": {
+      "favorite_red_card": "Algeria不败概率大幅上升，比分修正到1-1或0-1。",
+      "underdog_red_card": "Switzerland第二球和第三球上调，比分修正到2-0或3-0。",
+      "underdog_two_red_cards": "进入非线性崩盘尾部，Switzerland至少净胜3球。",
+      "penalty_or_goalkeeper_error": "总进球上限上调1球，BTTS路径和尾部比分同步上升。"
+    }
+  }
+}

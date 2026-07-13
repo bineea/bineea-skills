@@ -38,10 +38,84 @@
         "form_score": 3,
         "ability_tags": [],
         "risk_tags": [],
+        "advanced_metrics": {
+          "xg_per90": null,
+          "xa_per90": null,
+          "shots_per90": null,
+          "shots_on_target_per90": null,
+          "key_passes_per90": null,
+          "dribbles_completed_per90": null,
+          "dribbled_past_per90": null,
+          "pressures_per90": null,
+          "aerial_duel_win_rate": null,
+          "temperature_stamina_note": "",
+          "time_slot_performance_note": ""
+        },
         "evidence": ""
       }
     ],
     "team_b": []
+  },
+  "player_matchup_edges": [
+    {
+      "matchup_id": "",
+      "attacker": "",
+      "defender": "",
+      "matchup_type": "wing_vs_fullback / striker_vs_center_back / creator_vs_dm / pressing_vs_build_up / aerial_matchup",
+      "metric_comparison": "",
+      "edge": "team_a / team_b / neutral / unknown",
+      "source_ids": []
+    }
+  ],
+  "market_watch": {
+    "odds_snapshots": [
+      {
+        "captured_at": "",
+        "minutes_before_kickoff": null,
+        "market_type": "moneyline / handicap / goal_line / btts",
+        "value": "",
+        "source_ids": []
+      }
+    ],
+    "late_market_watch": {
+      "status": "pass / adjusted / unavailable",
+      "checked_window_minutes": 120,
+      "abnormal_movement": false,
+      "movement_summary": "",
+      "action": "",
+      "reason": ""
+    }
+  },
+  "quant_baseline_inputs": {
+    "team_a": {
+      "xg_for": null,
+      "xg_against": null,
+      "goals_for_rate": null,
+      "goals_against_rate": null
+    },
+    "team_b": {
+      "xg_for": null,
+      "xg_against": null,
+      "goals_for_rate": null,
+      "goals_against_rate": null
+    },
+    "sources": [],
+    "sanger": {
+      "status": "unavailable",
+      "model_id": "",
+      "formula_ref": "",
+      "team_a_lambda_delta": 0,
+      "team_b_lambda_delta": 0,
+      "confidence": "unknown",
+      "source_ids": [],
+      "reason": "未配置桑格公式或来源"
+    }
+  },
+  "dynamic_weight_context": {
+    "stage": "",
+    "temperature_c": null,
+    "rest_delta_days": null,
+    "learning_feedback_sample_count": null
   },
   "sources": [
     {
@@ -56,6 +130,7 @@
     "lineup_uncertainties": [],
     "team_harmony_or_social_signals": [],
     "weather_or_schedule_factors": [],
-    "market_or_odds_notes": []
+    "market_or_odds_notes": [],
+    "dynamic_weight_notes": []
   }
 }

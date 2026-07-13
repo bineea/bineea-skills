@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="720" viewBox="0 0 960 720">
+<rect width="100%" height="100%" fill="#ffffff" />
+<text x="40" y="56" font-size="28" font-weight="700" fill="#111827">墨西哥 vs 英格兰</text>
+<text x="40" y="92" font-size="14" fill="#526071">维度雷达图与比分路径摘要</text>
+<g transform="translate(360, 80)">
+<g>
+<rect width="100%" height="100%" fill="#f8fafc" />
+<polygon points="280.0,241.9 289.1,243.0 297.7,246.3 305.3,251.5 311.3,258.4 315.6,266.5 317.8,275.4 317.8,284.6 315.6,293.5 311.3,301.6 305.3,308.5 297.7,313.7 289.1,317.0 280.0,318.1 270.9,317.0 262.3,313.7 254.7,308.5 248.7,301.6 244.4,293.5 242.2,284.6 242.2,275.4 244.4,266.5 248.7,258.4 254.7,251.5 262.3,246.3 270.9,243.0" fill="none" stroke="#d7dde8" stroke-width="1" />
+<polygon points="280.0,203.8 298.2,206.1 315.4,212.6 330.5,223.0 342.7,236.7 351.2,253.0 355.6,270.8 355.6,289.2 351.2,307.0 342.7,323.3 330.5,337.0 315.4,347.4 298.2,353.9 280.0,356.2 261.8,353.9 244.6,347.4 229.5,337.0 217.3,323.3 208.8,307.0 204.4,289.2 204.4,270.8 208.8,253.0 217.3,236.7 229.5,223.0 244.6,212.6 261.8,206.1" fill="none" stroke="#d7dde8" stroke-width="1" />
+<polygon points="280.0,165.8 307.3,169.1 333.1,178.8 355.8,194.5 374.0,215.1 386.8,239.5 393.4,266.2 393.4,293.8 386.8,320.5 374.0,344.9 355.8,365.5 333.1,381.2 307.3,390.9 280.0,394.2 252.7,390.9 226.9,381.2 204.2,365.5 186.0,344.9 173.2,320.5 166.6,293.8 166.6,266.2 173.2,239.5 186.0,215.1 204.2,194.5 226.9,178.8 252.7,169.1" fill="none" stroke="#d7dde8" stroke-width="1" />
+<polygon points="280.0,127.7 316.5,132.1 350.8,145.1 381.0,166.0 405.4,193.5 422.4,226.0 431.2,261.6 431.2,298.4 422.4,334.0 405.4,366.5 381.0,394.0 350.8,414.9 316.5,427.9 280.0,432.3 243.5,427.9 209.2,414.9 179.0,394.0 154.6,366.5 137.6,334.0 128.8,298.4 128.8,261.6 137.6,226.0 154.6,193.5 179.0,166.0 209.2,145.1 243.5,132.1" fill="none" stroke="#d7dde8" stroke-width="1" />
+<polygon points="280.0,89.6 325.6,95.1 368.5,111.4 406.3,137.5 436.7,171.8 458.0,212.5 469.0,257.0 469.0,303.0 458.0,347.5 436.7,388.2 406.3,422.5 368.5,448.6 325.6,464.9 280.0,470.4 234.4,464.9 191.5,448.6 153.7,422.5 123.3,388.2 102.0,347.5 91.0,303.0 91.0,257.0 102.0,212.5 123.3,171.8 153.7,137.5 191.5,111.4 234.4,95.1" fill="none" stroke="#d7dde8" stroke-width="1" />
+<line x1="280.0" y1="280.0" x2="280.0" y2="89.6" stroke="#e6ebf2" />
+<line x1="280.0" y1="280.0" x2="325.6" y2="95.1" stroke="#e6ebf2" />
+<line x1="280.0" y1="280.0" x2="368.5" y2="111.4" stroke="#e6ebf2" />
+<line x1="280.0" y1="280.0" x2="406.3" y2="137.5" stroke="#e6ebf2" />
+<line x1="280.0" y1="280.0" x2="436.7" y2="171.8" stroke="#e6ebf2" />
+<line x1="280.0" y1="280.0" x2="458.0" y2="212.5" stroke="#e6ebf2" />
+<line x1="280.0" y1="280.0" x2="469.0" y2="257.0" stroke="#e6ebf2" />
+<line x1="280.0" y1="280.0" x2="469.0" y2="303.0" stroke="#e6ebf2" />
+<line x1="280.0" y1="280.0" x2="458.0" y2="347.5" stroke="#e6ebf2" />
+<line x1="280.0" y1="280.0" x2="436.7" y2="388.2" stroke="#e6ebf2" />
+<line x1="280.0" y1="280.0" x2="406.3" y2="422.5" stroke="#e6ebf2" />
+<line x1="280.0" y1="280.0" x2="368.5" y2="448.6" stroke="#e6ebf2" />
+<line x1="280.0" y1="280.0" x2="325.6" y2="464.9" stroke="#e6ebf2" />
+<line x1="280.0" y1="280.0" x2="280.0" y2="470.4" stroke="#e6ebf2" />
+<line x1="280.0" y1="280.0" x2="234.4" y2="464.9" stroke="#e6ebf2" />
+<line x1="280.0" y1="280.0" x2="191.5" y2="448.6" stroke="#e6ebf2" />
+<line x1="280.0" y1="280.0" x2="153.7" y2="422.5" stroke="#e6ebf2" />
+<line x1="280.0" y1="280.0" x2="123.3" y2="388.2" stroke="#e6ebf2" />
+<line x1="280.0" y1="280.0" x2="102.0" y2="347.5" stroke="#e6ebf2" />
+<line x1="280.0" y1="280.0" x2="91.0" y2="303.0" stroke="#e6ebf2" />
+<line x1="280.0" y1="280.0" x2="91.0" y2="257.0" stroke="#e6ebf2" />
+<line x1="280.0" y1="280.0" x2="102.0" y2="212.5" stroke="#e6ebf2" />
+<line x1="280.0" y1="280.0" x2="123.3" y2="171.8" stroke="#e6ebf2" />
+<line x1="280.0" y1="280.0" x2="153.7" y2="137.5" stroke="#e6ebf2" />
+<line x1="280.0" y1="280.0" x2="191.5" y2="111.4" stroke="#e6ebf2" />
+<line x1="280.0" y1="280.0" x2="234.4" y2="95.1" stroke="#e6ebf2" />
+<polygon points="280.0,127.7 316.5,132.1 333.1,178.8 381.0,166.0 374.0,215.1 422.4,226.0 431.2,261.6 393.4,293.8 351.2,307.0 311.3,301.6 355.8,365.5 315.4,347.4 307.3,390.9 280.0,394.2 243.5,427.9 209.2,414.9 179.0,394.0 186.0,344.9 173.2,320.5 91.0,303.0 166.6,266.2 173.2,239.5 186.0,215.1 204.2,194.5 226.9,178.8 252.7,169.1" fill="#2563eb" fill-opacity="0.20" stroke="#2563eb" stroke-width="2" />
+<text x="280.0" y="53.6" text-anchor="middle" font-size="11" fill="#283142">base_strength</text>
+<text x="334.2" y="60.2" text-anchor="start" font-size="11" fill="#283142">player_status</text>
+<text x="385.2" y="79.5" text-anchor="start" font-size="11" fill="#283142">player_type_structure</text>
+<text x="430.1" y="110.5" text-anchor="start" font-size="11" fill="#283142">key_matchups</text>
+<text x="466.3" y="151.4" text-anchor="start" font-size="11" fill="#283142">historical_style</text>
+<text x="491.7" y="199.7" text-anchor="start" font-size="11" fill="#283142">style_counter</text>
+<text x="504.7" y="252.7" text-anchor="start" font-size="11" fill="#283142">recent_form</text>
+<text x="504.7" y="307.3" text-anchor="start" font-size="11" fill="#283142">goal_distribution</text>
+<text x="491.7" y="360.3" text-anchor="start" font-size="11" fill="#283142">strong_second_goal</text>
+<text x="466.3" y="408.6" text-anchor="start" font-size="11" fill="#283142">strong_third_goal</text>
+<text x="430.1" y="449.5" text-anchor="start" font-size="11" fill="#283142">weak_first_goal</text>
+<text x="385.2" y="480.5" text-anchor="start" font-size="11" fill="#283142">weak_second_goal</text>
+<text x="334.2" y="499.8" text-anchor="start" font-size="11" fill="#283142">favorite_defense</text>
+<text x="280.0" y="506.4" text-anchor="middle" font-size="11" fill="#283142">clean_sheet</text>
+<text x="225.8" y="499.8" text-anchor="end" font-size="11" fill="#283142">tactical_matchup</text>
+<text x="174.8" y="480.5" text-anchor="end" font-size="11" fill="#283142">stage_psychology</text>
+<text x="129.9" y="449.5" text-anchor="end" font-size="11" fill="#283142">draw_risk</text>
+<text x="93.7" y="408.6" text-anchor="end" font-size="11" fill="#283142">lineup_injuries</text>
+<text x="68.3" y="360.3" text-anchor="end" font-size="11" fill="#283142">team_harmony_social</text>
+<text x="55.3" y="307.3" text-anchor="end" font-size="11" fill="#283142">environment_schedule</text>
+<text x="55.3" y="252.7" text-anchor="end" font-size="11" fill="#283142">referee_events</text>
+<text x="68.3" y="199.7" text-anchor="end" font-size="11" fill="#283142">market_odds</text>
+<text x="93.7" y="151.4" text-anchor="end" font-size="11" fill="#283142">dynamic_triggers</text>
+<text x="129.9" y="110.5" text-anchor="end" font-size="11" fill="#283142">star_overperformance</text>
+<text x="174.8" y="79.5" text-anchor="end" font-size="11" fill="#283142">set_piece_aerial</text>
+<text x="225.8" y="60.2" text-anchor="end" font-size="11" fill="#283142">pressing_error_path</text>
+</g>
+</g>
+<text x="40" y="150" font-size="14" fill="#283142">主路径: 1-1 - 墨西哥主场压迫得到一球，英格兰由Kane/Bellingham扳回</text>
+<text x="40" y="174" font-size="14" fill="#283142">主路径: 0-1 - 英格兰低位纪律和Kane单点决定比赛</text>
+<text x="40" y="198" font-size="14" fill="#283142">主路径: 1-0 - 墨西哥早段高压得手并长期守住低位</text>
+<text x="40" y="222" font-size="14" fill="#283142">闷局: 0-0 - 双方谨慎且射正质量不足</text>
+<text x="40" y="246" font-size="14" fill="#283142">闷局: 1-0 - 单球决胜形态明显</text>
+<text x="40" y="270" font-size="14" fill="#283142">大胜: 0-3 - 海拔、主场和墨西哥零封链条不支持英格兰大胜</text>
+<text x="40" y="294" font-size="14" fill="#283142">双方进球: 1-1 - 墨西哥主场进球路径与英格兰单点质量同时成立</text>
+</svg>

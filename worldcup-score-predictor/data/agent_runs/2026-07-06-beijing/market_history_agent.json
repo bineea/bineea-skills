@@ -1,0 +1,18 @@
+{
+  "schema_version": "role-artifact-1.0",
+  "role_id": "market_history_agent",
+  "agent_run_id": "019f32e0-03b1-7522-ab3c-2ba9de66f62c",
+  "source_tooling": "multi_agent_v1.spawn_agent",
+  "status": "completed",
+  "job_id": "2026-07-06-beijing",
+  "matches": [
+    "2026-07-06_BJT_BRA_NOR",
+    "2026-07-06_BJT_MEX_ENG"
+  ],
+  "summary": "市场/历史视角：巴挪巴西小到中热且O2.5支持2-4球；墨英U2.5强，英格兰小热被墨西哥不败价值抵消。",
+  "key_findings": [
+    "巴挪2-1/3-1/2-2进入候选，但2-2需闸门",
+    "墨英0-2球主区间",
+    "历史样本仅作校准"
+  ]
+}

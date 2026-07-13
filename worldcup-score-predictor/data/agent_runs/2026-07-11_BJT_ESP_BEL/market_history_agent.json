@@ -1,0 +1,8 @@
+{
+  "schema_version": "role-result-1.0",
+  "job_id": "2026-07-11_BJT_ESP_BEL",
+  "role_id": "market_history_agent",
+  "status": "completed",
+  "agent_run_id": "019f49c1-a183-7452-95ff-033297f4b31f",
+  "summary": "市场历史侧接受西班牙胜向，拒绝把Over2.5直接转BTTS；3-0受历史失败样本保护为次级。"
+}

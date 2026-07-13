@@ -1,0 +1,85 @@
+{
+  "schema_version": "agent-artifact-1.0",
+  "role_id": "consensus_arbiter",
+  "agent_run_id": "019f3ad7-14f6-77f3-a91f-6b56c43c9388",
+  "execution_mode": "independent_subagent",
+  "created_at": "2026-07-07T12:32:42+08:00",
+  "tooling": "multi_agent_v1.spawn_agent",
+  "summary": "仲裁侧最终锁定阿根廷-埃及2-1、瑞士-哥伦比亚0-1，并明确量化Top1、BTTS、零封和强队第三球的闸门动作。",
+  "final_consensus": {
+    "2026-07-08_BJT_ARG_EGY": {
+      "primary_score": "2-1",
+      "alternatives": [
+        "2-0",
+        "1-1"
+      ],
+      "tail_scores": [
+        "3-1",
+        "4-1",
+        "0-0"
+      ],
+      "levels": {
+        "btts": "medium",
+        "strong_second_goal": "high",
+        "strong_third_goal": "medium",
+        "weak_first_goal": "medium",
+        "weak_second_goal": "low",
+        "clean_sheet": "medium"
+      },
+      "gate_actions": {
+        "weak_goal_gate": "通过但不升高：埃及有Salah/Marmoush/Ashour/Zico的一球路径，弱队第一球保留medium；Salah工作量和腿筋风险压低弱队第二球为low。",
+        "clean_sheet_gate": "裁为并存分支：2-1为首选，2-0为第一备选；零封不升high。",
+        "quant_baseline_gate": "调整：量化Top1为1-1，但精确比分Top1不覆盖胜负聚合；市场强胜且多数Agent指向阿根廷胜，因此选Top10内2-1。",
+        "tail_score_gate": "保留0-0、3-1和4-1，避免机械BTTS和强侧多球尾部丢失。"
+      },
+      "resolved_conflicts": [
+        "1-1降为备选",
+        "2-0降为第一备选",
+        "3-1/4-1只作尾部"
+      ],
+      "claims_rejected": [
+        "BTTS high",
+        "埃及第二球常态",
+        "阿根廷4球升级备选"
+      ],
+      "confidence": "medium"
+    },
+    "2026-07-08_BJT_SUI_COL": {
+      "primary_score": "0-1",
+      "alternatives": [
+        "1-1",
+        "0-2"
+      ],
+      "tail_scores": [
+        "0-0",
+        "0-3",
+        "2-1"
+      ],
+      "levels": {
+        "btts": "medium",
+        "strong_second_goal": "low",
+        "strong_third_goal": "low",
+        "weak_first_goal": "medium",
+        "weak_second_goal": "low",
+        "clean_sheet": "medium"
+      },
+      "gate_actions": {
+        "weak_goal_gate": "部分通过：瑞士多点和Embolo/Xhaka定位球保留一球，但Manzambi风险与哥伦比亚低失球压低上限。",
+        "clean_sheet_gate": "哥伦比亚零封略优但非锁死：0-1首选，1-1保留。",
+        "quant_baseline_gate": "接受：0-1为量化Top1；BTTS低中边界只给medium，不升high。",
+        "tail_score_gate": "保留0-0低位闷局、0-3强队第三球尾部、2-1反向尾部。"
+      },
+      "resolved_conflicts": [
+        "六Agent均首选0-1",
+        "1-1进备选而0-0降尾部",
+        "0-2第二备选"
+      ],
+      "claims_rejected": [
+        "BTTS high",
+        "哥伦比亚第二球升medium/high",
+        "0-3常规备选"
+      ],
+      "confidence": "high"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "schema_version": "role-result-1.0",
+  "job_id": "2026-07-11_BJT_ESP_BEL",
+  "role_id": "attack_agent",
+  "status": "completed",
+  "agent_run_id": "019f49c1-6b4c-7a73-a6ae-c0619843a48b",
+  "summary": "攻击侧认为1-0是原始量化锚点，2-0由Oyarzabal/Yamal状态和Onana缺阵支撑，3-0为条件次级；BTTS low。"
+}

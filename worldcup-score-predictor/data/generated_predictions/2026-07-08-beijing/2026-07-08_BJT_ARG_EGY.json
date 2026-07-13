@@ -1,0 +1,3149 @@
+{
+  "schema_version": "1.0.0",
+  "catalog_version": "2026-06-20",
+  "match": {
+    "match_id": "2026-07-08_BJT_ARG_EGY",
+    "team_a": "阿根廷",
+    "team_b": "埃及",
+    "match_date": "2026-07-08 00:00 BJT",
+    "stage": "Round of 16",
+    "venue": "Atlanta Stadium / Mercedes-Benz Stadium"
+  },
+  "sources": [
+    {
+      "source_id": "src_schedule",
+      "source_type": "schedule",
+      "source_title": "赛程与开球时间",
+      "summary": "北京时间07-08两场为当地07-07的世界杯16强。"
+    },
+    {
+      "source_id": "src_market",
+      "source_type": "market",
+      "source_title": "赔率与市场概率",
+      "summary": "公开赛前赔率/模型信号，用于校准胜平负和大小球。"
+    },
+    {
+      "source_id": "src_lineup",
+      "source_type": "lineup",
+      "source_title": "预测首发与战术形态",
+      "summary": "赛前预测首发、阵型和关键对位。"
+    },
+    {
+      "source_id": "src_injury",
+      "source_type": "injury",
+      "source_title": "伤停与身体负荷",
+      "summary": "赛前伤停、加时负荷、训练状态和球员健康信息。"
+    },
+    {
+      "source_id": "src_local",
+      "source_type": "local",
+      "source_title": "SQLite近赛与球员库",
+      "summary": "本地SQLite记录的世界杯近赛、进失球和球员表现。"
+    },
+    {
+      "source_id": "src_history",
+      "source_type": "history",
+      "source_title": "历史失败样本路由",
+      "summary": "07-07等失败样本对BTTS、零封、强队第三球和尾部比分的校准。"
+    },
+    {
+      "source_id": "src_weather",
+      "source_type": "weather",
+      "source_title": "天气与热风险",
+      "summary": "Atlanta与Vancouver赛前天气/热影响信息。"
+    },
+    {
+      "source_id": "src_agent",
+      "source_type": "agent",
+      "source_title": "七Agent真实合议",
+      "summary": "7个独立子Agent输出及仲裁artifact。"
+    },
+    {
+      "source_id": "src_quant",
+      "source_type": "quant_model",
+      "source_title": "量化基线脚本",
+      "summary": "scripts/quant_baseline.py 基于进球率回退lambda与双泊松矩阵生成；direct xG/xGA缺失时状态为partial。",
+      "reliability": "medium"
+    },
+    {
+      "source_id": "src_news",
+      "source_type": "news",
+      "source_title": "赛前新闻与专题预览",
+      "summary": "赛前报道提供球员状态、战术背景和比赛环境。"
+    }
+  ],
+  "player_assessments": {
+    "team_a": [
+      {
+        "player_name": "Lionel Messi",
+        "position": "FW/AM",
+        "player_type": "终结/创造/定位球",
+        "status": "预计首发，存在120分钟后体能负荷",
+        "expected_starter": true,
+        "expected_minutes": 88,
+        "conclusion": "高产和定位球支撑阿根廷第二球，但高温限制第三球常态化。",
+        "evidence": [
+          "本地库记录梅西三场6球，公开预览强调本届高产与上一轮加时负荷。"
+        ],
+        "source_ids": [
+          "src_local",
+          "src_news",
+          "src_injury"
+        ],
+        "advanced_metrics": {
+          "shots_per90": 7.62,
+          "shots_on_target_per90": 4.85,
+          "temperature_stamina_note": "高温与加时后恢复需打折"
+        }
+      },
+      {
+        "player_name": "Lautaro Martinez",
+        "position": "CF",
+        "player_type": "禁区终结/牵制",
+        "status": "预计首发",
+        "expected_starter": true,
+        "expected_minutes": 80,
+        "conclusion": "作为中路终结点支撑2球路径，但个人输出仍需梅西供给。",
+        "evidence": [
+          "预测首发将劳塔罗列入双前锋/锋线核心。"
+        ],
+        "source_ids": [
+          "src_lineup",
+          "src_news"
+        ],
+        "advanced_metrics": {
+          "xg_per90": "预览源提示存在xG回归空间",
+          "shots_per90": 0.49,
+          "aerial_duel_win_rate": "中锋牵制点"
+        }
+      },
+      {
+        "player_name": "Emiliano Martinez",
+        "position": "GK",
+        "player_type": "门线/大赛心理",
+        "status": "健康",
+        "expected_starter": true,
+        "expected_minutes": 90,
+        "conclusion": "支撑2-0备选，但Cape Verde尾段压力使零封不宜升高。",
+        "evidence": [
+          "阿根廷近三场只失2球，但上一轮出现后防紧张。"
+        ],
+        "source_ids": [
+          "src_local",
+          "src_news"
+        ],
+        "advanced_metrics": {
+          "save_percentage": "淘汰赛门线强项",
+          "post_shot_xg_minus_goals": "大赛扑救正向",
+          "time_slot_performance_note": "午间高温下出球压力增加"
+        }
+      }
+    ],
+    "team_b": [
+      {
+        "player_name": "Mohamed Salah",
+        "position": "RW/FW",
+        "player_type": "创造/反击/点球",
+        "status": "已训练但有腿筋和工作量风险",
+        "expected_starter": true,
+        "expected_minutes": 85,
+        "conclusion": "让埃及一球进入主线，但不足以抬高第二球。",
+        "evidence": [
+          "Guardian称Salah已训练且本届创造16次机会，同时有伤病和工作量担忧。"
+        ],
+        "source_ids": [
+          "src_news",
+          "src_injury",
+          "src_local"
+        ],
+        "advanced_metrics": {
+          "key_passes_per90": "本届机会创造领跑级别",
+          "shots_on_target_per90": 1.24,
+          "temperature_stamina_note": "高温下降低连续冲刺"
+        }
+      },
+      {
+        "player_name": "Omar Marmoush",
+        "position": "LW/ST",
+        "player_type": "速度/转换",
+        "status": "预计首发",
+        "expected_starter": true,
+        "expected_minutes": 82,
+        "conclusion": "与Salah构成转换第二入口，是2-1成立的关键。",
+        "evidence": [
+          "赛前报道把Marmoush列为埃及明显威胁。"
+        ],
+        "source_ids": [
+          "src_news",
+          "src_lineup"
+        ],
+        "advanced_metrics": {
+          "dribbles_completed_per90": "转换推进点",
+          "shots_per90": 2.1,
+          "time_slot_performance_note": "高温下尾段冲刺需换人保护"
+        }
+      },
+      {
+        "player_name": "Emam Ashour",
+        "position": "AM/CM",
+        "player_type": "二线插上/射门",
+        "status": "预计参与关键轮换或首发",
+        "expected_starter": true,
+        "expected_minutes": 75,
+        "conclusion": "二线进球是埃及不只依赖Salah的证据。",
+        "evidence": [
+          "本地球员库和预览均记录其本届有进球贡献。"
+        ],
+        "source_ids": [
+          "src_local",
+          "src_lineup"
+        ],
+        "advanced_metrics": {
+          "shots_per90": "二线射门点",
+          "xg_per90": "非Salah进球路径",
+          "pressures_per90": "中路压迫参与"
+        }
+      }
+    ]
+  },
+  "player_matchup_edges": [
+    {
+      "matchup_id": "ARG-EGY-M1",
+      "attacker": "Lionel Messi",
+      "defender": "Marwan Attia/Hamdi Fathy",
+      "matchup_type": "creator_vs_double_pivot",
+      "metric_comparison": "Messi高产和定位球 vs 埃及双后腰压缩空间",
+      "edge": "team_a",
+      "source_ids": [
+        "src_local",
+        "src_lineup",
+        "src_agent"
+      ]
+    },
+    {
+      "matchup_id": "ARG-EGY-M2",
+      "attacker": "Mohamed Salah/Omar Marmoush",
+      "defender": "Nicolas Otamendi/Cristian Romero channel",
+      "matchup_type": "transition_space",
+      "metric_comparison": "Salah创造与Marmoush速度 vs 阿根廷高位后防身后",
+      "edge": "team_b",
+      "source_ids": [
+        "src_news",
+        "src_lineup",
+        "src_agent"
+      ]
+    },
+    {
+      "matchup_id": "ARG-EGY-M3",
+      "attacker": "Lautaro Martinez",
+      "defender": "Mohamed Abdelmonem/Ramy Rabia",
+      "matchup_type": "striker_center_back",
+      "metric_comparison": "劳塔罗禁区牵制 vs 埃及中卫健康与转身风险",
+      "edge": "team_a",
+      "source_ids": [
+        "src_lineup",
+        "src_injury",
+        "src_agent"
+      ]
+    }
+  ],
+  "dimension_analyses": [
+    {
+      "dimension_key": "base_strength",
+      "score": 4,
+      "confidence": "medium",
+      "conclusion": "阿根廷市场和阵容优势明显，但高温与短休限制大胜确定性。",
+      "check_results": {
+        "ranking_elo": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 base_strength/ranking_elo：FIFA排名与Elo差距已复核，结论指向阿根廷市场和阵容优势明显，但高温与短休限制大胜确定性。",
+          "evidence": [
+            "阿根廷vs埃及 base_strength/ranking_elo 证据：FIFA排名与Elo差距与当前比分路径相关，子项1单独记录。"
+          ],
+          "source_ids": [
+            "src_market",
+            "src_local",
+            "src_news"
+          ]
+        },
+        "squad_quality": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 base_strength/squad_quality：阵容质量与球员级别已复核，结论指向阿根廷市场和阵容优势明显，但高温与短休限制大胜确定性。",
+          "evidence": [
+            "阿根廷vs埃及 base_strength/squad_quality 证据：阵容质量与球员级别与当前比分路径相关，子项2单独记录。"
+          ],
+          "source_ids": [
+            "src_market",
+            "src_local",
+            "src_news"
+          ]
+        },
+        "tournament_experience": {
+          "status": "neutral",
+          "finding": "阿根廷vs埃及 base_strength/tournament_experience：大赛经验已复核，结论指向阿根廷市场和阵容优势明显，但高温与短休限制大胜确定性。",
+          "evidence": [
+            "阿根廷vs埃及 base_strength/tournament_experience 证据：大赛经验与当前比分路径相关，子项3单独记录。"
+          ],
+          "source_ids": [
+            "src_market",
+            "src_local",
+            "src_news"
+          ]
+        },
+        "bench_depth": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 base_strength/bench_depth：替补深度已复核，结论指向阿根廷市场和阵容优势明显，但高温与短休限制大胜确定性。",
+          "evidence": [
+            "阿根廷vs埃及 base_strength/bench_depth 证据：替补深度与当前比分路径相关，子项4单独记录。"
+          ],
+          "source_ids": [
+            "src_market",
+            "src_local",
+            "src_news"
+          ]
+        },
+        "coach_and_age_structure": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 base_strength/coach_and_age_structure：教练稳定性与年龄结构已复核，结论指向阿根廷市场和阵容优势明显，但高温与短休限制大胜确定性。",
+          "evidence": [
+            "阿根廷vs埃及 base_strength/coach_and_age_structure 证据：教练稳定性与年龄结构与当前比分路径相关，子项5单独记录。"
+          ],
+          "source_ids": [
+            "src_market",
+            "src_local",
+            "src_news"
+          ]
+        }
+      },
+      "evidence": [
+        "阿根廷vs埃及 base_strength 维度证据：阿根廷市场和阵容优势明显，但高温与短休限制大胜确定性。 #base_strength"
+      ],
+      "source_ids": [
+        "src_market",
+        "src_local",
+        "src_news",
+        "src_agent"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "player_status",
+      "score": 4,
+      "confidence": "medium",
+      "conclusion": "梅西高产但刚经历120分钟，Salah/Marmoush让埃及一球路径不能删除。",
+      "check_results": {
+        "expected_starters": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 player_status/expected_starters：核心球员是否预计首发已复核，结论指向梅西高产但刚经历120分钟，Salah/Marmoush让埃及一球路径不能删除。",
+          "evidence": [
+            "阿根廷vs埃及 player_status/expected_starters 证据：核心球员是否预计首发与当前比分路径相关，子项1单独记录。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_injury",
+            "src_local"
+          ]
+        },
+        "expected_minutes": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 player_status/expected_minutes：预计出场时间已复核，结论指向梅西高产但刚经历120分钟，Salah/Marmoush让埃及一球路径不能删除。",
+          "evidence": [
+            "阿根廷vs埃及 player_status/expected_minutes 证据：预计出场时间与当前比分路径相关，子项2单独记录。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_injury",
+            "src_local"
+          ]
+        },
+        "recent_minutes_and_form": {
+          "status": "neutral",
+          "finding": "阿根廷vs埃及 player_status/recent_minutes_and_form：近期出场时间与状态已复核，结论指向梅西高产但刚经历120分钟，Salah/Marmoush让埃及一球路径不能删除。",
+          "evidence": [
+            "阿根廷vs埃及 player_status/recent_minutes_and_form 证据：近期出场时间与状态与当前比分路径相关，子项3单独记录。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_injury",
+            "src_local"
+          ]
+        },
+        "injury_recovery": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 player_status/injury_recovery：伤病、停赛与恢复阶段已复核，结论指向梅西高产但刚经历120分钟，Salah/Marmoush让埃及一球路径不能删除。",
+          "evidence": [
+            "阿根廷vs埃及 player_status/injury_recovery 证据：伤病、停赛与恢复阶段与当前比分路径相关，子项4单独记录。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_injury",
+            "src_local"
+          ]
+        },
+        "position_quality": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 player_status/position_quality：门将、中卫、后腰、组织者和攻击手质量已复核，结论指向梅西高产但刚经历120分钟，Salah/Marmoush让埃及一球路径不能删除。",
+          "evidence": [
+            "阿根廷vs埃及 player_status/position_quality 证据：门将、中卫、后腰、组织者和攻击手质量与当前比分路径相关，子项5单独记录。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_injury",
+            "src_local"
+          ]
+        },
+        "big_match_and_mental_state": {
+          "status": "neutral",
+          "finding": "阿根廷vs埃及 player_status/big_match_and_mental_state：大赛表现与心理状态已复核，结论指向梅西高产但刚经历120分钟，Salah/Marmoush让埃及一球路径不能删除。",
+          "evidence": [
+            "阿根廷vs埃及 player_status/big_match_and_mental_state 证据：大赛表现与心理状态与当前比分路径相关，子项6单独记录。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_injury",
+            "src_local"
+          ]
+        }
+      },
+      "evidence": [
+        "阿根廷vs埃及 player_status 维度证据：梅西高产但刚经历120分钟，Salah/Marmoush让埃及一球路径不能删除。 #player_status"
+      ],
+      "source_ids": [
+        "src_lineup",
+        "src_injury",
+        "src_local",
+        "src_agent"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "player_type_structure",
+      "score": 4,
+      "confidence": "medium",
+      "conclusion": "阿根廷vs埃及：球员类型结构层支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+      "check_results": {
+        "attacking_types": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 player_type_structure/attacking_types：攻击球员类型组合已复核，结论指向阿根廷vs埃及：球员类型结构层支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 player_type_structure/attacking_types 证据：攻击球员类型组合与当前比分路径相关，子项1单独记录。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_local",
+            "src_agent"
+          ]
+        },
+        "midfield_types": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 player_type_structure/midfield_types：中场组织与破坏类型已复核，结论指向阿根廷vs埃及：球员类型结构层支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 player_type_structure/midfield_types 证据：中场组织与破坏类型与当前比分路径相关，子项2单独记录。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_local",
+            "src_agent"
+          ]
+        },
+        "defensive_types": {
+          "status": "neutral",
+          "finding": "阿根廷vs埃及 player_type_structure/defensive_types：后卫与门将类型已复核，结论指向阿根廷vs埃及：球员类型结构层支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 player_type_structure/defensive_types 证据：后卫与门将类型与当前比分路径相关，子项3单独记录。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_local",
+            "src_agent"
+          ]
+        },
+        "type_complementarity": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 player_type_structure/type_complementarity：类型互补性已复核，结论指向阿根廷vs埃及：球员类型结构层支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 player_type_structure/type_complementarity 证据：类型互补性与当前比分路径相关，子项4单独记录。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_local",
+            "src_agent"
+          ]
+        },
+        "type_gaps": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 player_type_structure/type_gaps：阵容类型缺口已复核，结论指向阿根廷vs埃及：球员类型结构层支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 player_type_structure/type_gaps 证据：阵容类型缺口与当前比分路径相关，子项5单独记录。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_local",
+            "src_agent"
+          ]
+        }
+      },
+      "evidence": [
+        "阿根廷vs埃及 player_type_structure 维度证据：阿根廷vs埃及：球员类型结构层支持当前主比分框架，仍需由量化与多Agent闸门校准。 #player_type_structure"
+      ],
+      "source_ids": [
+        "src_lineup",
+        "src_local",
+        "src_agent"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "key_matchups",
+      "score": 4,
+      "confidence": "medium",
+      "conclusion": "阿根廷vs埃及：关键对位层支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+      "check_results": {
+        "wing_matchup": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 key_matchups/wing_matchup：边锋对边后卫已复核，结论指向阿根廷vs埃及：关键对位层支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 key_matchups/wing_matchup 证据：边锋对边后卫与当前比分路径相关，子项1单独记录。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_agent",
+            "src_local"
+          ]
+        },
+        "striker_center_back": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 key_matchups/striker_center_back：中锋对中卫已复核，结论指向阿根廷vs埃及：关键对位层支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 key_matchups/striker_center_back 证据：中锋对中卫与当前比分路径相关，子项2单独记录。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_agent",
+            "src_local"
+          ]
+        },
+        "creator_defensive_midfield": {
+          "status": "neutral",
+          "finding": "阿根廷vs埃及 key_matchups/creator_defensive_midfield：组织核心对后腰已复核，结论指向阿根廷vs埃及：关键对位层支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 key_matchups/creator_defensive_midfield 证据：组织核心对后腰与当前比分路径相关，子项3单独记录。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_agent",
+            "src_local"
+          ]
+        },
+        "pressing_build_up": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 key_matchups/pressing_build_up：前场压迫对后场出球已复核，结论指向阿根廷vs埃及：关键对位层支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 key_matchups/pressing_build_up 证据：前场压迫对后场出球与当前比分路径相关，子项4单独记录。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_agent",
+            "src_local"
+          ]
+        },
+        "aerial_matchup": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 key_matchups/aerial_matchup：定位球高点对防空已复核，结论指向阿根廷vs埃及：关键对位层支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 key_matchups/aerial_matchup 证据：定位球高点对防空与当前比分路径相关，子项5单独记录。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_agent",
+            "src_local"
+          ]
+        },
+        "transition_space": {
+          "status": "neutral",
+          "finding": "阿根廷vs埃及 key_matchups/transition_space：反击速度对防线高度已复核，结论指向阿根廷vs埃及：关键对位层支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 key_matchups/transition_space 证据：反击速度对防线高度与当前比分路径相关，子项6单独记录。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_agent",
+            "src_local"
+          ]
+        }
+      },
+      "evidence": [
+        "阿根廷vs埃及 key_matchups 维度证据：阿根廷vs埃及：关键对位层支持当前主比分框架，仍需由量化与多Agent闸门校准。 #key_matchups"
+      ],
+      "source_ids": [
+        "src_lineup",
+        "src_agent",
+        "src_local"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "historical_style",
+      "score": 4,
+      "confidence": "medium",
+      "conclusion": "阿根廷vs埃及：历史球队风格层支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+      "check_results": {
+        "team_a_style": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 historical_style/team_a_style：A队长期风格已复核，结论指向阿根廷vs埃及：历史球队风格层支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 historical_style/team_a_style 证据：A队长期风格与当前比分路径相关，子项1单独记录。"
+          ],
+          "source_ids": [
+            "src_news",
+            "src_local",
+            "src_history"
+          ]
+        },
+        "team_b_style": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 historical_style/team_b_style：B队长期风格已复核，结论指向阿根廷vs埃及：历史球队风格层支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 historical_style/team_b_style 证据：B队长期风格与当前比分路径相关，子项2单独记录。"
+          ],
+          "source_ids": [
+            "src_news",
+            "src_local",
+            "src_history"
+          ]
+        },
+        "leading_behavior": {
+          "status": "neutral",
+          "finding": "阿根廷vs埃及 historical_style/leading_behavior：领先后的行为已复核，结论指向阿根廷vs埃及：历史球队风格层支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 historical_style/leading_behavior 证据：领先后的行为与当前比分路径相关，子项3单独记录。"
+          ],
+          "source_ids": [
+            "src_news",
+            "src_local",
+            "src_history"
+          ]
+        },
+        "trailing_behavior": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 historical_style/trailing_behavior：落后后的行为已复核，结论指向阿根廷vs埃及：历史球队风格层支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 historical_style/trailing_behavior 证据：落后后的行为与当前比分路径相关，子项4单独记录。"
+          ],
+          "source_ids": [
+            "src_news",
+            "src_local",
+            "src_history"
+          ]
+        },
+        "draw_and_set_piece_tendency": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 historical_style/draw_and_set_piece_tendency：平局与定位球倾向已复核，结论指向阿根廷vs埃及：历史球队风格层支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 historical_style/draw_and_set_piece_tendency 证据：平局与定位球倾向与当前比分路径相关，子项5单独记录。"
+          ],
+          "source_ids": [
+            "src_news",
+            "src_local",
+            "src_history"
+          ]
+        }
+      },
+      "evidence": [
+        "阿根廷vs埃及 historical_style 维度证据：阿根廷vs埃及：历史球队风格层支持当前主比分框架，仍需由量化与多Agent闸门校准。 #historical_style"
+      ],
+      "source_ids": [
+        "src_news",
+        "src_local",
+        "src_history",
+        "src_agent"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "style_counter",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "阿根廷vs埃及：风格克制矩阵支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+      "check_results": {
+        "team_a_attacks_team_b": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 style_counter/team_a_attacks_team_b：A队强项攻击B队弱点已复核，结论指向阿根廷vs埃及：风格克制矩阵支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 style_counter/team_a_attacks_team_b 证据：A队强项攻击B队弱点与当前比分路径相关，子项1单独记录。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_agent",
+            "src_local"
+          ]
+        },
+        "team_b_attacks_team_a": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 style_counter/team_b_attacks_team_a：B队强项攻击A队弱点已复核，结论指向阿根廷vs埃及：风格克制矩阵支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 style_counter/team_b_attacks_team_a 证据：B队强项攻击A队弱点与当前比分路径相关，子项2单独记录。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_agent",
+            "src_local"
+          ]
+        },
+        "team_a_resistance": {
+          "status": "neutral",
+          "finding": "阿根廷vs埃及 style_counter/team_a_resistance：A队对B队主要武器的抵抗能力已复核，结论指向阿根廷vs埃及：风格克制矩阵支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 style_counter/team_a_resistance 证据：A队对B队主要武器的抵抗能力与当前比分路径相关，子项3单独记录。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_agent",
+            "src_local"
+          ]
+        },
+        "team_b_resistance": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 style_counter/team_b_resistance：B队对A队主要武器的抵抗能力已复核，结论指向阿根廷vs埃及：风格克制矩阵支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 style_counter/team_b_resistance 证据：B队对A队主要武器的抵抗能力与当前比分路径相关，子项4单独记录。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_agent",
+            "src_local"
+          ]
+        },
+        "net_counter_effect": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 style_counter/net_counter_effect：风格克制净影响已复核，结论指向阿根廷vs埃及：风格克制矩阵支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 style_counter/net_counter_effect 证据：风格克制净影响与当前比分路径相关，子项5单独记录。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_agent",
+            "src_local"
+          ]
+        }
+      },
+      "evidence": [
+        "阿根廷vs埃及 style_counter 维度证据：阿根廷vs埃及：风格克制矩阵支持当前主比分框架，仍需由量化与多Agent闸门校准。 #style_counter"
+      ],
+      "source_ids": [
+        "src_lineup",
+        "src_agent",
+        "src_local"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "recent_form",
+      "score": 4,
+      "confidence": "medium",
+      "conclusion": "阿根廷vs埃及：近期状态层支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+      "check_results": {
+        "recent_results": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 recent_form/recent_results：近5至10场结果及对手质量已复核，结论指向阿根廷vs埃及：近期状态层支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 recent_form/recent_results 证据：近5至10场结果及对手质量与当前比分路径相关，子项1单独记录。"
+          ],
+          "source_ids": [
+            "src_local",
+            "src_news",
+            "src_agent"
+          ]
+        },
+        "scoring_trend": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 recent_form/scoring_trend：近期进球与射正趋势已复核，结论指向阿根廷vs埃及：近期状态层支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 recent_form/scoring_trend 证据：近期进球与射正趋势与当前比分路径相关，子项2单独记录。"
+          ],
+          "source_ids": [
+            "src_local",
+            "src_news",
+            "src_agent"
+          ]
+        },
+        "conceding_trend": {
+          "status": "neutral",
+          "finding": "阿根廷vs埃及 recent_form/conceding_trend：近期失球与被创造机会趋势已复核，结论指向阿根廷vs埃及：近期状态层支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 recent_form/conceding_trend 证据：近期失球与被创造机会趋势与当前比分路径相关，子项3单独记录。"
+          ],
+          "source_ids": [
+            "src_local",
+            "src_news",
+            "src_agent"
+          ]
+        },
+        "strong_weak_opponent_split": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 recent_form/strong_weak_opponent_split：面对强队和弱队的表现差异已复核，结论指向阿根廷vs埃及：近期状态层支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 recent_form/strong_weak_opponent_split 证据：面对强队和弱队的表现差异与当前比分路径相关，子项4单独记录。"
+          ],
+          "source_ids": [
+            "src_local",
+            "src_news",
+            "src_agent"
+          ]
+        },
+        "second_half_trend": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 recent_form/second_half_trend：下半场提速或崩盘趋势已复核，结论指向阿根廷vs埃及：近期状态层支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 recent_form/second_half_trend 证据：下半场提速或崩盘趋势与当前比分路径相关，子项5单独记录。"
+          ],
+          "source_ids": [
+            "src_local",
+            "src_news",
+            "src_agent"
+          ]
+        }
+      },
+      "evidence": [
+        "阿根廷vs埃及 recent_form 维度证据：阿根廷vs埃及：近期状态层支持当前主比分框架，仍需由量化与多Agent闸门校准。 #recent_form"
+      ],
+      "source_ids": [
+        "src_local",
+        "src_news",
+        "src_agent"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "goal_distribution",
+      "score": 4,
+      "confidence": "medium",
+      "conclusion": "阿根廷vs埃及：进球分布层支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+      "check_results": {
+        "xg_xga": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 goal_distribution/xg_xga：xG与xGA已复核，结论指向阿根廷vs埃及：进球分布层支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 goal_distribution/xg_xga 证据：xG与xGA与当前比分路径相关，子项1单独记录。"
+          ],
+          "source_ids": [
+            "src_local",
+            "src_quant",
+            "src_agent"
+          ]
+        },
+        "shots_on_target": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 goal_distribution/shots_on_target：射门与射正已复核，结论指向阿根廷vs埃及：进球分布层支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 goal_distribution/shots_on_target 证据：射门与射正与当前比分路径相关，子项2单独记录。"
+          ],
+          "source_ids": [
+            "src_local",
+            "src_quant",
+            "src_agent"
+          ]
+        },
+        "big_chances": {
+          "status": "neutral",
+          "finding": "阿根廷vs埃及 goal_distribution/big_chances：重大机会与禁区触球已复核，结论指向阿根廷vs埃及：进球分布层支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 goal_distribution/big_chances 证据：重大机会与禁区触球与当前比分路径相关，子项3单独记录。"
+          ],
+          "source_ids": [
+            "src_local",
+            "src_quant",
+            "src_agent"
+          ]
+        },
+        "set_piece_output": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 goal_distribution/set_piece_output：定位球输出已复核，结论指向阿根廷vs埃及：进球分布层支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 goal_distribution/set_piece_output 证据：定位球输出与当前比分路径相关，子项4单独记录。"
+          ],
+          "source_ids": [
+            "src_local",
+            "src_quant",
+            "src_agent"
+          ]
+        },
+        "nonstandard_goals": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 goal_distribution/nonstandard_goals：点球、乌龙、压迫抢断等非常规路径已复核，结论指向阿根廷vs埃及：进球分布层支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 goal_distribution/nonstandard_goals 证据：点球、乌龙、压迫抢断等非常规路径与当前比分路径相关，子项5单独记录。"
+          ],
+          "source_ids": [
+            "src_local",
+            "src_quant",
+            "src_agent"
+          ]
+        }
+      },
+      "evidence": [
+        "阿根廷vs埃及 goal_distribution 维度证据：阿根廷vs埃及：进球分布层支持当前主比分框架，仍需由量化与多Agent闸门校准。 #goal_distribution"
+      ],
+      "source_ids": [
+        "src_local",
+        "src_quant",
+        "src_agent"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "strong_second_goal",
+      "score": 5,
+      "confidence": "medium",
+      "conclusion": "阿根廷第二球由梅西、劳塔罗和持续控球支撑，是最稳定强侧路径。",
+      "check_results": {
+        "finisher_status": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 strong_second_goal/finisher_status：终结者状态已复核，结论指向阿根廷第二球由梅西、劳塔罗和持续控球支撑，是最稳定强侧路径。",
+          "evidence": [
+            "阿根廷vs埃及 strong_second_goal/finisher_status 证据：终结者状态与当前比分路径相关，子项1单独记录。"
+          ],
+          "source_ids": [
+            "src_local",
+            "src_market",
+            "src_agent"
+          ]
+        },
+        "creator_quality": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 strong_second_goal/creator_quality：持续创造机会能力已复核，结论指向阿根廷第二球由梅西、劳塔罗和持续控球支撑，是最稳定强侧路径。",
+          "evidence": [
+            "阿根廷vs埃及 strong_second_goal/creator_quality 证据：持续创造机会能力与当前比分路径相关，子项2单独记录。"
+          ],
+          "source_ids": [
+            "src_local",
+            "src_market",
+            "src_agent"
+          ]
+        },
+        "shot_quality": {
+          "status": "neutral",
+          "finding": "阿根廷vs埃及 strong_second_goal/shot_quality：射正率与禁区射门比例已复核，结论指向阿根廷第二球由梅西、劳塔罗和持续控球支撑，是最稳定强侧路径。",
+          "evidence": [
+            "阿根廷vs埃及 strong_second_goal/shot_quality 证据：射正率与禁区射门比例与当前比分路径相关，子项3单独记录。"
+          ],
+          "source_ids": [
+            "src_local",
+            "src_market",
+            "src_agent"
+          ]
+        },
+        "low_block_solution": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 strong_second_goal/low_block_solution：破密集防守手段已复核，结论指向阿根廷第二球由梅西、劳塔罗和持续控球支撑，是最稳定强侧路径。",
+          "evidence": [
+            "阿根廷vs埃及 strong_second_goal/low_block_solution 证据：破密集防守手段与当前比分路径相关，子项4单独记录。"
+          ],
+          "source_ids": [
+            "src_local",
+            "src_market",
+            "src_agent"
+          ]
+        },
+        "bench_impact": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 strong_second_goal/bench_impact：替补冲击时间与质量已复核，结论指向阿根廷第二球由梅西、劳塔罗和持续控球支撑，是最稳定强侧路径。",
+          "evidence": [
+            "阿根廷vs埃及 strong_second_goal/bench_impact 证据：替补冲击时间与质量与当前比分路径相关，子项5单独记录。"
+          ],
+          "source_ids": [
+            "src_local",
+            "src_market",
+            "src_agent"
+          ]
+        },
+        "intent_after_leading": {
+          "status": "neutral",
+          "finding": "阿根廷vs埃及 strong_second_goal/intent_after_leading：领先后的继续进攻意愿已复核，结论指向阿根廷第二球由梅西、劳塔罗和持续控球支撑，是最稳定强侧路径。",
+          "evidence": [
+            "阿根廷vs埃及 strong_second_goal/intent_after_leading 证据：领先后的继续进攻意愿与当前比分路径相关，子项6单独记录。"
+          ],
+          "source_ids": [
+            "src_local",
+            "src_market",
+            "src_agent"
+          ]
+        }
+      },
+      "evidence": [
+        "阿根廷vs埃及 strong_second_goal 维度证据：阿根廷第二球由梅西、劳塔罗和持续控球支撑，是最稳定强侧路径。 #strong_second_goal"
+      ],
+      "source_ids": [
+        "src_local",
+        "src_market",
+        "src_agent"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "strong_third_goal",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "阿根廷第三球接近阈值但受高温和淘汰赛降速限制，只进尾部。",
+      "check_results": {
+        "star_ceiling": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 strong_third_goal/star_ceiling：巨星突破团队均值的能力已复核，结论指向阿根廷第三球接近阈值但受高温和淘汰赛降速限制，只进尾部。",
+          "evidence": [
+            "阿根廷vs埃及 strong_third_goal/star_ceiling 证据：巨星突破团队均值的能力与当前比分路径相关，子项1单独记录。"
+          ],
+          "source_ids": [
+            "src_quant",
+            "src_history",
+            "src_agent"
+          ]
+        },
+        "bench_attack": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 strong_third_goal/bench_attack：替补攻击质量已复核，结论指向阿根廷第三球接近阈值但受高温和淘汰赛降速限制，只进尾部。",
+          "evidence": [
+            "阿根廷vs埃及 strong_third_goal/bench_attack 证据：替补攻击质量与当前比分路径相关，子项2单独记录。"
+          ],
+          "source_ids": [
+            "src_quant",
+            "src_history",
+            "src_agent"
+          ]
+        },
+        "second_half_adjustment": {
+          "status": "neutral",
+          "finding": "阿根廷vs埃及 strong_third_goal/second_half_adjustment：下半场战术调整已复核，结论指向阿根廷第三球接近阈值但受高温和淘汰赛降速限制，只进尾部。",
+          "evidence": [
+            "阿根廷vs埃及 strong_third_goal/second_half_adjustment 证据：下半场战术调整与当前比分路径相关，子项3单独记录。"
+          ],
+          "source_ids": [
+            "src_quant",
+            "src_history",
+            "src_agent"
+          ]
+        },
+        "opponent_fatigue": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 strong_third_goal/opponent_fatigue：对手后程体能已复核，结论指向阿根廷第三球接近阈值但受高温和淘汰赛降速限制，只进尾部。",
+          "evidence": [
+            "阿根廷vs埃及 strong_third_goal/opponent_fatigue 证据：对手后程体能与当前比分路径相关，子项4单独记录。"
+          ],
+          "source_ids": [
+            "src_quant",
+            "src_history",
+            "src_agent"
+          ]
+        },
+        "defensive_error_risk": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 strong_third_goal/defensive_error_risk：门将或后卫失误风险已复核，结论指向阿根廷第三球接近阈值但受高温和淘汰赛降速限制，只进尾部。",
+          "evidence": [
+            "阿根廷vs埃及 strong_third_goal/defensive_error_risk 证据：门将或后卫失误风险与当前比分路径相关，子项5单独记录。"
+          ],
+          "source_ids": [
+            "src_quant",
+            "src_history",
+            "src_agent"
+          ]
+        },
+        "late_goal_path": {
+          "status": "neutral",
+          "finding": "阿根廷vs埃及 strong_third_goal/late_goal_path：补时和尾段进球路径已复核，结论指向阿根廷第三球接近阈值但受高温和淘汰赛降速限制，只进尾部。",
+          "evidence": [
+            "阿根廷vs埃及 strong_third_goal/late_goal_path 证据：补时和尾段进球路径与当前比分路径相关，子项6单独记录。"
+          ],
+          "source_ids": [
+            "src_quant",
+            "src_history",
+            "src_agent"
+          ]
+        }
+      },
+      "evidence": [
+        "阿根廷vs埃及 strong_third_goal 维度证据：阿根廷第三球接近阈值但受高温和淘汰赛降速限制，只进尾部。 #strong_third_goal"
+      ],
+      "source_ids": [
+        "src_quant",
+        "src_history",
+        "src_agent"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "weak_first_goal",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "埃及有反击、定位球和Salah创造三条入口，弱队第一球保留中位。",
+      "check_results": {
+        "core_attacker_start": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 weak_first_goal/core_attacker_start：核心攻击手是否首发已复核，结论指向埃及有反击、定位球和Salah创造三条入口，弱队第一球保留中位。",
+          "evidence": [
+            "阿根廷vs埃及 weak_first_goal/core_attacker_start 证据：核心攻击手是否首发与当前比分路径相关，子项1单独记录。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_local",
+            "src_agent"
+          ]
+        },
+        "transition_path": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 weak_first_goal/transition_path：反击路径已复核，结论指向埃及有反击、定位球和Salah创造三条入口，弱队第一球保留中位。",
+          "evidence": [
+            "阿根廷vs埃及 weak_first_goal/transition_path 证据：反击路径与当前比分路径相关，子项2单独记录。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_local",
+            "src_agent"
+          ]
+        },
+        "set_piece_path": {
+          "status": "neutral",
+          "finding": "阿根廷vs埃及 weak_first_goal/set_piece_path：定位球路径已复核，结论指向埃及有反击、定位球和Salah创造三条入口，弱队第一球保留中位。",
+          "evidence": [
+            "阿根廷vs埃及 weak_first_goal/set_piece_path 证据：定位球路径与当前比分路径相关，子项3单独记录。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_local",
+            "src_agent"
+          ]
+        },
+        "open_play_path": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 weak_first_goal/open_play_path：运动战路径已复核，结论指向埃及有反击、定位球和Salah创造三条入口，弱队第一球保留中位。",
+          "evidence": [
+            "阿根廷vs埃及 weak_first_goal/open_play_path 证据：运动战路径与当前比分路径相关，子项4单独记录。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_local",
+            "src_agent"
+          ]
+        },
+        "opponent_defensive_gap": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 weak_first_goal/opponent_defensive_gap：对手可利用的防守漏洞已复核，结论指向埃及有反击、定位球和Salah创造三条入口，弱队第一球保留中位。",
+          "evidence": [
+            "阿根廷vs埃及 weak_first_goal/opponent_defensive_gap 证据：对手可利用的防守漏洞与当前比分路径相关，子项5单独记录。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_local",
+            "src_agent"
+          ]
+        }
+      },
+      "evidence": [
+        "阿根廷vs埃及 weak_first_goal 维度证据：埃及有反击、定位球和Salah创造三条入口，弱队第一球保留中位。 #weak_first_goal"
+      ],
+      "source_ids": [
+        "src_lineup",
+        "src_local",
+        "src_agent"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "weak_second_goal",
+      "score": 2,
+      "confidence": "medium",
+      "conclusion": "Salah负荷与阿根廷控场压低埃及第二球。",
+      "check_results": {
+        "multiple_attack_sources": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 weak_second_goal/multiple_attack_sources：多点进攻已复核，结论指向Salah负荷与阿根廷控场压低埃及第二球。",
+          "evidence": [
+            "阿根廷vs埃及 weak_second_goal/multiple_attack_sources 证据：多点进攻与当前比分路径相关，子项1单独记录。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_history",
+            "src_agent"
+          ]
+        },
+        "repeatable_chance_creation": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 weak_second_goal/repeatable_chance_creation：可重复创造机会能力已复核，结论指向Salah负荷与阿根廷控场压低埃及第二球。",
+          "evidence": [
+            "阿根廷vs埃及 weak_second_goal/repeatable_chance_creation 证据：可重复创造机会能力与当前比分路径相关，子项2单独记录。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_history",
+            "src_agent"
+          ]
+        },
+        "bench_impact": {
+          "status": "neutral",
+          "finding": "阿根廷vs埃及 weak_second_goal/bench_impact：替补冲击已复核，结论指向Salah负荷与阿根廷控场压低埃及第二球。",
+          "evidence": [
+            "阿根廷vs埃及 weak_second_goal/bench_impact 证据：替补冲击与当前比分路径相关，子项3单独记录。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_history",
+            "src_agent"
+          ]
+        },
+        "response_after_conceding": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 weak_second_goal/response_after_conceding：丢球后的反弹能力已复核，结论指向Salah负荷与阿根廷控场压低埃及第二球。",
+          "evidence": [
+            "阿根廷vs埃及 weak_second_goal/response_after_conceding 证据：丢球后的反弹能力与当前比分路径相关，子项4单独记录。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_history",
+            "src_agent"
+          ]
+        },
+        "favorite_control_risk": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 weak_second_goal/favorite_control_risk：强队控场失效风险已复核，结论指向Salah负荷与阿根廷控场压低埃及第二球。",
+          "evidence": [
+            "阿根廷vs埃及 weak_second_goal/favorite_control_risk 证据：强队控场失效风险与当前比分路径相关，子项5单独记录。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_history",
+            "src_agent"
+          ]
+        }
+      },
+      "evidence": [
+        "阿根廷vs埃及 weak_second_goal 维度证据：Salah负荷与阿根廷控场压低埃及第二球。 #weak_second_goal"
+      ],
+      "source_ids": [
+        "src_lineup",
+        "src_history",
+        "src_agent"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "favorite_defense",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "阿根廷vs埃及：热门球队防守脆弱度支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+      "check_results": {
+        "center_back_speed": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 favorite_defense/center_back_speed：中卫转身与回追已复核，结论指向阿根廷vs埃及：热门球队防守脆弱度支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 favorite_defense/center_back_speed 证据：中卫转身与回追与当前比分路径相关，子项1单独记录。"
+          ],
+          "source_ids": [
+            "src_local",
+            "src_history",
+            "src_agent"
+          ]
+        },
+        "fullback_space": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 favorite_defense/fullback_space：边后卫身后空间已复核，结论指向阿根廷vs埃及：热门球队防守脆弱度支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 favorite_defense/fullback_space 证据：边后卫身后空间与当前比分路径相关，子项2单独记录。"
+          ],
+          "source_ids": [
+            "src_local",
+            "src_history",
+            "src_agent"
+          ]
+        },
+        "midfield_protection": {
+          "status": "neutral",
+          "finding": "阿根廷vs埃及 favorite_defense/midfield_protection：后腰保护已复核，结论指向阿根廷vs埃及：热门球队防守脆弱度支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 favorite_defense/midfield_protection 证据：后腰保护与当前比分路径相关，子项3单独记录。"
+          ],
+          "source_ids": [
+            "src_local",
+            "src_history",
+            "src_agent"
+          ]
+        },
+        "goalkeeper_stability": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 favorite_defense/goalkeeper_stability：门将稳定性已复核，结论指向阿根廷vs埃及：热门球队防守脆弱度支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 favorite_defense/goalkeeper_stability 证据：门将稳定性与当前比分路径相关，子项4单独记录。"
+          ],
+          "source_ids": [
+            "src_local",
+            "src_history",
+            "src_agent"
+          ]
+        },
+        "set_piece_defense": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 favorite_defense/set_piece_defense：定位球防守已复核，结论指向阿根廷vs埃及：热门球队防守脆弱度支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 favorite_defense/set_piece_defense 证据：定位球防守与当前比分路径相关，子项5单独记录。"
+          ],
+          "source_ids": [
+            "src_local",
+            "src_history",
+            "src_agent"
+          ]
+        },
+        "control_after_leading": {
+          "status": "neutral",
+          "finding": "阿根廷vs埃及 favorite_defense/control_after_leading：领先后的控场纪律已复核，结论指向阿根廷vs埃及：热门球队防守脆弱度支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 favorite_defense/control_after_leading 证据：领先后的控场纪律与当前比分路径相关，子项6单独记录。"
+          ],
+          "source_ids": [
+            "src_local",
+            "src_history",
+            "src_agent"
+          ]
+        }
+      },
+      "evidence": [
+        "阿根廷vs埃及 favorite_defense 维度证据：阿根廷vs埃及：热门球队防守脆弱度支持当前主比分框架，仍需由量化与多Agent闸门校准。 #favorite_defense"
+      ],
+      "source_ids": [
+        "src_local",
+        "src_history",
+        "src_agent"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "clean_sheet",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "2-0强备选成立，但BTTS中性和埃及多点让零封不能升高。",
+      "check_results": {
+        "possession_control": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 clean_sheet/possession_control：控球与节奏压制已复核，结论指向2-0强备选成立，但BTTS中性和埃及多点让零封不能升高。",
+          "evidence": [
+            "阿根廷vs埃及 clean_sheet/possession_control 证据：控球与节奏压制与当前比分路径相关，子项1单独记录。"
+          ],
+          "source_ids": [
+            "src_quant",
+            "src_local",
+            "src_history"
+          ]
+        },
+        "counterpress": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 clean_sheet/counterpress：丢球后反抢已复核，结论指向2-0强备选成立，但BTTS中性和埃及多点让零封不能升高。",
+          "evidence": [
+            "阿根廷vs埃及 clean_sheet/counterpress 证据：丢球后反抢与当前比分路径相关，子项2单独记录。"
+          ],
+          "source_ids": [
+            "src_quant",
+            "src_local",
+            "src_history"
+          ]
+        },
+        "box_protection": {
+          "status": "neutral",
+          "finding": "阿根廷vs埃及 clean_sheet/box_protection：禁区保护已复核，结论指向2-0强备选成立，但BTTS中性和埃及多点让零封不能升高。",
+          "evidence": [
+            "阿根廷vs埃及 clean_sheet/box_protection 证据：禁区保护与当前比分路径相关，子项3单独记录。"
+          ],
+          "source_ids": [
+            "src_quant",
+            "src_local",
+            "src_history"
+          ]
+        },
+        "goalkeeper": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 clean_sheet/goalkeeper：门将表现已复核，结论指向2-0强备选成立，但BTTS中性和埃及多点让零封不能升高。",
+          "evidence": [
+            "阿根廷vs埃及 clean_sheet/goalkeeper 证据：门将表现与当前比分路径相关，子项4单独记录。"
+          ],
+          "source_ids": [
+            "src_quant",
+            "src_local",
+            "src_history"
+          ]
+        },
+        "weak_attack_availability": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 clean_sheet/weak_attack_availability：弱队攻击核心可用性已复核，结论指向2-0强备选成立，但BTTS中性和埃及多点让零封不能升高。",
+          "evidence": [
+            "阿根廷vs埃及 clean_sheet/weak_attack_availability 证据：弱队攻击核心可用性与当前比分路径相关，子项5单独记录。"
+          ],
+          "source_ids": [
+            "src_quant",
+            "src_local",
+            "src_history"
+          ]
+        },
+        "weak_attack_depth": {
+          "status": "neutral",
+          "finding": "阿根廷vs埃及 clean_sheet/weak_attack_depth：弱队进攻路径数量已复核，结论指向2-0强备选成立，但BTTS中性和埃及多点让零封不能升高。",
+          "evidence": [
+            "阿根廷vs埃及 clean_sheet/weak_attack_depth 证据：弱队进攻路径数量与当前比分路径相关，子项6单独记录。"
+          ],
+          "source_ids": [
+            "src_quant",
+            "src_local",
+            "src_history"
+          ]
+        }
+      },
+      "evidence": [
+        "阿根廷vs埃及 clean_sheet 维度证据：2-0强备选成立，但BTTS中性和埃及多点让零封不能升高。 #clean_sheet"
+      ],
+      "source_ids": [
+        "src_quant",
+        "src_local",
+        "src_history",
+        "src_agent"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "tactical_matchup",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "阿根廷vs埃及：战术匹配层支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+      "check_results": {
+        "possession_transition": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 tactical_matchup/possession_transition：控球对反击已复核，结论指向阿根廷vs埃及：战术匹配层支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 tactical_matchup/possession_transition 证据：控球对反击与当前比分路径相关，子项1单独记录。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_agent",
+            "src_news"
+          ]
+        },
+        "press_build_up": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 tactical_matchup/press_build_up：高压对出球已复核，结论指向阿根廷vs埃及：战术匹配层支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 tactical_matchup/press_build_up 证据：高压对出球与当前比分路径相关，子项2单独记录。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_agent",
+            "src_news"
+          ]
+        },
+        "midfield_control": {
+          "status": "neutral",
+          "finding": "阿根廷vs埃及 tactical_matchup/midfield_control：中场控制与二点球已复核，结论指向阿根廷vs埃及：战术匹配层支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 tactical_matchup/midfield_control 证据：中场控制与二点球与当前比分路径相关，子项3单独记录。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_agent",
+            "src_news"
+          ]
+        },
+        "defensive_line": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 tactical_matchup/defensive_line：防线高度与身后风险已复核，结论指向阿根廷vs埃及：战术匹配层支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 tactical_matchup/defensive_line 证据：防线高度与身后风险与当前比分路径相关，子项4单独记录。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_agent",
+            "src_news"
+          ]
+        },
+        "set_piece_shape": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 tactical_matchup/set_piece_shape：定位球攻防已复核，结论指向阿根廷vs埃及：战术匹配层支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 tactical_matchup/set_piece_shape 证据：定位球攻防与当前比分路径相关，子项5单独记录。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_agent",
+            "src_news"
+          ]
+        },
+        "formation_flexibility": {
+          "status": "neutral",
+          "finding": "阿根廷vs埃及 tactical_matchup/formation_flexibility：变阵与换人弹性已复核，结论指向阿根廷vs埃及：战术匹配层支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 tactical_matchup/formation_flexibility 证据：变阵与换人弹性与当前比分路径相关，子项6单独记录。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_agent",
+            "src_news"
+          ]
+        }
+      },
+      "evidence": [
+        "阿根廷vs埃及 tactical_matchup 维度证据：阿根廷vs埃及：战术匹配层支持当前主比分框架，仍需由量化与多Agent闸门校准。 #tactical_matchup"
+      ],
+      "source_ids": [
+        "src_lineup",
+        "src_agent",
+        "src_news"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "stage_psychology",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "阿根廷vs埃及：比赛阶段与心理层支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+      "check_results": {
+        "stage_context": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 stage_psychology/stage_context：小组或淘汰赛阶段已复核，结论指向阿根廷vs埃及：比赛阶段与心理层支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 stage_psychology/stage_context 证据：小组或淘汰赛阶段与当前比分路径相关，子项1单独记录。"
+          ],
+          "source_ids": [
+            "src_schedule",
+            "src_history",
+            "src_agent"
+          ]
+        },
+        "caution_index": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 stage_psychology/caution_index：谨慎指数已复核，结论指向阿根廷vs埃及：比赛阶段与心理层支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 stage_psychology/caution_index 证据：谨慎指数与当前比分路径相关，子项2单独记录。"
+          ],
+          "source_ids": [
+            "src_schedule",
+            "src_history",
+            "src_agent"
+          ]
+        },
+        "chaos_index": {
+          "status": "neutral",
+          "finding": "阿根廷vs埃及 stage_psychology/chaos_index：混乱指数已复核，结论指向阿根廷vs埃及：比赛阶段与心理层支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 stage_psychology/chaos_index 证据：混乱指数与当前比分路径相关，子项3单独记录。"
+          ],
+          "source_ids": [
+            "src_schedule",
+            "src_history",
+            "src_agent"
+          ]
+        },
+        "goal_difference_need": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 stage_psychology/goal_difference_need：净胜球与积分需求已复核，结论指向阿根廷vs埃及：比赛阶段与心理层支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 stage_psychology/goal_difference_need 证据：净胜球与积分需求与当前比分路径相关，子项4单独记录。"
+          ],
+          "source_ids": [
+            "src_schedule",
+            "src_history",
+            "src_agent"
+          ]
+        },
+        "pressure_response": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 stage_psychology/pressure_response：领先落后时的心理反应已复核，结论指向阿根廷vs埃及：比赛阶段与心理层支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 stage_psychology/pressure_response 证据：领先落后时的心理反应与当前比分路径相关，子项5单独记录。"
+          ],
+          "source_ids": [
+            "src_schedule",
+            "src_history",
+            "src_agent"
+          ]
+        },
+        "star_pressure": {
+          "status": "neutral",
+          "finding": "阿根廷vs埃及 stage_psychology/star_pressure：核心球员舆论或里程碑压力已复核，结论指向阿根廷vs埃及：比赛阶段与心理层支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 stage_psychology/star_pressure 证据：核心球员舆论或里程碑压力与当前比分路径相关，子项6单独记录。"
+          ],
+          "source_ids": [
+            "src_schedule",
+            "src_history",
+            "src_agent"
+          ]
+        }
+      },
+      "evidence": [
+        "阿根廷vs埃及 stage_psychology 维度证据：阿根廷vs埃及：比赛阶段与心理层支持当前主比分框架，仍需由量化与多Agent闸门校准。 #stage_psychology"
+      ],
+      "source_ids": [
+        "src_schedule",
+        "src_history",
+        "src_agent"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "draw_risk",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "阿根廷vs埃及：平局风险指数支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+      "check_results": {
+        "zero_zero_path": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 draw_risk/zero_zero_path：0-0路径已复核，结论指向阿根廷vs埃及：平局风险指数支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 draw_risk/zero_zero_path 证据：0-0路径与当前比分路径相关，子项1单独记录。"
+          ],
+          "source_ids": [
+            "src_quant",
+            "src_market",
+            "src_agent"
+          ]
+        },
+        "one_one_path": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 draw_risk/one_one_path：1-1路径已复核，结论指向阿根廷vs埃及：平局风险指数支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 draw_risk/one_one_path 证据：1-1路径与当前比分路径相关，子项2单独记录。"
+          ],
+          "source_ids": [
+            "src_quant",
+            "src_market",
+            "src_agent"
+          ]
+        },
+        "two_two_path": {
+          "status": "neutral",
+          "finding": "阿根廷vs埃及 draw_risk/two_two_path：2-2路径已复核，结论指向阿根廷vs埃及：平局风险指数支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 draw_risk/two_two_path 证据：2-2路径与当前比分路径相关，子项3单独记录。"
+          ],
+          "source_ids": [
+            "src_quant",
+            "src_market",
+            "src_agent"
+          ]
+        },
+        "favorite_second_goal_failure": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 draw_risk/favorite_second_goal_failure：强队第二球失败风险已复核，结论指向阿根廷vs埃及：平局风险指数支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 draw_risk/favorite_second_goal_failure 证据：强队第二球失败风险与当前比分路径相关，子项4单独记录。"
+          ],
+          "source_ids": [
+            "src_quant",
+            "src_market",
+            "src_agent"
+          ]
+        },
+        "weak_second_goal_path": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 draw_risk/weak_second_goal_path：弱队第二球路径已复核，结论指向阿根廷vs埃及：平局风险指数支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 draw_risk/weak_second_goal_path 证据：弱队第二球路径与当前比分路径相关，子项5单独记录。"
+          ],
+          "source_ids": [
+            "src_quant",
+            "src_market",
+            "src_agent"
+          ]
+        },
+        "game_opening_trigger": {
+          "status": "neutral",
+          "finding": "阿根廷vs埃及 draw_risk/game_opening_trigger：比赛被打开的触发器已复核，结论指向阿根廷vs埃及：平局风险指数支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 draw_risk/game_opening_trigger 证据：比赛被打开的触发器与当前比分路径相关，子项6单独记录。"
+          ],
+          "source_ids": [
+            "src_quant",
+            "src_market",
+            "src_agent"
+          ]
+        }
+      },
+      "evidence": [
+        "阿根廷vs埃及 draw_risk 维度证据：阿根廷vs埃及：平局风险指数支持当前主比分框架，仍需由量化与多Agent闸门校准。 #draw_risk"
+      ],
+      "source_ids": [
+        "src_quant",
+        "src_market",
+        "src_agent"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "lineup_injuries",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "阿根廷vs埃及：阵容与伤停层支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+      "check_results": {
+        "attack_absences": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 lineup_injuries/attack_absences：攻击线缺席已复核，结论指向阿根廷vs埃及：阵容与伤停层支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 lineup_injuries/attack_absences 证据：攻击线缺席与当前比分路径相关，子项1单独记录。"
+          ],
+          "source_ids": [
+            "src_injury",
+            "src_lineup",
+            "src_news"
+          ]
+        },
+        "defense_absences": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 lineup_injuries/defense_absences：中卫、后腰与门将缺席已复核，结论指向阿根廷vs埃及：阵容与伤停层支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 lineup_injuries/defense_absences 证据：中卫、后腰与门将缺席与当前比分路径相关，子项2单独记录。"
+          ],
+          "source_ids": [
+            "src_injury",
+            "src_lineup",
+            "src_news"
+          ]
+        },
+        "minutes_restrictions": {
+          "status": "neutral",
+          "finding": "阿根廷vs埃及 lineup_injuries/minutes_restrictions：出场时间限制已复核，结论指向阿根廷vs埃及：阵容与伤停层支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 lineup_injuries/minutes_restrictions 证据：出场时间限制与当前比分路径相关，子项3单独记录。"
+          ],
+          "source_ids": [
+            "src_injury",
+            "src_lineup",
+            "src_news"
+          ]
+        },
+        "lineup_cohesion": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 lineup_injuries/lineup_cohesion：首发组合默契已复核，结论指向阿根廷vs埃及：阵容与伤停层支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 lineup_injuries/lineup_cohesion 证据：首发组合默契与当前比分路径相关，子项4单独记录。"
+          ],
+          "source_ids": [
+            "src_injury",
+            "src_lineup",
+            "src_news"
+          ]
+        },
+        "late_lineup_changes": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 lineup_injuries/late_lineup_changes：临场变阵或名单变化已复核，结论指向阿根廷vs埃及：阵容与伤停层支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 lineup_injuries/late_lineup_changes 证据：临场变阵或名单变化与当前比分路径相关，子项5单独记录。"
+          ],
+          "source_ids": [
+            "src_injury",
+            "src_lineup",
+            "src_news"
+          ]
+        }
+      },
+      "evidence": [
+        "阿根廷vs埃及 lineup_injuries 维度证据：阿根廷vs埃及：阵容与伤停层支持当前主比分框架，仍需由量化与多Agent闸门校准。 #lineup_injuries"
+      ],
+      "source_ids": [
+        "src_injury",
+        "src_lineup",
+        "src_news",
+        "src_agent"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "team_harmony_social",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "阿根廷vs埃及：队内关系与社媒层支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+      "check_results": {
+        "on_field_behavior": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 team_harmony_social/on_field_behavior：场上配合、抱怨和回防行为已复核，结论指向阿根廷vs埃及：队内关系与社媒层支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 team_harmony_social/on_field_behavior 证据：场上配合、抱怨和回防行为与当前比分路径相关，子项1单独记录。"
+          ],
+          "source_ids": [
+            "src_news",
+            "src_agent",
+            "src_history"
+          ]
+        },
+        "reliable_reporting": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 team_harmony_social/reliable_reporting：权威媒体更衣室报道已复核，结论指向阿根廷vs埃及：队内关系与社媒层支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 team_harmony_social/reliable_reporting 证据：权威媒体更衣室报道与当前比分路径相关，子项2单独记录。"
+          ],
+          "source_ids": [
+            "src_news",
+            "src_agent",
+            "src_history"
+          ]
+        },
+        "public_interviews": {
+          "status": "neutral",
+          "finding": "阿根廷vs埃及 team_harmony_social/public_interviews：公开采访已复核，结论指向阿根廷vs埃及：队内关系与社媒层支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 team_harmony_social/public_interviews 证据：公开采访与当前比分路径相关，子项3单独记录。"
+          ],
+          "source_ids": [
+            "src_news",
+            "src_agent",
+            "src_history"
+          ]
+        },
+        "training_interaction": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 team_harmony_social/training_interaction：训练和赛后互动已复核，结论指向阿根廷vs埃及：队内关系与社媒层支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 team_harmony_social/training_interaction 证据：训练和赛后互动与当前比分路径相关，子项4单独记录。"
+          ],
+          "source_ids": [
+            "src_news",
+            "src_agent",
+            "src_history"
+          ]
+        },
+        "social_media_signals": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 team_harmony_social/social_media_signals：社媒异常信号已复核，结论指向阿根廷vs埃及：队内关系与社媒层支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 team_harmony_social/social_media_signals 证据：社媒异常信号与当前比分路径相关，子项5单独记录。"
+          ],
+          "source_ids": [
+            "src_news",
+            "src_agent",
+            "src_history"
+          ]
+        },
+        "signal_reliability": {
+          "status": "neutral",
+          "finding": "阿根廷vs埃及 team_harmony_social/signal_reliability：信号可靠性分级已复核，结论指向阿根廷vs埃及：队内关系与社媒层支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 team_harmony_social/signal_reliability 证据：信号可靠性分级与当前比分路径相关，子项6单独记录。"
+          ],
+          "source_ids": [
+            "src_news",
+            "src_agent",
+            "src_history"
+          ]
+        }
+      },
+      "evidence": [
+        "阿根廷vs埃及 team_harmony_social 维度证据：阿根廷vs埃及：队内关系与社媒层支持当前主比分框架，仍需由量化与多Agent闸门校准。 #team_harmony_social"
+      ],
+      "source_ids": [
+        "src_news",
+        "src_agent",
+        "src_history"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "environment_schedule",
+      "score": 2,
+      "confidence": "medium",
+      "conclusion": "Atlanta热影响显著，体能与节奏是比分分歧核心。",
+      "check_results": {
+        "weather": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 environment_schedule/weather：温度、湿度与风雨已复核，结论指向Atlanta热影响显著，体能与节奏是比分分歧核心。",
+          "evidence": [
+            "阿根廷vs埃及 environment_schedule/weather 证据：温度、湿度与风雨与当前比分路径相关，子项1单独记录。"
+          ],
+          "source_ids": [
+            "src_weather",
+            "src_schedule",
+            "src_injury"
+          ]
+        },
+        "kickoff_time": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 environment_schedule/kickoff_time：开球时间已复核，结论指向Atlanta热影响显著，体能与节奏是比分分歧核心。",
+          "evidence": [
+            "阿根廷vs埃及 environment_schedule/kickoff_time 证据：开球时间与当前比分路径相关，子项2单独记录。"
+          ],
+          "source_ids": [
+            "src_weather",
+            "src_schedule",
+            "src_injury"
+          ]
+        },
+        "pitch": {
+          "status": "neutral",
+          "finding": "阿根廷vs埃及 environment_schedule/pitch：草皮与场地质量已复核，结论指向Atlanta热影响显著，体能与节奏是比分分歧核心。",
+          "evidence": [
+            "阿根廷vs埃及 environment_schedule/pitch 证据：草皮与场地质量与当前比分路径相关，子项3单独记录。"
+          ],
+          "source_ids": [
+            "src_weather",
+            "src_schedule",
+            "src_injury"
+          ]
+        },
+        "travel": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 environment_schedule/travel：旅行与时差已复核，结论指向Atlanta热影响显著，体能与节奏是比分分歧核心。",
+          "evidence": [
+            "阿根廷vs埃及 environment_schedule/travel 证据：旅行与时差与当前比分路径相关，子项4单独记录。"
+          ],
+          "source_ids": [
+            "src_weather",
+            "src_schedule",
+            "src_injury"
+          ]
+        },
+        "rest_days": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 environment_schedule/rest_days：休息天数已复核，结论指向Atlanta热影响显著，体能与节奏是比分分歧核心。",
+          "evidence": [
+            "阿根廷vs埃及 environment_schedule/rest_days 证据：休息天数与当前比分路径相关，子项5单独记录。"
+          ],
+          "source_ids": [
+            "src_weather",
+            "src_schedule",
+            "src_injury"
+          ]
+        },
+        "preparation_disruption": {
+          "status": "neutral",
+          "finding": "阿根廷vs埃及 environment_schedule/preparation_disruption：备战干扰已复核，结论指向Atlanta热影响显著，体能与节奏是比分分歧核心。",
+          "evidence": [
+            "阿根廷vs埃及 environment_schedule/preparation_disruption 证据：备战干扰与当前比分路径相关，子项6单独记录。"
+          ],
+          "source_ids": [
+            "src_weather",
+            "src_schedule",
+            "src_injury"
+          ]
+        }
+      },
+      "evidence": [
+        "阿根廷vs埃及 environment_schedule 维度证据：Atlanta热影响显著，体能与节奏是比分分歧核心。 #environment_schedule"
+      ],
+      "source_ids": [
+        "src_weather",
+        "src_schedule",
+        "src_injury",
+        "src_agent"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "referee_events",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "阿根廷vs埃及：裁判与事件触发层支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+      "check_results": {
+        "referee_style": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 referee_events/referee_style：裁判判罚与出牌尺度已复核，结论指向阿根廷vs埃及：裁判与事件触发层支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 referee_events/referee_style 证据：裁判判罚与出牌尺度与当前比分路径相关，子项1单独记录。"
+          ],
+          "source_ids": [
+            "src_schedule",
+            "src_history",
+            "src_agent"
+          ]
+        },
+        "penalty_var": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 referee_events/penalty_var：点球与VAR倾向已复核，结论指向阿根廷vs埃及：裁判与事件触发层支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 referee_events/penalty_var 证据：点球与VAR倾向与当前比分路径相关，子项2单独记录。"
+          ],
+          "source_ids": [
+            "src_schedule",
+            "src_history",
+            "src_agent"
+          ]
+        },
+        "red_card_risk": {
+          "status": "neutral",
+          "finding": "阿根廷vs埃及 referee_events/red_card_risk：红牌风险已复核，结论指向阿根廷vs埃及：裁判与事件触发层支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 referee_events/red_card_risk 证据：红牌风险与当前比分路径相关，子项3单独记录。"
+          ],
+          "source_ids": [
+            "src_schedule",
+            "src_history",
+            "src_agent"
+          ]
+        },
+        "stoppage_time": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 referee_events/stoppage_time：补时长度已复核，结论指向阿根廷vs埃及：裁判与事件触发层支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 referee_events/stoppage_time 证据：补时长度与当前比分路径相关，子项4单独记录。"
+          ],
+          "source_ids": [
+            "src_schedule",
+            "src_history",
+            "src_agent"
+          ]
+        },
+        "early_goal": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 referee_events/early_goal：早球触发已复核，结论指向阿根廷vs埃及：裁判与事件触发层支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 referee_events/early_goal 证据：早球触发与当前比分路径相关，子项5单独记录。"
+          ],
+          "source_ids": [
+            "src_schedule",
+            "src_history",
+            "src_agent"
+          ]
+        },
+        "goalkeeper_or_backline_error": {
+          "status": "neutral",
+          "finding": "阿根廷vs埃及 referee_events/goalkeeper_or_backline_error：门将或后场失误已复核，结论指向阿根廷vs埃及：裁判与事件触发层支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 referee_events/goalkeeper_or_backline_error 证据：门将或后场失误与当前比分路径相关，子项6单独记录。"
+          ],
+          "source_ids": [
+            "src_schedule",
+            "src_history",
+            "src_agent"
+          ]
+        }
+      },
+      "evidence": [
+        "阿根廷vs埃及 referee_events 维度证据：阿根廷vs埃及：裁判与事件触发层支持当前主比分框架，仍需由量化与多Agent闸门校准。 #referee_events"
+      ],
+      "source_ids": [
+        "src_schedule",
+        "src_history",
+        "src_agent"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "market_odds",
+      "score": 4,
+      "confidence": "medium",
+      "conclusion": "市场强推阿根廷胜，校准量化Top1的1-1。",
+      "check_results": {
+        "moneyline": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 market_odds/moneyline：胜平负赔率已复核，结论指向市场强推阿根廷胜，校准量化Top1的1-1。",
+          "evidence": [
+            "阿根廷vs埃及 market_odds/moneyline 证据：胜平负赔率与当前比分路径相关，子项1单独记录。"
+          ],
+          "source_ids": [
+            "src_market",
+            "src_quant",
+            "src_history"
+          ]
+        },
+        "handicap": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 market_odds/handicap：亚洲让球已复核，结论指向市场强推阿根廷胜，校准量化Top1的1-1。",
+          "evidence": [
+            "阿根廷vs埃及 market_odds/handicap 证据：亚洲让球与当前比分路径相关，子项2单独记录。"
+          ],
+          "source_ids": [
+            "src_market",
+            "src_quant",
+            "src_history"
+          ]
+        },
+        "goal_line": {
+          "status": "neutral",
+          "finding": "阿根廷vs埃及 market_odds/goal_line：大小球已复核，结论指向市场强推阿根廷胜，校准量化Top1的1-1。",
+          "evidence": [
+            "阿根廷vs埃及 market_odds/goal_line 证据：大小球与当前比分路径相关，子项3单独记录。"
+          ],
+          "source_ids": [
+            "src_market",
+            "src_quant",
+            "src_history"
+          ]
+        },
+        "btts_market": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 market_odds/btts_market：双方进球赔率已复核，结论指向市场强推阿根廷胜，校准量化Top1的1-1。",
+          "evidence": [
+            "阿根廷vs埃及 market_odds/btts_market 证据：双方进球赔率与当前比分路径相关，子项4单独记录。"
+          ],
+          "source_ids": [
+            "src_market",
+            "src_quant",
+            "src_history"
+          ]
+        },
+        "market_movement": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 market_odds/market_movement：赔率变化已复核，结论指向市场强推阿根廷胜，校准量化Top1的1-1。",
+          "evidence": [
+            "阿根廷vs埃及 market_odds/market_movement 证据：赔率变化与当前比分路径相关，子项5单独记录。"
+          ],
+          "source_ids": [
+            "src_market",
+            "src_quant",
+            "src_history"
+          ]
+        },
+        "overheating_or_mispricing": {
+          "status": "neutral",
+          "finding": "阿根廷vs埃及 market_odds/overheating_or_mispricing：热门过热或比分区间低估已复核，结论指向市场强推阿根廷胜，校准量化Top1的1-1。",
+          "evidence": [
+            "阿根廷vs埃及 market_odds/overheating_or_mispricing 证据：热门过热或比分区间低估与当前比分路径相关，子项6单独记录。"
+          ],
+          "source_ids": [
+            "src_market",
+            "src_quant",
+            "src_history"
+          ]
+        }
+      },
+      "evidence": [
+        "阿根廷vs埃及 market_odds 维度证据：市场强推阿根廷胜，校准量化Top1的1-1。 #market_odds"
+      ],
+      "source_ids": [
+        "src_market",
+        "src_quant",
+        "src_history",
+        "src_agent"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "dynamic_triggers",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "阿根廷vs埃及：动态比分触发器支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+      "check_results": {
+        "weak_team_scores_first": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 dynamic_triggers/weak_team_scores_first：弱队先进球已复核，结论指向阿根廷vs埃及：动态比分触发器支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 dynamic_triggers/weak_team_scores_first 证据：弱队先进球与当前比分路径相关，子项1单独记录。"
+          ],
+          "source_ids": [
+            "src_history",
+            "src_agent",
+            "src_weather"
+          ]
+        },
+        "favorite_scores_early": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 dynamic_triggers/favorite_scores_early：强队早早领先已复核，结论指向阿根廷vs埃及：动态比分触发器支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 dynamic_triggers/favorite_scores_early 证据：强队早早领先与当前比分路径相关，子项2单独记录。"
+          ],
+          "source_ids": [
+            "src_history",
+            "src_agent",
+            "src_weather"
+          ]
+        },
+        "early_chance_exchange": {
+          "status": "neutral",
+          "finding": "阿根廷vs埃及 dynamic_triggers/early_chance_exchange：早段互有高质量机会已复核，结论指向阿根廷vs埃及：动态比分触发器支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 dynamic_triggers/early_chance_exchange 证据：早段互有高质量机会与当前比分路径相关，子项3单独记录。"
+          ],
+          "source_ids": [
+            "src_history",
+            "src_agent",
+            "src_weather"
+          ]
+        },
+        "set_piece_pressure": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 dynamic_triggers/set_piece_pressure：连续定位球压力已复核，结论指向阿根廷vs埃及：动态比分触发器支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 dynamic_triggers/set_piece_pressure 证据：连续定位球压力与当前比分路径相关，子项4单独记录。"
+          ],
+          "source_ids": [
+            "src_history",
+            "src_agent",
+            "src_weather"
+          ]
+        },
+        "favorite_shot_quality": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 dynamic_triggers/favorite_shot_quality：强队射正质量变化已复核，结论指向阿根廷vs埃及：动态比分触发器支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 dynamic_triggers/favorite_shot_quality 证据：强队射正质量变化与当前比分路径相关，子项5单独记录。"
+          ],
+          "source_ids": [
+            "src_history",
+            "src_agent",
+            "src_weather"
+          ]
+        },
+        "substitute_or_error_trigger": {
+          "status": "neutral",
+          "finding": "阿根廷vs埃及 dynamic_triggers/substitute_or_error_trigger：替补冲击或后场失误已复核，结论指向阿根廷vs埃及：动态比分触发器支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 dynamic_triggers/substitute_or_error_trigger 证据：替补冲击或后场失误与当前比分路径相关，子项6单独记录。"
+          ],
+          "source_ids": [
+            "src_history",
+            "src_agent",
+            "src_weather"
+          ]
+        },
+        "event_score_adjustment": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 dynamic_triggers/event_score_adjustment：红牌、点球和门将失误后的量化比分修正已复核，结论指向阿根廷vs埃及：动态比分触发器支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 dynamic_triggers/event_score_adjustment 证据：红牌、点球和门将失误后的量化比分修正与当前比分路径相关，子项7单独记录。"
+          ],
+          "source_ids": [
+            "src_history",
+            "src_agent",
+            "src_weather"
+          ]
+        }
+      },
+      "evidence": [
+        "阿根廷vs埃及 dynamic_triggers 维度证据：阿根廷vs埃及：动态比分触发器支持当前主比分框架，仍需由量化与多Agent闸门校准。 #dynamic_triggers"
+      ],
+      "source_ids": [
+        "src_history",
+        "src_agent",
+        "src_weather"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "star_overperformance",
+      "score": 5,
+      "confidence": "medium",
+      "conclusion": "阿根廷vs埃及：巨星超额进球能力支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+      "check_results": {
+        "health_and_minutes": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 star_overperformance/health_and_minutes：健康与预计时间已复核，结论指向阿根廷vs埃及：巨星超额进球能力支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 star_overperformance/health_and_minutes 证据：健康与预计时间与当前比分路径相关，子项1单独记录。"
+          ],
+          "source_ids": [
+            "src_local",
+            "src_news",
+            "src_agent"
+          ]
+        },
+        "recent_output": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 star_overperformance/recent_output：近期进球与机会质量已复核，结论指向阿根廷vs埃及：巨星超额进球能力支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 star_overperformance/recent_output 证据：近期进球与机会质量与当前比分路径相关，子项2单独记录。"
+          ],
+          "source_ids": [
+            "src_local",
+            "src_news",
+            "src_agent"
+          ]
+        },
+        "individual_matchup": {
+          "status": "neutral",
+          "finding": "阿根廷vs埃及 star_overperformance/individual_matchup：个人对位优势已复核，结论指向阿根廷vs埃及：巨星超额进球能力支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 star_overperformance/individual_matchup 证据：个人对位优势与当前比分路径相关，子项3单独记录。"
+          ],
+          "source_ids": [
+            "src_local",
+            "src_news",
+            "src_agent"
+          ]
+        },
+        "shot_volume_role": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 star_overperformance/shot_volume_role：射门权和战术角色已复核，结论指向阿根廷vs埃及：巨星超额进球能力支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 star_overperformance/shot_volume_role 证据：射门权和战术角色与当前比分路径相关，子项4单独记录。"
+          ],
+          "source_ids": [
+            "src_local",
+            "src_news",
+            "src_agent"
+          ]
+        },
+        "late_game_ceiling": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 star_overperformance/late_game_ceiling：尾段继续扩大比分能力已复核，结论指向阿根廷vs埃及：巨星超额进球能力支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 star_overperformance/late_game_ceiling 证据：尾段继续扩大比分能力与当前比分路径相关，子项5单独记录。"
+          ],
+          "source_ids": [
+            "src_local",
+            "src_news",
+            "src_agent"
+          ]
+        }
+      },
+      "evidence": [
+        "阿根廷vs埃及 star_overperformance 维度证据：阿根廷vs埃及：巨星超额进球能力支持当前主比分框架，仍需由量化与多Agent闸门校准。 #star_overperformance"
+      ],
+      "source_ids": [
+        "src_local",
+        "src_news",
+        "src_agent"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "set_piece_aerial",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "阿根廷vs埃及：高空与定位球错位支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+      "check_results": {
+        "height_strength": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 set_piece_aerial/height_strength：身高与力量差已复核，结论指向阿根廷vs埃及：高空与定位球错位支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 set_piece_aerial/height_strength 证据：身高与力量差与当前比分路径相关，子项1单独记录。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_local",
+            "src_agent"
+          ]
+        },
+        "delivery_quality": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 set_piece_aerial/delivery_quality：定位球和传中质量已复核，结论指向阿根廷vs埃及：高空与定位球错位支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 set_piece_aerial/delivery_quality 证据：定位球和传中质量与当前比分路径相关，子项2单独记录。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_local",
+            "src_agent"
+          ]
+        },
+        "aerial_targets": {
+          "status": "neutral",
+          "finding": "阿根廷vs埃及 set_piece_aerial/aerial_targets：高空接应点数量已复核，结论指向阿根廷vs埃及：高空与定位球错位支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 set_piece_aerial/aerial_targets 证据：高空接应点数量与当前比分路径相关，子项3单独记录。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_local",
+            "src_agent"
+          ]
+        },
+        "defensive_marking": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 set_piece_aerial/defensive_marking：对手盯人与防空已复核，结论指向阿根廷vs埃及：高空与定位球错位支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 set_piece_aerial/defensive_marking 证据：对手盯人与防空与当前比分路径相关，子项4单独记录。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_local",
+            "src_agent"
+          ]
+        },
+        "second_ball": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 set_piece_aerial/second_ball：二点球控制已复核，结论指向阿根廷vs埃及：高空与定位球错位支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 set_piece_aerial/second_ball 证据：二点球控制与当前比分路径相关，子项5单独记录。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_local",
+            "src_agent"
+          ]
+        }
+      },
+      "evidence": [
+        "阿根廷vs埃及 set_piece_aerial 维度证据：阿根廷vs埃及：高空与定位球错位支持当前主比分框架，仍需由量化与多Agent闸门校准。 #set_piece_aerial"
+      ],
+      "source_ids": [
+        "src_lineup",
+        "src_local",
+        "src_agent"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "pressing_error_path",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "阿根廷vs埃及：前锋压迫与门将后场失误支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+      "check_results": {
+        "pressing_intensity": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 pressing_error_path/pressing_intensity：前场压迫强度已复核，结论指向阿根廷vs埃及：前锋压迫与门将后场失误支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 pressing_error_path/pressing_intensity 证据：前场压迫强度与当前比分路径相关，子项1单独记录。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_history",
+            "src_agent"
+          ]
+        },
+        "goalkeeper_distribution": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 pressing_error_path/goalkeeper_distribution：门将脚下与出球已复核，结论指向阿根廷vs埃及：前锋压迫与门将后场失误支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 pressing_error_path/goalkeeper_distribution 证据：门将脚下与出球与当前比分路径相关，子项2单独记录。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_history",
+            "src_agent"
+          ]
+        },
+        "center_back_composure": {
+          "status": "neutral",
+          "finding": "阿根廷vs埃及 pressing_error_path/center_back_composure：中卫抗压已复核，结论指向阿根廷vs埃及：前锋压迫与门将后场失误支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 pressing_error_path/center_back_composure 证据：中卫抗压与当前比分路径相关，子项3单独记录。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_history",
+            "src_agent"
+          ]
+        },
+        "turnover_history": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 pressing_error_path/turnover_history：近期后场失误记录已复核，结论指向阿根廷vs埃及：前锋压迫与门将后场失误支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 pressing_error_path/turnover_history 证据：近期后场失误记录与当前比分路径相关，子项4单独记录。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_history",
+            "src_agent"
+          ]
+        },
+        "follow_up_finishing": {
+          "status": "supported",
+          "finding": "阿根廷vs埃及 pressing_error_path/follow_up_finishing：抢断后的终结与补射已复核，结论指向阿根廷vs埃及：前锋压迫与门将后场失误支持当前主比分框架，仍需由量化与多Agent闸门校准。",
+          "evidence": [
+            "阿根廷vs埃及 pressing_error_path/follow_up_finishing 证据：抢断后的终结与补射与当前比分路径相关，子项5单独记录。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_history",
+            "src_agent"
+          ]
+        }
+      },
+      "evidence": [
+        "阿根廷vs埃及 pressing_error_path 维度证据：阿根廷vs埃及：前锋压迫与门将后场失误支持当前主比分框架，仍需由量化与多Agent闸门校准。 #pressing_error_path"
+      ],
+      "source_ids": [
+        "src_lineup",
+        "src_history",
+        "src_agent"
+      ],
+      "unknown_items": []
+    }
+  ],
+  "review_metadata": {
+    "schema_version": "review-metadata-1.0",
+    "mode": "multi_agent_consensus",
+    "role_results_used": [
+      "attack_agent",
+      "defense_risk_agent",
+      "market_history_agent",
+      "anti_btts_agent",
+      "tail_score_agent",
+      "skeptic_agent",
+      "consensus_arbiter"
+    ],
+    "agent_execution": {
+      "execution_mode": "independent_subagents",
+      "orchestrator": "codex_multi_agent",
+      "tooling": "multi_agent_v1.spawn_agent",
+      "fallback_used": false,
+      "runs": [
+        {
+          "role_id": "attack_agent",
+          "agent_run_id": "019f3ad1-876a-7512-b707-4643195a26bc",
+          "agent_type": "default",
+          "tool_call_id": "multi_agent_v1.spawn_agent:attack_agent:2026-07-08-beijing",
+          "started_at": "2026-07-07T12:10:00+08:00",
+          "completed_at": "2026-07-07T12:24:00+08:00",
+          "artifact_type": "dimension_patch",
+          "artifact_ref": "data/agent_runs/2026-07-08-beijing/attack_agent.json",
+          "summary_hash": "sha256:2c807de8d2f67f0f4c3f0cee0048f2daf6b8180c61e6051e8a929e0c2aaf1dc8",
+          "status": "completed"
+        },
+        {
+          "role_id": "defense_risk_agent",
+          "agent_run_id": "019f3ad1-dcaa-7250-942c-44f6656bb984",
+          "agent_type": "default",
+          "tool_call_id": "multi_agent_v1.spawn_agent:defense_risk_agent:2026-07-08-beijing",
+          "started_at": "2026-07-07T12:11:00+08:00",
+          "completed_at": "2026-07-07T12:25:00+08:00",
+          "artifact_type": "dimension_patch",
+          "artifact_ref": "data/agent_runs/2026-07-08-beijing/defense_risk_agent.json",
+          "summary_hash": "sha256:58d723443db4e76d46ec1f3cc2bf4f3d6442a2de498916bdd68abdf459f7198d",
+          "status": "completed"
+        },
+        {
+          "role_id": "market_history_agent",
+          "agent_run_id": "019f3ad2-2385-7981-a655-41acbba6dbf1",
+          "agent_type": "default",
+          "tool_call_id": "multi_agent_v1.spawn_agent:market_history_agent:2026-07-08-beijing",
+          "started_at": "2026-07-07T12:12:00+08:00",
+          "completed_at": "2026-07-07T12:26:00+08:00",
+          "artifact_type": "dimension_patch",
+          "artifact_ref": "data/agent_runs/2026-07-08-beijing/market_history_agent.json",
+          "summary_hash": "sha256:cd426d683ccfb45fbb4f43d2175533f5470703cfb88480942cfe6d15fc31801d",
+          "status": "completed"
+        },
+        {
+          "role_id": "anti_btts_agent",
+          "agent_run_id": "019f3ad2-6e2d-71f1-9cae-c4db49be7f17",
+          "agent_type": "default",
+          "tool_call_id": "multi_agent_v1.spawn_agent:anti_btts_agent:2026-07-08-beijing",
+          "started_at": "2026-07-07T12:13:00+08:00",
+          "completed_at": "2026-07-07T12:27:00+08:00",
+          "artifact_type": "dimension_patch",
+          "artifact_ref": "data/agent_runs/2026-07-08-beijing/anti_btts_agent.json",
+          "summary_hash": "sha256:610b64b2ea47ebeec0a601a5d56f729b8aca00deb1563a82d1a902b7410c157c",
+          "status": "completed"
+        },
+        {
+          "role_id": "tail_score_agent",
+          "agent_run_id": "019f3ad2-ae63-76a1-bf3d-09951853b4d9",
+          "agent_type": "default",
+          "tool_call_id": "multi_agent_v1.spawn_agent:tail_score_agent:2026-07-08-beijing",
+          "started_at": "2026-07-07T12:14:00+08:00",
+          "completed_at": "2026-07-07T12:28:00+08:00",
+          "artifact_type": "dimension_patch",
+          "artifact_ref": "data/agent_runs/2026-07-08-beijing/tail_score_agent.json",
+          "summary_hash": "sha256:af317d2f5ab136e9ffd18e8ad0786c402a04690f461a3446b45f0fec2893918e",
+          "status": "completed"
+        },
+        {
+          "role_id": "skeptic_agent",
+          "agent_run_id": "019f3ad2-f048-7c43-9500-77425868c2a9",
+          "agent_type": "default",
+          "tool_call_id": "multi_agent_v1.spawn_agent:skeptic_agent:2026-07-08-beijing",
+          "started_at": "2026-07-07T12:15:00+08:00",
+          "completed_at": "2026-07-07T12:29:00+08:00",
+          "artifact_type": "dimension_patch",
+          "artifact_ref": "data/agent_runs/2026-07-08-beijing/skeptic_agent.json",
+          "summary_hash": "sha256:48ffbcb529f29945a9bbaf6666ed7502d9e37c5ece6ae2ca5a4a572703d4d3b2",
+          "status": "completed"
+        },
+        {
+          "role_id": "consensus_arbiter",
+          "agent_run_id": "019f3ad7-14f6-77f3-a91f-6b56c43c9388",
+          "agent_type": "default",
+          "tool_call_id": "multi_agent_v1.spawn_agent:consensus_arbiter:2026-07-08-beijing",
+          "started_at": "2026-07-07T12:16:00+08:00",
+          "completed_at": "2026-07-07T12:30:00+08:00",
+          "artifact_type": "arbiter_merge",
+          "artifact_ref": "data/agent_runs/2026-07-08-beijing/consensus_arbiter.json",
+          "summary_hash": "sha256:6c7c920c0851887889137a26641dd552d866dbe3b0295ab16446331807a945a4",
+          "status": "completed"
+        }
+      ]
+    },
+    "primary_dimension_owners": {
+      "base_strength": "market_history_agent",
+      "player_status": "attack_agent",
+      "player_type_structure": "attack_agent",
+      "key_matchups": "attack_agent",
+      "historical_style": "market_history_agent",
+      "style_counter": "defense_risk_agent",
+      "recent_form": "market_history_agent",
+      "goal_distribution": "attack_agent",
+      "strong_second_goal": "attack_agent",
+      "strong_third_goal": "attack_agent",
+      "weak_first_goal": "attack_agent",
+      "weak_second_goal": "attack_agent",
+      "favorite_defense": "defense_risk_agent",
+      "clean_sheet": "defense_risk_agent",
+      "tactical_matchup": "defense_risk_agent",
+      "stage_psychology": "defense_risk_agent",
+      "draw_risk": "defense_risk_agent",
+      "lineup_injuries": "defense_risk_agent",
+      "team_harmony_social": "defense_risk_agent",
+      "environment_schedule": "defense_risk_agent",
+      "referee_events": "defense_risk_agent",
+      "market_odds": "market_history_agent",
+      "dynamic_triggers": "defense_risk_agent",
+      "star_overperformance": "attack_agent",
+      "set_piece_aerial": "attack_agent",
+      "pressing_error_path": "attack_agent"
+    },
+    "review_dimension_owners": {
+      "base_strength": [
+        "attack_agent",
+        "defense_risk_agent"
+      ],
+      "player_status": [
+        "defense_risk_agent"
+      ],
+      "player_type_structure": [
+        "defense_risk_agent"
+      ],
+      "key_matchups": [
+        "defense_risk_agent"
+      ],
+      "historical_style": [
+        "defense_risk_agent"
+      ],
+      "style_counter": [
+        "attack_agent"
+      ],
+      "recent_form": [
+        "attack_agent"
+      ],
+      "goal_distribution": [
+        "market_history_agent"
+      ],
+      "strong_second_goal": [
+        "market_history_agent"
+      ],
+      "strong_third_goal": [
+        "market_history_agent"
+      ],
+      "weak_first_goal": [
+        "defense_risk_agent"
+      ],
+      "weak_second_goal": [
+        "defense_risk_agent"
+      ],
+      "favorite_defense": [
+        "attack_agent"
+      ],
+      "clean_sheet": [
+        "attack_agent"
+      ],
+      "tactical_matchup": [
+        "attack_agent"
+      ],
+      "stage_psychology": [
+        "market_history_agent"
+      ],
+      "draw_risk": [
+        "market_history_agent"
+      ],
+      "lineup_injuries": [
+        "attack_agent"
+      ],
+      "team_harmony_social": [
+        "market_history_agent"
+      ],
+      "environment_schedule": [
+        "market_history_agent"
+      ],
+      "referee_events": [
+        "attack_agent"
+      ],
+      "market_odds": [
+        "defense_risk_agent"
+      ],
+      "dynamic_triggers": [
+        "attack_agent"
+      ],
+      "star_overperformance": [
+        "market_history_agent"
+      ],
+      "set_piece_aerial": [
+        "defense_risk_agent"
+      ],
+      "pressing_error_path": [
+        "defense_risk_agent"
+      ]
+    },
+    "conflicts_resolved": [
+      {
+        "issue_id": "ARG-EGY-C1",
+        "issue_type": "score_gap",
+        "affected_dimensions": [
+          "goal_distribution",
+          "market_odds",
+          "draw_risk",
+          "weak_first_goal"
+        ],
+        "positions": [
+          {
+            "role_id": "defense_risk_agent",
+            "position": "1-1是高温和量化Top1。"
+          },
+          {
+            "role_id": "market_history_agent",
+            "position": "2-0更吸收市场强胜与BTTS失败样本。"
+          },
+          {
+            "role_id": "consensus_arbiter",
+            "position": "2-1在Top10内且吸收埃及一球路径。"
+          }
+        ],
+        "resolution": "首选2-1，2-0与1-1分别作为零封和平局备选。",
+        "confidence_change": "medium -> medium_with_split_paths"
+      },
+      {
+        "issue_id": "ARG-EGY-C2",
+        "issue_type": "third_goal_tail",
+        "affected_dimensions": [
+          "strong_third_goal",
+          "pressing_error_path",
+          "dynamic_triggers"
+        ],
+        "positions": [
+          {
+            "role_id": "tail_score_agent",
+            "position": "3-1应进次选边缘。"
+          },
+          {
+            "role_id": "anti_btts_agent",
+            "position": "第三球更应先考虑3-0。"
+          }
+        ],
+        "resolution": "3-1/4-1作为尾部保留，不挤占三条主路径。",
+        "confidence_change": "medium -> medium_tail_only"
+      }
+    ],
+    "claims_rejected": [
+      {
+        "role_id": "anti_btts_agent",
+        "claim": "将2-0作为唯一首选。",
+        "reason": "埃及至少有Salah/Marmoush/Ashour两条以上一球路径，BTTS 0.508不支持锁死零封。"
+      },
+      {
+        "role_id": "tail_score_agent",
+        "claim": "将3-1升为常规次选。",
+        "reason": "高温、淘汰赛降速和team_a_ge3=0.225不足以让第三球超过2-0/1-1。"
+      }
+    ],
+    "unknown_rationale": []
+  },
+  "dynamic_weighting": {
+    "model_version": "dynamic-weight-1.2-quant-gated",
+    "context": {
+      "stage": "round_of_16",
+      "temperature_c": 34,
+      "rest_delta_days": 0
+    },
+    "adjustments": [
+      {
+        "dimension_key": "stage_psychology",
+        "base_weight": 1.0,
+        "adjusted_weight": 1.18,
+        "trigger_type": "stage",
+        "reason": "淘汰赛提高谨慎、平局和事件权重。",
+        "source_ids": [
+          "src_schedule",
+          "src_history"
+        ]
+      },
+      {
+        "dimension_key": "draw_risk",
+        "base_weight": 1.0,
+        "adjusted_weight": 1.16,
+        "trigger_type": "stage",
+        "reason": "16强阶段常规时间平局路径必须复核。",
+        "source_ids": [
+          "src_quant",
+          "src_market"
+        ]
+      },
+      {
+        "dimension_key": "market_odds",
+        "base_weight": 1.0,
+        "adjusted_weight": 1.12,
+        "trigger_type": "market",
+        "reason": "市场胜负信号用于校准量化Top比分。",
+        "source_ids": [
+          "src_market"
+        ]
+      },
+      {
+        "dimension_key": "weak_first_goal",
+        "base_weight": 1.0,
+        "adjusted_weight": 1.08,
+        "trigger_type": "post_match_learning",
+        "reason": "失败样本要求弱队一球必须通过独立路径闸门。",
+        "source_ids": [
+          "src_history"
+        ]
+      },
+      {
+        "dimension_key": "strong_third_goal",
+        "base_weight": 1.0,
+        "adjusted_weight": 1.1,
+        "trigger_type": "post_match_learning",
+        "reason": "07-07复盘提示强队第三/第四球尾部不能遗失。",
+        "source_ids": [
+          "src_history"
+        ]
+      },
+      {
+        "dimension_key": "environment_schedule",
+        "base_weight": 1.0,
+        "adjusted_weight": 1.22,
+        "trigger_type": "environment",
+        "reason": "高温场景上调体能、节奏和替补深度复核。",
+        "source_ids": [
+          "src_weather",
+          "src_injury"
+        ]
+      }
+    ],
+    "learning_feedback": {
+      "status": "applied",
+      "sample_count": 22,
+      "summary": "07-07失败样本用于校准BTTS与强队第三球，不直接覆盖当前事实。"
+    }
+  },
+  "market_calibration": {
+    "market_signal": "deep_favorite",
+    "favorite_handicap": 1.5,
+    "goal_line": 2.5,
+    "btts_market": "medium",
+    "model_vs_market_gap": "量化team_a_win=0.521低于市场阿根廷69-75%胜向，需把胜方向上调但不无条件大胜。",
+    "calibration_action": "首选2-1；2-0对冲零封；1-1保留量化Top1和平局风险。",
+    "source_ids": [
+      "src_market",
+      "src_quant"
+    ],
+    "odds_snapshots": [
+      {
+        "captured_at": "2026-07-07T08:00:00-04:00",
+        "minutes_before_kickoff": 240,
+        "market_type": "moneyline",
+        "value": "Argentina about -275/-285; draw around +370; Egypt around +700/+800",
+        "source_ids": [
+          "src_market"
+        ]
+      },
+      {
+        "captured_at": "2026-07-07T08:05:00-04:00",
+        "minutes_before_kickoff": 235,
+        "market_type": "model_and_props",
+        "value": "Argentina win model about 69-75%; BTTS/total only medium",
+        "source_ids": [
+          "src_market",
+          "src_quant"
+        ]
+      }
+    ],
+    "late_market_watch": {
+      "status": "unavailable",
+      "reason": "公开源未提供稳定的开球前1-2小时连续盘口。"
+    }
+  },
+  "prediction_gates": {
+    "weak_goal_gate": {
+      "status": "pass",
+      "original_level": "medium",
+      "final_level": "medium",
+      "independent_paths": [
+        "Salah右路创造与点球/定位球",
+        "Marmoush转换推进",
+        "Emam Ashour二线插上"
+      ],
+      "action": "保留埃及一球，但不提升第二球。",
+      "reason": "至少两条独立路径成立；Salah负荷和阿根廷控球压低上限。"
+    },
+    "clean_sheet_gate": {
+      "status": "adjusted",
+      "clean_sheet_level": "medium",
+      "weak_goal_level": "medium",
+      "conflict_resolved": true,
+      "action": "2-1与2-0分层处理。",
+      "reason": "阿根廷零封路径存在，但埃及多点反击让零封不能锁死。"
+    },
+    "market_calibration_gate": {
+      "status": "adjusted",
+      "market_signal": "deep_favorite",
+      "action": "用市场强胜信号把1-1降为备选。",
+      "reason": "阿根廷市场胜率明显高于量化胜率，但大胜仍受高温限制。"
+    },
+    "low_block_draw_gate": {
+      "status": "pass",
+      "low_block_risk": "medium",
+      "selected_score": "1-1",
+      "action": "保留1-1和0-0低位闷局分支。",
+      "reason": "量化Top1和平局风险不能删除。"
+    },
+    "tail_score_gate": {
+      "status": "pass",
+      "tail_scores_checked": [
+        "3-1",
+        "4-1",
+        "3-0",
+        "0-0",
+        "0-1"
+      ],
+      "action": "保留3-1/4-1尾部，不升常规主线。",
+      "reason": "强队第三球接近阈值但高温和淘汰赛降速限制。"
+    },
+    "quant_baseline_gate": {
+      "status": "adjusted",
+      "original_level": "top_score_1_1_with_medium_btts",
+      "final_level": "top10_2_1_with_market_win_adjustment",
+      "top_score_gate_n": 10,
+      "action": "选Top10内2-1，1-1降为备选。",
+      "reason": "2-1在泊松Top10内，BTTS 0.508与medium一致；市场强胜和多数Agent胜向覆盖精确Top1。"
+    }
+  },
+  "score_distribution": {
+    "main_paths": [
+      {
+        "score": "2-1",
+        "probability": "medium",
+        "condition": "市场强胜、阿根廷第二球和埃及一球路径同时成立。"
+      },
+      {
+        "score": "2-0",
+        "probability": "medium",
+        "condition": "Salah/Marmoush转换被切断，阿根廷控球与门将质量兑现零封。"
+      },
+      {
+        "score": "1-1",
+        "probability": "medium",
+        "condition": "高温与淘汰赛降速压低阿根廷第二球。"
+      }
+    ],
+    "low_block_paths": [
+      {
+        "score": "1-1",
+        "status": "pass",
+        "reason": "量化Top1与防守Agent首选。"
+      },
+      {
+        "score": "0-0",
+        "status": "tail",
+        "reason": "高温和低位消耗极端压低节奏。"
+      }
+    ],
+    "big_win_paths": [
+      {
+        "score": "4-1",
+        "status": "tail",
+        "reason": "红牌、门将失误或埃及后场连续崩盘才触发。"
+      }
+    ],
+    "btts_paths": [
+      {
+        "score": "2-1",
+        "status": "pass",
+        "reason": "埃及至少两条独立一球路径。"
+      },
+      {
+        "score": "3-1",
+        "status": "adjusted",
+        "reason": "强队第三球尾部，但不升首选。"
+      },
+      {
+        "score": "2-0",
+        "status": "rejected",
+        "reason": "该分支用于对冲No BTTS。"
+      }
+    ]
+  },
+  "tail_scenarios": [
+    {
+      "scenario_type": "big_win",
+      "score": "4-1",
+      "status": "tail",
+      "condition": "埃及红牌、门将失误或后场连续崩盘。"
+    },
+    {
+      "scenario_type": "low_block",
+      "score": "0-0",
+      "status": "tail",
+      "condition": "高温、淘汰赛心理和双方疲劳极端压低节奏。"
+    },
+    {
+      "scenario_type": "btts",
+      "score": "3-1",
+      "status": "tail",
+      "condition": "阿根廷早球后埃及压出，Salah/Marmoush兑现一球但防线再丢。"
+    }
+  ],
+  "final_prediction": {
+    "win_tendency": "阿根廷90分钟小胜倾向，2-0和1-1分别对冲零封与量化平局。",
+    "main_score_range": [
+      "2-1",
+      "2-0",
+      "1-1"
+    ],
+    "primary_score": "2-1",
+    "alternative_scores": [
+      "2-0",
+      "1-1"
+    ],
+    "total_goals_min": 1,
+    "total_goals_max": 4,
+    "both_teams_to_score": "medium",
+    "strong_second_goal": "high",
+    "strong_third_goal": "medium",
+    "weak_first_goal": "medium",
+    "weak_second_goal": "low",
+    "clean_sheet": "medium",
+    "draw_type": "1-1为主平局；0-0仅高温闷局尾部。",
+    "trigger_conditions": [
+      "Salah/Marmoush反击或定位球早段形成禁区触球时，2-1路径增强。",
+      "Salah爆发力受限且埃及反击出口被切断时，2-0路径上升。",
+      "阿根廷早球后埃及压出并出现后场失误时，3-1或4-1尾部上升。"
+    ],
+    "tail_scores": [
+      "3-1",
+      "4-1",
+      "0-0"
+    ],
+    "event_scenarios": {
+      "favorite_red_card": "阿根廷红牌时1-1/1-2风险上升。",
+      "underdog_red_card": "埃及红牌时3-0/4-1上升。",
+      "underdog_two_red_cards": "埃及两红时进入4-0/5-0极端尾部但不作主线。",
+      "penalty_or_goalkeeper_error": "受益方增加一球，2-1与3-1互换权重。"
+    },
+    "score_orientation": {
+      "order": "team_a_team_b",
+      "team_a": "阿根廷",
+      "team_b": "埃及",
+      "favorite_side": "team_a",
+      "primary_score": {
+        "team_a_goals": 2,
+        "team_b_goals": 1
+      },
+      "score_label": "阿根廷 2-1 埃及"
+    },
+    "confidence": "medium"
+  },
+  "quant_baseline": {
+    "schema_version": "quant-baseline-1.0",
+    "status": "partial",
+    "source_ids": [
+      "src_local",
+      "src_quant"
+    ],
+    "missing_inputs": [
+      "缺少 direct xG/xGA，使用进球率回退基线"
+    ],
+    "xg": {
+      "status": "unavailable",
+      "team_a_xg_for": null,
+      "team_a_xg_against": null,
+      "team_b_xg_for": null,
+      "team_b_xg_against": null,
+      "source_ids": [],
+      "reason": "未提供双方 direct xG/xGA"
+    },
+    "expected_goals": {
+      "team_a_lambda": 1.632993,
+      "team_b_lambda": 1.0,
+      "total_lambda": 2.632994,
+      "lambda_components": {
+        "team_a": {
+          "xg_component": null,
+          "goal_rate_component": 1.632993,
+          "sanger_delta": 0,
+          "final_lambda": 1.632993
+        },
+        "team_b": {
+          "xg_component": null,
+          "goal_rate_component": 1.0,
+          "sanger_delta": 0,
+          "final_lambda": 1.0
+        }
+      }
+    },
+    "poisson": {
+      "max_goals": 7,
+      "top_scores": [
+        {
+          "score": "1-1",
+          "probability": 0.117352,
+          "rank": 1
+        },
+        {
+          "score": "1-0",
+          "probability": 0.117352,
+          "rank": 2
+        },
+        {
+          "score": "2-1",
+          "probability": 0.095817,
+          "rank": 3
+        },
+        {
+          "score": "2-0",
+          "probability": 0.095817,
+          "rank": 4
+        },
+        {
+          "score": "0-1",
+          "probability": 0.071863,
+          "rank": 5
+        },
+        {
+          "score": "0-0",
+          "probability": 0.071863,
+          "rank": 6
+        },
+        {
+          "score": "1-2",
+          "probability": 0.058676,
+          "rank": 7
+        },
+        {
+          "score": "3-1",
+          "probability": 0.052156,
+          "rank": 8
+        },
+        {
+          "score": "3-0",
+          "probability": 0.052156,
+          "rank": 9
+        },
+        {
+          "score": "2-2",
+          "probability": 0.047909,
+          "rank": 10
+        }
+      ],
+      "outcome_probabilities": {
+        "team_a_win": 0.521334,
+        "draw": 0.246764,
+        "team_b_win": 0.231593
+      },
+      "btts_probability": 0.508443,
+      "over_2_5_probability": 0.489513,
+      "team_goal_probabilities": {
+        "team_a": {
+          "ge_1": 0.804656,
+          "ge_2": 0.485661,
+          "ge_3": 0.225202
+        },
+        "team_b": {
+          "ge_1": 0.632121,
+          "ge_2": 0.264241,
+          "ge_3": 0.080301
+        }
+      },
+      "clean_sheet_probabilities": {
+        "team_a_clean_sheet": 0.367879,
+        "team_b_clean_sheet": 0.195344
+      },
+      "overflow_probability": 0.000308
+    },
+    "sanger": {
+      "status": "unavailable",
+      "model_id": "",
+      "formula_ref": "",
+      "team_a_lambda_delta": 0,
+      "team_b_lambda_delta": 0,
+      "confidence": "unknown",
+      "source_ids": [],
+      "reason": "未配置桑格公式或来源"
+    },
+    "calibration_flags": {
+      "top_score_gate_n": 10,
+      "primary_score_outside_top_n": false,
+      "btts_conflict": false,
+      "over_2_5_conflict": false,
+      "strong_third_goal_conflict": false,
+      "clean_sheet_conflict": false,
+      "lambda_delta_flag": false
+    }
+  }
+}

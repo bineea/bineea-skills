@@ -1,0 +1,13 @@
+{
+  "schema_version": "agent-artifact-1.0",
+  "role_id": "consensus_arbiter",
+  "agent_run_id": "019f3709-f3c7-7440-b4c5-b8ee360f282e",
+  "execution_mode": "independent_subagent",
+  "created_at": "2026-07-06T18:35:00+08:00",
+  "tooling": "multi_agent_v1.spawn_agent",
+  "summary": "本 artifact 由本轮真实独立子 Agent 输出整理，用于 2026-07-07 北京时间两场世界杯预测合议校验。",
+  "match_summaries": {
+    "POR-ESP": "裁决1-2为首选，0-1最强次选；量化闸门adjusted，BTTS/Over降为medium。",
+    "USA-BEL": "裁决2-2为首选，3-2/2-3主线次选；量化闸门aligned。"
+  }
+}

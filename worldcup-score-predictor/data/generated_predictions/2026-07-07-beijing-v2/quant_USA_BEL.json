@@ -1,0 +1,139 @@
+{
+  "quant_baseline": {
+    "schema_version": "quant-baseline-1.0",
+    "status": "partial",
+    "source_ids": [
+      "src_local",
+      "src_quant"
+    ],
+    "missing_inputs": [
+      "ȱ�� direct xG/xGA��ʹ�ý����ʻ��˻���"
+    ],
+    "xg": {
+      "status": "unavailable",
+      "team_a_xg_for": null,
+      "team_a_xg_against": null,
+      "team_b_xg_for": null,
+      "team_b_xg_against": null,
+      "source_ids": [],
+      "reason": "δ�ṩ˫�� direct xG/xGA"
+    },
+    "expected_goals": {
+      "team_a_lambda": 1.581139,
+      "team_b_lambda": 1.5,
+      "total_lambda": 3.081139,
+      "lambda_components": {
+        "team_a": {
+          "xg_component": null,
+          "goal_rate_component": 1.581139,
+          "sanger_delta": 0,
+          "final_lambda": 1.581139
+        },
+        "team_b": {
+          "xg_component": null,
+          "goal_rate_component": 1.5,
+          "sanger_delta": 0,
+          "final_lambda": 1.5
+        }
+      }
+    },
+    "poisson": {
+      "max_goals": 7,
+      "top_scores": [
+        {
+          "score": "1-1",
+          "probability": 0.108878,
+          "rank": 1
+        },
+        {
+          "score": "2-1",
+          "probability": 0.086076,
+          "rank": 2
+        },
+        {
+          "score": "1-2",
+          "probability": 0.081658,
+          "rank": 3
+        },
+        {
+          "score": "1-0",
+          "probability": 0.072585,
+          "rank": 4
+        },
+        {
+          "score": "0-1",
+          "probability": 0.06886,
+          "rank": 5
+        },
+        {
+          "score": "2-2",
+          "probability": 0.064557,
+          "rank": 6
+        },
+        {
+          "score": "2-0",
+          "probability": 0.057384,
+          "rank": 7
+        },
+        {
+          "score": "0-2",
+          "probability": 0.051645,
+          "rank": 8
+        },
+        {
+          "score": "0-0",
+          "probability": 0.045907,
+          "rank": 9
+        },
+        {
+          "score": "3-1",
+          "probability": 0.045366,
+          "rank": 10
+        }
+      ],
+      "outcome_probabilities": {
+        "team_a_win": 0.39782,
+        "draw": 0.239131,
+        "team_b_win": 0.362638
+      },
+      "btts_probability": 0.616714,
+      "over_2_5_probability": 0.59433,
+      "team_goal_probabilities": {
+        "team_a": {
+          "ge_1": 0.794259,
+          "ge_2": 0.468955,
+          "ge_3": 0.211779
+        },
+        "team_b": {
+          "ge_1": 0.77687,
+          "ge_2": 0.442175,
+          "ge_3": 0.191153
+        }
+      },
+      "clean_sheet_probabilities": {
+        "team_a_clean_sheet": 0.22313,
+        "team_b_clean_sheet": 0.205741
+      },
+      "overflow_probability": 0.00041
+    },
+    "sanger": {
+      "status": "unavailable",
+      "model_id": "",
+      "formula_ref": "",
+      "team_a_lambda_delta": 0,
+      "team_b_lambda_delta": 0,
+      "confidence": "unknown",
+      "source_ids": [],
+      "reason": "δ����ɣ��ʽ����Դ"
+    },
+    "calibration_flags": {
+      "top_score_gate_n": 10,
+      "primary_score_outside_top_n": false,
+      "btts_conflict": false,
+      "over_2_5_conflict": false,
+      "strong_third_goal_conflict": false,
+      "clean_sheet_conflict": false,
+      "lambda_delta_flag": false
+    }
+  }
+}

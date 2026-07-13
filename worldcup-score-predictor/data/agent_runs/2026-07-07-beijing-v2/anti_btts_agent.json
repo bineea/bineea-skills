@@ -1,0 +1,13 @@
+{
+  "schema_version": "agent-artifact-1.0",
+  "role_id": "anti_btts_agent",
+  "agent_run_id": "019f3706-5a4c-7a53-82ab-d843dd5e0d0a",
+  "execution_mode": "independent_subagent",
+  "created_at": "2026-07-06T18:35:00+08:00",
+  "tooling": "multi_agent_v1.spawn_agent",
+  "summary": "本 artifact 由本轮真实独立子 Agent 输出整理，用于 2026-07-07 北京时间两场世界杯预测合议校验。",
+  "match_summaries": {
+    "POR-ESP": "首选0-1；质疑BTTS，要求若选1-2必须说明葡萄牙定位球/反击路径。",
+    "USA-BEL": "首选2-2；反BTTS不成立，BTTS high。"
+  }
+}

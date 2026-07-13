@@ -1,0 +1,17 @@
+{
+  "schema_version": "role-artifact-1.0",
+  "role_id": "consensus_arbiter",
+  "agent_run_id": "019f32eb-00a0-7312-ad55-24998eea4c30",
+  "source_tooling": "multi_agent_v1.spawn_agent",
+  "status": "completed",
+  "job_id": "2026-07-06-beijing",
+  "matches": [
+    "2026-07-06_BJT_BRA_NOR",
+    "2026-07-06_BJT_MEX_ENG"
+  ],
+  "summary": "仲裁：巴挪首选2-1，次选3-1/1-1/2-0；墨英首选0-0，次选1-0/0-1/1-1。",
+  "key_findings": [
+    "巴挪BTTS降至medium，2-2仅条件尾部",
+    "墨英BTTS No优先，0-0升为primary"
+  ]
+}

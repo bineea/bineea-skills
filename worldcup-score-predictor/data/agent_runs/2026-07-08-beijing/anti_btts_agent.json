@@ -1,0 +1,41 @@
+{
+  "schema_version": "agent-artifact-1.0",
+  "role_id": "anti_btts_agent",
+  "agent_run_id": "019f3ad2-6e2d-71f1-9cae-c4db49be7f17",
+  "execution_mode": "independent_subagent",
+  "created_at": "2026-07-07T12:30:58+08:00",
+  "tooling": "multi_agent_v1.spawn_agent",
+  "summary": "反BTTS侧首选阿根廷2-0和哥伦比亚0-1，要求不要因名气机械给埃及或瑞士进球。",
+  "match_summaries": {
+    "2026-07-08_BJT_ARG_EGY": {
+      "primary_score": "2-0",
+      "alternatives": [
+        "1-0",
+        "2-1"
+      ],
+      "btts_level": "low_medium",
+      "strong_second_goal": "medium",
+      "strong_third_goal": "low_medium",
+      "weak_first_goal": "low_medium",
+      "weak_second_goal": "low",
+      "clean_sheet": "medium"
+    },
+    "2026-07-08_BJT_SUI_COL": {
+      "primary_score": "0-1",
+      "alternatives": [
+        "0-0",
+        "0-2"
+      ],
+      "btts_level": "low",
+      "strong_second_goal": "low_medium",
+      "strong_third_goal": "low",
+      "weak_first_goal": "low_medium",
+      "weak_second_goal": "low",
+      "clean_sheet": "medium_high"
+    }
+  },
+  "conflicts_to_raise": [
+    "ARG-EGY BTTS=0.508不足以支持1-1主路径",
+    "SUI-COL Cordoba伤缺应压低大球而非抬高BTTS"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": "role-artifact-1.0",
+  "role_id": "tail_score_agent",
+  "agent_run_id": "019f32e0-9687-7c02-8cd1-4f4d246bccec",
+  "source_tooling": "multi_agent_v1.spawn_agent",
+  "status": "completed",
+  "job_id": "2026-07-06-beijing",
+  "matches": [
+    "2026-07-06_BJT_BRA_NOR",
+    "2026-07-06_BJT_MEX_ENG"
+  ],
+  "summary": "尾部比分：巴挪3-1可入主区间、2-2条件尾部；墨英0-0/1-0主区间，2球以上胜分多为事件尾部。",
+  "key_findings": [
+    "巴挪红牌可推4-1/5-0",
+    "墨英点球/门将失误决定1-0/0-1/1-1方向"
+  ]
+}

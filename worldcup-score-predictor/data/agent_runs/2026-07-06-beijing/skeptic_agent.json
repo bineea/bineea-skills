@@ -1,0 +1,17 @@
+{
+  "schema_version": "role-artifact-1.0",
+  "role_id": "skeptic_agent",
+  "agent_run_id": "019f32e0-d32f-72a3-b8f5-be9fc0bf4fc9",
+  "source_tooling": "multi_agent_v1.spawn_agent",
+  "status": "completed",
+  "job_id": "2026-07-06-beijing",
+  "matches": [
+    "2026-07-06_BJT_BRA_NOR",
+    "2026-07-06_BJT_MEX_ENG"
+  ],
+  "summary": "质疑视角：质疑巴西3-1过热、2-0忽略Haaland、2-2过度放大；质疑墨英1-1折中叙事。",
+  "key_findings": [
+    "巴挪3-1不可唯一首选",
+    "墨英先锁U2.5再分配0-0/1-0/0-1/1-1"
+  ]
+}

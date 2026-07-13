@@ -1,0 +1,52 @@
+{
+  "schema_version": "failure-backfill-report-1.0",
+  "generated_at": "2026-07-10T01:49:08+00:00",
+  "dry_run": false,
+  "scanned_prediction_files": 37,
+  "matched_prediction_attempts": 33,
+  "matched_unique_matches": 23,
+  "canonical_failure_samples": 21,
+  "duplicate_prediction_versions": 10,
+  "unmatched_predictions": [
+    {
+      "source_file": "2026-06-28-beijing\\2026-06-28_BJT_ARG_JOR.json",
+      "prediction_id": "2026-06-28_BJT_ARG_JOR",
+      "teams": "阿根廷 vs 约旦",
+      "predicted_score": "2-0",
+      "reason": "未匹配到 SQLite 已结束赛果"
+    },
+    {
+      "source_file": "2026-06-28-beijing\\2026-06-28_BJT_AUT_ALG.json",
+      "prediction_id": "2026-06-28_BJT_AUT_ALG",
+      "teams": "奥地利 vs 阿尔及利亚",
+      "predicted_score": "0-0",
+      "reason": "未匹配到 SQLite 已结束赛果"
+    },
+    {
+      "source_file": "2026-06-28-beijing\\2026-06-28_BJT_COD_UZB.json",
+      "prediction_id": "2026-06-28_BJT_COD_UZB",
+      "teams": "刚果（金） vs 乌兹别克斯坦",
+      "predicted_score": "2-1",
+      "reason": "未匹配到 SQLite 已结束赛果"
+    },
+    {
+      "source_file": "2026-06-28-beijing\\2026-06-28_BJT_COL_POR.json",
+      "prediction_id": "2026-06-28_BJT_COL_POR",
+      "teams": "哥伦比亚 vs 葡萄牙",
+      "predicted_score": "1-1",
+      "reason": "未匹配到 SQLite 已结束赛果"
+    }
+  ],
+  "failure_tag_counts": {
+    "精确比分未命中": 21,
+    "BTTS误判": 15,
+    "高估弱队进球": 8,
+    "胜平负未命中": 8,
+    "总进球区间未命中": 9,
+    "热门方向错误": 5,
+    "低估强队第三球": 10,
+    "尾部未进入主次": 5,
+    "低估弱队第二球": 6,
+    "过度锁定低比分": 1
+  }
+}

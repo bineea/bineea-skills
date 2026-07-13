@@ -1,6 +1,6 @@
 # Codex 调用知识库进行预测的流程
 
-Codex 预测新比赛时，默认启用受控多 Agent 合议流程。多 Agent 只用于分工、质疑和共识，不改变最终 JSON、校验器和报告模板的交付要求。
+Codex 预测新比赛时，必须启用受控多 Agent 合议流程。这里的“多 Agent”指真实调用多个独立子 Agent 运行，而不是单 Agent 在同一上下文中扮演多个角色。多 Agent 只用于分工、质疑和共识，不改变最终 JSON、校验器和报告模板的交付要求。
 
 赛后复盘和历史比赛数据更新不使用本流程，继续按 `references/post-match-data-update-workflow.md` 和 `scripts/update_post_match_data.py` 执行。
 
@@ -19,11 +19,13 @@ Codex 预测新比赛时，默认启用受控多 Agent 合议流程。多 Agent 
 
 - Coordinator 读取完整 Skill 说明、方法论、模板、维度目录和历史样本。
 - 其他 Agent 只接收 Match Evidence Pack、自己负责的维度键、对应 required_checks 和必要历史样本摘要。
+- Coordinator 必须通过当前运行环境可用的多 Agent / 子 Agent 工具实际派发任务，并记录每个子 Agent 的运行 ID。
 - 不让每个 Agent 重复读取完整 26 维说明。
 - 不保存自由聊天全文，只保留结构化分歧账本和仲裁摘要。
 - 每个 Agent 输出 JSON patch 或短表格，不输出长篇报告。
 - 讨论最多两轮：初评、质疑、定向回应、仲裁。
 - 校验失败时只回补失败维度或失败合议项，不重新跑全量流程。
+- 如果没有可用的多 Agent 工具，停止赛前预测并说明严格流程无法执行；不得把单 Agent 角色模拟写入 `review_metadata`。
 
 ## Match Evidence Pack
 
@@ -40,7 +42,11 @@ Coordinator 先建立统一事实包。后续 Agent 只能引用其中的 `sourc
     "recent_form": [],
     "lineups_injuries": [],
     "player_form": [],
+    "player_advanced_metrics": [],
+    "player_matchup_edges": [],
     "odds_market": [],
+    "late_odds_snapshots": [],
+    "quant_baseline_inputs": {},
     "weather_pitch": [],
     "referee": [],
     "team_context": []
@@ -90,6 +96,60 @@ Coordinator 先建立统一事实包。后续 Agent 只能引用其中的 `sourc
 `skeptic_agent` 不负责生成完整维度，只审查高影响 claim：强队第二/第三球、弱队进球、零封、平局、极端比分尾部、红牌/点球/门将失误改判。
 
 `consensus_arbiter` 不新增事实，只合并 patch、处理冲突、统一强弱方口径并生成最终 JSON。
+
+## 量化基线与软闸门
+
+Coordinator 建立 Match Evidence Pack 后，必须先运行 `scripts/quant_baseline.py` 或手动生成完全等价的 `quant_baseline` fragment，再派发专业 Agent。量化基线只负责暴露概率基准和偏差，不替代26维、多 Agent 合议或历史失败样本路由。
+
+量化基线的默认口径：
+
+- direct xG/xGA 可用时，用 `sqrt(本队xG_for * 对手xG_against)` 作为主 λ，进球/失球率作为辅 λ，默认权重 `0.70/0.30`。
+- direct xG/xGA 缺失时，只能降级为进球/失球率泊松基线，`quant_baseline.status=partial`，不得用射门数伪造 xG。
+- 桑格仅作为可插拔 adapter：未配置公式或来源时 `status=unavailable`；若为 `computed`，只允许提供 λ delta，单队绝对值不得超过 `0.35`。
+- λ 必须限制在 `0.15..4.00`，双泊松比分矩阵计算到 `0..7` 球，并记录 overflow probability。
+
+专业 Agent 接收 Evidence Pack 时，应同时接收 `quant_baseline` 摘要。`market_history_agent` 复核量化基线与赔率差异，`skeptic_agent` 质疑量化冲突，`consensus_arbiter` 最终决定接受、调整或拒绝量化信号。
+
+## 真实独立 Agent 执行要求
+
+每场赛前预测必须实际派发以下独立运行：
+
+| 角色 | 独立运行要求 | 输出 |
+|---|---|---|
+| `attack_agent` | 独立子 Agent | 攻击、球员、进球路径维度 patch |
+| `defense_risk_agent` | 独立子 Agent | 防守、环境、伤停、事件风险 patch |
+| `market_history_agent` | 独立子 Agent | 市场、历史样本、近期趋势 patch |
+| `anti_btts_agent` | 独立子 Agent | 弱队进球和双方进球反证 |
+| `tail_score_agent` | 独立子 Agent | 大胜、闷局、双方进球尾部检查 |
+| `skeptic_agent` | 独立子 Agent | 高影响 claim 质疑 |
+| `consensus_arbiter` | 独立子 Agent 或独立仲裁运行 | 合并 patch、裁决冲突、生成最终 JSON |
+
+最终 `review_metadata.agent_execution` 必须记录：
+
+```json
+{
+  "execution_mode": "independent_subagents",
+  "orchestrator": "codex",
+  "tooling": "multi_agent_v1.spawn_agent",
+  "fallback_used": false,
+  "runs": [
+    {
+      "role_id": "attack_agent",
+      "agent_run_id": "",
+      "agent_type": "",
+      "tool_call_id": "",
+      "started_at": "",
+      "completed_at": "",
+      "artifact_type": "dimension_patch",
+      "artifact_ref": "data/agent_runs/<match_id>/attack_agent.json",
+      "summary_hash": "sha256:<artifact_sha256>",
+      "status": "completed"
+    }
+  ]
+}
+```
+
+`agent_run_id` 必须来自真实子 Agent 调用结果；不得手写虚构 ID。`artifact_ref` 必须指向技能目录内真实存在的本地 JSON 产物，`summary_hash` 必须是该文件内容的 SHA-256。`fallback_used` 必须为 `false`。如果任何必需角色没有完成，或产物文件缺失/哈希不匹配，不得生成最终预测报告。
 
 ## 专业 Agent 输入
 
@@ -159,6 +219,9 @@ Coordinator 先建立统一事实包。后续 Agent 只能引用其中的 `sourc
     "tail_scores": [],
     "trigger_conditions": []
   },
+  "dynamic_weight_suggestions": [],
+  "market_calibration_patch": {},
+  "player_matchup_edge_patches": [],
   "claims_for_review": []
 }
 ```
@@ -203,9 +266,26 @@ Coordinator 合并初稿后，必须生成 Disagreement Ledger。只有会改变
 - 阵容未确认、伤停来源弱或预计首发缺证时，不得给相关维度 high confidence。
 - 仲裁输出必须包含 `review_metadata`，记录 `role_results_used`、`conflicts_resolved`、`claims_rejected` 和 `unknown_rationale`。
 
+## 动态权重与临场校准
+
+仲裁前必须写入 `dynamic_weighting`，并说明哪些维度因上下文被上调或下调。
+
+- 淘汰赛、加时风险或必须保结果的比赛：复核 `stage_psychology`、`draw_risk`、`strong_second_goal` 和 `weak_second_goal`。
+- 32℃及以上高温、高湿或短休：复核 `environment_schedule`、`player_status`、`strong_third_goal` 和替补相关判断。
+- 首发临场变化：复核 `lineup_injuries`、`player_status`、`weak_first_goal`、`clean_sheet`。
+- 赛后误差学习：只作为权重修正来源，必须写入样本数量和修正摘要，不得覆盖当前事实。
+
+`market_calibration` 必须包含至少两个 `odds_snapshots`，优先覆盖开球前 120 分钟到 60 分钟区间；若无法取得实时赔率，`late_market_watch.status` 设为 `unavailable` 并写明原因。出现让球、大小球或双方进球赔率异常跳动时，必须写明模型是否接受市场信号、如何修正比分分布，或为何拒绝。
+
+## 球员高阶数据与对位边
+
+每队至少3名关键球员必须填写 `advanced_metrics`。指标可包括 xG/90、xA/90、射门/90、关键传球/90、成功过人/90、被过/90、压迫/90、防空成功率、扑救率、特定温度或开球时段表现说明。
+
+`player_matchup_edges` 至少记录3组对位边，例如“边锋成功过人/90 vs 边后卫被过/90”、“压迫前锋 vs 门将/中卫出球失误”、“定位球高点 vs 防空成功率”。这些对位边必须进入 `key_matchups`、`style_counter`、`weak_first_goal`、`clean_sheet` 或相关维度的证据链。
+
 ## 赛前校准闸门
 
-仲裁前必须执行五个校准闸门，并写入 `prediction_gates`、`score_distribution`、`market_calibration` 和 `tail_scenarios`。
+仲裁前必须执行六个校准闸门，并写入 `prediction_gates`、`score_distribution`、`market_calibration`、`dynamic_weighting`、`quant_baseline` 和 `tail_scenarios`。
 
 | 闸门 | 必须判断 | 失败时动作 |
 |---|---|---|
@@ -214,6 +294,7 @@ Coordinator 合并初稿后，必须生成 Disagreement Ledger。只有会改变
 | `market_calibration_gate` | 市场让球明显支持强队大胜时，模型是否保留 3 球以上比分 | 未保留时上调强队第三球或登记拒绝理由 |
 | `low_block_draw_gate` | 强队阵地战风险高、对手低位结构强时，是否保留 0-0/1-0/1-1 | 至少一个闷局比分必须进入分布 |
 | `tail_score_gate` | 是否检查大胜、闷局、双方进球三类尾部 | 缺少任一类尾部说明不得通过 |
+| `quant_baseline_gate` | 最终比分、BTTS、大球、第三球和零封是否偏离量化基线 | 偏离时必须 `adjusted` 或 `rejected` 并写明接受或拒绝原因 |
 
 弱队进球路径必须是相互独立的事实路径，例如“核心首发反击 + 定位球高点”算两条；“同一名前锋速度快 + 同一名前锋能反击”只能算一条。
 
@@ -229,21 +310,24 @@ Coordinator 合并初稿后，必须生成 Disagreement Ledger。只有会改变
 1. 确认比赛基础事实：日期、阶段、场地、双方球队。
 2. 阅读本场输入模板，提取球队、球员、伤停、赔率、社媒/队内关系、环境信息。
 3. 建立 Match Evidence Pack，统一来源 ID。
-4. 检索历史样本：
+4. 运行或等价生成 `quant_baseline`，把 xG/进球率 λ、泊松 Top 比分、BTTS、Over2.5、桑格状态写入事实包。
+5. 检索历史样本：
    - 强队第三球或巨星超额能力高：参考法国 3-1 塞内加尔。
    - 高空、定位球或压迫失误路径明显：参考伊拉克 1-4 挪威。
    - 弱队第二球和平局风险高：参考伊朗 2-2 新西兰。
    - 弱队进攻核心不首发或出场受限：参考阿根廷 3-0 阿尔及利亚。
    - 热门球队第二球不稳定：参考比利时 1-1 埃及。
-5. 启动 `attack_agent`、`defense_risk_agent`、`market_history_agent` 并行初评。
-6. 合并初评 patch，检查 26 个维度、所有 required_checks、来源 ID 和关键球员覆盖。
-7. 启动 `anti_btts_agent`、`tail_score_agent` 和 `skeptic_agent` 审查高影响 claim、弱队进球、零封、闷局和尾部比分。
-8. 执行五个赛前校准闸门，写入分布和闸门修正动作。
-9. 对 Disagreement Ledger 中的高影响分歧进行一轮定向回应。
-10. `consensus_arbiter` 生成最终结构化分析 JSON。
-11. 运行 `python scripts/validate_analysis.py <逐场分析.json>`。
-12. 校验失败时只回补失败维度或失败合议项。
-13. 校验通过后，按 `prediction_report_template.md` 生成中文预测报告。
+6. 使用多 Agent 工具并行启动 `attack_agent`、`defense_risk_agent`、`market_history_agent` 初评，并保存每个真实 `agent_run_id`。
+7. 合并初评 patch，检查 26 个维度、所有 required_checks、来源 ID 和关键球员覆盖。
+8. 使用多 Agent 工具启动 `anti_btts_agent`、`tail_score_agent` 和 `skeptic_agent` 审查高影响 claim、弱队进球、零封、闷局、量化偏差和尾部比分。
+9. 执行六个赛前校准闸门，写入分布和闸门修正动作。
+10. 写入动态权重、临场赔率快照、球员高阶对位边、量化基线裁决和比分方向锁。
+11. 对 Disagreement Ledger 中的高影响分歧进行一轮定向回应。
+12. 启动独立 `consensus_arbiter` 运行，合并子 Agent 产物并生成最终结构化分析 JSON。
+13. 运行 `py -3.13 scripts/validate_analysis.py <逐场分析.json>`。
+14. 校验失败时只回补失败维度、失败合议项或缺失的真实子 Agent 产物；不得手工伪造 `agent_run_id`、`artifact_ref` 或哈希绕过。
+15. 校验通过后，运行 `py -3.13 scripts/generate_visual_dashboard.py <逐场分析.json> <输出.svg>` 生成可视化看板。
+16. 按 `prediction_report_template.md` 生成中文预测报告，并列出看板路径。
 
 ## Codex 预测提示词模板
 
@@ -255,12 +339,15 @@ Coordinator 合并初稿后，必须生成 Disagreement Ledger。只有会改变
 2. 读取 `config/dimensions.json`
 3. 读取 `references/codex_usage.md`
 4. 建立 Match Evidence Pack 并统一 source_id
-5. 让 attack、defense_risk、market_history 三个专业视角提交结构化 patch
-6. 让 anti_btts、tail_score 和 skeptic 质疑高影响 claim
-7. 执行 weak_goal、clean_sheet、market_calibration、low_block_draw、tail_score 五个校准闸门
-8. 由 consensus_arbiter 生成最终 `dimension_analysis_template.json` 兼容 JSON
-9. 运行 `scripts/validate_analysis.py`
-10. 校验通过后输出报告
+5. 生成 `quant_baseline`：xG/进球率 λ、泊松 Top 比分、BTTS、Over2.5、桑格 adapter 状态
+6. 让 attack、defense_risk、market_history 三个专业视角提交结构化 patch
+7. 让 anti_btts、tail_score 和 skeptic 质疑高影响 claim
+8. 上述角色必须来自真实独立子 Agent 运行，不得由单 Agent 模拟
+9. 执行 weak_goal、clean_sheet、market_calibration、low_block_draw、tail_score、quant_baseline 六个校准闸门
+10. 写入 dynamic_weighting、odds_snapshots、player_matchup_edges、quant_baseline、score_orientation 和 agent_execution
+11. 由独立 consensus_arbiter 生成最终 `dimension_analysis_template.json` 兼容 JSON
+12. 运行 `scripts/validate_analysis.py`
+13. 校验通过后生成 SVG 看板并输出报告
 
 输出必须包含：
 - 胜负倾向
@@ -282,7 +369,11 @@ Coordinator 合并初稿后，必须生成 Disagreement Ledger。只有会改变
 - 极端比分尾部及其成立条件
 - 强队红牌、弱队红牌、弱队两张红牌、点球或门将失误后的量化改判
 - 仲裁摘要、关键分歧、被拒绝判断和置信度调整
+- 每个真实独立子 Agent 的运行 ID、产物引用和完成状态
 - 校准闸门摘要、比分分布和被闸门修正的判断
+- 量化基线摘要、泊松 Top 比分、桑格 adapter 状态和量化软闸门裁决
+- 动态权重调整、赛前赔率快照、球员高阶对位和比分方向锁
+- SVG 雷达图/看板文件路径
 
 禁止：
 - 只根据球队排名预测
@@ -290,6 +381,7 @@ Coordinator 合并初稿后，必须生成 Disagreement Ledger。只有会改变
 - 忽略历史预测失败样本
 - 用同一段证据覆盖不同子检查项
 - 让专业 Agent 直接生成最终报告
+- 单 Agent 角色扮演多 Agent，或手写虚构 `agent_run_id`、`artifact_ref`、`summary_hash`
 - 让市场或历史样本覆盖当前阵容、伤停和对位事实
 - 弱队只有单一路径时机械给双方进球 medium/high
 - 市场明显支持大胜时仍不保留 3 球以上比分

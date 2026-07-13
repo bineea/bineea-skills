@@ -1,0 +1,41 @@
+{
+  "schema_version": "agent-artifact-1.0",
+  "role_id": "skeptic_agent",
+  "agent_run_id": "019f3ad2-f048-7c43-9500-77425868c2a9",
+  "execution_mode": "independent_subagent",
+  "created_at": "2026-07-07T12:30:58+08:00",
+  "tooling": "multi_agent_v1.spawn_agent",
+  "summary": "质疑侧要求比分顺序锁定team_a-team_b，阿根廷首选2-1但必须保留2-0/1-1，瑞士-哥伦比亚首选0-1。",
+  "match_summaries": {
+    "2026-07-08_BJT_ARG_EGY": {
+      "primary_score": "2-1",
+      "alternatives": [
+        "2-0",
+        "1-1"
+      ],
+      "btts_level": "medium",
+      "strong_second_goal": "medium",
+      "strong_third_goal": "low",
+      "weak_first_goal": "medium",
+      "weak_second_goal": "low",
+      "clean_sheet": "medium"
+    },
+    "2026-07-08_BJT_SUI_COL": {
+      "primary_score": "0-1",
+      "alternatives": [
+        "1-1",
+        "1-2"
+      ],
+      "btts_level": "low",
+      "strong_second_goal": "low_medium",
+      "strong_third_goal": "low",
+      "weak_first_goal": "medium",
+      "weak_second_goal": "low",
+      "clean_sheet": "medium_high"
+    }
+  },
+  "conflicts_to_raise": [
+    "不得过拟合07-07失败样本",
+    "量化基线必须被闸门接受或明确拒绝"
+  ]
+}

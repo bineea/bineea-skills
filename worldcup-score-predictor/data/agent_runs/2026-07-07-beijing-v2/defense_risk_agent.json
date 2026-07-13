@@ -1,0 +1,13 @@
+{
+  "schema_version": "agent-artifact-1.0",
+  "role_id": "defense_risk_agent",
+  "agent_run_id": "019f3706-2db3-7293-8d57-c969fc47583c",
+  "execution_mode": "independent_subagent",
+  "created_at": "2026-07-06T18:35:00+08:00",
+  "tooling": "multi_agent_v1.spawn_agent",
+  "summary": "本 artifact 由本轮真实独立子 Agent 输出整理，用于 2026-07-07 北京时间两场世界杯预测合议校验。",
+  "match_summaries": {
+    "POR-ESP": "首选0-1；西班牙四场0失球和量化小球压过市场BTTS。",
+    "USA-BEL": "首选2-2；双方防线脆弱，零封低，1-1只作降速尾部。"
+  }
+}

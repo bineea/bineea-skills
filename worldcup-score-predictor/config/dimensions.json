@@ -48,7 +48,8 @@
     "expected_minutes",
     "conclusion",
     "evidence",
-    "source_ids"
+    "source_ids",
+    "advanced_metrics"
   ],
   "required_analysis_fields": [
     "dimension_key",
@@ -447,6 +448,12 @@
       "role_id",
       "claim",
       "reason"
+    ],
+    "required_agent_execution_mode": "independent_subagents",
+    "minimum_independent_agent_runs": 7,
+    "agent_simulation_allowed": false,
+    "allowed_agent_tooling": [
+      "multi_agent_v1.spawn_agent"
     ]
   },
   "dimension_review_assignments": {
@@ -572,16 +579,65 @@
       "team_official"
     ]
   },
+  "advanced_player_rules": {
+    "minimum_metrics_per_player": 3,
+    "minimum_matchup_edges": 3,
+    "allowed_metric_keys": [
+      "xg_per90",
+      "xa_per90",
+      "shots_per90",
+      "shots_on_target_per90",
+      "key_passes_per90",
+      "dribbles_completed_per90",
+      "dribbled_past_per90",
+      "pressures_per90",
+      "aerial_duel_win_rate",
+      "tackle_success_rate",
+      "interceptions_per90",
+      "clearances_per90",
+      "save_percentage",
+      "post_shot_xg_minus_goals",
+      "temperature_stamina_note",
+      "time_slot_performance_note"
+    ]
+  },
+  "dynamic_weight_rules": {
+    "allowed_trigger_types": [
+      "stage",
+      "environment",
+      "market",
+      "player",
+      "post_match_learning"
+    ],
+    "high_heat_temperature_c": 32,
+    "high_heat_required_dimensions": [
+      "environment_schedule"
+    ],
+    "knockout_stage_markers": [
+      "knockout",
+      "round_of_16",
+      "quarter",
+      "semi",
+      "final"
+    ],
+    "knockout_required_dimensions": [
+      "stage_psychology",
+      "draw_risk"
+    ]
+  },
   "prediction_gate_rules": {
     "required_gates": [
       "weak_goal_gate",
       "clean_sheet_gate",
       "market_calibration_gate",
       "low_block_draw_gate",
-      "tail_score_gate"
+      "tail_score_gate",
+      "quant_baseline_gate"
     ],
     "minimum_weak_goal_paths_for_medium": 2,
     "deep_market_handicap_threshold": 1.5,
+    "minimum_odds_snapshots": 2,
+    "late_market_window_minutes": 120,
     "minimum_main_path_scores": 2,
     "maximum_main_path_scores": 3,
     "required_score_distribution_fields": [
@@ -595,6 +651,18 @@
       "low_block",
       "btts"
     ]
+  },
+  "quant_baseline_rules": {
+    "top_score_gate_n": 10,
+    "btts_high_threshold": 0.58,
+    "btts_low_threshold": 0.42,
+    "over25_high_threshold": 0.56,
+    "over25_low_threshold": 0.44,
+    "team_ge3_high_threshold": 0.25,
+    "lambda_delta_requires_reason": 1.2,
+    "min_lambda": 0.15,
+    "max_lambda": 4.0,
+    "max_sanger_delta_abs": 0.35
   },
   "required_event_scenarios": [
     "favorite_red_card",

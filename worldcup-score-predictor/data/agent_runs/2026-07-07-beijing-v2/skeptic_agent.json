@@ -1,0 +1,13 @@
+{
+  "schema_version": "agent-artifact-1.0",
+  "role_id": "skeptic_agent",
+  "agent_run_id": "019f3706-83fb-7623-9e07-b06146ae85d7",
+  "execution_mode": "independent_subagent",
+  "created_at": "2026-07-06T18:35:00+08:00",
+  "tooling": "multi_agent_v1.spawn_agent",
+  "summary": "本 artifact 由本轮真实独立子 Agent 输出整理，用于 2026-07-07 北京时间两场世界杯预测合议校验。",
+  "match_summaries": {
+    "POR-ESP": "被迫首选0-1；限制赔率跟随和名气推断，要求解释BTTS冲突。",
+    "USA-BEL": "被迫首选2-2；防止直接跟随FanDuel 3-2。"
+  }
+}

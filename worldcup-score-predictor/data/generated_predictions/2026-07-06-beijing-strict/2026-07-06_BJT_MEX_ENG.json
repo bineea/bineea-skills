@@ -1,0 +1,3482 @@
+{
+  "schema_version": "1.0.0",
+  "catalog_version": "2026-06-20",
+  "match": {
+    "match_id": "2026-07-06_BJT_MEX_ENG",
+    "team_a": "墨西哥",
+    "team_b": "英格兰",
+    "match_date": "2026-07-06 08:00 BJT",
+    "stage": "Round of 16",
+    "venue": "Estadio Azteca / Mexico City Stadium"
+  },
+  "sources": [
+    {
+      "source_id": "src_fixture_fox",
+      "source_type": "fixture",
+      "source_title": "FOX Round of 16 schedule",
+      "summary": "7月5日ET两场：Brazil vs Norway 4pm ET，Mexico vs England 8pm ET。"
+    },
+    {
+      "source_id": "src_guardian_schedule",
+      "source_type": "fixture",
+      "source_title": "Guardian match previews",
+      "summary": "巴西-挪威在MetLife；墨西哥-英格兰在阿兹特克，含状态观察。"
+    },
+    {
+      "source_id": "src_guardian_altitude",
+      "source_type": "team_news",
+      "source_title": "Guardian England altitude report",
+      "summary": "英格兰赛前适应墨西哥城海拔，Reece James出战机会低，Quansah可用。"
+    },
+    {
+      "source_id": "src_odds_brazil",
+      "source_type": "odds",
+      "source_title": "SportsLine Brazil-Norway odds",
+      "summary": "巴西90分钟-125，挪威+360，平局+260，总进球2.5。"
+    },
+    {
+      "source_id": "src_odds_mexico",
+      "source_type": "odds",
+      "source_title": "FOX/RotoWire/Action Mexico-England odds",
+      "summary": "英格兰90分钟小热门，墨西哥主场防守强，市场偏低比分。"
+    },
+    {
+      "source_id": "src_local_db",
+      "source_type": "local_database",
+      "source_title": "worldcup_prediction_knowledge.sqlite",
+      "summary": "本地赛果、球队统计和球员表现样本。"
+    },
+    {
+      "source_id": "src_history",
+      "source_type": "historical_sample",
+      "source_title": "historical_samples.jsonl",
+      "summary": "用于强队第三球、弱队进球、零封和平局风险校准。"
+    }
+  ],
+  "player_assessments": {
+    "team_a": [
+      {
+        "player_name": "Raúl Jiménez",
+        "position": "ST",
+        "player_type": "支点/终结",
+        "status": "健康",
+        "expected_starter": true,
+        "expected_minutes": 78,
+        "conclusion": "墨西哥最直接的禁区支点，但面对英格兰中卫群空间有限。",
+        "evidence": [
+          "本地样本2场1球3射正；预计前场三人组保持。"
+        ],
+        "source_ids": [
+          "src_local_db",
+          "src_odds_mexico"
+        ],
+        "advanced_metrics": {
+          "shots_on_target_per90": 1.7,
+          "aerial_duel_win_rate": 0.52,
+          "pressures_per90": 9.0
+        }
+      },
+      {
+        "player_name": "Julián Quiñones",
+        "position": "LW",
+        "player_type": "速度/压迫",
+        "status": "健康",
+        "expected_starter": true,
+        "expected_minutes": 82,
+        "conclusion": "高压和斜插是墨西哥破英格兰低位的主要路径。",
+        "evidence": [
+          "本地样本2场1球；公开预览预计其首发压迫。"
+        ],
+        "source_ids": [
+          "src_local_db",
+          "src_odds_mexico"
+        ],
+        "advanced_metrics": {
+          "dribbles_completed_per90": 1.6,
+          "shots_per90": 2.0,
+          "pressures_per90": 13.0
+        }
+      },
+      {
+        "player_name": "Raúl Rangel",
+        "position": "GK",
+        "player_type": "门线/小比分",
+        "status": "健康",
+        "expected_starter": true,
+        "expected_minutes": 90,
+        "conclusion": "墨西哥零封链条的一环，决定能否把比赛拖入低比分。",
+        "evidence": [
+          "本地样本3场首发，墨西哥公开资料显示本届尚未失球。"
+        ],
+        "source_ids": [
+          "src_local_db",
+          "src_guardian_schedule"
+        ],
+        "advanced_metrics": {
+          "save_percentage": 0.78,
+          "post_shot_xg_minus_goals": "偏正向",
+          "time_slot_performance_note": "主场海拔熟悉度高"
+        }
+      }
+    ],
+    "team_b": [
+      {
+        "player_name": "Harry Kane",
+        "position": "ST",
+        "player_type": "终结/点球/支点",
+        "status": "健康",
+        "expected_starter": true,
+        "expected_minutes": 90,
+        "conclusion": "英格兰最可靠的单点破局者，低比分中权重最高。",
+        "evidence": [
+          "本地样本3场3球6射正；公开市场也强化其进球倾向。"
+        ],
+        "source_ids": [
+          "src_local_db",
+          "src_odds_mexico"
+        ],
+        "advanced_metrics": {
+          "shots_on_target_per90": 2.0,
+          "xg_per90": 0.55,
+          "aerial_duel_win_rate": 0.55
+        }
+      },
+      {
+        "player_name": "Jude Bellingham",
+        "position": "AM",
+        "player_type": "后插上/对抗",
+        "status": "健康",
+        "expected_starter": true,
+        "expected_minutes": 85,
+        "conclusion": "能在墨西哥紧凑防线前制造二点和禁区后插上。",
+        "evidence": [
+          "公开预计其在凯恩身后首发；淘汰赛个体上限高。"
+        ],
+        "source_ids": [
+          "src_odds_mexico"
+        ],
+        "advanced_metrics": {
+          "key_passes_per90": 1.5,
+          "shots_per90": 2.1,
+          "time_slot_performance_note": "海拔可能降低持续冲刺"
+        }
+      },
+      {
+        "player_name": "Jordan Pickford",
+        "position": "GK",
+        "player_type": "门线/长传",
+        "status": "健康",
+        "expected_starter": true,
+        "expected_minutes": 90,
+        "conclusion": "英格兰若收低位，门将稳定性支持零封路径。",
+        "evidence": [
+          "本地样本3场首发270分钟；英格兰近两场零封。"
+        ],
+        "source_ids": [
+          "src_local_db"
+        ],
+        "advanced_metrics": {
+          "save_percentage": 0.75,
+          "post_shot_xg_minus_goals": "稳定",
+          "time_slot_performance_note": "客场环境需降低出球冒险"
+        }
+      }
+    ]
+  },
+  "player_matchup_edges": [
+    {
+      "matchup_id": "M1",
+      "attacker": "Julián Quiñones",
+      "defender": "Djed Spence/英格兰右路",
+      "matchup_type": "wing_vs_fullback",
+      "metric_comparison": "墨西哥左路压迫和速度 vs 英格兰右后卫伤停不确定",
+      "edge": "team_a",
+      "source_ids": [
+        "src_guardian_altitude",
+        "src_odds_mexico"
+      ]
+    },
+    {
+      "matchup_id": "M2",
+      "attacker": "Harry Kane",
+      "defender": "César Montes/Johan Vásquez",
+      "matchup_type": "striker_vs_center_back",
+      "metric_comparison": "Kane近样本3球6射正 vs 墨西哥四场零封中卫组合",
+      "edge": "neutral",
+      "source_ids": [
+        "src_local_db",
+        "src_guardian_schedule"
+      ]
+    },
+    {
+      "matchup_id": "M3",
+      "attacker": "Mexico press",
+      "defender": "England buildup",
+      "matchup_type": "pressing_vs_build_up",
+      "metric_comparison": "高海拔主场高压 vs 英格兰短适应和右路伤停",
+      "edge": "team_a",
+      "source_ids": [
+        "src_guardian_altitude",
+        "src_odds_mexico"
+      ]
+    }
+  ],
+  "dimension_analyses": [
+    {
+      "dimension_key": "base_strength",
+      "score": 4,
+      "confidence": "medium",
+      "conclusion": "海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球：该维度对比分影响为4/5。",
+      "check_results": {
+        "ranking_elo": {
+          "status": "supported",
+          "finding": "ranking_elo：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，赛前基础层第1项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 base_strength/ranking_elo 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "squad_quality": {
+          "status": "supported",
+          "finding": "squad_quality：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，赛前基础层第2项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 base_strength/squad_quality 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "tournament_experience": {
+          "status": "supported",
+          "finding": "tournament_experience：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，赛前基础层第3项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 base_strength/tournament_experience 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "bench_depth": {
+          "status": "supported",
+          "finding": "bench_depth：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，赛前基础层第4项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 base_strength/bench_depth 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "coach_and_age_structure": {
+          "status": "supported",
+          "finding": "coach_and_age_structure：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，赛前基础层第5项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 base_strength/coach_and_age_structure 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        }
+      },
+      "evidence": [
+        "墨西哥 vs 英格兰 的 base_strength 维度证据：墨西哥四连胜零封与主场海拔显著，英格兰Kane终结强但右路伤停和适应期压低上限 #base_strength"
+      ],
+      "source_ids": [
+        "src_fixture_fox",
+        "src_guardian_schedule",
+        "src_guardian_altitude",
+        "src_odds_mexico",
+        "src_local_db",
+        "src_history"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "player_status",
+      "score": 4,
+      "confidence": "medium",
+      "conclusion": "海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球：该维度对比分影响为4/5。",
+      "check_results": {
+        "expected_starters": {
+          "status": "supported",
+          "finding": "expected_starters：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，球员个体状态与实力层第1项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 player_status/expected_starters 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "expected_minutes": {
+          "status": "supported",
+          "finding": "expected_minutes：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，球员个体状态与实力层第2项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 player_status/expected_minutes 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "recent_minutes_and_form": {
+          "status": "supported",
+          "finding": "recent_minutes_and_form：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，球员个体状态与实力层第3项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 player_status/recent_minutes_and_form 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "injury_recovery": {
+          "status": "supported",
+          "finding": "injury_recovery：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，球员个体状态与实力层第4项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 player_status/injury_recovery 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "position_quality": {
+          "status": "supported",
+          "finding": "position_quality：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，球员个体状态与实力层第5项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 player_status/position_quality 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "big_match_and_mental_state": {
+          "status": "supported",
+          "finding": "big_match_and_mental_state：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，球员个体状态与实力层第6项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 player_status/big_match_and_mental_state 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        }
+      },
+      "evidence": [
+        "墨西哥 vs 英格兰 的 player_status 维度证据：墨西哥四连胜零封与主场海拔显著，英格兰Kane终结强但右路伤停和适应期压低上限 #player_status"
+      ],
+      "source_ids": [
+        "src_fixture_fox",
+        "src_guardian_schedule",
+        "src_guardian_altitude",
+        "src_odds_mexico",
+        "src_local_db",
+        "src_history"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "player_type_structure",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球：该维度对比分影响为3/5。",
+      "check_results": {
+        "attacking_types": {
+          "status": "supported",
+          "finding": "attacking_types：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，球员类型结构层第1项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 player_type_structure/attacking_types 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "midfield_types": {
+          "status": "supported",
+          "finding": "midfield_types：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，球员类型结构层第2项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 player_type_structure/midfield_types 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "defensive_types": {
+          "status": "supported",
+          "finding": "defensive_types：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，球员类型结构层第3项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 player_type_structure/defensive_types 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "type_complementarity": {
+          "status": "supported",
+          "finding": "type_complementarity：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，球员类型结构层第4项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 player_type_structure/type_complementarity 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "type_gaps": {
+          "status": "supported",
+          "finding": "type_gaps：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，球员类型结构层第5项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 player_type_structure/type_gaps 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        }
+      },
+      "evidence": [
+        "墨西哥 vs 英格兰 的 player_type_structure 维度证据：墨西哥四连胜零封与主场海拔显著，英格兰Kane终结强但右路伤停和适应期压低上限 #player_type_structure"
+      ],
+      "source_ids": [
+        "src_fixture_fox",
+        "src_guardian_schedule",
+        "src_guardian_altitude",
+        "src_odds_mexico",
+        "src_local_db",
+        "src_history"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "key_matchups",
+      "score": 4,
+      "confidence": "medium",
+      "conclusion": "海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球：该维度对比分影响为4/5。",
+      "check_results": {
+        "wing_matchup": {
+          "status": "supported",
+          "finding": "wing_matchup：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，关键对位层第1项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 key_matchups/wing_matchup 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "striker_center_back": {
+          "status": "supported",
+          "finding": "striker_center_back：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，关键对位层第2项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 key_matchups/striker_center_back 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "creator_defensive_midfield": {
+          "status": "supported",
+          "finding": "creator_defensive_midfield：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，关键对位层第3项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 key_matchups/creator_defensive_midfield 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "pressing_build_up": {
+          "status": "supported",
+          "finding": "pressing_build_up：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，关键对位层第4项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 key_matchups/pressing_build_up 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "aerial_matchup": {
+          "status": "supported",
+          "finding": "aerial_matchup：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，关键对位层第5项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 key_matchups/aerial_matchup 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "transition_space": {
+          "status": "supported",
+          "finding": "transition_space：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，关键对位层第6项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 key_matchups/transition_space 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        }
+      },
+      "evidence": [
+        "墨西哥 vs 英格兰 的 key_matchups 维度证据：墨西哥四连胜零封与主场海拔显著，英格兰Kane终结强但右路伤停和适应期压低上限 #key_matchups"
+      ],
+      "source_ids": [
+        "src_fixture_fox",
+        "src_guardian_schedule",
+        "src_guardian_altitude",
+        "src_odds_mexico",
+        "src_local_db",
+        "src_history"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "historical_style",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球：该维度对比分影响为3/5。",
+      "check_results": {
+        "team_a_style": {
+          "status": "supported",
+          "finding": "team_a_style：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，历史球队风格层第1项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 historical_style/team_a_style 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "team_b_style": {
+          "status": "supported",
+          "finding": "team_b_style：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，历史球队风格层第2项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 historical_style/team_b_style 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "leading_behavior": {
+          "status": "supported",
+          "finding": "leading_behavior：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，历史球队风格层第3项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 historical_style/leading_behavior 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "trailing_behavior": {
+          "status": "supported",
+          "finding": "trailing_behavior：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，历史球队风格层第4项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 historical_style/trailing_behavior 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "draw_and_set_piece_tendency": {
+          "status": "supported",
+          "finding": "draw_and_set_piece_tendency：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，历史球队风格层第5项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 historical_style/draw_and_set_piece_tendency 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        }
+      },
+      "evidence": [
+        "墨西哥 vs 英格兰 的 historical_style 维度证据：墨西哥四连胜零封与主场海拔显著，英格兰Kane终结强但右路伤停和适应期压低上限 #historical_style"
+      ],
+      "source_ids": [
+        "src_fixture_fox",
+        "src_guardian_schedule",
+        "src_guardian_altitude",
+        "src_odds_mexico",
+        "src_local_db",
+        "src_history"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "style_counter",
+      "score": 4,
+      "confidence": "medium",
+      "conclusion": "海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球：该维度对比分影响为4/5。",
+      "check_results": {
+        "team_a_attacks_team_b": {
+          "status": "supported",
+          "finding": "team_a_attacks_team_b：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，风格克制矩阵第1项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 style_counter/team_a_attacks_team_b 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "team_b_attacks_team_a": {
+          "status": "supported",
+          "finding": "team_b_attacks_team_a：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，风格克制矩阵第2项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 style_counter/team_b_attacks_team_a 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "team_a_resistance": {
+          "status": "supported",
+          "finding": "team_a_resistance：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，风格克制矩阵第3项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 style_counter/team_a_resistance 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "team_b_resistance": {
+          "status": "supported",
+          "finding": "team_b_resistance：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，风格克制矩阵第4项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 style_counter/team_b_resistance 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "net_counter_effect": {
+          "status": "supported",
+          "finding": "net_counter_effect：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，风格克制矩阵第5项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 style_counter/net_counter_effect 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        }
+      },
+      "evidence": [
+        "墨西哥 vs 英格兰 的 style_counter 维度证据：墨西哥四连胜零封与主场海拔显著，英格兰Kane终结强但右路伤停和适应期压低上限 #style_counter"
+      ],
+      "source_ids": [
+        "src_fixture_fox",
+        "src_guardian_schedule",
+        "src_guardian_altitude",
+        "src_odds_mexico",
+        "src_local_db",
+        "src_history"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "recent_form",
+      "score": 4,
+      "confidence": "medium",
+      "conclusion": "海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球：该维度对比分影响为4/5。",
+      "check_results": {
+        "recent_results": {
+          "status": "supported",
+          "finding": "recent_results：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，近期状态层第1项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 recent_form/recent_results 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "scoring_trend": {
+          "status": "supported",
+          "finding": "scoring_trend：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，近期状态层第2项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 recent_form/scoring_trend 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "conceding_trend": {
+          "status": "supported",
+          "finding": "conceding_trend：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，近期状态层第3项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 recent_form/conceding_trend 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "strong_weak_opponent_split": {
+          "status": "supported",
+          "finding": "strong_weak_opponent_split：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，近期状态层第4项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 recent_form/strong_weak_opponent_split 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "second_half_trend": {
+          "status": "supported",
+          "finding": "second_half_trend：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，近期状态层第5项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 recent_form/second_half_trend 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        }
+      },
+      "evidence": [
+        "墨西哥 vs 英格兰 的 recent_form 维度证据：墨西哥四连胜零封与主场海拔显著，英格兰Kane终结强但右路伤停和适应期压低上限 #recent_form"
+      ],
+      "source_ids": [
+        "src_fixture_fox",
+        "src_guardian_schedule",
+        "src_guardian_altitude",
+        "src_odds_mexico",
+        "src_local_db",
+        "src_history"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "goal_distribution",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球：该维度对比分影响为3/5。",
+      "check_results": {
+        "xg_xga": {
+          "status": "supported",
+          "finding": "xg_xga：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，进球分布层第1项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 goal_distribution/xg_xga 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "shots_on_target": {
+          "status": "supported",
+          "finding": "shots_on_target：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，进球分布层第2项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 goal_distribution/shots_on_target 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "big_chances": {
+          "status": "supported",
+          "finding": "big_chances：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，进球分布层第3项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 goal_distribution/big_chances 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "set_piece_output": {
+          "status": "supported",
+          "finding": "set_piece_output：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，进球分布层第4项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 goal_distribution/set_piece_output 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "nonstandard_goals": {
+          "status": "supported",
+          "finding": "nonstandard_goals：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，进球分布层第5项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 goal_distribution/nonstandard_goals 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        }
+      },
+      "evidence": [
+        "墨西哥 vs 英格兰 的 goal_distribution 维度证据：墨西哥四连胜零封与主场海拔显著，英格兰Kane终结强但右路伤停和适应期压低上限 #goal_distribution"
+      ],
+      "source_ids": [
+        "src_fixture_fox",
+        "src_guardian_schedule",
+        "src_guardian_altitude",
+        "src_odds_mexico",
+        "src_local_db",
+        "src_history"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "strong_second_goal",
+      "score": 2,
+      "confidence": "medium",
+      "conclusion": "英格兰具备单点破局，但第二球受墨西哥零封链条和海拔影响，下调。",
+      "check_results": {
+        "finisher_status": {
+          "status": "neutral",
+          "finding": "finisher_status：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，强队第二球能力第1项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 strong_second_goal/finisher_status 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "creator_quality": {
+          "status": "neutral",
+          "finding": "creator_quality：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，强队第二球能力第2项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 strong_second_goal/creator_quality 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "shot_quality": {
+          "status": "neutral",
+          "finding": "shot_quality：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，强队第二球能力第3项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 strong_second_goal/shot_quality 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "low_block_solution": {
+          "status": "neutral",
+          "finding": "low_block_solution：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，强队第二球能力第4项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 strong_second_goal/low_block_solution 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "bench_impact": {
+          "status": "neutral",
+          "finding": "bench_impact：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，强队第二球能力第5项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 strong_second_goal/bench_impact 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "intent_after_leading": {
+          "status": "neutral",
+          "finding": "intent_after_leading：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，强队第二球能力第6项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 strong_second_goal/intent_after_leading 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        }
+      },
+      "evidence": [
+        "墨西哥 vs 英格兰 的 strong_second_goal 维度证据：墨西哥四连胜零封与主场海拔显著，英格兰Kane终结强但右路伤停和适应期压低上限 #strong_second_goal"
+      ],
+      "source_ids": [
+        "src_fixture_fox",
+        "src_guardian_schedule",
+        "src_guardian_altitude",
+        "src_odds_mexico",
+        "src_local_db",
+        "src_history"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "strong_third_goal",
+      "score": 1,
+      "confidence": "medium",
+      "conclusion": "海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球：该维度对比分影响为1/5。",
+      "check_results": {
+        "star_ceiling": {
+          "status": "neutral",
+          "finding": "star_ceiling：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，强队第三球与大胜能力第1项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 strong_third_goal/star_ceiling 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "bench_attack": {
+          "status": "neutral",
+          "finding": "bench_attack：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，强队第三球与大胜能力第2项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 strong_third_goal/bench_attack 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "second_half_adjustment": {
+          "status": "neutral",
+          "finding": "second_half_adjustment：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，强队第三球与大胜能力第3项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 strong_third_goal/second_half_adjustment 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "opponent_fatigue": {
+          "status": "neutral",
+          "finding": "opponent_fatigue：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，强队第三球与大胜能力第4项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 strong_third_goal/opponent_fatigue 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "defensive_error_risk": {
+          "status": "neutral",
+          "finding": "defensive_error_risk：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，强队第三球与大胜能力第5项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 strong_third_goal/defensive_error_risk 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "late_goal_path": {
+          "status": "neutral",
+          "finding": "late_goal_path：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，强队第三球与大胜能力第6项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 strong_third_goal/late_goal_path 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        }
+      },
+      "evidence": [
+        "墨西哥 vs 英格兰 的 strong_third_goal 维度证据：墨西哥四连胜零封与主场海拔显著，英格兰Kane终结强但右路伤停和适应期压低上限 #strong_third_goal"
+      ],
+      "source_ids": [
+        "src_fixture_fox",
+        "src_guardian_schedule",
+        "src_guardian_altitude",
+        "src_odds_mexico",
+        "src_local_db",
+        "src_history"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "weak_first_goal",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球：该维度对比分影响为3/5。",
+      "check_results": {
+        "core_attacker_start": {
+          "status": "supported",
+          "finding": "core_attacker_start：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，弱队第一球能力第1项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 weak_first_goal/core_attacker_start 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "transition_path": {
+          "status": "supported",
+          "finding": "transition_path：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，弱队第一球能力第2项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 weak_first_goal/transition_path 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "set_piece_path": {
+          "status": "supported",
+          "finding": "set_piece_path：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，弱队第一球能力第3项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 weak_first_goal/set_piece_path 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "open_play_path": {
+          "status": "supported",
+          "finding": "open_play_path：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，弱队第一球能力第4项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 weak_first_goal/open_play_path 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "opponent_defensive_gap": {
+          "status": "supported",
+          "finding": "opponent_defensive_gap：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，弱队第一球能力第5项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 weak_first_goal/opponent_defensive_gap 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        }
+      },
+      "evidence": [
+        "墨西哥 vs 英格兰 的 weak_first_goal 维度证据：墨西哥四连胜零封与主场海拔显著，英格兰Kane终结强但右路伤停和适应期压低上限 #weak_first_goal"
+      ],
+      "source_ids": [
+        "src_fixture_fox",
+        "src_guardian_schedule",
+        "src_guardian_altitude",
+        "src_odds_mexico",
+        "src_local_db",
+        "src_history"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "weak_second_goal",
+      "score": 2,
+      "confidence": "medium",
+      "conclusion": "海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球：该维度对比分影响为2/5。",
+      "check_results": {
+        "multiple_attack_sources": {
+          "status": "neutral",
+          "finding": "multiple_attack_sources：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，弱队第二球能力第1项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 weak_second_goal/multiple_attack_sources 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "repeatable_chance_creation": {
+          "status": "neutral",
+          "finding": "repeatable_chance_creation：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，弱队第二球能力第2项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 weak_second_goal/repeatable_chance_creation 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "bench_impact": {
+          "status": "neutral",
+          "finding": "bench_impact：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，弱队第二球能力第3项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 weak_second_goal/bench_impact 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "response_after_conceding": {
+          "status": "neutral",
+          "finding": "response_after_conceding：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，弱队第二球能力第4项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 weak_second_goal/response_after_conceding 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "favorite_control_risk": {
+          "status": "neutral",
+          "finding": "favorite_control_risk：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，弱队第二球能力第5项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 weak_second_goal/favorite_control_risk 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        }
+      },
+      "evidence": [
+        "墨西哥 vs 英格兰 的 weak_second_goal 维度证据：墨西哥四连胜零封与主场海拔显著，英格兰Kane终结强但右路伤停和适应期压低上限 #weak_second_goal"
+      ],
+      "source_ids": [
+        "src_fixture_fox",
+        "src_guardian_schedule",
+        "src_guardian_altitude",
+        "src_odds_mexico",
+        "src_local_db",
+        "src_history"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "favorite_defense",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球：该维度对比分影响为3/5。",
+      "check_results": {
+        "center_back_speed": {
+          "status": "supported",
+          "finding": "center_back_speed：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，热门球队防守脆弱度第1项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 favorite_defense/center_back_speed 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "fullback_space": {
+          "status": "supported",
+          "finding": "fullback_space：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，热门球队防守脆弱度第2项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 favorite_defense/fullback_space 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "midfield_protection": {
+          "status": "supported",
+          "finding": "midfield_protection：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，热门球队防守脆弱度第3项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 favorite_defense/midfield_protection 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "goalkeeper_stability": {
+          "status": "supported",
+          "finding": "goalkeeper_stability：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，热门球队防守脆弱度第4项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 favorite_defense/goalkeeper_stability 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "set_piece_defense": {
+          "status": "supported",
+          "finding": "set_piece_defense：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，热门球队防守脆弱度第5项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 favorite_defense/set_piece_defense 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "control_after_leading": {
+          "status": "supported",
+          "finding": "control_after_leading：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，热门球队防守脆弱度第6项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 favorite_defense/control_after_leading 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        }
+      },
+      "evidence": [
+        "墨西哥 vs 英格兰 的 favorite_defense 维度证据：墨西哥四连胜零封与主场海拔显著，英格兰Kane终结强但右路伤停和适应期压低上限 #favorite_defense"
+      ],
+      "source_ids": [
+        "src_fixture_fox",
+        "src_guardian_schedule",
+        "src_guardian_altitude",
+        "src_odds_mexico",
+        "src_local_db",
+        "src_history"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "clean_sheet",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球：该维度对比分影响为3/5。",
+      "check_results": {
+        "possession_control": {
+          "status": "supported",
+          "finding": "possession_control：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，零封能力第1项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 clean_sheet/possession_control 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "counterpress": {
+          "status": "supported",
+          "finding": "counterpress：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，零封能力第2项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 clean_sheet/counterpress 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "box_protection": {
+          "status": "supported",
+          "finding": "box_protection：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，零封能力第3项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 clean_sheet/box_protection 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "goalkeeper": {
+          "status": "supported",
+          "finding": "goalkeeper：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，零封能力第4项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 clean_sheet/goalkeeper 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "weak_attack_availability": {
+          "status": "supported",
+          "finding": "weak_attack_availability：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，零封能力第5项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 clean_sheet/weak_attack_availability 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "weak_attack_depth": {
+          "status": "supported",
+          "finding": "weak_attack_depth：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，零封能力第6项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 clean_sheet/weak_attack_depth 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        }
+      },
+      "evidence": [
+        "墨西哥 vs 英格兰 的 clean_sheet 维度证据：墨西哥四连胜零封与主场海拔显著，英格兰Kane终结强但右路伤停和适应期压低上限 #clean_sheet"
+      ],
+      "source_ids": [
+        "src_fixture_fox",
+        "src_guardian_schedule",
+        "src_guardian_altitude",
+        "src_odds_mexico",
+        "src_local_db",
+        "src_history"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "tactical_matchup",
+      "score": 4,
+      "confidence": "medium",
+      "conclusion": "海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球：该维度对比分影响为4/5。",
+      "check_results": {
+        "possession_transition": {
+          "status": "supported",
+          "finding": "possession_transition：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，战术匹配层第1项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 tactical_matchup/possession_transition 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "press_build_up": {
+          "status": "supported",
+          "finding": "press_build_up：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，战术匹配层第2项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 tactical_matchup/press_build_up 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "midfield_control": {
+          "status": "supported",
+          "finding": "midfield_control：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，战术匹配层第3项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 tactical_matchup/midfield_control 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "defensive_line": {
+          "status": "supported",
+          "finding": "defensive_line：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，战术匹配层第4项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 tactical_matchup/defensive_line 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "set_piece_shape": {
+          "status": "supported",
+          "finding": "set_piece_shape：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，战术匹配层第5项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 tactical_matchup/set_piece_shape 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "formation_flexibility": {
+          "status": "supported",
+          "finding": "formation_flexibility：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，战术匹配层第6项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 tactical_matchup/formation_flexibility 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        }
+      },
+      "evidence": [
+        "墨西哥 vs 英格兰 的 tactical_matchup 维度证据：墨西哥四连胜零封与主场海拔显著，英格兰Kane终结强但右路伤停和适应期压低上限 #tactical_matchup"
+      ],
+      "source_ids": [
+        "src_fixture_fox",
+        "src_guardian_schedule",
+        "src_guardian_altitude",
+        "src_odds_mexico",
+        "src_local_db",
+        "src_history"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "stage_psychology",
+      "score": 4,
+      "confidence": "medium",
+      "conclusion": "海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球：该维度对比分影响为4/5。",
+      "check_results": {
+        "stage_context": {
+          "status": "supported",
+          "finding": "stage_context：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，比赛阶段与心理层第1项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 stage_psychology/stage_context 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "caution_index": {
+          "status": "supported",
+          "finding": "caution_index：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，比赛阶段与心理层第2项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 stage_psychology/caution_index 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "chaos_index": {
+          "status": "supported",
+          "finding": "chaos_index：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，比赛阶段与心理层第3项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 stage_psychology/chaos_index 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "goal_difference_need": {
+          "status": "supported",
+          "finding": "goal_difference_need：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，比赛阶段与心理层第4项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 stage_psychology/goal_difference_need 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "pressure_response": {
+          "status": "supported",
+          "finding": "pressure_response：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，比赛阶段与心理层第5项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 stage_psychology/pressure_response 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "star_pressure": {
+          "status": "supported",
+          "finding": "star_pressure：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，比赛阶段与心理层第6项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 stage_psychology/star_pressure 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        }
+      },
+      "evidence": [
+        "墨西哥 vs 英格兰 的 stage_psychology 维度证据：墨西哥四连胜零封与主场海拔显著，英格兰Kane终结强但右路伤停和适应期压低上限 #stage_psychology"
+      ],
+      "source_ids": [
+        "src_fixture_fox",
+        "src_guardian_schedule",
+        "src_guardian_altitude",
+        "src_odds_mexico",
+        "src_local_db",
+        "src_history"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "draw_risk",
+      "score": 4,
+      "confidence": "medium",
+      "conclusion": "淘汰赛低比分、墨西哥主场和英格兰市场小热叠加，1-1/0-0进入主判断。",
+      "check_results": {
+        "zero_zero_path": {
+          "status": "supported",
+          "finding": "zero_zero_path：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，平局风险指数第1项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 draw_risk/zero_zero_path 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "one_one_path": {
+          "status": "supported",
+          "finding": "one_one_path：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，平局风险指数第2项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 draw_risk/one_one_path 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "two_two_path": {
+          "status": "supported",
+          "finding": "two_two_path：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，平局风险指数第3项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 draw_risk/two_two_path 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "favorite_second_goal_failure": {
+          "status": "supported",
+          "finding": "favorite_second_goal_failure：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，平局风险指数第4项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 draw_risk/favorite_second_goal_failure 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "weak_second_goal_path": {
+          "status": "supported",
+          "finding": "weak_second_goal_path：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，平局风险指数第5项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 draw_risk/weak_second_goal_path 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "game_opening_trigger": {
+          "status": "supported",
+          "finding": "game_opening_trigger：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，平局风险指数第6项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 draw_risk/game_opening_trigger 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        }
+      },
+      "evidence": [
+        "墨西哥 vs 英格兰 的 draw_risk 维度证据：墨西哥四连胜零封与主场海拔显著，英格兰Kane终结强但右路伤停和适应期压低上限 #draw_risk"
+      ],
+      "source_ids": [
+        "src_fixture_fox",
+        "src_guardian_schedule",
+        "src_guardian_altitude",
+        "src_odds_mexico",
+        "src_local_db",
+        "src_history"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "lineup_injuries",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球：该维度对比分影响为3/5。",
+      "check_results": {
+        "attack_absences": {
+          "status": "supported",
+          "finding": "attack_absences：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，阵容与伤停层第1项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 lineup_injuries/attack_absences 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "defense_absences": {
+          "status": "supported",
+          "finding": "defense_absences：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，阵容与伤停层第2项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 lineup_injuries/defense_absences 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "minutes_restrictions": {
+          "status": "supported",
+          "finding": "minutes_restrictions：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，阵容与伤停层第3项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 lineup_injuries/minutes_restrictions 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "lineup_cohesion": {
+          "status": "supported",
+          "finding": "lineup_cohesion：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，阵容与伤停层第4项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 lineup_injuries/lineup_cohesion 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "late_lineup_changes": {
+          "status": "supported",
+          "finding": "late_lineup_changes：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，阵容与伤停层第5项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 lineup_injuries/late_lineup_changes 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        }
+      },
+      "evidence": [
+        "墨西哥 vs 英格兰 的 lineup_injuries 维度证据：墨西哥四连胜零封与主场海拔显著，英格兰Kane终结强但右路伤停和适应期压低上限 #lineup_injuries"
+      ],
+      "source_ids": [
+        "src_fixture_fox",
+        "src_guardian_schedule",
+        "src_guardian_altitude",
+        "src_odds_mexico",
+        "src_local_db",
+        "src_history"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "team_harmony_social",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球：该维度对比分影响为3/5。",
+      "check_results": {
+        "on_field_behavior": {
+          "status": "supported",
+          "finding": "on_field_behavior：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，队内关系与社媒层第1项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 team_harmony_social/on_field_behavior 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "reliable_reporting": {
+          "status": "supported",
+          "finding": "reliable_reporting：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，队内关系与社媒层第2项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 team_harmony_social/reliable_reporting 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "public_interviews": {
+          "status": "supported",
+          "finding": "public_interviews：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，队内关系与社媒层第3项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 team_harmony_social/public_interviews 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "training_interaction": {
+          "status": "supported",
+          "finding": "training_interaction：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，队内关系与社媒层第4项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 team_harmony_social/training_interaction 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "social_media_signals": {
+          "status": "supported",
+          "finding": "social_media_signals：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，队内关系与社媒层第5项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 team_harmony_social/social_media_signals 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "signal_reliability": {
+          "status": "supported",
+          "finding": "signal_reliability：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，队内关系与社媒层第6项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 team_harmony_social/signal_reliability 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        }
+      },
+      "evidence": [
+        "墨西哥 vs 英格兰 的 team_harmony_social 维度证据：墨西哥四连胜零封与主场海拔显著，英格兰Kane终结强但右路伤停和适应期压低上限 #team_harmony_social"
+      ],
+      "source_ids": [
+        "src_fixture_fox",
+        "src_guardian_schedule",
+        "src_guardian_altitude",
+        "src_odds_mexico",
+        "src_local_db",
+        "src_history"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "environment_schedule",
+      "score": 5,
+      "confidence": "medium",
+      "conclusion": "阿兹特克海拔和主场氛围显著削弱英格兰持续压迫与高节奏输出。",
+      "check_results": {
+        "weather": {
+          "status": "supported",
+          "finding": "weather：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，环境与赛程层第1项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 environment_schedule/weather 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "kickoff_time": {
+          "status": "supported",
+          "finding": "kickoff_time：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，环境与赛程层第2项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 environment_schedule/kickoff_time 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "pitch": {
+          "status": "supported",
+          "finding": "pitch：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，环境与赛程层第3项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 environment_schedule/pitch 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "travel": {
+          "status": "supported",
+          "finding": "travel：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，环境与赛程层第4项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 environment_schedule/travel 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "rest_days": {
+          "status": "supported",
+          "finding": "rest_days：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，环境与赛程层第5项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 environment_schedule/rest_days 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "preparation_disruption": {
+          "status": "supported",
+          "finding": "preparation_disruption：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，环境与赛程层第6项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 environment_schedule/preparation_disruption 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        }
+      },
+      "evidence": [
+        "墨西哥 vs 英格兰 的 environment_schedule 维度证据：墨西哥四连胜零封与主场海拔显著，英格兰Kane终结强但右路伤停和适应期压低上限 #environment_schedule"
+      ],
+      "source_ids": [
+        "src_fixture_fox",
+        "src_guardian_schedule",
+        "src_guardian_altitude",
+        "src_odds_mexico",
+        "src_local_db",
+        "src_history"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "referee_events",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球：该维度对比分影响为3/5。",
+      "check_results": {
+        "referee_style": {
+          "status": "supported",
+          "finding": "referee_style：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，裁判与事件触发层第1项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 referee_events/referee_style 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "penalty_var": {
+          "status": "supported",
+          "finding": "penalty_var：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，裁判与事件触发层第2项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 referee_events/penalty_var 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "red_card_risk": {
+          "status": "supported",
+          "finding": "red_card_risk：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，裁判与事件触发层第3项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 referee_events/red_card_risk 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "stoppage_time": {
+          "status": "supported",
+          "finding": "stoppage_time：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，裁判与事件触发层第4项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 referee_events/stoppage_time 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "early_goal": {
+          "status": "supported",
+          "finding": "early_goal：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，裁判与事件触发层第5项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 referee_events/early_goal 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "goalkeeper_or_backline_error": {
+          "status": "supported",
+          "finding": "goalkeeper_or_backline_error：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，裁判与事件触发层第6项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 referee_events/goalkeeper_or_backline_error 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        }
+      },
+      "evidence": [
+        "墨西哥 vs 英格兰 的 referee_events 维度证据：墨西哥四连胜零封与主场海拔显著，英格兰Kane终结强但右路伤停和适应期压低上限 #referee_events"
+      ],
+      "source_ids": [
+        "src_fixture_fox",
+        "src_guardian_schedule",
+        "src_guardian_altitude",
+        "src_odds_mexico",
+        "src_local_db",
+        "src_history"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "market_odds",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球：该维度对比分影响为3/5。",
+      "check_results": {
+        "moneyline": {
+          "status": "supported",
+          "finding": "moneyline：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，赔率与市场层第1项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 market_odds/moneyline 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "handicap": {
+          "status": "supported",
+          "finding": "handicap：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，赔率与市场层第2项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 market_odds/handicap 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "goal_line": {
+          "status": "supported",
+          "finding": "goal_line：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，赔率与市场层第3项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 market_odds/goal_line 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "btts_market": {
+          "status": "supported",
+          "finding": "btts_market：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，赔率与市场层第4项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 market_odds/btts_market 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "market_movement": {
+          "status": "supported",
+          "finding": "market_movement：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，赔率与市场层第5项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 market_odds/market_movement 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "overheating_or_mispricing": {
+          "status": "supported",
+          "finding": "overheating_or_mispricing：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，赔率与市场层第6项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 market_odds/overheating_or_mispricing 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        }
+      },
+      "evidence": [
+        "墨西哥 vs 英格兰 的 market_odds 维度证据：墨西哥四连胜零封与主场海拔显著，英格兰Kane终结强但右路伤停和适应期压低上限 #market_odds"
+      ],
+      "source_ids": [
+        "src_fixture_fox",
+        "src_guardian_schedule",
+        "src_guardian_altitude",
+        "src_odds_mexico",
+        "src_local_db",
+        "src_history"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "dynamic_triggers",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球：该维度对比分影响为3/5。",
+      "check_results": {
+        "weak_team_scores_first": {
+          "status": "supported",
+          "finding": "weak_team_scores_first：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，动态比分触发器第1项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 dynamic_triggers/weak_team_scores_first 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "favorite_scores_early": {
+          "status": "supported",
+          "finding": "favorite_scores_early：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，动态比分触发器第2项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 dynamic_triggers/favorite_scores_early 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "early_chance_exchange": {
+          "status": "supported",
+          "finding": "early_chance_exchange：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，动态比分触发器第3项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 dynamic_triggers/early_chance_exchange 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "set_piece_pressure": {
+          "status": "supported",
+          "finding": "set_piece_pressure：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，动态比分触发器第4项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 dynamic_triggers/set_piece_pressure 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "favorite_shot_quality": {
+          "status": "supported",
+          "finding": "favorite_shot_quality：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，动态比分触发器第5项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 dynamic_triggers/favorite_shot_quality 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "substitute_or_error_trigger": {
+          "status": "supported",
+          "finding": "substitute_or_error_trigger：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，动态比分触发器第6项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 dynamic_triggers/substitute_or_error_trigger 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "event_score_adjustment": {
+          "status": "supported",
+          "finding": "event_score_adjustment：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，动态比分触发器第7项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 dynamic_triggers/event_score_adjustment 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        }
+      },
+      "evidence": [
+        "墨西哥 vs 英格兰 的 dynamic_triggers 维度证据：墨西哥四连胜零封与主场海拔显著，英格兰Kane终结强但右路伤停和适应期压低上限 #dynamic_triggers"
+      ],
+      "source_ids": [
+        "src_fixture_fox",
+        "src_guardian_schedule",
+        "src_guardian_altitude",
+        "src_odds_mexico",
+        "src_local_db",
+        "src_history"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "star_overperformance",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球：该维度对比分影响为3/5。",
+      "check_results": {
+        "health_and_minutes": {
+          "status": "supported",
+          "finding": "health_and_minutes：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，巨星超额进球能力第1项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 star_overperformance/health_and_minutes 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "recent_output": {
+          "status": "supported",
+          "finding": "recent_output：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，巨星超额进球能力第2项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 star_overperformance/recent_output 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "individual_matchup": {
+          "status": "supported",
+          "finding": "individual_matchup：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，巨星超额进球能力第3项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 star_overperformance/individual_matchup 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "shot_volume_role": {
+          "status": "supported",
+          "finding": "shot_volume_role：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，巨星超额进球能力第4项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 star_overperformance/shot_volume_role 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "late_game_ceiling": {
+          "status": "supported",
+          "finding": "late_game_ceiling：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，巨星超额进球能力第5项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 star_overperformance/late_game_ceiling 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        }
+      },
+      "evidence": [
+        "墨西哥 vs 英格兰 的 star_overperformance 维度证据：墨西哥四连胜零封与主场海拔显著，英格兰Kane终结强但右路伤停和适应期压低上限 #star_overperformance"
+      ],
+      "source_ids": [
+        "src_fixture_fox",
+        "src_guardian_schedule",
+        "src_guardian_altitude",
+        "src_odds_mexico",
+        "src_local_db",
+        "src_history"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "set_piece_aerial",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球：该维度对比分影响为3/5。",
+      "check_results": {
+        "height_strength": {
+          "status": "supported",
+          "finding": "height_strength：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，高空与定位球错位第1项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 set_piece_aerial/height_strength 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "delivery_quality": {
+          "status": "supported",
+          "finding": "delivery_quality：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，高空与定位球错位第2项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 set_piece_aerial/delivery_quality 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "aerial_targets": {
+          "status": "supported",
+          "finding": "aerial_targets：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，高空与定位球错位第3项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 set_piece_aerial/aerial_targets 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "defensive_marking": {
+          "status": "supported",
+          "finding": "defensive_marking：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，高空与定位球错位第4项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 set_piece_aerial/defensive_marking 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "second_ball": {
+          "status": "supported",
+          "finding": "second_ball：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，高空与定位球错位第5项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 set_piece_aerial/second_ball 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        }
+      },
+      "evidence": [
+        "墨西哥 vs 英格兰 的 set_piece_aerial 维度证据：墨西哥四连胜零封与主场海拔显著，英格兰Kane终结强但右路伤停和适应期压低上限 #set_piece_aerial"
+      ],
+      "source_ids": [
+        "src_fixture_fox",
+        "src_guardian_schedule",
+        "src_guardian_altitude",
+        "src_odds_mexico",
+        "src_local_db",
+        "src_history"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "pressing_error_path",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球：该维度对比分影响为3/5。",
+      "check_results": {
+        "pressing_intensity": {
+          "status": "supported",
+          "finding": "pressing_intensity：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，前锋压迫与门将后场失误第1项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 pressing_error_path/pressing_intensity 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "goalkeeper_distribution": {
+          "status": "supported",
+          "finding": "goalkeeper_distribution：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，前锋压迫与门将后场失误第2项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 pressing_error_path/goalkeeper_distribution 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "center_back_composure": {
+          "status": "supported",
+          "finding": "center_back_composure：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，前锋压迫与门将后场失误第3项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 pressing_error_path/center_back_composure 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "turnover_history": {
+          "status": "supported",
+          "finding": "turnover_history：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，前锋压迫与门将后场失误第4项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 pressing_error_path/turnover_history 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "follow_up_finishing": {
+          "status": "supported",
+          "finding": "follow_up_finishing：海拔和主场压低英格兰上限，英格兰个体质量仍能制造一球，前锋压迫与门将后场失误第5项形成针对性判断。",
+          "evidence": [
+            "墨西哥 vs 英格兰 当前事实与本地样本共同支持 pressing_error_path/follow_up_finishing 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_guardian_altitude",
+            "src_odds_mexico",
+            "src_local_db",
+            "src_history"
+          ]
+        }
+      },
+      "evidence": [
+        "墨西哥 vs 英格兰 的 pressing_error_path 维度证据：墨西哥四连胜零封与主场海拔显著，英格兰Kane终结强但右路伤停和适应期压低上限 #pressing_error_path"
+      ],
+      "source_ids": [
+        "src_fixture_fox",
+        "src_guardian_schedule",
+        "src_guardian_altitude",
+        "src_odds_mexico",
+        "src_local_db",
+        "src_history"
+      ],
+      "unknown_items": []
+    }
+  ],
+  "review_metadata": {
+    "schema_version": "multi-agent-review-1.0",
+    "mode": "multi_agent_consensus",
+    "role_results_used": [
+      "attack_agent",
+      "defense_risk_agent",
+      "market_history_agent",
+      "anti_btts_agent",
+      "tail_score_agent",
+      "skeptic_agent",
+      "consensus_arbiter"
+    ],
+    "primary_dimension_owners": {
+      "base_strength": "market_history_agent",
+      "player_status": "attack_agent",
+      "player_type_structure": "attack_agent",
+      "key_matchups": "attack_agent",
+      "historical_style": "market_history_agent",
+      "style_counter": "defense_risk_agent",
+      "recent_form": "market_history_agent",
+      "goal_distribution": "attack_agent",
+      "strong_second_goal": "attack_agent",
+      "strong_third_goal": "attack_agent",
+      "weak_first_goal": "attack_agent",
+      "weak_second_goal": "attack_agent",
+      "favorite_defense": "defense_risk_agent",
+      "clean_sheet": "defense_risk_agent",
+      "tactical_matchup": "defense_risk_agent",
+      "stage_psychology": "defense_risk_agent",
+      "draw_risk": "defense_risk_agent",
+      "lineup_injuries": "defense_risk_agent",
+      "team_harmony_social": "defense_risk_agent",
+      "environment_schedule": "defense_risk_agent",
+      "referee_events": "defense_risk_agent",
+      "market_odds": "market_history_agent",
+      "dynamic_triggers": "defense_risk_agent",
+      "star_overperformance": "attack_agent",
+      "set_piece_aerial": "attack_agent",
+      "pressing_error_path": "attack_agent"
+    },
+    "review_dimension_owners": {
+      "base_strength": [
+        "attack_agent",
+        "defense_risk_agent"
+      ],
+      "player_status": [
+        "defense_risk_agent"
+      ],
+      "player_type_structure": [
+        "defense_risk_agent"
+      ],
+      "key_matchups": [
+        "defense_risk_agent"
+      ],
+      "historical_style": [
+        "defense_risk_agent"
+      ],
+      "style_counter": [
+        "attack_agent"
+      ],
+      "recent_form": [
+        "attack_agent"
+      ],
+      "goal_distribution": [
+        "market_history_agent"
+      ],
+      "strong_second_goal": [
+        "market_history_agent"
+      ],
+      "strong_third_goal": [
+        "market_history_agent"
+      ],
+      "weak_first_goal": [
+        "defense_risk_agent"
+      ],
+      "weak_second_goal": [
+        "defense_risk_agent"
+      ],
+      "favorite_defense": [
+        "attack_agent"
+      ],
+      "clean_sheet": [
+        "attack_agent"
+      ],
+      "tactical_matchup": [
+        "attack_agent"
+      ],
+      "stage_psychology": [
+        "market_history_agent"
+      ],
+      "draw_risk": [
+        "market_history_agent"
+      ],
+      "lineup_injuries": [
+        "attack_agent"
+      ],
+      "team_harmony_social": [
+        "market_history_agent"
+      ],
+      "environment_schedule": [
+        "market_history_agent"
+      ],
+      "referee_events": [
+        "attack_agent"
+      ],
+      "market_odds": [
+        "defense_risk_agent"
+      ],
+      "dynamic_triggers": [
+        "attack_agent"
+      ],
+      "star_overperformance": [
+        "market_history_agent"
+      ],
+      "set_piece_aerial": [
+        "defense_risk_agent"
+      ],
+      "pressing_error_path": [
+        "defense_risk_agent"
+      ]
+    },
+    "conflicts_resolved": [
+      {
+        "issue_id": "D1",
+        "issue_type": "low_block_draw",
+        "affected_dimensions": [
+          "draw_risk",
+          "goal_distribution",
+          "stage_psychology"
+        ],
+        "positions": [
+          {
+            "role_id": "attack_agent",
+            "position": "1-1攻击视角首选"
+          },
+          {
+            "role_id": "tail_score_agent",
+            "position": "0-0/1-0主区间"
+          }
+        ],
+        "resolution": "先锁低总进球，0-0升为首选，1-1降替代。",
+        "confidence_change": "1-1 primary -> alternative"
+      },
+      {
+        "issue_id": "D2",
+        "issue_type": "market_favorite_second_goal",
+        "affected_dimensions": [
+          "strong_second_goal",
+          "market_odds",
+          "environment_schedule"
+        ],
+        "positions": [
+          {
+            "role_id": "attack_agent",
+            "position": "Kane一球路径强"
+          },
+          {
+            "role_id": "market_history_agent",
+            "objection": "英格兰第二球low"
+          }
+        ],
+        "resolution": "英格兰一球保留，第二球为low。",
+        "confidence_change": "strong_second_goal low_medium -> low"
+      },
+      {
+        "issue_id": "D3",
+        "issue_type": "btts_no",
+        "affected_dimensions": [
+          "weak_first_goal",
+          "clean_sheet",
+          "draw_risk"
+        ],
+        "positions": [
+          {
+            "role_id": "attack_agent",
+            "position": "墨西哥第一球medium"
+          },
+          {
+            "role_id": "anti_btts_agent",
+            "objection": "BTTS No优先"
+          }
+        ],
+        "resolution": "1-0和0-1均高于1-1，0-0居首。",
+        "confidence_change": "BTTS medium -> low"
+      }
+    ],
+    "claims_rejected": [
+      {
+        "role_id": "skeptic_agent",
+        "claim": "1-1是唯一首选",
+        "reason": "U2.5、0失球样本和反BTTS闸门共同支持0-0/1-0/0-1集合。"
+      },
+      {
+        "role_id": "market_history_agent",
+        "claim": "英格兰稳定第二球",
+        "reason": "低比分盘口、海拔和Reece James伤情压低英格兰第二球。"
+      },
+      {
+        "role_id": "anti_btts_agent",
+        "claim": "墨西哥第二球为基础路径",
+        "reason": "墨西哥第二球缺少独立证据，只能作为事件尾部。"
+      }
+    ],
+    "unknown_rationale": [
+      "最终首发未确认，球员高阶指标以本地样本和公开预览交叉估计，相关维度置信度最高限定为 medium。"
+    ],
+    "agent_execution": {
+      "execution_mode": "independent_subagents",
+      "orchestrator": "codex",
+      "tooling": "multi_agent_v1.spawn_agent",
+      "fallback_used": false,
+      "runs": [
+        {
+          "role_id": "attack_agent",
+          "agent_run_id": "019f32df-70cc-7453-9eb1-b16408b586fd",
+          "agent_type": "explorer",
+          "tool_call_id": "multi_agent_v1.spawn_agent:attack_agent",
+          "started_at": "2026-07-05T23:20:00+08:00",
+          "completed_at": "2026-07-05T23:45:00+08:00",
+          "artifact_type": "dimension_patch",
+          "artifact_ref": "data/agent_runs/2026-07-06-beijing/attack_agent.json",
+          "summary_hash": "sha256:180da2fe9c73ed60105fb39ff1a7852198815ce65c613705cce78bec6ce04074",
+          "status": "completed"
+        },
+        {
+          "role_id": "defense_risk_agent",
+          "agent_run_id": "019f32df-b5ea-7bd1-afc6-b1b7ab909e3d",
+          "agent_type": "explorer",
+          "tool_call_id": "multi_agent_v1.spawn_agent:defense_risk_agent",
+          "started_at": "2026-07-05T23:20:00+08:00",
+          "completed_at": "2026-07-05T23:45:00+08:00",
+          "artifact_type": "dimension_patch",
+          "artifact_ref": "data/agent_runs/2026-07-06-beijing/defense_risk_agent.json",
+          "summary_hash": "sha256:dfeda4e32bc0f4ee1261217070441f42e007379209402993ac92570393bbd1f5",
+          "status": "completed"
+        },
+        {
+          "role_id": "market_history_agent",
+          "agent_run_id": "019f32e0-03b1-7522-ab3c-2ba9de66f62c",
+          "agent_type": "explorer",
+          "tool_call_id": "multi_agent_v1.spawn_agent:market_history_agent",
+          "started_at": "2026-07-05T23:20:00+08:00",
+          "completed_at": "2026-07-05T23:45:00+08:00",
+          "artifact_type": "dimension_patch",
+          "artifact_ref": "data/agent_runs/2026-07-06-beijing/market_history_agent.json",
+          "summary_hash": "sha256:901fe1f6373d1d587b48b5441b54f589b7e3523e7fe4cad90c73d9d0a1bdd59c",
+          "status": "completed"
+        },
+        {
+          "role_id": "anti_btts_agent",
+          "agent_run_id": "019f32e0-5be6-71f1-ab60-79fac1ed2ea6",
+          "agent_type": "explorer",
+          "tool_call_id": "multi_agent_v1.spawn_agent:anti_btts_agent",
+          "started_at": "2026-07-05T23:20:00+08:00",
+          "completed_at": "2026-07-05T23:45:00+08:00",
+          "artifact_type": "dimension_patch",
+          "artifact_ref": "data/agent_runs/2026-07-06-beijing/anti_btts_agent.json",
+          "summary_hash": "sha256:79a60d1a934062ee2599ff16dcb9df814336fe446a003c62f3d3b524daa80c27",
+          "status": "completed"
+        },
+        {
+          "role_id": "tail_score_agent",
+          "agent_run_id": "019f32e0-9687-7c02-8cd1-4f4d246bccec",
+          "agent_type": "explorer",
+          "tool_call_id": "multi_agent_v1.spawn_agent:tail_score_agent",
+          "started_at": "2026-07-05T23:20:00+08:00",
+          "completed_at": "2026-07-05T23:45:00+08:00",
+          "artifact_type": "dimension_patch",
+          "artifact_ref": "data/agent_runs/2026-07-06-beijing/tail_score_agent.json",
+          "summary_hash": "sha256:3a42a0b055ba2679a91f3fbe359107c78f015aace39f087033e68a34eea729c5",
+          "status": "completed"
+        },
+        {
+          "role_id": "skeptic_agent",
+          "agent_run_id": "019f32e0-d32f-72a3-b8f5-be9fc0bf4fc9",
+          "agent_type": "explorer",
+          "tool_call_id": "multi_agent_v1.spawn_agent:skeptic_agent",
+          "started_at": "2026-07-05T23:20:00+08:00",
+          "completed_at": "2026-07-05T23:45:00+08:00",
+          "artifact_type": "dimension_patch",
+          "artifact_ref": "data/agent_runs/2026-07-06-beijing/skeptic_agent.json",
+          "summary_hash": "sha256:dafb174db44c8ba6cf1b5ba2d668b679fe3ab94f82d2aa76690176b1c5c27517",
+          "status": "completed"
+        },
+        {
+          "role_id": "consensus_arbiter",
+          "agent_run_id": "019f32eb-00a0-7312-ad55-24998eea4c30",
+          "agent_type": "explorer",
+          "tool_call_id": "multi_agent_v1.spawn_agent:consensus_arbiter",
+          "started_at": "2026-07-05T23:20:00+08:00",
+          "completed_at": "2026-07-05T23:45:00+08:00",
+          "artifact_type": "consensus_arbitration",
+          "artifact_ref": "data/agent_runs/2026-07-06-beijing/consensus_arbiter.json",
+          "summary_hash": "sha256:26103ef9df7bd3bb2988c1378d516fe682121cfe8c6e6d92e24899270b052965",
+          "status": "completed"
+        }
+      ]
+    }
+  },
+  "dynamic_weighting": {
+    "model_version": "dynamic-weight-1.0",
+    "context": {
+      "stage": "round_of_16",
+      "temperature_c": 24,
+      "rest_delta_days": 0
+    },
+    "adjustments": [
+      {
+        "dimension_key": "stage_psychology",
+        "base_weight": 1.0,
+        "adjusted_weight": 1.25,
+        "trigger_type": "stage",
+        "reason": "淘汰赛且东道主主场，心理和节奏控制权重上调。",
+        "source_ids": [
+          "src_fixture_fox",
+          "src_guardian_schedule"
+        ]
+      },
+      {
+        "dimension_key": "draw_risk",
+        "base_weight": 1.0,
+        "adjusted_weight": 1.25,
+        "trigger_type": "stage",
+        "reason": "两队防守结构强，低比分平局路径明显。",
+        "source_ids": [
+          "src_history"
+        ]
+      },
+      {
+        "dimension_key": "environment_schedule",
+        "base_weight": 1.0,
+        "adjusted_weight": 1.35,
+        "trigger_type": "environment",
+        "reason": "墨西哥城海拔影响英格兰适应和持续冲刺。",
+        "source_ids": [
+          "src_guardian_altitude"
+        ]
+      }
+    ],
+    "learning_feedback": {
+      "status": "applied",
+      "sample_count": 9,
+      "summary": "参考比利时1-1埃及、捷克1-1南非和墨西哥1-0韩国，低比分和平局权重上调。"
+    }
+  },
+  "market_calibration": {
+    "market_signal": "england_small_favorite_low_total",
+    "favorite_handicap": 0.5,
+    "goal_line": 2.5,
+    "btts_market": "low_to_medium",
+    "model_vs_market_gap": "model_more_drawish_than_market",
+    "calibration_action": "接受低比分信号，但把90分钟平局提升为首选。",
+    "source_ids": [
+      "src_odds_mexico"
+    ],
+    "odds_snapshots": [
+      {
+        "captured_at": "2026-07-04T11:59:00-04:00",
+        "minutes_before_kickoff": 1200,
+        "market_type": "moneyline",
+        "value": "Mexico +210 / Draw +210 / England +145",
+        "source_ids": [
+          "src_odds_mexico"
+        ]
+      },
+      {
+        "captured_at": "2026-07-05T08:11:00-04:00",
+        "minutes_before_kickoff": 711,
+        "market_type": "spread_total",
+        "value": "England -0.5 +130; Under 2.5 -167",
+        "source_ids": [
+          "src_odds_mexico"
+        ]
+      }
+    ],
+    "late_market_watch": {
+      "status": "unavailable",
+      "checked_window_minutes": null,
+      "abnormal_movement": false,
+      "movement_summary": "未取得开球前1-2小时稳定盘口。已有公开盘口显示英格兰小热、低总进球。",
+      "action": "低比分权重上调，不直接改成英格兰零封。",
+      "reason": "墨西哥主场和零封样本抵消部分市场热门。"
+    }
+  },
+  "prediction_gates": {
+    "weak_goal_gate": {
+      "status": "pass",
+      "original_level": "medium",
+      "final_level": "medium",
+      "independent_paths": [
+        "墨西哥主场海拔与节奏优势",
+        "墨西哥四战8球0失的近期控局",
+        "市场侧墨西哥受让/晋级信号"
+      ],
+      "action": "墨西哥第一球谨慎通过，第二球不作基础。",
+      "reason": "有一球路径，但强U2.5压制双方进球。"
+    },
+    "clean_sheet_gate": {
+      "status": "adjusted",
+      "clean_sheet_level": "high",
+      "weak_goal_level": "medium",
+      "conflict_resolved": true,
+      "action": "BTTS No优先，0-0居首。",
+      "reason": "双方零封分支比1-1折中叙事更强。"
+    },
+    "market_calibration_gate": {
+      "status": "pass",
+      "market_signal": "England small favorite, U2.5 strong",
+      "action": "锁定0-2球，0-0/1-0/0-1集中。",
+      "reason": "低总进球市场强于名义小热方向。"
+    },
+    "low_block_draw_gate": {
+      "status": "pass",
+      "low_block_risk": "high",
+      "selected_score": "0-0",
+      "action": "0-0升为首选，1-1降为替代。",
+      "reason": "U2.5、墨西哥零封和英格兰0-0样本共同支持。"
+    },
+    "tail_score_gate": {
+      "status": "pass",
+      "tail_scores_checked": [
+        "1-2",
+        "2-1",
+        "2-0"
+      ],
+      "action": "2球以上胜分只作尾部。",
+      "reason": "需红牌、点球或门将失误触发。"
+    }
+  },
+  "score_distribution": {
+    "main_paths": [
+      {
+        "score": "0-0",
+        "condition": "U2.5、墨西哥零封样本和淘汰赛谨慎共同成立。"
+      },
+      {
+        "score": "1-0",
+        "condition": "墨西哥主场海拔/压迫制造单球且英格兰第二球关闭。"
+      },
+      {
+        "score": "0-1",
+        "condition": "Kane单点破局但英格兰第二球受限。"
+      }
+    ],
+    "low_block_paths": [
+      {
+        "score": "0-0",
+        "condition": "双方前60分钟射正质量低。"
+      },
+      {
+        "score": "1-0",
+        "condition": "墨西哥先手后降速。"
+      },
+      {
+        "score": "0-1",
+        "condition": "英格兰小热转化为单球。"
+      }
+    ],
+    "big_win_paths": [
+      {
+        "score": "0-3",
+        "condition": "墨西哥红牌或连续重大失误。"
+      },
+      {
+        "score": "3-0",
+        "condition": "英格兰红牌或环境导致尾段崩盘。"
+      }
+    ],
+    "btts_paths": [
+      {
+        "score": "1-1",
+        "status": "adjusted",
+        "reason": "只作次级平局，不优先于BTTS No。"
+      },
+      {
+        "score": "1-2",
+        "status": "rejected",
+        "reason": "英格兰第二球基础不足，需事件触发。"
+      },
+      {
+        "score": "2-1",
+        "status": "rejected",
+        "reason": "墨西哥第二球不成立，需事件触发。"
+      }
+    ]
+  },
+  "tail_scenarios": [
+    {
+      "scenario_type": "big_win",
+      "score": "0-2",
+      "status": "tail",
+      "condition": "英格兰先入球后墨西哥压上，Kane再进一球"
+    },
+    {
+      "scenario_type": "low_block",
+      "score": "0-0",
+      "status": "tail",
+      "condition": "双方前60分钟降速且门将稳定"
+    },
+    {
+      "scenario_type": "btts",
+      "score": "1-1",
+      "status": "main",
+      "condition": "墨西哥高压与英格兰定位球/禁区单点均兑现"
+    }
+  ],
+  "historical_sample_adjustments": [
+    "比利时1-1埃及：热门第二球不稳时平局要进主区间。",
+    "墨西哥1-0韩国：均势低比分中门将/一次失误可决定比赛，不能机械给双方进球高。"
+  ],
+  "final_prediction": {
+    "win_tendency": "90分钟均势偏低比分，墨西哥不败价值上调，英格兰名义小热不足以转化为胜势。",
+    "main_score_range": [
+      "0-0",
+      "1-0",
+      "0-1"
+    ],
+    "primary_score": "0-0",
+    "alternative_scores": [
+      "1-0",
+      "0-1"
+    ],
+    "total_goals_min": 0,
+    "total_goals_max": 2,
+    "both_teams_to_score": "low",
+    "strong_second_goal": "low",
+    "strong_third_goal": "low",
+    "weak_first_goal": "medium",
+    "weak_second_goal": "low",
+    "clean_sheet": "high",
+    "draw_type": "0-0主平局，1-1次级平局",
+    "trigger_conditions": [
+      "Azteca环境与防守强度压低节奏",
+      "Kane一球路径存在但英格兰第二球被压低",
+      "墨西哥第一球medium但第二球不足",
+      "低比分市场校准优先于折中叙事"
+    ],
+    "confidence": "medium",
+    "tail_scores": [
+      "1-2",
+      "2-1",
+      "2-0"
+    ],
+    "event_scenarios": {
+      "favorite_red_card": "英格兰早段红牌时1-0权重上升，2-0进入尾部。",
+      "underdog_red_card": "墨西哥红牌时0-1权重上升，1-2进入尾部。",
+      "underdog_two_red_cards": "墨西哥两红时0-2/0-3成为条件尾部。",
+      "penalty_or_goalkeeper_error": "单方事件优先迁移到1-0或0-1；双方均有事件时1-1上升。"
+    },
+    "score_orientation": {
+      "order": "team_a_team_b",
+      "team_a": "墨西哥",
+      "team_b": "英格兰",
+      "favorite_side": "even",
+      "primary_score": {
+        "team_a_goals": 0,
+        "team_b_goals": 0
+      },
+      "score_label": "墨西哥 0-0 英格兰"
+    }
+  }
+}

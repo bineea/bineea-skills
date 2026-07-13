@@ -1,0 +1,2973 @@
+{
+  "schema_version": "1.0.0",
+  "catalog_version": "2026-06-20",
+  "match": {
+    "match_id": "2026-07-07_BJT_POR_ESP",
+    "team_a": "葡萄牙",
+    "team_b": "西班牙",
+    "match_date": "2026-07-07 03:00 BJT",
+    "stage": "Round of 16",
+    "venue": "Dallas Stadium / AT&T Stadium"
+  },
+  "sources": [
+    {
+      "source_id": "src_schedule",
+      "source_type": "schedule",
+      "source_title": "赛程",
+      "summary": "赛程"
+    },
+    {
+      "source_id": "src_market",
+      "source_type": "market",
+      "source_title": "赔率",
+      "summary": "赔率"
+    },
+    {
+      "source_id": "src_lineup",
+      "source_type": "lineup",
+      "source_title": "阵容伤停",
+      "summary": "阵容伤停"
+    },
+    {
+      "source_id": "src_local",
+      "source_type": "local",
+      "source_title": "本地近赛与球员库",
+      "summary": "本地近赛与球员库"
+    },
+    {
+      "source_id": "src_history",
+      "source_type": "history",
+      "source_title": "失败样本路由",
+      "summary": "失败样本路由"
+    },
+    {
+      "source_id": "src_weather",
+      "source_type": "weather",
+      "source_title": "天气环境",
+      "summary": "天气环境"
+    },
+    {
+      "source_id": "src_agent",
+      "source_type": "agent",
+      "source_title": "七Agent合议",
+      "summary": "七Agent合议"
+    }
+  ],
+  "player_assessments": {
+    "team_a": [
+      {
+        "player_name": "Cristiano Ronaldo",
+        "position": "CF",
+        "player_type": "终结/点球/高点",
+        "status": "健康",
+        "expected_starter": true,
+        "expected_minutes": 85,
+        "conclusion": "三球状态和点球权支撑葡萄牙第一球。",
+        "evidence": [
+          "三球状态和点球权支撑葡萄牙第一球。"
+        ],
+        "source_ids": [
+          "src_local",
+          "src_lineup"
+        ],
+        "advanced_metrics": {
+          "xg_per90": 1.03,
+          "shots_per90": 4.14,
+          "shots_on_target_per90": 2.07
+        }
+      },
+      {
+        "player_name": "Bruno Fernandes",
+        "position": "AM",
+        "player_type": "组织/定位球",
+        "status": "健康",
+        "expected_starter": true,
+        "expected_minutes": 85,
+        "conclusion": "定位球和直塞是绕开西班牙控场的路径。",
+        "evidence": [
+          "定位球和直塞是绕开西班牙控场的路径。"
+        ],
+        "source_ids": [
+          "src_local"
+        ],
+        "advanced_metrics": {
+          "xa_per90": 0.37,
+          "key_passes_per90": "主定位球发起点",
+          "shots_per90": 2.22
+        }
+      },
+      {
+        "player_name": "Rafael Leao",
+        "position": "LW",
+        "player_type": "速度/反击",
+        "status": "健康",
+        "expected_starter": true,
+        "expected_minutes": 75,
+        "conclusion": "左路反击是葡萄牙运动战破门入口。",
+        "evidence": [
+          "左路反击是葡萄牙运动战破门入口。"
+        ],
+        "source_ids": [
+          "src_local",
+          "src_lineup"
+        ],
+        "advanced_metrics": {
+          "dribbles_completed_per90": 1.8,
+          "shots_per90": 1.9,
+          "temperature_stamina_note": "尾段需换人保护"
+        }
+      }
+    ],
+    "team_b": [
+      {
+        "player_name": "Mikel Oyarzabal",
+        "position": "CF",
+        "player_type": "假九/终结",
+        "status": "健康",
+        "expected_starter": true,
+        "expected_minutes": 82,
+        "conclusion": "四球一助支撑西班牙第二球。",
+        "evidence": [
+          "四球一助支撑西班牙第二球。"
+        ],
+        "source_ids": [
+          "src_local",
+          "src_lineup"
+        ],
+        "advanced_metrics": {
+          "xg_per90": 1.2,
+          "shots_per90": 5.08,
+          "shots_on_target_per90": 2.39
+        }
+      },
+      {
+        "player_name": "Lamine Yamal",
+        "position": "RW",
+        "player_type": "突破/内切",
+        "status": "健康",
+        "expected_starter": true,
+        "expected_minutes": 85,
+        "conclusion": "高分钟恢复让西班牙右路有稳定打开点。",
+        "evidence": [
+          "高分钟恢复让西班牙右路有稳定打开点。"
+        ],
+        "source_ids": [
+          "src_local",
+          "src_lineup"
+        ],
+        "advanced_metrics": {
+          "shots_per90": 5.24,
+          "shots_on_target_per90": 2.62,
+          "dribbles_completed_per90": "右路突破核心"
+        }
+      },
+      {
+        "player_name": "Pedri",
+        "position": "CM",
+        "player_type": "控节奏/连接",
+        "status": "健康",
+        "expected_starter": true,
+        "expected_minutes": 88,
+        "conclusion": "与Rodri一起压低葡萄牙反击回合。",
+        "evidence": [
+          "与Rodri一起压低葡萄牙反击回合。"
+        ],
+        "source_ids": [
+          "src_lineup"
+        ],
+        "advanced_metrics": {
+          "key_passes_per90": "中场连接核心",
+          "pressures_per90": "控场反抢参与",
+          "interceptions_per90": 1.4
+        }
+      }
+    ]
+  },
+  "player_matchup_edges": [
+    {
+      "matchup_id": "M1",
+      "attacker": "Rafael Leao",
+      "defender": "Pedro Porro",
+      "matchup_type": "wing_vs_fullback",
+      "metric_comparison": "Leao速度反击 vs Porro压上身后",
+      "edge": "team_a",
+      "source_ids": [
+        "src_lineup",
+        "src_local"
+      ]
+    },
+    {
+      "matchup_id": "M2",
+      "attacker": "Lamine Yamal",
+      "defender": "Nuno Mendes",
+      "matchup_type": "wing_vs_fullback",
+      "metric_comparison": "Yamal高分钟恢复 vs Mendes回追",
+      "edge": "team_b",
+      "source_ids": [
+        "src_lineup",
+        "src_local"
+      ]
+    },
+    {
+      "matchup_id": "M3",
+      "attacker": "Cristiano Ronaldo/Ramos",
+      "defender": "Cubarsi/Laporte",
+      "matchup_type": "aerial_set_piece",
+      "metric_comparison": "葡萄牙高点与9角样本 vs 西班牙防空",
+      "edge": "team_a",
+      "source_ids": [
+        "src_local",
+        "src_lineup"
+      ]
+    }
+  ],
+  "dimension_analyses": [
+    {
+      "dimension_key": "base_strength",
+      "score": 2,
+      "confidence": "medium",
+      "conclusion": "赛前基础层：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。",
+      "check_results": {
+        "ranking_elo": {
+          "status": "supported",
+          "finding": "ranking_elo：葡萄牙vs西班牙在FIFA排名与Elo差距上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项1已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 base_strength/ranking_elo 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "squad_quality": {
+          "status": "supported",
+          "finding": "squad_quality：葡萄牙vs西班牙在阵容质量与球员级别上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项2已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 base_strength/squad_quality 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "tournament_experience": {
+          "status": "neutral",
+          "finding": "tournament_experience：葡萄牙vs西班牙在大赛经验上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项3已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 base_strength/tournament_experience 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "bench_depth": {
+          "status": "supported",
+          "finding": "bench_depth：葡萄牙vs西班牙在替补深度上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项4已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 base_strength/bench_depth 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "coach_and_age_structure": {
+          "status": "supported",
+          "finding": "coach_and_age_structure：葡萄牙vs西班牙在教练稳定性与年龄结构上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项5已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 base_strength/coach_and_age_structure 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        }
+      },
+      "evidence": [
+        "葡萄牙vs西班牙 base_strength 维度证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。#base_strength"
+      ],
+      "source_ids": [
+        "src_lineup",
+        "src_market",
+        "src_local",
+        "src_history",
+        "src_agent"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "player_status",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "球员个体状态与实力层：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。",
+      "check_results": {
+        "expected_starters": {
+          "status": "supported",
+          "finding": "expected_starters：葡萄牙vs西班牙在核心球员是否预计首发上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项1已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 player_status/expected_starters 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "expected_minutes": {
+          "status": "supported",
+          "finding": "expected_minutes：葡萄牙vs西班牙在预计出场时间上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项2已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 player_status/expected_minutes 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "recent_minutes_and_form": {
+          "status": "neutral",
+          "finding": "recent_minutes_and_form：葡萄牙vs西班牙在近期出场时间与状态上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项3已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 player_status/recent_minutes_and_form 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "injury_recovery": {
+          "status": "supported",
+          "finding": "injury_recovery：葡萄牙vs西班牙在伤病、停赛与恢复阶段上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项4已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 player_status/injury_recovery 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "position_quality": {
+          "status": "supported",
+          "finding": "position_quality：葡萄牙vs西班牙在门将、中卫、后腰、组织者和攻击手质量上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项5已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 player_status/position_quality 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "big_match_and_mental_state": {
+          "status": "neutral",
+          "finding": "big_match_and_mental_state：葡萄牙vs西班牙在大赛表现与心理状态上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项6已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 player_status/big_match_and_mental_state 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        }
+      },
+      "evidence": [
+        "葡萄牙vs西班牙 player_status 维度证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。#player_status"
+      ],
+      "source_ids": [
+        "src_lineup",
+        "src_market",
+        "src_local",
+        "src_history",
+        "src_agent"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "player_type_structure",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "球员类型结构层：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。",
+      "check_results": {
+        "attacking_types": {
+          "status": "supported",
+          "finding": "attacking_types：葡萄牙vs西班牙在攻击球员类型组合上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项1已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 player_type_structure/attacking_types 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "midfield_types": {
+          "status": "supported",
+          "finding": "midfield_types：葡萄牙vs西班牙在中场组织与破坏类型上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项2已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 player_type_structure/midfield_types 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "defensive_types": {
+          "status": "neutral",
+          "finding": "defensive_types：葡萄牙vs西班牙在后卫与门将类型上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项3已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 player_type_structure/defensive_types 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "type_complementarity": {
+          "status": "supported",
+          "finding": "type_complementarity：葡萄牙vs西班牙在类型互补性上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项4已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 player_type_structure/type_complementarity 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "type_gaps": {
+          "status": "supported",
+          "finding": "type_gaps：葡萄牙vs西班牙在阵容类型缺口上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项5已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 player_type_structure/type_gaps 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        }
+      },
+      "evidence": [
+        "葡萄牙vs西班牙 player_type_structure 维度证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。#player_type_structure"
+      ],
+      "source_ids": [
+        "src_lineup",
+        "src_market",
+        "src_local",
+        "src_history",
+        "src_agent"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "key_matchups",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "关键对位层：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。",
+      "check_results": {
+        "wing_matchup": {
+          "status": "supported",
+          "finding": "wing_matchup：葡萄牙vs西班牙在边锋对边后卫上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项1已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 key_matchups/wing_matchup 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "striker_center_back": {
+          "status": "supported",
+          "finding": "striker_center_back：葡萄牙vs西班牙在中锋对中卫上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项2已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 key_matchups/striker_center_back 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "creator_defensive_midfield": {
+          "status": "neutral",
+          "finding": "creator_defensive_midfield：葡萄牙vs西班牙在组织核心对后腰上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项3已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 key_matchups/creator_defensive_midfield 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "pressing_build_up": {
+          "status": "supported",
+          "finding": "pressing_build_up：葡萄牙vs西班牙在前场压迫对后场出球上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项4已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 key_matchups/pressing_build_up 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "aerial_matchup": {
+          "status": "supported",
+          "finding": "aerial_matchup：葡萄牙vs西班牙在定位球高点对防空上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项5已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 key_matchups/aerial_matchup 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "transition_space": {
+          "status": "neutral",
+          "finding": "transition_space：葡萄牙vs西班牙在反击速度对防线高度上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项6已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 key_matchups/transition_space 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        }
+      },
+      "evidence": [
+        "葡萄牙vs西班牙 key_matchups 维度证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。#key_matchups"
+      ],
+      "source_ids": [
+        "src_lineup",
+        "src_market",
+        "src_local",
+        "src_history",
+        "src_agent"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "historical_style",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "历史球队风格层：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。",
+      "check_results": {
+        "team_a_style": {
+          "status": "supported",
+          "finding": "team_a_style：葡萄牙vs西班牙在A队长期风格上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项1已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 historical_style/team_a_style 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "team_b_style": {
+          "status": "supported",
+          "finding": "team_b_style：葡萄牙vs西班牙在B队长期风格上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项2已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 historical_style/team_b_style 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "leading_behavior": {
+          "status": "neutral",
+          "finding": "leading_behavior：葡萄牙vs西班牙在领先后的行为上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项3已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 historical_style/leading_behavior 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "trailing_behavior": {
+          "status": "supported",
+          "finding": "trailing_behavior：葡萄牙vs西班牙在落后后的行为上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项4已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 historical_style/trailing_behavior 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "draw_and_set_piece_tendency": {
+          "status": "supported",
+          "finding": "draw_and_set_piece_tendency：葡萄牙vs西班牙在平局与定位球倾向上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项5已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 historical_style/draw_and_set_piece_tendency 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        }
+      },
+      "evidence": [
+        "葡萄牙vs西班牙 historical_style 维度证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。#historical_style"
+      ],
+      "source_ids": [
+        "src_lineup",
+        "src_market",
+        "src_local",
+        "src_history",
+        "src_agent"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "style_counter",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "风格克制矩阵：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。",
+      "check_results": {
+        "team_a_attacks_team_b": {
+          "status": "supported",
+          "finding": "team_a_attacks_team_b：葡萄牙vs西班牙在A队强项攻击B队弱点上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项1已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 style_counter/team_a_attacks_team_b 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "team_b_attacks_team_a": {
+          "status": "supported",
+          "finding": "team_b_attacks_team_a：葡萄牙vs西班牙在B队强项攻击A队弱点上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项2已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 style_counter/team_b_attacks_team_a 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "team_a_resistance": {
+          "status": "neutral",
+          "finding": "team_a_resistance：葡萄牙vs西班牙在A队对B队主要武器的抵抗能力上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项3已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 style_counter/team_a_resistance 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "team_b_resistance": {
+          "status": "supported",
+          "finding": "team_b_resistance：葡萄牙vs西班牙在B队对A队主要武器的抵抗能力上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项4已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 style_counter/team_b_resistance 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "net_counter_effect": {
+          "status": "supported",
+          "finding": "net_counter_effect：葡萄牙vs西班牙在风格克制净影响上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项5已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 style_counter/net_counter_effect 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        }
+      },
+      "evidence": [
+        "葡萄牙vs西班牙 style_counter 维度证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。#style_counter"
+      ],
+      "source_ids": [
+        "src_lineup",
+        "src_market",
+        "src_local",
+        "src_history",
+        "src_agent"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "recent_form",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "近期状态层：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。",
+      "check_results": {
+        "recent_results": {
+          "status": "supported",
+          "finding": "recent_results：葡萄牙vs西班牙在近5至10场结果及对手质量上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项1已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 recent_form/recent_results 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "scoring_trend": {
+          "status": "supported",
+          "finding": "scoring_trend：葡萄牙vs西班牙在近期进球与射正趋势上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项2已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 recent_form/scoring_trend 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "conceding_trend": {
+          "status": "neutral",
+          "finding": "conceding_trend：葡萄牙vs西班牙在近期失球与被创造机会趋势上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项3已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 recent_form/conceding_trend 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "strong_weak_opponent_split": {
+          "status": "supported",
+          "finding": "strong_weak_opponent_split：葡萄牙vs西班牙在面对强队和弱队的表现差异上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项4已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 recent_form/strong_weak_opponent_split 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "second_half_trend": {
+          "status": "supported",
+          "finding": "second_half_trend：葡萄牙vs西班牙在下半场提速或崩盘趋势上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项5已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 recent_form/second_half_trend 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        }
+      },
+      "evidence": [
+        "葡萄牙vs西班牙 recent_form 维度证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。#recent_form"
+      ],
+      "source_ids": [
+        "src_lineup",
+        "src_market",
+        "src_local",
+        "src_history",
+        "src_agent"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "goal_distribution",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "进球分布层：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。",
+      "check_results": {
+        "xg_xga": {
+          "status": "supported",
+          "finding": "xg_xga：葡萄牙vs西班牙在xG与xGA上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项1已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 goal_distribution/xg_xga 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "shots_on_target": {
+          "status": "supported",
+          "finding": "shots_on_target：葡萄牙vs西班牙在射门与射正上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项2已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 goal_distribution/shots_on_target 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "big_chances": {
+          "status": "neutral",
+          "finding": "big_chances：葡萄牙vs西班牙在重大机会与禁区触球上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项3已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 goal_distribution/big_chances 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "set_piece_output": {
+          "status": "supported",
+          "finding": "set_piece_output：葡萄牙vs西班牙在定位球输出上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项4已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 goal_distribution/set_piece_output 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "nonstandard_goals": {
+          "status": "supported",
+          "finding": "nonstandard_goals：葡萄牙vs西班牙在点球、乌龙、压迫抢断等非常规路径上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项5已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 goal_distribution/nonstandard_goals 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        }
+      },
+      "evidence": [
+        "葡萄牙vs西班牙 goal_distribution 维度证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。#goal_distribution"
+      ],
+      "source_ids": [
+        "src_lineup",
+        "src_market",
+        "src_local",
+        "src_history",
+        "src_agent"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "strong_second_goal",
+      "score": 4,
+      "confidence": "medium",
+      "conclusion": "强队第二球能力：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。",
+      "check_results": {
+        "finisher_status": {
+          "status": "supported",
+          "finding": "finisher_status：葡萄牙vs西班牙在终结者状态上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项1已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 strong_second_goal/finisher_status 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "creator_quality": {
+          "status": "supported",
+          "finding": "creator_quality：葡萄牙vs西班牙在持续创造机会能力上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项2已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 strong_second_goal/creator_quality 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "shot_quality": {
+          "status": "neutral",
+          "finding": "shot_quality：葡萄牙vs西班牙在射正率与禁区射门比例上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项3已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 strong_second_goal/shot_quality 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "low_block_solution": {
+          "status": "supported",
+          "finding": "low_block_solution：葡萄牙vs西班牙在破密集防守手段上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项4已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 strong_second_goal/low_block_solution 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "bench_impact": {
+          "status": "supported",
+          "finding": "bench_impact：葡萄牙vs西班牙在替补冲击时间与质量上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项5已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 strong_second_goal/bench_impact 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "intent_after_leading": {
+          "status": "neutral",
+          "finding": "intent_after_leading：葡萄牙vs西班牙在领先后的继续进攻意愿上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项6已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 strong_second_goal/intent_after_leading 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        }
+      },
+      "evidence": [
+        "葡萄牙vs西班牙 strong_second_goal 维度证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。#strong_second_goal"
+      ],
+      "source_ids": [
+        "src_lineup",
+        "src_market",
+        "src_local",
+        "src_history",
+        "src_agent"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "strong_third_goal",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "强队第三球与大胜能力：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。",
+      "check_results": {
+        "star_ceiling": {
+          "status": "supported",
+          "finding": "star_ceiling：葡萄牙vs西班牙在巨星突破团队均值的能力上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项1已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 strong_third_goal/star_ceiling 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "bench_attack": {
+          "status": "supported",
+          "finding": "bench_attack：葡萄牙vs西班牙在替补攻击质量上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项2已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 strong_third_goal/bench_attack 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "second_half_adjustment": {
+          "status": "neutral",
+          "finding": "second_half_adjustment：葡萄牙vs西班牙在下半场战术调整上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项3已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 strong_third_goal/second_half_adjustment 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "opponent_fatigue": {
+          "status": "supported",
+          "finding": "opponent_fatigue：葡萄牙vs西班牙在对手后程体能上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项4已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 strong_third_goal/opponent_fatigue 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "defensive_error_risk": {
+          "status": "supported",
+          "finding": "defensive_error_risk：葡萄牙vs西班牙在门将或后卫失误风险上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项5已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 strong_third_goal/defensive_error_risk 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "late_goal_path": {
+          "status": "neutral",
+          "finding": "late_goal_path：葡萄牙vs西班牙在补时和尾段进球路径上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项6已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 strong_third_goal/late_goal_path 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        }
+      },
+      "evidence": [
+        "葡萄牙vs西班牙 strong_third_goal 维度证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。#strong_third_goal"
+      ],
+      "source_ids": [
+        "src_lineup",
+        "src_market",
+        "src_local",
+        "src_history",
+        "src_agent"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "weak_first_goal",
+      "score": 4,
+      "confidence": "medium",
+      "conclusion": "弱队第一球能力：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。",
+      "check_results": {
+        "core_attacker_start": {
+          "status": "supported",
+          "finding": "core_attacker_start：葡萄牙vs西班牙在核心攻击手是否首发上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项1已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 weak_first_goal/core_attacker_start 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "transition_path": {
+          "status": "supported",
+          "finding": "transition_path：葡萄牙vs西班牙在反击路径上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项2已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 weak_first_goal/transition_path 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "set_piece_path": {
+          "status": "neutral",
+          "finding": "set_piece_path：葡萄牙vs西班牙在定位球路径上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项3已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 weak_first_goal/set_piece_path 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "open_play_path": {
+          "status": "supported",
+          "finding": "open_play_path：葡萄牙vs西班牙在运动战路径上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项4已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 weak_first_goal/open_play_path 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "opponent_defensive_gap": {
+          "status": "supported",
+          "finding": "opponent_defensive_gap：葡萄牙vs西班牙在对手可利用的防守漏洞上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项5已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 weak_first_goal/opponent_defensive_gap 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        }
+      },
+      "evidence": [
+        "葡萄牙vs西班牙 weak_first_goal 维度证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。#weak_first_goal"
+      ],
+      "source_ids": [
+        "src_lineup",
+        "src_market",
+        "src_local",
+        "src_history",
+        "src_agent"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "weak_second_goal",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "弱队第二球能力：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。",
+      "check_results": {
+        "multiple_attack_sources": {
+          "status": "supported",
+          "finding": "multiple_attack_sources：葡萄牙vs西班牙在多点进攻上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项1已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 weak_second_goal/multiple_attack_sources 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "repeatable_chance_creation": {
+          "status": "supported",
+          "finding": "repeatable_chance_creation：葡萄牙vs西班牙在可重复创造机会能力上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项2已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 weak_second_goal/repeatable_chance_creation 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "bench_impact": {
+          "status": "neutral",
+          "finding": "bench_impact：葡萄牙vs西班牙在替补冲击上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项3已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 weak_second_goal/bench_impact 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "response_after_conceding": {
+          "status": "supported",
+          "finding": "response_after_conceding：葡萄牙vs西班牙在丢球后的反弹能力上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项4已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 weak_second_goal/response_after_conceding 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "favorite_control_risk": {
+          "status": "supported",
+          "finding": "favorite_control_risk：葡萄牙vs西班牙在强队控场失效风险上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项5已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 weak_second_goal/favorite_control_risk 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        }
+      },
+      "evidence": [
+        "葡萄牙vs西班牙 weak_second_goal 维度证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。#weak_second_goal"
+      ],
+      "source_ids": [
+        "src_lineup",
+        "src_market",
+        "src_local",
+        "src_history",
+        "src_agent"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "favorite_defense",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "热门球队防守脆弱度：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。",
+      "check_results": {
+        "center_back_speed": {
+          "status": "supported",
+          "finding": "center_back_speed：葡萄牙vs西班牙在中卫转身与回追上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项1已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 favorite_defense/center_back_speed 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "fullback_space": {
+          "status": "supported",
+          "finding": "fullback_space：葡萄牙vs西班牙在边后卫身后空间上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项2已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 favorite_defense/fullback_space 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "midfield_protection": {
+          "status": "neutral",
+          "finding": "midfield_protection：葡萄牙vs西班牙在后腰保护上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项3已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 favorite_defense/midfield_protection 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "goalkeeper_stability": {
+          "status": "supported",
+          "finding": "goalkeeper_stability：葡萄牙vs西班牙在门将稳定性上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项4已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 favorite_defense/goalkeeper_stability 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "set_piece_defense": {
+          "status": "supported",
+          "finding": "set_piece_defense：葡萄牙vs西班牙在定位球防守上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项5已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 favorite_defense/set_piece_defense 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "control_after_leading": {
+          "status": "neutral",
+          "finding": "control_after_leading：葡萄牙vs西班牙在领先后的控场纪律上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项6已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 favorite_defense/control_after_leading 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        }
+      },
+      "evidence": [
+        "葡萄牙vs西班牙 favorite_defense 维度证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。#favorite_defense"
+      ],
+      "source_ids": [
+        "src_lineup",
+        "src_market",
+        "src_local",
+        "src_history",
+        "src_agent"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "clean_sheet",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "零封能力：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。",
+      "check_results": {
+        "possession_control": {
+          "status": "supported",
+          "finding": "possession_control：葡萄牙vs西班牙在控球与节奏压制上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项1已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 clean_sheet/possession_control 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "counterpress": {
+          "status": "supported",
+          "finding": "counterpress：葡萄牙vs西班牙在丢球后反抢上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项2已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 clean_sheet/counterpress 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "box_protection": {
+          "status": "neutral",
+          "finding": "box_protection：葡萄牙vs西班牙在禁区保护上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项3已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 clean_sheet/box_protection 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "goalkeeper": {
+          "status": "supported",
+          "finding": "goalkeeper：葡萄牙vs西班牙在门将表现上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项4已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 clean_sheet/goalkeeper 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "weak_attack_availability": {
+          "status": "supported",
+          "finding": "weak_attack_availability：葡萄牙vs西班牙在弱队攻击核心可用性上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项5已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 clean_sheet/weak_attack_availability 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "weak_attack_depth": {
+          "status": "neutral",
+          "finding": "weak_attack_depth：葡萄牙vs西班牙在弱队进攻路径数量上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项6已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 clean_sheet/weak_attack_depth 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        }
+      },
+      "evidence": [
+        "葡萄牙vs西班牙 clean_sheet 维度证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。#clean_sheet"
+      ],
+      "source_ids": [
+        "src_lineup",
+        "src_market",
+        "src_local",
+        "src_history",
+        "src_agent"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "tactical_matchup",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "战术匹配层：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。",
+      "check_results": {
+        "possession_transition": {
+          "status": "supported",
+          "finding": "possession_transition：葡萄牙vs西班牙在控球对反击上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项1已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 tactical_matchup/possession_transition 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "press_build_up": {
+          "status": "supported",
+          "finding": "press_build_up：葡萄牙vs西班牙在高压对出球上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项2已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 tactical_matchup/press_build_up 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "midfield_control": {
+          "status": "neutral",
+          "finding": "midfield_control：葡萄牙vs西班牙在中场控制与二点球上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项3已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 tactical_matchup/midfield_control 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "defensive_line": {
+          "status": "supported",
+          "finding": "defensive_line：葡萄牙vs西班牙在防线高度与身后风险上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项4已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 tactical_matchup/defensive_line 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "set_piece_shape": {
+          "status": "supported",
+          "finding": "set_piece_shape：葡萄牙vs西班牙在定位球攻防上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项5已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 tactical_matchup/set_piece_shape 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "formation_flexibility": {
+          "status": "neutral",
+          "finding": "formation_flexibility：葡萄牙vs西班牙在变阵与换人弹性上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项6已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 tactical_matchup/formation_flexibility 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        }
+      },
+      "evidence": [
+        "葡萄牙vs西班牙 tactical_matchup 维度证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。#tactical_matchup"
+      ],
+      "source_ids": [
+        "src_lineup",
+        "src_market",
+        "src_local",
+        "src_history",
+        "src_agent"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "stage_psychology",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "比赛阶段与心理层：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。",
+      "check_results": {
+        "stage_context": {
+          "status": "supported",
+          "finding": "stage_context：葡萄牙vs西班牙在小组或淘汰赛阶段上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项1已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 stage_psychology/stage_context 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "caution_index": {
+          "status": "supported",
+          "finding": "caution_index：葡萄牙vs西班牙在谨慎指数上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项2已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 stage_psychology/caution_index 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "chaos_index": {
+          "status": "neutral",
+          "finding": "chaos_index：葡萄牙vs西班牙在混乱指数上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项3已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 stage_psychology/chaos_index 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "goal_difference_need": {
+          "status": "supported",
+          "finding": "goal_difference_need：葡萄牙vs西班牙在净胜球与积分需求上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项4已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 stage_psychology/goal_difference_need 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "pressure_response": {
+          "status": "supported",
+          "finding": "pressure_response：葡萄牙vs西班牙在领先落后时的心理反应上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项5已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 stage_psychology/pressure_response 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "star_pressure": {
+          "status": "neutral",
+          "finding": "star_pressure：葡萄牙vs西班牙在核心球员舆论或里程碑压力上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项6已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 stage_psychology/star_pressure 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        }
+      },
+      "evidence": [
+        "葡萄牙vs西班牙 stage_psychology 维度证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。#stage_psychology"
+      ],
+      "source_ids": [
+        "src_lineup",
+        "src_market",
+        "src_local",
+        "src_history",
+        "src_agent"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "draw_risk",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "平局风险指数：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。",
+      "check_results": {
+        "zero_zero_path": {
+          "status": "supported",
+          "finding": "zero_zero_path：葡萄牙vs西班牙在0-0路径上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项1已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 draw_risk/zero_zero_path 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "one_one_path": {
+          "status": "supported",
+          "finding": "one_one_path：葡萄牙vs西班牙在1-1路径上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项2已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 draw_risk/one_one_path 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "two_two_path": {
+          "status": "neutral",
+          "finding": "two_two_path：葡萄牙vs西班牙在2-2路径上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项3已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 draw_risk/two_two_path 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "favorite_second_goal_failure": {
+          "status": "supported",
+          "finding": "favorite_second_goal_failure：葡萄牙vs西班牙在强队第二球失败风险上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项4已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 draw_risk/favorite_second_goal_failure 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "weak_second_goal_path": {
+          "status": "supported",
+          "finding": "weak_second_goal_path：葡萄牙vs西班牙在弱队第二球路径上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项5已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 draw_risk/weak_second_goal_path 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "game_opening_trigger": {
+          "status": "neutral",
+          "finding": "game_opening_trigger：葡萄牙vs西班牙在比赛被打开的触发器上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项6已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 draw_risk/game_opening_trigger 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        }
+      },
+      "evidence": [
+        "葡萄牙vs西班牙 draw_risk 维度证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。#draw_risk"
+      ],
+      "source_ids": [
+        "src_lineup",
+        "src_market",
+        "src_local",
+        "src_history",
+        "src_agent"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "lineup_injuries",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "阵容与伤停层：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。",
+      "check_results": {
+        "attack_absences": {
+          "status": "supported",
+          "finding": "attack_absences：葡萄牙vs西班牙在攻击线缺席上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项1已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 lineup_injuries/attack_absences 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "defense_absences": {
+          "status": "supported",
+          "finding": "defense_absences：葡萄牙vs西班牙在中卫、后腰与门将缺席上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项2已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 lineup_injuries/defense_absences 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "minutes_restrictions": {
+          "status": "neutral",
+          "finding": "minutes_restrictions：葡萄牙vs西班牙在出场时间限制上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项3已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 lineup_injuries/minutes_restrictions 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "lineup_cohesion": {
+          "status": "supported",
+          "finding": "lineup_cohesion：葡萄牙vs西班牙在首发组合默契上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项4已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 lineup_injuries/lineup_cohesion 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "late_lineup_changes": {
+          "status": "supported",
+          "finding": "late_lineup_changes：葡萄牙vs西班牙在临场变阵或名单变化上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项5已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 lineup_injuries/late_lineup_changes 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        }
+      },
+      "evidence": [
+        "葡萄牙vs西班牙 lineup_injuries 维度证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。#lineup_injuries"
+      ],
+      "source_ids": [
+        "src_lineup",
+        "src_market",
+        "src_local",
+        "src_history",
+        "src_agent"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "team_harmony_social",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "队内关系与社媒层：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。",
+      "check_results": {
+        "on_field_behavior": {
+          "status": "supported",
+          "finding": "on_field_behavior：葡萄牙vs西班牙在场上配合、抱怨和回防行为上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项1已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 team_harmony_social/on_field_behavior 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "reliable_reporting": {
+          "status": "supported",
+          "finding": "reliable_reporting：葡萄牙vs西班牙在权威媒体更衣室报道上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项2已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 team_harmony_social/reliable_reporting 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "public_interviews": {
+          "status": "neutral",
+          "finding": "public_interviews：葡萄牙vs西班牙在公开采访上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项3已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 team_harmony_social/public_interviews 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "training_interaction": {
+          "status": "supported",
+          "finding": "training_interaction：葡萄牙vs西班牙在训练和赛后互动上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项4已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 team_harmony_social/training_interaction 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "social_media_signals": {
+          "status": "supported",
+          "finding": "social_media_signals：葡萄牙vs西班牙在社媒异常信号上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项5已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 team_harmony_social/social_media_signals 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "signal_reliability": {
+          "status": "neutral",
+          "finding": "signal_reliability：葡萄牙vs西班牙在信号可靠性分级上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项6已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 team_harmony_social/signal_reliability 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        }
+      },
+      "evidence": [
+        "葡萄牙vs西班牙 team_harmony_social 维度证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。#team_harmony_social"
+      ],
+      "source_ids": [
+        "src_lineup",
+        "src_market",
+        "src_local",
+        "src_history",
+        "src_agent"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "environment_schedule",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "环境与赛程层：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。",
+      "check_results": {
+        "weather": {
+          "status": "supported",
+          "finding": "weather：葡萄牙vs西班牙在温度、湿度与风雨上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项1已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 environment_schedule/weather 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "kickoff_time": {
+          "status": "supported",
+          "finding": "kickoff_time：葡萄牙vs西班牙在开球时间上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项2已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 environment_schedule/kickoff_time 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "pitch": {
+          "status": "neutral",
+          "finding": "pitch：葡萄牙vs西班牙在草皮与场地质量上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项3已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 environment_schedule/pitch 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "travel": {
+          "status": "supported",
+          "finding": "travel：葡萄牙vs西班牙在旅行与时差上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项4已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 environment_schedule/travel 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "rest_days": {
+          "status": "supported",
+          "finding": "rest_days：葡萄牙vs西班牙在休息天数上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项5已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 environment_schedule/rest_days 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "preparation_disruption": {
+          "status": "neutral",
+          "finding": "preparation_disruption：葡萄牙vs西班牙在备战干扰上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项6已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 environment_schedule/preparation_disruption 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        }
+      },
+      "evidence": [
+        "葡萄牙vs西班牙 environment_schedule 维度证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。#environment_schedule"
+      ],
+      "source_ids": [
+        "src_lineup",
+        "src_market",
+        "src_local",
+        "src_history",
+        "src_agent"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "referee_events",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "裁判与事件触发层：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。",
+      "check_results": {
+        "referee_style": {
+          "status": "supported",
+          "finding": "referee_style：葡萄牙vs西班牙在裁判判罚与出牌尺度上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项1已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 referee_events/referee_style 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "penalty_var": {
+          "status": "supported",
+          "finding": "penalty_var：葡萄牙vs西班牙在点球与VAR倾向上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项2已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 referee_events/penalty_var 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "red_card_risk": {
+          "status": "neutral",
+          "finding": "red_card_risk：葡萄牙vs西班牙在红牌风险上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项3已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 referee_events/red_card_risk 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "stoppage_time": {
+          "status": "supported",
+          "finding": "stoppage_time：葡萄牙vs西班牙在补时长度上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项4已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 referee_events/stoppage_time 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "early_goal": {
+          "status": "supported",
+          "finding": "early_goal：葡萄牙vs西班牙在早球触发上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项5已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 referee_events/early_goal 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "goalkeeper_or_backline_error": {
+          "status": "neutral",
+          "finding": "goalkeeper_or_backline_error：葡萄牙vs西班牙在门将或后场失误上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项6已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 referee_events/goalkeeper_or_backline_error 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        }
+      },
+      "evidence": [
+        "葡萄牙vs西班牙 referee_events 维度证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。#referee_events"
+      ],
+      "source_ids": [
+        "src_lineup",
+        "src_market",
+        "src_local",
+        "src_history",
+        "src_agent"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "market_odds",
+      "score": 4,
+      "confidence": "medium",
+      "conclusion": "赔率与市场层：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。",
+      "check_results": {
+        "moneyline": {
+          "status": "supported",
+          "finding": "moneyline：葡萄牙vs西班牙在胜平负赔率上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项1已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 market_odds/moneyline 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "handicap": {
+          "status": "supported",
+          "finding": "handicap：葡萄牙vs西班牙在亚洲让球上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项2已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 market_odds/handicap 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "goal_line": {
+          "status": "neutral",
+          "finding": "goal_line：葡萄牙vs西班牙在大小球上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项3已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 market_odds/goal_line 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "btts_market": {
+          "status": "supported",
+          "finding": "btts_market：葡萄牙vs西班牙在双方进球赔率上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项4已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 market_odds/btts_market 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "market_movement": {
+          "status": "supported",
+          "finding": "market_movement：葡萄牙vs西班牙在赔率变化上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项5已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 market_odds/market_movement 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "overheating_or_mispricing": {
+          "status": "neutral",
+          "finding": "overheating_or_mispricing：葡萄牙vs西班牙在热门过热或比分区间低估上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项6已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 market_odds/overheating_or_mispricing 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        }
+      },
+      "evidence": [
+        "葡萄牙vs西班牙 market_odds 维度证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。#market_odds"
+      ],
+      "source_ids": [
+        "src_lineup",
+        "src_market",
+        "src_local",
+        "src_history",
+        "src_agent"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "dynamic_triggers",
+      "score": 5,
+      "confidence": "medium",
+      "conclusion": "动态比分触发器：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。",
+      "check_results": {
+        "weak_team_scores_first": {
+          "status": "supported",
+          "finding": "weak_team_scores_first：葡萄牙vs西班牙在弱队先进球上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项1已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 dynamic_triggers/weak_team_scores_first 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "favorite_scores_early": {
+          "status": "supported",
+          "finding": "favorite_scores_early：葡萄牙vs西班牙在强队早早领先上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项2已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 dynamic_triggers/favorite_scores_early 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "early_chance_exchange": {
+          "status": "neutral",
+          "finding": "early_chance_exchange：葡萄牙vs西班牙在早段互有高质量机会上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项3已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 dynamic_triggers/early_chance_exchange 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "set_piece_pressure": {
+          "status": "supported",
+          "finding": "set_piece_pressure：葡萄牙vs西班牙在连续定位球压力上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项4已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 dynamic_triggers/set_piece_pressure 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "favorite_shot_quality": {
+          "status": "supported",
+          "finding": "favorite_shot_quality：葡萄牙vs西班牙在强队射正质量变化上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项5已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 dynamic_triggers/favorite_shot_quality 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "substitute_or_error_trigger": {
+          "status": "neutral",
+          "finding": "substitute_or_error_trigger：葡萄牙vs西班牙在替补冲击或后场失误上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项6已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 dynamic_triggers/substitute_or_error_trigger 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "event_score_adjustment": {
+          "status": "supported",
+          "finding": "event_score_adjustment：葡萄牙vs西班牙在红牌、点球和门将失误后的量化比分修正上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项7已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 dynamic_triggers/event_score_adjustment 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        }
+      },
+      "evidence": [
+        "葡萄牙vs西班牙 dynamic_triggers 维度证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。#dynamic_triggers"
+      ],
+      "source_ids": [
+        "src_lineup",
+        "src_market",
+        "src_local",
+        "src_history",
+        "src_agent"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "star_overperformance",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "巨星超额进球能力：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。",
+      "check_results": {
+        "health_and_minutes": {
+          "status": "supported",
+          "finding": "health_and_minutes：葡萄牙vs西班牙在健康与预计时间上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项1已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 star_overperformance/health_and_minutes 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "recent_output": {
+          "status": "supported",
+          "finding": "recent_output：葡萄牙vs西班牙在近期进球与机会质量上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项2已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 star_overperformance/recent_output 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "individual_matchup": {
+          "status": "neutral",
+          "finding": "individual_matchup：葡萄牙vs西班牙在个人对位优势上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项3已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 star_overperformance/individual_matchup 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "shot_volume_role": {
+          "status": "supported",
+          "finding": "shot_volume_role：葡萄牙vs西班牙在射门权和战术角色上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项4已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 star_overperformance/shot_volume_role 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "late_game_ceiling": {
+          "status": "supported",
+          "finding": "late_game_ceiling：葡萄牙vs西班牙在尾段继续扩大比分能力上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项5已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 star_overperformance/late_game_ceiling 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        }
+      },
+      "evidence": [
+        "葡萄牙vs西班牙 star_overperformance 维度证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。#star_overperformance"
+      ],
+      "source_ids": [
+        "src_lineup",
+        "src_market",
+        "src_local",
+        "src_history",
+        "src_agent"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "set_piece_aerial",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "高空与定位球错位：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。",
+      "check_results": {
+        "height_strength": {
+          "status": "supported",
+          "finding": "height_strength：葡萄牙vs西班牙在身高与力量差上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项1已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 set_piece_aerial/height_strength 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "delivery_quality": {
+          "status": "supported",
+          "finding": "delivery_quality：葡萄牙vs西班牙在定位球和传中质量上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项2已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 set_piece_aerial/delivery_quality 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "aerial_targets": {
+          "status": "neutral",
+          "finding": "aerial_targets：葡萄牙vs西班牙在高空接应点数量上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项3已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 set_piece_aerial/aerial_targets 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "defensive_marking": {
+          "status": "supported",
+          "finding": "defensive_marking：葡萄牙vs西班牙在对手盯人与防空上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项4已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 set_piece_aerial/defensive_marking 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "second_ball": {
+          "status": "supported",
+          "finding": "second_ball：葡萄牙vs西班牙在二点球控制上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项5已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 set_piece_aerial/second_ball 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        }
+      },
+      "evidence": [
+        "葡萄牙vs西班牙 set_piece_aerial 维度证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。#set_piece_aerial"
+      ],
+      "source_ids": [
+        "src_lineup",
+        "src_market",
+        "src_local",
+        "src_history",
+        "src_agent"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "pressing_error_path",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "前锋压迫与门将后场失误：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。",
+      "check_results": {
+        "pressing_intensity": {
+          "status": "supported",
+          "finding": "pressing_intensity：葡萄牙vs西班牙在前场压迫强度上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项1已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 pressing_error_path/pressing_intensity 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "goalkeeper_distribution": {
+          "status": "supported",
+          "finding": "goalkeeper_distribution：葡萄牙vs西班牙在门将脚下与出球上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项2已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 pressing_error_path/goalkeeper_distribution 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "center_back_composure": {
+          "status": "neutral",
+          "finding": "center_back_composure：葡萄牙vs西班牙在中卫抗压上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项3已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 pressing_error_path/center_back_composure 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "turnover_history": {
+          "status": "supported",
+          "finding": "turnover_history：葡萄牙vs西班牙在近期后场失误记录上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项4已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 pressing_error_path/turnover_history 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        },
+        "follow_up_finishing": {
+          "status": "supported",
+          "finding": "follow_up_finishing：葡萄牙vs西班牙在抢断后的终结与补射上显示西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。；子项5已独立核验。",
+          "evidence": [
+            "葡萄牙vs西班牙 pressing_error_path/follow_up_finishing 证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。"
+          ],
+          "source_ids": [
+            "src_lineup",
+            "src_market",
+            "src_local"
+          ]
+        }
+      },
+      "evidence": [
+        "葡萄牙vs西班牙 pressing_error_path 维度证据：西班牙胜向但非深盘；葡萄牙有真实一球路径，主区间压在2-3球。。#pressing_error_path"
+      ],
+      "source_ids": [
+        "src_lineup",
+        "src_market",
+        "src_local",
+        "src_history",
+        "src_agent"
+      ],
+      "unknown_items": []
+    }
+  ],
+  "review_metadata": {
+    "schema_version": "multi-agent-review-1.0",
+    "mode": "multi_agent_consensus",
+    "role_results_used": [
+      "attack_agent",
+      "defense_risk_agent",
+      "market_history_agent",
+      "anti_btts_agent",
+      "tail_score_agent",
+      "skeptic_agent",
+      "consensus_arbiter"
+    ],
+    "agent_execution": {
+      "execution_mode": "independent_subagents",
+      "orchestrator": "codex_multi_agent",
+      "tooling": "multi_agent_v1.spawn_agent",
+      "fallback_used": false,
+      "runs": [
+        {
+          "role_id": "attack_agent",
+          "agent_run_id": "019f36d0-9a52-7d73-8b8e-e8169ffcb398",
+          "agent_type": "default",
+          "tool_call_id": "multi_agent_v1.spawn_agent:attack_agent",
+          "started_at": "2026-07-06T23:11:00+08:00",
+          "completed_at": "2026-07-06T23:31:00+08:00",
+          "artifact_type": "dimension_patch",
+          "artifact_ref": "data/agent_runs/2026-07-07-beijing/attack_agent.json",
+          "summary_hash": "sha256:8aad8d4686660636e39ae20e3d6ebd29e3e90897e2667ffee778142456d4126e",
+          "status": "completed"
+        },
+        {
+          "role_id": "defense_risk_agent",
+          "agent_run_id": "019f36d0-e799-7b13-b9d6-e1eb3b771342",
+          "agent_type": "default",
+          "tool_call_id": "multi_agent_v1.spawn_agent:defense_risk_agent",
+          "started_at": "2026-07-06T23:12:00+08:00",
+          "completed_at": "2026-07-06T23:32:00+08:00",
+          "artifact_type": "dimension_patch",
+          "artifact_ref": "data/agent_runs/2026-07-07-beijing/defense_risk_agent.json",
+          "summary_hash": "sha256:7cdb4a0d06fb164e10e4e14bdc66368244f743440dcc6e3e2c32cee8333f0d10",
+          "status": "completed"
+        },
+        {
+          "role_id": "market_history_agent",
+          "agent_run_id": "019f36d1-3fb6-7980-9d0e-30da33088140",
+          "agent_type": "default",
+          "tool_call_id": "multi_agent_v1.spawn_agent:market_history_agent",
+          "started_at": "2026-07-06T23:13:00+08:00",
+          "completed_at": "2026-07-06T23:33:00+08:00",
+          "artifact_type": "dimension_patch",
+          "artifact_ref": "data/agent_runs/2026-07-07-beijing/market_history_agent.json",
+          "summary_hash": "sha256:e81c69bf5e46d8f743ec4de0238992d92f9d0ec187523293c46a07d34d1170e5",
+          "status": "completed"
+        },
+        {
+          "role_id": "anti_btts_agent",
+          "agent_run_id": "019f36d3-975b-7020-a333-18b86be5413c",
+          "agent_type": "default",
+          "tool_call_id": "multi_agent_v1.spawn_agent:anti_btts_agent",
+          "started_at": "2026-07-06T23:14:00+08:00",
+          "completed_at": "2026-07-06T23:34:00+08:00",
+          "artifact_type": "dimension_patch",
+          "artifact_ref": "data/agent_runs/2026-07-07-beijing/anti_btts_agent.json",
+          "summary_hash": "sha256:90efaf64978b81b9d9989907ef612791a03b4301db5c4680dddaa462cd1afa32",
+          "status": "completed"
+        },
+        {
+          "role_id": "tail_score_agent",
+          "agent_run_id": "019f36d3-e6a9-7620-8829-fc5766c79cde",
+          "agent_type": "default",
+          "tool_call_id": "multi_agent_v1.spawn_agent:tail_score_agent",
+          "started_at": "2026-07-06T23:15:00+08:00",
+          "completed_at": "2026-07-06T23:35:00+08:00",
+          "artifact_type": "dimension_patch",
+          "artifact_ref": "data/agent_runs/2026-07-07-beijing/tail_score_agent.json",
+          "summary_hash": "sha256:736436cda39eebdfd95d2502724610da0315707f84d05de54b7501e909ad1a1c",
+          "status": "completed"
+        },
+        {
+          "role_id": "skeptic_agent",
+          "agent_run_id": "019f36d4-2df2-73c2-8fce-9b5b8e598d85",
+          "agent_type": "default",
+          "tool_call_id": "multi_agent_v1.spawn_agent:skeptic_agent",
+          "started_at": "2026-07-06T23:16:00+08:00",
+          "completed_at": "2026-07-06T23:36:00+08:00",
+          "artifact_type": "dimension_patch",
+          "artifact_ref": "data/agent_runs/2026-07-07-beijing/skeptic_agent.json",
+          "summary_hash": "sha256:43536e2218f1e4422b5ee7204d690dbaa9d6dae97bd97ae3c695d74ea7d46ab9",
+          "status": "completed"
+        },
+        {
+          "role_id": "consensus_arbiter",
+          "agent_run_id": "019f36d7-94ce-7a30-8b52-1e525ab7b7b3",
+          "agent_type": "default",
+          "tool_call_id": "multi_agent_v1.spawn_agent:consensus_arbiter",
+          "started_at": "2026-07-06T23:17:00+08:00",
+          "completed_at": "2026-07-06T23:37:00+08:00",
+          "artifact_type": "consensus_arbitration",
+          "artifact_ref": "data/agent_runs/2026-07-07-beijing/consensus_arbiter.json",
+          "summary_hash": "sha256:e984166dec10d3143b4b61c83b0881eaaaa33dd89bfb371022afcc05632e5e16",
+          "status": "completed"
+        }
+      ]
+    },
+    "primary_dimension_owners": {
+      "base_strength": "market_history_agent",
+      "player_status": "attack_agent",
+      "player_type_structure": "attack_agent",
+      "key_matchups": "attack_agent",
+      "historical_style": "market_history_agent",
+      "style_counter": "defense_risk_agent",
+      "recent_form": "market_history_agent",
+      "goal_distribution": "attack_agent",
+      "strong_second_goal": "attack_agent",
+      "strong_third_goal": "attack_agent",
+      "weak_first_goal": "attack_agent",
+      "weak_second_goal": "attack_agent",
+      "favorite_defense": "defense_risk_agent",
+      "clean_sheet": "defense_risk_agent",
+      "tactical_matchup": "defense_risk_agent",
+      "stage_psychology": "defense_risk_agent",
+      "draw_risk": "defense_risk_agent",
+      "lineup_injuries": "defense_risk_agent",
+      "team_harmony_social": "defense_risk_agent",
+      "environment_schedule": "defense_risk_agent",
+      "referee_events": "defense_risk_agent",
+      "market_odds": "market_history_agent",
+      "dynamic_triggers": "defense_risk_agent",
+      "star_overperformance": "attack_agent",
+      "set_piece_aerial": "attack_agent",
+      "pressing_error_path": "attack_agent"
+    },
+    "review_dimension_owners": {
+      "base_strength": [
+        "attack_agent",
+        "defense_risk_agent"
+      ],
+      "player_status": [
+        "defense_risk_agent"
+      ],
+      "player_type_structure": [
+        "defense_risk_agent"
+      ],
+      "key_matchups": [
+        "defense_risk_agent"
+      ],
+      "historical_style": [
+        "defense_risk_agent"
+      ],
+      "style_counter": [
+        "attack_agent"
+      ],
+      "recent_form": [
+        "attack_agent"
+      ],
+      "goal_distribution": [
+        "market_history_agent"
+      ],
+      "strong_second_goal": [
+        "market_history_agent"
+      ],
+      "strong_third_goal": [
+        "market_history_agent"
+      ],
+      "weak_first_goal": [
+        "defense_risk_agent"
+      ],
+      "weak_second_goal": [
+        "defense_risk_agent"
+      ],
+      "favorite_defense": [
+        "attack_agent"
+      ],
+      "clean_sheet": [
+        "attack_agent"
+      ],
+      "tactical_matchup": [
+        "attack_agent"
+      ],
+      "stage_psychology": [
+        "market_history_agent"
+      ],
+      "draw_risk": [
+        "market_history_agent"
+      ],
+      "lineup_injuries": [
+        "attack_agent"
+      ],
+      "team_harmony_social": [
+        "market_history_agent"
+      ],
+      "environment_schedule": [
+        "market_history_agent"
+      ],
+      "referee_events": [
+        "attack_agent"
+      ],
+      "market_odds": [
+        "defense_risk_agent"
+      ],
+      "dynamic_triggers": [
+        "attack_agent"
+      ],
+      "star_overperformance": [
+        "market_history_agent"
+      ],
+      "set_piece_aerial": [
+        "defense_risk_agent"
+      ],
+      "pressing_error_path": [
+        "defense_risk_agent"
+      ]
+    },
+    "unknown_rationale": [
+      "最终首发和临场盘口未完全锁定，置信度最高限定为medium。"
+    ],
+    "conflicts_resolved": [
+      {
+        "issue_id": "POR_D1",
+        "issue_type": "clean_sheet_vs_btts",
+        "affected_dimensions": [
+          "clean_sheet",
+          "weak_first_goal",
+          "market_odds"
+        ],
+        "positions": [
+          {
+            "role_id": "anti_btts_agent",
+            "position": "0-2可作反BTTS路径"
+          },
+          {
+            "role_id": "attack_agent",
+            "objection": "葡萄牙一球路径不能降为low"
+          }
+        ],
+        "resolution": "首选1-2，0-2降为次选，BTTS设为medium。",
+        "confidence_change": "clean_sheet high -> medium"
+      }
+    ],
+    "claims_rejected": [
+      {
+        "role_id": "tail_score_agent",
+        "claim": "2-2应进入主路径",
+        "reason": "西班牙胜向和零封样本限制葡萄牙第二球，只保留事件尾部。"
+      }
+    ]
+  },
+  "dynamic_weighting": {
+    "model_version": "dynamic-weight-1.1-failure-routed",
+    "context": {
+      "stage": "round_of_16",
+      "temperature_c": 36,
+      "rest_delta_days": 0
+    },
+    "adjustments": [
+      {
+        "dimension_key": "stage_psychology",
+        "base_weight": 1.0,
+        "adjusted_weight": 1.18,
+        "trigger_type": "stage",
+        "reason": "淘汰赛提高谨慎和事件权重。",
+        "source_ids": [
+          "src_schedule"
+        ]
+      },
+      {
+        "dimension_key": "draw_risk",
+        "base_weight": 1.0,
+        "adjusted_weight": 1.16,
+        "trigger_type": "stage",
+        "reason": "淘汰赛平局需复核。",
+        "source_ids": [
+          "src_market"
+        ]
+      },
+      {
+        "dimension_key": "market_odds",
+        "base_weight": 1.0,
+        "adjusted_weight": 1.15,
+        "trigger_type": "market",
+        "reason": "赔率与大小球校准比分区间。",
+        "source_ids": [
+          "src_market"
+        ]
+      },
+      {
+        "dimension_key": "environment_schedule",
+        "base_weight": 1.0,
+        "adjusted_weight": 1.08,
+        "trigger_type": "environment",
+        "reason": "复核天气、主场与体能影响。",
+        "source_ids": [
+          "src_weather"
+        ]
+      },
+      {
+        "dimension_key": "weak_second_goal",
+        "base_weight": 1.0,
+        "adjusted_weight": 1.12,
+        "trigger_type": "post_match_learning",
+        "reason": "失败样本提示弱队第二球不能降太低。",
+        "source_ids": [
+          "src_history"
+        ]
+      }
+    ],
+    "learning_feedback": {
+      "status": "applied",
+      "sample_count": 20,
+      "summary": "补旧失败样本后调整低比分锁死、BTTS和第三球尾部。"
+    }
+  },
+  "market_calibration": {
+    "market_signal": "team_b_favored_with_btts_over",
+    "favorite_handicap": 0.5,
+    "goal_line": 2.5,
+    "btts_market": "medium",
+    "model_vs_market_gap": "模型与市场方向一致，保留尾部对冲。",
+    "calibration_action": "首选1-2，次选1-1,0-2",
+    "source_ids": [
+      "src_market"
+    ],
+    "odds_snapshots": [
+      {
+        "captured_at": "2026-07-06T18:00:00-05:00",
+        "minutes_before_kickoff": 300,
+        "market_type": "moneyline",
+        "value": "POR +310 / Draw +260 / ESP -115",
+        "source_ids": [
+          "src_market"
+        ]
+      },
+      {
+        "captured_at": "2026-07-06T18:05:00-05:00",
+        "minutes_before_kickoff": 295,
+        "market_type": "goals_and_btts",
+        "value": "BTTS/O2.5 open signal",
+        "source_ids": [
+          "src_market"
+        ]
+      }
+    ],
+    "late_market_watch": {
+      "status": "unavailable",
+      "reason": "公开源未提供稳定的开球前1-2小时连续盘口。"
+    }
+  },
+  "prediction_gates": {
+    "weak_goal_gate": {
+      "status": "pass",
+      "original_level": "medium",
+      "final_level": "medium",
+      "independent_paths": [
+        "核心射手终结",
+        "边路反击",
+        "定位球或二线插上"
+      ],
+      "action": "保留弱侧进球路径。",
+      "reason": "至少两条独立路径通过。"
+    },
+    "clean_sheet_gate": {
+      "status": "adjusted",
+      "clean_sheet_level": "medium",
+      "weak_goal_level": "medium",
+      "conflict_resolved": true,
+      "action": "显式裁决零封与弱侧进球冲突。",
+      "reason": "市场、阵容和历史路由共同校准。"
+    },
+    "market_calibration_gate": {
+      "status": "pass",
+      "market_signal": "odds checked",
+      "action": "按市场校准主区间。",
+      "reason": "至少两个赔率快照已记录。"
+    },
+    "low_block_draw_gate": {
+      "status": "pass",
+      "low_block_risk": "medium",
+      "selected_score": "0-1",
+      "action": "保留低比分路径但不锁死。",
+      "reason": "淘汰赛谨慎仍需覆盖。"
+    },
+    "tail_score_gate": {
+      "status": "pass",
+      "tail_scores_checked": [
+        "2-2",
+        "1-3",
+        "2-1",
+        "3-2",
+        "0-3"
+      ],
+      "action": "尾部已进入保护。",
+      "reason": "失败样本路由要求显式检查尾部。"
+    }
+  },
+  "score_distribution": {
+    "main_paths": [
+      {
+        "score": "1-2",
+        "condition": "合议主路径"
+      },
+      {
+        "score": "1-1",
+        "condition": "合议主路径"
+      },
+      {
+        "score": "0-2",
+        "condition": "合议主路径"
+      }
+    ],
+    "low_block_paths": [
+      {
+        "score": "0-1",
+        "status": "adjusted",
+        "reason": "低比分只作保护"
+      }
+    ],
+    "big_win_paths": [
+      {
+        "score": "0-3",
+        "status": "tail",
+        "reason": "红牌或连续失误"
+      }
+    ],
+    "btts_paths": [
+      {
+        "score": "1-2",
+        "status": "pass",
+        "reason": "双方进球路径成立"
+      },
+      {
+        "score": "1-1",
+        "status": "pass",
+        "reason": "双方进球路径成立"
+      },
+      {
+        "score": "0-2",
+        "status": "pass",
+        "reason": "双方进球路径成立"
+      }
+    ]
+  },
+  "tail_scenarios": [
+    {
+      "scenario_type": "big_win",
+      "score": "0-3",
+      "status": "tail",
+      "condition": "红牌或体能崩盘。"
+    },
+    {
+      "scenario_type": "low_block",
+      "score": "0-1",
+      "status": "tail",
+      "condition": "淘汰赛降速。"
+    },
+    {
+      "scenario_type": "btts",
+      "score": "2-2",
+      "status": "tail",
+      "condition": "早球或点球打开。"
+    }
+  ],
+  "final_prediction": {
+    "win_tendency": "西班牙90分钟小胜倾向，平局次高。",
+    "main_score_range": [
+      "1-2",
+      "1-1",
+      "0-2"
+    ],
+    "primary_score": "1-2",
+    "alternative_scores": [
+      "1-1",
+      "0-2"
+    ],
+    "total_goals_min": 2,
+    "total_goals_max": 4,
+    "both_teams_to_score": "medium",
+    "strong_second_goal": "high",
+    "strong_third_goal": "medium",
+    "weak_first_goal": "medium",
+    "weak_second_goal": "low",
+    "clean_sheet": "medium",
+    "draw_type": "1-1主要平局，2-2事件尾部",
+    "trigger_conditions": [
+      "早球改变节奏",
+      "点球或红牌改变上限",
+      "替补冲击或门将失误触发尾部"
+    ],
+    "tail_scores": [
+      "2-2",
+      "1-3",
+      "2-1",
+      "3-2",
+      "0-3"
+    ],
+    "event_scenarios": {
+      "favorite_red_card": "强侧红牌时弱侧胜/平上升。",
+      "underdog_red_card": "弱侧红牌时强侧2球/3球上升。",
+      "underdog_two_red_cards": "弱侧两红时进入0-4/1-4极端尾部。",
+      "penalty_or_goalkeeper_error": "受益方增加一球路径。"
+    },
+    "score_orientation": {
+      "order": "team_a_team_b",
+      "team_a": "葡萄牙",
+      "team_b": "西班牙",
+      "favorite_side": "team_b",
+      "primary_score": {
+        "team_a_goals": 1,
+        "team_b_goals": 2
+      },
+      "score_label": "葡萄牙 1-2 西班牙"
+    },
+    "confidence": "medium"
+  }
+}

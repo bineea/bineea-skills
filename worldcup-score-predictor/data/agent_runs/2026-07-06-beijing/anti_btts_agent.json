@@ -1,0 +1,17 @@
+{
+  "schema_version": "role-artifact-1.0",
+  "role_id": "anti_btts_agent",
+  "agent_run_id": "019f32e0-5be6-71f1-ab60-79fac1ed2ea6",
+  "source_tooling": "multi_agent_v1.spawn_agent",
+  "status": "completed",
+  "job_id": "2026-07-06-beijing",
+  "matches": [
+    "2026-07-06_BJT_BRA_NOR",
+    "2026-07-06_BJT_MEX_ENG"
+  ],
+  "summary": "反机械BTTS：巴挪挪威第一球通过但降置信，第二球不作基础；墨英BTTS No优先。",
+  "key_findings": [
+    "保留巴挪2-1/3-1/2-0，拒绝2-2基础盘",
+    "保留墨英0-1/1-0/1-1，拒绝1-2/2-1基础盘"
+  ]
+}

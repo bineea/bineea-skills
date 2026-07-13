@@ -12,6 +12,7 @@
     "team_a": [],
     "team_b": []
   },
+  "player_matchup_edges": [],
   "dimension_analyses": [
     {
       "dimension_key": "base_strength",
@@ -286,11 +287,126 @@
       "skeptic_agent",
       "consensus_arbiter"
     ],
+    "agent_execution": {
+      "execution_mode": "independent_subagents",
+      "orchestrator": "",
+      "tooling": "",
+      "fallback_used": false,
+      "runs": [
+        {
+          "role_id": "",
+          "agent_run_id": "",
+          "agent_type": "",
+          "tool_call_id": "",
+          "started_at": "",
+          "completed_at": "",
+          "artifact_type": "",
+          "artifact_ref": "data/agent_runs/<match_id>/<role_id>.json",
+          "summary_hash": "sha256:<artifact_sha256>",
+          "status": "completed"
+        }
+      ]
+    },
     "primary_dimension_owners": {},
     "review_dimension_owners": {},
     "conflicts_resolved": [],
     "claims_rejected": [],
     "unknown_rationale": []
+  },
+  "dynamic_weighting": {
+    "model_version": "dynamic-weight-1.0",
+    "context": {
+      "stage": "",
+      "temperature_c": null,
+      "rest_delta_days": null
+    },
+    "adjustments": [],
+    "learning_feedback": {
+      "status": "not_applicable",
+      "sample_count": 0,
+      "summary": ""
+    }
+  },
+  "quant_baseline": {
+    "schema_version": "quant-baseline-1.0",
+    "status": "unavailable",
+    "source_ids": [],
+    "missing_inputs": [],
+    "xg": {
+      "status": "unavailable",
+      "team_a_xg_for": null,
+      "team_a_xg_against": null,
+      "team_b_xg_for": null,
+      "team_b_xg_against": null,
+      "source_ids": [],
+      "reason": ""
+    },
+    "expected_goals": {
+      "team_a_lambda": null,
+      "team_b_lambda": null,
+      "total_lambda": null,
+      "lambda_components": {
+        "team_a": {
+          "xg_component": null,
+          "goal_rate_component": null,
+          "sanger_delta": 0,
+          "final_lambda": null
+        },
+        "team_b": {
+          "xg_component": null,
+          "goal_rate_component": null,
+          "sanger_delta": 0,
+          "final_lambda": null
+        }
+      }
+    },
+    "poisson": {
+      "max_goals": 7,
+      "top_scores": [],
+      "outcome_probabilities": {
+        "team_a_win": null,
+        "draw": null,
+        "team_b_win": null
+      },
+      "btts_probability": null,
+      "over_2_5_probability": null,
+      "team_goal_probabilities": {
+        "team_a": {
+          "ge_1": null,
+          "ge_2": null,
+          "ge_3": null
+        },
+        "team_b": {
+          "ge_1": null,
+          "ge_2": null,
+          "ge_3": null
+        }
+      },
+      "clean_sheet_probabilities": {
+        "team_a_clean_sheet": null,
+        "team_b_clean_sheet": null
+      },
+      "overflow_probability": null
+    },
+    "sanger": {
+      "status": "unavailable",
+      "model_id": "",
+      "formula_ref": "",
+      "team_a_lambda_delta": 0,
+      "team_b_lambda_delta": 0,
+      "confidence": "unknown",
+      "source_ids": [],
+      "reason": ""
+    },
+    "calibration_flags": {
+      "top_score_gate_n": 10,
+      "primary_score_outside_top_n": false,
+      "btts_conflict": false,
+      "over_2_5_conflict": false,
+      "strong_third_goal_conflict": false,
+      "clean_sheet_conflict": false,
+      "lambda_delta_flag": false
+    }
   },
   "market_calibration": {
     "market_signal": "unknown",
@@ -299,7 +415,16 @@
     "btts_market": "unknown",
     "model_vs_market_gap": "unknown",
     "calibration_action": "",
-    "source_ids": []
+    "source_ids": [],
+    "odds_snapshots": [],
+    "late_market_watch": {
+      "status": "unavailable",
+      "checked_window_minutes": null,
+      "abnormal_movement": false,
+      "movement_summary": "",
+      "action": "",
+      "reason": ""
+    }
   },
   "prediction_gates": {
     "weak_goal_gate": {
@@ -336,6 +461,14 @@
       "tail_scores_checked": [],
       "action": "",
       "reason": ""
+    },
+    "quant_baseline_gate": {
+      "status": "unknown",
+      "original_level": "unknown",
+      "final_level": "unknown",
+      "top_score_gate_n": 10,
+      "action": "",
+      "reason": ""
     }
   },
   "score_distribution": {
@@ -368,6 +501,17 @@
       "underdog_red_card": "",
       "underdog_two_red_cards": "",
       "penalty_or_goalkeeper_error": ""
+    },
+    "score_orientation": {
+      "order": "team_a_team_b",
+      "team_a": "",
+      "team_b": "",
+      "favorite_side": "unknown",
+      "primary_score": {
+        "team_a_goals": null,
+        "team_b_goals": null
+      },
+      "score_label": ""
     }
   }
 }

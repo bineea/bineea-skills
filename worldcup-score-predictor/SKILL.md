@@ -33,6 +33,8 @@ description: 使用结构化知识库预测、分析和复盘世界杯及足球�
 | 历史样本 JSONL | `seed/historical_samples.jsonl` | 无需数据库时读取样本 |
 | 标准维度种子 | `seed/dimensions.csv` | 初始化维度目录 |
 | 完整性校验器 | `scripts/validate_analysis.py` | 校验维度、证据和比分一致性 |
+| 量化基线生成器 | `scripts/quant_baseline.py` | 根据 xG/进球率/桑格 adapter 生成双泊松比分分布 |
+| 可视化看板生成器 | `scripts/generate_visual_dashboard.py` | 根据通过校验的分析 JSON 生成 SVG 雷达图和比分路径看板 |
 | 赛后数据写入器 | `scripts/update_post_match_data.py` | 校验并事务化写入球队和球员赛后数据 |
 
 采用三层结构：
@@ -53,19 +55,24 @@ MD 方法说明、CSV 和 SQLite；校验器会检查三者的维度键是否一
 3. 获取或整理本场比赛输入；缺少输入文件时，根据比赛信息自行建立临时结构化输入。
 4. 浏览并核实具有时效性的事实，包括赛程、排名、近期状态、伤停、预计首发、赔率、球员状态和场地环境。
 5. 读取 `seed/historical_samples.jsonl`，并优先使用 SQLite 与检索 SQL 查找相似样本。
-6. 使用 `queries/player_form_retrieval.sql` 检索双方关键球员最近5场的出场时间、首发、进球、助攻、射门、xG、xA和评分。
-7. 默认启用 `references/codex_usage.md` 中的多 Agent 合议流程：先建立 Match Evidence Pack，再由 attack、defense_risk、market_history、skeptic 和 consensus_arbiter 分工评审、质疑并仲裁。
-8. 各专业 Agent 只输出结构化维度 patch、比分信号和待质疑 claim，不直接生成最终报告；仲裁 Agent 负责合并为唯一的 `templates/dimension_analysis_template.json` 兼容 JSON。
-9. 每队至少评估3名关键球员，逐项记录当前状态、类型、对位和来源。
-10. 至少20个维度必须形成有效评分，且 JSON 中指定的14个核心攻防维度不得为未知。
-11. 仲裁时先判断总进球区间，再判断双方进球、强队第二球和第三球、弱队第一球和第二球、零封及平局类型。同时给出至少一个极端比分尾部，并分别说明强队红牌、弱队红牌、弱队两张红牌、点球或门将失误发生后的量化改判。
-12. 最终 JSON 必须保留 `review_metadata`，记录参与角色、分歧裁决、被拒绝判断和未知项处理。
-13. 运行 `python scripts/validate_analysis.py <逐场分析.json>`。
-14. 校验失败时只回补失败维度或失败合议项；不得绕过校验直接生成最终比分报告。
-15. 校验通过后，使用 `templates/prediction_report_template.md` 生成中文报告，并包含仲裁摘要。
+6. 使用 `queries/player_form_retrieval.sql` 检索双方关键球员最近5场的出场时间、首发、进球、助攻、射门、xG、xA和评分；每名关键球员还必须记录至少3个高阶指标，并形成至少3组球员对位边。
+7. 在派发 Agent 前运行或手动等价生成 `quant_baseline`：用 direct xG/xGA 与进球/失球率建立 λ，再用双泊松输出比分分布；桑格只作为可插拔 adapter，未配置公式时保持 `unavailable`，不得伪造。
+8. 必须启用 `references/codex_usage.md` 中的真实多 Agent 合议流程：先建立 Match Evidence Pack 和量化基线，再实际调用多个独立子 Agent，由 attack、defense_risk、market_history、anti_btts、tail_score、skeptic 和 consensus_arbiter 分工评审、质疑并仲裁。不得由单个 Agent 角色扮演或模拟这些角色。
+9. 各专业 Agent 必须在独立运行中输出结构化维度 patch、比分信号和待质疑 claim，不直接生成最终报告；仲裁 Agent 负责合并为唯一的 `templates/dimension_analysis_template.json` 兼容 JSON。
+10. 每队至少评估3名关键球员，逐项记录当前状态、类型、对位和来源。
+11. 建立 `dynamic_weighting`：根据比赛阶段、天气、休息差、临场阵容和历史误差样本调整维度权重。淘汰赛必须复核 `stage_psychology` 与 `draw_risk`；高温场景必须复核 `environment_schedule`。
+12. 建立 `market_calibration.odds_snapshots` 和 `late_market_watch`，覆盖赛前1-2小时赔率变化；异常波动必须写明修正动作或拒绝理由。
+13. 至少20个维度必须形成有效评分，且 JSON 中指定的14个核心攻防维度不得为未知。
+14. 仲裁时先判断总进球区间，再判断双方进球、强队第二球和第三球、弱队第一球和第二球、零封及平局类型。同时给出至少一个极端比分尾部，并分别说明强队红牌、弱队红牌、弱队两张红牌、点球或门将失误发生后的量化改判。
+15. 执行量化基线软闸门：若最终比分、BTTS、大球、第三球或零封判断偏离 `quant_baseline`，必须在 `prediction_gates.quant_baseline_gate` 中写明接受、调整或拒绝量化信号的理由；量化基线不得替代26维、多 Agent 仲裁或历史失败样本路由。
+16. 最终 JSON 必须保留 `review_metadata`，记录参与角色、真实独立 Agent 执行轨迹、分歧裁决、被拒绝判断和未知项处理；`review_metadata.agent_execution.execution_mode` 必须为 `independent_subagents`，`tooling` 必须来自白名单，每个必需角色必须有独立 `agent_run_id`、`tool_call_id`、本地 `artifact_ref` 和匹配的 `summary_hash`。`final_prediction.score_orientation` 必须锁定 `team_a-team_b` 的比分顺序。
+17. 运行 `py -3.13 scripts/validate_analysis.py <逐场分析.json>`。
+18. 校验失败时只回补失败维度或失败合议项；不得绕过校验直接生成最终比分报告。
+19. 校验通过后，可运行 `py -3.13 scripts/generate_visual_dashboard.py <逐场分析.json> <输出.svg>` 生成雷达图看板，再使用 `templates/prediction_report_template.md` 生成中文报告，并包含仲裁摘要。
 
 当前比赛事实必须引用可靠来源。社媒和队内关系只能作为低权重修正项，除非有权威报道或场上行为支持。
 多 Agent 合议只改变赛前预测和评分过程，不改变赛后复盘与历史比赛数据更新流程。
+如果当前运行环境没有可调用的多 Agent / 子 Agent 工具，赛前预测必须报告“严格多 Agent 合议无法执行”，不得降级为单 Agent 角色模拟并声称已完成合议。每个子 Agent 的产物必须保存为技能目录内的本地文件，校验器会读取 `artifact_ref` 并校验 SHA-256。
 
 ## 强制预测输出
 
@@ -88,10 +95,16 @@ MD 方法说明、CSV 和 SQLite；校验器会检查三者的维度键是否一
 - 关键触发条件
 - 置信度
 - 每个维度的分析结果、评分、置信度和依据
+- 动态权重调整依据与历史误差学习反馈
+- 赛前1-2小时赔率快照、异常波动判断和市场校准动作
+- 每队关键球员高阶指标与至少3组球员对位边
 - 历史相似样本对本场判断的修正
 - 多 Agent 仲裁摘要、关键分歧、被拒绝判断和置信度调整
+- 真实独立 Agent 执行摘要，包括每个角色的 `agent_run_id`、产物引用和完成状态
 - 校准闸门摘要、比分分布、尾部场景和被闸门修正的判断
+- 量化基线摘要，包括 xG/进球率 λ、泊松 Top 比分、BTTS/Over2.5、桑格 adapter 状态和量化软闸门裁决
 - 当前事实的引用来源
+- 若生成了 SVG 雷达图或看板，报告中必须列出文件路径
 
 维度较多时使用紧凑矩阵，不得只给比分。
 

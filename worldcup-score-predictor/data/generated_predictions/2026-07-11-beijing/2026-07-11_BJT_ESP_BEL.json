@@ -1,0 +1,3225 @@
+{
+  "schema_version": "1.0.0",
+  "catalog_version": "2026-06-20",
+  "match": {
+    "match_id": "2026-07-11_BJT_ESP_BEL",
+    "team_a": "西班牙",
+    "team_b": "比利时",
+    "match_date": "2026-07-11 03:00 BJT",
+    "stage": "Quarter-final",
+    "venue": "Los Angeles Stadium"
+  },
+  "sources": [
+    {
+      "source_id": "src_fixture_fox",
+      "source_type": "fixture",
+      "source_title": "FOX One Spain vs Belgium live listing",
+      "source_url": "https://www.fox.com/soccer/fifa-world-cup/spain-vs-belgium-jul-10-2026",
+      "summary": "确认西班牙vs比利时，北京时间2026-07-11 03:00，洛杉矶当地2026-07-10 12:00，在Los Angeles Stadium进行。",
+      "reliability": "high"
+    },
+    {
+      "source_id": "src_match_fox",
+      "source_type": "statistics_provider",
+      "source_title": "FOX Sports stats, odds and weather",
+      "source_url": "https://www.foxsports.com/soccer/fifa-world-cup-men-spain-vs-belgium-jul-10-2026-game-boxscore-607928?tab=boxscore",
+      "summary": "提供近期赛果、球队统计、球员领跑、赔率和Inglewood天气。",
+      "reliability": "high"
+    },
+    {
+      "source_id": "src_lineup_rotowire",
+      "source_type": "lineup",
+      "source_title": "RotoWire predicted lineups and team news",
+      "source_url": "https://www.rotowire.com/soccer/article/spain-vs-belgium-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-quarterfinal-121774",
+      "summary": "预测首发和队伍新闻，包括Onana ACL缺阵。",
+      "reliability": "medium"
+    },
+    {
+      "source_id": "src_market_vsin",
+      "source_type": "odds",
+      "source_title": "VSiN Spain vs Belgium odds preview",
+      "source_url": "https://vsin.com/soccer/spain-vs-belgium-prediction-2026-fifa-world-cup-picks/",
+      "summary": "提供Spain -155、Draw +290、Belgium +425、O/U2.5与赛前要点。",
+      "reliability": "medium"
+    },
+    {
+      "source_id": "src_spain_guardian_defense",
+      "source_type": "match_report",
+      "source_title": "The Guardian Spain defensive structure report",
+      "source_url": "https://www.theguardian.com/football/2026/jul/09/there-is-a-magnificent-balance-how-spain-built-a-record-breaking-defence",
+      "summary": "详述西班牙五场零封、低xGA序列和防守结构。",
+      "reliability": "high"
+    },
+    {
+      "source_id": "src_db_local",
+      "source_type": "local_database",
+      "source_title": "Local SQLite match and player records",
+      "source_url": "data/worldcup_prediction_knowledge.sqlite",
+      "summary": "本地SQLite记录赛果、球队统计和球员逐场表现。",
+      "reliability": "high"
+    },
+    {
+      "source_id": "src_history_local",
+      "source_type": "local_database",
+      "source_title": "Historical failure samples",
+      "source_url": "seed/historical_samples.jsonl",
+      "summary": "历史失败样本用于校准BTTS、强队第三球、弱队第二球和尾部分布。",
+      "reliability": "high"
+    },
+    {
+      "source_id": "src_quant",
+      "source_type": "quant_model",
+      "source_title": "quant_baseline.py 双泊松量化基线",
+      "source_url": "scripts/quant_baseline.py",
+      "summary": "以进失球率回退lambda并生成双泊松比分矩阵；direct xGA缺失时为partial。",
+      "reliability": "medium"
+    },
+    {
+      "source_id": "src_agent",
+      "source_type": "agent",
+      "source_title": "Seven independent agent consensus artifacts",
+      "source_url": "data/agent_runs/2026-07-11_BJT_ESP_BEL",
+      "summary": "7个真实独立子Agent和仲裁产物。",
+      "reliability": "high"
+    }
+  ],
+  "player_assessments": {
+    "team_a": [
+      {
+        "player_name": "Mikel Oyarzabal",
+        "position": "CF",
+        "player_type": "终结型前锋/串联九号",
+        "status": "状态高",
+        "expected_starter": true,
+        "expected_minutes": 82,
+        "conclusion": "西班牙最稳定终结点，支撑2-0首选和3-0次选。",
+        "evidence": [
+          "近5场391分钟4球1助，17射8正；FOX列2.8 xG。"
+        ],
+        "source_ids": [
+          "src_db_local",
+          "src_match_fox"
+        ],
+        "advanced_metrics": {
+          "xg_per90": 0.64,
+          "shots_per90": 3.91,
+          "shots_on_target_per90": 1.84
+        }
+      },
+      {
+        "player_name": "Lamine Yamal",
+        "position": "RW",
+        "player_type": "速度型边锋/内切创造者",
+        "status": "状态中高",
+        "expected_starter": true,
+        "expected_minutes": 84,
+        "conclusion": "右路一对一和射门量是西班牙打开比利时边路的主通道。",
+        "evidence": [
+          "近5场315分钟1球，14射6正；VSiN提到对葡萄牙踢满90分钟。"
+        ],
+        "source_ids": [
+          "src_db_local",
+          "src_market_vsin",
+          "src_lineup_rotowire"
+        ],
+        "advanced_metrics": {
+          "shots_per90": 4.0,
+          "shots_on_target_per90": 1.71,
+          "time_slot_performance_note": "对葡萄牙完成90分钟，体能信号偏正面"
+        }
+      },
+      {
+        "player_name": "Unai Simon",
+        "position": "GK",
+        "player_type": "稳定门将/低失球结构受益者",
+        "status": "状态高",
+        "expected_starter": true,
+        "expected_minutes": 90,
+        "conclusion": "五场零封和低xGA链条支撑西班牙零封主轴。",
+        "evidence": [
+          "Guardian记录西班牙五场零封、总xGA约1.54且Simon扑救负担低。"
+        ],
+        "source_ids": [
+          "src_spain_guardian_defense",
+          "src_match_fox"
+        ],
+        "advanced_metrics": {
+          "save_percentage": "5场零封，公开包无精确扑救率",
+          "post_shot_xg_minus_goals": "约1.54 xGA且0失球，方向显著正面",
+          "time_slot_performance_note": "约24°C，无高温削弱触发"
+        }
+      },
+      {
+        "player_name": "Rodri",
+        "position": "DM",
+        "player_type": "组织型后腰/中卫保护屏障",
+        "status": "状态高",
+        "expected_starter": true,
+        "expected_minutes": 88,
+        "conclusion": "Rodri轴心是压低比利时连续进攻和第二球概率的关键。",
+        "evidence": [
+          "西班牙73%控球、五场零封，Guardian点名Rodri结构。"
+        ],
+        "source_ids": [
+          "src_spain_guardian_defense",
+          "src_match_fox"
+        ],
+        "advanced_metrics": {
+          "interceptions_per90": "证据包无数值；以结构影响记录",
+          "temperature_stamina_note": "天气不触发高温衰减",
+          "time_slot_performance_note": "控球与低xGA体现中场保护效果"
+        }
+      }
+    ],
+    "team_b": [
+      {
+        "player_name": "Charles De Ketelaere",
+        "position": "CF/AM",
+        "player_type": "移动型前锋/二线接应点",
+        "status": "状态中高",
+        "expected_starter": true,
+        "expected_minutes": 76,
+        "conclusion": "比利时最可靠运动战一球路径，但面对Rodri屏障只能作条件尾。",
+        "evidence": [
+          "近5场262分钟2球1助；FOX列对美国2G1A和约1.5 xG。"
+        ],
+        "source_ids": [
+          "src_db_local",
+          "src_match_fox",
+          "src_lineup_rotowire"
+        ],
+        "advanced_metrics": {
+          "xg_per90": 0.52,
+          "shots_per90": "证据包缺逐场射门总量，采用xG和进球参与评估",
+          "time_slot_performance_note": "若首发可在前60-75分钟制造弱队第一球尾部"
+        }
+      },
+      {
+        "player_name": "Leandro Trossard",
+        "position": "LW/AM",
+        "player_type": "内切型边锋/创造者",
+        "status": "状态高",
+        "expected_starter": true,
+        "expected_minutes": 83,
+        "conclusion": "Trossard提供边路和肋部机会，但单点创造不足以抬高比利时第二球。",
+        "evidence": [
+          "近5场430分钟2球2助、15射；FOX列其为助攻端核心。"
+        ],
+        "source_ids": [
+          "src_db_local",
+          "src_match_fox"
+        ],
+        "advanced_metrics": {
+          "shots_per90": 3.14,
+          "xa_per90": "助攻端核心但公开包无精确xA",
+          "time_slot_performance_note": "若比利时落后，尾段传中和二点球会增加"
+        }
+      },
+      {
+        "player_name": "Romelu Lukaku",
+        "position": "ST",
+        "player_type": "支点型中锋/替补冲击终结者",
+        "status": "状态中高但分钟受限",
+        "expected_starter": false,
+        "expected_minutes": 32,
+        "conclusion": "Lukaku是2-1/1-1尾段触发器，不足以支撑常态BTTS。",
+        "evidence": [
+          "近5场170分钟3球1助；VSiN提到连续三场替补进球。"
+        ],
+        "source_ids": [
+          "src_db_local",
+          "src_market_vsin"
+        ],
+        "advanced_metrics": {
+          "shots_per90": 2.65,
+          "aerial_duel_win_rate": "支点高空威胁存在但无精确成功率",
+          "time_slot_performance_note": "预计20-35分钟冲击，不能按90分钟外推"
+        }
+      },
+      {
+        "player_name": "Amadou Onana",
+        "position": "DM",
+        "player_type": "破坏型后腰/防空与二点球保护",
+        "status": "缺阵",
+        "expected_starter": false,
+        "expected_minutes": 0,
+        "conclusion": "Onana缺席显著削弱比利时中场保护，利好西班牙第二球并压低比利时第二球。",
+        "evidence": [
+          "RotoWire明确Onana因ACL ruled out。"
+        ],
+        "source_ids": [
+          "src_lineup_rotowire",
+          "src_market_vsin"
+        ],
+        "advanced_metrics": {
+          "aerial_duel_win_rate": "缺席，无法转化为本场正贡献",
+          "interceptions_per90": "缺席，无法转化为本场正贡献",
+          "temperature_stamina_note": "替代者承担更高覆盖压力"
+        }
+      }
+    ]
+  },
+  "dimension_analyses": [
+    {
+      "dimension_key": "base_strength",
+      "score": 4,
+      "confidence": "medium",
+      "conclusion": "基础盘和市场均偏向西班牙，但比利时攻击产量使其不能按弱旅处理。",
+      "check_results": {
+        "ranking_elo": {
+          "status": "supported",
+          "finding": "FIFA排名与Elo差距：围绕“FIFA排名与Elo差距”复核后，基础盘和市场均偏向西班牙，但比利时攻击产量使其不能按弱旅处理。",
+          "evidence": [
+            "西班牙5场9进0失且市场胜赔约-155/-159，比利时13进5失但防守暴露。"
+          ],
+          "source_ids": [
+            "src_match_fox",
+            "src_market_vsin"
+          ]
+        },
+        "squad_quality": {
+          "status": "supported",
+          "finding": "阵容质量与球员级别：围绕“阵容质量与球员级别”复核后，基础盘和市场均偏向西班牙，但比利时攻击产量使其不能按弱旅处理。",
+          "evidence": [
+            "西班牙5场9进0失且市场胜赔约-155/-159，比利时13进5失但防守暴露。"
+          ],
+          "source_ids": [
+            "src_match_fox",
+            "src_market_vsin"
+          ]
+        },
+        "tournament_experience": {
+          "status": "neutral",
+          "finding": "大赛经验：围绕“大赛经验”复核后，基础盘和市场均偏向西班牙，但比利时攻击产量使其不能按弱旅处理。",
+          "evidence": [
+            "西班牙5场9进0失且市场胜赔约-155/-159，比利时13进5失但防守暴露。"
+          ],
+          "source_ids": [
+            "src_match_fox",
+            "src_market_vsin"
+          ]
+        },
+        "bench_depth": {
+          "status": "supported",
+          "finding": "替补深度：围绕“替补深度”复核后，基础盘和市场均偏向西班牙，但比利时攻击产量使其不能按弱旅处理。",
+          "evidence": [
+            "西班牙5场9进0失且市场胜赔约-155/-159，比利时13进5失但防守暴露。"
+          ],
+          "source_ids": [
+            "src_match_fox",
+            "src_market_vsin"
+          ]
+        },
+        "coach_and_age_structure": {
+          "status": "supported",
+          "finding": "教练稳定性与年龄结构：围绕“教练稳定性与年龄结构”复核后，基础盘和市场均偏向西班牙，但比利时攻击产量使其不能按弱旅处理。",
+          "evidence": [
+            "西班牙5场9进0失且市场胜赔约-155/-159，比利时13进5失但防守暴露。"
+          ],
+          "source_ids": [
+            "src_match_fox",
+            "src_market_vsin"
+          ]
+        }
+      },
+      "evidence": [
+        "西班牙5场9进0失且市场胜赔约-155/-159，比利时13进5失但防守暴露。",
+        "本维度由 market_history_agent 主评并经合议校准。"
+      ],
+      "source_ids": [
+        "src_match_fox",
+        "src_market_vsin",
+        "src_db_local"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "player_status",
+      "score": 4,
+      "confidence": "medium",
+      "conclusion": "西班牙关键球员状态更稳定；比利时前场有火力但首发和分钟数更不确定。",
+      "check_results": {
+        "expected_starters": {
+          "status": "supported",
+          "finding": "核心球员是否预计首发：围绕“核心球员是否预计首发”复核后，西班牙关键球员状态更稳定；比利时前场有火力但首发和分钟数更不确定。",
+          "evidence": [
+            "Oyarzabal、Yamal、Simon、Rodri形成攻守闭环；Trossard、De Ketelaere、Lukaku保留尾部威胁。"
+          ],
+          "source_ids": [
+            "src_db_local",
+            "src_match_fox"
+          ]
+        },
+        "expected_minutes": {
+          "status": "supported",
+          "finding": "预计出场时间：围绕“预计出场时间”复核后，西班牙关键球员状态更稳定；比利时前场有火力但首发和分钟数更不确定。",
+          "evidence": [
+            "Oyarzabal、Yamal、Simon、Rodri形成攻守闭环；Trossard、De Ketelaere、Lukaku保留尾部威胁。"
+          ],
+          "source_ids": [
+            "src_db_local",
+            "src_match_fox"
+          ]
+        },
+        "recent_minutes_and_form": {
+          "status": "neutral",
+          "finding": "近期出场时间与状态：围绕“近期出场时间与状态”复核后，西班牙关键球员状态更稳定；比利时前场有火力但首发和分钟数更不确定。",
+          "evidence": [
+            "Oyarzabal、Yamal、Simon、Rodri形成攻守闭环；Trossard、De Ketelaere、Lukaku保留尾部威胁。"
+          ],
+          "source_ids": [
+            "src_db_local",
+            "src_match_fox"
+          ]
+        },
+        "injury_recovery": {
+          "status": "supported",
+          "finding": "伤病、停赛与恢复阶段：围绕“伤病、停赛与恢复阶段”复核后，西班牙关键球员状态更稳定；比利时前场有火力但首发和分钟数更不确定。",
+          "evidence": [
+            "Oyarzabal、Yamal、Simon、Rodri形成攻守闭环；Trossard、De Ketelaere、Lukaku保留尾部威胁。"
+          ],
+          "source_ids": [
+            "src_db_local",
+            "src_match_fox"
+          ]
+        },
+        "position_quality": {
+          "status": "supported",
+          "finding": "门将、中卫、后腰、组织者和攻击手质量：围绕“门将、中卫、后腰、组织者和攻击手质量”复核后，西班牙关键球员状态更稳定；比利时前场有火力但首发和分钟数更不确定。",
+          "evidence": [
+            "Oyarzabal、Yamal、Simon、Rodri形成攻守闭环；Trossard、De Ketelaere、Lukaku保留尾部威胁。"
+          ],
+          "source_ids": [
+            "src_db_local",
+            "src_match_fox"
+          ]
+        },
+        "big_match_and_mental_state": {
+          "status": "neutral",
+          "finding": "大赛表现与心理状态：围绕“大赛表现与心理状态”复核后，西班牙关键球员状态更稳定；比利时前场有火力但首发和分钟数更不确定。",
+          "evidence": [
+            "Oyarzabal、Yamal、Simon、Rodri形成攻守闭环；Trossard、De Ketelaere、Lukaku保留尾部威胁。"
+          ],
+          "source_ids": [
+            "src_db_local",
+            "src_match_fox"
+          ]
+        }
+      },
+      "evidence": [
+        "Oyarzabal、Yamal、Simon、Rodri形成攻守闭环；Trossard、De Ketelaere、Lukaku保留尾部威胁。",
+        "本维度由 attack_agent 主评并经合议校准。"
+      ],
+      "source_ids": [
+        "src_db_local",
+        "src_match_fox",
+        "src_lineup_rotowire"
+      ],
+      "unknown_items": [
+        "De Bruyne/Doku/Lukaku最终分钟数"
+      ]
+    },
+    {
+      "dimension_key": "player_type_structure",
+      "score": 4,
+      "confidence": "medium",
+      "conclusion": "西班牙类型结构更互补，后腰保护、肋部创造和边路爆点齐备；比利时无Onana后中场缺口更明显。",
+      "check_results": {
+        "attacking_types": {
+          "status": "supported",
+          "finding": "攻击球员类型组合：围绕“攻击球员类型组合”复核后，西班牙类型结构更互补，后腰保护、肋部创造和边路爆点齐备；比利时无Onana后中场缺口更明显。",
+          "evidence": [
+            "Rodri-Pedri-Olmo对缺Onana的比利时中场形成控场优势。"
+          ],
+          "source_ids": [
+            "src_lineup_rotowire",
+            "src_market_vsin"
+          ]
+        },
+        "midfield_types": {
+          "status": "supported",
+          "finding": "中场组织与破坏类型：围绕“中场组织与破坏类型”复核后，西班牙类型结构更互补，后腰保护、肋部创造和边路爆点齐备；比利时无Onana后中场缺口更明显。",
+          "evidence": [
+            "Rodri-Pedri-Olmo对缺Onana的比利时中场形成控场优势。"
+          ],
+          "source_ids": [
+            "src_lineup_rotowire",
+            "src_market_vsin"
+          ]
+        },
+        "defensive_types": {
+          "status": "neutral",
+          "finding": "后卫与门将类型：围绕“后卫与门将类型”复核后，西班牙类型结构更互补，后腰保护、肋部创造和边路爆点齐备；比利时无Onana后中场缺口更明显。",
+          "evidence": [
+            "Rodri-Pedri-Olmo对缺Onana的比利时中场形成控场优势。"
+          ],
+          "source_ids": [
+            "src_lineup_rotowire",
+            "src_market_vsin"
+          ]
+        },
+        "type_complementarity": {
+          "status": "supported",
+          "finding": "类型互补性：围绕“类型互补性”复核后，西班牙类型结构更互补，后腰保护、肋部创造和边路爆点齐备；比利时无Onana后中场缺口更明显。",
+          "evidence": [
+            "Rodri-Pedri-Olmo对缺Onana的比利时中场形成控场优势。"
+          ],
+          "source_ids": [
+            "src_lineup_rotowire",
+            "src_market_vsin"
+          ]
+        },
+        "type_gaps": {
+          "status": "supported",
+          "finding": "阵容类型缺口：围绕“阵容类型缺口”复核后，西班牙类型结构更互补，后腰保护、肋部创造和边路爆点齐备；比利时无Onana后中场缺口更明显。",
+          "evidence": [
+            "Rodri-Pedri-Olmo对缺Onana的比利时中场形成控场优势。"
+          ],
+          "source_ids": [
+            "src_lineup_rotowire",
+            "src_market_vsin"
+          ]
+        }
+      },
+      "evidence": [
+        "Rodri-Pedri-Olmo对缺Onana的比利时中场形成控场优势。",
+        "本维度由 attack_agent 主评并经合议校准。"
+      ],
+      "source_ids": [
+        "src_lineup_rotowire",
+        "src_market_vsin",
+        "src_db_local"
+      ],
+      "unknown_items": [
+        "比利时最终中场组合"
+      ]
+    },
+    {
+      "dimension_key": "key_matchups",
+      "score": 4,
+      "confidence": "medium",
+      "conclusion": "关键对位净值偏西班牙，Yamal边路、Oyarzabal中路和Rodri中场屏障都能持续影响比分。",
+      "check_results": {
+        "wing_matchup": {
+          "status": "supported",
+          "finding": "边锋对边后卫：围绕“边锋对边后卫”复核后，关键对位净值偏西班牙，Yamal边路、Oyarzabal中路和Rodri中场屏障都能持续影响比分。",
+          "evidence": [
+            "Yamal对边后卫通道、Oyarzabal对中卫横移、Rodri轴心对比利时中场是主要优势。"
+          ],
+          "source_ids": [
+            "src_db_local",
+            "src_lineup_rotowire"
+          ]
+        },
+        "striker_center_back": {
+          "status": "supported",
+          "finding": "中锋对中卫：围绕“中锋对中卫”复核后，关键对位净值偏西班牙，Yamal边路、Oyarzabal中路和Rodri中场屏障都能持续影响比分。",
+          "evidence": [
+            "Yamal对边后卫通道、Oyarzabal对中卫横移、Rodri轴心对比利时中场是主要优势。"
+          ],
+          "source_ids": [
+            "src_db_local",
+            "src_lineup_rotowire"
+          ]
+        },
+        "creator_defensive_midfield": {
+          "status": "neutral",
+          "finding": "组织核心对后腰：围绕“组织核心对后腰”复核后，关键对位净值偏西班牙，Yamal边路、Oyarzabal中路和Rodri中场屏障都能持续影响比分。",
+          "evidence": [
+            "Yamal对边后卫通道、Oyarzabal对中卫横移、Rodri轴心对比利时中场是主要优势。"
+          ],
+          "source_ids": [
+            "src_db_local",
+            "src_lineup_rotowire"
+          ]
+        },
+        "pressing_build_up": {
+          "status": "supported",
+          "finding": "前场压迫对后场出球：围绕“前场压迫对后场出球”复核后，关键对位净值偏西班牙，Yamal边路、Oyarzabal中路和Rodri中场屏障都能持续影响比分。",
+          "evidence": [
+            "Yamal对边后卫通道、Oyarzabal对中卫横移、Rodri轴心对比利时中场是主要优势。"
+          ],
+          "source_ids": [
+            "src_db_local",
+            "src_lineup_rotowire"
+          ]
+        },
+        "aerial_matchup": {
+          "status": "supported",
+          "finding": "定位球高点对防空：围绕“定位球高点对防空”复核后，关键对位净值偏西班牙，Yamal边路、Oyarzabal中路和Rodri中场屏障都能持续影响比分。",
+          "evidence": [
+            "Yamal对边后卫通道、Oyarzabal对中卫横移、Rodri轴心对比利时中场是主要优势。"
+          ],
+          "source_ids": [
+            "src_db_local",
+            "src_lineup_rotowire"
+          ]
+        },
+        "transition_space": {
+          "status": "neutral",
+          "finding": "反击速度对防线高度：围绕“反击速度对防线高度”复核后，关键对位净值偏西班牙，Yamal边路、Oyarzabal中路和Rodri中场屏障都能持续影响比分。",
+          "evidence": [
+            "Yamal对边后卫通道、Oyarzabal对中卫横移、Rodri轴心对比利时中场是主要优势。"
+          ],
+          "source_ids": [
+            "src_db_local",
+            "src_lineup_rotowire"
+          ]
+        }
+      },
+      "evidence": [
+        "Yamal对边后卫通道、Oyarzabal对中卫横移、Rodri轴心对比利时中场是主要优势。",
+        "本维度由 attack_agent 主评并经合议校准。"
+      ],
+      "source_ids": [
+        "src_db_local",
+        "src_lineup_rotowire",
+        "src_spain_guardian_defense"
+      ],
+      "unknown_items": [
+        "比利时边路协防方式"
+      ]
+    },
+    {
+      "dimension_key": "historical_style",
+      "score": 4,
+      "confidence": "medium",
+      "conclusion": "西班牙控球和防守预防结构更适合压低对手进球；比利时开放局上限高但防守不稳。",
+      "check_results": {
+        "team_a_style": {
+          "status": "supported",
+          "finding": "A队长期风格：围绕“A队长期风格”复核后，西班牙控球和防守预防结构更适合压低对手进球；比利时开放局上限高但防守不稳。",
+          "evidence": [
+            "西班牙近5场含多个1-0和零封，比利时近5场既有大胜也有0-0/1-1。"
+          ],
+          "source_ids": [
+            "src_match_fox",
+            "src_spain_guardian_defense"
+          ]
+        },
+        "team_b_style": {
+          "status": "supported",
+          "finding": "B队长期风格：围绕“B队长期风格”复核后，西班牙控球和防守预防结构更适合压低对手进球；比利时开放局上限高但防守不稳。",
+          "evidence": [
+            "西班牙近5场含多个1-0和零封，比利时近5场既有大胜也有0-0/1-1。"
+          ],
+          "source_ids": [
+            "src_match_fox",
+            "src_spain_guardian_defense"
+          ]
+        },
+        "leading_behavior": {
+          "status": "neutral",
+          "finding": "领先后的行为：围绕“领先后的行为”复核后，西班牙控球和防守预防结构更适合压低对手进球；比利时开放局上限高但防守不稳。",
+          "evidence": [
+            "西班牙近5场含多个1-0和零封，比利时近5场既有大胜也有0-0/1-1。"
+          ],
+          "source_ids": [
+            "src_match_fox",
+            "src_spain_guardian_defense"
+          ]
+        },
+        "trailing_behavior": {
+          "status": "supported",
+          "finding": "落后后的行为：围绕“落后后的行为”复核后，西班牙控球和防守预防结构更适合压低对手进球；比利时开放局上限高但防守不稳。",
+          "evidence": [
+            "西班牙近5场含多个1-0和零封，比利时近5场既有大胜也有0-0/1-1。"
+          ],
+          "source_ids": [
+            "src_match_fox",
+            "src_spain_guardian_defense"
+          ]
+        },
+        "draw_and_set_piece_tendency": {
+          "status": "supported",
+          "finding": "平局与定位球倾向：围绕“平局与定位球倾向”复核后，西班牙控球和防守预防结构更适合压低对手进球；比利时开放局上限高但防守不稳。",
+          "evidence": [
+            "西班牙近5场含多个1-0和零封，比利时近5场既有大胜也有0-0/1-1。"
+          ],
+          "source_ids": [
+            "src_match_fox",
+            "src_spain_guardian_defense"
+          ]
+        }
+      },
+      "evidence": [
+        "西班牙近5场含多个1-0和零封，比利时近5场既有大胜也有0-0/1-1。",
+        "本维度由 market_history_agent 主评并经合议校准。"
+      ],
+      "source_ids": [
+        "src_match_fox",
+        "src_spain_guardian_defense",
+        "src_history_local"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "style_counter",
+      "score": 4,
+      "confidence": "medium",
+      "conclusion": "风格克制偏西班牙，控球反抢压低比利时转换频率；Onana缺阵进一步削弱二点球。",
+      "check_results": {
+        "team_a_attacks_team_b": {
+          "status": "supported",
+          "finding": "A队强项攻击B队弱点：围绕“A队强项攻击B队弱点”复核后，风格克制偏西班牙，控球反抢压低比利时转换频率；Onana缺阵进一步削弱二点球。",
+          "evidence": [
+            "西班牙73%控球和五场零封对比比利时中场保护缺口。"
+          ],
+          "source_ids": [
+            "src_match_fox",
+            "src_lineup_rotowire"
+          ]
+        },
+        "team_b_attacks_team_a": {
+          "status": "supported",
+          "finding": "B队强项攻击A队弱点：围绕“B队强项攻击A队弱点”复核后，风格克制偏西班牙，控球反抢压低比利时转换频率；Onana缺阵进一步削弱二点球。",
+          "evidence": [
+            "西班牙73%控球和五场零封对比比利时中场保护缺口。"
+          ],
+          "source_ids": [
+            "src_match_fox",
+            "src_lineup_rotowire"
+          ]
+        },
+        "team_a_resistance": {
+          "status": "neutral",
+          "finding": "A队对B队主要武器的抵抗能力：围绕“A队对B队主要武器的抵抗能力”复核后，风格克制偏西班牙，控球反抢压低比利时转换频率；Onana缺阵进一步削弱二点球。",
+          "evidence": [
+            "西班牙73%控球和五场零封对比比利时中场保护缺口。"
+          ],
+          "source_ids": [
+            "src_match_fox",
+            "src_lineup_rotowire"
+          ]
+        },
+        "team_b_resistance": {
+          "status": "supported",
+          "finding": "B队对A队主要武器的抵抗能力：围绕“B队对A队主要武器的抵抗能力”复核后，风格克制偏西班牙，控球反抢压低比利时转换频率；Onana缺阵进一步削弱二点球。",
+          "evidence": [
+            "西班牙73%控球和五场零封对比比利时中场保护缺口。"
+          ],
+          "source_ids": [
+            "src_match_fox",
+            "src_lineup_rotowire"
+          ]
+        },
+        "net_counter_effect": {
+          "status": "supported",
+          "finding": "风格克制净影响：围绕“风格克制净影响”复核后，风格克制偏西班牙，控球反抢压低比利时转换频率；Onana缺阵进一步削弱二点球。",
+          "evidence": [
+            "西班牙73%控球和五场零封对比比利时中场保护缺口。"
+          ],
+          "source_ids": [
+            "src_match_fox",
+            "src_lineup_rotowire"
+          ]
+        }
+      },
+      "evidence": [
+        "西班牙73%控球和五场零封对比比利时中场保护缺口。",
+        "本维度由 defense_risk_agent 主评并经合议校准。"
+      ],
+      "source_ids": [
+        "src_match_fox",
+        "src_lineup_rotowire",
+        "src_spain_guardian_defense"
+      ],
+      "unknown_items": [
+        "比利时是否让Doku首发"
+      ]
+    },
+    {
+      "dimension_key": "recent_form",
+      "score": 4,
+      "confidence": "medium",
+      "conclusion": "近期状态是一强防守对强火力，但西班牙0失球质量更能解释低BTTS主轴。",
+      "check_results": {
+        "recent_results": {
+          "status": "supported",
+          "finding": "近5至10场结果及对手质量：围绕“近5至10场结果及对手质量”复核后，近期状态是一强防守对强火力，但西班牙0失球质量更能解释低BTTS主轴。",
+          "evidence": [
+            "西班牙9进0失，比利时13进5失；近期形态支持西班牙胜与零封优先。"
+          ],
+          "source_ids": [
+            "src_match_fox",
+            "src_db_local"
+          ]
+        },
+        "scoring_trend": {
+          "status": "supported",
+          "finding": "近期进球与射正趋势：围绕“近期进球与射正趋势”复核后，近期状态是一强防守对强火力，但西班牙0失球质量更能解释低BTTS主轴。",
+          "evidence": [
+            "西班牙9进0失，比利时13进5失；近期形态支持西班牙胜与零封优先。"
+          ],
+          "source_ids": [
+            "src_match_fox",
+            "src_db_local"
+          ]
+        },
+        "conceding_trend": {
+          "status": "neutral",
+          "finding": "近期失球与被创造机会趋势：围绕“近期失球与被创造机会趋势”复核后，近期状态是一强防守对强火力，但西班牙0失球质量更能解释低BTTS主轴。",
+          "evidence": [
+            "西班牙9进0失，比利时13进5失；近期形态支持西班牙胜与零封优先。"
+          ],
+          "source_ids": [
+            "src_match_fox",
+            "src_db_local"
+          ]
+        },
+        "strong_weak_opponent_split": {
+          "status": "supported",
+          "finding": "面对强队和弱队的表现差异：围绕“面对强队和弱队的表现差异”复核后，近期状态是一强防守对强火力，但西班牙0失球质量更能解释低BTTS主轴。",
+          "evidence": [
+            "西班牙9进0失，比利时13进5失；近期形态支持西班牙胜与零封优先。"
+          ],
+          "source_ids": [
+            "src_match_fox",
+            "src_db_local"
+          ]
+        },
+        "second_half_trend": {
+          "status": "supported",
+          "finding": "下半场提速或崩盘趋势：围绕“下半场提速或崩盘趋势”复核后，近期状态是一强防守对强火力，但西班牙0失球质量更能解释低BTTS主轴。",
+          "evidence": [
+            "西班牙9进0失，比利时13进5失；近期形态支持西班牙胜与零封优先。"
+          ],
+          "source_ids": [
+            "src_match_fox",
+            "src_db_local"
+          ]
+        }
+      },
+      "evidence": [
+        "西班牙9进0失，比利时13进5失；近期形态支持西班牙胜与零封优先。",
+        "本维度由 market_history_agent 主评并经合议校准。"
+      ],
+      "source_ids": [
+        "src_match_fox",
+        "src_db_local",
+        "src_spain_guardian_defense"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "goal_distribution",
+      "score": 4,
+      "confidence": "medium",
+      "conclusion": "量化和事实均指向低BTTS、西班牙单边得分；原始泊松低估了西班牙第二/第三球。",
+      "check_results": {
+        "xg_xga": {
+          "status": "supported",
+          "finding": "xG与xGA：围绕“xG与xGA”复核后，量化和事实均指向低BTTS、西班牙单边得分；原始泊松低估了西班牙第二/第三球。",
+          "evidence": [
+            "量化Top为1-0、0-0、2-0、3-0，仲裁将2-0升为首选。"
+          ],
+          "source_ids": [
+            "src_quant",
+            "src_match_fox"
+          ]
+        },
+        "shots_on_target": {
+          "status": "supported",
+          "finding": "射门与射正：围绕“射门与射正”复核后，量化和事实均指向低BTTS、西班牙单边得分；原始泊松低估了西班牙第二/第三球。",
+          "evidence": [
+            "量化Top为1-0、0-0、2-0、3-0，仲裁将2-0升为首选。"
+          ],
+          "source_ids": [
+            "src_quant",
+            "src_match_fox"
+          ]
+        },
+        "big_chances": {
+          "status": "neutral",
+          "finding": "重大机会与禁区触球：围绕“重大机会与禁区触球”复核后，量化和事实均指向低BTTS、西班牙单边得分；原始泊松低估了西班牙第二/第三球。",
+          "evidence": [
+            "量化Top为1-0、0-0、2-0、3-0，仲裁将2-0升为首选。"
+          ],
+          "source_ids": [
+            "src_quant",
+            "src_match_fox"
+          ]
+        },
+        "set_piece_output": {
+          "status": "supported",
+          "finding": "定位球输出：围绕“定位球输出”复核后，量化和事实均指向低BTTS、西班牙单边得分；原始泊松低估了西班牙第二/第三球。",
+          "evidence": [
+            "量化Top为1-0、0-0、2-0、3-0，仲裁将2-0升为首选。"
+          ],
+          "source_ids": [
+            "src_quant",
+            "src_match_fox"
+          ]
+        },
+        "nonstandard_goals": {
+          "status": "supported",
+          "finding": "点球、乌龙、压迫抢断等非常规路径：围绕“点球、乌龙、压迫抢断等非常规路径”复核后，量化和事实均指向低BTTS、西班牙单边得分；原始泊松低估了西班牙第二/第三球。",
+          "evidence": [
+            "量化Top为1-0、0-0、2-0、3-0，仲裁将2-0升为首选。"
+          ],
+          "source_ids": [
+            "src_quant",
+            "src_match_fox"
+          ]
+        }
+      },
+      "evidence": [
+        "量化Top为1-0、0-0、2-0、3-0，仲裁将2-0升为首选。",
+        "本维度由 attack_agent 主评并经合议校准。"
+      ],
+      "source_ids": [
+        "src_quant",
+        "src_match_fox",
+        "src_spain_guardian_defense"
+      ],
+      "unknown_items": [
+        "direct xGA缺失"
+      ]
+    },
+    {
+      "dimension_key": "strong_second_goal",
+      "score": 4,
+      "confidence": "medium",
+      "conclusion": "西班牙第二球为medium，受Oyarzabal/Yamal状态、持续射门和Onana缺阵支撑。",
+      "check_results": {
+        "finisher_status": {
+          "status": "supported",
+          "finding": "终结者状态：围绕“终结者状态”复核后，西班牙第二球为medium，受Oyarzabal/Yamal状态、持续射门和Onana缺阵支撑。",
+          "evidence": [
+            "P(Spain>=2)=0.387857且比利时场均失1球，足以让2-0成为首选。"
+          ],
+          "source_ids": [
+            "src_db_local",
+            "src_match_fox"
+          ]
+        },
+        "creator_quality": {
+          "status": "supported",
+          "finding": "持续创造机会能力：围绕“持续创造机会能力”复核后，西班牙第二球为medium，受Oyarzabal/Yamal状态、持续射门和Onana缺阵支撑。",
+          "evidence": [
+            "P(Spain>=2)=0.387857且比利时场均失1球，足以让2-0成为首选。"
+          ],
+          "source_ids": [
+            "src_db_local",
+            "src_match_fox"
+          ]
+        },
+        "shot_quality": {
+          "status": "neutral",
+          "finding": "射正率与禁区射门比例：围绕“射正率与禁区射门比例”复核后，西班牙第二球为medium，受Oyarzabal/Yamal状态、持续射门和Onana缺阵支撑。",
+          "evidence": [
+            "P(Spain>=2)=0.387857且比利时场均失1球，足以让2-0成为首选。"
+          ],
+          "source_ids": [
+            "src_db_local",
+            "src_match_fox"
+          ]
+        },
+        "low_block_solution": {
+          "status": "supported",
+          "finding": "破密集防守手段：围绕“破密集防守手段”复核后，西班牙第二球为medium，受Oyarzabal/Yamal状态、持续射门和Onana缺阵支撑。",
+          "evidence": [
+            "P(Spain>=2)=0.387857且比利时场均失1球，足以让2-0成为首选。"
+          ],
+          "source_ids": [
+            "src_db_local",
+            "src_match_fox"
+          ]
+        },
+        "bench_impact": {
+          "status": "supported",
+          "finding": "替补冲击时间与质量：围绕“替补冲击时间与质量”复核后，西班牙第二球为medium，受Oyarzabal/Yamal状态、持续射门和Onana缺阵支撑。",
+          "evidence": [
+            "P(Spain>=2)=0.387857且比利时场均失1球，足以让2-0成为首选。"
+          ],
+          "source_ids": [
+            "src_db_local",
+            "src_match_fox"
+          ]
+        },
+        "intent_after_leading": {
+          "status": "neutral",
+          "finding": "领先后的继续进攻意愿：围绕“领先后的继续进攻意愿”复核后，西班牙第二球为medium，受Oyarzabal/Yamal状态、持续射门和Onana缺阵支撑。",
+          "evidence": [
+            "P(Spain>=2)=0.387857且比利时场均失1球，足以让2-0成为首选。"
+          ],
+          "source_ids": [
+            "src_db_local",
+            "src_match_fox"
+          ]
+        }
+      },
+      "evidence": [
+        "P(Spain>=2)=0.387857且比利时场均失1球，足以让2-0成为首选。",
+        "本维度由 attack_agent 主评并经合议校准。"
+      ],
+      "source_ids": [
+        "src_db_local",
+        "src_match_fox",
+        "src_lineup_rotowire"
+      ],
+      "unknown_items": [
+        "西班牙领先后是否继续压上"
+      ]
+    },
+    {
+      "dimension_key": "strong_third_goal",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "第三球不能埋为薄尾，3-0进入次选；但淘汰赛节奏限制其成为主轴。",
+      "check_results": {
+        "star_ceiling": {
+          "status": "supported",
+          "finding": "巨星突破团队均值的能力：围绕“巨星突破团队均值的能力”复核后，第三球不能埋为薄尾，3-0进入次选；但淘汰赛节奏限制其成为主轴。",
+          "evidence": [
+            "3-0量化rank4且历史样本提示不要低估西班牙第三球。"
+          ],
+          "source_ids": [
+            "src_history_local",
+            "src_match_fox"
+          ]
+        },
+        "bench_attack": {
+          "status": "supported",
+          "finding": "替补攻击质量：围绕“替补攻击质量”复核后，第三球不能埋为薄尾，3-0进入次选；但淘汰赛节奏限制其成为主轴。",
+          "evidence": [
+            "3-0量化rank4且历史样本提示不要低估西班牙第三球。"
+          ],
+          "source_ids": [
+            "src_history_local",
+            "src_match_fox"
+          ]
+        },
+        "second_half_adjustment": {
+          "status": "neutral",
+          "finding": "下半场战术调整：围绕“下半场战术调整”复核后，第三球不能埋为薄尾，3-0进入次选；但淘汰赛节奏限制其成为主轴。",
+          "evidence": [
+            "3-0量化rank4且历史样本提示不要低估西班牙第三球。"
+          ],
+          "source_ids": [
+            "src_history_local",
+            "src_match_fox"
+          ]
+        },
+        "opponent_fatigue": {
+          "status": "supported",
+          "finding": "对手后程体能：围绕“对手后程体能”复核后，第三球不能埋为薄尾，3-0进入次选；但淘汰赛节奏限制其成为主轴。",
+          "evidence": [
+            "3-0量化rank4且历史样本提示不要低估西班牙第三球。"
+          ],
+          "source_ids": [
+            "src_history_local",
+            "src_match_fox"
+          ]
+        },
+        "defensive_error_risk": {
+          "status": "supported",
+          "finding": "门将或后卫失误风险：围绕“门将或后卫失误风险”复核后，第三球不能埋为薄尾，3-0进入次选；但淘汰赛节奏限制其成为主轴。",
+          "evidence": [
+            "3-0量化rank4且历史样本提示不要低估西班牙第三球。"
+          ],
+          "source_ids": [
+            "src_history_local",
+            "src_match_fox"
+          ]
+        },
+        "late_goal_path": {
+          "status": "neutral",
+          "finding": "补时和尾段进球路径：围绕“补时和尾段进球路径”复核后，第三球不能埋为薄尾，3-0进入次选；但淘汰赛节奏限制其成为主轴。",
+          "evidence": [
+            "3-0量化rank4且历史样本提示不要低估西班牙第三球。"
+          ],
+          "source_ids": [
+            "src_history_local",
+            "src_match_fox"
+          ]
+        }
+      },
+      "evidence": [
+        "3-0量化rank4且历史样本提示不要低估西班牙第三球。",
+        "本维度由 attack_agent 主评并经合议校准。"
+      ],
+      "source_ids": [
+        "src_history_local",
+        "src_match_fox",
+        "src_market_vsin"
+      ],
+      "unknown_items": [
+        "比利时后程体能和失误数据不足"
+      ]
+    },
+    {
+      "dimension_key": "weak_first_goal",
+      "score": 2,
+      "confidence": "medium",
+      "conclusion": "比利时第一球为low到条件low-medium，需要核心首发、定位球或西班牙边卫身后空间触发。",
+      "check_results": {
+        "core_attacker_start": {
+          "status": "supported",
+          "finding": "核心攻击手是否首发：围绕“核心攻击手是否首发”复核后，比利时第一球为low到条件low-medium，需要核心首发、定位球或西班牙边卫身后空间触发。",
+          "evidence": [
+            "比利时攻击热但面对西班牙五场零封和低xGA只能作条件尾。"
+          ],
+          "source_ids": [
+            "src_match_fox",
+            "src_spain_guardian_defense"
+          ]
+        },
+        "transition_path": {
+          "status": "supported",
+          "finding": "反击路径：围绕“反击路径”复核后，比利时第一球为low到条件low-medium，需要核心首发、定位球或西班牙边卫身后空间触发。",
+          "evidence": [
+            "比利时攻击热但面对西班牙五场零封和低xGA只能作条件尾。"
+          ],
+          "source_ids": [
+            "src_match_fox",
+            "src_spain_guardian_defense"
+          ]
+        },
+        "set_piece_path": {
+          "status": "neutral",
+          "finding": "定位球路径：围绕“定位球路径”复核后，比利时第一球为low到条件low-medium，需要核心首发、定位球或西班牙边卫身后空间触发。",
+          "evidence": [
+            "比利时攻击热但面对西班牙五场零封和低xGA只能作条件尾。"
+          ],
+          "source_ids": [
+            "src_match_fox",
+            "src_spain_guardian_defense"
+          ]
+        },
+        "open_play_path": {
+          "status": "supported",
+          "finding": "运动战路径：围绕“运动战路径”复核后，比利时第一球为low到条件low-medium，需要核心首发、定位球或西班牙边卫身后空间触发。",
+          "evidence": [
+            "比利时攻击热但面对西班牙五场零封和低xGA只能作条件尾。"
+          ],
+          "source_ids": [
+            "src_match_fox",
+            "src_spain_guardian_defense"
+          ]
+        },
+        "opponent_defensive_gap": {
+          "status": "supported",
+          "finding": "对手可利用的防守漏洞：围绕“对手可利用的防守漏洞”复核后，比利时第一球为low到条件low-medium，需要核心首发、定位球或西班牙边卫身后空间触发。",
+          "evidence": [
+            "比利时攻击热但面对西班牙五场零封和低xGA只能作条件尾。"
+          ],
+          "source_ids": [
+            "src_match_fox",
+            "src_spain_guardian_defense"
+          ]
+        }
+      },
+      "evidence": [
+        "比利时攻击热但面对西班牙五场零封和低xGA只能作条件尾。",
+        "本维度由 attack_agent 主评并经合议校准。"
+      ],
+      "source_ids": [
+        "src_match_fox",
+        "src_spain_guardian_defense",
+        "src_lineup_rotowire"
+      ],
+      "unknown_items": [
+        "比利时最终前场首发"
+      ]
+    },
+    {
+      "dimension_key": "weak_second_goal",
+      "score": 1,
+      "confidence": "medium",
+      "conclusion": "比利时第二球常态拒绝，仅在红牌、点球或早球乱战中进入极薄尾部。",
+      "check_results": {
+        "multiple_attack_sources": {
+          "status": "supported",
+          "finding": "多点进攻：围绕“多点进攻”复核后，比利时第二球常态拒绝，仅在红牌、点球或早球乱战中进入极薄尾部。",
+          "evidence": [
+            "量化P(Belgium>=2)=0.010186，六个Agent均未给出稳定第二路径。"
+          ],
+          "source_ids": [
+            "src_quant",
+            "src_spain_guardian_defense"
+          ]
+        },
+        "repeatable_chance_creation": {
+          "status": "supported",
+          "finding": "可重复创造机会能力：围绕“可重复创造机会能力”复核后，比利时第二球常态拒绝，仅在红牌、点球或早球乱战中进入极薄尾部。",
+          "evidence": [
+            "量化P(Belgium>=2)=0.010186，六个Agent均未给出稳定第二路径。"
+          ],
+          "source_ids": [
+            "src_quant",
+            "src_spain_guardian_defense"
+          ]
+        },
+        "bench_impact": {
+          "status": "neutral",
+          "finding": "替补冲击：围绕“替补冲击”复核后，比利时第二球常态拒绝，仅在红牌、点球或早球乱战中进入极薄尾部。",
+          "evidence": [
+            "量化P(Belgium>=2)=0.010186，六个Agent均未给出稳定第二路径。"
+          ],
+          "source_ids": [
+            "src_quant",
+            "src_spain_guardian_defense"
+          ]
+        },
+        "response_after_conceding": {
+          "status": "supported",
+          "finding": "丢球后的反弹能力：围绕“丢球后的反弹能力”复核后，比利时第二球常态拒绝，仅在红牌、点球或早球乱战中进入极薄尾部。",
+          "evidence": [
+            "量化P(Belgium>=2)=0.010186，六个Agent均未给出稳定第二路径。"
+          ],
+          "source_ids": [
+            "src_quant",
+            "src_spain_guardian_defense"
+          ]
+        },
+        "favorite_control_risk": {
+          "status": "supported",
+          "finding": "强队控场失效风险：围绕“强队控场失效风险”复核后，比利时第二球常态拒绝，仅在红牌、点球或早球乱战中进入极薄尾部。",
+          "evidence": [
+            "量化P(Belgium>=2)=0.010186，六个Agent均未给出稳定第二路径。"
+          ],
+          "source_ids": [
+            "src_quant",
+            "src_spain_guardian_defense"
+          ]
+        }
+      },
+      "evidence": [
+        "量化P(Belgium>=2)=0.010186，六个Agent均未给出稳定第二路径。",
+        "本维度由 attack_agent 主评并经合议校准。"
+      ],
+      "source_ids": [
+        "src_quant",
+        "src_spain_guardian_defense",
+        "src_history_local"
+      ],
+      "unknown_items": [
+        "比赛是否出现重大事件"
+      ]
+    },
+    {
+      "dimension_key": "favorite_defense",
+      "score": 4,
+      "confidence": "medium",
+      "conclusion": "西班牙热门方防守脆弱度低，Rodri屏障、低xGA和Simon零封链条压低比利时常态一球。",
+      "check_results": {
+        "center_back_speed": {
+          "status": "supported",
+          "finding": "中卫转身与回追：围绕“中卫转身与回追”复核后，西班牙热门方防守脆弱度低，Rodri屏障、低xGA和Simon零封链条压低比利时常态一球。",
+          "evidence": [
+            "Guardian记录西班牙低xGA序列与5场零封。"
+          ],
+          "source_ids": [
+            "src_spain_guardian_defense",
+            "src_match_fox"
+          ]
+        },
+        "fullback_space": {
+          "status": "supported",
+          "finding": "边后卫身后空间：围绕“边后卫身后空间”复核后，西班牙热门方防守脆弱度低，Rodri屏障、低xGA和Simon零封链条压低比利时常态一球。",
+          "evidence": [
+            "Guardian记录西班牙低xGA序列与5场零封。"
+          ],
+          "source_ids": [
+            "src_spain_guardian_defense",
+            "src_match_fox"
+          ]
+        },
+        "midfield_protection": {
+          "status": "neutral",
+          "finding": "后腰保护：围绕“后腰保护”复核后，西班牙热门方防守脆弱度低，Rodri屏障、低xGA和Simon零封链条压低比利时常态一球。",
+          "evidence": [
+            "Guardian记录西班牙低xGA序列与5场零封。"
+          ],
+          "source_ids": [
+            "src_spain_guardian_defense",
+            "src_match_fox"
+          ]
+        },
+        "goalkeeper_stability": {
+          "status": "supported",
+          "finding": "门将稳定性：围绕“门将稳定性”复核后，西班牙热门方防守脆弱度低，Rodri屏障、低xGA和Simon零封链条压低比利时常态一球。",
+          "evidence": [
+            "Guardian记录西班牙低xGA序列与5场零封。"
+          ],
+          "source_ids": [
+            "src_spain_guardian_defense",
+            "src_match_fox"
+          ]
+        },
+        "set_piece_defense": {
+          "status": "supported",
+          "finding": "定位球防守：围绕“定位球防守”复核后，西班牙热门方防守脆弱度低，Rodri屏障、低xGA和Simon零封链条压低比利时常态一球。",
+          "evidence": [
+            "Guardian记录西班牙低xGA序列与5场零封。"
+          ],
+          "source_ids": [
+            "src_spain_guardian_defense",
+            "src_match_fox"
+          ]
+        },
+        "control_after_leading": {
+          "status": "neutral",
+          "finding": "领先后的控场纪律：围绕“领先后的控场纪律”复核后，西班牙热门方防守脆弱度低，Rodri屏障、低xGA和Simon零封链条压低比利时常态一球。",
+          "evidence": [
+            "Guardian记录西班牙低xGA序列与5场零封。"
+          ],
+          "source_ids": [
+            "src_spain_guardian_defense",
+            "src_match_fox"
+          ]
+        }
+      },
+      "evidence": [
+        "Guardian记录西班牙低xGA序列与5场零封。",
+        "本维度由 defense_risk_agent 主评并经合议校准。"
+      ],
+      "source_ids": [
+        "src_spain_guardian_defense",
+        "src_match_fox",
+        "src_db_local"
+      ],
+      "unknown_items": [
+        "边卫身后空间的实际暴露"
+      ]
+    },
+    {
+      "dimension_key": "clean_sheet",
+      "score": 4,
+      "confidence": "medium",
+      "conclusion": "零封为高信号但置信封顶；比利时火力要求保留2-1和1-1条件尾。",
+      "check_results": {
+        "possession_control": {
+          "status": "supported",
+          "finding": "控球与节奏压制：围绕“控球与节奏压制”复核后，零封为高信号但置信封顶；比利时火力要求保留2-1和1-1条件尾。",
+          "evidence": [
+            "Spain clean sheet概率0.860708与五场0失球一致。"
+          ],
+          "source_ids": [
+            "src_spain_guardian_defense",
+            "src_quant"
+          ]
+        },
+        "counterpress": {
+          "status": "supported",
+          "finding": "丢球后反抢：围绕“丢球后反抢”复核后，零封为高信号但置信封顶；比利时火力要求保留2-1和1-1条件尾。",
+          "evidence": [
+            "Spain clean sheet概率0.860708与五场0失球一致。"
+          ],
+          "source_ids": [
+            "src_spain_guardian_defense",
+            "src_quant"
+          ]
+        },
+        "box_protection": {
+          "status": "neutral",
+          "finding": "禁区保护：围绕“禁区保护”复核后，零封为高信号但置信封顶；比利时火力要求保留2-1和1-1条件尾。",
+          "evidence": [
+            "Spain clean sheet概率0.860708与五场0失球一致。"
+          ],
+          "source_ids": [
+            "src_spain_guardian_defense",
+            "src_quant"
+          ]
+        },
+        "goalkeeper": {
+          "status": "supported",
+          "finding": "门将表现：围绕“门将表现”复核后，零封为高信号但置信封顶；比利时火力要求保留2-1和1-1条件尾。",
+          "evidence": [
+            "Spain clean sheet概率0.860708与五场0失球一致。"
+          ],
+          "source_ids": [
+            "src_spain_guardian_defense",
+            "src_quant"
+          ]
+        },
+        "weak_attack_availability": {
+          "status": "supported",
+          "finding": "弱队攻击核心可用性：围绕“弱队攻击核心可用性”复核后，零封为高信号但置信封顶；比利时火力要求保留2-1和1-1条件尾。",
+          "evidence": [
+            "Spain clean sheet概率0.860708与五场0失球一致。"
+          ],
+          "source_ids": [
+            "src_spain_guardian_defense",
+            "src_quant"
+          ]
+        },
+        "weak_attack_depth": {
+          "status": "neutral",
+          "finding": "弱队进攻路径数量：围绕“弱队进攻路径数量”复核后，零封为高信号但置信封顶；比利时火力要求保留2-1和1-1条件尾。",
+          "evidence": [
+            "Spain clean sheet概率0.860708与五场0失球一致。"
+          ],
+          "source_ids": [
+            "src_spain_guardian_defense",
+            "src_quant"
+          ]
+        }
+      },
+      "evidence": [
+        "Spain clean sheet概率0.860708与五场0失球一致。",
+        "本维度由 defense_risk_agent 主评并经合议校准。"
+      ],
+      "source_ids": [
+        "src_spain_guardian_defense",
+        "src_quant",
+        "src_match_fox"
+      ],
+      "unknown_items": [
+        "比利时定位球质量"
+      ]
+    },
+    {
+      "dimension_key": "tactical_matchup",
+      "score": 4,
+      "confidence": "medium",
+      "conclusion": "战术匹配偏西班牙控场小胜，Belgium低位会推高1-0/0-0，追分会推高2-0/3-0。",
+      "check_results": {
+        "possession_transition": {
+          "status": "supported",
+          "finding": "控球对反击：围绕“控球对反击”复核后，战术匹配偏西班牙控场小胜，Belgium低位会推高1-0/0-0，追分会推高2-0/3-0。",
+          "evidence": [
+            "西班牙控球反抢对缺Onana中场更有压制力。"
+          ],
+          "source_ids": [
+            "src_match_fox",
+            "src_lineup_rotowire"
+          ]
+        },
+        "press_build_up": {
+          "status": "supported",
+          "finding": "高压对出球：围绕“高压对出球”复核后，战术匹配偏西班牙控场小胜，Belgium低位会推高1-0/0-0，追分会推高2-0/3-0。",
+          "evidence": [
+            "西班牙控球反抢对缺Onana中场更有压制力。"
+          ],
+          "source_ids": [
+            "src_match_fox",
+            "src_lineup_rotowire"
+          ]
+        },
+        "midfield_control": {
+          "status": "neutral",
+          "finding": "中场控制与二点球：围绕“中场控制与二点球”复核后，战术匹配偏西班牙控场小胜，Belgium低位会推高1-0/0-0，追分会推高2-0/3-0。",
+          "evidence": [
+            "西班牙控球反抢对缺Onana中场更有压制力。"
+          ],
+          "source_ids": [
+            "src_match_fox",
+            "src_lineup_rotowire"
+          ]
+        },
+        "defensive_line": {
+          "status": "supported",
+          "finding": "防线高度与身后风险：围绕“防线高度与身后风险”复核后，战术匹配偏西班牙控场小胜，Belgium低位会推高1-0/0-0，追分会推高2-0/3-0。",
+          "evidence": [
+            "西班牙控球反抢对缺Onana中场更有压制力。"
+          ],
+          "source_ids": [
+            "src_match_fox",
+            "src_lineup_rotowire"
+          ]
+        },
+        "set_piece_shape": {
+          "status": "supported",
+          "finding": "定位球攻防：围绕“定位球攻防”复核后，战术匹配偏西班牙控场小胜，Belgium低位会推高1-0/0-0，追分会推高2-0/3-0。",
+          "evidence": [
+            "西班牙控球反抢对缺Onana中场更有压制力。"
+          ],
+          "source_ids": [
+            "src_match_fox",
+            "src_lineup_rotowire"
+          ]
+        },
+        "formation_flexibility": {
+          "status": "neutral",
+          "finding": "变阵与换人弹性：围绕“变阵与换人弹性”复核后，战术匹配偏西班牙控场小胜，Belgium低位会推高1-0/0-0，追分会推高2-0/3-0。",
+          "evidence": [
+            "西班牙控球反抢对缺Onana中场更有压制力。"
+          ],
+          "source_ids": [
+            "src_match_fox",
+            "src_lineup_rotowire"
+          ]
+        }
+      },
+      "evidence": [
+        "西班牙控球反抢对缺Onana中场更有压制力。",
+        "本维度由 defense_risk_agent 主评并经合议校准。"
+      ],
+      "source_ids": [
+        "src_match_fox",
+        "src_lineup_rotowire",
+        "src_market_vsin"
+      ],
+      "unknown_items": [
+        "双方临场阵型"
+      ]
+    },
+    {
+      "dimension_key": "stage_psychology",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "四分之一决赛上调谨慎和低位闷局，压低无条件大球。",
+      "check_results": {
+        "stage_context": {
+          "status": "supported",
+          "finding": "小组或淘汰赛阶段：围绕“小组或淘汰赛阶段”复核后，四分之一决赛上调谨慎和低位闷局，压低无条件大球。",
+          "evidence": [
+            "淘汰赛容错低，0-0必须保留为低位尾部。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_history_local"
+          ]
+        },
+        "caution_index": {
+          "status": "supported",
+          "finding": "谨慎指数：围绕“谨慎指数”复核后，四分之一决赛上调谨慎和低位闷局，压低无条件大球。",
+          "evidence": [
+            "淘汰赛容错低，0-0必须保留为低位尾部。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_history_local"
+          ]
+        },
+        "chaos_index": {
+          "status": "neutral",
+          "finding": "混乱指数：围绕“混乱指数”复核后，四分之一决赛上调谨慎和低位闷局，压低无条件大球。",
+          "evidence": [
+            "淘汰赛容错低，0-0必须保留为低位尾部。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_history_local"
+          ]
+        },
+        "goal_difference_need": {
+          "status": "supported",
+          "finding": "净胜球与积分需求：围绕“净胜球与积分需求”复核后，四分之一决赛上调谨慎和低位闷局，压低无条件大球。",
+          "evidence": [
+            "淘汰赛容错低，0-0必须保留为低位尾部。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_history_local"
+          ]
+        },
+        "pressure_response": {
+          "status": "supported",
+          "finding": "领先落后时的心理反应：围绕“领先落后时的心理反应”复核后，四分之一决赛上调谨慎和低位闷局，压低无条件大球。",
+          "evidence": [
+            "淘汰赛容错低，0-0必须保留为低位尾部。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_history_local"
+          ]
+        },
+        "star_pressure": {
+          "status": "neutral",
+          "finding": "核心球员舆论或里程碑压力：围绕“核心球员舆论或里程碑压力”复核后，四分之一决赛上调谨慎和低位闷局，压低无条件大球。",
+          "evidence": [
+            "淘汰赛容错低，0-0必须保留为低位尾部。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_history_local"
+          ]
+        }
+      },
+      "evidence": [
+        "淘汰赛容错低，0-0必须保留为低位尾部。",
+        "本维度由 defense_risk_agent 主评并经合议校准。"
+      ],
+      "source_ids": [
+        "src_fixture_fox",
+        "src_history_local",
+        "src_quant"
+      ],
+      "unknown_items": [
+        "临场心理和裁判尺度"
+      ]
+    },
+    {
+      "dimension_key": "draw_risk",
+      "score": 4,
+      "confidence": "medium",
+      "conclusion": "平局风险主要是0-0，1-1为条件尾，2-2拒绝为主路径。",
+      "check_results": {
+        "zero_zero_path": {
+          "status": "supported",
+          "finding": "0-0路径：围绕“0-0路径”复核后，平局风险主要是0-0，1-1为条件尾，2-2拒绝为主路径。",
+          "evidence": [
+            "量化draw=0.272614、0-0 rank2，市场也给平局约+290。"
+          ],
+          "source_ids": [
+            "src_quant",
+            "src_history_local"
+          ]
+        },
+        "one_one_path": {
+          "status": "supported",
+          "finding": "1-1路径：围绕“1-1路径”复核后，平局风险主要是0-0，1-1为条件尾，2-2拒绝为主路径。",
+          "evidence": [
+            "量化draw=0.272614、0-0 rank2，市场也给平局约+290。"
+          ],
+          "source_ids": [
+            "src_quant",
+            "src_history_local"
+          ]
+        },
+        "two_two_path": {
+          "status": "neutral",
+          "finding": "2-2路径：围绕“2-2路径”复核后，平局风险主要是0-0，1-1为条件尾，2-2拒绝为主路径。",
+          "evidence": [
+            "量化draw=0.272614、0-0 rank2，市场也给平局约+290。"
+          ],
+          "source_ids": [
+            "src_quant",
+            "src_history_local"
+          ]
+        },
+        "favorite_second_goal_failure": {
+          "status": "supported",
+          "finding": "强队第二球失败风险：围绕“强队第二球失败风险”复核后，平局风险主要是0-0，1-1为条件尾，2-2拒绝为主路径。",
+          "evidence": [
+            "量化draw=0.272614、0-0 rank2，市场也给平局约+290。"
+          ],
+          "source_ids": [
+            "src_quant",
+            "src_history_local"
+          ]
+        },
+        "weak_second_goal_path": {
+          "status": "supported",
+          "finding": "弱队第二球路径：围绕“弱队第二球路径”复核后，平局风险主要是0-0，1-1为条件尾，2-2拒绝为主路径。",
+          "evidence": [
+            "量化draw=0.272614、0-0 rank2，市场也给平局约+290。"
+          ],
+          "source_ids": [
+            "src_quant",
+            "src_history_local"
+          ]
+        },
+        "game_opening_trigger": {
+          "status": "neutral",
+          "finding": "比赛被打开的触发器：围绕“比赛被打开的触发器”复核后，平局风险主要是0-0，1-1为条件尾，2-2拒绝为主路径。",
+          "evidence": [
+            "量化draw=0.272614、0-0 rank2，市场也给平局约+290。"
+          ],
+          "source_ids": [
+            "src_quant",
+            "src_history_local"
+          ]
+        }
+      },
+      "evidence": [
+        "量化draw=0.272614、0-0 rank2，市场也给平局约+290。",
+        "本维度由 defense_risk_agent 主评并经合议校准。"
+      ],
+      "source_ids": [
+        "src_quant",
+        "src_history_local",
+        "src_market_vsin"
+      ],
+      "unknown_items": [
+        "临场盘口是否强化小球"
+      ]
+    },
+    {
+      "dimension_key": "lineup_injuries",
+      "score": 4,
+      "confidence": "medium",
+      "conclusion": "Onana ACL缺阵是关键伤停，净效应利好西班牙中场控制和第二球。",
+      "check_results": {
+        "attack_absences": {
+          "status": "supported",
+          "finding": "攻击线缺席：围绕“攻击线缺席”复核后，Onana ACL缺阵是关键伤停，净效应利好西班牙中场控制和第二球。",
+          "evidence": [
+            "RotoWire/VSiN均将Onana缺席作为比利时中场保护扣分。"
+          ],
+          "source_ids": [
+            "src_lineup_rotowire",
+            "src_market_vsin"
+          ]
+        },
+        "defense_absences": {
+          "status": "supported",
+          "finding": "中卫、后腰与门将缺席：围绕“中卫、后腰与门将缺席”复核后，Onana ACL缺阵是关键伤停，净效应利好西班牙中场控制和第二球。",
+          "evidence": [
+            "RotoWire/VSiN均将Onana缺席作为比利时中场保护扣分。"
+          ],
+          "source_ids": [
+            "src_lineup_rotowire",
+            "src_market_vsin"
+          ]
+        },
+        "minutes_restrictions": {
+          "status": "neutral",
+          "finding": "出场时间限制：围绕“出场时间限制”复核后，Onana ACL缺阵是关键伤停，净效应利好西班牙中场控制和第二球。",
+          "evidence": [
+            "RotoWire/VSiN均将Onana缺席作为比利时中场保护扣分。"
+          ],
+          "source_ids": [
+            "src_lineup_rotowire",
+            "src_market_vsin"
+          ]
+        },
+        "lineup_cohesion": {
+          "status": "supported",
+          "finding": "首发组合默契：围绕“首发组合默契”复核后，Onana ACL缺阵是关键伤停，净效应利好西班牙中场控制和第二球。",
+          "evidence": [
+            "RotoWire/VSiN均将Onana缺席作为比利时中场保护扣分。"
+          ],
+          "source_ids": [
+            "src_lineup_rotowire",
+            "src_market_vsin"
+          ]
+        },
+        "late_lineup_changes": {
+          "status": "supported",
+          "finding": "临场变阵或名单变化：围绕“临场变阵或名单变化”复核后，Onana ACL缺阵是关键伤停，净效应利好西班牙中场控制和第二球。",
+          "evidence": [
+            "RotoWire/VSiN均将Onana缺席作为比利时中场保护扣分。"
+          ],
+          "source_ids": [
+            "src_lineup_rotowire",
+            "src_market_vsin"
+          ]
+        }
+      },
+      "evidence": [
+        "RotoWire/VSiN均将Onana缺席作为比利时中场保护扣分。",
+        "本维度由 defense_risk_agent 主评并经合议校准。"
+      ],
+      "source_ids": [
+        "src_lineup_rotowire",
+        "src_market_vsin"
+      ],
+      "unknown_items": [
+        "官方首发未确认"
+      ]
+    },
+    {
+      "dimension_key": "team_harmony_social",
+      "score": 3,
+      "confidence": "low",
+      "conclusion": "未见可靠更衣室或社媒异常，保持低权重中性。",
+      "check_results": {
+        "on_field_behavior": {
+          "status": "unknown",
+          "finding": "场上配合、抱怨和回防行为：当前证据不足，保持低权重中性。",
+          "evidence": [],
+          "source_ids": [
+            "src_lineup_rotowire",
+            "src_match_fox"
+          ]
+        },
+        "reliable_reporting": {
+          "status": "unknown",
+          "finding": "权威媒体更衣室报道：当前证据不足，保持低权重中性。",
+          "evidence": [],
+          "source_ids": [
+            "src_lineup_rotowire",
+            "src_match_fox"
+          ]
+        },
+        "public_interviews": {
+          "status": "unknown",
+          "finding": "公开采访：当前证据不足，保持低权重中性。",
+          "evidence": [],
+          "source_ids": [
+            "src_lineup_rotowire",
+            "src_match_fox"
+          ]
+        },
+        "training_interaction": {
+          "status": "supported",
+          "finding": "训练和赛后互动：围绕“训练和赛后互动”复核后，未见可靠更衣室或社媒异常，保持低权重中性。",
+          "evidence": [
+            "证据包没有队内关系负面来源，不能据此修正比分。"
+          ],
+          "source_ids": [
+            "src_lineup_rotowire",
+            "src_match_fox"
+          ]
+        },
+        "social_media_signals": {
+          "status": "supported",
+          "finding": "社媒异常信号：围绕“社媒异常信号”复核后，未见可靠更衣室或社媒异常，保持低权重中性。",
+          "evidence": [
+            "证据包没有队内关系负面来源，不能据此修正比分。"
+          ],
+          "source_ids": [
+            "src_lineup_rotowire",
+            "src_match_fox"
+          ]
+        },
+        "signal_reliability": {
+          "status": "neutral",
+          "finding": "信号可靠性分级：围绕“信号可靠性分级”复核后，未见可靠更衣室或社媒异常，保持低权重中性。",
+          "evidence": [
+            "证据包没有队内关系负面来源，不能据此修正比分。"
+          ],
+          "source_ids": [
+            "src_lineup_rotowire",
+            "src_match_fox"
+          ]
+        }
+      },
+      "evidence": [
+        "证据包没有队内关系负面来源，不能据此修正比分。",
+        "本维度由 defense_risk_agent 主评并经合议校准。"
+      ],
+      "source_ids": [
+        "src_lineup_rotowire",
+        "src_match_fox"
+      ],
+      "unknown_items": [
+        "训练互动",
+        "社媒信号"
+      ]
+    },
+    {
+      "dimension_key": "environment_schedule",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "洛杉矶约24°C晴天微风，不触发高温或大风模型。",
+      "check_results": {
+        "weather": {
+          "status": "supported",
+          "finding": "温度、湿度与风雨：围绕“温度、湿度与风雨”复核后，洛杉矶约24°C晴天微风，不触发高温或大风模型。",
+          "evidence": [
+            "Inglewood 74-77°F、9mph风，正午开球但非高温。"
+          ],
+          "source_ids": [
+            "src_match_fox",
+            "src_fixture_fox"
+          ]
+        },
+        "kickoff_time": {
+          "status": "supported",
+          "finding": "开球时间：围绕“开球时间”复核后，洛杉矶约24°C晴天微风，不触发高温或大风模型。",
+          "evidence": [
+            "Inglewood 74-77°F、9mph风，正午开球但非高温。"
+          ],
+          "source_ids": [
+            "src_match_fox",
+            "src_fixture_fox"
+          ]
+        },
+        "pitch": {
+          "status": "unknown",
+          "finding": "草皮与场地质量：当前证据不足，保持低权重中性。",
+          "evidence": [],
+          "source_ids": [
+            "src_match_fox",
+            "src_fixture_fox"
+          ]
+        },
+        "travel": {
+          "status": "unknown",
+          "finding": "旅行与时差：当前证据不足，保持低权重中性。",
+          "evidence": [],
+          "source_ids": [
+            "src_match_fox",
+            "src_fixture_fox"
+          ]
+        },
+        "rest_days": {
+          "status": "unknown",
+          "finding": "休息天数：当前证据不足，保持低权重中性。",
+          "evidence": [],
+          "source_ids": [
+            "src_match_fox",
+            "src_fixture_fox"
+          ]
+        },
+        "preparation_disruption": {
+          "status": "unknown",
+          "finding": "备战干扰：当前证据不足，保持低权重中性。",
+          "evidence": [],
+          "source_ids": [
+            "src_match_fox",
+            "src_fixture_fox"
+          ]
+        }
+      },
+      "evidence": [
+        "Inglewood 74-77°F、9mph风，正午开球但非高温。",
+        "本维度由 defense_risk_agent 主评并经合议校准。"
+      ],
+      "source_ids": [
+        "src_match_fox",
+        "src_fixture_fox"
+      ],
+      "unknown_items": [
+        "草皮速度",
+        "精确休息差"
+      ]
+    },
+    {
+      "dimension_key": "referee_events",
+      "score": 3,
+      "confidence": "low",
+      "conclusion": "裁判未知，点球、红牌和门将失误只作为情景改判。",
+      "check_results": {
+        "referee_style": {
+          "status": "unknown",
+          "finding": "裁判判罚与出牌尺度：当前证据不足，保持低权重中性。",
+          "evidence": [],
+          "source_ids": [
+            "src_db_local",
+            "src_history_local"
+          ]
+        },
+        "penalty_var": {
+          "status": "unknown",
+          "finding": "点球与VAR倾向：当前证据不足，保持低权重中性。",
+          "evidence": [],
+          "source_ids": [
+            "src_db_local",
+            "src_history_local"
+          ]
+        },
+        "red_card_risk": {
+          "status": "unknown",
+          "finding": "红牌风险：当前证据不足，保持低权重中性。",
+          "evidence": [],
+          "source_ids": [
+            "src_db_local",
+            "src_history_local"
+          ]
+        },
+        "stoppage_time": {
+          "status": "supported",
+          "finding": "补时长度：围绕“补时长度”复核后，裁判未知，点球、红牌和门将失误只作为情景改判。",
+          "evidence": [
+            "常态比分不注入裁判倾向，但保留红牌/点球迁移。"
+          ],
+          "source_ids": [
+            "src_db_local",
+            "src_history_local"
+          ]
+        },
+        "early_goal": {
+          "status": "supported",
+          "finding": "早球触发：围绕“早球触发”复核后，裁判未知，点球、红牌和门将失误只作为情景改判。",
+          "evidence": [
+            "常态比分不注入裁判倾向，但保留红牌/点球迁移。"
+          ],
+          "source_ids": [
+            "src_db_local",
+            "src_history_local"
+          ]
+        },
+        "goalkeeper_or_backline_error": {
+          "status": "neutral",
+          "finding": "门将或后场失误：围绕“门将或后场失误”复核后，裁判未知，点球、红牌和门将失误只作为情景改判。",
+          "evidence": [
+            "常态比分不注入裁判倾向，但保留红牌/点球迁移。"
+          ],
+          "source_ids": [
+            "src_db_local",
+            "src_history_local"
+          ]
+        }
+      },
+      "evidence": [
+        "常态比分不注入裁判倾向，但保留红牌/点球迁移。",
+        "本维度由 defense_risk_agent 主评并经合议校准。"
+      ],
+      "source_ids": [
+        "src_db_local",
+        "src_history_local"
+      ],
+      "unknown_items": [
+        "主裁",
+        "VAR尺度"
+      ]
+    },
+    {
+      "dimension_key": "market_odds",
+      "score": 4,
+      "confidence": "medium",
+      "conclusion": "市场支持西班牙方向，但Over2.5与量化低总进球冲突，不能直接转BTTS。",
+      "check_results": {
+        "moneyline": {
+          "status": "supported",
+          "finding": "胜平负赔率：围绕“胜平负赔率”复核后，市场支持西班牙方向，但Over2.5与量化低总进球冲突，不能直接转BTTS。",
+          "evidence": [
+            "FOX/VSiN胜赔一致偏西班牙，Over偏热只用于保护2-0/3-0。"
+          ],
+          "source_ids": [
+            "src_match_fox",
+            "src_market_vsin"
+          ]
+        },
+        "handicap": {
+          "status": "supported",
+          "finding": "亚洲让球：围绕“亚洲让球”复核后，市场支持西班牙方向，但Over2.5与量化低总进球冲突，不能直接转BTTS。",
+          "evidence": [
+            "FOX/VSiN胜赔一致偏西班牙，Over偏热只用于保护2-0/3-0。"
+          ],
+          "source_ids": [
+            "src_match_fox",
+            "src_market_vsin"
+          ]
+        },
+        "goal_line": {
+          "status": "neutral",
+          "finding": "大小球：围绕“大小球”复核后，市场支持西班牙方向，但Over2.5与量化低总进球冲突，不能直接转BTTS。",
+          "evidence": [
+            "FOX/VSiN胜赔一致偏西班牙，Over偏热只用于保护2-0/3-0。"
+          ],
+          "source_ids": [
+            "src_match_fox",
+            "src_market_vsin"
+          ]
+        },
+        "btts_market": {
+          "status": "supported",
+          "finding": "双方进球赔率：围绕“双方进球赔率”复核后，市场支持西班牙方向，但Over2.5与量化低总进球冲突，不能直接转BTTS。",
+          "evidence": [
+            "FOX/VSiN胜赔一致偏西班牙，Over偏热只用于保护2-0/3-0。"
+          ],
+          "source_ids": [
+            "src_match_fox",
+            "src_market_vsin"
+          ]
+        },
+        "market_movement": {
+          "status": "supported",
+          "finding": "赔率变化：围绕“赔率变化”复核后，市场支持西班牙方向，但Over2.5与量化低总进球冲突，不能直接转BTTS。",
+          "evidence": [
+            "FOX/VSiN胜赔一致偏西班牙，Over偏热只用于保护2-0/3-0。"
+          ],
+          "source_ids": [
+            "src_match_fox",
+            "src_market_vsin"
+          ]
+        },
+        "overheating_or_mispricing": {
+          "status": "neutral",
+          "finding": "热门过热或比分区间低估：围绕“热门过热或比分区间低估”复核后，市场支持西班牙方向，但Over2.5与量化低总进球冲突，不能直接转BTTS。",
+          "evidence": [
+            "FOX/VSiN胜赔一致偏西班牙，Over偏热只用于保护2-0/3-0。"
+          ],
+          "source_ids": [
+            "src_match_fox",
+            "src_market_vsin"
+          ]
+        }
+      },
+      "evidence": [
+        "FOX/VSiN胜赔一致偏西班牙，Over偏热只用于保护2-0/3-0。",
+        "本维度由 market_history_agent 主评并经合议校准。"
+      ],
+      "source_ids": [
+        "src_match_fox",
+        "src_market_vsin",
+        "src_quant"
+      ],
+      "unknown_items": [
+        "赛前120分钟内赔率"
+      ]
+    },
+    {
+      "dimension_key": "dynamic_triggers",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "动态触发围绕低比分基线：西班牙早球升2-0/3-0，比利时事件进球升2-1。",
+      "check_results": {
+        "weak_team_scores_first": {
+          "status": "supported",
+          "finding": "弱队先进球：围绕“弱队先进球”复核后，动态触发围绕低比分基线：西班牙早球升2-0/3-0，比利时事件进球升2-1。",
+          "evidence": [
+            "仲裁规定红牌、点球、早球和Lukaku有效时间为主要触发器。"
+          ],
+          "source_ids": [
+            "src_agent",
+            "src_quant"
+          ]
+        },
+        "favorite_scores_early": {
+          "status": "supported",
+          "finding": "强队早早领先：围绕“强队早早领先”复核后，动态触发围绕低比分基线：西班牙早球升2-0/3-0，比利时事件进球升2-1。",
+          "evidence": [
+            "仲裁规定红牌、点球、早球和Lukaku有效时间为主要触发器。"
+          ],
+          "source_ids": [
+            "src_agent",
+            "src_quant"
+          ]
+        },
+        "early_chance_exchange": {
+          "status": "neutral",
+          "finding": "早段互有高质量机会：围绕“早段互有高质量机会”复核后，动态触发围绕低比分基线：西班牙早球升2-0/3-0，比利时事件进球升2-1。",
+          "evidence": [
+            "仲裁规定红牌、点球、早球和Lukaku有效时间为主要触发器。"
+          ],
+          "source_ids": [
+            "src_agent",
+            "src_quant"
+          ]
+        },
+        "set_piece_pressure": {
+          "status": "supported",
+          "finding": "连续定位球压力：围绕“连续定位球压力”复核后，动态触发围绕低比分基线：西班牙早球升2-0/3-0，比利时事件进球升2-1。",
+          "evidence": [
+            "仲裁规定红牌、点球、早球和Lukaku有效时间为主要触发器。"
+          ],
+          "source_ids": [
+            "src_agent",
+            "src_quant"
+          ]
+        },
+        "favorite_shot_quality": {
+          "status": "supported",
+          "finding": "强队射正质量变化：围绕“强队射正质量变化”复核后，动态触发围绕低比分基线：西班牙早球升2-0/3-0，比利时事件进球升2-1。",
+          "evidence": [
+            "仲裁规定红牌、点球、早球和Lukaku有效时间为主要触发器。"
+          ],
+          "source_ids": [
+            "src_agent",
+            "src_quant"
+          ]
+        },
+        "substitute_or_error_trigger": {
+          "status": "neutral",
+          "finding": "替补冲击或后场失误：围绕“替补冲击或后场失误”复核后，动态触发围绕低比分基线：西班牙早球升2-0/3-0，比利时事件进球升2-1。",
+          "evidence": [
+            "仲裁规定红牌、点球、早球和Lukaku有效时间为主要触发器。"
+          ],
+          "source_ids": [
+            "src_agent",
+            "src_quant"
+          ]
+        },
+        "event_score_adjustment": {
+          "status": "supported",
+          "finding": "红牌、点球和门将失误后的量化比分修正：围绕“红牌、点球和门将失误后的量化比分修正”复核后，动态触发围绕低比分基线：西班牙早球升2-0/3-0，比利时事件进球升2-1。",
+          "evidence": [
+            "仲裁规定红牌、点球、早球和Lukaku有效时间为主要触发器。"
+          ],
+          "source_ids": [
+            "src_agent",
+            "src_quant"
+          ]
+        }
+      },
+      "evidence": [
+        "仲裁规定红牌、点球、早球和Lukaku有效时间为主要触发器。",
+        "本维度由 defense_risk_agent 主评并经合议校准。"
+      ],
+      "source_ids": [
+        "src_agent",
+        "src_quant",
+        "src_lineup_rotowire"
+      ],
+      "unknown_items": [
+        "临场首发",
+        "早段射门质量"
+      ]
+    },
+    {
+      "dimension_key": "star_overperformance",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "两队都有个体上限，但没有单一巨星足以覆盖低BTTS主轴。",
+      "check_results": {
+        "health_and_minutes": {
+          "status": "supported",
+          "finding": "健康与预计时间：围绕“健康与预计时间”复核后，两队都有个体上限，但没有单一巨星足以覆盖低BTTS主轴。",
+          "evidence": [
+            "Yamal/Oyarzabal支撑西班牙第二球，Lukaku高效率受替补分钟限制。"
+          ],
+          "source_ids": [
+            "src_db_local",
+            "src_match_fox"
+          ]
+        },
+        "recent_output": {
+          "status": "supported",
+          "finding": "近期进球与机会质量：围绕“近期进球与机会质量”复核后，两队都有个体上限，但没有单一巨星足以覆盖低BTTS主轴。",
+          "evidence": [
+            "Yamal/Oyarzabal支撑西班牙第二球，Lukaku高效率受替补分钟限制。"
+          ],
+          "source_ids": [
+            "src_db_local",
+            "src_match_fox"
+          ]
+        },
+        "individual_matchup": {
+          "status": "neutral",
+          "finding": "个人对位优势：围绕“个人对位优势”复核后，两队都有个体上限，但没有单一巨星足以覆盖低BTTS主轴。",
+          "evidence": [
+            "Yamal/Oyarzabal支撑西班牙第二球，Lukaku高效率受替补分钟限制。"
+          ],
+          "source_ids": [
+            "src_db_local",
+            "src_match_fox"
+          ]
+        },
+        "shot_volume_role": {
+          "status": "supported",
+          "finding": "射门权和战术角色：围绕“射门权和战术角色”复核后，两队都有个体上限，但没有单一巨星足以覆盖低BTTS主轴。",
+          "evidence": [
+            "Yamal/Oyarzabal支撑西班牙第二球，Lukaku高效率受替补分钟限制。"
+          ],
+          "source_ids": [
+            "src_db_local",
+            "src_match_fox"
+          ]
+        },
+        "late_game_ceiling": {
+          "status": "supported",
+          "finding": "尾段继续扩大比分能力：围绕“尾段继续扩大比分能力”复核后，两队都有个体上限，但没有单一巨星足以覆盖低BTTS主轴。",
+          "evidence": [
+            "Yamal/Oyarzabal支撑西班牙第二球，Lukaku高效率受替补分钟限制。"
+          ],
+          "source_ids": [
+            "src_db_local",
+            "src_match_fox"
+          ]
+        }
+      },
+      "evidence": [
+        "Yamal/Oyarzabal支撑西班牙第二球，Lukaku高效率受替补分钟限制。",
+        "本维度由 attack_agent 主评并经合议校准。"
+      ],
+      "source_ids": [
+        "src_db_local",
+        "src_match_fox",
+        "src_market_vsin"
+      ],
+      "unknown_items": [
+        "Lukaku出场时点"
+      ]
+    },
+    {
+      "dimension_key": "set_piece_aerial",
+      "score": 3,
+      "confidence": "low",
+      "conclusion": "定位球和高空不是比利时常态第二路径；Lukaku/高点只保留尾段一球。",
+      "check_results": {
+        "height_strength": {
+          "status": "supported",
+          "finding": "身高与力量差：围绕“身高与力量差”复核后，定位球和高空不是比利时常态第二路径；Lukaku/高点只保留尾段一球。",
+          "evidence": [
+            "Onana缺阵削弱二点球，缺定位球xG和防空细项。"
+          ],
+          "source_ids": [
+            "src_lineup_rotowire",
+            "src_market_vsin"
+          ]
+        },
+        "delivery_quality": {
+          "status": "supported",
+          "finding": "定位球和传中质量：围绕“定位球和传中质量”复核后，定位球和高空不是比利时常态第二路径；Lukaku/高点只保留尾段一球。",
+          "evidence": [
+            "Onana缺阵削弱二点球，缺定位球xG和防空细项。"
+          ],
+          "source_ids": [
+            "src_lineup_rotowire",
+            "src_market_vsin"
+          ]
+        },
+        "aerial_targets": {
+          "status": "neutral",
+          "finding": "高空接应点数量：围绕“高空接应点数量”复核后，定位球和高空不是比利时常态第二路径；Lukaku/高点只保留尾段一球。",
+          "evidence": [
+            "Onana缺阵削弱二点球，缺定位球xG和防空细项。"
+          ],
+          "source_ids": [
+            "src_lineup_rotowire",
+            "src_market_vsin"
+          ]
+        },
+        "defensive_marking": {
+          "status": "supported",
+          "finding": "对手盯人与防空：围绕“对手盯人与防空”复核后，定位球和高空不是比利时常态第二路径；Lukaku/高点只保留尾段一球。",
+          "evidence": [
+            "Onana缺阵削弱二点球，缺定位球xG和防空细项。"
+          ],
+          "source_ids": [
+            "src_lineup_rotowire",
+            "src_market_vsin"
+          ]
+        },
+        "second_ball": {
+          "status": "supported",
+          "finding": "二点球控制：围绕“二点球控制”复核后，定位球和高空不是比利时常态第二路径；Lukaku/高点只保留尾段一球。",
+          "evidence": [
+            "Onana缺阵削弱二点球，缺定位球xG和防空细项。"
+          ],
+          "source_ids": [
+            "src_lineup_rotowire",
+            "src_market_vsin"
+          ]
+        }
+      },
+      "evidence": [
+        "Onana缺阵削弱二点球，缺定位球xG和防空细项。",
+        "本维度由 attack_agent 主评并经合议校准。"
+      ],
+      "source_ids": [
+        "src_lineup_rotowire",
+        "src_market_vsin",
+        "src_spain_guardian_defense"
+      ],
+      "unknown_items": [
+        "定位球xG",
+        "空中对抗成功率"
+      ]
+    },
+    {
+      "dimension_key": "pressing_error_path",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "压迫失误路径偏向西班牙制造3-0尾部，但缺Courtois/中卫失误细项，不能过度放大。",
+      "check_results": {
+        "pressing_intensity": {
+          "status": "supported",
+          "finding": "前场压迫强度：围绕“前场压迫强度”复核后，压迫失误路径偏向西班牙制造3-0尾部，但缺Courtois/中卫失误细项，不能过度放大。",
+          "evidence": [
+            "西班牙73%控球和17.2射门能持续压迫比利时后场。"
+          ],
+          "source_ids": [
+            "src_match_fox",
+            "src_db_local"
+          ]
+        },
+        "goalkeeper_distribution": {
+          "status": "supported",
+          "finding": "门将脚下与出球：围绕“门将脚下与出球”复核后，压迫失误路径偏向西班牙制造3-0尾部，但缺Courtois/中卫失误细项，不能过度放大。",
+          "evidence": [
+            "西班牙73%控球和17.2射门能持续压迫比利时后场。"
+          ],
+          "source_ids": [
+            "src_match_fox",
+            "src_db_local"
+          ]
+        },
+        "center_back_composure": {
+          "status": "neutral",
+          "finding": "中卫抗压：围绕“中卫抗压”复核后，压迫失误路径偏向西班牙制造3-0尾部，但缺Courtois/中卫失误细项，不能过度放大。",
+          "evidence": [
+            "西班牙73%控球和17.2射门能持续压迫比利时后场。"
+          ],
+          "source_ids": [
+            "src_match_fox",
+            "src_db_local"
+          ]
+        },
+        "turnover_history": {
+          "status": "supported",
+          "finding": "近期后场失误记录：围绕“近期后场失误记录”复核后，压迫失误路径偏向西班牙制造3-0尾部，但缺Courtois/中卫失误细项，不能过度放大。",
+          "evidence": [
+            "西班牙73%控球和17.2射门能持续压迫比利时后场。"
+          ],
+          "source_ids": [
+            "src_match_fox",
+            "src_db_local"
+          ]
+        },
+        "follow_up_finishing": {
+          "status": "supported",
+          "finding": "抢断后的终结与补射：围绕“抢断后的终结与补射”复核后，压迫失误路径偏向西班牙制造3-0尾部，但缺Courtois/中卫失误细项，不能过度放大。",
+          "evidence": [
+            "西班牙73%控球和17.2射门能持续压迫比利时后场。"
+          ],
+          "source_ids": [
+            "src_match_fox",
+            "src_db_local"
+          ]
+        }
+      },
+      "evidence": [
+        "西班牙73%控球和17.2射门能持续压迫比利时后场。",
+        "本维度由 attack_agent 主评并经合议校准。"
+      ],
+      "source_ids": [
+        "src_match_fox",
+        "src_db_local",
+        "src_lineup_rotowire"
+      ],
+      "unknown_items": [
+        "Courtois出球失误率"
+      ]
+    }
+  ],
+  "review_metadata": {
+    "mode": "multi_agent_consensus",
+    "role_results_used": [
+      "attack_agent",
+      "defense_risk_agent",
+      "market_history_agent",
+      "anti_btts_agent",
+      "tail_score_agent",
+      "skeptic_agent",
+      "consensus_arbiter"
+    ],
+    "agent_execution": {
+      "execution_mode": "independent_subagents",
+      "fallback_used": false,
+      "orchestrator": "Codex main agent",
+      "tooling": "multi_agent_v1.spawn_agent",
+      "runs": [
+        {
+          "role_id": "attack_agent",
+          "agent_run_id": "019f49c1-6b4c-7a73-a6ae-c0619843a48b",
+          "agent_type": "default",
+          "tool_call_id": "multi_agent_v1.spawn_agent:019f49c1-6b4c-7a73-a6ae-c0619843a48b",
+          "started_at": "2026-07-10T10:00:00+08:00",
+          "completed_at": "2026-07-10T10:35:00+08:00",
+          "artifact_type": "role_result_json",
+          "artifact_ref": "data/agent_runs/2026-07-11_BJT_ESP_BEL/attack_agent.json",
+          "summary_hash": "sha256:0b1c5dfed5409d66895b1ebea1da6266c0c397c07006183673395a96c8bbd08a",
+          "status": "completed"
+        },
+        {
+          "role_id": "defense_risk_agent",
+          "agent_run_id": "019f49c1-8ead-7c60-966d-b611611a49f5",
+          "agent_type": "default",
+          "tool_call_id": "multi_agent_v1.spawn_agent:019f49c1-8ead-7c60-966d-b611611a49f5",
+          "started_at": "2026-07-10T10:00:00+08:00",
+          "completed_at": "2026-07-10T10:35:00+08:00",
+          "artifact_type": "role_result_json",
+          "artifact_ref": "data/agent_runs/2026-07-11_BJT_ESP_BEL/defense_risk_agent.json",
+          "summary_hash": "sha256:bdd7d2041f32e523e769fbf474211a6474c77c943d832f24bdcfd7ff75a7aa7e",
+          "status": "completed"
+        },
+        {
+          "role_id": "market_history_agent",
+          "agent_run_id": "019f49c1-a183-7452-95ff-033297f4b31f",
+          "agent_type": "default",
+          "tool_call_id": "multi_agent_v1.spawn_agent:019f49c1-a183-7452-95ff-033297f4b31f",
+          "started_at": "2026-07-10T10:00:00+08:00",
+          "completed_at": "2026-07-10T10:35:00+08:00",
+          "artifact_type": "role_result_json",
+          "artifact_ref": "data/agent_runs/2026-07-11_BJT_ESP_BEL/market_history_agent.json",
+          "summary_hash": "sha256:5a2717d597817868fa29812a143fd7d516da3a4ff959fd9d5b12e75bf1058bfa",
+          "status": "completed"
+        },
+        {
+          "role_id": "anti_btts_agent",
+          "agent_run_id": "019f49c1-b3f2-7570-bd1e-0cc6a13bb600",
+          "agent_type": "default",
+          "tool_call_id": "multi_agent_v1.spawn_agent:019f49c1-b3f2-7570-bd1e-0cc6a13bb600",
+          "started_at": "2026-07-10T10:00:00+08:00",
+          "completed_at": "2026-07-10T10:35:00+08:00",
+          "artifact_type": "role_result_json",
+          "artifact_ref": "data/agent_runs/2026-07-11_BJT_ESP_BEL/anti_btts_agent.json",
+          "summary_hash": "sha256:cd53d8c16a6d3b2f11495b9a4e20893b8a735bfcb2589f50da7865c36bc27793",
+          "status": "completed"
+        },
+        {
+          "role_id": "tail_score_agent",
+          "agent_run_id": "019f49c1-c508-7fc2-86e0-ec6d7c6242d4",
+          "agent_type": "default",
+          "tool_call_id": "multi_agent_v1.spawn_agent:019f49c1-c508-7fc2-86e0-ec6d7c6242d4",
+          "started_at": "2026-07-10T10:00:00+08:00",
+          "completed_at": "2026-07-10T10:35:00+08:00",
+          "artifact_type": "role_result_json",
+          "artifact_ref": "data/agent_runs/2026-07-11_BJT_ESP_BEL/tail_score_agent.json",
+          "summary_hash": "sha256:9e8906ffc008e9b0af6fcd4ac8ba0a9f9b69328311e6353726d793bcf74ce957",
+          "status": "completed"
+        },
+        {
+          "role_id": "skeptic_agent",
+          "agent_run_id": "019f49c1-d6b5-72e0-8b96-3c50d150407f",
+          "agent_type": "default",
+          "tool_call_id": "multi_agent_v1.spawn_agent:019f49c1-d6b5-72e0-8b96-3c50d150407f",
+          "started_at": "2026-07-10T10:00:00+08:00",
+          "completed_at": "2026-07-10T10:35:00+08:00",
+          "artifact_type": "role_result_json",
+          "artifact_ref": "data/agent_runs/2026-07-11_BJT_ESP_BEL/skeptic_agent.json",
+          "summary_hash": "sha256:a14455ac39c2d4469e26d09b8793631630448a7818f0c07e00c678d23d3dc4c6",
+          "status": "completed"
+        },
+        {
+          "role_id": "consensus_arbiter",
+          "agent_run_id": "019f49ca-39e2-7c00-9225-546bfba14518",
+          "agent_type": "default",
+          "tool_call_id": "multi_agent_v1.spawn_agent:019f49ca-39e2-7c00-9225-546bfba14518",
+          "started_at": "2026-07-10T10:00:00+08:00",
+          "completed_at": "2026-07-10T10:35:00+08:00",
+          "artifact_type": "role_result_json",
+          "artifact_ref": "data/agent_runs/2026-07-11_BJT_ESP_BEL/consensus_arbiter.json",
+          "summary_hash": "sha256:86c1e8c0f345c064a7fba20efb41d3f71796a1d3773e40cbca2331d96bf3a992",
+          "status": "completed"
+        }
+      ]
+    },
+    "primary_dimension_owners": {
+      "base_strength": "market_history_agent",
+      "player_status": "attack_agent",
+      "player_type_structure": "attack_agent",
+      "key_matchups": "attack_agent",
+      "historical_style": "market_history_agent",
+      "style_counter": "defense_risk_agent",
+      "recent_form": "market_history_agent",
+      "goal_distribution": "attack_agent",
+      "strong_second_goal": "attack_agent",
+      "strong_third_goal": "attack_agent",
+      "weak_first_goal": "attack_agent",
+      "weak_second_goal": "attack_agent",
+      "favorite_defense": "defense_risk_agent",
+      "clean_sheet": "defense_risk_agent",
+      "tactical_matchup": "defense_risk_agent",
+      "stage_psychology": "defense_risk_agent",
+      "draw_risk": "defense_risk_agent",
+      "lineup_injuries": "defense_risk_agent",
+      "team_harmony_social": "defense_risk_agent",
+      "environment_schedule": "defense_risk_agent",
+      "referee_events": "defense_risk_agent",
+      "market_odds": "market_history_agent",
+      "dynamic_triggers": "defense_risk_agent",
+      "star_overperformance": "attack_agent",
+      "set_piece_aerial": "attack_agent",
+      "pressing_error_path": "attack_agent"
+    },
+    "review_dimension_owners": {
+      "base_strength": [
+        "attack_agent",
+        "defense_risk_agent"
+      ],
+      "player_status": [
+        "defense_risk_agent"
+      ],
+      "player_type_structure": [
+        "defense_risk_agent"
+      ],
+      "key_matchups": [
+        "defense_risk_agent"
+      ],
+      "historical_style": [
+        "defense_risk_agent"
+      ],
+      "style_counter": [
+        "attack_agent"
+      ],
+      "recent_form": [
+        "attack_agent"
+      ],
+      "goal_distribution": [
+        "market_history_agent"
+      ],
+      "strong_second_goal": [
+        "market_history_agent"
+      ],
+      "strong_third_goal": [
+        "market_history_agent"
+      ],
+      "weak_first_goal": [
+        "defense_risk_agent"
+      ],
+      "weak_second_goal": [
+        "defense_risk_agent"
+      ],
+      "favorite_defense": [
+        "attack_agent"
+      ],
+      "clean_sheet": [
+        "attack_agent"
+      ],
+      "tactical_matchup": [
+        "attack_agent"
+      ],
+      "stage_psychology": [
+        "market_history_agent"
+      ],
+      "draw_risk": [
+        "market_history_agent"
+      ],
+      "lineup_injuries": [
+        "attack_agent"
+      ],
+      "team_harmony_social": [
+        "market_history_agent"
+      ],
+      "environment_schedule": [
+        "market_history_agent"
+      ],
+      "referee_events": [
+        "attack_agent"
+      ],
+      "market_odds": [
+        "defense_risk_agent"
+      ],
+      "dynamic_triggers": [
+        "attack_agent"
+      ],
+      "star_overperformance": [
+        "market_history_agent"
+      ],
+      "set_piece_aerial": [
+        "defense_risk_agent"
+      ],
+      "pressing_error_path": [
+        "defense_risk_agent"
+      ]
+    },
+    "conflicts_resolved": [
+      {
+        "issue_id": "C1",
+        "issue_type": "primary_score",
+        "affected_dimensions": [
+          "goal_distribution",
+          "strong_second_goal",
+          "stage_psychology"
+        ],
+        "positions": [
+          {
+            "role_id": "attack_agent",
+            "position": "1-0更贴近量化和淘汰赛低节奏"
+          },
+          {
+            "role_id": "skeptic_agent",
+            "position": "2-0更能综合Onana缺阵和第二球路径"
+          },
+          {
+            "role_id": "consensus_arbiter",
+            "position": "2-0首选，1-0备选"
+          }
+        ],
+        "resolution": "首选2-0，1-0作为第一备选。",
+        "confidence_change": "整体置信维持medium"
+      },
+      {
+        "issue_id": "C2",
+        "issue_type": "tail_score",
+        "affected_dimensions": [
+          "strong_third_goal",
+          "dynamic_triggers",
+          "market_odds"
+        ],
+        "positions": [
+          {
+            "role_id": "attack_agent",
+            "position": "3-0条件尾部"
+          },
+          {
+            "role_id": "tail_score_agent",
+            "position": "3-0必须进入主次结构"
+          }
+        ],
+        "resolution": "3-0进入alternative_scores，不作为薄尾。",
+        "confidence_change": "strong_third_goal上调为medium"
+      },
+      {
+        "issue_id": "C3",
+        "issue_type": "btts_market_conflict",
+        "affected_dimensions": [
+          "market_odds",
+          "weak_first_goal",
+          "clean_sheet"
+        ],
+        "positions": [
+          {
+            "role_id": "market_history_agent",
+            "position": "Over2.5不能直接转BTTS"
+          },
+          {
+            "role_id": "anti_btts_agent",
+            "position": "BTTS low，非BTTS优先"
+          }
+        ],
+        "resolution": "市场Over只保护2-0/3-0，不上调BTTS主线。",
+        "confidence_change": "BTTS维持low"
+      },
+      {
+        "issue_id": "C4",
+        "issue_type": "draw_tail",
+        "affected_dimensions": [
+          "draw_risk",
+          "stage_psychology"
+        ],
+        "positions": [
+          {
+            "role_id": "defense_risk_agent",
+            "position": "0-0是主要平局风险"
+          },
+          {
+            "role_id": "market_history_agent",
+            "position": "0-0必须保留但低于西班牙胜向"
+          }
+        ],
+        "resolution": "0-0进入low_block_paths和tail_scenarios。",
+        "confidence_change": "低位闸门通过"
+      },
+      {
+        "issue_id": "C5",
+        "issue_type": "weak_second_goal",
+        "affected_dimensions": [
+          "weak_second_goal",
+          "favorite_defense",
+          "dynamic_triggers"
+        ],
+        "positions": [
+          {
+            "role_id": "defense_risk_agent",
+            "position": "比利时第二球very low"
+          },
+          {
+            "role_id": "skeptic_agent",
+            "position": "第二球不足"
+          }
+        ],
+        "resolution": "2-2常态拒绝，仅事件尾。",
+        "confidence_change": "weak_second_goal维持low"
+      }
+    ],
+    "claims_rejected": [
+      {
+        "role_id": "attack_agent",
+        "claim": "首选必须是1-0",
+        "reason": "仲裁认为Onana缺阵、Belgium失球率和市场总进球压力足以上调西班牙第二球。"
+      },
+      {
+        "role_id": "market_history_agent",
+        "claim": "Over2.5可直接代表BTTS上调",
+        "reason": "市场总进球不是双方进球信号，2-0/3-0可解释Over压力。"
+      },
+      {
+        "role_id": "tail_score_agent",
+        "claim": "2-1可进入次选",
+        "reason": "BTTS低且比利时第一球需要条件触发，2-1仅保留尾部。"
+      }
+    ],
+    "unknown_rationale": [
+      "官方首发未确认",
+      "赛前120-60分钟赔率未取得",
+      "裁判与VAR尺度未知",
+      "双方完整direct xGA和定位球xG缺失"
+    ]
+  },
+  "player_matchup_edges": [
+    {
+      "matchup_id": "E1",
+      "attacker": "Lamine Yamal",
+      "defender": "De Cuyper/Castagne channel",
+      "matchup_type": "wing_dribble_vs_fullback",
+      "metric_comparison": "Yamal 4.00 shots/90 and 1.71 SOT/90 attacks Belgium fullback channel.",
+      "edge": "team_a",
+      "source_ids": [
+        "src_db_local",
+        "src_lineup_rotowire"
+      ]
+    },
+    {
+      "matchup_id": "E2",
+      "attacker": "Mikel Oyarzabal",
+      "defender": "Mechele/Ngoy",
+      "matchup_type": "central_finisher_vs_center_backs",
+      "metric_comparison": "Oyarzabal 0.64 xG/90 and 1.84 SOT/90 versus Belgium 1.0 GA/g sample.",
+      "edge": "team_a",
+      "source_ids": [
+        "src_db_local",
+        "src_match_fox"
+      ]
+    },
+    {
+      "matchup_id": "E3",
+      "attacker": "Rodri-Pedri-Olmo",
+      "defender": "Belgium midfield without Onana",
+      "matchup_type": "midfield_control_vs_ball_winning_gap",
+      "metric_comparison": "Spain 73% possession meets Belgium ball-winning loss from Onana ACL absence.",
+      "edge": "team_a",
+      "source_ids": [
+        "src_match_fox",
+        "src_lineup_rotowire",
+        "src_spain_guardian_defense"
+      ]
+    },
+    {
+      "matchup_id": "E4",
+      "attacker": "De Ketelaere/Trossard",
+      "defender": "Laporte-Cubarsi-Rodri",
+      "matchup_type": "movement_vs_box_protection",
+      "metric_comparison": "Belgium creators have form, but Spain low xGA and Rodri protection reduce repeatability.",
+      "edge": "team_a",
+      "source_ids": [
+        "src_db_local",
+        "src_spain_guardian_defense"
+      ]
+    }
+  ],
+  "dynamic_weighting": {
+    "model_version": "dynamic-weighting-1.1",
+    "context": {
+      "stage": "Quarter-final knockout",
+      "temperature_c": 24,
+      "late_market_available": false,
+      "match_id": "2026-07-11_BJT_ESP_BEL"
+    },
+    "adjustments": [
+      {
+        "dimension_key": "stage_psychology",
+        "base_weight": 1.0,
+        "adjusted_weight": 1.08,
+        "trigger_type": "stage",
+        "reason": "四分之一决赛上调谨慎、低位和0-0/1-0权重。",
+        "source_ids": [
+          "src_fixture_fox",
+          "src_history_local"
+        ]
+      },
+      {
+        "dimension_key": "draw_risk",
+        "base_weight": 1.0,
+        "adjusted_weight": 1.08,
+        "trigger_type": "stage",
+        "reason": "淘汰赛低位失败样本要求保留0-0平局风险。",
+        "source_ids": [
+          "src_history_local",
+          "src_quant"
+        ]
+      },
+      {
+        "dimension_key": "lineup_injuries",
+        "base_weight": 1.0,
+        "adjusted_weight": 1.1,
+        "trigger_type": "player",
+        "reason": "Onana ACL缺阵改变比利时中场保护和二点球质量。",
+        "source_ids": [
+          "src_lineup_rotowire",
+          "src_market_vsin"
+        ]
+      },
+      {
+        "dimension_key": "clean_sheet",
+        "base_weight": 1.0,
+        "adjusted_weight": 1.08,
+        "trigger_type": "post_match_learning",
+        "reason": "西班牙连续零封与历史BTTS误判样本共同要求零封优先。",
+        "source_ids": [
+          "src_spain_guardian_defense",
+          "src_history_local"
+        ]
+      },
+      {
+        "dimension_key": "strong_third_goal",
+        "base_weight": 1.0,
+        "adjusted_weight": 1.06,
+        "trigger_type": "post_match_learning",
+        "reason": "西班牙3-0奥地利失败样本提示第三球不能薄尾化。",
+        "source_ids": [
+          "src_history_local",
+          "src_match_fox"
+        ]
+      },
+      {
+        "dimension_key": "market_odds",
+        "base_weight": 1.0,
+        "adjusted_weight": 1.04,
+        "trigger_type": "market",
+        "reason": "Over2.5与partial量化基线冲突，需入闸门但不覆盖BTTS。",
+        "source_ids": [
+          "src_match_fox",
+          "src_market_vsin",
+          "src_quant"
+        ]
+      }
+    ],
+    "learning_feedback": {
+      "status": "applied",
+      "sample_count": 4,
+      "summary": "应用POR-ESP、ESP-AUT、USA-BEL、SUI-COL等失败样本，修正BTTS、零封、强队第三球和0-0尾部。"
+    }
+  },
+  "quant_baseline": {
+    "schema_version": "quant-baseline-1.0",
+    "status": "partial",
+    "source_ids": [
+      "src_match_fox",
+      "src_spain_guardian_defense",
+      "src_db_local"
+    ],
+    "missing_inputs": [
+      "ȱ�� direct xG/xGA��ʹ�ý����ʻ��˻���"
+    ],
+    "xg": {
+      "status": "unavailable",
+      "team_a_xg_for": 1.7,
+      "team_a_xg_against": null,
+      "team_b_xg_for": 2.0,
+      "team_b_xg_against": null,
+      "source_ids": [],
+      "reason": "δ�ṩ˫�� direct xG/xGA"
+    },
+    "expected_goals": {
+      "team_a_lambda": 1.341641,
+      "team_b_lambda": 0.15,
+      "total_lambda": 1.491641,
+      "lambda_components": {
+        "team_a": {
+          "xg_component": null,
+          "goal_rate_component": 1.341641,
+          "sanger_delta": 0,
+          "final_lambda": 1.341641
+        },
+        "team_b": {
+          "xg_component": null,
+          "goal_rate_component": 0.0,
+          "sanger_delta": 0,
+          "final_lambda": 0.15
+        }
+      }
+    },
+    "poisson": {
+      "max_goals": 7,
+      "top_scores": [
+        {
+          "score": "1-0",
+          "probability": 0.301873,
+          "rank": 1
+        },
+        {
+          "score": "0-0",
+          "probability": 0.225003,
+          "rank": 2
+        },
+        {
+          "score": "2-0",
+          "probability": 0.202503,
+          "rank": 3
+        },
+        {
+          "score": "3-0",
+          "probability": 0.090562,
+          "rank": 4
+        },
+        {
+          "score": "1-1",
+          "probability": 0.045281,
+          "rank": 5
+        },
+        {
+          "score": "0-1",
+          "probability": 0.03375,
+          "rank": 6
+        },
+        {
+          "score": "2-1",
+          "probability": 0.030375,
+          "rank": 7
+        },
+        {
+          "score": "4-0",
+          "probability": 0.030375,
+          "rank": 8
+        },
+        {
+          "score": "3-1",
+          "probability": 0.013584,
+          "rank": 9
+        },
+        {
+          "score": "5-0",
+          "probability": 0.008151,
+          "rank": 10
+        }
+      ],
+      "outcome_probabilities": {
+        "team_a_win": 0.6872,
+        "draw": 0.272614,
+        "team_b_win": 0.040106
+      },
+      "btts_probability": 0.102868,
+      "over_2_5_probability": 0.188978,
+      "team_goal_probabilities": {
+        "team_a": {
+          "ge_1": 0.738584,
+          "ge_2": 0.387857,
+          "ge_3": 0.152582
+        },
+        "team_b": {
+          "ge_1": 0.139292,
+          "ge_2": 0.010186,
+          "ge_3": 0.000503
+        }
+      },
+      "clean_sheet_probabilities": {
+        "team_a_clean_sheet": 0.860708,
+        "team_b_clean_sheet": 0.261416
+      },
+      "overflow_probability": 8e-05
+    },
+    "sanger": {
+      "status": "unavailable",
+      "model_id": "",
+      "formula_ref": "",
+      "team_a_lambda_delta": 0,
+      "team_b_lambda_delta": 0,
+      "confidence": "unknown",
+      "source_ids": [],
+      "reason": "δ����ɣ��ʽ����Դ"
+    },
+    "calibration_flags": {
+      "top_score_gate_n": 10,
+      "primary_score_outside_top_n": false,
+      "btts_conflict": false,
+      "over_2_5_conflict": false,
+      "strong_third_goal_conflict": false,
+      "clean_sheet_conflict": false,
+      "lambda_delta_flag": true
+    }
+  },
+  "prediction_gates": {
+    "weak_goal_gate": {
+      "status": "adjusted",
+      "action": "Belgium第一球维持low，第二球常态拒绝；只保留2-1/1-1事件尾部。",
+      "reason": "比利时常态独立进球路径不足两条，Lukaku多为替补冲击。",
+      "final_level": "low",
+      "independent_paths": [
+        "De Ketelaere/Trossard单次转换",
+        "Lukaku/定位球尾段条件路径"
+      ]
+    },
+    "clean_sheet_gate": {
+      "status": "pass",
+      "action": "以西班牙零封为主轴，允许2-0、1-0、3-0非BTTS主次。",
+      "reason": "西班牙五场零封、低xGA和量化clean sheet 0.860708一致。",
+      "clean_sheet_level": "high",
+      "weak_goal_level": "low",
+      "conflict_resolved": true
+    },
+    "market_calibration_gate": {
+      "status": "adjusted",
+      "action": "接受西班牙胜向，拒绝用Over2.5直接推BTTS；将3-0放入次选保护。",
+      "reason": "赔率快照距开球约1024分钟，不是late market；Over与量化低总进球冲突。"
+    },
+    "low_block_draw_gate": {
+      "status": "pass",
+      "action": "保留0-0低位尾部和1-0备选。",
+      "reason": "四分之一决赛谨慎与量化0-0 rank2要求低位闷局过闸。",
+      "low_block_risk": "medium",
+      "selected_score": "1-0"
+    },
+    "tail_score_gate": {
+      "status": "pass",
+      "action": "3-0进入主次，2-1/3-1/0-0/0-1/1-2/4-0进入尾部矩阵。",
+      "reason": "历史失败样本要求强队第三球和低位闷局不得被删除。",
+      "tail_scores_checked": [
+        "3-0",
+        "2-1",
+        "3-1",
+        "0-0",
+        "0-1",
+        "1-2",
+        "4-0",
+        "5-0"
+      ]
+    },
+    "quant_baseline_gate": {
+      "status": "adjusted",
+      "action": "接受Spain胜、低BTTS和零封方向；上调Spain第二球和保护第三球。",
+      "reason": "quant_baseline缺direct xGA，Belgium lambda被Spain 0GA回退压低，同时市场Over和Belgium失球率提示原始total偏低。"
+    }
+  },
+  "market_calibration": {
+    "market_signal": "favorite_win_with_total_conflict",
+    "model_vs_market_gap": "市场支持Spain胜，但O2.5 -125/-128明显高于partial quant Over2.5=0.188978；该差异不直接等于BTTS。",
+    "calibration_action": "接受西班牙方向，保护2-0/3-0；BTTS仍为low，等待赛前120分钟内刷新。",
+    "source_ids": [
+      "src_match_fox",
+      "src_market_vsin",
+      "src_quant"
+    ],
+    "favorite_handicap": 0.5,
+    "odds_snapshots": [
+      {
+        "captured_at": "2026-07-10T09:56:03+08:00",
+        "market_type": "moneyline_total",
+        "value": "FOX: Spain -159, Belgium +432, Over2.5 -128, Under +103",
+        "minutes_before_kickoff": 1024,
+        "source_ids": [
+          "src_match_fox"
+        ]
+      },
+      {
+        "captured_at": "2026-07-10T09:56:03+08:00",
+        "market_type": "three_way_total_handicap",
+        "value": "VSiN: Spain -155, Draw +290, Belgium +425, Over2.5 -125, Spain -0.5 -160",
+        "minutes_before_kickoff": 1024,
+        "source_ids": [
+          "src_market_vsin"
+        ]
+      }
+    ],
+    "late_market_watch": {
+      "status": "unavailable",
+      "reason": "当前快照距开球约1024分钟，不属于赛前120-60分钟临场窗口；置信度封顶medium。"
+    }
+  },
+  "score_distribution": {
+    "main_paths": [
+      {
+        "score": "2-0",
+        "condition": "西班牙控球和中场优势兑现第二球，同时维持零封。"
+      },
+      {
+        "score": "1-0",
+        "condition": "淘汰赛谨慎、Courtois扑救或西班牙领先后控节奏。"
+      },
+      {
+        "score": "3-0",
+        "condition": "西班牙早球、比利时追分暴露或Onana缺阵导致中后场被持续压制。"
+      }
+    ],
+    "low_block_paths": [
+      {
+        "score": "0-0",
+        "condition": "前60分钟机会质量低，比利时深防且西班牙避免转化风险。"
+      },
+      {
+        "score": "1-0",
+        "condition": "低位破局后西班牙控场收束。"
+      }
+    ],
+    "big_win_paths": [
+      {
+        "score": "3-0",
+        "condition": "受保护第三球。"
+      },
+      {
+        "score": "4-0",
+        "condition": "比利时红牌或后场连续失误。"
+      },
+      {
+        "score": "5-0",
+        "condition": "比利时两红或早崩盘极端尾部。"
+      }
+    ],
+    "btts_paths": [
+      {
+        "score": "2-1",
+        "status": "adjusted",
+        "reason": "仅在Lukaku有效尾段、定位球、点球或Simon失误触发时通过。"
+      },
+      {
+        "score": "3-1",
+        "status": "adjusted",
+        "reason": "需西班牙第三球和比利时事件进球同时成立。"
+      },
+      {
+        "score": "1-1",
+        "status": "adjusted",
+        "reason": "低位+比利时单次进球路径，概率低于非BTTS主线。"
+      },
+      {
+        "score": "2-2",
+        "status": "rejected",
+        "reason": "比利时第二球缺少常态独立路径。"
+      }
+    ]
+  },
+  "tail_scenarios": [
+    {
+      "scenario_type": "big_win",
+      "score": "4-0",
+      "status": "tail",
+      "condition": "比利时早红或中后场连续出球失误，西班牙保持压制。"
+    },
+    {
+      "scenario_type": "low_block",
+      "score": "0-0",
+      "status": "tail",
+      "condition": "淘汰赛低位、低射正和Courtois高质量扑救。"
+    },
+    {
+      "scenario_type": "btts",
+      "score": "2-1",
+      "status": "tail",
+      "condition": "Lukaku/定位球/点球给比利时一次非重复进球路径。"
+    },
+    {
+      "scenario_type": "upset",
+      "score": "0-1",
+      "status": "tail",
+      "condition": "西班牙红牌或重大门将失误。"
+    },
+    {
+      "scenario_type": "rejected",
+      "score": "2-2",
+      "status": "rejected",
+      "condition": "正常状态下比利时第二球不足。"
+    }
+  ],
+  "historical_sample_adjustments": [
+    {
+      "sample_id": "2026-07-07_BJT_POR_ESP",
+      "lesson": "Spain低BTTS和零封路径不能被机械弱队进球覆盖。",
+      "current_adjustment": "Belgium第一球降为low。"
+    },
+    {
+      "sample_id": "2026-07-02_ESP_AUT",
+      "lesson": "Spain第三球不能只放薄尾。",
+      "current_adjustment": "3-0列入次选。"
+    },
+    {
+      "sample_id": "2026-07-08_BJT_SUI_COL",
+      "lesson": "淘汰赛低位0-0必须过闸。",
+      "current_adjustment": "0-0进入低位尾部。"
+    }
+  ],
+  "final_prediction": {
+    "win_tendency": "西班牙常规时间胜，零封优先",
+    "main_score_range": [
+      "2-0",
+      "1-0",
+      "3-0"
+    ],
+    "primary_score": "2-0",
+    "alternative_scores": [
+      "1-0",
+      "3-0"
+    ],
+    "total_goals_min": 1,
+    "total_goals_max": 3,
+    "both_teams_to_score": "low",
+    "strong_second_goal": "medium",
+    "strong_third_goal": "medium",
+    "weak_first_goal": "low",
+    "weak_second_goal": "low",
+    "clean_sheet": "high",
+    "draw_type": "0-0为主要平局尾部，1-1为条件BTTS尾部，2-2常态拒绝。",
+    "trigger_conditions": [
+      "若西班牙前35分钟领先且控球不降，3-0从次选上调。",
+      "若半场0-0且西班牙机会质量低，1-0/0-0上调。",
+      "若De Bruyne/Doku/Lukaku至少两人高分钟首发，2-1尾部上调。",
+      "若比利时红牌或后场连续失误，4-0/5-0进入事件尾部。"
+    ],
+    "tail_scores": [
+      "2-1",
+      "3-1",
+      "0-0",
+      "0-1",
+      "1-2",
+      "4-0",
+      "5-0"
+    ],
+    "event_scenarios": {
+      "favorite_red_card": "西班牙60分钟前红牌：主线转1-1/0-1，若再叠加点球可到1-2。",
+      "underdog_red_card": "比利时红牌：2-0稳定，3-0/4-0上调。",
+      "underdog_two_red_cards": "比利时两红：4-0/5-0极端尾部进入保护。",
+      "penalty_or_goalkeeper_error": "西班牙受益则2-0转3-0；比利时受益则1-1/2-1上调。"
+    },
+    "score_orientation": {
+      "order": "team_a_team_b",
+      "team_a": "西班牙",
+      "team_b": "比利时",
+      "score_label": "西班牙-比利时",
+      "favorite_side": "team_a",
+      "primary_score": {
+        "team_a_goals": 2,
+        "team_b_goals": 0
+      }
+    },
+    "confidence": "medium"
+  }
+}

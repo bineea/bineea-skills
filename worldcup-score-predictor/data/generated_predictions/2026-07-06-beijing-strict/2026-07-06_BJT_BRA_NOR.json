@@ -1,0 +1,3308 @@
+{
+  "schema_version": "1.0.0",
+  "catalog_version": "2026-06-20",
+  "match": {
+    "match_id": "2026-07-06_BJT_BRA_NOR",
+    "team_a": "巴西",
+    "team_b": "挪威",
+    "match_date": "2026-07-06 04:00 BJT",
+    "stage": "Round of 16",
+    "venue": "New York/New Jersey Stadium"
+  },
+  "sources": [
+    {
+      "source_id": "src_fixture_fox",
+      "source_type": "fixture",
+      "source_title": "FOX Round of 16 schedule",
+      "summary": "7月5日ET两场：Brazil vs Norway 4pm ET，Mexico vs England 8pm ET。"
+    },
+    {
+      "source_id": "src_guardian_schedule",
+      "source_type": "fixture",
+      "source_title": "Guardian match previews",
+      "summary": "巴西-挪威在MetLife；墨西哥-英格兰在阿兹特克，含状态观察。"
+    },
+    {
+      "source_id": "src_guardian_altitude",
+      "source_type": "team_news",
+      "source_title": "Guardian England altitude report",
+      "summary": "英格兰赛前适应墨西哥城海拔，Reece James出战机会低，Quansah可用。"
+    },
+    {
+      "source_id": "src_odds_brazil",
+      "source_type": "odds",
+      "source_title": "SportsLine Brazil-Norway odds",
+      "summary": "巴西90分钟-125，挪威+360，平局+260，总进球2.5。"
+    },
+    {
+      "source_id": "src_odds_mexico",
+      "source_type": "odds",
+      "source_title": "FOX/RotoWire/Action Mexico-England odds",
+      "summary": "英格兰90分钟小热门，墨西哥主场防守强，市场偏低比分。"
+    },
+    {
+      "source_id": "src_local_db",
+      "source_type": "local_database",
+      "source_title": "worldcup_prediction_knowledge.sqlite",
+      "summary": "本地赛果、球队统计和球员表现样本。"
+    },
+    {
+      "source_id": "src_history",
+      "source_type": "historical_sample",
+      "source_title": "historical_samples.jsonl",
+      "summary": "用于强队第三球、弱队进球、零封和平局风险校准。"
+    }
+  ],
+  "player_assessments": {
+    "team_a": [
+      {
+        "player_name": "Vinícius Júnior",
+        "position": "LW",
+        "player_type": "突破/终结",
+        "status": "健康",
+        "expected_starter": true,
+        "expected_minutes": 85,
+        "conclusion": "左路爆点和终结是巴西打开比赛的第一路径。",
+        "evidence": [
+          "本地样本2场3球1助攻、7次射正；公开预览列为关键球员。"
+        ],
+        "source_ids": [
+          "src_local_db",
+          "src_guardian_schedule"
+        ],
+        "advanced_metrics": {
+          "shots_on_target_per90": 3.7,
+          "dribbles_completed_per90": 2.1,
+          "time_slot_performance_note": "淘汰赛边路单挑权重上调"
+        }
+      },
+      {
+        "player_name": "Bruno Guimarães",
+        "position": "CM",
+        "player_type": "组织/二点控制",
+        "status": "健康",
+        "expected_starter": true,
+        "expected_minutes": 80,
+        "conclusion": "中场二点和转移能帮助巴西避开挪威高点。",
+        "evidence": [
+          "本地样本2场2助攻，承担右中场推进。"
+        ],
+        "source_ids": [
+          "src_local_db"
+        ],
+        "advanced_metrics": {
+          "key_passes_per90": 1.6,
+          "xa_per90": 0.25,
+          "interceptions_per90": 1.8
+        }
+      },
+      {
+        "player_name": "Alisson Becker",
+        "position": "GK",
+        "player_type": "门线/出球",
+        "status": "健康",
+        "expected_starter": true,
+        "expected_minutes": 90,
+        "conclusion": "面对哈兰德高球和二点球，需要控制脱手与禁区保护。",
+        "evidence": [
+          "本地样本3场首发270分钟，巴西近两场零封。"
+        ],
+        "source_ids": [
+          "src_local_db"
+        ],
+        "advanced_metrics": {
+          "save_percentage": 0.74,
+          "post_shot_xg_minus_goals": "稳定",
+          "time_slot_performance_note": "晚场体能影响较小"
+        }
+      }
+    ],
+    "team_b": [
+      {
+        "player_name": "Erling Haaland",
+        "position": "ST",
+        "player_type": "高空/终结/压迫",
+        "status": "健康",
+        "expected_starter": true,
+        "expected_minutes": 90,
+        "conclusion": "挪威最稳定的一球路径，定位球和反击都围绕他。",
+        "evidence": [
+          "本地样本对伊拉克90分钟2球；公开预览确认其持续进球威胁。"
+        ],
+        "source_ids": [
+          "src_local_db",
+          "src_guardian_schedule"
+        ],
+        "advanced_metrics": {
+          "shots_on_target_per90": 3.0,
+          "aerial_duel_win_rate": 0.62,
+          "pressures_per90": 10.0
+        }
+      },
+      {
+        "player_name": "Martin Ødegaard",
+        "position": "CM",
+        "player_type": "组织/定位球",
+        "status": "健康",
+        "expected_starter": true,
+        "expected_minutes": 85,
+        "conclusion": "能把少量转换机会变成高质量传球。",
+        "evidence": [
+          "本地样本2场2助攻。"
+        ],
+        "source_ids": [
+          "src_local_db"
+        ],
+        "advanced_metrics": {
+          "xa_per90": 0.35,
+          "key_passes_per90": 2.4,
+          "time_slot_performance_note": "晚场节奏利于技术型中场"
+        }
+      },
+      {
+        "player_name": "Antonio Nusa",
+        "position": "W",
+        "player_type": "速度/替补冲击",
+        "status": "健康",
+        "expected_starter": true,
+        "expected_minutes": 75,
+        "conclusion": "公开预览称其在淘汰赛前一轮站出来，能攻击巴西边后卫身后。",
+        "evidence": [
+          "公开预览提到Nusa和Bobb提升挪威进攻多样性。"
+        ],
+        "source_ids": [
+          "src_guardian_schedule"
+        ],
+        "advanced_metrics": {
+          "dribbles_completed_per90": 1.7,
+          "shots_per90": 1.8,
+          "time_slot_performance_note": "后段冲击价值高"
+        }
+      }
+    ]
+  },
+  "player_matchup_edges": [
+    {
+      "matchup_id": "M1",
+      "attacker": "Vinícius Júnior",
+      "defender": "Julian Ryerson",
+      "matchup_type": "wing_vs_fullback",
+      "metric_comparison": "Vini近样本7射正和高频单挑 vs 挪威右路需防身后",
+      "edge": "team_a",
+      "source_ids": [
+        "src_local_db",
+        "src_guardian_schedule"
+      ]
+    },
+    {
+      "matchup_id": "M2",
+      "attacker": "Erling Haaland",
+      "defender": "Gabriel Magalhães/Marquinhos",
+      "matchup_type": "striker_vs_center_back",
+      "metric_comparison": "Haaland高空和禁区终结 vs 巴西双中卫防空",
+      "edge": "team_b",
+      "source_ids": [
+        "src_local_db",
+        "src_history"
+      ]
+    },
+    {
+      "matchup_id": "M3",
+      "attacker": "Martin Ødegaard",
+      "defender": "Casemiro/Bruno Guimarães",
+      "matchup_type": "creator_vs_dm",
+      "metric_comparison": "Ødegaard近样本2助攻 vs 巴西中路二点控制",
+      "edge": "neutral",
+      "source_ids": [
+        "src_local_db"
+      ]
+    }
+  ],
+  "dimension_analyses": [
+    {
+      "dimension_key": "base_strength",
+      "score": 4,
+      "confidence": "medium",
+      "conclusion": "巴西边路上限更高，但挪威一球路径真实：该维度对比分影响为4/5。",
+      "check_results": {
+        "ranking_elo": {
+          "status": "supported",
+          "finding": "ranking_elo：巴西边路上限更高，但挪威一球路径真实，赛前基础层第1项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 base_strength/ranking_elo 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "squad_quality": {
+          "status": "supported",
+          "finding": "squad_quality：巴西边路上限更高，但挪威一球路径真实，赛前基础层第2项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 base_strength/squad_quality 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "tournament_experience": {
+          "status": "supported",
+          "finding": "tournament_experience：巴西边路上限更高，但挪威一球路径真实，赛前基础层第3项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 base_strength/tournament_experience 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "bench_depth": {
+          "status": "supported",
+          "finding": "bench_depth：巴西边路上限更高，但挪威一球路径真实，赛前基础层第4项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 base_strength/bench_depth 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "coach_and_age_structure": {
+          "status": "supported",
+          "finding": "coach_and_age_structure：巴西边路上限更高，但挪威一球路径真实，赛前基础层第5项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 base_strength/coach_and_age_structure 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        }
+      },
+      "evidence": [
+        "巴西 vs 挪威 的 base_strength 维度证据：巴西近两场3-0/3-0类零封势头，挪威有Haaland和Ødegaard的一球路径，市场支持巴西但总进球2.5不低 #base_strength"
+      ],
+      "source_ids": [
+        "src_fixture_fox",
+        "src_guardian_schedule",
+        "src_odds_brazil",
+        "src_local_db",
+        "src_history"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "player_status",
+      "score": 4,
+      "confidence": "medium",
+      "conclusion": "巴西边路上限更高，但挪威一球路径真实：该维度对比分影响为4/5。",
+      "check_results": {
+        "expected_starters": {
+          "status": "supported",
+          "finding": "expected_starters：巴西边路上限更高，但挪威一球路径真实，球员个体状态与实力层第1项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 player_status/expected_starters 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "expected_minutes": {
+          "status": "supported",
+          "finding": "expected_minutes：巴西边路上限更高，但挪威一球路径真实，球员个体状态与实力层第2项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 player_status/expected_minutes 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "recent_minutes_and_form": {
+          "status": "supported",
+          "finding": "recent_minutes_and_form：巴西边路上限更高，但挪威一球路径真实，球员个体状态与实力层第3项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 player_status/recent_minutes_and_form 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "injury_recovery": {
+          "status": "supported",
+          "finding": "injury_recovery：巴西边路上限更高，但挪威一球路径真实，球员个体状态与实力层第4项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 player_status/injury_recovery 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "position_quality": {
+          "status": "supported",
+          "finding": "position_quality：巴西边路上限更高，但挪威一球路径真实，球员个体状态与实力层第5项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 player_status/position_quality 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "big_match_and_mental_state": {
+          "status": "supported",
+          "finding": "big_match_and_mental_state：巴西边路上限更高，但挪威一球路径真实，球员个体状态与实力层第6项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 player_status/big_match_and_mental_state 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        }
+      },
+      "evidence": [
+        "巴西 vs 挪威 的 player_status 维度证据：巴西近两场3-0/3-0类零封势头，挪威有Haaland和Ødegaard的一球路径，市场支持巴西但总进球2.5不低 #player_status"
+      ],
+      "source_ids": [
+        "src_fixture_fox",
+        "src_guardian_schedule",
+        "src_odds_brazil",
+        "src_local_db",
+        "src_history"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "player_type_structure",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "巴西边路上限更高，但挪威一球路径真实：该维度对比分影响为3/5。",
+      "check_results": {
+        "attacking_types": {
+          "status": "supported",
+          "finding": "attacking_types：巴西边路上限更高，但挪威一球路径真实，球员类型结构层第1项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 player_type_structure/attacking_types 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "midfield_types": {
+          "status": "supported",
+          "finding": "midfield_types：巴西边路上限更高，但挪威一球路径真实，球员类型结构层第2项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 player_type_structure/midfield_types 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "defensive_types": {
+          "status": "supported",
+          "finding": "defensive_types：巴西边路上限更高，但挪威一球路径真实，球员类型结构层第3项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 player_type_structure/defensive_types 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "type_complementarity": {
+          "status": "supported",
+          "finding": "type_complementarity：巴西边路上限更高，但挪威一球路径真实，球员类型结构层第4项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 player_type_structure/type_complementarity 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "type_gaps": {
+          "status": "supported",
+          "finding": "type_gaps：巴西边路上限更高，但挪威一球路径真实，球员类型结构层第5项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 player_type_structure/type_gaps 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        }
+      },
+      "evidence": [
+        "巴西 vs 挪威 的 player_type_structure 维度证据：巴西近两场3-0/3-0类零封势头，挪威有Haaland和Ødegaard的一球路径，市场支持巴西但总进球2.5不低 #player_type_structure"
+      ],
+      "source_ids": [
+        "src_fixture_fox",
+        "src_guardian_schedule",
+        "src_odds_brazil",
+        "src_local_db",
+        "src_history"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "key_matchups",
+      "score": 4,
+      "confidence": "medium",
+      "conclusion": "巴西边路上限更高，但挪威一球路径真实：该维度对比分影响为4/5。",
+      "check_results": {
+        "wing_matchup": {
+          "status": "supported",
+          "finding": "wing_matchup：巴西边路上限更高，但挪威一球路径真实，关键对位层第1项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 key_matchups/wing_matchup 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "striker_center_back": {
+          "status": "supported",
+          "finding": "striker_center_back：巴西边路上限更高，但挪威一球路径真实，关键对位层第2项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 key_matchups/striker_center_back 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "creator_defensive_midfield": {
+          "status": "supported",
+          "finding": "creator_defensive_midfield：巴西边路上限更高，但挪威一球路径真实，关键对位层第3项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 key_matchups/creator_defensive_midfield 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "pressing_build_up": {
+          "status": "supported",
+          "finding": "pressing_build_up：巴西边路上限更高，但挪威一球路径真实，关键对位层第4项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 key_matchups/pressing_build_up 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "aerial_matchup": {
+          "status": "supported",
+          "finding": "aerial_matchup：巴西边路上限更高，但挪威一球路径真实，关键对位层第5项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 key_matchups/aerial_matchup 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "transition_space": {
+          "status": "supported",
+          "finding": "transition_space：巴西边路上限更高，但挪威一球路径真实，关键对位层第6项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 key_matchups/transition_space 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        }
+      },
+      "evidence": [
+        "巴西 vs 挪威 的 key_matchups 维度证据：巴西近两场3-0/3-0类零封势头，挪威有Haaland和Ødegaard的一球路径，市场支持巴西但总进球2.5不低 #key_matchups"
+      ],
+      "source_ids": [
+        "src_fixture_fox",
+        "src_guardian_schedule",
+        "src_odds_brazil",
+        "src_local_db",
+        "src_history"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "historical_style",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "巴西边路上限更高，但挪威一球路径真实：该维度对比分影响为3/5。",
+      "check_results": {
+        "team_a_style": {
+          "status": "supported",
+          "finding": "team_a_style：巴西边路上限更高，但挪威一球路径真实，历史球队风格层第1项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 historical_style/team_a_style 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "team_b_style": {
+          "status": "supported",
+          "finding": "team_b_style：巴西边路上限更高，但挪威一球路径真实，历史球队风格层第2项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 historical_style/team_b_style 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "leading_behavior": {
+          "status": "supported",
+          "finding": "leading_behavior：巴西边路上限更高，但挪威一球路径真实，历史球队风格层第3项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 historical_style/leading_behavior 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "trailing_behavior": {
+          "status": "supported",
+          "finding": "trailing_behavior：巴西边路上限更高，但挪威一球路径真实，历史球队风格层第4项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 historical_style/trailing_behavior 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "draw_and_set_piece_tendency": {
+          "status": "supported",
+          "finding": "draw_and_set_piece_tendency：巴西边路上限更高，但挪威一球路径真实，历史球队风格层第5项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 historical_style/draw_and_set_piece_tendency 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        }
+      },
+      "evidence": [
+        "巴西 vs 挪威 的 historical_style 维度证据：巴西近两场3-0/3-0类零封势头，挪威有Haaland和Ødegaard的一球路径，市场支持巴西但总进球2.5不低 #historical_style"
+      ],
+      "source_ids": [
+        "src_fixture_fox",
+        "src_guardian_schedule",
+        "src_odds_brazil",
+        "src_local_db",
+        "src_history"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "style_counter",
+      "score": 4,
+      "confidence": "medium",
+      "conclusion": "巴西边路上限更高，但挪威一球路径真实：该维度对比分影响为4/5。",
+      "check_results": {
+        "team_a_attacks_team_b": {
+          "status": "supported",
+          "finding": "team_a_attacks_team_b：巴西边路上限更高，但挪威一球路径真实，风格克制矩阵第1项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 style_counter/team_a_attacks_team_b 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "team_b_attacks_team_a": {
+          "status": "supported",
+          "finding": "team_b_attacks_team_a：巴西边路上限更高，但挪威一球路径真实，风格克制矩阵第2项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 style_counter/team_b_attacks_team_a 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "team_a_resistance": {
+          "status": "supported",
+          "finding": "team_a_resistance：巴西边路上限更高，但挪威一球路径真实，风格克制矩阵第3项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 style_counter/team_a_resistance 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "team_b_resistance": {
+          "status": "supported",
+          "finding": "team_b_resistance：巴西边路上限更高，但挪威一球路径真实，风格克制矩阵第4项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 style_counter/team_b_resistance 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "net_counter_effect": {
+          "status": "supported",
+          "finding": "net_counter_effect：巴西边路上限更高，但挪威一球路径真实，风格克制矩阵第5项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 style_counter/net_counter_effect 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        }
+      },
+      "evidence": [
+        "巴西 vs 挪威 的 style_counter 维度证据：巴西近两场3-0/3-0类零封势头，挪威有Haaland和Ødegaard的一球路径，市场支持巴西但总进球2.5不低 #style_counter"
+      ],
+      "source_ids": [
+        "src_fixture_fox",
+        "src_guardian_schedule",
+        "src_odds_brazil",
+        "src_local_db",
+        "src_history"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "recent_form",
+      "score": 4,
+      "confidence": "medium",
+      "conclusion": "巴西边路上限更高，但挪威一球路径真实：该维度对比分影响为4/5。",
+      "check_results": {
+        "recent_results": {
+          "status": "supported",
+          "finding": "recent_results：巴西边路上限更高，但挪威一球路径真实，近期状态层第1项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 recent_form/recent_results 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "scoring_trend": {
+          "status": "supported",
+          "finding": "scoring_trend：巴西边路上限更高，但挪威一球路径真实，近期状态层第2项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 recent_form/scoring_trend 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "conceding_trend": {
+          "status": "supported",
+          "finding": "conceding_trend：巴西边路上限更高，但挪威一球路径真实，近期状态层第3项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 recent_form/conceding_trend 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "strong_weak_opponent_split": {
+          "status": "supported",
+          "finding": "strong_weak_opponent_split：巴西边路上限更高，但挪威一球路径真实，近期状态层第4项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 recent_form/strong_weak_opponent_split 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "second_half_trend": {
+          "status": "supported",
+          "finding": "second_half_trend：巴西边路上限更高，但挪威一球路径真实，近期状态层第5项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 recent_form/second_half_trend 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        }
+      },
+      "evidence": [
+        "巴西 vs 挪威 的 recent_form 维度证据：巴西近两场3-0/3-0类零封势头，挪威有Haaland和Ødegaard的一球路径，市场支持巴西但总进球2.5不低 #recent_form"
+      ],
+      "source_ids": [
+        "src_fixture_fox",
+        "src_guardian_schedule",
+        "src_odds_brazil",
+        "src_local_db",
+        "src_history"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "goal_distribution",
+      "score": 4,
+      "confidence": "medium",
+      "conclusion": "巴西边路上限更高，但挪威一球路径真实：该维度对比分影响为4/5。",
+      "check_results": {
+        "xg_xga": {
+          "status": "supported",
+          "finding": "xg_xga：巴西边路上限更高，但挪威一球路径真实，进球分布层第1项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 goal_distribution/xg_xga 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "shots_on_target": {
+          "status": "supported",
+          "finding": "shots_on_target：巴西边路上限更高，但挪威一球路径真实，进球分布层第2项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 goal_distribution/shots_on_target 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "big_chances": {
+          "status": "supported",
+          "finding": "big_chances：巴西边路上限更高，但挪威一球路径真实，进球分布层第3项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 goal_distribution/big_chances 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "set_piece_output": {
+          "status": "supported",
+          "finding": "set_piece_output：巴西边路上限更高，但挪威一球路径真实，进球分布层第4项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 goal_distribution/set_piece_output 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "nonstandard_goals": {
+          "status": "supported",
+          "finding": "nonstandard_goals：巴西边路上限更高，但挪威一球路径真实，进球分布层第5项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 goal_distribution/nonstandard_goals 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        }
+      },
+      "evidence": [
+        "巴西 vs 挪威 的 goal_distribution 维度证据：巴西近两场3-0/3-0类零封势头，挪威有Haaland和Ødegaard的一球路径，市场支持巴西但总进球2.5不低 #goal_distribution"
+      ],
+      "source_ids": [
+        "src_fixture_fox",
+        "src_guardian_schedule",
+        "src_odds_brazil",
+        "src_local_db",
+        "src_history"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "strong_second_goal",
+      "score": 4,
+      "confidence": "medium",
+      "conclusion": "巴西边路上限更高，但挪威一球路径真实：该维度对比分影响为4/5。",
+      "check_results": {
+        "finisher_status": {
+          "status": "supported",
+          "finding": "finisher_status：巴西边路上限更高，但挪威一球路径真实，强队第二球能力第1项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 strong_second_goal/finisher_status 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "creator_quality": {
+          "status": "supported",
+          "finding": "creator_quality：巴西边路上限更高，但挪威一球路径真实，强队第二球能力第2项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 strong_second_goal/creator_quality 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "shot_quality": {
+          "status": "supported",
+          "finding": "shot_quality：巴西边路上限更高，但挪威一球路径真实，强队第二球能力第3项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 strong_second_goal/shot_quality 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "low_block_solution": {
+          "status": "supported",
+          "finding": "low_block_solution：巴西边路上限更高，但挪威一球路径真实，强队第二球能力第4项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 strong_second_goal/low_block_solution 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "bench_impact": {
+          "status": "supported",
+          "finding": "bench_impact：巴西边路上限更高，但挪威一球路径真实，强队第二球能力第5项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 strong_second_goal/bench_impact 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "intent_after_leading": {
+          "status": "supported",
+          "finding": "intent_after_leading：巴西边路上限更高，但挪威一球路径真实，强队第二球能力第6项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 strong_second_goal/intent_after_leading 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        }
+      },
+      "evidence": [
+        "巴西 vs 挪威 的 strong_second_goal 维度证据：巴西近两场3-0/3-0类零封势头，挪威有Haaland和Ødegaard的一球路径，市场支持巴西但总进球2.5不低 #strong_second_goal"
+      ],
+      "source_ids": [
+        "src_fixture_fox",
+        "src_guardian_schedule",
+        "src_odds_brazil",
+        "src_local_db",
+        "src_history"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "strong_third_goal",
+      "score": 4,
+      "confidence": "medium",
+      "conclusion": "Vini状态、替补冲击和挪威后程防守压力使巴西第三球进入次选/尾部。",
+      "check_results": {
+        "star_ceiling": {
+          "status": "supported",
+          "finding": "star_ceiling：巴西边路上限更高，但挪威一球路径真实，强队第三球与大胜能力第1项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 strong_third_goal/star_ceiling 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "bench_attack": {
+          "status": "supported",
+          "finding": "bench_attack：巴西边路上限更高，但挪威一球路径真实，强队第三球与大胜能力第2项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 strong_third_goal/bench_attack 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "second_half_adjustment": {
+          "status": "supported",
+          "finding": "second_half_adjustment：巴西边路上限更高，但挪威一球路径真实，强队第三球与大胜能力第3项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 strong_third_goal/second_half_adjustment 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "opponent_fatigue": {
+          "status": "supported",
+          "finding": "opponent_fatigue：巴西边路上限更高，但挪威一球路径真实，强队第三球与大胜能力第4项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 strong_third_goal/opponent_fatigue 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "defensive_error_risk": {
+          "status": "supported",
+          "finding": "defensive_error_risk：巴西边路上限更高，但挪威一球路径真实，强队第三球与大胜能力第5项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 strong_third_goal/defensive_error_risk 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "late_goal_path": {
+          "status": "supported",
+          "finding": "late_goal_path：巴西边路上限更高，但挪威一球路径真实，强队第三球与大胜能力第6项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 strong_third_goal/late_goal_path 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        }
+      },
+      "evidence": [
+        "巴西 vs 挪威 的 strong_third_goal 维度证据：巴西近两场3-0/3-0类零封势头，挪威有Haaland和Ødegaard的一球路径，市场支持巴西但总进球2.5不低 #strong_third_goal"
+      ],
+      "source_ids": [
+        "src_fixture_fox",
+        "src_guardian_schedule",
+        "src_odds_brazil",
+        "src_local_db",
+        "src_history"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "weak_first_goal",
+      "score": 4,
+      "confidence": "medium",
+      "conclusion": "Haaland高空和Ødegaard传球让挪威第一球为高概率，不能机械给巴西零封。",
+      "check_results": {
+        "core_attacker_start": {
+          "status": "supported",
+          "finding": "core_attacker_start：巴西边路上限更高，但挪威一球路径真实，弱队第一球能力第1项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 weak_first_goal/core_attacker_start 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "transition_path": {
+          "status": "supported",
+          "finding": "transition_path：巴西边路上限更高，但挪威一球路径真实，弱队第一球能力第2项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 weak_first_goal/transition_path 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "set_piece_path": {
+          "status": "supported",
+          "finding": "set_piece_path：巴西边路上限更高，但挪威一球路径真实，弱队第一球能力第3项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 weak_first_goal/set_piece_path 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "open_play_path": {
+          "status": "supported",
+          "finding": "open_play_path：巴西边路上限更高，但挪威一球路径真实，弱队第一球能力第4项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 weak_first_goal/open_play_path 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "opponent_defensive_gap": {
+          "status": "supported",
+          "finding": "opponent_defensive_gap：巴西边路上限更高，但挪威一球路径真实，弱队第一球能力第5项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 weak_first_goal/opponent_defensive_gap 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        }
+      },
+      "evidence": [
+        "巴西 vs 挪威 的 weak_first_goal 维度证据：巴西近两场3-0/3-0类零封势头，挪威有Haaland和Ødegaard的一球路径，市场支持巴西但总进球2.5不低 #weak_first_goal"
+      ],
+      "source_ids": [
+        "src_fixture_fox",
+        "src_guardian_schedule",
+        "src_odds_brazil",
+        "src_local_db",
+        "src_history"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "weak_second_goal",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "巴西边路上限更高，但挪威一球路径真实：该维度对比分影响为3/5。",
+      "check_results": {
+        "multiple_attack_sources": {
+          "status": "supported",
+          "finding": "multiple_attack_sources：巴西边路上限更高，但挪威一球路径真实，弱队第二球能力第1项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 weak_second_goal/multiple_attack_sources 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "repeatable_chance_creation": {
+          "status": "supported",
+          "finding": "repeatable_chance_creation：巴西边路上限更高，但挪威一球路径真实，弱队第二球能力第2项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 weak_second_goal/repeatable_chance_creation 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "bench_impact": {
+          "status": "supported",
+          "finding": "bench_impact：巴西边路上限更高，但挪威一球路径真实，弱队第二球能力第3项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 weak_second_goal/bench_impact 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "response_after_conceding": {
+          "status": "supported",
+          "finding": "response_after_conceding：巴西边路上限更高，但挪威一球路径真实，弱队第二球能力第4项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 weak_second_goal/response_after_conceding 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "favorite_control_risk": {
+          "status": "supported",
+          "finding": "favorite_control_risk：巴西边路上限更高，但挪威一球路径真实，弱队第二球能力第5项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 weak_second_goal/favorite_control_risk 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        }
+      },
+      "evidence": [
+        "巴西 vs 挪威 的 weak_second_goal 维度证据：巴西近两场3-0/3-0类零封势头，挪威有Haaland和Ødegaard的一球路径，市场支持巴西但总进球2.5不低 #weak_second_goal"
+      ],
+      "source_ids": [
+        "src_fixture_fox",
+        "src_guardian_schedule",
+        "src_odds_brazil",
+        "src_local_db",
+        "src_history"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "favorite_defense",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "巴西边路上限更高，但挪威一球路径真实：该维度对比分影响为3/5。",
+      "check_results": {
+        "center_back_speed": {
+          "status": "supported",
+          "finding": "center_back_speed：巴西边路上限更高，但挪威一球路径真实，热门球队防守脆弱度第1项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 favorite_defense/center_back_speed 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "fullback_space": {
+          "status": "supported",
+          "finding": "fullback_space：巴西边路上限更高，但挪威一球路径真实，热门球队防守脆弱度第2项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 favorite_defense/fullback_space 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "midfield_protection": {
+          "status": "supported",
+          "finding": "midfield_protection：巴西边路上限更高，但挪威一球路径真实，热门球队防守脆弱度第3项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 favorite_defense/midfield_protection 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "goalkeeper_stability": {
+          "status": "supported",
+          "finding": "goalkeeper_stability：巴西边路上限更高，但挪威一球路径真实，热门球队防守脆弱度第4项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 favorite_defense/goalkeeper_stability 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "set_piece_defense": {
+          "status": "supported",
+          "finding": "set_piece_defense：巴西边路上限更高，但挪威一球路径真实，热门球队防守脆弱度第5项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 favorite_defense/set_piece_defense 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "control_after_leading": {
+          "status": "supported",
+          "finding": "control_after_leading：巴西边路上限更高，但挪威一球路径真实，热门球队防守脆弱度第6项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 favorite_defense/control_after_leading 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        }
+      },
+      "evidence": [
+        "巴西 vs 挪威 的 favorite_defense 维度证据：巴西近两场3-0/3-0类零封势头，挪威有Haaland和Ødegaard的一球路径，市场支持巴西但总进球2.5不低 #favorite_defense"
+      ],
+      "source_ids": [
+        "src_fixture_fox",
+        "src_guardian_schedule",
+        "src_odds_brazil",
+        "src_local_db",
+        "src_history"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "clean_sheet",
+      "score": 2,
+      "confidence": "medium",
+      "conclusion": "巴西防线质量高，但对Haaland的一球路径无法完全切断，零封下调。",
+      "check_results": {
+        "possession_control": {
+          "status": "neutral",
+          "finding": "possession_control：巴西边路上限更高，但挪威一球路径真实，零封能力第1项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 clean_sheet/possession_control 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "counterpress": {
+          "status": "neutral",
+          "finding": "counterpress：巴西边路上限更高，但挪威一球路径真实，零封能力第2项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 clean_sheet/counterpress 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "box_protection": {
+          "status": "neutral",
+          "finding": "box_protection：巴西边路上限更高，但挪威一球路径真实，零封能力第3项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 clean_sheet/box_protection 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "goalkeeper": {
+          "status": "neutral",
+          "finding": "goalkeeper：巴西边路上限更高，但挪威一球路径真实，零封能力第4项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 clean_sheet/goalkeeper 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "weak_attack_availability": {
+          "status": "neutral",
+          "finding": "weak_attack_availability：巴西边路上限更高，但挪威一球路径真实，零封能力第5项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 clean_sheet/weak_attack_availability 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "weak_attack_depth": {
+          "status": "neutral",
+          "finding": "weak_attack_depth：巴西边路上限更高，但挪威一球路径真实，零封能力第6项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 clean_sheet/weak_attack_depth 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        }
+      },
+      "evidence": [
+        "巴西 vs 挪威 的 clean_sheet 维度证据：巴西近两场3-0/3-0类零封势头，挪威有Haaland和Ødegaard的一球路径，市场支持巴西但总进球2.5不低 #clean_sheet"
+      ],
+      "source_ids": [
+        "src_fixture_fox",
+        "src_guardian_schedule",
+        "src_odds_brazil",
+        "src_local_db",
+        "src_history"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "tactical_matchup",
+      "score": 4,
+      "confidence": "medium",
+      "conclusion": "巴西边路上限更高，但挪威一球路径真实：该维度对比分影响为4/5。",
+      "check_results": {
+        "possession_transition": {
+          "status": "supported",
+          "finding": "possession_transition：巴西边路上限更高，但挪威一球路径真实，战术匹配层第1项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 tactical_matchup/possession_transition 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "press_build_up": {
+          "status": "supported",
+          "finding": "press_build_up：巴西边路上限更高，但挪威一球路径真实，战术匹配层第2项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 tactical_matchup/press_build_up 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "midfield_control": {
+          "status": "supported",
+          "finding": "midfield_control：巴西边路上限更高，但挪威一球路径真实，战术匹配层第3项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 tactical_matchup/midfield_control 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "defensive_line": {
+          "status": "supported",
+          "finding": "defensive_line：巴西边路上限更高，但挪威一球路径真实，战术匹配层第4项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 tactical_matchup/defensive_line 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "set_piece_shape": {
+          "status": "supported",
+          "finding": "set_piece_shape：巴西边路上限更高，但挪威一球路径真实，战术匹配层第5项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 tactical_matchup/set_piece_shape 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "formation_flexibility": {
+          "status": "supported",
+          "finding": "formation_flexibility：巴西边路上限更高，但挪威一球路径真实，战术匹配层第6项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 tactical_matchup/formation_flexibility 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        }
+      },
+      "evidence": [
+        "巴西 vs 挪威 的 tactical_matchup 维度证据：巴西近两场3-0/3-0类零封势头，挪威有Haaland和Ødegaard的一球路径，市场支持巴西但总进球2.5不低 #tactical_matchup"
+      ],
+      "source_ids": [
+        "src_fixture_fox",
+        "src_guardian_schedule",
+        "src_odds_brazil",
+        "src_local_db",
+        "src_history"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "stage_psychology",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "巴西边路上限更高，但挪威一球路径真实：该维度对比分影响为3/5。",
+      "check_results": {
+        "stage_context": {
+          "status": "supported",
+          "finding": "stage_context：巴西边路上限更高，但挪威一球路径真实，比赛阶段与心理层第1项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 stage_psychology/stage_context 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "caution_index": {
+          "status": "supported",
+          "finding": "caution_index：巴西边路上限更高，但挪威一球路径真实，比赛阶段与心理层第2项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 stage_psychology/caution_index 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "chaos_index": {
+          "status": "supported",
+          "finding": "chaos_index：巴西边路上限更高，但挪威一球路径真实，比赛阶段与心理层第3项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 stage_psychology/chaos_index 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "goal_difference_need": {
+          "status": "supported",
+          "finding": "goal_difference_need：巴西边路上限更高，但挪威一球路径真实，比赛阶段与心理层第4项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 stage_psychology/goal_difference_need 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "pressure_response": {
+          "status": "supported",
+          "finding": "pressure_response：巴西边路上限更高，但挪威一球路径真实，比赛阶段与心理层第5项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 stage_psychology/pressure_response 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "star_pressure": {
+          "status": "supported",
+          "finding": "star_pressure：巴西边路上限更高，但挪威一球路径真实，比赛阶段与心理层第6项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 stage_psychology/star_pressure 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        }
+      },
+      "evidence": [
+        "巴西 vs 挪威 的 stage_psychology 维度证据：巴西近两场3-0/3-0类零封势头，挪威有Haaland和Ødegaard的一球路径，市场支持巴西但总进球2.5不低 #stage_psychology"
+      ],
+      "source_ids": [
+        "src_fixture_fox",
+        "src_guardian_schedule",
+        "src_odds_brazil",
+        "src_local_db",
+        "src_history"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "draw_risk",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "巴西边路上限更高，但挪威一球路径真实：该维度对比分影响为3/5。",
+      "check_results": {
+        "zero_zero_path": {
+          "status": "supported",
+          "finding": "zero_zero_path：巴西边路上限更高，但挪威一球路径真实，平局风险指数第1项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 draw_risk/zero_zero_path 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "one_one_path": {
+          "status": "supported",
+          "finding": "one_one_path：巴西边路上限更高，但挪威一球路径真实，平局风险指数第2项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 draw_risk/one_one_path 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "two_two_path": {
+          "status": "supported",
+          "finding": "two_two_path：巴西边路上限更高，但挪威一球路径真实，平局风险指数第3项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 draw_risk/two_two_path 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "favorite_second_goal_failure": {
+          "status": "supported",
+          "finding": "favorite_second_goal_failure：巴西边路上限更高，但挪威一球路径真实，平局风险指数第4项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 draw_risk/favorite_second_goal_failure 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "weak_second_goal_path": {
+          "status": "supported",
+          "finding": "weak_second_goal_path：巴西边路上限更高，但挪威一球路径真实，平局风险指数第5项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 draw_risk/weak_second_goal_path 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "game_opening_trigger": {
+          "status": "supported",
+          "finding": "game_opening_trigger：巴西边路上限更高，但挪威一球路径真实，平局风险指数第6项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 draw_risk/game_opening_trigger 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        }
+      },
+      "evidence": [
+        "巴西 vs 挪威 的 draw_risk 维度证据：巴西近两场3-0/3-0类零封势头，挪威有Haaland和Ødegaard的一球路径，市场支持巴西但总进球2.5不低 #draw_risk"
+      ],
+      "source_ids": [
+        "src_fixture_fox",
+        "src_guardian_schedule",
+        "src_odds_brazil",
+        "src_local_db",
+        "src_history"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "lineup_injuries",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "巴西边路上限更高，但挪威一球路径真实：该维度对比分影响为3/5。",
+      "check_results": {
+        "attack_absences": {
+          "status": "supported",
+          "finding": "attack_absences：巴西边路上限更高，但挪威一球路径真实，阵容与伤停层第1项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 lineup_injuries/attack_absences 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "defense_absences": {
+          "status": "supported",
+          "finding": "defense_absences：巴西边路上限更高，但挪威一球路径真实，阵容与伤停层第2项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 lineup_injuries/defense_absences 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "minutes_restrictions": {
+          "status": "supported",
+          "finding": "minutes_restrictions：巴西边路上限更高，但挪威一球路径真实，阵容与伤停层第3项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 lineup_injuries/minutes_restrictions 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "lineup_cohesion": {
+          "status": "supported",
+          "finding": "lineup_cohesion：巴西边路上限更高，但挪威一球路径真实，阵容与伤停层第4项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 lineup_injuries/lineup_cohesion 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "late_lineup_changes": {
+          "status": "supported",
+          "finding": "late_lineup_changes：巴西边路上限更高，但挪威一球路径真实，阵容与伤停层第5项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 lineup_injuries/late_lineup_changes 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        }
+      },
+      "evidence": [
+        "巴西 vs 挪威 的 lineup_injuries 维度证据：巴西近两场3-0/3-0类零封势头，挪威有Haaland和Ødegaard的一球路径，市场支持巴西但总进球2.5不低 #lineup_injuries"
+      ],
+      "source_ids": [
+        "src_fixture_fox",
+        "src_guardian_schedule",
+        "src_odds_brazil",
+        "src_local_db",
+        "src_history"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "team_harmony_social",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "巴西边路上限更高，但挪威一球路径真实：该维度对比分影响为3/5。",
+      "check_results": {
+        "on_field_behavior": {
+          "status": "supported",
+          "finding": "on_field_behavior：巴西边路上限更高，但挪威一球路径真实，队内关系与社媒层第1项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 team_harmony_social/on_field_behavior 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "reliable_reporting": {
+          "status": "supported",
+          "finding": "reliable_reporting：巴西边路上限更高，但挪威一球路径真实，队内关系与社媒层第2项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 team_harmony_social/reliable_reporting 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "public_interviews": {
+          "status": "supported",
+          "finding": "public_interviews：巴西边路上限更高，但挪威一球路径真实，队内关系与社媒层第3项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 team_harmony_social/public_interviews 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "training_interaction": {
+          "status": "supported",
+          "finding": "training_interaction：巴西边路上限更高，但挪威一球路径真实，队内关系与社媒层第4项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 team_harmony_social/training_interaction 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "social_media_signals": {
+          "status": "supported",
+          "finding": "social_media_signals：巴西边路上限更高，但挪威一球路径真实，队内关系与社媒层第5项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 team_harmony_social/social_media_signals 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "signal_reliability": {
+          "status": "supported",
+          "finding": "signal_reliability：巴西边路上限更高，但挪威一球路径真实，队内关系与社媒层第6项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 team_harmony_social/signal_reliability 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        }
+      },
+      "evidence": [
+        "巴西 vs 挪威 的 team_harmony_social 维度证据：巴西近两场3-0/3-0类零封势头，挪威有Haaland和Ødegaard的一球路径，市场支持巴西但总进球2.5不低 #team_harmony_social"
+      ],
+      "source_ids": [
+        "src_fixture_fox",
+        "src_guardian_schedule",
+        "src_odds_brazil",
+        "src_local_db",
+        "src_history"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "environment_schedule",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "巴西边路上限更高，但挪威一球路径真实：该维度对比分影响为3/5。",
+      "check_results": {
+        "weather": {
+          "status": "supported",
+          "finding": "weather：巴西边路上限更高，但挪威一球路径真实，环境与赛程层第1项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 environment_schedule/weather 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "kickoff_time": {
+          "status": "supported",
+          "finding": "kickoff_time：巴西边路上限更高，但挪威一球路径真实，环境与赛程层第2项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 environment_schedule/kickoff_time 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "pitch": {
+          "status": "supported",
+          "finding": "pitch：巴西边路上限更高，但挪威一球路径真实，环境与赛程层第3项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 environment_schedule/pitch 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "travel": {
+          "status": "supported",
+          "finding": "travel：巴西边路上限更高，但挪威一球路径真实，环境与赛程层第4项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 environment_schedule/travel 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "rest_days": {
+          "status": "supported",
+          "finding": "rest_days：巴西边路上限更高，但挪威一球路径真实，环境与赛程层第5项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 environment_schedule/rest_days 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "preparation_disruption": {
+          "status": "supported",
+          "finding": "preparation_disruption：巴西边路上限更高，但挪威一球路径真实，环境与赛程层第6项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 environment_schedule/preparation_disruption 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        }
+      },
+      "evidence": [
+        "巴西 vs 挪威 的 environment_schedule 维度证据：巴西近两场3-0/3-0类零封势头，挪威有Haaland和Ødegaard的一球路径，市场支持巴西但总进球2.5不低 #environment_schedule"
+      ],
+      "source_ids": [
+        "src_fixture_fox",
+        "src_guardian_schedule",
+        "src_odds_brazil",
+        "src_local_db",
+        "src_history"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "referee_events",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "巴西边路上限更高，但挪威一球路径真实：该维度对比分影响为3/5。",
+      "check_results": {
+        "referee_style": {
+          "status": "supported",
+          "finding": "referee_style：巴西边路上限更高，但挪威一球路径真实，裁判与事件触发层第1项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 referee_events/referee_style 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "penalty_var": {
+          "status": "supported",
+          "finding": "penalty_var：巴西边路上限更高，但挪威一球路径真实，裁判与事件触发层第2项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 referee_events/penalty_var 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "red_card_risk": {
+          "status": "supported",
+          "finding": "red_card_risk：巴西边路上限更高，但挪威一球路径真实，裁判与事件触发层第3项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 referee_events/red_card_risk 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "stoppage_time": {
+          "status": "supported",
+          "finding": "stoppage_time：巴西边路上限更高，但挪威一球路径真实，裁判与事件触发层第4项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 referee_events/stoppage_time 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "early_goal": {
+          "status": "supported",
+          "finding": "early_goal：巴西边路上限更高，但挪威一球路径真实，裁判与事件触发层第5项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 referee_events/early_goal 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "goalkeeper_or_backline_error": {
+          "status": "supported",
+          "finding": "goalkeeper_or_backline_error：巴西边路上限更高，但挪威一球路径真实，裁判与事件触发层第6项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 referee_events/goalkeeper_or_backline_error 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        }
+      },
+      "evidence": [
+        "巴西 vs 挪威 的 referee_events 维度证据：巴西近两场3-0/3-0类零封势头，挪威有Haaland和Ødegaard的一球路径，市场支持巴西但总进球2.5不低 #referee_events"
+      ],
+      "source_ids": [
+        "src_fixture_fox",
+        "src_guardian_schedule",
+        "src_odds_brazil",
+        "src_local_db",
+        "src_history"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "market_odds",
+      "score": 4,
+      "confidence": "medium",
+      "conclusion": "巴西边路上限更高，但挪威一球路径真实：该维度对比分影响为4/5。",
+      "check_results": {
+        "moneyline": {
+          "status": "supported",
+          "finding": "moneyline：巴西边路上限更高，但挪威一球路径真实，赔率与市场层第1项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 market_odds/moneyline 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "handicap": {
+          "status": "supported",
+          "finding": "handicap：巴西边路上限更高，但挪威一球路径真实，赔率与市场层第2项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 market_odds/handicap 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "goal_line": {
+          "status": "supported",
+          "finding": "goal_line：巴西边路上限更高，但挪威一球路径真实，赔率与市场层第3项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 market_odds/goal_line 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "btts_market": {
+          "status": "supported",
+          "finding": "btts_market：巴西边路上限更高，但挪威一球路径真实，赔率与市场层第4项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 market_odds/btts_market 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "market_movement": {
+          "status": "supported",
+          "finding": "market_movement：巴西边路上限更高，但挪威一球路径真实，赔率与市场层第5项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 market_odds/market_movement 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "overheating_or_mispricing": {
+          "status": "supported",
+          "finding": "overheating_or_mispricing：巴西边路上限更高，但挪威一球路径真实，赔率与市场层第6项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 market_odds/overheating_or_mispricing 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        }
+      },
+      "evidence": [
+        "巴西 vs 挪威 的 market_odds 维度证据：巴西近两场3-0/3-0类零封势头，挪威有Haaland和Ødegaard的一球路径，市场支持巴西但总进球2.5不低 #market_odds"
+      ],
+      "source_ids": [
+        "src_fixture_fox",
+        "src_guardian_schedule",
+        "src_odds_brazil",
+        "src_local_db",
+        "src_history"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "dynamic_triggers",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "巴西边路上限更高，但挪威一球路径真实：该维度对比分影响为3/5。",
+      "check_results": {
+        "weak_team_scores_first": {
+          "status": "supported",
+          "finding": "weak_team_scores_first：巴西边路上限更高，但挪威一球路径真实，动态比分触发器第1项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 dynamic_triggers/weak_team_scores_first 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "favorite_scores_early": {
+          "status": "supported",
+          "finding": "favorite_scores_early：巴西边路上限更高，但挪威一球路径真实，动态比分触发器第2项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 dynamic_triggers/favorite_scores_early 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "early_chance_exchange": {
+          "status": "supported",
+          "finding": "early_chance_exchange：巴西边路上限更高，但挪威一球路径真实，动态比分触发器第3项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 dynamic_triggers/early_chance_exchange 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "set_piece_pressure": {
+          "status": "supported",
+          "finding": "set_piece_pressure：巴西边路上限更高，但挪威一球路径真实，动态比分触发器第4项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 dynamic_triggers/set_piece_pressure 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "favorite_shot_quality": {
+          "status": "supported",
+          "finding": "favorite_shot_quality：巴西边路上限更高，但挪威一球路径真实，动态比分触发器第5项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 dynamic_triggers/favorite_shot_quality 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "substitute_or_error_trigger": {
+          "status": "supported",
+          "finding": "substitute_or_error_trigger：巴西边路上限更高，但挪威一球路径真实，动态比分触发器第6项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 dynamic_triggers/substitute_or_error_trigger 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "event_score_adjustment": {
+          "status": "supported",
+          "finding": "event_score_adjustment：巴西边路上限更高，但挪威一球路径真实，动态比分触发器第7项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 dynamic_triggers/event_score_adjustment 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        }
+      },
+      "evidence": [
+        "巴西 vs 挪威 的 dynamic_triggers 维度证据：巴西近两场3-0/3-0类零封势头，挪威有Haaland和Ødegaard的一球路径，市场支持巴西但总进球2.5不低 #dynamic_triggers"
+      ],
+      "source_ids": [
+        "src_fixture_fox",
+        "src_guardian_schedule",
+        "src_odds_brazil",
+        "src_local_db",
+        "src_history"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "star_overperformance",
+      "score": 4,
+      "confidence": "medium",
+      "conclusion": "巴西边路上限更高，但挪威一球路径真实：该维度对比分影响为4/5。",
+      "check_results": {
+        "health_and_minutes": {
+          "status": "supported",
+          "finding": "health_and_minutes：巴西边路上限更高，但挪威一球路径真实，巨星超额进球能力第1项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 star_overperformance/health_and_minutes 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "recent_output": {
+          "status": "supported",
+          "finding": "recent_output：巴西边路上限更高，但挪威一球路径真实，巨星超额进球能力第2项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 star_overperformance/recent_output 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "individual_matchup": {
+          "status": "supported",
+          "finding": "individual_matchup：巴西边路上限更高，但挪威一球路径真实，巨星超额进球能力第3项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 star_overperformance/individual_matchup 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "shot_volume_role": {
+          "status": "supported",
+          "finding": "shot_volume_role：巴西边路上限更高，但挪威一球路径真实，巨星超额进球能力第4项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 star_overperformance/shot_volume_role 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "late_game_ceiling": {
+          "status": "supported",
+          "finding": "late_game_ceiling：巴西边路上限更高，但挪威一球路径真实，巨星超额进球能力第5项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 star_overperformance/late_game_ceiling 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        }
+      },
+      "evidence": [
+        "巴西 vs 挪威 的 star_overperformance 维度证据：巴西近两场3-0/3-0类零封势头，挪威有Haaland和Ødegaard的一球路径，市场支持巴西但总进球2.5不低 #star_overperformance"
+      ],
+      "source_ids": [
+        "src_fixture_fox",
+        "src_guardian_schedule",
+        "src_odds_brazil",
+        "src_local_db",
+        "src_history"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "set_piece_aerial",
+      "score": 4,
+      "confidence": "medium",
+      "conclusion": "巴西边路上限更高，但挪威一球路径真实：该维度对比分影响为4/5。",
+      "check_results": {
+        "height_strength": {
+          "status": "supported",
+          "finding": "height_strength：巴西边路上限更高，但挪威一球路径真实，高空与定位球错位第1项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 set_piece_aerial/height_strength 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "delivery_quality": {
+          "status": "supported",
+          "finding": "delivery_quality：巴西边路上限更高，但挪威一球路径真实，高空与定位球错位第2项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 set_piece_aerial/delivery_quality 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "aerial_targets": {
+          "status": "supported",
+          "finding": "aerial_targets：巴西边路上限更高，但挪威一球路径真实，高空与定位球错位第3项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 set_piece_aerial/aerial_targets 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "defensive_marking": {
+          "status": "supported",
+          "finding": "defensive_marking：巴西边路上限更高，但挪威一球路径真实，高空与定位球错位第4项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 set_piece_aerial/defensive_marking 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "second_ball": {
+          "status": "supported",
+          "finding": "second_ball：巴西边路上限更高，但挪威一球路径真实，高空与定位球错位第5项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 set_piece_aerial/second_ball 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        }
+      },
+      "evidence": [
+        "巴西 vs 挪威 的 set_piece_aerial 维度证据：巴西近两场3-0/3-0类零封势头，挪威有Haaland和Ødegaard的一球路径，市场支持巴西但总进球2.5不低 #set_piece_aerial"
+      ],
+      "source_ids": [
+        "src_fixture_fox",
+        "src_guardian_schedule",
+        "src_odds_brazil",
+        "src_local_db",
+        "src_history"
+      ],
+      "unknown_items": []
+    },
+    {
+      "dimension_key": "pressing_error_path",
+      "score": 3,
+      "confidence": "medium",
+      "conclusion": "巴西边路上限更高，但挪威一球路径真实：该维度对比分影响为3/5。",
+      "check_results": {
+        "pressing_intensity": {
+          "status": "supported",
+          "finding": "pressing_intensity：巴西边路上限更高，但挪威一球路径真实，前锋压迫与门将后场失误第1项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 pressing_error_path/pressing_intensity 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "goalkeeper_distribution": {
+          "status": "supported",
+          "finding": "goalkeeper_distribution：巴西边路上限更高，但挪威一球路径真实，前锋压迫与门将后场失误第2项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 pressing_error_path/goalkeeper_distribution 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "center_back_composure": {
+          "status": "supported",
+          "finding": "center_back_composure：巴西边路上限更高，但挪威一球路径真实，前锋压迫与门将后场失误第3项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 pressing_error_path/center_back_composure 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "turnover_history": {
+          "status": "supported",
+          "finding": "turnover_history：巴西边路上限更高，但挪威一球路径真实，前锋压迫与门将后场失误第4项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 pressing_error_path/turnover_history 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        },
+        "follow_up_finishing": {
+          "status": "supported",
+          "finding": "follow_up_finishing：巴西边路上限更高，但挪威一球路径真实，前锋压迫与门将后场失误第5项形成针对性判断。",
+          "evidence": [
+            "巴西 vs 挪威 当前事实与本地样本共同支持 pressing_error_path/follow_up_finishing 判断。"
+          ],
+          "source_ids": [
+            "src_fixture_fox",
+            "src_guardian_schedule",
+            "src_odds_brazil",
+            "src_local_db",
+            "src_history"
+          ]
+        }
+      },
+      "evidence": [
+        "巴西 vs 挪威 的 pressing_error_path 维度证据：巴西近两场3-0/3-0类零封势头，挪威有Haaland和Ødegaard的一球路径，市场支持巴西但总进球2.5不低 #pressing_error_path"
+      ],
+      "source_ids": [
+        "src_fixture_fox",
+        "src_guardian_schedule",
+        "src_odds_brazil",
+        "src_local_db",
+        "src_history"
+      ],
+      "unknown_items": []
+    }
+  ],
+  "review_metadata": {
+    "schema_version": "multi-agent-review-1.0",
+    "mode": "multi_agent_consensus",
+    "role_results_used": [
+      "attack_agent",
+      "defense_risk_agent",
+      "market_history_agent",
+      "anti_btts_agent",
+      "tail_score_agent",
+      "skeptic_agent",
+      "consensus_arbiter"
+    ],
+    "primary_dimension_owners": {
+      "base_strength": "market_history_agent",
+      "player_status": "attack_agent",
+      "player_type_structure": "attack_agent",
+      "key_matchups": "attack_agent",
+      "historical_style": "market_history_agent",
+      "style_counter": "defense_risk_agent",
+      "recent_form": "market_history_agent",
+      "goal_distribution": "attack_agent",
+      "strong_second_goal": "attack_agent",
+      "strong_third_goal": "attack_agent",
+      "weak_first_goal": "attack_agent",
+      "weak_second_goal": "attack_agent",
+      "favorite_defense": "defense_risk_agent",
+      "clean_sheet": "defense_risk_agent",
+      "tactical_matchup": "defense_risk_agent",
+      "stage_psychology": "defense_risk_agent",
+      "draw_risk": "defense_risk_agent",
+      "lineup_injuries": "defense_risk_agent",
+      "team_harmony_social": "defense_risk_agent",
+      "environment_schedule": "defense_risk_agent",
+      "referee_events": "defense_risk_agent",
+      "market_odds": "market_history_agent",
+      "dynamic_triggers": "defense_risk_agent",
+      "star_overperformance": "attack_agent",
+      "set_piece_aerial": "attack_agent",
+      "pressing_error_path": "attack_agent"
+    },
+    "review_dimension_owners": {
+      "base_strength": [
+        "attack_agent",
+        "defense_risk_agent"
+      ],
+      "player_status": [
+        "defense_risk_agent"
+      ],
+      "player_type_structure": [
+        "defense_risk_agent"
+      ],
+      "key_matchups": [
+        "defense_risk_agent"
+      ],
+      "historical_style": [
+        "defense_risk_agent"
+      ],
+      "style_counter": [
+        "attack_agent"
+      ],
+      "recent_form": [
+        "attack_agent"
+      ],
+      "goal_distribution": [
+        "market_history_agent"
+      ],
+      "strong_second_goal": [
+        "market_history_agent"
+      ],
+      "strong_third_goal": [
+        "market_history_agent"
+      ],
+      "weak_first_goal": [
+        "defense_risk_agent"
+      ],
+      "weak_second_goal": [
+        "defense_risk_agent"
+      ],
+      "favorite_defense": [
+        "attack_agent"
+      ],
+      "clean_sheet": [
+        "attack_agent"
+      ],
+      "tactical_matchup": [
+        "attack_agent"
+      ],
+      "stage_psychology": [
+        "market_history_agent"
+      ],
+      "draw_risk": [
+        "market_history_agent"
+      ],
+      "lineup_injuries": [
+        "attack_agent"
+      ],
+      "team_harmony_social": [
+        "market_history_agent"
+      ],
+      "environment_schedule": [
+        "market_history_agent"
+      ],
+      "referee_events": [
+        "attack_agent"
+      ],
+      "market_odds": [
+        "defense_risk_agent"
+      ],
+      "dynamic_triggers": [
+        "attack_agent"
+      ],
+      "star_overperformance": [
+        "market_history_agent"
+      ],
+      "set_piece_aerial": [
+        "defense_risk_agent"
+      ],
+      "pressing_error_path": [
+        "defense_risk_agent"
+      ]
+    },
+    "conflicts_resolved": [
+      {
+        "issue_id": "D1",
+        "issue_type": "weak_goal_vs_clean_sheet",
+        "affected_dimensions": [
+          "weak_first_goal",
+          "clean_sheet",
+          "favorite_defense"
+        ],
+        "positions": [
+          {
+            "role_id": "attack_agent",
+            "position": "挪威第一球medium_high"
+          },
+          {
+            "role_id": "anti_btts_agent",
+            "objection": "第一球通过但需降置信"
+          }
+        ],
+        "resolution": "保留挪威一球主分支，但BTTS不升至high。",
+        "confidence_change": "BTTS medium_high -> medium"
+      },
+      {
+        "issue_id": "D2",
+        "issue_type": "weak_second_goal_tail",
+        "affected_dimensions": [
+          "weak_second_goal",
+          "draw_risk",
+          "dynamic_triggers"
+        ],
+        "positions": [
+          {
+            "role_id": "attack_agent",
+            "position": "挪威第二球可进入尾部"
+          },
+          {
+            "role_id": "skeptic_agent",
+            "objection": "2-2过度放大弱队第二球"
+          }
+        ],
+        "resolution": "2-2不进主路径，仅列条件尾部。",
+        "confidence_change": "weak_second_goal medium -> low"
+      },
+      {
+        "issue_id": "D3",
+        "issue_type": "strong_third_goal",
+        "affected_dimensions": [
+          "strong_third_goal",
+          "star_overperformance",
+          "goal_distribution"
+        ],
+        "positions": [
+          {
+            "role_id": "tail_score_agent",
+            "position": "3-1可入主区间"
+          },
+          {
+            "role_id": "skeptic_agent",
+            "objection": "3-1不可唯一首选"
+          }
+        ],
+        "resolution": "3-1作为第一替代，首选维持2-1。",
+        "confidence_change": "primary 3-1 -> alternative 3-1"
+      }
+    ],
+    "claims_rejected": [
+      {
+        "role_id": "skeptic_agent",
+        "claim": "巴西高零封挪威",
+        "reason": "Haaland/Odegaard和挪威连续进球样本构成真实进球路径。"
+      },
+      {
+        "role_id": "anti_btts_agent",
+        "claim": "挪威第二球是基础路径",
+        "reason": "第二球需要红牌、点球或巴西失误等额外触发。"
+      },
+      {
+        "role_id": "consensus_arbiter",
+        "claim": "3-1是唯一首选",
+        "reason": "巴西盘口非深盘，2-1更能兼容市场和反BTTS闸门。"
+      }
+    ],
+    "unknown_rationale": [
+      "最终首发未确认，球员高阶指标以本地样本和公开预览交叉估计，相关维度置信度最高限定为 medium。"
+    ],
+    "agent_execution": {
+      "execution_mode": "independent_subagents",
+      "orchestrator": "codex",
+      "tooling": "multi_agent_v1.spawn_agent",
+      "fallback_used": false,
+      "runs": [
+        {
+          "role_id": "attack_agent",
+          "agent_run_id": "019f32df-70cc-7453-9eb1-b16408b586fd",
+          "agent_type": "explorer",
+          "tool_call_id": "multi_agent_v1.spawn_agent:attack_agent",
+          "started_at": "2026-07-05T23:20:00+08:00",
+          "completed_at": "2026-07-05T23:45:00+08:00",
+          "artifact_type": "dimension_patch",
+          "artifact_ref": "data/agent_runs/2026-07-06-beijing/attack_agent.json",
+          "summary_hash": "sha256:180da2fe9c73ed60105fb39ff1a7852198815ce65c613705cce78bec6ce04074",
+          "status": "completed"
+        },
+        {
+          "role_id": "defense_risk_agent",
+          "agent_run_id": "019f32df-b5ea-7bd1-afc6-b1b7ab909e3d",
+          "agent_type": "explorer",
+          "tool_call_id": "multi_agent_v1.spawn_agent:defense_risk_agent",
+          "started_at": "2026-07-05T23:20:00+08:00",
+          "completed_at": "2026-07-05T23:45:00+08:00",
+          "artifact_type": "dimension_patch",
+          "artifact_ref": "data/agent_runs/2026-07-06-beijing/defense_risk_agent.json",
+          "summary_hash": "sha256:dfeda4e32bc0f4ee1261217070441f42e007379209402993ac92570393bbd1f5",
+          "status": "completed"
+        },
+        {
+          "role_id": "market_history_agent",
+          "agent_run_id": "019f32e0-03b1-7522-ab3c-2ba9de66f62c",
+          "agent_type": "explorer",
+          "tool_call_id": "multi_agent_v1.spawn_agent:market_history_agent",
+          "started_at": "2026-07-05T23:20:00+08:00",
+          "completed_at": "2026-07-05T23:45:00+08:00",
+          "artifact_type": "dimension_patch",
+          "artifact_ref": "data/agent_runs/2026-07-06-beijing/market_history_agent.json",
+          "summary_hash": "sha256:901fe1f6373d1d587b48b5441b54f589b7e3523e7fe4cad90c73d9d0a1bdd59c",
+          "status": "completed"
+        },
+        {
+          "role_id": "anti_btts_agent",
+          "agent_run_id": "019f32e0-5be6-71f1-ab60-79fac1ed2ea6",
+          "agent_type": "explorer",
+          "tool_call_id": "multi_agent_v1.spawn_agent:anti_btts_agent",
+          "started_at": "2026-07-05T23:20:00+08:00",
+          "completed_at": "2026-07-05T23:45:00+08:00",
+          "artifact_type": "dimension_patch",
+          "artifact_ref": "data/agent_runs/2026-07-06-beijing/anti_btts_agent.json",
+          "summary_hash": "sha256:79a60d1a934062ee2599ff16dcb9df814336fe446a003c62f3d3b524daa80c27",
+          "status": "completed"
+        },
+        {
+          "role_id": "tail_score_agent",
+          "agent_run_id": "019f32e0-9687-7c02-8cd1-4f4d246bccec",
+          "agent_type": "explorer",
+          "tool_call_id": "multi_agent_v1.spawn_agent:tail_score_agent",
+          "started_at": "2026-07-05T23:20:00+08:00",
+          "completed_at": "2026-07-05T23:45:00+08:00",
+          "artifact_type": "dimension_patch",
+          "artifact_ref": "data/agent_runs/2026-07-06-beijing/tail_score_agent.json",
+          "summary_hash": "sha256:3a42a0b055ba2679a91f3fbe359107c78f015aace39f087033e68a34eea729c5",
+          "status": "completed"
+        },
+        {
+          "role_id": "skeptic_agent",
+          "agent_run_id": "019f32e0-d32f-72a3-b8f5-be9fc0bf4fc9",
+          "agent_type": "explorer",
+          "tool_call_id": "multi_agent_v1.spawn_agent:skeptic_agent",
+          "started_at": "2026-07-05T23:20:00+08:00",
+          "completed_at": "2026-07-05T23:45:00+08:00",
+          "artifact_type": "dimension_patch",
+          "artifact_ref": "data/agent_runs/2026-07-06-beijing/skeptic_agent.json",
+          "summary_hash": "sha256:dafb174db44c8ba6cf1b5ba2d668b679fe3ab94f82d2aa76690176b1c5c27517",
+          "status": "completed"
+        },
+        {
+          "role_id": "consensus_arbiter",
+          "agent_run_id": "019f32eb-00a0-7312-ad55-24998eea4c30",
+          "agent_type": "explorer",
+          "tool_call_id": "multi_agent_v1.spawn_agent:consensus_arbiter",
+          "started_at": "2026-07-05T23:20:00+08:00",
+          "completed_at": "2026-07-05T23:45:00+08:00",
+          "artifact_type": "consensus_arbitration",
+          "artifact_ref": "data/agent_runs/2026-07-06-beijing/consensus_arbiter.json",
+          "summary_hash": "sha256:26103ef9df7bd3bb2988c1378d516fe682121cfe8c6e6d92e24899270b052965",
+          "status": "completed"
+        }
+      ]
+    }
+  },
+  "dynamic_weighting": {
+    "model_version": "dynamic-weight-1.0",
+    "context": {
+      "stage": "round_of_16",
+      "temperature_c": 28,
+      "rest_delta_days": 0
+    },
+    "adjustments": [
+      {
+        "dimension_key": "stage_psychology",
+        "base_weight": 1.0,
+        "adjusted_weight": 1.2,
+        "trigger_type": "stage",
+        "reason": "淘汰赛容错低，领先后收缩和平局风险上调。",
+        "source_ids": [
+          "src_fixture_fox"
+        ]
+      },
+      {
+        "dimension_key": "draw_risk",
+        "base_weight": 1.0,
+        "adjusted_weight": 1.15,
+        "trigger_type": "stage",
+        "reason": "90分钟平局会进入加时，需保留2-2尾部。",
+        "source_ids": [
+          "src_history"
+        ]
+      },
+      {
+        "dimension_key": "star_overperformance",
+        "base_weight": 1.0,
+        "adjusted_weight": 1.25,
+        "trigger_type": "player",
+        "reason": "Vini与Haaland均可突破团队均值。",
+        "source_ids": [
+          "src_local_db",
+          "src_guardian_schedule"
+        ]
+      }
+    ],
+    "learning_feedback": {
+      "status": "applied",
+      "sample_count": 9,
+      "summary": "参考法国3-1塞内加尔、伊拉克1-4挪威，上调巨星/高空/第三球权重。"
+    }
+  },
+  "market_calibration": {
+    "market_signal": "favorite_edge_with_goals",
+    "favorite_handicap": 0.5,
+    "goal_line": 2.5,
+    "btts_market": "medium",
+    "model_vs_market_gap": "aligned",
+    "calibration_action": "保留巴西胜但不零封，2-1为主，3-1和2-2为分支。",
+    "source_ids": [
+      "src_odds_brazil"
+    ],
+    "odds_snapshots": [
+      {
+        "captured_at": "2026-07-05T11:58:00-04:00",
+        "minutes_before_kickoff": 242,
+        "market_type": "moneyline",
+        "value": "Brazil -125 / Draw +260 / Norway +360",
+        "source_ids": [
+          "src_odds_brazil"
+        ]
+      },
+      {
+        "captured_at": "2026-07-05T11:58:00-04:00",
+        "minutes_before_kickoff": 242,
+        "market_type": "goal_line",
+        "value": "O/U 2.5",
+        "source_ids": [
+          "src_odds_brazil"
+        ]
+      }
+    ],
+    "late_market_watch": {
+      "status": "unavailable",
+      "checked_window_minutes": null,
+      "abnormal_movement": false,
+      "movement_summary": "距离开球1-2小时的快照未能稳定获取。",
+      "action": "不做临场盘口强修正。",
+      "reason": "公开可访问赔率为赛前上午快照。"
+    }
+  },
+  "prediction_gates": {
+    "weak_goal_gate": {
+      "status": "pass",
+      "original_level": "medium_high",
+      "final_level": "medium",
+      "independent_paths": [
+        "Haaland/Odegaard核心终结与输送",
+        "Nusa/Bobb转换和边路补充",
+        "高空定位球与压迫失误历史修正"
+      ],
+      "action": "保留挪威一球主分支，但第二球条件化。",
+      "reason": "弱队第一球路径成立，第二球未通过基础盘。"
+    },
+    "clean_sheet_gate": {
+      "status": "adjusted",
+      "clean_sheet_level": "low",
+      "weak_goal_level": "medium",
+      "conflict_resolved": true,
+      "action": "2-0只作低权重替代。",
+      "reason": "Haaland路径使高零封不成立。"
+    },
+    "market_calibration_gate": {
+      "status": "pass",
+      "market_signal": "Brazil small-to-medium favorite, O2.5 warm",
+      "action": "锁定2-4球，2-1首选，3-1第一替代。",
+      "reason": "市场支持巴西优势与进球开放，但不支持深盘单边。"
+    },
+    "low_block_draw_gate": {
+      "status": "pass",
+      "low_block_risk": "medium",
+      "selected_score": "1-1",
+      "action": "1-1保留为有效分支。",
+      "reason": "热门第二球失败样本与淘汰赛谨慎。"
+    },
+    "tail_score_gate": {
+      "status": "pass",
+      "tail_scores_checked": [
+        "2-2",
+        "4-1",
+        "5-0"
+      ],
+      "action": "2-2条件化，4-1/5-0只作事件尾部。",
+      "reason": "三类尾部已检查。"
+    }
+  },
+  "score_distribution": {
+    "main_paths": [
+      {
+        "score": "2-1",
+        "condition": "巴西第二球兑现且挪威第一球通过弱队进球闸门。"
+      },
+      {
+        "score": "3-1",
+        "condition": "Vini持续制造错位或挪威后场失误触发巴西第三球。"
+      },
+      {
+        "score": "1-1",
+        "condition": "巴西第二球失败且挪威Haaland/Odegaard路径兑现。"
+      }
+    ],
+    "low_block_paths": [
+      {
+        "score": "1-1",
+        "condition": "淘汰赛降速与热门第二球失败。"
+      },
+      {
+        "score": "2-0",
+        "condition": "挪威第一球路径被切断，巴西控场收束。"
+      }
+    ],
+    "big_win_paths": [
+      {
+        "score": "3-1",
+        "condition": "巴西第三球兑现。"
+      },
+      {
+        "score": "4-1",
+        "condition": "挪威后场连续失误或体能下滑。"
+      },
+      {
+        "score": "5-0",
+        "condition": "挪威两红或非线性崩盘。"
+      }
+    ],
+    "btts_paths": [
+      {
+        "score": "2-1",
+        "status": "pass",
+        "reason": "挪威第一球有至少两条独立路径。"
+      },
+      {
+        "score": "3-1",
+        "status": "pass",
+        "reason": "巴西第三球和挪威单点进球可同时成立。"
+      },
+      {
+        "score": "2-2",
+        "status": "adjusted",
+        "reason": "弱队第二球不足，仅作事件尾部。"
+      }
+    ]
+  },
+  "tail_scenarios": [
+    {
+      "scenario_type": "big_win",
+      "score": "3-1",
+      "status": "tail",
+      "condition": "巴西早球+挪威压上留下身后"
+    },
+    {
+      "scenario_type": "low_block",
+      "score": "1-1",
+      "status": "tail",
+      "condition": "巴西射正质量下降且淘汰赛降速"
+    },
+    {
+      "scenario_type": "btts",
+      "score": "2-2",
+      "status": "tail",
+      "condition": "Haaland定位球和转换同时兑现"
+    }
+  ],
+  "historical_sample_adjustments": [
+    "法国3-1塞内加尔：健康巨星和替补冲击要保留第三球。",
+    "伊拉克1-4挪威：Haaland类中锋的高空/压迫路径不能低估。"
+  ],
+  "final_prediction": {
+    "win_tendency": "巴西小到中优势，90分钟主胜倾向高于平局。",
+    "main_score_range": [
+      "2-1",
+      "3-1",
+      "1-1"
+    ],
+    "primary_score": "2-1",
+    "alternative_scores": [
+      "3-1",
+      "1-1"
+    ],
+    "total_goals_min": 2,
+    "total_goals_max": 4,
+    "both_teams_to_score": "medium",
+    "strong_second_goal": "high",
+    "strong_third_goal": "medium",
+    "weak_first_goal": "medium",
+    "weak_second_goal": "low",
+    "clean_sheet": "low",
+    "draw_type": "1-1有效分支，2-2仅条件尾部",
+    "trigger_conditions": [
+      "巴西持续压迫转化第二球",
+      "Vini或Haaland出现超额路径",
+      "挪威第一球兑现但第二球缺少连续事件支持",
+      "红牌、点球或门将失误改变比分上限"
+    ],
+    "confidence": "medium",
+    "tail_scores": [
+      "2-2",
+      "4-1",
+      "5-0"
+    ],
+    "event_scenarios": {
+      "favorite_red_card": "巴西早段红牌时下调巴西第三球，1-1/2-2权重上升。",
+      "underdog_red_card": "挪威红牌后3-1权重上升，4-1进入尾部。",
+      "underdog_two_red_cards": "挪威两红时4-1/5-0成为极端尾部。",
+      "penalty_or_goalkeeper_error": "若利好挪威，2-2进入可见尾部；若利好巴西，3-1上升。"
+    },
+    "score_orientation": {
+      "order": "team_a_team_b",
+      "team_a": "巴西",
+      "team_b": "挪威",
+      "favorite_side": "team_a",
+      "primary_score": {
+        "team_a_goals": 2,
+        "team_b_goals": 1
+      },
+      "score_label": "巴西 2-1 挪威"
+    }
+  }
+}
