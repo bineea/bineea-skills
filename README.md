@@ -15,6 +15,7 @@ bineea-skills/
 ├─ gitlab-mr-review-with-glab/
 ├─ kb-qa-loop/
 ├─ kb-qa-loop-compact/
+├─ video-dialogue/
 └─ worldcup-score-predictor/
 ```
 
@@ -80,11 +81,27 @@ bineea-skills/
 
 ---
 
+### 6) video-dialogue
+
+将本地视频或音频整理为带时间点、区分说话人的对话文字稿，支持已有文字记录对齐、参考声纹匹配和重复标签复核。
+
+- 适合场景：会议录音转写、同一人被拆成多个声纹组、依据已确认发言统一说话人标签。
+- 关键文件：
+  - `SKILL.md`（处理流程与证据约束）
+  - `scripts/process_audio.py`（本地转写与初步分离）
+  - `scripts/speaker_evidence.py`（声纹证据与试听片段）
+  - `scripts/apply_speaker_map.py`（应用复核决策并生成审计）
+  - `references/local-runtime.md`（依赖、模型路径和运行示例）
+- 使用前按实际机器配置路径；运行环境、模型及会议素材不随技能提交。自动匹配结果保留不确定性，不等同于逐段人工听校。
+
+---
+
 ## 运行环境
 
 - 建议使用 Python 3.11（本项目脚本均以标准库为主，但可按需升级到 3.13）。
 - 当前仓库内暂无统一的 `requirements.txt` / `pyproject.toml` / `uv.lock`，多数脚本使用标准库即可运行。
 - 若某模块依赖额外工具（如 `glab`），需按该模块说明提前安装。
+- `video-dialogue` 还需要 ffmpeg/ffprobe、本地转写及声纹模型，以及其运行说明列出的 Python 依赖；使用独立虚拟环境。
 
 ---
 
@@ -103,6 +120,7 @@ deep-research\SKILL.md
 gitlab-mr-review-with-glab\SKILL.md
 kb-qa-loop\SKILL.md
 kb-qa-loop-compact\SKILL.md
+video-dialogue\SKILL.md
 worldcup-score-predictor\SKILL.md
 ```
 

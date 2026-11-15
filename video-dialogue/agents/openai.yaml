@@ -1,0 +1,4 @@
+interface:
+  display_name: "视频对话记录"
+  short_description: "本地解析视频音频、匹配参考声纹，并结合语言模型复核统一说话人标签"
+  default_prompt: "使用 $video-dialogue 解析这段会议视频，生成带时间点的对话记录，并结合声纹证据复核统一说话人。"
