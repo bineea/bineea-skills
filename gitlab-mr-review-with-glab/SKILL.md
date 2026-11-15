@@ -13,9 +13,9 @@ description: Use when you need to review a GitLab Merge Request and write the re
   - 仅在用户明确要求时：再生成 N 条 inline discussions（按文件+行号定位）
 
 ## 适用场景 / 触发信号
-- 你已经在 GitLab 创建 MR，需要用 Claude Code 做 review 并回写到 MR
+- 你已经在 GitLab 创建 MR，需要用 Codex 做 review 并回写到 MR
 - Windows 环境常见坑：
-  - Claude Code 的 Bash 环境 `glab: command not found`
+  - Codex 的 Bash 环境 `glab: command not found`
   - `--hostname` 在 `mr view/diff` 等子命令不支持（但 `glab api` 支持）
   - bash 特殊字符/历史展开（例如 `!`）导致长命令截断
   - 中文输出在 Python subprocess 里触发 GBK 解码错误
@@ -34,7 +34,7 @@ description: Use when you need to review a GitLab Merge Request and write the re
 glab --version
 (Get-Command glab).Source
 ```
-如果 Claude Code Bash 找不到 glab，用绝对路径（示例）：
+如果 Codex Bash 找不到 glab，用绝对路径（示例）：
 - `D:/ProgramFiles/glab/glab.exe`
 
 ### 0.2 登录（自建 GitLab 必须指定 hostname）
@@ -372,7 +372,7 @@ for it in items:
 
 ## 常见故障与排障（最小证据）
 ### A) `glab: command not found`
-- 结论：Claude Code Bash PATH 没包含 glab
+- 结论：Codex Bash PATH 没包含 glab
 - 处理：用绝对路径 `D:/.../glab.exe`
 
 ### B) `Unknown flag: --hostname`（在 mr 子命令）

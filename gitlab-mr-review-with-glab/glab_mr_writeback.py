@@ -402,7 +402,6 @@ def write_inline(glab: str, host: str, project_id: int, iid: int, diff_refs: Dic
             if unique_marker and unique_marker not in body:
                 body = body.rstrip() + "\n\n" + unique_marker + "\n"
 
-        norm_path = normalize_diff_path(str(new_path))
         payload = {
             "body": body,
             "position": {
@@ -410,13 +409,8 @@ def write_inline(glab: str, host: str, project_id: int, iid: int, diff_refs: Dic
                 "base_sha": base_sha,
                 "start_sha": start_sha,
                 "head_sha": head_sha,
-                "old_path": norm_path,
-                "new_path": norm_path,
+                "new_path": normalize_diff_path(str(new_path)),
                 "new_line": new_line,
-                "line_range": {
-                    "start": {"type": "new", "new_line": new_line},
-                    "end": {"type": "new", "new_line": new_line},
-                },
             },
         }
 
